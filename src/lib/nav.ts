@@ -12,7 +12,10 @@ export interface NavLink {
 
 /** Internal links within games-hub. */
 export const INTERNAL_NAV: NavLink[] = [
-  { label: "Tier Lists", href: "/tier-lists" },
+  { label: "Deadlock", href: "/tier-lists" },
+  { label: "PoE1", href: "/poe1" },
+  { label: "StS2", href: "/sts2" },
+  { label: "HOI4", href: "/hoi4" },
   { label: "News", href: "/news" },
 ];
 
