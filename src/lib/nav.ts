@@ -1,0 +1,31 @@
+// ─── Shared BuildKit navigation ──────────────────────────────────────────────
+//
+// One source of truth for the cross-property nav so the hardware blog, game
+// guides, game tier lists, and news all read as a single BuildKit property.
+
+export interface NavLink {
+  label: string;
+  href: string;
+  /** External links (other BuildKit subdomains) open in a new tab. */
+  external?: boolean;
+}
+
+/** Internal links within games-hub. */
+export const INTERNAL_NAV: NavLink[] = [
+  { label: "Tier Lists", href: "/tier-lists" },
+  { label: "News", href: "/news" },
+];
+
+/** The wider BuildKit network of sibling properties. */
+export const NETWORK_NAV: NavLink[] = [
+  {
+    label: "PC Bottleneck",
+    href: "https://pcbottleneck.buildkit.store",
+    external: true,
+  },
+  {
+    label: "Game Guides",
+    href: "https://007.buildkit.store",
+    external: true,
+  },
+];
