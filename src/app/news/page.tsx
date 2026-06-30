@@ -1,14 +1,22 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Radio, AlertTriangle, TrendingUp, ExternalLink } from "lucide-react";
+import {
+  Radio,
+  AlertTriangle,
+  TrendingUp,
+  ExternalLink,
+  ShieldCheck,
+  ArrowRight,
+} from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { getNewsFeed } from "@/lib/news";
+import { getEditions } from "@/lib/editions";
 
 export const metadata: Metadata = {
-  title: "Gaming & AI News Radar — Trending Topics",
+  title: "BuildKit Brief — Grounded Gaming & Tech News",
   description:
-    "What gaming and AI communities are talking about right now — trending topics surfaced from across Reddit, ranked by momentum. Updated daily.",
+    "Auto-written, grounded report editions on PoE, CS2, Deadlock, StS2, HOI4 and PC hardware — every claim traced to a primary source — plus a live community signal radar.",
   alternates: { canonical: "https://play.buildkit.store/news" },
 };
 
@@ -17,6 +25,7 @@ export const revalidate = 3600;
 
 export default function NewsPage() {
   const feed = getNewsFeed();
+  const editions = getEditions();
   const generated = feed.generatedUtc
     ? new Date(feed.generatedUtc).toLocaleString("en-US", {
         year: "numeric",
@@ -35,27 +44,68 @@ export default function NewsPage() {
 
       <section className="max-w-4xl mx-auto px-6 py-12 sm:py-16">
         <div className="flex items-center gap-2 text-cyan text-xs font-mono mb-3">
-          <Radio size={14} />
-          TRENDING ACROSS THE COMMUNITY
+          <ShieldCheck size={14} />
+          BUILDKIT BRIEF
         </div>
         <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-3">
-          Gaming &amp; AI News Radar
+          Grounded Gaming &amp; Tech News
         </h1>
-        <p className="text-text-secondary max-w-2xl mb-6">
-          The topics gaming and AI communities are buzzing about right now,
-          surfaced from across Reddit and ranked by momentum.
-          {generated && (
-            <>
-              {" "}
-              <span className="text-text-secondary">
-                Last scan: {generated}.
-              </span>
-            </>
-          )}
+        <p className="text-text-secondary max-w-2xl mb-10">
+          Auto-written report editions on the games worth your time — every claim
+          traced to a primary source with a freshness stamp. Below the briefs, a
+          live community signal radar surfaces what people are buzzing about.
         </p>
 
+        {/* Published editions — the grounded product. */}
+        {editions.length > 0 && (
+          <div className="mb-12">
+            <div className="flex items-center gap-2 text-green text-xs font-mono mb-4">
+              <ShieldCheck size={14} />
+              LATEST BRIEFS · EVERY CLAIM SOURCED
+            </div>
+            <div className="grid gap-3">
+              {editions.map((ed) => (
+                <Link
+                  key={ed.slug}
+                  href={`/news/${ed.slug}`}
+                  className="group block bg-surface border border-border rounded-2xl p-5 hover:border-green/40 transition-colors"
+                >
+                  <div className="flex items-center gap-2 text-xs font-mono text-text-secondary mb-2 flex-wrap">
+                    <span className="inline-flex items-center gap-1 text-green">
+                      <ShieldCheck size={11} /> grounded
+                    </span>
+                    <span>&middot;</span>
+                    <span>{ed.total_items} updates</span>
+                    <span>&middot;</span>
+                    <span>{ed.date}</span>
+                  </div>
+                  <h2 className="text-lg font-semibold text-foreground group-hover:text-green transition-colors leading-snug flex items-center gap-1.5">
+                    {ed.title}
+                    <ArrowRight
+                      size={15}
+                      className="shrink-0 text-text-secondary group-hover:text-green group-hover:translate-x-0.5 transition-all"
+                    />
+                  </h2>
+                  <p className="text-sm text-text-secondary mt-1.5">
+                    {ed.subtitle}
+                  </p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Community signal radar (raw, unverified leads). */}
+        <div className="flex items-center gap-2 text-cyan text-xs font-mono mb-3">
+          <Radio size={14} />
+          COMMUNITY SIGNAL RADAR
+          {generated && (
+            <span className="text-text-secondary">· last scan {generated}</span>
+          )}
+        </div>
+
         {/* Unverified-signal caveat — content-radar items are leads, not facts. */}
-        <div className="flex items-start gap-2.5 bg-amber-dim border border-amber/30 rounded-xl p-4 mb-10">
+        <div className="flex items-start gap-2.5 bg-amber-dim border border-amber/30 rounded-xl p-4 mb-8 mt-2">
           <AlertTriangle size={16} className="text-amber mt-0.5 shrink-0" />
           <p className="text-sm text-text-secondary">
             <span className="text-amber font-semibold">Signals, not facts.</span>{" "}
