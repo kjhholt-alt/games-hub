@@ -3,6 +3,2444 @@
   "items": [
     {
       "schema": "buildkit-brief/edition@1",
+      "slug": "2026-07-09-public",
+      "edition": "public",
+      "status": "published",
+      "date": "2026-07-09",
+      "title": "BuildKit Brief — Gaming & Tech — July 09, 2026",
+      "subtitle": "What changed this cycle across the games worth your time. Every claim sourced.",
+      "generated_utc": "2026-07-09T13:30:19Z",
+      "sources_count": 18,
+      "total_items": 18,
+      "newsletter": {
+        "subject": "BuildKit Brief — Gaming & Tech — July 09, 2026 — 18 updates",
+        "preview": "0.5.4b Patch Notes · New Transfigured Skills in Path of Exile: Curse of the Allflame · Counter-Strike 2 Update · Minor Update - 07-01-2026",
+        "from_name": "BuildKit Brief"
+      },
+      "sections": [
+        {
+          "world_key": "poe2",
+          "world_name": "Path of Exile 2",
+          "emoji": "🔱",
+          "blurb": "Your main ARPG. League state + balance patches move your build.",
+          "items": [
+            {
+              "id": "054bpatchnotes",
+              "headline": "0.5.4b Patch Notes",
+              "summary": "0.5.4b Patch NotesBoss Improvements Removed a majority of the stun and freeze immunity windows from all versions of the Tor Gul, the Defiler boss fight. Improved the Minion Phase in the Tasgul, Swallower of Light fight.",
+              "bullets": [
+                "Removed a majority of the stun and freeze immunity windows from all versions of the Tor Gul, the Defiler boss fight.",
+                "Improved the Minion Phase in the Tasgul, Swallower of Light fight.",
+                "Fixed a bug where It That Was Esh could sometimes fail to advance phases properly.",
+                "Fixed a bug where the Arbiter of Divinity could rarely drop loot in an unreachable location.",
+                "Defeating the Arbiter of Divinity now re-enables the exit elevator.",
+                "Extended the time the player has to get into the first Flame Seed during the combo skill that begins with the Large Laser in the Arbiter of Ash boss fight."
+              ],
+              "kind": "patch",
+              "confidence": "confirmed",
+              "published": "2026-07-02T22:00:25Z",
+              "source": {
+                "name": "Path of Exile 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165569121",
+                "stamp": "patch=0.5.4",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.2694490",
+                "source_name": "Path of Exile 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165569121",
+                "stamp": {
+                  "version": null,
+                  "patch": "0.5.4",
+                  "league": null,
+                  "published": "2026-07-02T22:00:25Z",
+                  "last_grounded": "2026-07-09T13:30:19Z",
+                  "detail": {
+                    "appid": 2694490,
+                    "feed": "Community Announcements",
+                    "gid": "1836506165569121"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-09T13:30:19Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "pathofexile2atgamescom2026",
+              "headline": "Path of Exile 2 at gamescom 2026",
+              "summary": "Path of Exile 2 will once again be heading to gamescom in Cologne, Germany. Play a special demo available exclusively at the event, snap some photos with our eerie display, and pick up exclusive merchandise. We'll be sharing more details closer to the event, and we hope to see you there!",
+              "bullets": [],
+              "kind": "news",
+              "confidence": "confirmed",
+              "published": "2026-07-02T23:54:21Z",
+              "source": {
+                "name": "Path of Exile 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165569252",
+                "stamp": "published=2026-07-02T23:54:21Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.2694490",
+                "source_name": "Path of Exile 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165569252",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-07-02T23:54:21Z",
+                  "last_grounded": "2026-07-09T13:30:19Z",
+                  "detail": {
+                    "appid": 2694490,
+                    "feed": "Community Announcements",
+                    "gid": "1836506165569252"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-09T13:30:19Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "pathofexile2buildshowcasefrogmancerbyyuzotv",
+              "headline": "Path of Exile 2 Build Showcase: Frogmancer by Yuzo TV",
+              "summary": "If you've ever wanted to solve your problems with an unreasonable number of exploding frogs, this build may be exactly what you're looking for. Doedre's Undoing is a Lineage Support Gem that transforms curses into areas of cursed ground.",
+              "bullets": [],
+              "kind": "news",
+              "confidence": "confirmed",
+              "published": "2026-07-01T22:52:26Z",
+              "source": {
+                "name": "Path of Exile 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165566596",
+                "stamp": "published=2026-07-01T22:52:26Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.2694490",
+                "source_name": "Path of Exile 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165566596",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-07-01T22:52:26Z",
+                  "last_grounded": "2026-07-09T13:30:19Z",
+                  "detail": {
+                    "appid": 2694490,
+                    "feed": "Community Announcements",
+                    "gid": "1836506165566596"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-09T13:30:19Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            }
+          ],
+          "rumors": [],
+          "buzz": null,
+          "character": null,
+          "character_note": "",
+          "crosslink": null
+        },
+        {
+          "world_key": "poe1",
+          "world_name": "Path of Exile",
+          "emoji": "⚔️",
+          "blurb": "PoE1 events + league cycle (separate game from PoE2).",
+          "items": [
+            {
+              "id": "newtransfiguredskillsinpathofexilecurseoftheallf",
+              "headline": "New Transfigured Skills in Path of Exile: Curse of the Allflame",
+              "summary": "For the past few Path of Exile expansions, we've continued expanding the roster of Transfigured Skills, bringing unique alternate versions to gems that didn't yet have one. Each offers a fresh way to play a familiar skill, opening up new build possibilities.",
+              "bullets": [],
+              "kind": "news",
+              "confidence": "confirmed",
+              "published": "2026-07-06T21:22:39Z",
+              "source": {
+                "name": "Path of Exile — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165576750",
+                "stamp": "published=2026-07-06T21:22:39Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.238960",
+                "source_name": "Path of Exile — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165576750",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-07-06T21:22:39Z",
+                  "last_grounded": "2026-07-09T13:30:19Z",
+                  "detail": {
+                    "appid": 238960,
+                    "feed": "Community Announcements",
+                    "gid": "1836506165576750"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-09T13:30:19Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "pathofexilecurseoftheallflamereleasesonjuly24pdt",
+              "headline": "Path of Exile: Curse of the Allflame Releases on July 24 PDT",
+              "summary": "Beneath the deep, an ancient curse awaits. GGG Live GGG Live will begin at 1PM on July 16th PDT at twitch.tv/pathofexile. During the livestream you'll learn all about the 3.29 expansion for Path of Exile, its challenge league and other content.",
+              "bullets": [],
+              "kind": "news",
+              "confidence": "confirmed",
+              "published": "2026-07-05T20:56:18Z",
+              "source": {
+                "name": "Path of Exile — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165574643",
+                "stamp": "published=2026-07-05T20:56:18Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.238960",
+                "source_name": "Path of Exile — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165574643",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-07-05T20:56:18Z",
+                  "last_grounded": "2026-07-09T13:30:19Z",
+                  "detail": {
+                    "appid": 238960,
+                    "feed": "Community Announcements",
+                    "gid": "1836506165574643"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-09T13:30:19Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "poe1leagueancestors",
+              "headline": "League check: Ancestors is live",
+              "summary": "Current PoE1 challenge league: **Ancestors**. Started Jun 25, 2026. Ends in ~7 days (Jul 16) — plan your next character.",
+              "bullets": [],
+              "kind": "meta",
+              "confidence": "confirmed",
+              "published": "2026-06-25T22:00:00Z",
+              "source": {
+                "name": "Path of Exile — Official leagues API (GGG)",
+                "url": "https://www.pathofexile.com/leagues",
+                "stamp": "league=Ancestors",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "ggg.leagues",
+                "source_name": "Path of Exile — Official leagues API (GGG)",
+                "url": "https://www.pathofexile.com/leagues",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": "Ancestors",
+                  "published": "2026-06-25T22:00:00Z",
+                  "last_grounded": "2026-07-09T13:30:19Z",
+                  "detail": {
+                    "endAt": "2026-07-16T22:00:00Z",
+                    "api": "pathofexile.com/api/leagues"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-09T13:30:19Z",
+                "freshness": "fresh",
+                "note": "Live from GGG's public leagues endpoint."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "playthereturnoftheancestorseventonjune25thpdt",
+              "headline": "Play the Return of the Ancestors Event on June 25th PDT",
+              "summary": "The Ancestors have heard your call. The beloved Trial of the Ancestors mechanics return to Path of Exile in a three-week event starting June 25 (PDT)! Harness the power of Phrecian Ascendancy classes and new Tattoos to challenge the legendary Karui chieftains.",
+              "bullets": [
+                "Start Date: 3PM June 25th PDT",
+                "End Date: 3PM July 16th PDT",
+                "Based on: Mirage",
+                "Standard, Hardcore, Standard Solo Self-Found and Hardcore Solo Self-Found versions available. The event also has a Ruthless mode available which uses the sam…",
+                "This event is not voided. Items and characters will transfer to parent leagues at the end of the event. Upon migration, your characters’ Ascendancy points wi…"
+              ],
+              "kind": "event",
+              "confidence": "confirmed",
+              "published": "2026-06-19T21:05:45Z",
+              "source": {
+                "name": "Path of Exile — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1835871199308189",
+                "stamp": "published=2026-06-19T21:05:45Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.238960",
+                "source_name": "Path of Exile — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1835871199308189",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-06-19T21:05:45Z",
+                  "last_grounded": "2026-07-09T13:30:19Z",
+                  "detail": {
+                    "appid": 238960,
+                    "feed": "Community Announcements",
+                    "gid": "1835871199308189"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-09T13:30:19Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            }
+          ],
+          "rumors": [],
+          "buzz": null,
+          "character": null,
+          "character_note": "",
+          "crosslink": null
+        },
+        {
+          "world_key": "cs2",
+          "world_name": "Counter-Strike 2",
+          "emoji": "🔫",
+          "blurb": "Updates, map/economy changes, and the pro circuit.",
+          "items": [
+            {
+              "id": "counterstrike2update",
+              "headline": "Counter-Strike 2 Update",
+              "summary": "Premier Season Five has begun Added Cache to the Active Duty Map Pool Removed Overpass from the Active Duty Map Pool Re-designed effective range and extent of C4 explosion damage on all official defusal-mode maps.",
+              "bullets": [
+                "Premier Season Five has begun",
+                "Added Cache to the Active Duty Map Pool",
+                "Removed Overpass from the Active Duty Map Pool",
+                "Re-designed effective range and extent of C4 explosion damage on all official defusal-mode maps.",
+                "Damage is now applied according to precomputed simulation values, baked into the compiled map.",
+                "Explosion shockwave damage now rapidly expands from the center of the explosion instead of being applied instantly."
+              ],
+              "kind": "patch",
+              "confidence": "confirmed",
+              "published": "2026-07-08T22:51:31Z",
+              "source": {
+                "name": "Counter-Strike 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165581827",
+                "stamp": "published=2026-07-08T22:51:31Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.730",
+                "source_name": "Counter-Strike 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165581827",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-07-08T22:51:31Z",
+                  "last_grounded": "2026-07-09T13:30:19Z",
+                  "detail": {
+                    "appid": 730,
+                    "feed": "Community Announcements",
+                    "gid": "1836506165581827"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-09T13:30:19Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "season5armoryandmore",
+              "headline": "Season 5, Armory, and More",
+              "summary": "Reporting for Active Duty Cache has officially arrived, and replaces Overpass in the active duty map pool. Put your hard-earned strats to the test and rise through the Premier ranks in CS2's newest battlefield. Get out of there, it's gonna blow!",
+              "bullets": [],
+              "kind": "news",
+              "confidence": "confirmed",
+              "published": "2026-07-08T22:50:43Z",
+              "source": {
+                "name": "Counter-Strike 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165581825",
+                "stamp": "published=2026-07-08T22:50:43Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.730",
+                "source_name": "Counter-Strike 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165581825",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-07-08T22:50:43Z",
+                  "last_grounded": "2026-07-09T13:30:19Z",
+                  "detail": {
+                    "appid": 730,
+                    "feed": "Community Announcements",
+                    "gid": "1836506165581825"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-09T13:30:19Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "thejackassstickercapsule",
+              "headline": "The Jackass Sticker Capsule",
+              "summary": "Today we’re excited to release the Jackass Sticker Capsule in association with Paramount Games Studio, Jackass graphic artist Andy Jenkins, and community artist TheDanidem.",
+              "bullets": [],
+              "kind": "news",
+              "confidence": "confirmed",
+              "published": "2026-07-03T19:48:06Z",
+              "source": {
+                "name": "Counter-Strike 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165571358",
+                "stamp": "published=2026-07-03T19:48:06Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.730",
+                "source_name": "Counter-Strike 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165571358",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-07-03T19:48:06Z",
+                  "last_grounded": "2026-07-09T13:30:19Z",
+                  "detail": {
+                    "appid": 730,
+                    "feed": "Community Announcements",
+                    "gid": "1836506165571358"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-09T13:30:19Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            }
+          ],
+          "rumors": [],
+          "buzz": null,
+          "character": null,
+          "character_note": "",
+          "crosslink": null
+        },
+        {
+          "world_key": "deadlock",
+          "world_name": "Deadlock",
+          "emoji": "🕵️",
+          "blurb": "Valve's hero shooter — patch cadence + hero balance.",
+          "items": [
+            {
+              "id": "minorupdate07012026",
+              "headline": "Minor Update - 07-01-2026",
+              "summary": "- Shiv: Alt Fire ammo cost reduced from 5 to 4- Shiv: Weapon now has fixed pellet spread- Shiv: Slice and Dice is now back to doing spirit damage and reducing Spirit Resistance from enemies- Shiv: Slice and Dice damage increased from 60 to 75- Shiv: Killing Blow T3 reduced from +10% Enemy Health…",
+              "bullets": [],
+              "kind": "patch",
+              "confidence": "confirmed",
+              "published": "2026-07-01T22:54:59Z",
+              "source": {
+                "name": "Deadlock — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165566600",
+                "stamp": "published=2026-07-01T22:54:59Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.1422450",
+                "source_name": "Deadlock — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165566600",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-07-01T22:54:59Z",
+                  "last_grounded": "2026-07-09T13:30:19Z",
+                  "detail": {
+                    "appid": 1422450,
+                    "feed": "Community Announcements",
+                    "gid": "1836506165566600"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-09T13:30:19Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "minorupdate06302026",
+              "headline": "Minor Update - 06-30-2026",
+              "summary": "- King of the Hill objective has been rethemed and renamed to \"Unstable Rift\"- Unstable Rift no longer requires an Urn delivery to trigger the start of the event. It now has a variable start time of +/- 1 minute. There is a global announcement 25s before it spawns.",
+              "bullets": [],
+              "kind": "patch",
+              "confidence": "confirmed",
+              "published": "2026-06-30T17:22:14Z",
+              "source": {
+                "name": "Deadlock — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165563227",
+                "stamp": "published=2026-06-30T17:22:14Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.1422450",
+                "source_name": "Deadlock — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165563227",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-06-30T17:22:14Z",
+                  "last_grounded": "2026-07-09T13:30:19Z",
+                  "detail": {
+                    "appid": 1422450,
+                    "feed": "Community Announcements",
+                    "gid": "1836506165563227"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-09T13:30:19Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            }
+          ],
+          "rumors": [],
+          "buzz": null,
+          "character": null,
+          "character_note": "",
+          "crosslink": null
+        },
+        {
+          "world_key": "sts2",
+          "world_name": "Slay the Spire 2",
+          "emoji": "🃏",
+          "blurb": "Early-access deckbuilder — balance + RNG fixes matter.",
+          "items": [
+            {
+              "id": "betapatchnotesv01080",
+              "headline": "Beta Patch Notes - v0.108.0",
+              "summary": "For all you beta testers who have been chomping at the bit for a new patch to chew on... here it is! Today's beta patch brings a ton of fixes, balance changes, some UX additions, a BIG batch of new multiplayer cards, and new art additions--including some animations for the latest boss, Aeonglass!",
+              "bullets": [
+                "End-of-turn Orb passives now trigger before Doom",
+                "This means that, if a player would die to self-Doom (ex. from Neurosurge card) but also has an Orb with an end-of-turn passive that would kill the last remai…",
+                "Buffed Torch Head Amalgam: increased damage at Ascension 9",
+                "Weak Tackle damage increased from 14(15) → 14(16)",
+                "Tackle damage increased from 18(19) → 18(22)",
+                "Changed Regen Potion: its healing effect now triggers before Doom, preventing the player from dying to self-Doom in certain situations"
+              ],
+              "kind": "patch",
+              "confidence": "confirmed",
+              "published": "2026-07-03T03:26:13Z",
+              "source": {
+                "name": "Slay the Spire 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165569491",
+                "stamp": "patch=0.108.0",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.2868840",
+                "source_name": "Slay the Spire 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165569491",
+                "stamp": {
+                  "version": null,
+                  "patch": "0.108.0",
+                  "league": null,
+                  "published": "2026-07-03T03:26:13Z",
+                  "last_grounded": "2026-07-09T13:30:19Z",
+                  "detail": {
+                    "appid": 2868840,
+                    "feed": "Community Announcements",
+                    "gid": "1836506165569491"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-09T13:30:19Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "majorupdate2v01071",
+              "headline": "Major Update #2 - v0.107.1",
+              "summary": "Hey Slayers, our second major main branch update is here with 4 patches in 1 (not including hotfixes)! While we'll be covering a lot of things that beta players will already be used to, there are also a few big changes that will be totally new for everyone.",
+              "bullets": [
+                "The Bestiary is now available in the Compendium",
+                "Added three more Badges:",
+                "Damage Leader - Dealt the most damage to enemies in multiplayer",
+                "Debuffer - Applied the most Debuffs in multiplayer",
+                "C-c-c-Combo - Played 20 cards in a single turn",
+                "Terminal run modifier can no longer bring a player below 1 HP"
+              ],
+              "kind": "patch",
+              "confidence": "confirmed",
+              "published": "2026-06-19T00:39:31Z",
+              "source": {
+                "name": "Slay the Spire 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1835871199305790",
+                "stamp": "patch=0.107.1",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.2868840",
+                "source_name": "Slay the Spire 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1835871199305790",
+                "stamp": {
+                  "version": null,
+                  "patch": "0.107.1",
+                  "league": null,
+                  "published": "2026-06-19T00:39:31Z",
+                  "last_grounded": "2026-07-09T13:30:19Z",
+                  "detail": {
+                    "appid": 2868840,
+                    "feed": "Community Announcements",
+                    "gid": "1835871199305790"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-09T13:30:19Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "theneowsletterjune2026",
+              "headline": "The Neowsletter - June 2026",
+              "summary": "Hey Slayers, it's time for the June Neowsletter! In this issue we're covering a couple of big roadmap items we've checked off our list as of yesterday's main branch patch and answering some of your recent questions. Let's dive in... Dev Update The first feature we want to highlight is the Bestiary.",
+              "bullets": [],
+              "kind": "news",
+              "confidence": "confirmed",
+              "published": "2026-06-20T01:11:49Z",
+              "source": {
+                "name": "Slay the Spire 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1835871199312310",
+                "stamp": "published=2026-06-20T01:11:49Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.2868840",
+                "source_name": "Slay the Spire 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1835871199312310",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-06-20T01:11:49Z",
+                  "last_grounded": "2026-07-09T13:30:19Z",
+                  "detail": {
+                    "appid": 2868840,
+                    "feed": "Community Announcements",
+                    "gid": "1835871199312310"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-09T13:30:19Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            }
+          ],
+          "rumors": [],
+          "buzz": null,
+          "character": null,
+          "character_note": "",
+          "crosslink": null
+        },
+        {
+          "world_key": "hoi4",
+          "world_name": "Hearts of Iron IV",
+          "emoji": "🗺️",
+          "blurb": "Grand strategy — dev diaries + version betas.",
+          "items": [
+            {
+              "id": "hoiivopenbetasummeredition",
+              "headline": "HOI IV - Open Beta Summer Edition™",
+              "summary": "Generals! Greetings from sunny Stockholm to everyone, I’m Batya, Game Director for Hearts of Iron. The summer period is upon us and I wanted to share some information with you all. Unlike the norm of armies planning summer offensives, game developers actually do the opposite and take time off.",
+              "bullets": [
+                "Right-click the game in your library",
+                "Select Properties from the drop-down menu",
+                "Select Game Versions & Betas",
+                "Select the beta branch called open_beta",
+                "Battalion Adjusters now scale with the Equipment and Manpower status of the Sub-Unit. E.g. Super Heavy Artillery with Siege Artillery Sub-Doctrine no longer…",
+                "Added Essential (Equipment) Blocks for the following units: Heavy Weapons Company and Motorized Heavy Weapons Company, Light Flame Tank, Medium Flame Tank, H…"
+              ],
+              "kind": "event",
+              "confidence": "confirmed",
+              "published": "2026-07-06T12:17:35Z",
+              "source": {
+                "name": "Hearts of Iron IV — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165575862",
+                "stamp": "published=2026-07-06T12:17:35Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.394360",
+                "source_name": "Hearts of Iron IV — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165575862",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-07-06T12:17:35Z",
+                  "last_grounded": "2026-07-09T13:30:19Z",
+                  "detail": {
+                    "appid": 394360,
+                    "feed": "Community Announcements",
+                    "gid": "1836506165575862"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-09T13:30:19Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "hoiivdevcornerquestionsaboutcivilwars",
+              "headline": "HOI IV Dev Corner | Questions about Civil Wars",
+              "summary": "Hello all! First of all I want to be extra clear - we are not talking about a rework for civil wars. What I am after is understanding how you’ve enjoyed content with civil wars, what feels good, what doesn’t feel good. So!",
+              "bullets": [
+                "How do you feel when you start progressing down the focus tree?",
+                "Do you try to rush down the civil war path, do you do common branches?",
+                "What do you do with your military? (the starting nation)",
+                "What do you do with industry? (the starting nation)",
+                "What annoys you with this type of playthrough?",
+                "What is it that makes the civil war feel rewarding/worth doing?"
+              ],
+              "kind": "news",
+              "confidence": "confirmed",
+              "published": "2026-07-07T12:03:36Z",
+              "source": {
+                "name": "Hearts of Iron IV — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165577830",
+                "stamp": "published=2026-07-07T12:03:36Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.394360",
+                "source_name": "Hearts of Iron IV — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165577830",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-07-07T12:03:36Z",
+                  "last_grounded": "2026-07-09T13:30:19Z",
+                  "detail": {
+                    "appid": 394360,
+                    "feed": "Community Announcements",
+                    "gid": "1836506165577830"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-09T13:30:19Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "thunderatourgatespatch1192",
+              "headline": "Thunder at our Gates | Patch 1.19.2",
+              "summary": "Generals! Today marks the last pre-summer patch with fixes and tweaks to Thunder At Our Gates. After this the team will have limited presence in the office for the summer period.",
+              "bullets": [
+                "Right click the game in Steam",
+                "Go to Properties, then Game Versions & Betas",
+                "Select 1.19.1",
+                "Default Public Version will use the latest public build, in this case 1.19.2",
+                "Expeditionary Leader trait Non-Core Attack and Defence reduced from +15% to +10%.",
+                "Tuned down the \"Spirit of St. Bernard\" spirit, which in combination with other things could give 105% casualty trickleback and unending armies of resurrected…"
+              ],
+              "kind": "patch",
+              "confidence": "confirmed",
+              "published": "2026-06-30T13:05:10Z",
+              "source": {
+                "name": "Hearts of Iron IV — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165562428",
+                "stamp": "patch=1.19.2",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.394360",
+                "source_name": "Hearts of Iron IV — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165562428",
+                "stamp": {
+                  "version": null,
+                  "patch": "1.19.2",
+                  "league": null,
+                  "published": "2026-06-30T13:05:10Z",
+                  "last_grounded": "2026-07-09T13:30:19Z",
+                  "detail": {
+                    "appid": 394360,
+                    "feed": "Community Announcements",
+                    "gid": "1836506165562428"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-09T13:30:19Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            }
+          ],
+          "rumors": [],
+          "buzz": null,
+          "character": null,
+          "character_note": "",
+          "crosslink": null
+        },
+        {
+          "world_key": "hardware",
+          "world_name": "PC Hardware & Your Wishlist",
+          "emoji": "🖥️",
+          "blurb": "Part-price drops on your wishlist + hardware moves. Deep specs live on PC Bottleneck (we link, never duplicate).",
+          "items": [],
+          "rumors": [],
+          "buzz": null,
+          "character": null,
+          "character_note": "",
+          "crosslink": "https://pcbottleneck.buildkit.store"
+        }
+      ],
+      "grounding_note": "Every item below is tied to a primary source with a freshness stamp. Rumors are labelled and never appear in the public edition. If we could not verify it, we did not publish it."
+    },
+    {
+      "schema": "buildkit-brief/edition@1",
+      "slug": "2026-07-06-public",
+      "edition": "public",
+      "status": "published",
+      "date": "2026-07-06",
+      "title": "BuildKit Brief — Gaming & Tech — July 06, 2026",
+      "subtitle": "What changed this cycle across the games worth your time. Every claim sourced.",
+      "generated_utc": "2026-07-06T13:30:14Z",
+      "sources_count": 18,
+      "total_items": 18,
+      "newsletter": {
+        "subject": "BuildKit Brief — Gaming & Tech — July 06, 2026 — 18 updates",
+        "preview": "0.5.4b Patch Notes · Path of Exile: Curse of the Allflame Releases on July 24 PDT · Counter-Strike 2 Update · Minor Update - 07-01-2026",
+        "from_name": "BuildKit Brief"
+      },
+      "sections": [
+        {
+          "world_key": "poe2",
+          "world_name": "Path of Exile 2",
+          "emoji": "🔱",
+          "blurb": "Your main ARPG. League state + balance patches move your build.",
+          "items": [
+            {
+              "id": "054bpatchnotes",
+              "headline": "0.5.4b Patch Notes",
+              "summary": "0.5.4b Patch NotesBoss Improvements Removed a majority of the stun and freeze immunity windows from all versions of the Tor Gul, the Defiler boss fight. Improved the Minion Phase in the Tasgul, Swallower of Light fight.",
+              "bullets": [
+                "Removed a majority of the stun and freeze immunity windows from all versions of the Tor Gul, the Defiler boss fight.",
+                "Improved the Minion Phase in the Tasgul, Swallower of Light fight.",
+                "Fixed a bug where It That Was Esh could sometimes fail to advance phases properly.",
+                "Fixed a bug where the Arbiter of Divinity could rarely drop loot in an unreachable location.",
+                "Defeating the Arbiter of Divinity now re-enables the exit elevator.",
+                "Extended the time the player has to get into the first Flame Seed during the combo skill that begins with the Large Laser in the Arbiter of Ash boss fight."
+              ],
+              "kind": "patch",
+              "confidence": "confirmed",
+              "published": "2026-07-02T22:00:25Z",
+              "source": {
+                "name": "Path of Exile 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165569121",
+                "stamp": "patch=0.5.4",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.2694490",
+                "source_name": "Path of Exile 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165569121",
+                "stamp": {
+                  "version": null,
+                  "patch": "0.5.4",
+                  "league": null,
+                  "published": "2026-07-02T22:00:25Z",
+                  "last_grounded": "2026-07-06T13:30:14Z",
+                  "detail": {
+                    "appid": 2694490,
+                    "feed": "Community Announcements",
+                    "gid": "1836506165569121"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-06T13:30:14Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "pathofexile2atgamescom2026",
+              "headline": "Path of Exile 2 at gamescom 2026",
+              "summary": "Path of Exile 2 will once again be heading to gamescom in Cologne, Germany. Play a special demo available exclusively at the event, snap some photos with our eerie display, and pick up exclusive merchandise. We'll be sharing more details closer to the event, and we hope to see you there!",
+              "bullets": [],
+              "kind": "news",
+              "confidence": "confirmed",
+              "published": "2026-07-02T23:54:21Z",
+              "source": {
+                "name": "Path of Exile 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165569252",
+                "stamp": "published=2026-07-02T23:54:21Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.2694490",
+                "source_name": "Path of Exile 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165569252",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-07-02T23:54:21Z",
+                  "last_grounded": "2026-07-06T13:30:14Z",
+                  "detail": {
+                    "appid": 2694490,
+                    "feed": "Community Announcements",
+                    "gid": "1836506165569252"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-06T13:30:14Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "pathofexile2buildshowcasefrogmancerbyyuzotv",
+              "headline": "Path of Exile 2 Build Showcase: Frogmancer by Yuzo TV",
+              "summary": "If you've ever wanted to solve your problems with an unreasonable number of exploding frogs, this build may be exactly what you're looking for. Doedre's Undoing is a Lineage Support Gem that transforms curses into areas of cursed ground.",
+              "bullets": [],
+              "kind": "news",
+              "confidence": "confirmed",
+              "published": "2026-07-01T22:52:26Z",
+              "source": {
+                "name": "Path of Exile 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165566596",
+                "stamp": "published=2026-07-01T22:52:26Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.2694490",
+                "source_name": "Path of Exile 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165566596",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-07-01T22:52:26Z",
+                  "last_grounded": "2026-07-06T13:30:14Z",
+                  "detail": {
+                    "appid": 2694490,
+                    "feed": "Community Announcements",
+                    "gid": "1836506165566596"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-06T13:30:14Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            }
+          ],
+          "rumors": [],
+          "buzz": null,
+          "character": null,
+          "character_note": "",
+          "crosslink": null
+        },
+        {
+          "world_key": "poe1",
+          "world_name": "Path of Exile",
+          "emoji": "⚔️",
+          "blurb": "PoE1 events + league cycle (separate game from PoE2).",
+          "items": [
+            {
+              "id": "pathofexilecurseoftheallflamereleasesonjuly24pdt",
+              "headline": "Path of Exile: Curse of the Allflame Releases on July 24 PDT",
+              "summary": "Beneath the deep, an ancient curse awaits. GGG Live GGG Live will begin at 1PM on July 16th PDT at twitch.tv/pathofexile. During the livestream you'll learn all about the 3.29 expansion for Path of Exile, its challenge league and other content.",
+              "bullets": [],
+              "kind": "news",
+              "confidence": "confirmed",
+              "published": "2026-07-05T20:56:18Z",
+              "source": {
+                "name": "Path of Exile — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165574643",
+                "stamp": "published=2026-07-05T20:56:18Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.238960",
+                "source_name": "Path of Exile — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165574643",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-07-05T20:56:18Z",
+                  "last_grounded": "2026-07-06T13:30:14Z",
+                  "detail": {
+                    "appid": 238960,
+                    "feed": "Community Announcements",
+                    "gid": "1836506165574643"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-06T13:30:14Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "poe1leagueancestors",
+              "headline": "League check: Ancestors is live",
+              "summary": "Current PoE1 challenge league: **Ancestors**. Started Jun 25, 2026. Ends in ~10 days (Jul 16) — plan your next character.",
+              "bullets": [],
+              "kind": "meta",
+              "confidence": "confirmed",
+              "published": "2026-06-25T22:00:00Z",
+              "source": {
+                "name": "Path of Exile — Official leagues API (GGG)",
+                "url": "https://www.pathofexile.com/leagues",
+                "stamp": "league=Ancestors",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "ggg.leagues",
+                "source_name": "Path of Exile — Official leagues API (GGG)",
+                "url": "https://www.pathofexile.com/leagues",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": "Ancestors",
+                  "published": "2026-06-25T22:00:00Z",
+                  "last_grounded": "2026-07-06T13:30:14Z",
+                  "detail": {
+                    "endAt": "2026-07-16T22:00:00Z",
+                    "api": "pathofexile.com/api/leagues"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-06T13:30:14Z",
+                "freshness": "fresh",
+                "note": "Live from GGG's public leagues endpoint."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "playthereturnoftheancestorseventonjune25thpdt",
+              "headline": "Play the Return of the Ancestors Event on June 25th PDT",
+              "summary": "The Ancestors have heard your call. The beloved Trial of the Ancestors mechanics return to Path of Exile in a three-week event starting June 25 (PDT)! Harness the power of Phrecian Ascendancy classes and new Tattoos to challenge the legendary Karui chieftains.",
+              "bullets": [
+                "Start Date: 3PM June 25th PDT",
+                "End Date: 3PM July 16th PDT",
+                "Based on: Mirage",
+                "Standard, Hardcore, Standard Solo Self-Found and Hardcore Solo Self-Found versions available. The event also has a Ruthless mode available which uses the sam…",
+                "This event is not voided. Items and characters will transfer to parent leagues at the end of the event. Upon migration, your characters’ Ascendancy points wi…"
+              ],
+              "kind": "event",
+              "confidence": "confirmed",
+              "published": "2026-06-19T21:05:45Z",
+              "source": {
+                "name": "Path of Exile — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1835871199308189",
+                "stamp": "published=2026-06-19T21:05:45Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.238960",
+                "source_name": "Path of Exile — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1835871199308189",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-06-19T21:05:45Z",
+                  "last_grounded": "2026-07-06T13:30:14Z",
+                  "detail": {
+                    "appid": 238960,
+                    "feed": "Community Announcements",
+                    "gid": "1835871199308189"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-06T13:30:14Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "pathofexilesmostuniqueleagueisbackwithachaoticcl",
+              "headline": "Path of Exile's most unique league is back with a chaotic, class-fusing twist",
+              "summary": "A new Path of Exile event is about to start, as developer Grinding Gear Games attempts to test the limits of just how much action RPG it's possible to squeeze into your life.",
+              "bullets": [],
+              "kind": "news",
+              "confidence": "confirmed",
+              "published": "2026-06-20T16:45:45Z",
+              "source": {
+                "name": "Path of Exile — PCGamesN",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/PCGamesN/1835871199309768",
+                "stamp": "published=2026-06-20T16:45:45Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.238960",
+                "source_name": "Path of Exile — PCGamesN",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/PCGamesN/1835871199309768",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-06-20T16:45:45Z",
+                  "last_grounded": "2026-07-06T13:30:14Z",
+                  "detail": {
+                    "appid": 238960,
+                    "feed": "PCGamesN",
+                    "gid": "1835871199309768"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-06T13:30:14Z",
+                "freshness": "fresh",
+                "note": "Press coverage of a real update."
+              },
+              "crosslink": null
+            }
+          ],
+          "rumors": [],
+          "buzz": null,
+          "character": null,
+          "character_note": "",
+          "crosslink": null
+        },
+        {
+          "world_key": "cs2",
+          "world_name": "Counter-Strike 2",
+          "emoji": "🔫",
+          "blurb": "Updates, map/economy changes, and the pro circuit.",
+          "items": [
+            {
+              "id": "counterstrike2update",
+              "headline": "Counter-Strike 2 Update",
+              "summary": "Champions Autograph Stickers are now available for purchase in the Major Shop, congratulations to the Falcons!",
+              "bullets": [
+                "Champions Autograph Stickers are now available for purchase in the Major Shop, congratulations to the Falcons!",
+                "Highlight Souvenir Charms are now available for purchase in the Major Shop, featuring 10 highlights for each of the six stages of the Cologne 2026 Major, and…"
+              ],
+              "kind": "patch",
+              "confidence": "confirmed",
+              "published": "2026-07-01T02:57:57Z",
+              "source": {
+                "name": "Counter-Strike 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165564135",
+                "stamp": "published=2026-07-01T02:57:57Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.730",
+                "source_name": "Counter-Strike 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165564135",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-07-01T02:57:57Z",
+                  "last_grounded": "2026-07-06T13:30:14Z",
+                  "detail": {
+                    "appid": 730,
+                    "feed": "Community Announcements",
+                    "gid": "1836506165564135"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-06T13:30:14Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "thejackassstickercapsule",
+              "headline": "The Jackass Sticker Capsule",
+              "summary": "Today we’re excited to release the Jackass Sticker Capsule in association with Paramount Games Studio, Jackass graphic artist Andy Jenkins, and community artist TheDanidem.",
+              "bullets": [],
+              "kind": "news",
+              "confidence": "confirmed",
+              "published": "2026-07-03T19:48:06Z",
+              "source": {
+                "name": "Counter-Strike 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165571358",
+                "stamp": "published=2026-07-03T19:48:06Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.730",
+                "source_name": "Counter-Strike 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165571358",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-07-03T19:48:06Z",
+                  "last_grounded": "2026-07-06T13:30:14Z",
+                  "detail": {
+                    "appid": 730,
+                    "feed": "Community Announcements",
+                    "gid": "1836506165571358"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-06T13:30:14Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "teamfalconsfinale",
+              "headline": "Team Falcons' Finale",
+              "summary": "Taking on the toughest Playoff bracket in Major history, the Falcons made a triumphant statement at the IEM Cologne 2026 Major. Facing the defending Major Champions in the Quarterfinals, Falcons defeated Vitality 2-1, with each map taking 24 rounds to determine a winner.",
+              "bullets": [],
+              "kind": "news",
+              "confidence": "confirmed",
+              "published": "2026-07-01T02:58:04Z",
+              "source": {
+                "name": "Counter-Strike 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165564136",
+                "stamp": "published=2026-07-01T02:58:04Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.730",
+                "source_name": "Counter-Strike 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165564136",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-07-01T02:58:04Z",
+                  "last_grounded": "2026-07-06T13:30:14Z",
+                  "detail": {
+                    "appid": 730,
+                    "feed": "Community Announcements",
+                    "gid": "1836506165564136"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-06T13:30:14Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            }
+          ],
+          "rumors": [],
+          "buzz": null,
+          "character": null,
+          "character_note": "",
+          "crosslink": null
+        },
+        {
+          "world_key": "deadlock",
+          "world_name": "Deadlock",
+          "emoji": "🕵️",
+          "blurb": "Valve's hero shooter — patch cadence + hero balance.",
+          "items": [
+            {
+              "id": "minorupdate07012026",
+              "headline": "Minor Update - 07-01-2026",
+              "summary": "- Shiv: Alt Fire ammo cost reduced from 5 to 4- Shiv: Weapon now has fixed pellet spread- Shiv: Slice and Dice is now back to doing spirit damage and reducing Spirit Resistance from enemies- Shiv: Slice and Dice damage increased from 60 to 75- Shiv: Killing Blow T3 reduced from +10% Enemy Health…",
+              "bullets": [],
+              "kind": "patch",
+              "confidence": "confirmed",
+              "published": "2026-07-01T22:54:59Z",
+              "source": {
+                "name": "Deadlock — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165566600",
+                "stamp": "published=2026-07-01T22:54:59Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.1422450",
+                "source_name": "Deadlock — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165566600",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-07-01T22:54:59Z",
+                  "last_grounded": "2026-07-06T13:30:14Z",
+                  "detail": {
+                    "appid": 1422450,
+                    "feed": "Community Announcements",
+                    "gid": "1836506165566600"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-06T13:30:14Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "minorupdate06302026",
+              "headline": "Minor Update - 06-30-2026",
+              "summary": "- King of the Hill objective has been rethemed and renamed to \"Unstable Rift\"- Unstable Rift no longer requires an Urn delivery to trigger the start of the event. It now has a variable start time of +/- 1 minute. There is a global announcement 25s before it spawns.",
+              "bullets": [],
+              "kind": "patch",
+              "confidence": "confirmed",
+              "published": "2026-06-30T17:22:14Z",
+              "source": {
+                "name": "Deadlock — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165563227",
+                "stamp": "published=2026-06-30T17:22:14Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.1422450",
+                "source_name": "Deadlock — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165563227",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-06-30T17:22:14Z",
+                  "last_grounded": "2026-07-06T13:30:14Z",
+                  "detail": {
+                    "appid": 1422450,
+                    "feed": "Community Announcements",
+                    "gid": "1836506165563227"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-06T13:30:14Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            }
+          ],
+          "rumors": [],
+          "buzz": null,
+          "character": null,
+          "character_note": "",
+          "crosslink": null
+        },
+        {
+          "world_key": "sts2",
+          "world_name": "Slay the Spire 2",
+          "emoji": "🃏",
+          "blurb": "Early-access deckbuilder — balance + RNG fixes matter.",
+          "items": [
+            {
+              "id": "betapatchnotesv01080",
+              "headline": "Beta Patch Notes - v0.108.0",
+              "summary": "For all you beta testers who have been chomping at the bit for a new patch to chew on... here it is! Today's beta patch brings a ton of fixes, balance changes, some UX additions, a BIG batch of new multiplayer cards, and new art additions--including some animations for the latest boss, Aeonglass!",
+              "bullets": [
+                "End-of-turn Orb passives now trigger before Doom",
+                "This means that, if a player would die to self-Doom (ex. from Neurosurge card) but also has an Orb with an end-of-turn passive that would kill the last remai…",
+                "Buffed Torch Head Amalgam: increased damage at Ascension 9",
+                "Weak Tackle damage increased from 14(15) → 14(16)",
+                "Tackle damage increased from 18(19) → 18(22)",
+                "Changed Regen Potion: its healing effect now triggers before Doom, preventing the player from dying to self-Doom in certain situations"
+              ],
+              "kind": "patch",
+              "confidence": "confirmed",
+              "published": "2026-07-03T03:26:13Z",
+              "source": {
+                "name": "Slay the Spire 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165569491",
+                "stamp": "patch=0.108.0",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.2868840",
+                "source_name": "Slay the Spire 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165569491",
+                "stamp": {
+                  "version": null,
+                  "patch": "0.108.0",
+                  "league": null,
+                  "published": "2026-07-03T03:26:13Z",
+                  "last_grounded": "2026-07-06T13:30:14Z",
+                  "detail": {
+                    "appid": 2868840,
+                    "feed": "Community Announcements",
+                    "gid": "1836506165569491"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-06T13:30:14Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "majorupdate2v01071",
+              "headline": "Major Update #2 - v0.107.1",
+              "summary": "Hey Slayers, our second major main branch update is here with 4 patches in 1 (not including hotfixes)! While we'll be covering a lot of things that beta players will already be used to, there are also a few big changes that will be totally new for everyone.",
+              "bullets": [
+                "The Bestiary is now available in the Compendium",
+                "Added three more Badges:",
+                "Damage Leader - Dealt the most damage to enemies in multiplayer",
+                "Debuffer - Applied the most Debuffs in multiplayer",
+                "C-c-c-Combo - Played 20 cards in a single turn",
+                "Terminal run modifier can no longer bring a player below 1 HP"
+              ],
+              "kind": "patch",
+              "confidence": "confirmed",
+              "published": "2026-06-19T00:39:31Z",
+              "source": {
+                "name": "Slay the Spire 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1835871199305790",
+                "stamp": "patch=0.107.1",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.2868840",
+                "source_name": "Slay the Spire 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1835871199305790",
+                "stamp": {
+                  "version": null,
+                  "patch": "0.107.1",
+                  "league": null,
+                  "published": "2026-06-19T00:39:31Z",
+                  "last_grounded": "2026-07-06T13:30:14Z",
+                  "detail": {
+                    "appid": 2868840,
+                    "feed": "Community Announcements",
+                    "gid": "1835871199305790"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-06T13:30:14Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "theneowsletterjune2026",
+              "headline": "The Neowsletter - June 2026",
+              "summary": "Hey Slayers, it's time for the June Neowsletter! In this issue we're covering a couple of big roadmap items we've checked off our list as of yesterday's main branch patch and answering some of your recent questions. Let's dive in... Dev Update The first feature we want to highlight is the Bestiary.",
+              "bullets": [],
+              "kind": "news",
+              "confidence": "confirmed",
+              "published": "2026-06-20T01:11:49Z",
+              "source": {
+                "name": "Slay the Spire 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1835871199312310",
+                "stamp": "published=2026-06-20T01:11:49Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.2868840",
+                "source_name": "Slay the Spire 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1835871199312310",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-06-20T01:11:49Z",
+                  "last_grounded": "2026-07-06T13:30:14Z",
+                  "detail": {
+                    "appid": 2868840,
+                    "feed": "Community Announcements",
+                    "gid": "1835871199312310"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-06T13:30:14Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            }
+          ],
+          "rumors": [],
+          "buzz": null,
+          "character": null,
+          "character_note": "",
+          "crosslink": null
+        },
+        {
+          "world_key": "hoi4",
+          "world_name": "Hearts of Iron IV",
+          "emoji": "🗺️",
+          "blurb": "Grand strategy — dev diaries + version betas.",
+          "items": [
+            {
+              "id": "hoiivopenbetasummeredition",
+              "headline": "HOI IV - Open Beta Summer Edition™",
+              "summary": "Generals! Greetings from sunny Stockholm to everyone, I’m Batya, Game Director for Hearts of Iron. The summer period is upon us and I wanted to share some information with you all. Unlike the norm of armies planning summer offensives, game developers actually do the opposite and take time off.",
+              "bullets": [
+                "Right-click the game in your library",
+                "Select Properties from the drop-down menu",
+                "Select Game Versions & Betas",
+                "Select the beta branch called open_beta",
+                "Battalion Adjusters now scale with the Equipment and Manpower status of the Sub-Unit. E.g. Super Heavy Artillery with Siege Artillery Sub-Doctrine no longer…",
+                "Added Essential (Equipment) Blocks for the following units: Heavy Weapons Company and Motorized Heavy Weapons Company, Light Flame Tank, Medium Flame Tank, H…"
+              ],
+              "kind": "event",
+              "confidence": "confirmed",
+              "published": "2026-07-06T12:17:35Z",
+              "source": {
+                "name": "Hearts of Iron IV — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165575862",
+                "stamp": "published=2026-07-06T12:17:35Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.394360",
+                "source_name": "Hearts of Iron IV — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165575862",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-07-06T12:17:35Z",
+                  "last_grounded": "2026-07-06T13:30:14Z",
+                  "detail": {
+                    "appid": 394360,
+                    "feed": "Community Announcements",
+                    "gid": "1836506165575862"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-06T13:30:14Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "thunderatourgatespatch1192",
+              "headline": "Thunder at our Gates | Patch 1.19.2",
+              "summary": "Generals! Today marks the last pre-summer patch with fixes and tweaks to Thunder At Our Gates. After this the team will have limited presence in the office for the summer period.",
+              "bullets": [
+                "Right click the game in Steam",
+                "Go to Properties, then Game Versions & Betas",
+                "Select 1.19.1",
+                "Default Public Version will use the latest public build, in this case 1.19.2",
+                "Expeditionary Leader trait Non-Core Attack and Defence reduced from +15% to +10%.",
+                "Tuned down the \"Spirit of St. Bernard\" spirit, which in combination with other things could give 105% casualty trickleback and unending armies of resurrected…"
+              ],
+              "kind": "patch",
+              "confidence": "confirmed",
+              "published": "2026-06-30T13:05:10Z",
+              "source": {
+                "name": "Hearts of Iron IV — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165562428",
+                "stamp": "patch=1.19.2",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.394360",
+                "source_name": "Hearts of Iron IV — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165562428",
+                "stamp": {
+                  "version": null,
+                  "patch": "1.19.2",
+                  "league": null,
+                  "published": "2026-06-30T13:05:10Z",
+                  "last_grounded": "2026-07-06T13:30:14Z",
+                  "detail": {
+                    "appid": 394360,
+                    "feed": "Community Announcements",
+                    "gid": "1836506165562428"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-06T13:30:14Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "hoiivopenbetaweekend1192",
+              "headline": "HOI IV | Open Beta Weekend (1.19.2)",
+              "summary": "Generals! We decided it would be best to run 1.19.2 as an Open Beta over the weekend to get some potential player input over the weekend. This will allow us to make any necessary fixes as well that might pop up as a result from having a wider testing net. The upside is earlier patch notes!",
+              "bullets": [
+                "Right-click the game in your library",
+                "Select Properties from the drop-down menu",
+                "Select Game Versions & Betas",
+                "Select the beta branch called open_beta",
+                "Pending hotjoins can be overwritten by new requests, resulting in an inability to launch the game",
+                "Players bypass the hotjoin flow when joining a lobby that has loaded into the map, but not started yet"
+              ],
+              "kind": "patch",
+              "confidence": "confirmed",
+              "published": "2026-06-25T15:04:51Z",
+              "source": {
+                "name": "Hearts of Iron IV — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165549700",
+                "stamp": "patch=1.19.2",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.394360",
+                "source_name": "Hearts of Iron IV — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165549700",
+                "stamp": {
+                  "version": null,
+                  "patch": "1.19.2",
+                  "league": null,
+                  "published": "2026-06-25T15:04:51Z",
+                  "last_grounded": "2026-07-06T13:30:14Z",
+                  "detail": {
+                    "appid": 394360,
+                    "feed": "Community Announcements",
+                    "gid": "1836506165549700"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-06T13:30:14Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            }
+          ],
+          "rumors": [],
+          "buzz": null,
+          "character": null,
+          "character_note": "",
+          "crosslink": null
+        },
+        {
+          "world_key": "hardware",
+          "world_name": "PC Hardware & Your Wishlist",
+          "emoji": "🖥️",
+          "blurb": "Part-price drops on your wishlist + hardware moves. Deep specs live on PC Bottleneck (we link, never duplicate).",
+          "items": [],
+          "rumors": [],
+          "buzz": null,
+          "character": null,
+          "character_note": "",
+          "crosslink": "https://pcbottleneck.buildkit.store"
+        }
+      ],
+      "grounding_note": "Every item below is tied to a primary source with a freshness stamp. Rumors are labelled and never appear in the public edition. If we could not verify it, we did not publish it."
+    },
+    {
+      "schema": "buildkit-brief/edition@1",
+      "slug": "2026-07-03-public",
+      "edition": "public",
+      "status": "published",
+      "date": "2026-07-03",
+      "title": "BuildKit Brief — Gaming & Tech — July 03, 2026",
+      "subtitle": "What changed this cycle across the games worth your time. Every claim sourced.",
+      "generated_utc": "2026-07-03T13:30:10Z",
+      "sources_count": 17,
+      "total_items": 17,
+      "newsletter": {
+        "subject": "BuildKit Brief — Gaming & Tech — July 03, 2026 — 17 updates",
+        "preview": "0.5.4b Patch Notes · League check: Ancestors is live · Counter-Strike 2 Update · Minor Update - 07-01-2026",
+        "from_name": "BuildKit Brief"
+      },
+      "sections": [
+        {
+          "world_key": "poe2",
+          "world_name": "Path of Exile 2",
+          "emoji": "🔱",
+          "blurb": "Your main ARPG. League state + balance patches move your build.",
+          "items": [
+            {
+              "id": "054bpatchnotes",
+              "headline": "0.5.4b Patch Notes",
+              "summary": "0.5.4b Patch NotesBoss Improvements Removed a majority of the stun and freeze immunity windows from all versions of the Tor Gul, the Defiler boss fight. Improved the Minion Phase in the Tasgul, Swallower of Light fight.",
+              "bullets": [
+                "Removed a majority of the stun and freeze immunity windows from all versions of the Tor Gul, the Defiler boss fight.",
+                "Improved the Minion Phase in the Tasgul, Swallower of Light fight.",
+                "Fixed a bug where It That Was Esh could sometimes fail to advance phases properly.",
+                "Fixed a bug where the Arbiter of Divinity could rarely drop loot in an unreachable location.",
+                "Defeating the Arbiter of Divinity now re-enables the exit elevator.",
+                "Extended the time the player has to get into the first Flame Seed during the combo skill that begins with the Large Laser in the Arbiter of Ash boss fight."
+              ],
+              "kind": "patch",
+              "confidence": "confirmed",
+              "published": "2026-07-02T22:00:25Z",
+              "source": {
+                "name": "Path of Exile 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165569121",
+                "stamp": "patch=0.5.4",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.2694490",
+                "source_name": "Path of Exile 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165569121",
+                "stamp": {
+                  "version": null,
+                  "patch": "0.5.4",
+                  "league": null,
+                  "published": "2026-07-02T22:00:25Z",
+                  "last_grounded": "2026-07-03T13:30:10Z",
+                  "detail": {
+                    "appid": 2694490,
+                    "feed": "Community Announcements",
+                    "gid": "1836506165569121"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-03T13:30:10Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "pathofexile2atgamescom2026",
+              "headline": "Path of Exile 2 at gamescom 2026",
+              "summary": "Path of Exile 2 will once again be heading to gamescom in Cologne, Germany. Play a special demo available exclusively at the event, snap some photos with our eerie display, and pick up exclusive merchandise. We'll be sharing more details closer to the event, and we hope to see you there!",
+              "bullets": [],
+              "kind": "news",
+              "confidence": "confirmed",
+              "published": "2026-07-02T23:54:21Z",
+              "source": {
+                "name": "Path of Exile 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165569252",
+                "stamp": "published=2026-07-02T23:54:21Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.2694490",
+                "source_name": "Path of Exile 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165569252",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-07-02T23:54:21Z",
+                  "last_grounded": "2026-07-03T13:30:10Z",
+                  "detail": {
+                    "appid": 2694490,
+                    "feed": "Community Announcements",
+                    "gid": "1836506165569252"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-03T13:30:10Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "pathofexile2buildshowcasefrogmancerbyyuzotv",
+              "headline": "Path of Exile 2 Build Showcase: Frogmancer by Yuzo TV",
+              "summary": "If you've ever wanted to solve your problems with an unreasonable number of exploding frogs, this build may be exactly what you're looking for. Doedre's Undoing is a Lineage Support Gem that transforms curses into areas of cursed ground.",
+              "bullets": [],
+              "kind": "news",
+              "confidence": "confirmed",
+              "published": "2026-07-01T22:52:26Z",
+              "source": {
+                "name": "Path of Exile 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165566596",
+                "stamp": "published=2026-07-01T22:52:26Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.2694490",
+                "source_name": "Path of Exile 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165566596",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-07-01T22:52:26Z",
+                  "last_grounded": "2026-07-03T13:30:10Z",
+                  "detail": {
+                    "appid": 2694490,
+                    "feed": "Community Announcements",
+                    "gid": "1836506165566596"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-03T13:30:10Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            }
+          ],
+          "rumors": [],
+          "buzz": null,
+          "character": null,
+          "character_note": "",
+          "crosslink": null
+        },
+        {
+          "world_key": "poe1",
+          "world_name": "Path of Exile",
+          "emoji": "⚔️",
+          "blurb": "PoE1 events + league cycle (separate game from PoE2).",
+          "items": [
+            {
+              "id": "poe1leagueancestors",
+              "headline": "League check: Ancestors is live",
+              "summary": "Current PoE1 challenge league: **Ancestors**. Started Jun 25, 2026. Ends in ~13 days (Jul 16) — plan your next character.",
+              "bullets": [],
+              "kind": "meta",
+              "confidence": "confirmed",
+              "published": "2026-06-25T22:00:00Z",
+              "source": {
+                "name": "Path of Exile — Official leagues API (GGG)",
+                "url": "https://www.pathofexile.com/leagues",
+                "stamp": "league=Ancestors",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "ggg.leagues",
+                "source_name": "Path of Exile — Official leagues API (GGG)",
+                "url": "https://www.pathofexile.com/leagues",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": "Ancestors",
+                  "published": "2026-06-25T22:00:00Z",
+                  "last_grounded": "2026-07-03T13:30:10Z",
+                  "detail": {
+                    "endAt": "2026-07-16T22:00:00Z",
+                    "api": "pathofexile.com/api/leagues"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-03T13:30:10Z",
+                "freshness": "fresh",
+                "note": "Live from GGG's public leagues endpoint."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "playthereturnoftheancestorseventonjune25thpdt",
+              "headline": "Play the Return of the Ancestors Event on June 25th PDT",
+              "summary": "The Ancestors have heard your call. The beloved Trial of the Ancestors mechanics return to Path of Exile in a three-week event starting June 25 (PDT)! Harness the power of Phrecian Ascendancy classes and new Tattoos to challenge the legendary Karui chieftains.",
+              "bullets": [
+                "Start Date: 3PM June 25th PDT",
+                "End Date: 3PM July 16th PDT",
+                "Based on: Mirage",
+                "Standard, Hardcore, Standard Solo Self-Found and Hardcore Solo Self-Found versions available. The event also has a Ruthless mode available which uses the sam…",
+                "This event is not voided. Items and characters will transfer to parent leagues at the end of the event. Upon migration, your characters’ Ascendancy points wi…"
+              ],
+              "kind": "event",
+              "confidence": "confirmed",
+              "published": "2026-06-19T21:05:45Z",
+              "source": {
+                "name": "Path of Exile — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1835871199308189",
+                "stamp": "published=2026-06-19T21:05:45Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.238960",
+                "source_name": "Path of Exile — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1835871199308189",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-06-19T21:05:45Z",
+                  "last_grounded": "2026-07-03T13:30:10Z",
+                  "detail": {
+                    "appid": 238960,
+                    "feed": "Community Announcements",
+                    "gid": "1835871199308189"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-03T13:30:10Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "pathofexilesmostuniqueleagueisbackwithachaoticcl",
+              "headline": "Path of Exile's most unique league is back with a chaotic, class-fusing twist",
+              "summary": "A new Path of Exile event is about to start, as developer Grinding Gear Games attempts to test the limits of just how much action RPG it's possible to squeeze into your life.",
+              "bullets": [],
+              "kind": "news",
+              "confidence": "confirmed",
+              "published": "2026-06-20T16:45:45Z",
+              "source": {
+                "name": "Path of Exile — PCGamesN",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/PCGamesN/1835871199309768",
+                "stamp": "published=2026-06-20T16:45:45Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.238960",
+                "source_name": "Path of Exile — PCGamesN",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/PCGamesN/1835871199309768",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-06-20T16:45:45Z",
+                  "last_grounded": "2026-07-03T13:30:10Z",
+                  "detail": {
+                    "appid": 238960,
+                    "feed": "PCGamesN",
+                    "gid": "1835871199309768"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-03T13:30:10Z",
+                "freshness": "fresh",
+                "note": "Press coverage of a real update."
+              },
+              "crosslink": null
+            }
+          ],
+          "rumors": [],
+          "buzz": null,
+          "character": null,
+          "character_note": "",
+          "crosslink": null
+        },
+        {
+          "world_key": "cs2",
+          "world_name": "Counter-Strike 2",
+          "emoji": "🔫",
+          "blurb": "Updates, map/economy changes, and the pro circuit.",
+          "items": [
+            {
+              "id": "counterstrike2update",
+              "headline": "Counter-Strike 2 Update",
+              "summary": "Champions Autograph Stickers are now available for purchase in the Major Shop, congratulations to the Falcons!",
+              "bullets": [
+                "Champions Autograph Stickers are now available for purchase in the Major Shop, congratulations to the Falcons!",
+                "Highlight Souvenir Charms are now available for purchase in the Major Shop, featuring 10 highlights for each of the six stages of the Cologne 2026 Major, and…"
+              ],
+              "kind": "patch",
+              "confidence": "confirmed",
+              "published": "2026-07-01T02:57:57Z",
+              "source": {
+                "name": "Counter-Strike 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165564135",
+                "stamp": "published=2026-07-01T02:57:57Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.730",
+                "source_name": "Counter-Strike 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165564135",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-07-01T02:57:57Z",
+                  "last_grounded": "2026-07-03T13:30:10Z",
+                  "detail": {
+                    "appid": 730,
+                    "feed": "Community Announcements",
+                    "gid": "1836506165564135"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-03T13:30:10Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "teamfalconsfinale",
+              "headline": "Team Falcons' Finale",
+              "summary": "Taking on the toughest Playoff bracket in Major history, the Falcons made a triumphant statement at the IEM Cologne 2026 Major. Facing the defending Major Champions in the Quarterfinals, Falcons defeated Vitality 2-1, with each map taking 24 rounds to determine a winner.",
+              "bullets": [],
+              "kind": "news",
+              "confidence": "confirmed",
+              "published": "2026-07-01T02:58:04Z",
+              "source": {
+                "name": "Counter-Strike 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165564136",
+                "stamp": "published=2026-07-01T02:58:04Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.730",
+                "source_name": "Counter-Strike 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165564136",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-07-01T02:58:04Z",
+                  "last_grounded": "2026-07-03T13:30:10Z",
+                  "detail": {
+                    "appid": 730,
+                    "feed": "Community Announcements",
+                    "gid": "1836506165564136"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-03T13:30:10Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "theiemcologne2026grandfinals",
+              "headline": "The IEM Cologne 2026 Grand Finals",
+              "summary": "Following one of the most unforgettable days in Major playoff history, Saturday's Semifinals left two teams standing in pursuit of a Major Championship.",
+              "bullets": [],
+              "kind": "news",
+              "confidence": "confirmed",
+              "published": "2026-06-20T20:51:54Z",
+              "source": {
+                "name": "Counter-Strike 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1835871199310024",
+                "stamp": "published=2026-06-20T20:51:54Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.730",
+                "source_name": "Counter-Strike 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1835871199310024",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-06-20T20:51:54Z",
+                  "last_grounded": "2026-07-03T13:30:10Z",
+                  "detail": {
+                    "appid": 730,
+                    "feed": "Community Announcements",
+                    "gid": "1835871199310024"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-03T13:30:10Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            }
+          ],
+          "rumors": [],
+          "buzz": null,
+          "character": null,
+          "character_note": "",
+          "crosslink": null
+        },
+        {
+          "world_key": "deadlock",
+          "world_name": "Deadlock",
+          "emoji": "🕵️",
+          "blurb": "Valve's hero shooter — patch cadence + hero balance.",
+          "items": [
+            {
+              "id": "minorupdate07012026",
+              "headline": "Minor Update - 07-01-2026",
+              "summary": "- Shiv: Alt Fire ammo cost reduced from 5 to 4- Shiv: Weapon now has fixed pellet spread- Shiv: Slice and Dice is now back to doing spirit damage and reducing Spirit Resistance from enemies- Shiv: Slice and Dice damage increased from 60 to 75- Shiv: Killing Blow T3 reduced from +10% Enemy Health…",
+              "bullets": [],
+              "kind": "patch",
+              "confidence": "confirmed",
+              "published": "2026-07-01T22:54:59Z",
+              "source": {
+                "name": "Deadlock — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165566600",
+                "stamp": "published=2026-07-01T22:54:59Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.1422450",
+                "source_name": "Deadlock — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165566600",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-07-01T22:54:59Z",
+                  "last_grounded": "2026-07-03T13:30:10Z",
+                  "detail": {
+                    "appid": 1422450,
+                    "feed": "Community Announcements",
+                    "gid": "1836506165566600"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-03T13:30:10Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "minorupdate06302026",
+              "headline": "Minor Update - 06-30-2026",
+              "summary": "- King of the Hill objective has been rethemed and renamed to \"Unstable Rift\"- Unstable Rift no longer requires an Urn delivery to trigger the start of the event. It now has a variable start time of +/- 1 minute. There is a global announcement 25s before it spawns.",
+              "bullets": [],
+              "kind": "patch",
+              "confidence": "confirmed",
+              "published": "2026-06-30T17:22:14Z",
+              "source": {
+                "name": "Deadlock — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165563227",
+                "stamp": "published=2026-06-30T17:22:14Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.1422450",
+                "source_name": "Deadlock — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165563227",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-06-30T17:22:14Z",
+                  "last_grounded": "2026-07-03T13:30:10Z",
+                  "detail": {
+                    "appid": 1422450,
+                    "feed": "Community Announcements",
+                    "gid": "1836506165563227"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-03T13:30:10Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            }
+          ],
+          "rumors": [],
+          "buzz": null,
+          "character": null,
+          "character_note": "",
+          "crosslink": null
+        },
+        {
+          "world_key": "sts2",
+          "world_name": "Slay the Spire 2",
+          "emoji": "🃏",
+          "blurb": "Early-access deckbuilder — balance + RNG fixes matter.",
+          "items": [
+            {
+              "id": "betapatchnotesv01080",
+              "headline": "Beta Patch Notes - v0.108.0",
+              "summary": "For all you beta testers who have been chomping at the bit for a new patch to chew on... here it is! Today's beta patch brings a ton of fixes, balance changes, some UX additions, a BIG batch of new multiplayer cards, and new art additions--including some animations for the latest boss, Aeonglass!",
+              "bullets": [
+                "End-of-turn Orb passives now trigger before Doom",
+                "This means that, if a player would die to self-Doom (ex. from Neurosurge card) but also has an Orb with an end-of-turn passive that would kill the last remai…",
+                "Buffed Torch Head Amalgam: increased damage at Ascension 9",
+                "Weak Tackle damage increased from 14(15) → 14(16)",
+                "Tackle damage increased from 18(19) → 18(22)",
+                "Changed Regen Potion: its healing effect now triggers before Doom, preventing the player from dying to self-Doom in certain situations"
+              ],
+              "kind": "patch",
+              "confidence": "confirmed",
+              "published": "2026-07-03T03:26:13Z",
+              "source": {
+                "name": "Slay the Spire 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165569491",
+                "stamp": "patch=0.108.0",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.2868840",
+                "source_name": "Slay the Spire 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165569491",
+                "stamp": {
+                  "version": null,
+                  "patch": "0.108.0",
+                  "league": null,
+                  "published": "2026-07-03T03:26:13Z",
+                  "last_grounded": "2026-07-03T13:30:10Z",
+                  "detail": {
+                    "appid": 2868840,
+                    "feed": "Community Announcements",
+                    "gid": "1836506165569491"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-03T13:30:10Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "majorupdate2v01071",
+              "headline": "Major Update #2 - v0.107.1",
+              "summary": "Hey Slayers, our second major main branch update is here with 4 patches in 1 (not including hotfixes)! While we'll be covering a lot of things that beta players will already be used to, there are also a few big changes that will be totally new for everyone.",
+              "bullets": [
+                "The Bestiary is now available in the Compendium",
+                "Added three more Badges:",
+                "Damage Leader - Dealt the most damage to enemies in multiplayer",
+                "Debuffer - Applied the most Debuffs in multiplayer",
+                "C-c-c-Combo - Played 20 cards in a single turn",
+                "Terminal run modifier can no longer bring a player below 1 HP"
+              ],
+              "kind": "patch",
+              "confidence": "confirmed",
+              "published": "2026-06-19T00:39:31Z",
+              "source": {
+                "name": "Slay the Spire 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1835871199305790",
+                "stamp": "patch=0.107.1",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.2868840",
+                "source_name": "Slay the Spire 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1835871199305790",
+                "stamp": {
+                  "version": null,
+                  "patch": "0.107.1",
+                  "league": null,
+                  "published": "2026-06-19T00:39:31Z",
+                  "last_grounded": "2026-07-03T13:30:10Z",
+                  "detail": {
+                    "appid": 2868840,
+                    "feed": "Community Announcements",
+                    "gid": "1835871199305790"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-03T13:30:10Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "theneowsletterjune2026",
+              "headline": "The Neowsletter - June 2026",
+              "summary": "Hey Slayers, it's time for the June Neowsletter! In this issue we're covering a couple of big roadmap items we've checked off our list as of yesterday's main branch patch and answering some of your recent questions. Let's dive in... Dev Update The first feature we want to highlight is the Bestiary.",
+              "bullets": [],
+              "kind": "news",
+              "confidence": "confirmed",
+              "published": "2026-06-20T01:11:49Z",
+              "source": {
+                "name": "Slay the Spire 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1835871199312310",
+                "stamp": "published=2026-06-20T01:11:49Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.2868840",
+                "source_name": "Slay the Spire 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1835871199312310",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-06-20T01:11:49Z",
+                  "last_grounded": "2026-07-03T13:30:10Z",
+                  "detail": {
+                    "appid": 2868840,
+                    "feed": "Community Announcements",
+                    "gid": "1835871199312310"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-03T13:30:10Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            }
+          ],
+          "rumors": [],
+          "buzz": null,
+          "character": null,
+          "character_note": "",
+          "crosslink": null
+        },
+        {
+          "world_key": "hoi4",
+          "world_name": "Hearts of Iron IV",
+          "emoji": "🗺️",
+          "blurb": "Grand strategy — dev diaries + version betas.",
+          "items": [
+            {
+              "id": "thunderatourgatespatch1192",
+              "headline": "Thunder at our Gates | Patch 1.19.2",
+              "summary": "Generals! Today marks the last pre-summer patch with fixes and tweaks to Thunder At Our Gates. After this the team will have limited presence in the office for the summer period.",
+              "bullets": [
+                "Right click the game in Steam",
+                "Go to Properties, then Game Versions & Betas",
+                "Select 1.19.1",
+                "Default Public Version will use the latest public build, in this case 1.19.2",
+                "Expeditionary Leader trait Non-Core Attack and Defence reduced from +15% to +10%.",
+                "Tuned down the \"Spirit of St. Bernard\" spirit, which in combination with other things could give 105% casualty trickleback and unending armies of resurrected…"
+              ],
+              "kind": "patch",
+              "confidence": "confirmed",
+              "published": "2026-06-30T13:05:10Z",
+              "source": {
+                "name": "Hearts of Iron IV — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165562428",
+                "stamp": "patch=1.19.2",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.394360",
+                "source_name": "Hearts of Iron IV — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165562428",
+                "stamp": {
+                  "version": null,
+                  "patch": "1.19.2",
+                  "league": null,
+                  "published": "2026-06-30T13:05:10Z",
+                  "last_grounded": "2026-07-03T13:30:10Z",
+                  "detail": {
+                    "appid": 394360,
+                    "feed": "Community Announcements",
+                    "gid": "1836506165562428"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-03T13:30:10Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "hoiivopenbetaweekend1192",
+              "headline": "HOI IV | Open Beta Weekend (1.19.2)",
+              "summary": "Generals! We decided it would be best to run 1.19.2 as an Open Beta over the weekend to get some potential player input over the weekend. This will allow us to make any necessary fixes as well that might pop up as a result from having a wider testing net. The upside is earlier patch notes!",
+              "bullets": [
+                "Right-click the game in your library",
+                "Select Properties from the drop-down menu",
+                "Select Game Versions & Betas",
+                "Select the beta branch called open_beta",
+                "Pending hotjoins can be overwritten by new requests, resulting in an inability to launch the game",
+                "Players bypass the hotjoin flow when joining a lobby that has loaded into the map, but not started yet"
+              ],
+              "kind": "patch",
+              "confidence": "confirmed",
+              "published": "2026-06-25T15:04:51Z",
+              "source": {
+                "name": "Hearts of Iron IV — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165549700",
+                "stamp": "patch=1.19.2",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.394360",
+                "source_name": "Hearts of Iron IV — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165549700",
+                "stamp": {
+                  "version": null,
+                  "patch": "1.19.2",
+                  "league": null,
+                  "published": "2026-06-25T15:04:51Z",
+                  "last_grounded": "2026-07-03T13:30:10Z",
+                  "detail": {
+                    "appid": 394360,
+                    "feed": "Community Announcements",
+                    "gid": "1836506165549700"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-03T13:30:10Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "heartsofironivcelebrate10yearswithus",
+              "headline": "Hearts of Iron IV - Celebrate 10 Years With Us",
+              "summary": "Generals! It’s been a week since launch, and we are working on our usual post release support. 1.19.1 released yesterday, doing a first balance pass, as well as quite a few encountered issues. We are working on 1.19.2 to be released before the summer break.",
+              "bullets": [],
+              "kind": "news",
+              "confidence": "confirmed",
+              "published": "2026-06-18T13:02:09Z",
+              "source": {
+                "name": "Hearts of Iron IV — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1835871199304173",
+                "stamp": "published=2026-06-18T13:02:09Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.394360",
+                "source_name": "Hearts of Iron IV — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1835871199304173",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-06-18T13:02:09Z",
+                  "last_grounded": "2026-07-03T13:30:10Z",
+                  "detail": {
+                    "appid": 394360,
+                    "feed": "Community Announcements",
+                    "gid": "1835871199304173"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-07-03T13:30:10Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            }
+          ],
+          "rumors": [],
+          "buzz": null,
+          "character": null,
+          "character_note": "",
+          "crosslink": null
+        },
+        {
+          "world_key": "hardware",
+          "world_name": "PC Hardware & Your Wishlist",
+          "emoji": "🖥️",
+          "blurb": "Part-price drops on your wishlist + hardware moves. Deep specs live on PC Bottleneck (we link, never duplicate).",
+          "items": [],
+          "rumors": [],
+          "buzz": null,
+          "character": null,
+          "character_note": "",
+          "crosslink": "https://pcbottleneck.buildkit.store"
+        }
+      ],
+      "grounding_note": "Every item below is tied to a primary source with a freshness stamp. Rumors are labelled and never appear in the public edition. If we could not verify it, we did not publish it."
+    },
+    {
+      "schema": "buildkit-brief/edition@1",
       "slug": "2026-07-01-public",
       "edition": "public",
       "status": "published",
