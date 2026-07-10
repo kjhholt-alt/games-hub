@@ -1,963 +1,129 @@
 {
   "source": "content-radar",
   "version": "0.2",
-  "generated_utc": "2026-06-27T18:40:02Z",
+  "generated_utc": "2026-07-08T00:31:59Z",
   "verified": false,
   "verification_notice": "SIGNALS ONLY — UNVERIFIED. These are Reddit leads, NOT facts. clipforge MUST web-verify every premise before producing; label rumors.",
   "scrape": {
-    "scrape_id": 8,
-    "backend": "rss",
-    "subs_ok": 20,
+    "scrape_id": 20,
+    "backend": "disabled(robots)",
+    "subs_ok": 0,
     "subs_failed": 0,
-    "posts_seen": 916,
-    "posts_kept": 892,
-    "posts_dropped": 24,
-    "posts_new": 475,
-    "topic_count": 415,
-    "date": "2026-06-27"
+    "posts_seen": 42,
+    "posts_kept": 42,
+    "posts_dropped": 0,
+    "posts_new": 0,
+    "topic_count": 40,
+    "platform_posts": {
+      "steam": 6,
+      "gaming_news": 36
+    },
+    "reddit_disabled": true,
+    "date": "2026-07-08"
   },
   "channel_topic_counts": {
-    "caseyspizza": 187,
-    "gambatime": 228
+    "gambatime": 40
   },
   "topic_count": 15,
   "items": [
     {
       "verified": false,
-      "entity": "OpenAI",
-      "title": "Previewing GPT‑5.6 Sol: Next-Generation Model | OpenAI",
-      "source": "r/OpenAI",
-      "url": "https://www.reddit.com/r/OpenAI/comments/1ugljgh/previewing_gpt56_sol_nextgeneration_model_openai/",
-      "created": 1782513939,
-      "momentum": 1482.11,
-      "post_count": 22,
-      "sub_count": 7,
-      "subreddits": [
-        "ArtificialInteligence",
-        "ChatGPT",
-        "LocalLLaMA",
-        "OpenAI",
-        "artificial",
-        "singularity",
-        "technology"
-      ],
-      "channel": "caseyspizza",
-      "channel_display": "CaseyPizza",
-      "external_url": "https://openai.com/index/previewing-gpt-5-6-sol/",
-      "domain": "openai.com",
-      "is_self": false,
-      "flair": null,
-      "reddit_id": "1ugljgh",
-      "author": "MatricesRL",
-      "score": null,
-      "num_comments": null,
-      "upvote_ratio": null,
-      "velocity": null,
-      "comment_heat": null,
-      "age_hours": 19.91,
-      "members": [
-        {
-          "title": "Previewing GPT‑5.6 Sol: Next-Generation Model | OpenAI",
-          "url": "https://www.reddit.com/r/OpenAI/comments/1ugljgh/previewing_gpt56_sol_nextgeneration_model_openai/",
-          "subreddit": "OpenAI",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 19.91,
-          "also_subreddits": [
-            "singularity"
-          ]
-        },
-        {
-          "title": "OpenAI absolutely HUMILIATES claude MYTHOS 5 in the trust me bro benchmarks with their new GPT-5.6 Sol",
-          "url": "https://www.reddit.com/r/OpenAI/comments/1ugnfjz/openai_absolutely_humiliates_claude_mythos_5_in/",
-          "subreddit": "OpenAI",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 18.58,
-          "also_subreddits": []
-        },
-        {
-          "title": "OWNING HARDWARE THAT CAN RUN MODELS LOCALLY MATTERS MORE THAN EVER",
-          "url": "https://www.reddit.com/r/ArtificialInteligence/comments/1uh100j/owning_hardware_that_can_run_models_locally/",
-          "subreddit": "ArtificialInteligence",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 6.62,
-          "also_subreddits": []
-        },
-        {
-          "title": "Mythos was the first, now GPT-5.6",
-          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uh68gu/mythos_was_the_first_now_gpt56/",
-          "subreddit": "LocalLLaMA",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 2.78,
-          "also_subreddits": []
-        },
-        {
-          "title": "Whatever happened to rumors of OpenAI Cutting prices? New 5.6 Models are significantly more expensive!",
-          "url": "https://www.reddit.com/r/OpenAI/comments/1ughpyd/whatever_happened_to_rumors_of_openai_cutting/",
-          "subreddit": "OpenAI",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 22.41,
-          "also_subreddits": []
-        },
-        {
-          "title": "gpt-2 is too dangerous to be released",
-          "url": "https://www.reddit.com/r/singularity/comments/1ugnbj0/gpt2_is_too_dangerous_to_be_released/",
-          "subreddit": "singularity",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 18.65,
-          "also_subreddits": []
-        }
-      ]
-    },
-    {
-      "verified": false,
-      "entity": "ChatGPT",
-      "title": "Made with ChatGPT Images 2.0",
-      "source": "r/ChatGPT",
-      "url": "https://www.reddit.com/r/ChatGPT/comments/1srxfnl/made_with_chatgpt_images_20/",
-      "created": 1776798385,
-      "momentum": 1257.37,
-      "post_count": 20,
-      "sub_count": 6,
-      "subreddits": [
-        "ArtificialInteligence",
-        "ChatGPT",
-        "ClaudeAI",
-        "OpenAI",
-        "artificial",
-        "technology"
-      ],
-      "channel": "caseyspizza",
-      "channel_display": "CaseyPizza",
-      "external_url": "https://v.redd.it/hkui8wbyalwg1",
-      "domain": "v.redd.it",
-      "is_self": false,
-      "flair": null,
-      "reddit_id": "1srxfnl",
-      "author": "OpenAI",
-      "score": null,
-      "num_comments": null,
-      "upvote_ratio": null,
-      "velocity": null,
-      "comment_heat": null,
-      "age_hours": 1607.56,
-      "members": [
-        {
-          "title": "Made with ChatGPT Images 2.0",
-          "url": "https://www.reddit.com/r/ChatGPT/comments/1srxfnl/made_with_chatgpt_images_20/",
-          "subreddit": "ChatGPT",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 1607.56,
-          "also_subreddits": []
-        },
-        {
-          "title": "Updates for ChatGPT",
-          "url": "https://www.reddit.com/r/ChatGPT/comments/1o6jins/updates_for_chatgpt/",
-          "subreddit": "ChatGPT",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 6146.65,
-          "also_subreddits": []
-        },
-        {
-          "title": "I was bored so I created a fictional town with ChatGPT.",
-          "url": "https://www.reddit.com/r/ChatGPT/comments/1ugn681/i_was_bored_so_i_created_a_fictional_town_with/",
-          "subreddit": "ChatGPT",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 18.75,
-          "also_subreddits": []
-        },
-        {
-          "title": "Following a warning from ChatGPT, the FBI alerted Brazilian police about a father's plan to kill his son to avoid paying child support in Espírito Santo.",
-          "url": "https://www.reddit.com/r/ChatGPT/comments/1uh1232/following_a_warning_from_chatgpt_the_fbi_alerted/",
-          "subreddit": "ChatGPT",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 6.57,
-          "also_subreddits": []
-        },
-        {
-          "title": "2+2=4",
-          "url": "https://www.reddit.com/r/ChatGPT/comments/1uh1a7g/224/",
-          "subreddit": "ChatGPT",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 6.38,
-          "also_subreddits": []
-        },
-        {
-          "title": "the metric that flipped for me wasn't benchmark scores, it was how many apps one answer has to touch",
-          "url": "https://www.reddit.com/r/artificial/comments/1uh5f1i/the_metric_that_flipped_for_me_wasnt_benchmark/",
-          "subreddit": "artificial",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 3.34,
-          "also_subreddits": []
-        }
-      ]
-    },
-    {
-      "verified": false,
-      "entity": "GTA 6",
-      "title": "THR: Digital-Only 'Grand Theft Auto VI' Is a Car Crash for Physical Media. At this point in time, there are no plans for Grand Theft Auto VI discs to be printed — not at launch, and not months after",
-      "source": "r/Games",
-      "url": "https://www.reddit.com/r/Games/comments/1uh1xgu/thr_digitalonly_grand_theft_auto_vi_is_a_car/",
-      "created": 1782564524,
-      "momentum": 925.09,
-      "post_count": 18,
-      "sub_count": 4,
-      "subreddits": [
-        "GTA6",
-        "Games",
-        "GamingLeaksAndRumours",
-        "gaming"
-      ],
-      "channel": "gambatime",
-      "channel_display": "GambaTime",
-      "external_url": "https://www.hollywoodreporter.com/business/business-news/grand-theft-auto-vi-digital-only-no-disc-rip-physical-media-1236629695/",
-      "domain": "hollywoodreporter.com",
-      "is_self": false,
-      "flair": null,
-      "reddit_id": "1uh1xgu",
-      "author": "Turbostrider27",
-      "score": null,
-      "num_comments": null,
-      "upvote_ratio": null,
-      "velocity": null,
-      "comment_heat": null,
-      "age_hours": 5.86,
-      "members": [
-        {
-          "title": "THR: Digital-Only 'Grand Theft Auto VI' Is a Car Crash for Physical Media. At this point in time, there are no plans for Grand Theft Auto VI discs to be printed — not at launch, and not months after",
-          "url": "https://www.reddit.com/r/Games/comments/1uh1xgu/thr_digitalonly_grand_theft_auto_vi_is_a_car/",
-          "subreddit": "Games",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 5.86,
-          "also_subreddits": [
-            "gaming"
-          ]
-        },
-        {
-          "title": "Grand Theft Auto VI Pre-Order Purchase Support FAQ (Rockstar Support Article)",
-          "url": "https://www.reddit.com/r/GTA6/comments/1ugfufg/grand_theft_auto_vi_preorder_purchase_support_faq/",
-          "subreddit": "GTA6",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 23.6,
-          "also_subreddits": []
-        },
-        {
-          "title": "There are no plans for Grand Theft Auto VI discs to be printed — not at launch, and not months after",
-          "url": "https://www.reddit.com/r/GamingLeaksAndRumours/comments/1ugw3dt/there_are_no_plans_for_grand_theft_auto_vi_discs/",
-          "subreddit": "GamingLeaksAndRumours",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 11.29,
-          "also_subreddits": []
-        },
-        {
-          "title": "GTA 6 is the cheapest 3D universe GTA game at launch (when adjusted for inflation)",
-          "url": "https://www.reddit.com/r/GTA6/comments/1ugnrc3/gta_6_is_the_cheapest_3d_universe_gta_game_at/",
-          "subreddit": "GTA6",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 18.33,
-          "also_subreddits": []
-        },
-        {
-          "title": "GTA VI vs Gran Turismo 7 graphics comparison",
-          "url": "https://www.reddit.com/r/GTA6/comments/1ugxz2f/gta_vi_vs_gran_turismo_7_graphics_comparison/",
-          "subreddit": "GTA6",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 9.43,
-          "also_subreddits": []
-        },
-        {
-          "title": "GTA 6 Road Scales are Perfect!",
-          "url": "https://www.reddit.com/r/GTA6/comments/1uh3axf/gta_6_road_scales_are_perfect/",
-          "subreddit": "GTA6",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 4.83,
-          "also_subreddits": []
-        }
-      ]
-    },
-    {
-      "verified": false,
-      "entity": "Claude",
-      "title": "I used Claude to fix my biggest frustration with PDFs",
-      "source": "r/ClaudeAI",
-      "url": "https://www.reddit.com/r/ClaudeAI/comments/1ugj1bt/i_used_claude_to_fix_my_biggest_frustration_with/",
-      "created": 1782507942,
-      "momentum": 793.7,
-      "post_count": 22,
-      "sub_count": 4,
-      "subreddits": [
-        "ClaudeAI",
-        "LocalLLaMA",
-        "OpenAI",
-        "artificial"
-      ],
-      "channel": "caseyspizza",
-      "channel_display": "CaseyPizza",
-      "external_url": "https://v.redd.it/bgs5eg16zo9h1",
-      "domain": "v.redd.it",
-      "is_self": false,
-      "flair": null,
-      "reddit_id": "1ugj1bt",
-      "author": "gounisalex",
-      "score": null,
-      "num_comments": null,
-      "upvote_ratio": null,
-      "velocity": null,
-      "comment_heat": null,
-      "age_hours": 21.57,
-      "members": [
-        {
-          "title": "I used Claude to fix my biggest frustration with PDFs",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1ugj1bt/i_used_claude_to_fix_my_biggest_frustration_with/",
-          "subreddit": "ClaudeAI",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 21.57,
-          "also_subreddits": []
-        },
-        {
-          "title": "750 tps on GPT 5.6 Sol, INSANE",
-          "url": "https://www.reddit.com/r/OpenAI/comments/1ughtpx/750_tps_on_gpt_56_sol_insane/",
-          "subreddit": "OpenAI",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 22.35,
-          "also_subreddits": []
-        },
-        {
-          "title": "My $200 Claude Max x20 has provided about $9K worth of token in 2 months!",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1uh4y96/my_200_claude_max_x20_has_provided_about_9k_worth/",
-          "subreddit": "ClaudeAI",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 3.65,
-          "also_subreddits": []
-        },
-        {
-          "title": "Asked Claude to mock up an outfit for me",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1uglhwy/asked_claude_to_mock_up_an_outfit_for_me/",
-          "subreddit": "ClaudeAI",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 19.94,
-          "also_subreddits": []
-        },
-        {
-          "title": "Who can make the best diamond with just Claude?",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1ugukfg/who_can_make_the_best_diamond_with_just_claude/",
-          "subreddit": "ClaudeAI",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 12.71,
-          "also_subreddits": []
-        },
-        {
-          "title": "Update: Higher rate limits on Claude API",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1ugm2vp/update_higher_rate_limits_on_claude_api/",
-          "subreddit": "ClaudeAI",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 19.53,
-          "also_subreddits": []
-        }
-      ]
-    },
-    {
-      "verified": false,
-      "entity": "Anthropic",
-      "title": "Anthropic speaks out",
-      "source": "r/ClaudeAI",
-      "url": "https://www.reddit.com/r/ClaudeAI/comments/1ugonxn/anthropic_speaks_out/",
-      "created": 1782522108,
-      "momentum": 185.91,
-      "post_count": 7,
-      "sub_count": 4,
-      "subreddits": [
-        "ArtificialInteligence",
-        "ClaudeAI",
-        "artificial",
-        "singularity"
-      ],
-      "channel": "caseyspizza",
-      "channel_display": "CaseyPizza",
-      "external_url": "https://i.redd.it/vmpempge5q9h1.jpeg",
-      "domain": "i.redd.it",
-      "is_self": false,
-      "flair": null,
-      "reddit_id": "1ugonxn",
-      "author": "ConsiderationHour710",
-      "score": null,
-      "num_comments": null,
-      "upvote_ratio": null,
-      "velocity": null,
-      "comment_heat": null,
-      "age_hours": 17.64,
-      "members": [
-        {
-          "title": "Anthropic speaks out",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1ugonxn/anthropic_speaks_out/",
-          "subreddit": "ClaudeAI",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 17.64,
-          "also_subreddits": []
-        },
-        {
-          "title": "Scoop: Powerful Anthropic model, Fable 5, on track to return soon",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1uh3dj3/scoop_powerful_anthropic_model_fable_5_on_track/",
-          "subreddit": "ClaudeAI",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 4.77,
-          "also_subreddits": [
-            "ArtificialInteligence"
-          ]
-        },
-        {
-          "title": "Trump admin allows Anthropic to release Mythos AI model to some companies, government agencies: Reports",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1uglxiz/trump_admin_allows_anthropic_to_release_mythos_ai/",
-          "subreddit": "ClaudeAI",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 19.64,
-          "also_subreddits": []
-        },
-        {
-          "title": "Anthropic and US govt insiders expect limits on Fable 5 could be lifted as soon as this coming week - Axios",
-          "url": "https://www.reddit.com/r/singularity/comments/1uh4xo4/anthropic_and_us_govt_insiders_expect_limits_on/",
-          "subreddit": "singularity",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 3.66,
-          "also_subreddits": []
-        },
-        {
-          "title": "US government allows Anthropic limited release of AI model that sparked cybersecurity concerns | CNN Business",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1ugo3n1/us_government_allows_anthropic_limited_release_of/",
-          "subreddit": "ClaudeAI",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 18.08,
-          "also_subreddits": []
-        },
-        {
-          "title": "Anthropic moves toward deal with US to lift curbs on AI models",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1ugl2au/anthropic_moves_toward_deal_with_us_to_lift_curbs/",
-          "subreddit": "ClaudeAI",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 20.24,
-          "also_subreddits": []
-        }
-      ]
-    },
-    {
-      "verified": false,
-      "entity": "Agents",
-      "title": "Same memory, different model. Why do local 8B models use memory worse?",
-      "source": "r/artificial",
-      "url": "https://www.reddit.com/r/artificial/comments/1uh1xbs/same_memory_different_model_why_do_local_8b/",
-      "created": 1782564513,
-      "momentum": 174.16,
-      "post_count": 10,
-      "sub_count": 4,
-      "subreddits": [
-        "ArtificialInteligence",
-        "ClaudeAI",
-        "LocalLLaMA",
-        "artificial"
-      ],
-      "channel": "caseyspizza",
-      "channel_display": "CaseyPizza",
-      "external_url": "https://www.reddit.com/r/artificial/comments/1uh1xbs/same_memory_different_model_why_do_local_8b/",
-      "domain": "self.reddit",
-      "is_self": true,
-      "flair": null,
-      "reddit_id": "1uh1xbs",
-      "author": "mirkofr",
-      "score": null,
-      "num_comments": null,
-      "upvote_ratio": null,
-      "velocity": null,
-      "comment_heat": null,
-      "age_hours": 5.86,
-      "members": [
-        {
-          "title": "Same memory, different model. Why do local 8B models use memory worse?",
-          "url": "https://www.reddit.com/r/artificial/comments/1uh1xbs/same_memory_different_model_why_do_local_8b/",
-          "subreddit": "artificial",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 5.86,
-          "also_subreddits": []
-        },
-        {
-          "title": "at what point do logs and dashboards stop being enough for llm costs?",
-          "url": "https://www.reddit.com/r/artificial/comments/1uh0hu2/at_what_point_do_logs_and_dashboards_stop_being/",
-          "subreddit": "artificial",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 7.05,
-          "also_subreddits": []
-        },
-        {
-          "title": "Dear poor people of this subreddit",
-          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uh0lhc/dear_poor_people_of_this_subreddit/",
-          "subreddit": "LocalLLaMA",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 6.96,
-          "also_subreddits": []
-        },
-        {
-          "title": "I open-sourced industry best practice to self-improving agents",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1uh0t7o/i_opensourced_industry_best_practice_to/",
-          "subreddit": "ClaudeAI",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 6.77,
-          "also_subreddits": []
-        },
-        {
-          "title": "Simulating cloud infrastructure for AI agents - launch day post",
-          "url": "https://www.reddit.com/r/artificial/comments/1uh4cth/simulating_cloud_infrastructure_for_ai_agents/",
-          "subreddit": "artificial",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 4.07,
-          "also_subreddits": []
-        },
-        {
-          "title": "I built 8 specialist AI agents that share one memory of a user health history",
-          "url": "https://www.reddit.com/r/artificial/comments/1uh8rma/i_built_8_specialist_ai_agents_that_share_one/",
-          "subreddit": "artificial",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 1.09,
-          "also_subreddits": []
-        }
-      ]
-    },
-    {
-      "verified": false,
-      "entity": "KREA 2",
-      "title": "KREA 2: Open-Source Release",
-      "source": "r/StableDiffusion",
-      "url": "https://www.reddit.com/r/StableDiffusion/comments/1udjzm6/krea_2_opensource_release/",
-      "created": 1782227789,
-      "momentum": 120.44,
-      "post_count": 11,
-      "sub_count": 1,
-      "subreddits": [
-        "StableDiffusion"
-      ],
-      "channel": "caseyspizza",
-      "channel_display": "CaseyPizza",
-      "external_url": "https://v.redd.it/o9ulk1k6u19h1",
-      "domain": "v.redd.it",
-      "is_self": false,
-      "flair": null,
-      "reddit_id": "1udjzm6",
-      "author": "Angrypenguinpng",
-      "score": null,
-      "num_comments": null,
-      "upvote_ratio": null,
-      "velocity": null,
-      "comment_heat": null,
-      "age_hours": 99.39,
-      "members": [
-        {
-          "title": "KREA 2: Open-Source Release",
-          "url": "https://www.reddit.com/r/StableDiffusion/comments/1udjzm6/krea_2_opensource_release/",
-          "subreddit": "StableDiffusion",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 99.39,
-          "also_subreddits": []
-        },
-        {
-          "title": "Training Krea 2 LoRA on RTX3060 12Gb: a slow, uncomfortable guide that actually works",
-          "url": "https://www.reddit.com/r/StableDiffusion/comments/1uh95sz/training_krea_2_lora_on_rtx3060_12gb_a_slow/",
-          "subreddit": "StableDiffusion",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 0.82,
-          "also_subreddits": []
-        },
-        {
-          "title": "Cyberpunk Aesthetic - Z Image Turbo vs. Krea 2",
-          "url": "https://www.reddit.com/r/StableDiffusion/comments/1ugnxq2/cyberpunk_aesthetic_z_image_turbo_vs_krea_2/",
-          "subreddit": "StableDiffusion",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 18.2,
-          "also_subreddits": []
-        },
-        {
-          "title": "Problems regarding Krea 2.",
-          "url": "https://www.reddit.com/r/StableDiffusion/comments/1uh2jz0/problems_regarding_krea_2/",
-          "subreddit": "StableDiffusion",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 5.38,
-          "also_subreddits": []
-        },
-        {
-          "title": "Strange Krea 2 issue",
-          "url": "https://www.reddit.com/r/StableDiffusion/comments/1uh67u6/strange_krea_2_issue/",
-          "subreddit": "StableDiffusion",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 2.79,
-          "also_subreddits": []
-        },
-        {
-          "title": "Krea2 can actually draw a portable freestanding ballet barre. This is something Klein really struggles with.",
-          "url": "https://www.reddit.com/r/StableDiffusion/comments/1ugr4h4/krea2_can_actually_draw_a_portable_freestanding/",
-          "subreddit": "StableDiffusion",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 15.67,
-          "also_subreddits": []
-        }
-      ]
-    },
-    {
-      "verified": false,
-      "entity": "Qwen",
-      "title": "Improve the skin texture in Krea 2 by using an alternative version of Qwen Image VAE.",
-      "source": "r/StableDiffusion",
-      "url": "https://www.reddit.com/r/StableDiffusion/comments/1uh00bj/improve_the_skin_texture_in_krea_2_by_using_an/",
-      "created": 1782558652,
-      "momentum": 85.76,
-      "post_count": 7,
+      "entity": "Nintendo Switch 2",
+      "title": "Warhammer 40K: Rogue Trader gets \"massive update\" on Switch 2 following disappointing launch, all DLC and expansions now free",
+      "source": "r/news:eurogamer",
+      "url": "https://www.eurogamer.net/warhammer-40k-rogue-trader-switch-2-update",
+      "created": 1783436946,
+      "momentum": 17.02,
+      "accel": 0.2,
+      "is_breakout": false,
+      "post_count": 2,
       "sub_count": 2,
       "subreddits": [
-        "LocalLLaMA",
-        "StableDiffusion"
-      ],
-      "channel": "caseyspizza",
-      "channel_display": "CaseyPizza",
-      "external_url": "https://www.reddit.com/gallery/1uh00bj",
-      "domain": "reddit.com",
-      "is_self": false,
-      "flair": null,
-      "reddit_id": "1uh00bj",
-      "author": "Total-Resort-3120",
-      "score": null,
-      "num_comments": null,
-      "upvote_ratio": null,
-      "velocity": null,
-      "comment_heat": null,
-      "age_hours": 7.49,
-      "members": [
-        {
-          "title": "Improve the skin texture in Krea 2 by using an alternative version of Qwen Image VAE.",
-          "url": "https://www.reddit.com/r/StableDiffusion/comments/1uh00bj/improve_the_skin_texture_in_krea_2_by_using_an/",
-          "subreddit": "StableDiffusion",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 7.49,
-          "also_subreddits": []
-        },
-        {
-          "title": "Chinese vs. Western AI Image Models?",
-          "url": "https://www.reddit.com/r/StableDiffusion/comments/1uh7rer/chinese_vs_western_ai_image_models/",
-          "subreddit": "StableDiffusion",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 1.76,
-          "also_subreddits": []
-        },
-        {
-          "title": "Orthrus (diffusion head) trained Qwen 3.5/3.6 and Gemma 4 models are dropping soon",
-          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1ugyvz4/orthrus_diffusion_head_trained_qwen_3536_and/",
-          "subreddit": "LocalLLaMA",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 8.53,
-          "also_subreddits": []
-        },
-        {
-          "title": "Are there any qwen finetunes that were genuinely stronger than the base?",
-          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1ugvv6p/are_there_any_qwen_finetunes_that_were_genuinely/",
-          "subreddit": "LocalLLaMA",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 11.51,
-          "also_subreddits": []
-        },
-        {
-          "title": "Krea 2 | Clownsampler | DDim/Beta57... quality unlocked?",
-          "url": "https://www.reddit.com/r/StableDiffusion/comments/1ugdiyl/krea_2_clownsampler_ddimbeta57_quality_unlocked/",
-          "subreddit": "StableDiffusion",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 25.04,
-          "also_subreddits": []
-        },
-        {
-          "title": "Blend images decoded by different VAEs for Krea2",
-          "url": "https://www.reddit.com/r/StableDiffusion/comments/1ugycbr/blend_images_decoded_by_different_vaes_for_krea2/",
-          "subreddit": "StableDiffusion",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 9.05,
-          "also_subreddits": []
-        }
-      ]
-    },
-    {
-      "verified": false,
-      "entity": "Google",
-      "title": "I have it on good authority that Google are going to be hit with export controls soon.",
-      "source": "r/artificial",
-      "url": "https://www.reddit.com/r/artificial/comments/1uh2fc5/i_have_it_on_good_authority_that_google_are_going/",
-      "created": 1782565885,
-      "momentum": 85.04,
-      "post_count": 4,
-      "sub_count": 3,
-      "subreddits": [
-        "ArtificialInteligence",
-        "LocalLLaMA",
-        "artificial"
-      ],
-      "channel": "caseyspizza",
-      "channel_display": "CaseyPizza",
-      "external_url": "https://i.redd.it/tdtbj1ikrt9h1.jpeg",
-      "domain": "i.redd.it",
-      "is_self": false,
-      "flair": null,
-      "reddit_id": "1uh2fc5",
-      "author": "ThoseOldScientists",
-      "score": null,
-      "num_comments": null,
-      "upvote_ratio": null,
-      "velocity": null,
-      "comment_heat": null,
-      "age_hours": 5.48,
-      "members": [
-        {
-          "title": "I have it on good authority that Google are going to be hit with export controls soon.",
-          "url": "https://www.reddit.com/r/artificial/comments/1uh2fc5/i_have_it_on_good_authority_that_google_are_going/",
-          "subreddit": "artificial",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 5.48,
-          "also_subreddits": []
-        },
-        {
-          "title": "Even Google still believes in small models for coding.",
-          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uh8ir7/even_google_still_believes_in_small_models_for/",
-          "subreddit": "LocalLLaMA",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 1.25,
-          "also_subreddits": []
-        },
-        {
-          "title": "Are we locked on a path to AGI/ASI in our lifetime?",
-          "url": "https://www.reddit.com/r/artificial/comments/1uh5mnv/are_we_locked_on_a_path_to_agiasi_in_our_lifetime/",
-          "subreddit": "artificial",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 3.19,
-          "also_subreddits": []
-        },
-        {
-          "title": "What's an AI prediction that sounds ridiculous today, but you'll probably believe by 2030?",
-          "url": "https://www.reddit.com/r/ArtificialInteligence/comments/1ugwl24/whats_an_ai_prediction_that_sounds_ridiculous/",
-          "subreddit": "ArtificialInteligence",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 10.81,
-          "also_subreddits": []
-        }
-      ]
-    },
-    {
-      "verified": false,
-      "entity": "Gpt 5.6",
-      "title": "Gpt 5.6 better than Mythos 5 that's crazy",
-      "source": "r/OpenAI",
-      "url": "https://www.reddit.com/r/OpenAI/comments/1ugd1pa/gpt_56_better_than_mythos_5_thats_crazy/",
-      "created": 1782494395,
-      "momentum": 79.1,
-      "post_count": 6,
-      "sub_count": 3,
-      "subreddits": [
-        "ArtificialInteligence",
-        "OpenAI",
-        "singularity"
-      ],
-      "channel": "caseyspizza",
-      "channel_display": "CaseyPizza",
-      "external_url": "https://i.redd.it/uiafv8rzun9h1.png",
-      "domain": "i.redd.it",
-      "is_self": false,
-      "flair": null,
-      "reddit_id": "1ugd1pa",
-      "author": "Independent-Wind4462",
-      "score": null,
-      "num_comments": null,
-      "upvote_ratio": null,
-      "velocity": null,
-      "comment_heat": null,
-      "age_hours": 25.34,
-      "members": [
-        {
-          "title": "Gpt 5.6 better than Mythos 5 that's crazy",
-          "url": "https://www.reddit.com/r/OpenAI/comments/1ugd1pa/gpt_56_better_than_mythos_5_thats_crazy/",
-          "subreddit": "OpenAI",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 25.34,
-          "also_subreddits": []
-        },
-        {
-          "title": "When do you think GPT-5.6 will be available to everyone?",
-          "url": "https://www.reddit.com/r/OpenAI/comments/1ugrw3o/when_do_you_think_gpt56_will_be_available_to/",
-          "subreddit": "OpenAI",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 15.04,
-          "also_subreddits": []
-        },
-        {
-          "title": "Gpt 5.6 is here but for limited preview (Bc of government again)",
-          "url": "https://www.reddit.com/r/OpenAI/comments/1ugczb0/gpt_56_is_here_but_for_limited_preview_bc_of/",
-          "subreddit": "OpenAI",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 25.38,
-          "also_subreddits": []
-        },
-        {
-          "title": "Gpt 5.6 better than Mythos 5 that's really good",
-          "url": "https://www.reddit.com/r/singularity/comments/1ugd2cb/gpt_56_better_than_mythos_5_thats_really_good/",
-          "subreddit": "singularity",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 25.32,
-          "also_subreddits": []
-        },
-        {
-          "title": "Gpt 5.6 is here but for limited preview (Bc of government again)",
-          "url": "https://www.reddit.com/r/singularity/comments/1ugczpu/gpt_56_is_here_but_for_limited_preview_bc_of/",
-          "subreddit": "singularity",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 25.37,
-          "also_subreddits": []
-        },
-        {
-          "title": "GPT-5.6 Sol preview is out and the benchmark gap is wider than I expected",
-          "url": "https://www.reddit.com/r/ArtificialInteligence/comments/1ugdxq3/gpt56_sol_preview_is_out_and_the_benchmark_gap_is/",
-          "subreddit": "ArtificialInteligence",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 24.78,
-          "also_subreddits": []
-        }
-      ]
-    },
-    {
-      "verified": false,
-      "entity": "Elden Ring",
-      "title": "Kadokawa investors are mad Elden Ring didn’t squeeze players hard enough",
-      "source": "r/Eldenring",
-      "url": "https://www.reddit.com/r/Eldenring/comments/1ugoom6/kadokawa_investors_are_mad_elden_ring_didnt/",
-      "created": 1782522158,
-      "momentum": 54.62,
-      "post_count": 7,
-      "sub_count": 1,
-      "subreddits": [
-        "Eldenring"
+        "news:eurogamer",
+        "news:ign"
       ],
       "channel": "gambatime",
       "channel_display": "GambaTime",
-      "external_url": "https://wccftech.com/fromsoftware-parent-company-ceo-keeps-job-as-investors-cry-profit-leakage-on-elden-ring/",
-      "domain": "wccftech.com",
+      "external_url": "https://www.eurogamer.net/warhammer-40k-rogue-trader-switch-2-update",
+      "domain": "eurogamer.net",
       "is_self": false,
       "flair": null,
-      "reddit_id": "1ugoom6",
-      "author": "mollyrave",
+      "reddit_id": "news:eurogamer:d7d6861f7224",
+      "author": null,
       "score": null,
       "num_comments": null,
       "upvote_ratio": null,
       "velocity": null,
       "comment_heat": null,
-      "age_hours": 17.62,
+      "age_hours": 9.38,
       "members": [
         {
-          "title": "Kadokawa investors are mad Elden Ring didn’t squeeze players hard enough",
-          "url": "https://www.reddit.com/r/Eldenring/comments/1ugoom6/kadokawa_investors_are_mad_elden_ring_didnt/",
-          "subreddit": "Eldenring",
+          "title": "Warhammer 40K: Rogue Trader gets \"massive update\" on Switch 2 following disappointing launch, all DLC and expansions now free",
+          "url": "https://www.eurogamer.net/warhammer-40k-rogue-trader-switch-2-update",
+          "subreddit": "news:eurogamer",
           "score": null,
           "num_comments": null,
-          "age_hours": 17.62,
+          "age_hours": 9.38,
           "also_subreddits": []
         },
         {
-          "title": "My part of Elden Ring collection",
-          "url": "https://www.reddit.com/r/Eldenring/comments/1ugfkyv/my_part_of_elden_ring_collection/",
-          "subreddit": "Eldenring",
+          "title": "Upcoming Nintendo Switch 2 Games: Release Dates for 2026 and Beyond",
+          "url": "https://www.ign.com/articles/all-upcoming-nintendo-switch-2-games",
+          "subreddit": "news:ign",
           "score": null,
           "num_comments": null,
-          "age_hours": 23.76,
+          "age_hours": 7.0,
+          "also_subreddits": []
+        }
+      ]
+    },
+    {
+      "verified": false,
+      "entity": "Football 27",
+      "title": "College Football 27 Is Pissing Everyone Off",
+      "source": "r/news:gamespot",
+      "url": "https://www.gamespot.com/articles/college-football-27-is-pissing-everyone-off/",
+      "created": 1783454445,
+      "momentum": 11.64,
+      "accel": 1.0,
+      "is_breakout": false,
+      "post_count": 2,
+      "sub_count": 2,
+      "subreddits": [
+        "news:gamespot",
+        "steam"
+      ],
+      "channel": "gambatime",
+      "channel_display": "GambaTime",
+      "external_url": "https://www.gamespot.com/articles/college-football-27-is-pissing-everyone-off/",
+      "domain": "gamespot.com",
+      "is_self": false,
+      "flair": null,
+      "reddit_id": "news:gamespot:5b1b547456e2",
+      "author": null,
+      "score": null,
+      "num_comments": null,
+      "upvote_ratio": null,
+      "velocity": null,
+      "comment_heat": null,
+      "age_hours": 4.52,
+      "members": [
+        {
+          "title": "College Football 27 Is Pissing Everyone Off",
+          "url": "https://www.gamespot.com/articles/college-football-27-is-pissing-everyone-off/",
+          "subreddit": "news:gamespot",
+          "score": null,
+          "num_comments": null,
+          "age_hours": 4.52,
           "also_subreddits": []
         },
         {
-          "title": "Behold, the most OP enemy in shadow of the erdtree",
-          "url": "https://www.reddit.com/r/Eldenring/comments/1ugfidh/behold_the_most_op_enemy_in_shadow_of_the_erdtree/",
-          "subreddit": "Eldenring",
+          "title": "EA SPORTS™ College Football 27",
+          "url": "https://store.steampowered.com/app/4032350",
+          "subreddit": "steam",
           "score": null,
           "num_comments": null,
-          "age_hours": 23.81,
-          "also_subreddits": []
-        },
-        {
-          "title": "Could this be why Elden Ring didn't go on sale for the Steam Summer Sale?",
-          "url": "https://www.reddit.com/r/Eldenring/comments/1ugcn3f/could_this_be_why_elden_ring_didnt_go_on_sale_for/",
-          "subreddit": "Eldenring",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 25.59,
-          "also_subreddits": []
-        },
-        {
-          "title": "After nightreign",
-          "url": "https://www.reddit.com/r/Eldenring/comments/1uh3iu2/after_nightreign/",
-          "subreddit": "Eldenring",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 4.66,
-          "also_subreddits": []
-        },
-        {
-          "title": "Gaming Paralysis",
-          "url": "https://www.reddit.com/r/Eldenring/comments/1uh8azd/gaming_paralysis/",
-          "subreddit": "Eldenring",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 1.4,
+          "age_hours": null,
           "also_subreddits": []
         }
       ]
@@ -965,227 +131,532 @@
     {
       "verified": false,
       "entity": null,
-      "title": "Avatar Legends: The Fighting Game Console Pre-Order Trailer",
-      "source": "r/Games",
-      "url": "https://www.reddit.com/r/Games/comments/1ugspbj/avatar_legends_the_fighting_game_console_preorder/",
-      "created": 1782533923,
-      "momentum": 53.79,
+      "title": "One Piece anime fans are having the biggest summer of all time",
+      "source": "r/news:polygon",
+      "url": "https://www.polygon.com/one-piece-fans-are-eating-well-right-now/",
+      "created": 1783467200,
+      "momentum": 7.32,
+      "accel": 1.0,
+      "is_breakout": false,
       "post_count": 1,
-      "sub_count": 3,
+      "sub_count": 1,
       "subreddits": [
-        "Games",
-        "gaming",
-        "pcgaming"
+        "news:polygon"
       ],
       "channel": "gambatime",
       "channel_display": "GambaTime",
-      "external_url": "https://www.youtube.com/watch?v=dv5rNqDdtXc",
-      "domain": "youtube.com",
+      "external_url": "https://www.polygon.com/one-piece-fans-are-eating-well-right-now/",
+      "domain": "polygon.com",
       "is_self": false,
       "flair": null,
-      "reddit_id": "1ugspbj",
-      "author": "CrossXhunteR",
+      "reddit_id": "news:polygon:f5c6583a77cf",
+      "author": null,
       "score": null,
       "num_comments": null,
       "upvote_ratio": null,
       "velocity": null,
       "comment_heat": null,
-      "age_hours": 14.36,
+      "age_hours": 0.98,
       "members": [
         {
-          "title": "Avatar Legends: The Fighting Game Console Pre-Order Trailer",
-          "url": "https://www.reddit.com/r/Games/comments/1ugspbj/avatar_legends_the_fighting_game_console_preorder/",
-          "subreddit": "Games",
+          "title": "One Piece anime fans are having the biggest summer of all time",
+          "url": "https://www.polygon.com/one-piece-fans-are-eating-well-right-now/",
+          "subreddit": "news:polygon",
           "score": null,
           "num_comments": null,
-          "age_hours": 14.36,
-          "also_subreddits": [
-            "gaming",
-            "pcgaming"
-          ]
+          "age_hours": 0.98,
+          "also_subreddits": []
         }
       ]
     },
     {
       "verified": false,
-      "entity": "Path of Exile 2",
-      "title": "My thoughts on TOTA and why its currently in a very bad state",
-      "source": "r/pathofexile",
-      "url": "https://www.reddit.com/r/pathofexile/comments/1uglef1/my_thoughts_on_tota_and_why_its_currently_in_a/",
-      "created": 1782513586,
-      "momentum": 34.77,
-      "post_count": 4,
+      "entity": null,
+      "title": "Sony Tries To Change The Subject After Killing PlayStation Discs",
+      "source": "r/news:gamespot",
+      "url": "https://www.gamespot.com/articles/sony-tries-to-change-the-subject-after-killing-playstation-discs/",
+      "created": 1783465264,
+      "momentum": 7.22,
+      "accel": 1.0,
+      "is_breakout": false,
+      "post_count": 1,
       "sub_count": 1,
       "subreddits": [
-        "pathofexile"
+        "news:gamespot"
       ],
       "channel": "gambatime",
       "channel_display": "GambaTime",
-      "external_url": "https://www.reddit.com/r/pathofexile/comments/1uglef1/my_thoughts_on_tota_and_why_its_currently_in_a/",
-      "domain": "self.reddit",
-      "is_self": true,
+      "external_url": "https://www.gamespot.com/articles/sony-tries-to-change-the-subject-after-killing-playstation-discs/",
+      "domain": "gamespot.com",
+      "is_self": false,
       "flair": null,
-      "reddit_id": "1uglef1",
-      "author": "Thirteenera",
+      "reddit_id": "news:gamespot:0b2a02bac081",
+      "author": null,
       "score": null,
       "num_comments": null,
       "upvote_ratio": null,
       "velocity": null,
       "comment_heat": null,
-      "age_hours": 20.0,
+      "age_hours": 1.52,
       "members": [
         {
-          "title": "My thoughts on TOTA and why its currently in a very bad state",
-          "url": "https://www.reddit.com/r/pathofexile/comments/1uglef1/my_thoughts_on_tota_and_why_its_currently_in_a/",
-          "subreddit": "pathofexile",
+          "title": "Sony Tries To Change The Subject After Killing PlayStation Discs",
+          "url": "https://www.gamespot.com/articles/sony-tries-to-change-the-subject-after-killing-playstation-discs/",
+          "subreddit": "news:gamespot",
           "score": null,
           "num_comments": null,
-          "age_hours": 20.0,
-          "also_subreddits": []
-        },
-        {
-          "title": "TOTA is still having the same issues as years ago.",
-          "url": "https://www.reddit.com/r/pathofexile/comments/1ugnfp2/tota_is_still_having_the_same_issues_as_years_ago/",
-          "subreddit": "pathofexile",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 18.57,
-          "also_subreddits": []
-        },
-        {
-          "title": "Path of Building Community can't fetch the league list",
-          "url": "https://www.reddit.com/r/pathofexile/comments/1uh3vvm/path_of_building_community_cant_fetch_the_league/",
-          "subreddit": "pathofexile",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 4.4,
-          "also_subreddits": []
-        },
-        {
-          "title": "Am I crazy or did they buff rare monster damage in Ancestros event league?",
-          "url": "https://www.reddit.com/r/pathofexile/comments/1uh7d5f/am_i_crazy_or_did_they_buff_rare_monster_damage/",
-          "subreddit": "pathofexile",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 2.02,
+          "age_hours": 1.52,
           "also_subreddits": []
         }
       ]
     },
     {
       "verified": false,
-      "entity": "Monster Hunter Wilds",
-      "title": "[MOD-APPROVED] Bachelor’s thesis survey on voice chat and toxicity in online multiplayer games",
-      "source": "r/MonsterHunter",
-      "url": "https://www.reddit.com/r/MonsterHunter/comments/1u2ygjy/modapproved_bachelors_thesis_survey_on_voice_chat/",
-      "created": 1781182929,
-      "momentum": 33.44,
-      "post_count": 3,
+      "entity": "Call of Duty",
+      "title": "Call of Duty: Black Ops 1 and 2's Leaked PS5 Trophy List Indicates Some Content May Be Missing",
+      "source": "r/news:ign",
+      "url": "https://www.ign.com/articles/call-of-duty-black-ops-1-and-2s-leaked-ps5-trophy-list-indicates-some-content-may-be-missing",
+      "created": 1783463200,
+      "momentum": 7.11,
+      "accel": 1.0,
+      "is_breakout": false,
+      "post_count": 1,
       "sub_count": 1,
       "subreddits": [
-        "MonsterHunter"
+        "news:ign"
       ],
       "channel": "gambatime",
       "channel_display": "GambaTime",
-      "external_url": "https://www.reddit.com/r/MonsterHunter/comments/1u2ygjy/modapproved_bachelors_thesis_survey_on_voice_chat/",
-      "domain": "self.reddit",
-      "is_self": true,
+      "external_url": "https://www.ign.com/articles/call-of-duty-black-ops-1-and-2s-leaked-ps5-trophy-list-indicates-some-content-may-be-missing",
+      "domain": "ign.com",
+      "is_self": false,
       "flair": null,
-      "reddit_id": "1u2ygjy",
-      "author": "xLisikPisik",
+      "reddit_id": "news:ign:21c49ac0565d",
+      "author": null,
       "score": null,
       "num_comments": null,
       "upvote_ratio": null,
       "velocity": null,
       "comment_heat": null,
-      "age_hours": 389.63,
+      "age_hours": 2.09,
       "members": [
         {
-          "title": "[MOD-APPROVED] Bachelor’s thesis survey on voice chat and toxicity in online multiplayer games",
-          "url": "https://www.reddit.com/r/MonsterHunter/comments/1u2ygjy/modapproved_bachelors_thesis_survey_on_voice_chat/",
-          "subreddit": "MonsterHunter",
+          "title": "Call of Duty: Black Ops 1 and 2's Leaked PS5 Trophy List Indicates Some Content May Be Missing",
+          "url": "https://www.ign.com/articles/call-of-duty-black-ops-1-and-2s-leaked-ps5-trophy-list-indicates-some-content-may-be-missing",
+          "subreddit": "news:ign",
           "score": null,
           "num_comments": null,
-          "age_hours": 389.63,
-          "also_subreddits": []
-        },
-        {
-          "title": "The duality of a monster hunter fan trying to define what ‘grounded’ Means",
-          "url": "https://www.reddit.com/r/MonsterHunter/comments/1ugk3ms/the_duality_of_a_monster_hunter_fan_trying_to/",
-          "subreddit": "MonsterHunter",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 20.88,
-          "also_subreddits": []
-        },
-        {
-          "title": "Getting tired of nomadic/small town settings. Would love to see a city.",
-          "url": "https://www.reddit.com/r/MonsterHunter/comments/1uh7f3j/getting_tired_of_nomadicsmall_town_settings_would/",
-          "subreddit": "MonsterHunter",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 1.99,
+          "age_hours": 2.09,
           "also_subreddits": []
         }
       ]
     },
     {
       "verified": false,
-      "entity": "AGI",
-      "title": "Do you think World Models will lead to AGI?",
-      "source": "r/ArtificialInteligence",
-      "url": "https://www.reddit.com/r/ArtificialInteligence/comments/1uh3397/do_you_think_world_models_will_lead_to_agi/",
-      "created": 1782567669,
-      "momentum": 30.0,
-      "post_count": 3,
-      "sub_count": 3,
+      "entity": null,
+      "title": "Former Elder Scrolls Online designer laments the destruction of layoffs: 'There’s really no one left and no changing it now'",
+      "source": "r/news:pcgamer",
+      "url": "https://www.pcgamer.com/games/mmo/former-elder-scrolls-online-designer-laments-the-destruction-of-layoffs-theres-really-no-one-left-and-no-changing-it-now/",
+      "created": 1783462334,
+      "momentum": 7.07,
+      "accel": 1.0,
+      "is_breakout": false,
+      "post_count": 1,
+      "sub_count": 1,
       "subreddits": [
-        "ArtificialInteligence",
-        "artificial",
-        "singularity"
+        "news:pcgamer"
       ],
-      "channel": "caseyspizza",
-      "channel_display": "CaseyPizza",
-      "external_url": "https://www.reddit.com/r/ArtificialInteligence/comments/1uh3397/do_you_think_world_models_will_lead_to_agi/",
-      "domain": "self.reddit",
-      "is_self": true,
+      "channel": "gambatime",
+      "channel_display": "GambaTime",
+      "external_url": "https://www.pcgamer.com/games/mmo/former-elder-scrolls-online-designer-laments-the-destruction-of-layoffs-theres-really-no-one-left-and-no-changing-it-now/",
+      "domain": "pcgamer.com",
+      "is_self": false,
       "flair": null,
-      "reddit_id": "1uh3397",
-      "author": "Equippedman",
+      "reddit_id": "news:pcgamer:b4bd2c7f93f4",
+      "author": null,
       "score": null,
       "num_comments": null,
       "upvote_ratio": null,
       "velocity": null,
       "comment_heat": null,
-      "age_hours": 4.98,
+      "age_hours": 2.33,
       "members": [
         {
-          "title": "Do you think World Models will lead to AGI?",
-          "url": "https://www.reddit.com/r/ArtificialInteligence/comments/1uh3397/do_you_think_world_models_will_lead_to_agi/",
-          "subreddit": "ArtificialInteligence",
+          "title": "Former Elder Scrolls Online designer laments the destruction of layoffs: 'There’s really no one left and no changing it now'",
+          "url": "https://www.pcgamer.com/games/mmo/former-elder-scrolls-online-designer-laments-the-destruction-of-layoffs-theres-really-no-one-left-and-no-changing-it-now/",
+          "subreddit": "news:pcgamer",
           "score": null,
           "num_comments": null,
-          "age_hours": 4.98,
-          "also_subreddits": [
-            "artificial"
-          ]
-        },
-        {
-          "title": "What are your predictions on what AGI will look like when it arrives?",
-          "url": "https://www.reddit.com/r/singularity/comments/1uh95hw/what_are_your_predictions_on_what_agi_will_look/",
-          "subreddit": "singularity",
-          "score": null,
-          "num_comments": null,
-          "age_hours": 0.83,
+          "age_hours": 2.33,
           "also_subreddits": []
-        },
+        }
+      ]
+    },
+    {
+      "verified": false,
+      "entity": null,
+      "title": "Pokémon Winds & Waves rumor of 300 new Pokémon has fans divided",
+      "source": "r/news:polygon",
+      "url": "https://www.polygon.com/pokemon-winds-waves-rumor-300-new-pokemon-pokedex-weather/",
+      "created": 1783462227,
+      "momentum": 7.07,
+      "accel": 1.0,
+      "is_breakout": false,
+      "post_count": 1,
+      "sub_count": 1,
+      "subreddits": [
+        "news:polygon"
+      ],
+      "channel": "gambatime",
+      "channel_display": "GambaTime",
+      "external_url": "https://www.polygon.com/pokemon-winds-waves-rumor-300-new-pokemon-pokedex-weather/",
+      "domain": "polygon.com",
+      "is_self": false,
+      "flair": null,
+      "reddit_id": "news:polygon:1df1c6af8509",
+      "author": null,
+      "score": null,
+      "num_comments": null,
+      "upvote_ratio": null,
+      "velocity": null,
+      "comment_heat": null,
+      "age_hours": 2.36,
+      "members": [
         {
-          "title": "Is AGI going to be in an LLM?",
-          "url": "https://www.reddit.com/r/singularity/comments/1uh8q07/is_agi_going_to_be_in_an_llm/",
-          "subreddit": "singularity",
+          "title": "Pokémon Winds & Waves rumor of 300 new Pokémon has fans divided",
+          "url": "https://www.polygon.com/pokemon-winds-waves-rumor-300-new-pokemon-pokedex-weather/",
+          "subreddit": "news:polygon",
           "score": null,
           "num_comments": null,
-          "age_hours": 1.12,
+          "age_hours": 2.36,
+          "also_subreddits": []
+        }
+      ]
+    },
+    {
+      "verified": false,
+      "entity": "Minecraft",
+      "title": "New Minecraft Update Finally Allows Players to Sit Down",
+      "source": "r/news:ign",
+      "url": "https://www.ign.com/articles/new-minecraft-update-finally-allows-players-to-sit-down",
+      "created": 1783462168,
+      "momentum": 7.06,
+      "accel": 0.333,
+      "is_breakout": false,
+      "post_count": 1,
+      "sub_count": 1,
+      "subreddits": [
+        "news:ign"
+      ],
+      "channel": "gambatime",
+      "channel_display": "GambaTime",
+      "external_url": "https://www.ign.com/articles/new-minecraft-update-finally-allows-players-to-sit-down",
+      "domain": "ign.com",
+      "is_self": false,
+      "flair": null,
+      "reddit_id": "news:ign:0a614ae2e303",
+      "author": null,
+      "score": null,
+      "num_comments": null,
+      "upvote_ratio": null,
+      "velocity": null,
+      "comment_heat": null,
+      "age_hours": 2.38,
+      "members": [
+        {
+          "title": "New Minecraft Update Finally Allows Players to Sit Down",
+          "url": "https://www.ign.com/articles/new-minecraft-update-finally-allows-players-to-sit-down",
+          "subreddit": "news:ign",
+          "score": null,
+          "num_comments": null,
+          "age_hours": 2.38,
+          "also_subreddits": []
+        }
+      ]
+    },
+    {
+      "verified": false,
+      "entity": null,
+      "title": "Get spirited away to a weird, scary version of a Japanese town and take pictures of the oddities you find in SOMBRAS: negative frames",
+      "source": "r/news:rockpapershotgun",
+      "url": "https://www.rockpapershotgun.com/get-spirited-away-to-a-weird-scary-version-of-a-japanese-town-and-take-pictures-of-the-oddities-you-find-in-sombras-negative-frames",
+      "created": 1783461193,
+      "momentum": 7.01,
+      "accel": 1.0,
+      "is_breakout": false,
+      "post_count": 1,
+      "sub_count": 1,
+      "subreddits": [
+        "news:rockpapershotgun"
+      ],
+      "channel": "gambatime",
+      "channel_display": "GambaTime",
+      "external_url": "https://www.rockpapershotgun.com/get-spirited-away-to-a-weird-scary-version-of-a-japanese-town-and-take-pictures-of-the-oddities-you-find-in-sombras-negative-frames",
+      "domain": "rockpapershotgun.com",
+      "is_self": false,
+      "flair": null,
+      "reddit_id": "news:rockpapershotgun:db9de145b0a2",
+      "author": null,
+      "score": null,
+      "num_comments": null,
+      "upvote_ratio": null,
+      "velocity": null,
+      "comment_heat": null,
+      "age_hours": 2.65,
+      "members": [
+        {
+          "title": "Get spirited away to a weird, scary version of a Japanese town and take pictures of the oddities you find in SOMBRAS: negative frames",
+          "url": "https://www.rockpapershotgun.com/get-spirited-away-to-a-weird-scary-version-of-a-japanese-town-and-take-pictures-of-the-oddities-you-find-in-sombras-negative-frames",
+          "subreddit": "news:rockpapershotgun",
+          "score": null,
+          "num_comments": null,
+          "age_hours": 2.65,
+          "also_subreddits": []
+        }
+      ]
+    },
+    {
+      "verified": false,
+      "entity": "Arc Raiders",
+      "title": "Arc Raiders’ Matchmaking Update Gives Players What They’ve Always Wanted",
+      "source": "r/news:gamespot",
+      "url": "https://www.gamespot.com/articles/arc-raiders-matchmaking-update-gives-players-what-theyve-always-wanted/",
+      "created": 1783457885,
+      "momentum": 6.86,
+      "accel": 1.0,
+      "is_breakout": false,
+      "post_count": 1,
+      "sub_count": 1,
+      "subreddits": [
+        "news:gamespot"
+      ],
+      "channel": "gambatime",
+      "channel_display": "GambaTime",
+      "external_url": "https://www.gamespot.com/articles/arc-raiders-matchmaking-update-gives-players-what-theyve-always-wanted/",
+      "domain": "gamespot.com",
+      "is_self": false,
+      "flair": null,
+      "reddit_id": "news:gamespot:c52fab01a9e6",
+      "author": null,
+      "score": null,
+      "num_comments": null,
+      "upvote_ratio": null,
+      "velocity": null,
+      "comment_heat": null,
+      "age_hours": 3.57,
+      "members": [
+        {
+          "title": "Arc Raiders’ Matchmaking Update Gives Players What They’ve Always Wanted",
+          "url": "https://www.gamespot.com/articles/arc-raiders-matchmaking-update-gives-players-what-theyve-always-wanted/",
+          "subreddit": "news:gamespot",
+          "score": null,
+          "num_comments": null,
+          "age_hours": 3.57,
+          "also_subreddits": []
+        }
+      ]
+    },
+    {
+      "verified": false,
+      "entity": null,
+      "title": "After four hours playing The Blood of Dawnwalker, I've seen combat, romance, intrigue - it's got the makings of being 2026's breakout RPG",
+      "source": "r/news:eurogamer",
+      "url": "https://www.eurogamer.net/the-blood-of-dawnwalker-hands-on-preview",
+      "created": 1783440350,
+      "momentum": 6.07,
+      "accel": 1.0,
+      "is_breakout": false,
+      "post_count": 1,
+      "sub_count": 1,
+      "subreddits": [
+        "news:eurogamer"
+      ],
+      "channel": "gambatime",
+      "channel_display": "GambaTime",
+      "external_url": "https://www.eurogamer.net/the-blood-of-dawnwalker-hands-on-preview",
+      "domain": "eurogamer.net",
+      "is_self": false,
+      "flair": null,
+      "reddit_id": "news:eurogamer:998df66e4cba",
+      "author": null,
+      "score": null,
+      "num_comments": null,
+      "upvote_ratio": null,
+      "velocity": null,
+      "comment_heat": null,
+      "age_hours": 8.44,
+      "members": [
+        {
+          "title": "After four hours playing The Blood of Dawnwalker, I've seen combat, romance, intrigue - it's got the makings of being 2026's breakout RPG",
+          "url": "https://www.eurogamer.net/the-blood-of-dawnwalker-hands-on-preview",
+          "subreddit": "news:eurogamer",
+          "score": null,
+          "num_comments": null,
+          "age_hours": 8.44,
+          "also_subreddits": []
+        }
+      ]
+    },
+    {
+      "verified": false,
+      "entity": "Warhammer 40",
+      "title": "\"This has got to be the most awesome toaster ever\": Saber on building upon hits like Warhammer 40,000: Space Marine 2",
+      "source": "r/news:rockpapershotgun",
+      "url": "https://www.rockpapershotgun.com/this-has-got-to-be-the-most-awesome-toaster-ever-saber-on-building-upon-hits-like-warhammer-40000-space-marine-2",
+      "created": 1783457516,
+      "momentum": 5.7,
+      "accel": 0.5,
+      "is_breakout": false,
+      "post_count": 1,
+      "sub_count": 1,
+      "subreddits": [
+        "news:rockpapershotgun"
+      ],
+      "channel": "gambatime",
+      "channel_display": "GambaTime",
+      "external_url": "https://www.rockpapershotgun.com/this-has-got-to-be-the-most-awesome-toaster-ever-saber-on-building-upon-hits-like-warhammer-40000-space-marine-2",
+      "domain": "rockpapershotgun.com",
+      "is_self": false,
+      "flair": null,
+      "reddit_id": "news:rockpapershotgun:07c7fd625249",
+      "author": null,
+      "score": null,
+      "num_comments": null,
+      "upvote_ratio": null,
+      "velocity": null,
+      "comment_heat": null,
+      "age_hours": 3.67,
+      "members": [
+        {
+          "title": "\"This has got to be the most awesome toaster ever\": Saber on building upon hits like Warhammer 40,000: Space Marine 2",
+          "url": "https://www.rockpapershotgun.com/this-has-got-to-be-the-most-awesome-toaster-ever-saber-on-building-upon-hits-like-warhammer-40000-space-marine-2",
+          "subreddit": "news:rockpapershotgun",
+          "score": null,
+          "num_comments": null,
+          "age_hours": 3.67,
+          "also_subreddits": []
+        }
+      ]
+    },
+    {
+      "verified": false,
+      "entity": null,
+      "title": "Steam Machine",
+      "source": "r/steam",
+      "url": "https://store.steampowered.com/app/4165910",
+      "created": null,
+      "momentum": 5.5,
+      "accel": 1.0,
+      "is_breakout": false,
+      "post_count": 1,
+      "sub_count": 1,
+      "subreddits": [
+        "steam"
+      ],
+      "channel": "gambatime",
+      "channel_display": "GambaTime",
+      "external_url": "https://store.steampowered.com/app/4165910",
+      "domain": "store.steampowered.com",
+      "is_self": false,
+      "flair": null,
+      "reddit_id": "steam:4165910",
+      "author": null,
+      "score": null,
+      "num_comments": null,
+      "upvote_ratio": null,
+      "velocity": null,
+      "comment_heat": null,
+      "age_hours": null,
+      "members": [
+        {
+          "title": "Steam Machine",
+          "url": "https://store.steampowered.com/app/4165910",
+          "subreddit": "steam",
+          "score": null,
+          "num_comments": null,
+          "age_hours": null,
+          "also_subreddits": []
+        }
+      ]
+    },
+    {
+      "verified": false,
+      "entity": "Marvel Rivals",
+      "title": "Marvel Rivals adds X-Men's Jubilee in season 9: first look at gameplay",
+      "source": "r/news:polygon",
+      "url": "https://www.polygon.com/marvel-rivals-jubilee-announced-reveal-release-date/",
+      "created": 1783455834,
+      "momentum": 5.07,
+      "accel": 1.0,
+      "is_breakout": false,
+      "post_count": 1,
+      "sub_count": 1,
+      "subreddits": [
+        "news:polygon"
+      ],
+      "channel": "gambatime",
+      "channel_display": "GambaTime",
+      "external_url": "https://www.polygon.com/marvel-rivals-jubilee-announced-reveal-release-date/",
+      "domain": "polygon.com",
+      "is_self": false,
+      "flair": null,
+      "reddit_id": "news:polygon:3fc5e96619d6",
+      "author": null,
+      "score": null,
+      "num_comments": null,
+      "upvote_ratio": null,
+      "velocity": null,
+      "comment_heat": null,
+      "age_hours": 4.13,
+      "members": [
+        {
+          "title": "Marvel Rivals adds X-Men's Jubilee in season 9: first look at gameplay",
+          "url": "https://www.polygon.com/marvel-rivals-jubilee-announced-reveal-release-date/",
+          "subreddit": "news:polygon",
+          "score": null,
+          "num_comments": null,
+          "age_hours": 4.13,
+          "also_subreddits": []
+        }
+      ]
+    },
+    {
+      "verified": false,
+      "entity": "Witcher 3",
+      "title": "I played 4 hours of The Blood of Dawnwalker and it borrows a heck of a lot from The Witcher 3, for good and bad",
+      "source": "r/news:pcgamer",
+      "url": "https://www.pcgamer.com/games/rpg/i-played-4-hours-of-the-blood-of-dawnwalker-and-it-borrows-a-heck-of-a-lot-from-the-witcher-3-for-good-and-bad/",
+      "created": 1783459621,
+      "momentum": 4.96,
+      "accel": 1.0,
+      "is_breakout": false,
+      "post_count": 1,
+      "sub_count": 1,
+      "subreddits": [
+        "news:pcgamer"
+      ],
+      "channel": "gambatime",
+      "channel_display": "GambaTime",
+      "external_url": "https://www.pcgamer.com/games/rpg/i-played-4-hours-of-the-blood-of-dawnwalker-and-it-borrows-a-heck-of-a-lot-from-the-witcher-3-for-good-and-bad/",
+      "domain": "pcgamer.com",
+      "is_self": false,
+      "flair": null,
+      "reddit_id": "news:pcgamer:ee7765b6e4b6",
+      "author": null,
+      "score": null,
+      "num_comments": null,
+      "upvote_ratio": null,
+      "velocity": null,
+      "comment_heat": null,
+      "age_hours": 3.08,
+      "members": [
+        {
+          "title": "I played 4 hours of The Blood of Dawnwalker and it borrows a heck of a lot from The Witcher 3, for good and bad",
+          "url": "https://www.pcgamer.com/games/rpg/i-played-4-hours-of-the-blood-of-dawnwalker-and-it-borrows-a-heck-of-a-lot-from-the-witcher-3-for-good-and-bad/",
+          "subreddit": "news:pcgamer",
+          "score": null,
+          "num_comments": null,
+          "age_hours": 3.08,
           "also_subreddits": []
         }
       ]
