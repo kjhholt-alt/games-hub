@@ -5,6 +5,7 @@ import {
   BookOpen,
   ArrowRight,
   Gamepad2,
+  Tag,
 } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -156,21 +157,21 @@ export default async function HomePage() {
             </p>
           </a>
           <a
-            href="https://007.buildkit.store"
+            href="https://buildkit.store/go/deals?src=buildkit-play-home"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="sponsored noopener noreferrer"
             className="group bg-surface border border-border rounded-2xl p-6 hover:border-cyan/40 transition-colors"
           >
             <div className="flex items-center gap-2 text-xs font-mono text-text-secondary mb-2">
-              <Gamepad2 size={14} />
+              <Tag size={14} />
               BUILDKIT NETWORK
             </div>
             <h3 className="font-semibold group-hover:text-cyan transition-colors">
-              BuildKit Game Guides
+              GambaTime Game Deals
             </h3>
             <p className="text-sm text-text-secondary mt-1">
-              Interactive collectible maps, trophy trackers, and loadout tools —
-              verified by actually playing.
+              Current PC game offers with direct storefront links and transparent
+              affiliate disclosure.
             </p>
           </a>
         </div>

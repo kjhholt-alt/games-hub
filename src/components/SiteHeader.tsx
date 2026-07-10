@@ -28,7 +28,7 @@ export function SiteHeader() {
             </Link>
           ))}
           <span className="hidden sm:inline h-4 w-px bg-border" aria-hidden />
-          {NETWORK_NAV.map((link) => (
+          {NETWORK_NAV.slice(0, 1).map((link) => (
             <a
               key={link.href}
               href={link.href}

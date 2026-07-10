@@ -22,6 +22,11 @@ export const INTERNAL_NAV: NavLink[] = [
 /** The wider BuildKit network of sibling properties. */
 export const NETWORK_NAV: NavLink[] = [
   {
+    label: "Game Deals",
+    href: "https://buildkit.store/go/deals?src=buildkit-play-nav",
+    external: true,
+  },
+  {
     label: "PC Bottleneck",
     href: "https://pcbottleneck.buildkit.store",
     external: true,
