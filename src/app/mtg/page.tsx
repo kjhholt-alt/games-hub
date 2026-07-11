@@ -72,6 +72,17 @@ export default function MtgPage() {
   const { commander_tiers, limited_tiers, banlist, calendar, formats } =
     payload.modules;
 
+  // The engine ships limited_tiers rows with a per-row `set` code (not a
+  // module-level set_name) — cross-reference the calendar module (which
+  // does carry Scryfall's full set_name) for a friendlier heading.
+  const limitedSetCodes = [...new Set(limited_tiers.rows.map((r) => r.set))];
+  const setNameByCode = Object.fromEntries(
+    calendar.rows.map((r) => [r.set_code, r.set_name])
+  );
+  const limitedSetLabel = limitedSetCodes
+    .map((code) => `${setNameByCode[code] ?? code} (${code})`)
+    .join(", ");
+
   return (
     <main className="min-h-screen">
       <SiteHeader />
@@ -111,11 +122,6 @@ export default function MtgPage() {
             computedAt={commander_tiers.computed_at}
             methodology={commander_tiers.methodology}
             attribution={commander_tiers.attribution}
-            extra={
-              <p className="text-xs text-text-secondary mt-1.5">
-                {commander_tiers.set_context}
-              </p>
-            }
           />
           <MtgCommanderTierTable rows={commander_tiers.rows} />
         </div>
@@ -124,7 +130,7 @@ export default function MtgPage() {
         <div className="mb-14">
           <MtgModuleHeader
             icon={<Layers size={18} className="text-cyan" />}
-            title={`Limited Tier List — ${limited_tiers.set_name} (${limited_tiers.set_code})`}
+            title={`Limited Tier List — ${limitedSetLabel}`}
             status={limited_tiers.status}
             computedAt={limited_tiers.computed_at}
             methodology={limited_tiers.methodology}

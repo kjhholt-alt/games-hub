@@ -1,72 +1,78 @@
+import { ExternalLink } from "lucide-react";
 import { MtgConfidenceChip } from "@/components/MtgConfidenceChip";
 import { MtgSourceLinks } from "@/components/MtgSourceLinks";
-import { formatDate, isFadedConfidence, type BanlistRow } from "@/lib/mtg";
+import { formatLabel, type BanlistFormatRow } from "@/lib/mtg";
 
-const ACTION_STYLE: Record<BanlistRow["action"], string> = {
-  banned: "text-red bg-red-dim border-red/30",
-  suspended: "text-amber bg-amber-dim border-amber/30",
-  unbanned: "text-green bg-green-dim border-green/30",
-};
-
-/** Per-format banned/suspended tracker, most recent change first per format group. */
-export function MtgBanlistTable({ rows }: { rows: BanlistRow[] }) {
-  const sorted = [...rows].sort((a, b) =>
-    b.effective_date.localeCompare(a.effective_date)
-  );
-
+/**
+ * Per-format banlist summary — the engine ships one row PER FORMAT (banned[]
+ * + restricted[] card-name lists), not a per-card action log, so there's no
+ * effective_date/reason to show (Scryfall's legalities don't carry ban
+ * dates — see the module's own methodology text on the page). Each card
+ * links out to the real Wizards B&R page rather than inventing a date.
+ */
+export function MtgBanlistTable({ rows }: { rows: BanlistFormatRow[] }) {
   return (
-    <div className="overflow-x-auto border border-border rounded-2xl">
-      <table className="w-full text-sm">
-        <thead>
-          <tr className="border-b border-border bg-surface text-text-secondary text-left">
-            <th className="px-4 py-3 font-medium">Format</th>
-            <th className="px-4 py-3 font-medium">Card</th>
-            <th className="px-4 py-3 font-medium">Action</th>
-            <th className="px-4 py-3 font-medium">Effective</th>
-            <th className="px-4 py-3 font-medium hidden md:table-cell">
-              Reason
-            </th>
-            <th className="px-4 py-3 font-medium hidden lg:table-cell">
-              Confidence &amp; sources
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {sorted.map((row) => (
-            <tr
-              key={`${row.format}-${row.card_name}-${row.effective_date}`}
-              className={`border-b border-border last:border-0 align-top hover:bg-surface/60 transition-colors ${
-                isFadedConfidence(row.confidence) ? "opacity-60" : ""
-              }`}
+    <div className="grid sm:grid-cols-2 gap-4">
+      {rows.map((row) => (
+        <div
+          key={row.format}
+          className="bg-surface border border-border rounded-2xl p-4 flex flex-col"
+        >
+          <div className="flex items-center justify-between gap-2 mb-2">
+            <p className="font-semibold">
+              {row.format_name || formatLabel(row.format)}
+            </p>
+            <a
+              href={row.wizards_announcements_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-xs text-cyan hover:underline shrink-0"
             >
-              <td className="px-4 py-3 text-text-secondary">{row.format}</td>
-              <td className="px-4 py-3 font-medium">{row.card_name}</td>
-              <td className="px-4 py-3">
-                <span
-                  className={`inline-flex items-center rounded-full border px-2 py-0.5 text-[10px] font-mono uppercase ${ACTION_STYLE[row.action]}`}
-                >
-                  {row.action}
-                </span>
-              </td>
-              <td className="px-4 py-3 text-text-secondary tabular-nums">
-                {formatDate(row.effective_date)}
-              </td>
-              <td className="px-4 py-3 text-text-secondary hidden md:table-cell max-w-md">
-                {row.reason ?? "—"}
-              </td>
-              <td className="px-4 py-3 hidden lg:table-cell">
-                <div className="flex flex-col gap-1.5 items-start">
-                  <MtgConfidenceChip
-                    confidence={row.confidence}
-                    sampleSize={row.sample_size}
-                  />
-                  <MtgSourceLinks sources={row.sources} />
-                </div>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+              Wizards B&amp;R page
+              <ExternalLink size={10} />
+            </a>
+          </div>
+
+          <CardList label="Banned" cards={row.banned} />
+          {row.restricted.length > 0 && (
+            <CardList label="Restricted" cards={row.restricted} />
+          )}
+          {row.banned.length === 0 && row.restricted.length === 0 && (
+            <p className="text-xs text-text-secondary">
+              No banned or restricted cards in this format right now.
+            </p>
+          )}
+
+          <div className="mt-auto pt-3 flex flex-col gap-1.5 items-start">
+            <MtgConfidenceChip
+              confidence={row.confidence}
+              sampleSize={row.sample_size}
+            />
+            <MtgSourceLinks sources={row.sources} />
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function CardList({ label, cards }: { label: string; cards: string[] }) {
+  if (cards.length === 0) return null;
+  return (
+    <div className="mb-3">
+      <p className="text-[11px] font-mono uppercase text-text-secondary mb-1.5">
+        {label} ({cards.length})
+      </p>
+      <div className="flex flex-wrap gap-1 max-h-40 overflow-y-auto pr-1">
+        {cards.map((c) => (
+          <span
+            key={c}
+            className="text-[11px] leading-none rounded px-1.5 py-1 bg-surface-raised border border-border text-text-secondary"
+          >
+            {c}
+          </span>
+        ))}
+      </div>
     </div>
   );
 }

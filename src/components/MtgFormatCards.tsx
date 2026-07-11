@@ -2,10 +2,19 @@ import { ExternalLink } from "lucide-react";
 import { MtgSourceLinks } from "@/components/MtgSourceLinks";
 import type { FormatRow } from "@/lib/mtg";
 
+/** Known external-link keys -> a nicer display name than the raw object key. */
+const LINK_LABEL: Record<string, string> = {
+  untapped: "untapped.gg",
+  mtggoldfish: "MTGGoldfish",
+};
+
 /**
  * One snapshot card per format. `coverage_state` is written in plain English
- * and is deliberately honest — several formats say "tiers pending" rather
- * than inventing a number we don't have (see METAHUB-SPEC.md item 5).
+ * by the engine and is deliberately honest — several formats say "tiers
+ * pending tournament key" rather than inventing a number we don't have (see
+ * METAHUB-SPEC.md item 5). legal_sets is a real (sometimes 200+ entry) list
+ * from Scryfall legalities — shown as a count plus a scrollable code list
+ * rather than an unreadable wall of text.
  */
 export function MtgFormatCards({ rows }: { rows: FormatRow[] }) {
   return (
@@ -15,29 +24,45 @@ export function MtgFormatCards({ rows }: { rows: FormatRow[] }) {
           key={row.format}
           className="bg-surface border border-border rounded-2xl p-4 flex flex-col"
         >
-          <p className="font-semibold mb-1">{row.format}</p>
-          <p className="text-xs text-text-secondary leading-relaxed">
-            {row.legal_sets_note}
-          </p>
-          {row.last_br_change && (
-            <p className="text-xs text-text-secondary mt-2">
-              <span className="text-foreground font-medium">
-                Last B&amp;R:
-              </span>{" "}
-              {row.last_br_change}
-            </p>
-          )}
-          <p className="text-xs mt-2 leading-relaxed">{row.coverage_state}</p>
+          <p className="font-semibold mb-1">{row.format_name}</p>
+
+          <div className="flex items-center gap-2 text-xs text-text-secondary mb-2">
+            <span className="bg-surface-raised border border-border rounded-full px-2 py-0.5">
+              {row.legal_sets.length} legal sets
+            </span>
+            <span className="bg-red-dim border border-red/30 text-red rounded-full px-2 py-0.5">
+              {row.banned_count} banned
+            </span>
+            {row.restricted_count > 0 && (
+              <span className="bg-amber-dim border border-amber/30 text-amber rounded-full px-2 py-0.5">
+                {row.restricted_count} restricted
+              </span>
+            )}
+          </div>
+
+          <div className="flex flex-wrap gap-1 max-h-16 overflow-y-auto mb-2 pr-1">
+            {row.legal_sets.map((s) => (
+              <span
+                key={s}
+                className="text-[10px] font-mono leading-none rounded px-1.5 py-1 bg-surface-raised border border-border text-text-secondary"
+              >
+                {s}
+              </span>
+            ))}
+          </div>
+
+          <p className="text-xs leading-relaxed">{row.coverage_state}</p>
+
           <div className="flex flex-wrap gap-2 mt-3">
-            {row.external_links.map((l) => (
+            {Object.entries(row.external_links).map(([key, url]) => (
               <a
-                key={l.url}
-                href={l.url}
+                key={url}
+                href={url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1 text-xs text-cyan hover:underline"
               >
-                {l.name}
+                {LINK_LABEL[key] ?? key}
                 <ExternalLink size={10} />
               </a>
             ))}

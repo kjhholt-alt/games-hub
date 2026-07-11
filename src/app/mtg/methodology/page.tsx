@@ -14,52 +14,20 @@ export const metadata: Metadata = {
 
 export const revalidate = 3600;
 
-const MODULES = [
-  {
-    title: "Commander & Brawl Tiers",
-    measures:
-      "Decklist popularity and momentum for a commander — how often it appears in the Archidekt decklist corpus and how that share is changing week over week. This is NOT a win rate.",
-    formula:
-      "Tier = frequency rank within the corpus, weighted by momentum (current-window share vs. the prior window). A commander climbing fast can outrank a more common one that's flat or declining. Color identity and top-inclusion cards are read from the same decklists.",
-    thresholds:
-      "confidence \"high\" at 500+ decklists in the corpus, \"medium\" at 100-499, \"low\" under 100, \"sample\" under 25 or when the payload itself is a hand-written fixture.",
-  },
-  {
-    title: "Limited Tier List",
-    measures:
-      "Real card win rates for the current premier set, from actual recorded games — the one module backed by true performance data rather than a popularity proxy.",
-    formula:
-      "Tier cuts: S at 58%+ win rate, A at 54%+, B at 50%+, C at 46%+, otherwise D. Win rate is games-won divided by games-seen for decks containing the card, taken directly from the public dataset.",
-    thresholds:
-      "confidence \"high\" at 5,000+ games seen, \"medium\" at 1,000-4,999, \"low\" at 200-999, \"sample\" under 200 games.",
-  },
-  {
-    title: "Ban List & Legality Tracker",
-    measures:
-      "Per-format banned/suspended cards and the most recent B&R (banned & restricted) change, cross-linked to the Wizards or Commander Rules Committee announcement that explains why.",
-    formula:
-      "No scoring — this module mirrors Scryfall's machine-readable legalities field directly, which is itself downstream of the official announcements. It's a deterministic fact lookup, not a computed statistic.",
-    thresholds:
-      "confidence is \"high\" whenever Scryfall's legality and the linked announcement agree; a mismatch (rare, usually a propagation lag right after an announcement) drops it to \"medium\" until the next Scryfall sync confirms it.",
-  },
-  {
-    title: "Rotation & Set Calendar",
-    measures:
-      "Upcoming paper and Arena set releases plus Standard/Alchemy rotation dates.",
-    formula:
-      "Pulled straight from Scryfall's sets endpoint — release dates and Standard-legal windows are given, not derived. Near-zero maintenance by design.",
-    thresholds:
-      "confidence \"high\" for confirmed dates already on Scryfall; \"medium\" for dates that are still provisional (e.g. an announced set without a locked calendar slot yet).",
-  },
-  {
-    title: "Format Snapshots",
-    measures:
-      "One card per format: which sets are legal, the last B&R change, and our honest coverage state for that format.",
-    formula:
-      "Editorial, not computed — coverage_state says plainly whether we have live tiers for a format (Commander/Brawl, from the decklist-momentum module) or whether tiers are pending a data source we don't have yet (Standard/Pioneer/Modern, pending the topdeck.gg key).",
-    thresholds:
-      "N/A — this module states plainly where our own coverage stands rather than being scored.",
-  },
+const MODULE_TITLE: Record<string, string> = {
+  commander_tiers: "Commander & Brawl Tiers",
+  limited_tiers: "Limited Tier List",
+  banlist: "Ban List & Legality Tracker",
+  calendar: "Rotation & Set Calendar",
+  formats: "Format Snapshots",
+};
+
+const MODULE_ORDER = [
+  "commander_tiers",
+  "limited_tiers",
+  "banlist",
+  "calendar",
+  "formats",
 ];
 
 const ATTRIBUTION = [
@@ -72,25 +40,26 @@ const ATTRIBUTION = [
   {
     name: "17lands",
     detail:
-      "Limited card win rates and sample counts, from 17lands' public game-data exports. Licensed CC BY 4.0 — attributed here and on every Limited row.",
+      "Limited card win rates and sample counts, from 17lands' public PremierDraft card-ratings export. Licensed CC BY 4.0 — attributed here and on every Limited row.",
     url: "https://www.17lands.com/about",
   },
   {
     name: "Archidekt",
     detail:
-      "Commander/Brawl decklist search, used at low volume with paging and aggressive caching out of courtesy to their API — \"Decklists via Archidekt\" plus a link back to the deck on every row that cites it.",
+      "Commander/Competitive Brawl decklist search, used at low volume with paging and aggressive caching out of courtesy to their API — \"Decklists via Archidekt\" on every commander-tier row, each linking straight to the real decklist it was computed from.",
     url: "https://archidekt.com",
   },
   {
     name: "topdeck.gg",
     detail:
-      "Real tournament results for constructed formats. The client is built but disabled until an API key is provisioned — modules that would use it currently render an honest \"tiers pending\" state instead of a number. Full credit and a link-back will show on every row once it's live.",
+      "Real tournament results for constructed formats. The client is built but disabled until an API key is provisioned — Standard/Pioneer/Modern currently render an honest \"tiers pending tournament key\" coverage state instead of a number. Full credit and a link-back will show on every row once it's live.",
     url: "https://topdeck.gg",
   },
 ];
 
 export default function MtgMethodologyPage() {
   const payload = getMtgMeta();
+  const modules = payload?.modules;
 
   return (
     <main className="min-h-screen">
@@ -105,45 +74,45 @@ export default function MtgMethodologyPage() {
           MTG Meta Hub Methodology
         </h1>
         <p className="text-text-secondary max-w-2xl mb-10">
-          What each module actually measures, in plain language, and exactly
-          what it takes for a row to earn each confidence level. If we can&rsquo;t
-          measure something honestly yet, the hub says so instead of guessing.
+          What each module actually measures, straight from the engine that
+          computed it — not a paraphrase. If we can&rsquo;t measure something
+          honestly yet, the module says so instead of guessing.
         </p>
 
-        <div className="space-y-8 mb-14">
-          {MODULES.map((m) => (
-            <div
-              key={m.title}
-              className="bg-surface border border-border rounded-2xl p-6"
-            >
-              <h2 className="text-lg font-semibold mb-3">{m.title}</h2>
-              <dl className="space-y-3 text-sm">
-                <div>
-                  <dt className="text-xs font-mono uppercase text-text-secondary mb-1">
-                    What it measures
-                  </dt>
-                  <dd className="leading-relaxed">{m.measures}</dd>
+        {modules ? (
+          <div className="space-y-6 mb-14">
+            {MODULE_ORDER.map((key) => {
+              const mod = modules[key as keyof typeof modules];
+              return (
+                <div
+                  key={key}
+                  className="bg-surface border border-border rounded-2xl p-6"
+                >
+                  <h2 className="text-lg font-semibold mb-2">
+                    {MODULE_TITLE[key] ?? key}
+                  </h2>
+                  <p className="text-sm text-text-secondary leading-relaxed">
+                    {mod.methodology}
+                  </p>
+                  <div className="flex flex-wrap gap-x-3 gap-y-1 text-[11px] text-text-secondary mt-3">
+                    {mod.attribution.map((a) => (
+                      <span
+                        key={a}
+                        className="rounded px-1.5 py-0.5 border border-border"
+                      >
+                        {a}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-                <div>
-                  <dt className="text-xs font-mono uppercase text-text-secondary mb-1">
-                    Formula
-                  </dt>
-                  <dd className="leading-relaxed text-text-secondary">
-                    {m.formula}
-                  </dd>
-                </div>
-                <div>
-                  <dt className="text-xs font-mono uppercase text-text-secondary mb-1">
-                    Confidence thresholds
-                  </dt>
-                  <dd className="leading-relaxed text-text-secondary">
-                    {m.thresholds}
-                  </dd>
-                </div>
-              </dl>
-            </div>
-          ))}
-        </div>
+              );
+            })}
+          </div>
+        ) : (
+          <p className="text-sm text-text-secondary mb-14">
+            MTG meta data is unavailable right now — check back shortly.
+          </p>
+        )}
 
         <div className="mb-14">
           <h2 className="text-xl font-bold mb-4">Attribution</h2>
@@ -182,9 +151,12 @@ export default function MtgMethodologyPage() {
               rather than hidden.
             </li>
             <li>
-              We never imply a win rate we don&rsquo;t have. Where a tracker
-              (untapped.gg, MTGGoldfish) has real telemetry we don&rsquo;t,
-              we link to them by name instead of guessing at a number.
+              We never imply a win rate we don&rsquo;t have. Limited cards
+              17lands hasn&rsquo;t recorded games for render{" "}
+              <code className="text-cyan">unrated</code>, never a guessed
+              tier. Where a tracker (untapped.gg, MTGGoldfish) has real
+              telemetry we don&rsquo;t, we link to them by name instead of
+              guessing at a number.
             </li>
             <li>
               A dead data source ships its module with the last good data and

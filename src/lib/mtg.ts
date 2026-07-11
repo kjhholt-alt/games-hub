@@ -7,8 +7,13 @@
 // fields that are this product's actual moat: sources[], sample_size,
 // computed_at, confidence. See mtg-workstation/METAHUB-SPEC.md — it is law.
 //
+// These types mirror the REAL pipeline output verbatim (mtg-workstation/
+// data/mtg-meta.json) — per the honest-data doctrine the web adapts to what
+// the pipeline genuinely produces, never the reverse. Do not add fields the
+// engine doesn't emit.
+//
 // The gate: the page always renders whatever is in the file, but shows a
-// visible SAMPLE DATA banner whenever `status !== "published"" — see
+// visible SAMPLE DATA banner whenever `status !== "published"` — see
 // isSamplePayload() below. Nothing here silently upgrades sample data into
 // something that looks real.
 
@@ -20,66 +25,69 @@ import path from "path";
 export type Confidence = "high" | "medium" | "low" | "sample";
 export type ModuleStatus = "sample" | "published" | "stale" | "pending_key";
 export type Tier = "S" | "A" | "B" | "C" | "D";
+export type LimitedTier = Tier | "unrated";
+export type CommanderBucket = "trending" | "established";
 
-export interface MtgSource {
-  name: string;
-  url: string;
-}
-
-/** Fields every row carries — the honesty rail, applied everywhere. */
+/** Fields every row carries — the honesty rail, applied everywhere. Sources
+ * are plain citation strings from the engine (e.g. "Decklists via Archidekt
+ * (archidekt.com)") — not a {name,url} pair, so they render as text, not
+ * links. Individual rows carry their own real links where the engine gives
+ * one (deck_url, wizards_announcements_url). */
 interface MtgRowBase {
-  sources: MtgSource[];
-  /** Statistical backing for this row; null when the row is a deterministic
-   * fact (a legality, a release date) rather than a computed statistic. */
-  sample_size: number | null;
+  sources: string[];
+  sample_size: number;
   computed_at: string;
   confidence: Confidence;
 }
 
 export interface CommanderTierRow extends MtgRowBase {
+  commander: string;
+  /** Format id, e.g. "commander" | "competitivebrawl". */
+  format: string;
+  bucket: CommanderBucket;
+  deck_count: number;
+  /** Full color names as Scryfall reports them, e.g. ["Black", "Green"]. */
+  color_identity: string[];
   tier: Tier;
-  name: string;
-  /** WUBRG-order color identity, e.g. "UB", "WUBRG", "" for colorless. */
-  color_identity: string;
-  format: "commander" | "brawl" | "both";
-  marvel_set: boolean;
-  archetype: string;
-  /** Week-over-week popularity delta in the Archidekt corpus, percentage points. */
-  momentum_pct: number;
-  key_cards: string[];
+  top_inclusions: string[];
+  deck_url: string;
 }
 
 export interface LimitedTierRow extends MtgRowBase {
-  tier: Tier;
-  card_name: string;
+  card: string;
+  set: string;
   color: string;
-  win_rate_pct: number;
-  games_seen: number;
+  rarity: string;
+  /** 0-1 fraction, or null when 17lands has no recorded games for the card. */
+  win_rate: number | null;
+  tier: LimitedTier;
 }
 
-export interface BanlistRow extends MtgRowBase {
+export interface BanlistFormatRow extends MtgRowBase {
   format: string;
-  card_name: string;
-  action: "banned" | "suspended" | "unbanned";
-  effective_date: string;
-  reason: string | null;
-  announcement_url: string | null;
+  format_name: string;
+  banned: string[];
+  restricted: string[];
+  wizards_announcements_url: string;
 }
 
 export interface CalendarRow extends MtgRowBase {
-  kind: "set_release" | "rotation";
-  label: string;
-  set_code: string | null;
-  date: string;
-  detail: string;
+  set_code: string;
+  set_name: string;
+  set_type: string;
+  released_at: string;
+  standard_legal: boolean;
+  icon_svg_uri: string;
 }
 
 export interface FormatRow extends MtgRowBase {
   format: string;
-  legal_sets_note: string;
-  last_br_change: string | null;
+  format_name: string;
+  legal_sets: string[];
+  banned_count: number;
+  restricted_count: number;
   coverage_state: string;
-  external_links: MtgSource[];
+  external_links: Record<string, string>;
 }
 
 interface MtgModule<TRow> {
@@ -96,12 +104,9 @@ export interface MtgMetaPayload {
   computed_at: string;
   boilerplate: string;
   modules: {
-    commander_tiers: MtgModule<CommanderTierRow> & { set_context: string };
-    limited_tiers: MtgModule<LimitedTierRow> & {
-      set_name: string;
-      set_code: string;
-    };
-    banlist: MtgModule<BanlistRow>;
+    commander_tiers: MtgModule<CommanderTierRow>;
+    limited_tiers: MtgModule<LimitedTierRow>;
+    banlist: MtgModule<BanlistFormatRow>;
     calendar: MtgModule<CalendarRow>;
     formats: MtgModule<FormatRow>;
   };
@@ -150,6 +155,39 @@ export const CONFIDENCE_LABEL: Record<Confidence, string> = {
   sample: "Sample data",
 };
 
+/** Known format ids -> display names, for rows (like commander_tiers) that
+ * only carry the id. Falls back to the raw id for anything unrecognized
+ * rather than hiding it. */
+export const FORMAT_LABEL: Record<string, string> = {
+  standard: "Standard",
+  competitivebrawl: "Competitive Brawl",
+  standardbrawl: "Brawl",
+  commander: "Commander",
+  pioneer: "Pioneer",
+  modern: "Modern",
+};
+
+export function formatLabel(id: string): string {
+  return FORMAT_LABEL[id] ?? id;
+}
+
+const COLOR_PIP: Record<string, string> = {
+  White: "W",
+  Blue: "U",
+  Black: "B",
+  Red: "R",
+  Green: "G",
+};
+const WUBRG_ORDER = ["White", "Blue", "Black", "Red", "Green"];
+
+/** Full color names -> WUBRG-order pip string, "C" for colorless. */
+export function colorIdentityPips(colors: string[]): string {
+  if (colors.length === 0) return "C";
+  return WUBRG_ORDER.filter((c) => colors.includes(c))
+    .map((c) => COLOR_PIP[c] ?? "")
+    .join("");
+}
+
 /** Rows with weak statistical backing render faded with the count visible —
  * "the one trick the sharpest competitor does for ONE format; we do it
  * everywhere" (METAHUB-SPEC.md). */
@@ -157,14 +195,40 @@ export function isFadedConfidence(confidence: Confidence): boolean {
   return confidence === "low" || confidence === "sample";
 }
 
-/** Group rows into tier bands in S→D order, dropping empty tiers. */
-export function groupByTier<T extends { tier: Tier }>(
-  rows: T[]
+/** Group rows into tier bands in S→D order, dropping empty tiers. Takes a
+ * tier accessor so it works for both the strict Tier rows (commander) and
+ * the Tier | "unrated" rows (limited) after the caller filters unrated out. */
+export function groupByTier<T>(
+  rows: T[],
+  getTier: (row: T) => Tier
 ): { letter: Tier; rows: T[] }[] {
   return TIER_ORDER.map((letter) => ({
     letter,
-    rows: rows.filter((r) => r.tier === letter),
+    rows: rows.filter((r) => getTier(r) === letter),
   })).filter((g) => g.rows.length > 0);
+}
+
+/** Split commander_tiers rows into trending / established sections, dropping
+ * an empty bucket. */
+export function groupByBucket(
+  rows: CommanderTierRow[]
+): { bucket: CommanderBucket; rows: CommanderTierRow[] }[] {
+  const buckets: CommanderBucket[] = ["trending", "established"];
+  return buckets
+    .map((bucket) => ({ bucket, rows: rows.filter((r) => r.bucket === bucket) }))
+    .filter((g) => g.rows.length > 0);
+}
+
+export const BUCKET_LABEL: Record<CommanderBucket, string> = {
+  trending: "Trending (newest decks)",
+  established: "Established (most-viewed decks)",
+};
+
+/** 0-1 fraction -> "NN.N%", or an explicit "unrated" when 17lands has no
+ * recorded games for the card — never a guessed number. */
+export function formatWinRate(winRate: number | null): string {
+  if (winRate === null) return "unrated";
+  return `${(winRate * 100).toFixed(1)}%`;
 }
 
 /** Human freshness string relative to now, e.g. "2h ago", "3d ago". Falls back
@@ -196,4 +260,23 @@ export function formatDate(iso: string): string {
     month: "long",
     day: "numeric",
   });
+}
+
+/** Signed day count from now to an ISO date (positive = future). Computed at
+ * render time from released_at rather than expecting the pipeline to ship a
+ * pre-computed countdown. */
+export function daysUntil(iso: string, now: Date = new Date()): number {
+  const then = new Date(iso);
+  if (Number.isNaN(then.getTime())) return 0;
+  const startOfNow = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const ms = then.getTime() - startOfNow.getTime();
+  return Math.round(ms / 86400000);
+}
+
+/** "in 46d" / "today" / "12d ago", derived from daysUntil(). */
+export function formatDaysUntil(iso: string, now: Date = new Date()): string {
+  const days = daysUntil(iso, now);
+  if (days === 0) return "today";
+  if (days > 0) return `in ${days}d`;
+  return `${Math.abs(days)}d ago`;
 }

@@ -24,23 +24,17 @@ export function MtgConfidenceChip({
   sampleSize,
 }: {
   confidence: Confidence;
-  sampleSize: number | null;
+  sampleSize: number;
 }) {
   return (
     <span
       className={`inline-flex items-center gap-1 rounded px-1.5 py-0.5 text-[10px] font-mono uppercase border shrink-0 ${STYLE[confidence]}`}
-      title={
-        sampleSize !== null
-          ? `${LABEL[confidence]} confidence, n=${sampleSize.toLocaleString("en-US")}`
-          : `${LABEL[confidence]} confidence`
-      }
+      title={`${LABEL[confidence]} confidence, n=${sampleSize.toLocaleString("en-US")}`}
     >
       {LABEL[confidence]}
-      {sampleSize !== null && (
-        <span className="tabular-nums opacity-80">
-          n={sampleSize.toLocaleString("en-US")}
-        </span>
-      )}
+      <span className="tabular-nums opacity-80">
+        n={sampleSize.toLocaleString("en-US")}
+      </span>
     </span>
   );
 }
