@@ -8,6 +8,8 @@ import {
   LayoutGrid,
   ExternalLink,
   BookOpen,
+  Sparkles,
+  ArrowRight,
 } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -112,6 +114,30 @@ export default function MtgPage() {
         </div>
 
         {sample && <MtgSampleBanner />}
+
+        {/* Draft Ranker — the hero module (METAHUB-SPEC.md ADDENDUM, wave 2) */}
+        <Link
+          href="/mtg/draft"
+          className="group flex items-center justify-between gap-4 bg-gradient-to-r from-cyan-dim to-surface border border-cyan/30 rounded-2xl px-6 py-5 mb-14 hover:border-cyan/50 transition-colors"
+        >
+          <div>
+            <div className="inline-flex items-center gap-1.5 text-cyan text-[11px] font-mono uppercase mb-1.5">
+              <Sparkles size={12} />
+              New — Draft Ranker
+            </div>
+            <p className="text-lg font-bold mb-1">
+              Every draft card graded S–F from real 17lands win rates
+            </p>
+            <p className="text-sm text-text-secondary max-w-xl">
+              Sortable, filterable, sample-size-honest — free, unlike the paywalled pick
+              overlays. Plus a print-friendly cheat sheet for your second screen.
+            </p>
+          </div>
+          <ArrowRight
+            size={20}
+            className="text-cyan shrink-0 group-hover:translate-x-1 transition-transform"
+          />
+        </Link>
 
         {/* Commander / Brawl tiers */}
         <div className="mb-14">
