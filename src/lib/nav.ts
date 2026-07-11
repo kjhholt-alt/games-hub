@@ -16,6 +16,7 @@ export const INTERNAL_NAV: NavLink[] = [
   { label: "PoE1", href: "/poe1" },
   { label: "StS2", href: "/sts2" },
   { label: "HOI4", href: "/hoi4" },
+  { label: "MTG Meta", href: "/mtg" },
   { label: "News", href: "/news" },
 ];
 

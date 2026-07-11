@@ -1,0 +1,645 @@
+{
+  "schema": "buildkit-mtg-meta@1",
+  "status": "sample",
+  "computed_at": "2026-07-11T05:00:00Z",
+  "boilerplate": "BuildKit MTG Meta Hub is unofficial Fan Content permitted under the Wizards of the Coast Fan Content Policy. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC.",
+  "modules": {
+    "commander_tiers": {
+      "status": "sample",
+      "computed_at": "2026-07-10T18:00:00Z",
+      "methodology": "Trending + established commanders for Arena Brawl-legal and full paper Commander, computed from frequency and week-over-week momentum in the Archidekt decklist corpus, color identity, and top-inclusion cards per commander. This measures decklist popularity, NOT a win rate — we do not have constructed telemetry.",
+      "attribution": [
+        "Decklists via Archidekt (courtesy, not resold) — https://archidekt.com",
+        "Color identity + legality via Scryfall bulk data"
+      ],
+      "set_context": "SAMPLE FIXTURE — this file is hand-written to verify the page renders every honesty element; the real pipeline overwrites it with status:\"published\". A few rows below are tagged marvel_set for the Marvel's X-Men Commander wave.",
+      "rows": [
+        {
+          "tier": "S",
+          "name": "Atraxa, Grand Unifier",
+          "color_identity": "WUBRG",
+          "format": "both",
+          "marvel_set": false,
+          "archetype": "Superfriends value ramp",
+          "momentum_pct": 6.1,
+          "key_cards": ["Solitude", "The Ozolith", "Farewell"],
+          "sources": [
+            { "name": "Archidekt commander search", "url": "https://archidekt.com/search/decks?formats=commander" }
+          ],
+          "sample_size": 812,
+          "computed_at": "2026-07-10T18:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "tier": "S",
+          "name": "T'Challa the Black Panther",
+          "color_identity": "BG",
+          "format": "commander",
+          "marvel_set": true,
+          "archetype": "Wakanda tech/counters midrange",
+          "momentum_pct": 18.4,
+          "key_cards": ["Vibranium Gauntlets", "Wakandan Tech-Priest", "Herald of the Ancestors"],
+          "sources": [
+            { "name": "Archidekt commander search", "url": "https://archidekt.com/search/decks?formats=commander" }
+          ],
+          "sample_size": 47,
+          "computed_at": "2026-07-10T18:00:00Z",
+          "confidence": "low"
+        },
+        {
+          "tier": "A",
+          "name": "Miles Morales, Ultimate Spider-Man",
+          "color_identity": "UR",
+          "format": "brawl",
+          "marvel_set": true,
+          "archetype": "Spells-matter tempo",
+          "momentum_pct": 9.2,
+          "key_cards": ["Web-Slinging", "Spider-Sense", "Great Responsibility"],
+          "sources": [
+            { "name": "Archidekt Brawl search", "url": "https://archidekt.com/search/decks?formats=brawl" }
+          ],
+          "sample_size": 233,
+          "computed_at": "2026-07-10T18:00:00Z",
+          "confidence": "medium"
+        },
+        {
+          "tier": "A",
+          "name": "Yuriko, the Tiger's Shadow",
+          "color_identity": "UB",
+          "format": "commander",
+          "marvel_set": false,
+          "archetype": "Ninjutsu commander damage",
+          "momentum_pct": 1.1,
+          "key_cards": ["Fallen Shinobi", "Ingenious Infiltrator", "Curiosity"],
+          "sources": [
+            { "name": "Archidekt commander search", "url": "https://archidekt.com/search/decks?formats=commander" }
+          ],
+          "sample_size": 1204,
+          "computed_at": "2026-07-10T18:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "tier": "A",
+          "name": "Ororo Munroe, Storm",
+          "color_identity": "WUR",
+          "format": "both",
+          "marvel_set": true,
+          "archetype": "Weather/lands payoff",
+          "momentum_pct": 4.7,
+          "key_cards": ["Call the Storm", "Windrider Squad", "Omega-Level Threat"],
+          "sources": [
+            { "name": "Archidekt commander search", "url": "https://archidekt.com/search/decks?formats=commander" }
+          ],
+          "sample_size": 96,
+          "computed_at": "2026-07-10T18:00:00Z",
+          "confidence": "medium"
+        },
+        {
+          "tier": "B",
+          "name": "Kraum, Ludevic's Opus // Tymna the Weaver",
+          "color_identity": "WUBR",
+          "format": "commander",
+          "marvel_set": false,
+          "archetype": "Partner draw-go",
+          "momentum_pct": -1.3,
+          "key_cards": ["Toxic Deluge", "Mystic Confluence", "Smothering Tithe"],
+          "sources": [
+            { "name": "Archidekt commander search", "url": "https://archidekt.com/search/decks?formats=commander" }
+          ],
+          "sample_size": 156,
+          "computed_at": "2026-07-10T18:00:00Z",
+          "confidence": "medium"
+        },
+        {
+          "tier": "B",
+          "name": "Miirym, Sentinel Wyrm",
+          "color_identity": "WUBRG",
+          "format": "both",
+          "marvel_set": false,
+          "archetype": "Dragon tribal go-wide",
+          "momentum_pct": 0.4,
+          "key_cards": ["Scion of Draco", "The Ur-Dragon", "Utvara Hellkite"],
+          "sources": [
+            { "name": "Archidekt commander search", "url": "https://archidekt.com/search/decks?formats=commander" }
+          ],
+          "sample_size": 640,
+          "computed_at": "2026-07-10T18:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "tier": "B",
+          "name": "Peter Parker, Spectacular Spider-Man",
+          "color_identity": "UR",
+          "format": "brawl",
+          "marvel_set": true,
+          "archetype": "Prowess spellslinger",
+          "momentum_pct": 12.9,
+          "key_cards": ["With Great Power", "Web-Slinging", "Amazing Reflexes"],
+          "sources": [
+            { "name": "Archidekt Brawl search", "url": "https://archidekt.com/search/decks?formats=brawl" }
+          ],
+          "sample_size": 38,
+          "computed_at": "2026-07-10T18:00:00Z",
+          "confidence": "low"
+        },
+        {
+          "tier": "C",
+          "name": "Norman Osborn, Green Goblin",
+          "color_identity": "BR",
+          "format": "commander",
+          "marvel_set": true,
+          "archetype": "Sacrifice aristocrats",
+          "momentum_pct": 2.0,
+          "key_cards": ["Goblin Formula", "Pumpkin Bombs", "Osborn Industries"],
+          "sources": [
+            { "name": "Archidekt commander search", "url": "https://archidekt.com/search/decks?formats=commander" }
+          ],
+          "sample_size": 12,
+          "computed_at": "2026-07-10T18:00:00Z",
+          "confidence": "sample"
+        },
+        {
+          "tier": "C",
+          "name": "Slimefoot and Squee",
+          "color_identity": "BRG",
+          "format": "commander",
+          "marvel_set": false,
+          "archetype": "Saproling/goblin tokens",
+          "momentum_pct": -0.6,
+          "key_cards": ["Skullclamp", "Pawn of Ulamog", "Mondrak, Glory Dominus"],
+          "sources": [
+            { "name": "Archidekt commander search", "url": "https://archidekt.com/search/decks?formats=commander" }
+          ],
+          "sample_size": 289,
+          "computed_at": "2026-07-10T18:00:00Z",
+          "confidence": "medium"
+        },
+        {
+          "tier": "D",
+          "name": "Chatterfang, Squirrel General",
+          "color_identity": "BG",
+          "format": "commander",
+          "marvel_set": false,
+          "archetype": "Squirrel tokens/food",
+          "momentum_pct": -2.2,
+          "key_cards": ["Beast Within", "Skullclamp", "Deep Forest Hermit"],
+          "sources": [
+            { "name": "Archidekt commander search", "url": "https://archidekt.com/search/decks?formats=commander" }
+          ],
+          "sample_size": 94,
+          "computed_at": "2026-07-10T18:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "tier": "D",
+          "name": "Kamala Khan, Ms. Marvel",
+          "color_identity": "WU",
+          "format": "brawl",
+          "marvel_set": true,
+          "archetype": "Embiggen counters aggro",
+          "momentum_pct": -5.4,
+          "key_cards": ["Embiggen!", "Polymorph Field", "Marvel's Most Wanted"],
+          "sources": [
+            { "name": "Archidekt Brawl search", "url": "https://archidekt.com/search/decks?formats=brawl" }
+          ],
+          "sample_size": 9,
+          "computed_at": "2026-07-10T18:00:00Z",
+          "confidence": "sample"
+        }
+      ]
+    },
+    "limited_tiers": {
+      "status": "sample",
+      "computed_at": "2026-07-09T12:00:00Z",
+      "methodology": "Real card win rates from public 17lands premier-draft game data for the current premier set — a REAL performance dataset, not a popularity proxy. Tier cuts: S 58%+, A 54%+, B 50%+, C 46%+, otherwise D. Cards below the sample-size floor render at confidence \"low\"/\"sample\" and are visually faded.",
+      "attribution": [
+        "Card win rates via 17lands public datasets (CC BY 4.0) — https://www.17lands.com",
+        "Card metadata via Scryfall"
+      ],
+      "set_name": "Aether Reach",
+      "set_code": "ARH",
+      "rows": [
+        {
+          "card_name": "Voltcaller Sentinel",
+          "color": "R",
+          "tier": "S",
+          "win_rate_pct": 61.4,
+          "games_seen": 18420,
+          "sources": [
+            { "name": "17lands card ratings", "url": "https://www.17lands.com/card_ratings" }
+          ],
+          "sample_size": 18420,
+          "computed_at": "2026-07-09T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "card_name": "Gloomroot Behemoth",
+          "color": "B",
+          "tier": "S",
+          "win_rate_pct": 59.8,
+          "games_seen": 14210,
+          "sources": [
+            { "name": "17lands card ratings", "url": "https://www.17lands.com/card_ratings" }
+          ],
+          "sample_size": 14210,
+          "computed_at": "2026-07-09T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "card_name": "Skyline Marshal",
+          "color": "W",
+          "tier": "A",
+          "win_rate_pct": 56.2,
+          "games_seen": 22100,
+          "sources": [
+            { "name": "17lands card ratings", "url": "https://www.17lands.com/card_ratings" }
+          ],
+          "sample_size": 22100,
+          "computed_at": "2026-07-09T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "card_name": "Wretched Tidecaller",
+          "color": "U",
+          "tier": "A",
+          "win_rate_pct": 55.7,
+          "games_seen": 9800,
+          "sources": [
+            { "name": "17lands card ratings", "url": "https://www.17lands.com/card_ratings" }
+          ],
+          "sample_size": 9800,
+          "computed_at": "2026-07-09T12:00:00Z",
+          "confidence": "medium"
+        },
+        {
+          "card_name": "Ashgrove Duelist",
+          "color": "R",
+          "tier": "B",
+          "win_rate_pct": 52.1,
+          "games_seen": 16700,
+          "sources": [
+            { "name": "17lands card ratings", "url": "https://www.17lands.com/card_ratings" }
+          ],
+          "sample_size": 16700,
+          "computed_at": "2026-07-09T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "card_name": "Cinder Wisp",
+          "color": "RG",
+          "tier": "B",
+          "win_rate_pct": 51.4,
+          "games_seen": 3200,
+          "sources": [
+            { "name": "17lands card ratings", "url": "https://www.17lands.com/card_ratings" }
+          ],
+          "sample_size": 3200,
+          "computed_at": "2026-07-09T12:00:00Z",
+          "confidence": "low"
+        },
+        {
+          "card_name": "Hollow Path Scout",
+          "color": "G",
+          "tier": "C",
+          "win_rate_pct": 48.9,
+          "games_seen": 21000,
+          "sources": [
+            { "name": "17lands card ratings", "url": "https://www.17lands.com/card_ratings" }
+          ],
+          "sample_size": 21000,
+          "computed_at": "2026-07-09T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "card_name": "Brackish Chanter",
+          "color": "UB",
+          "tier": "C",
+          "win_rate_pct": 47.6,
+          "games_seen": 900,
+          "sources": [
+            { "name": "17lands card ratings", "url": "https://www.17lands.com/card_ratings" }
+          ],
+          "sample_size": 900,
+          "computed_at": "2026-07-09T12:00:00Z",
+          "confidence": "sample"
+        },
+        {
+          "card_name": "Rustbound Servant",
+          "color": "C",
+          "tier": "D",
+          "win_rate_pct": 44.2,
+          "games_seen": 15400,
+          "sources": [
+            { "name": "17lands card ratings", "url": "https://www.17lands.com/card_ratings" }
+          ],
+          "sample_size": 15400,
+          "computed_at": "2026-07-09T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "card_name": "Fen Straggler",
+          "color": "B",
+          "tier": "D",
+          "win_rate_pct": 42.0,
+          "games_seen": 260,
+          "sources": [
+            { "name": "17lands card ratings", "url": "https://www.17lands.com/card_ratings" }
+          ],
+          "sample_size": 260,
+          "computed_at": "2026-07-09T12:00:00Z",
+          "confidence": "low"
+        }
+      ]
+    },
+    "banlist": {
+      "status": "sample",
+      "computed_at": "2026-07-08T09:00:00Z",
+      "methodology": "Per-format banned/suspended cards from Scryfall's machine-readable legalities data (the ban truth) cross-linked to the corresponding Wizards announcement for context. Deterministic legality data, not a statistic — sample_size is not applicable and confidence reflects source agreement, not a sample floor.",
+      "attribution": [
+        "Legalities via Scryfall bulk data",
+        "Announcements via Wizards Magic.gg B&R archive"
+      ],
+      "rows": [
+        {
+          "format": "Standard",
+          "card_name": "Voltcaller Sentinel",
+          "action": "banned",
+          "effective_date": "2026-06-02",
+          "reason": "Dominant limited/constructed crossover destabilizing Standard's early curve.",
+          "announcement_url": "https://magic.wizards.com/en/news/announcements",
+          "sources": [
+            { "name": "Scryfall legalities", "url": "https://scryfall.com/docs/api/cards" },
+            { "name": "Wizards announcement", "url": "https://magic.wizards.com/en/news/announcements" }
+          ],
+          "sample_size": null,
+          "computed_at": "2026-07-08T09:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "format": "Pioneer",
+          "card_name": "Winterheart Oracle",
+          "action": "suspended",
+          "effective_date": "2026-05-18",
+          "reason": "Consistent turn-3 lock patterns with too few fair answers in the format.",
+          "announcement_url": "https://magic.wizards.com/en/news/announcements",
+          "sources": [
+            { "name": "Scryfall legalities", "url": "https://scryfall.com/docs/api/cards" },
+            { "name": "Wizards announcement", "url": "https://magic.wizards.com/en/news/announcements" }
+          ],
+          "sample_size": null,
+          "computed_at": "2026-07-08T09:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "format": "Modern",
+          "card_name": "Ragged Alarum",
+          "action": "banned",
+          "effective_date": "2026-06-02",
+          "reason": "Enabled turn-2 combo kills with no realistic interaction window.",
+          "announcement_url": "https://magic.wizards.com/en/news/announcements",
+          "sources": [
+            { "name": "Scryfall legalities", "url": "https://scryfall.com/docs/api/cards" },
+            { "name": "Wizards announcement", "url": "https://magic.wizards.com/en/news/announcements" }
+          ],
+          "sample_size": null,
+          "computed_at": "2026-07-08T09:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "format": "Modern",
+          "card_name": "Underhand Ledger",
+          "action": "banned",
+          "effective_date": "2025-09-15",
+          "reason": "Free value engine with no real cost, warping deckbuilding incentives.",
+          "announcement_url": "https://magic.wizards.com/en/news/announcements",
+          "sources": [
+            { "name": "Scryfall legalities", "url": "https://scryfall.com/docs/api/cards" },
+            { "name": "Wizards announcement", "url": "https://magic.wizards.com/en/news/announcements" }
+          ],
+          "sample_size": null,
+          "computed_at": "2026-07-08T09:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "format": "Commander",
+          "card_name": "Skyfather's Reckoning",
+          "action": "banned",
+          "effective_date": "2026-03-10",
+          "reason": "Committee ruling: too fast, too degenerate a mass-land-destruction finisher for the format's social contract.",
+          "announcement_url": "https://magic.wizards.com/en/news/announcements",
+          "sources": [
+            { "name": "Scryfall legalities", "url": "https://scryfall.com/docs/api/cards" },
+            { "name": "Commander Rules Committee", "url": "https://mtgcommander.net/index.php/banned-list/" }
+          ],
+          "sample_size": null,
+          "computed_at": "2026-07-08T09:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "format": "Brawl",
+          "card_name": "Kamala Khan, Ms. Marvel",
+          "action": "banned",
+          "effective_date": "2026-07-01",
+          "reason": "Arena Brawl-specific: Embiggen counters loop too consistent with no digital rules-enforced fail state.",
+          "announcement_url": "https://magic.wizards.com/en/news/announcements",
+          "sources": [
+            { "name": "Scryfall legalities", "url": "https://scryfall.com/docs/api/cards" },
+            { "name": "Wizards announcement", "url": "https://magic.wizards.com/en/news/announcements" }
+          ],
+          "sample_size": null,
+          "computed_at": "2026-07-08T09:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "format": "Comp Brawl",
+          "card_name": "Gloomroot Behemoth",
+          "action": "banned",
+          "effective_date": "2026-02-20",
+          "reason": "Best-of-one format ban: uninteractive single-card win condition.",
+          "announcement_url": "https://magic.wizards.com/en/news/announcements",
+          "sources": [
+            { "name": "Scryfall legalities", "url": "https://scryfall.com/docs/api/cards" },
+            { "name": "Wizards announcement", "url": "https://magic.wizards.com/en/news/announcements" }
+          ],
+          "sample_size": null,
+          "computed_at": "2026-07-08T09:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    "calendar": {
+      "status": "sample",
+      "computed_at": "2026-07-08T09:00:00Z",
+      "methodology": "Upcoming set releases and Standard/Alchemy rotation windows pulled directly from Scryfall's sets endpoint — near-zero maintenance, deterministic dates.",
+      "attribution": ["Set + rotation data via Scryfall bulk data"],
+      "rows": [
+        {
+          "kind": "set_release",
+          "label": "Aether Reach",
+          "set_code": "ARH",
+          "date": "2026-07-25",
+          "detail": "Premier set — full spoiler window opens 2026-07-18.",
+          "sources": [
+            { "name": "Scryfall sets", "url": "https://scryfall.com/sets" }
+          ],
+          "sample_size": null,
+          "computed_at": "2026-07-08T09:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "kind": "set_release",
+          "label": "Marvel's X-Men",
+          "set_code": "XMN",
+          "date": "2026-09-05",
+          "detail": "Universes Beyond supplemental — Commander decks day one; Standard-legal subset TBD.",
+          "sources": [
+            { "name": "Scryfall sets", "url": "https://scryfall.com/sets" }
+          ],
+          "sample_size": null,
+          "computed_at": "2026-07-08T09:00:00Z",
+          "confidence": "medium"
+        },
+        {
+          "kind": "set_release",
+          "label": "Bloomburrow Remastered",
+          "set_code": "BLR",
+          "date": "2026-10-10",
+          "detail": "Limited-focused remaster, not Standard-legal.",
+          "sources": [
+            { "name": "Scryfall sets", "url": "https://scryfall.com/sets" }
+          ],
+          "sample_size": null,
+          "computed_at": "2026-07-08T09:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "kind": "rotation",
+          "label": "Standard rotation — Fall 2026",
+          "set_code": null,
+          "date": "2026-09-05",
+          "detail": "Oldest 4 Standard-legal sets fall out; the Aether Reach block becomes the newest anchor.",
+          "sources": [
+            { "name": "Scryfall sets", "url": "https://scryfall.com/sets" }
+          ],
+          "sample_size": null,
+          "computed_at": "2026-07-08T09:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "kind": "rotation",
+          "label": "Alchemy rotation — Q3 2026",
+          "set_code": null,
+          "date": "2026-08-01",
+          "detail": "Arena-only digital rotation, separate cadence from paper Standard.",
+          "sources": [
+            { "name": "Scryfall sets", "url": "https://scryfall.com/sets" }
+          ],
+          "sample_size": null,
+          "computed_at": "2026-07-08T09:00:00Z",
+          "confidence": "medium"
+        }
+      ]
+    },
+    "formats": {
+      "status": "sample",
+      "computed_at": "2026-07-10T18:00:00Z",
+      "methodology": "One snapshot card per format: legal sets, last B&R change, our honest coverage state, and curated links to trackers we cite but never ingest.",
+      "attribution": ["Coverage notes are editorial; external links point to their own source"],
+      "rows": [
+        {
+          "format": "Standard",
+          "legal_sets_note": "8 most recent premier sets, through Aether Reach's July 2026 rotation window.",
+          "last_br_change": "2026-06-02 — Voltcaller Sentinel banned",
+          "coverage_state": "Tiers pending: no constructed win-rate telemetry yet. Decklist-momentum view planned for v1.1.",
+          "external_links": [
+            { "name": "MTGGoldfish", "url": "https://www.mtggoldfish.com/metagame/standard" },
+            { "name": "untapped.gg", "url": "https://mtga.untapped.gg/meta/standard" }
+          ],
+          "sources": [
+            { "name": "Scryfall legalities", "url": "https://scryfall.com/docs/api/cards" }
+          ],
+          "sample_size": null,
+          "computed_at": "2026-07-10T18:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "format": "Pioneer",
+          "legal_sets_note": "Return to Ravnica forward, paper-only.",
+          "last_br_change": "2026-05-18 — Winterheart Oracle suspended",
+          "coverage_state": "Tiers pending: topdeck.gg client is built but disabled until the API key is provisioned.",
+          "external_links": [
+            { "name": "MTGGoldfish", "url": "https://www.mtggoldfish.com/metagame/pioneer" },
+            { "name": "AetherHub", "url": "https://aetherhub.com/Meta/Format/Pioneer" }
+          ],
+          "sources": [
+            { "name": "Scryfall legalities", "url": "https://scryfall.com/docs/api/cards" }
+          ],
+          "sample_size": null,
+          "computed_at": "2026-07-10T18:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "format": "Modern",
+          "legal_sets_note": "8th Edition forward, paper-only.",
+          "last_br_change": "2026-06-02 — Ragged Alarum banned",
+          "coverage_state": "Tiers pending: topdeck.gg client is built but disabled until the API key is provisioned.",
+          "external_links": [
+            { "name": "MTGGoldfish", "url": "https://www.mtggoldfish.com/metagame/modern" },
+            { "name": "AetherHub", "url": "https://aetherhub.com/Meta/Format/Modern" }
+          ],
+          "sources": [
+            { "name": "Scryfall legalities", "url": "https://scryfall.com/docs/api/cards" }
+          ],
+          "sample_size": null,
+          "computed_at": "2026-07-10T18:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "format": "Commander",
+          "legal_sets_note": "All Commander-legal cards per the Rules Committee banned list.",
+          "last_br_change": "2026-03-10 — Skyfather's Reckoning banned",
+          "coverage_state": "Live: decklist-momentum tiers computed from the Archidekt corpus (see Commander Tiers above).",
+          "external_links": [
+            { "name": "EDHREC", "url": "https://edhrec.com" }
+          ],
+          "sources": [
+            { "name": "Scryfall legalities", "url": "https://scryfall.com/docs/api/cards" }
+          ],
+          "sample_size": null,
+          "computed_at": "2026-07-10T18:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "format": "Brawl",
+          "legal_sets_note": "Arena Historic Brawl legal pool.",
+          "last_br_change": "2026-07-01 — Kamala Khan, Ms. Marvel banned",
+          "coverage_state": "Live: decklist-momentum tiers computed from Archidekt's Brawl-legal filter (see Commander Tiers above).",
+          "external_links": [
+            { "name": "untapped.gg", "url": "https://mtga.untapped.gg/meta/brawl" }
+          ],
+          "sources": [
+            { "name": "Scryfall legalities", "url": "https://scryfall.com/docs/api/cards" }
+          ],
+          "sample_size": null,
+          "computed_at": "2026-07-10T18:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "format": "Comp Brawl",
+          "legal_sets_note": "Arena Standard-legal pool, best-of-one.",
+          "last_br_change": "2026-02-20 — Gloomroot Behemoth banned",
+          "coverage_state": "Tiers pending: low decklist volume on Archidekt for this format; revisit after Aether Reach settles.",
+          "external_links": [
+            { "name": "untapped.gg", "url": "https://mtga.untapped.gg/meta/brawl-bo1" }
+          ],
+          "sources": [
+            { "name": "Scryfall legalities", "url": "https://scryfall.com/docs/api/cards" }
+          ],
+          "sample_size": null,
+          "computed_at": "2026-07-10T18:00:00Z",
+          "confidence": "medium"
+        }
+      ]
+    }
+  }
+}
