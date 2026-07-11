@@ -1,7 +1,6 @@
 import { ArrowDown, ArrowUp, ArrowUpDown, ExternalLink } from "lucide-react";
-import { MtgConfidenceChip } from "@/components/MtgConfidenceChip";
 import { MtgDraftGradeBadge } from "@/components/MtgDraftGradeBadge";
-import { MtgDraftColorPips } from "@/components/MtgDraftColorPips";
+import { ManaDots } from "@/components/MtgManaPips";
 import { MtgDraftRarityChip } from "@/components/MtgDraftRarityChip";
 import {
   formatDecimal,
@@ -22,6 +21,14 @@ const COLUMNS: { key: DraftSortKey; label: string; align?: "right" }[] = [
   { key: "alsa", label: "ALSA", align: "right" },
   { key: "sample_size", label: "Sample", align: "right" },
 ];
+
+/** Games column tint — the confidence signal without a chip per row. */
+const CONFIDENCE_TEXT: Record<string, string> = {
+  high: "text-green",
+  medium: "text-cyan",
+  low: "text-amber",
+  sample: "text-purple",
+};
 
 /**
  * The ranker table itself: sortable columns, rank pinned to the set's overall
@@ -62,7 +69,6 @@ export function MtgDraftTable({
                 </button>
               </th>
             ))}
-            <th className="px-4 py-3 font-medium hidden md:table-cell">Confidence &amp; sources</th>
           </tr>
         </thead>
         <tbody>
@@ -88,13 +94,13 @@ export function MtgDraftTable({
                 </a>
               </td>
               <td className="px-4 py-3">
-                <MtgDraftColorPips color={row.color} />
+                <ManaDots letters={row.color} />
               </td>
               <td className="px-4 py-3">
                 <MtgDraftRarityChip rarity={row.rarity} />
               </td>
               <td className="px-4 py-3">
-                <MtgDraftGradeBadge grade={row.grade} size="sm" />
+                <MtgDraftGradeBadge grade={row.grade} />
               </td>
               <td className="px-4 py-3 text-right tabular-nums font-semibold">
                 {formatWinRate(row.gih_wr)}
@@ -102,19 +108,17 @@ export function MtgDraftTable({
               <td className="px-4 py-3 text-right tabular-nums text-text-secondary">
                 {formatDecimal(row.alsa)}
               </td>
-              <td className="px-4 py-3 text-right tabular-nums text-text-secondary">
+              <td
+                className={`px-4 py-3 text-right tabular-nums font-mono ${CONFIDENCE_TEXT[row.confidence] ?? "text-text-secondary"}`}
+                title={`${row.confidence} confidence`}
+              >
                 {row.sample_size.toLocaleString("en-US")}
-              </td>
-              <td className="px-4 py-3 hidden md:table-cell">
-                <div className="flex flex-col gap-1.5 items-start">
-                  <MtgConfidenceChip confidence={row.confidence} sampleSize={row.sample_size} />
-                </div>
               </td>
             </tr>
           ))}
           {rows.length === 0 && (
             <tr>
-              <td colSpan={9} className="px-4 py-8 text-center text-sm text-text-secondary">
+              <td colSpan={8} className="px-4 py-8 text-center text-sm text-text-secondary">
                 No cards match the current filters.
               </td>
             </tr>

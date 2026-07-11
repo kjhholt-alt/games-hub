@@ -1,25 +1,28 @@
 import { ExternalLink } from "lucide-react";
 import { TierBadge } from "@/components/TierBadge";
-import { MtgConfidenceChip } from "@/components/MtgConfidenceChip";
-import { MtgSourceLinks } from "@/components/MtgSourceLinks";
+import { ManaDots } from "@/components/MtgManaPips";
 import {
   BUCKET_LABEL,
   colorIdentityPips,
   formatLabel,
   groupByBucket,
-  groupByTier,
   isFadedConfidence,
-  TIER_BLURB,
   type CommanderTierRow,
 } from "@/lib/mtg";
 
+/** Leaderboard depth per bucket. The full 500+ rows live in the raw payload
+ * (linked from the page chrome) — rendering them all buried the signal and
+ * quadrupled the page weight. Top-of-board IS the product; the count line
+ * below each table says exactly how much is held back. */
+const TOP_N = 20;
+
 /**
- * Commander/Brawl tier tables, split into the engine's two buckets — trending
- * (newest decks) and established (most-viewed decks), each with tier bands
- * of chips up top (scan-friendly) then a detailed table. The commander name
- * links straight to the representative Archidekt decklist (the real
- * attribution link, not an invented one). Low-sample rows fade — the
- * deck_count/sample_size stays visible either way.
+ * Commander/Brawl leaderboards — one dense table per engine bucket
+ * (trending = newest decks, established = most-viewed decks), ranked by
+ * deck count. Rank number + tier mark carry the hierarchy; mana dots carry
+ * color identity; the commander name links to the representative Archidekt
+ * deck (the real attribution link). Sources are cited once at module level,
+ * not stamped on every row — per-row honesty is the fade + the deck count.
  */
 export function MtgCommanderTierTable({ rows }: { rows: CommanderTierRow[] }) {
   const buckets = groupByBucket(rows);
@@ -27,129 +30,105 @@ export function MtgCommanderTierTable({ rows }: { rows: CommanderTierRow[] }) {
   return (
     <div className="space-y-10">
       {buckets.map((b) => (
-        <div key={b.bucket} className="space-y-4">
-          <h3 className="text-sm font-mono uppercase text-text-secondary">
-            {BUCKET_LABEL[b.bucket]}
-          </h3>
-          <BucketTierBands rows={b.rows} />
-          <BucketTable rows={b.rows} />
-        </div>
+        <BucketBoard key={b.bucket} bucket={b.bucket} rows={b.rows} />
       ))}
-      <p className="text-xs text-text-secondary">
-        Tier = the commander&rsquo;s deck-count rank-percentile within its
-        bucket (not a win rate). Top inclusions = the non-land cards most
+      <p className="text-xs text-text-secondary max-w-3xl">
+        Tier = deck-count rank-percentile within the bucket — a popularity
+        measure, not a win rate. Top inclusions = the non-land cards most
         often played alongside that commander across the scanned decks.
       </p>
     </div>
   );
 }
 
-function BucketTierBands({ rows }: { rows: CommanderTierRow[] }) {
-  const groups = groupByTier(rows, (r) => r.tier);
+function BucketBoard({
+  bucket,
+  rows,
+}: {
+  bucket: CommanderTierRow["bucket"];
+  rows: CommanderTierRow[];
+}) {
+  const sorted = [...rows].sort((a, b) => b.deck_count - a.deck_count);
+  const top = sorted.slice(0, TOP_N);
+
   return (
-    <div className="space-y-3">
-      {groups.map((group) => (
-        <div
-          key={group.letter}
-          className="flex flex-col sm:flex-row gap-3 bg-surface border border-border rounded-2xl p-4"
-        >
-          <div className="flex sm:flex-col items-center sm:justify-center gap-3 sm:w-36 shrink-0">
-            <TierBadge letter={group.letter} size="lg" />
-            <p className="text-xs text-text-secondary sm:text-center leading-snug">
-              {TIER_BLURB[group.letter]}
-            </p>
-          </div>
-          <div className="flex flex-wrap gap-2 flex-1">
-            {group.rows.map((row) => (
-              <div
+    <div>
+      <h3 className="text-sm font-mono uppercase text-text-secondary mb-3">
+        {BUCKET_LABEL[bucket]}
+      </h3>
+      <div className="overflow-x-auto border border-border rounded-2xl">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border bg-surface text-text-secondary text-left">
+              <th className="px-3 py-3 font-medium w-10 text-right">#</th>
+              <th className="px-3 py-3 font-medium w-12">Tier</th>
+              <th className="px-4 py-3 font-medium">Commander</th>
+              <th className="px-3 py-3 font-medium">Colors</th>
+              <th className="px-3 py-3 font-medium">Format</th>
+              <th className="px-3 py-3 font-medium text-right">Decks</th>
+              <th className="px-4 py-3 font-medium hidden lg:table-cell">
+                Top inclusions
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {top.map((row, i) => (
+              <tr
                 key={`${row.commander}-${row.format}`}
-                className={`bg-surface-raised border border-border rounded-xl px-3 py-2 max-w-[16rem] ${
+                className={`border-b border-border last:border-0 hover:bg-surface/60 transition-colors ${
                   isFadedConfidence(row.confidence) ? "opacity-60" : ""
                 }`}
               >
-                <p className="text-sm font-medium leading-tight">
-                  {row.commander}
-                </p>
-                <p className="text-[11px] text-text-secondary mt-0.5">
-                  {colorIdentityPips(row.color_identity)} &middot;{" "}
-                  {formatLabel(row.format)} &middot; {row.deck_count} decks
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-}
-
-function BucketTable({ rows }: { rows: CommanderTierRow[] }) {
-  return (
-    <div className="overflow-x-auto border border-border rounded-2xl">
-      <table className="w-full text-sm">
-        <thead>
-          <tr className="border-b border-border bg-surface text-text-secondary text-left">
-            <th className="px-4 py-3 font-medium">Tier</th>
-            <th className="px-4 py-3 font-medium">Commander</th>
-            <th className="px-4 py-3 font-medium">Colors</th>
-            <th className="px-4 py-3 font-medium">Format</th>
-            <th className="px-4 py-3 font-medium hidden md:table-cell">
-              Top inclusions
-            </th>
-            <th className="px-4 py-3 font-medium">
-              Confidence &amp; sources
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {rows.map((row) => (
-            <tr
-              key={`${row.commander}-${row.format}`}
-              className={`border-b border-border last:border-0 align-top hover:bg-surface/60 transition-colors ${
-                isFadedConfidence(row.confidence) ? "opacity-60" : ""
-              }`}
-            >
-              <td className="px-4 py-3">
-                <TierBadge letter={row.tier} />
-              </td>
-              <td className="px-4 py-3 font-medium">
-                <a
-                  href={row.deck_url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 hover:text-cyan transition-colors"
-                >
-                  {row.commander}
-                  <ExternalLink size={11} className="text-text-secondary" />
-                </a>
-              </td>
-              <td className="px-4 py-3 text-text-secondary font-mono">
-                {colorIdentityPips(row.color_identity)}
-              </td>
-              <td className="px-4 py-3 text-text-secondary">
-                {formatLabel(row.format)}
-              </td>
-              <td className="px-4 py-3 text-text-secondary hidden md:table-cell max-w-sm">
-                {row.top_inclusions.length > 0
-                  ? row.top_inclusions.slice(0, 4).join(", ") +
-                    (row.top_inclusions.length > 4
-                      ? ` +${row.top_inclusions.length - 4} more`
-                      : "")
-                  : "—"}
-              </td>
-              <td className="px-4 py-3">
-                <div className="flex flex-col gap-1.5 items-start">
-                  <MtgConfidenceChip
-                    confidence={row.confidence}
-                    sampleSize={row.deck_count}
+                <td className="px-3 py-2.5 text-right font-mono tabular-nums text-text-secondary">
+                  {i + 1}
+                </td>
+                <td className="px-3 py-2.5">
+                  <TierBadge letter={row.tier} />
+                </td>
+                <td className="px-4 py-2.5 font-medium">
+                  <a
+                    href={row.deck_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 hover:text-cyan transition-colors"
+                  >
+                    {row.commander}
+                    <ExternalLink
+                      size={11}
+                      className="text-text-secondary shrink-0"
+                    />
+                  </a>
+                </td>
+                <td className="px-3 py-2.5">
+                  {/* colorIdentityPips returns "C" for colorless; ManaDots
+                      takes "" for its hollow colorless ring. */}
+                  <ManaDots
+                    letters={colorIdentityPips(row.color_identity).replace(
+                      "C",
+                      ""
+                    )}
                   />
-                  <MtgSourceLinks sources={row.sources} />
-                </div>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+                </td>
+                <td className="px-3 py-2.5 text-text-secondary whitespace-nowrap">
+                  {formatLabel(row.format)}
+                </td>
+                <td className="px-3 py-2.5 text-right font-mono tabular-nums">
+                  {row.deck_count}
+                </td>
+                <td className="px-4 py-2.5 text-text-secondary hidden lg:table-cell max-w-md truncate">
+                  {row.top_inclusions.length > 0
+                    ? row.top_inclusions.slice(0, 3).join(" · ")
+                    : "—"}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p className="text-[11px] text-text-secondary mt-2">
+        Top {top.length} of {rows.length} commanders by deck count · faded
+        rows have small samples — the deck count is the honest signal.
+      </p>
     </div>
   );
 }

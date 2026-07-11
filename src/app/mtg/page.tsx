@@ -10,7 +10,9 @@ import {
   BookOpen,
   Sparkles,
   ArrowRight,
+  FileJson,
 } from "lucide-react";
+import { ManaStrip } from "@/components/MtgManaPips";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MtgSampleBanner } from "@/components/MtgSampleBanner";
@@ -97,6 +99,7 @@ export default function MtgPage() {
         <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-3">
           MTG Meta Hub
         </h1>
+        <ManaStrip className="mb-4" />
         <p className="text-text-secondary max-w-2xl mb-4">
           Commander &amp; Brawl tiers, real Limited win rates, ban-list
           changes, and the set calendar — each one labeled with what it
@@ -104,14 +107,51 @@ export default function MtgPage() {
           No invented win rates, no re-hosted tracker numbers.
         </p>
 
-        <div className="flex flex-wrap items-center gap-3 text-xs text-text-secondary mb-8">
+        <div className="flex flex-wrap items-center gap-3 text-xs text-text-secondary mb-5">
           <span className="inline-flex items-center gap-1.5 bg-surface border border-border rounded-full px-3 py-1">
             payload updated {formatFreshness(payload.computed_at)}
           </span>
-          <span className="inline-flex items-center gap-1.5 bg-surface border border-border rounded-full px-3 py-1">
-            {Object.keys(payload.modules).length} modules
-          </span>
+          <a
+            href="/mtg-meta.json"
+            className="inline-flex items-center gap-1.5 bg-surface border border-border rounded-full px-3 py-1 hover:border-cyan/40 hover:text-foreground transition-colors"
+            title="The exact JSON this page renders — every number, source, and stamp"
+          >
+            <FileJson size={11} />
+            raw data
+          </a>
+          <a
+            href="/mtg-draft.json"
+            className="inline-flex items-center gap-1.5 bg-surface border border-border rounded-full px-3 py-1 hover:border-cyan/40 hover:text-foreground transition-colors"
+            title="The Draft Ranker's full dataset as JSON"
+          >
+            <FileJson size={11} />
+            draft data
+          </a>
         </div>
+
+        {/* Module jump strip — the page is long; every section is one click. */}
+        <nav
+          aria-label="Sections"
+          className="flex flex-wrap items-center gap-2 text-[11px] font-mono uppercase mb-8"
+        >
+          {[
+            ["Draft Ranker", "/mtg/draft"],
+            ["Tiers", "#tiers"],
+            ["Limited", "#limited"],
+            ["Bans", "#banlist"],
+            ["Calendar", "#calendar"],
+            ["Formats", "#formats"],
+            ["Methodology", "/mtg/methodology"],
+          ].map(([label, href]) => (
+            <a
+              key={href}
+              href={href}
+              className="border border-border rounded px-2.5 py-1 text-text-secondary hover:text-foreground hover:border-cyan/40 transition-colors"
+            >
+              {label}
+            </a>
+          ))}
+        </nav>
 
         {sample && <MtgSampleBanner />}
 
@@ -140,7 +180,7 @@ export default function MtgPage() {
         </Link>
 
         {/* Commander / Brawl tiers */}
-        <div className="mb-14">
+        <div id="tiers" className="mb-14 scroll-mt-24">
           <MtgModuleHeader
             icon={<Layers size={18} className="text-cyan" />}
             title="Commander &amp; Brawl Tiers"
@@ -153,7 +193,7 @@ export default function MtgPage() {
         </div>
 
         {/* Limited tiers */}
-        <div className="mb-14">
+        <div id="limited" className="mb-14 scroll-mt-24">
           <MtgModuleHeader
             icon={<Layers size={18} className="text-cyan" />}
             title={`Limited Tier List — ${limitedSetLabel}`}
@@ -166,7 +206,7 @@ export default function MtgPage() {
         </div>
 
         {/* Banlist */}
-        <div className="mb-14">
+        <div id="banlist" className="mb-14 scroll-mt-24">
           <MtgModuleHeader
             icon={<Ban size={18} className="text-cyan" />}
             title="Ban List &amp; Legality Tracker"
@@ -179,7 +219,7 @@ export default function MtgPage() {
         </div>
 
         {/* Calendar */}
-        <div className="mb-14">
+        <div id="calendar" className="mb-14 scroll-mt-24">
           <MtgModuleHeader
             icon={<CalendarDays size={18} className="text-cyan" />}
             title="Rotation &amp; Set Calendar"
@@ -192,7 +232,7 @@ export default function MtgPage() {
         </div>
 
         {/* Format snapshots */}
-        <div className="mb-14">
+        <div id="formats" className="mb-14 scroll-mt-24">
           <MtgModuleHeader
             icon={<LayoutGrid size={18} className="text-cyan" />}
             title="Format Snapshots"

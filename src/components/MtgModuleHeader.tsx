@@ -55,9 +55,17 @@ export function MtgModuleHeader({
           updated {formatFreshness(computedAt)}
         </span>
       </div>
-      <p className="text-sm text-text-secondary leading-relaxed max-w-3xl">
-        {methodology}
-      </p>
+      <details className="max-w-3xl group">
+        <summary className="cursor-pointer list-none inline-flex items-center gap-1.5 text-[11px] font-mono uppercase text-text-secondary hover:text-foreground transition-colors select-none">
+          <span className="inline-block group-open:rotate-90 transition-transform">
+            &#9656;
+          </span>
+          How this is computed
+        </summary>
+        <p className="text-sm text-text-secondary leading-relaxed mt-2 pl-4 border-l border-border">
+          {methodology}
+        </p>
+      </details>
       {extra}
       <div className="flex flex-wrap gap-x-3 gap-y-1 text-[11px] text-text-secondary mt-2">
         {attribution.map((a) => (
