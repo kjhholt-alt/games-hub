@@ -1,4 +1,5 @@
 import { MtgDraftGradeBadge } from "@/components/MtgDraftGradeBadge";
+import { MtgCardHover } from "@/components/MtgCardHover";
 import { cheatSheetGroups, formatWinRate, type DraftCardRow } from "@/lib/mtgDraftView";
 
 const GROUP_STYLE: Record<string, string> = {
@@ -78,7 +79,9 @@ function CheatSheetSection({
                     <span className="text-text-secondary tabular-nums text-xs w-3 shrink-0">
                       {i + 1}
                     </span>
-                    <span className="truncate">{row.card}</span>
+                    <MtgCardHover cardName={row.card} imageUrl={row.image_normal} className="truncate">
+                      {row.card}
+                    </MtgCardHover>
                   </span>
                   <span className="flex items-center gap-1.5 shrink-0">
                     <span className="text-[11px] text-text-secondary tabular-nums">

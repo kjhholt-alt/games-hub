@@ -2,6 +2,7 @@ import { ArrowDown, ArrowUp, ArrowUpDown, ExternalLink } from "lucide-react";
 import { MtgDraftGradeBadge } from "@/components/MtgDraftGradeBadge";
 import { ManaDots } from "@/components/MtgManaPips";
 import { MtgDraftRarityChip } from "@/components/MtgDraftRarityChip";
+import { MtgCardHover } from "@/components/MtgCardHover";
 import {
   formatDecimal,
   formatWinRate,
@@ -83,15 +84,17 @@ export function MtgDraftTable({
                 {ranks.get(row.card) ?? "—"}
               </td>
               <td className="px-4 py-3 font-medium">
-                <a
-                  href={scryfallSearchUrl(row.card)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 hover:text-cyan transition-colors"
-                >
-                  {row.card}
-                  <ExternalLink size={11} className="text-text-secondary shrink-0" />
-                </a>
+                <MtgCardHover cardName={row.card} imageUrl={row.image_normal}>
+                  <a
+                    href={scryfallSearchUrl(row.card)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 hover:text-cyan transition-colors"
+                  >
+                    {row.card}
+                    <ExternalLink size={11} className="text-text-secondary shrink-0" />
+                  </a>
+                </MtgCardHover>
               </td>
               <td className="px-4 py-3">
                 <ManaDots letters={row.color} />

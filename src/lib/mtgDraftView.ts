@@ -57,6 +57,14 @@ export interface DraftCardRow extends DraftRowBase {
   iwd_shrunk: number | null;
   draft_score: number | null;
   grade: DraftGrade;
+  /** Optional — enriched from the cached Scryfall bulk data at payload-build
+   * time (METAHUB-SPEC.md ADDENDUM 2). Absent when the pipeline couldn't
+   * match the card name; never a guessed/placeholder URI. The Draft Ranker
+   * only renders the hover preview (image_normal) — no thumbnails, to keep
+   * the dense table dense — but art_crop is typed here since the pipeline
+   * ships it on every card row. */
+  art_crop?: string;
+  image_normal?: string;
 }
 
 export interface DraftSetBlock {

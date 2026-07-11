@@ -51,6 +51,11 @@ export interface CommanderTierRow extends MtgRowBase {
   tier: Tier;
   top_inclusions: string[];
   deck_url: string;
+  /** Optional — enriched from the cached Scryfall bulk data at payload-build
+   * time (METAHUB-SPEC.md ADDENDUM 2). Absent when the pipeline couldn't
+   * match the commander name to a card; never a guessed/placeholder URI. */
+  art_crop?: string;
+  image_normal?: string;
 }
 
 export interface LimitedTierRow extends MtgRowBase {
@@ -61,6 +66,9 @@ export interface LimitedTierRow extends MtgRowBase {
   /** 0-1 fraction, or null when 17lands has no recorded games for the card. */
   win_rate: number | null;
   tier: LimitedTier;
+  /** Optional — see CommanderTierRow's art_crop/image_normal doc. */
+  art_crop?: string;
+  image_normal?: string;
 }
 
 export interface BanlistFormatRow extends MtgRowBase {
