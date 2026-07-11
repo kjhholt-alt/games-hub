@@ -1,6 +1,7 @@
 import { ExternalLink } from "lucide-react";
 import { TierBadge } from "@/components/TierBadge";
 import { ManaDots } from "@/components/MtgManaPips";
+import { MtgCardHover } from "@/components/MtgCardHover";
 import {
   BUCKET_LABEL,
   colorIdentityPips,
@@ -90,13 +91,30 @@ function BucketBoard({
                     href={row.deck_url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 hover:text-cyan transition-colors"
+                    className="hover:text-cyan transition-colors"
                   >
-                    {row.commander}
-                    <ExternalLink
-                      size={11}
-                      className="text-text-secondary shrink-0"
-                    />
+                    <MtgCardHover
+                      cardName={row.commander}
+                      imageUrl={row.image_normal}
+                      className="inline-flex items-center gap-2"
+                    >
+                      {row.art_crop && (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                          src={row.art_crop}
+                          alt=""
+                          loading="lazy"
+                          className="w-11 h-8 rounded object-cover border border-border shrink-0"
+                        />
+                      )}
+                      <span className="inline-flex items-center gap-1.5">
+                        {row.commander}
+                        <ExternalLink
+                          size={11}
+                          className="text-text-secondary shrink-0"
+                        />
+                      </span>
+                    </MtgCardHover>
                   </a>
                 </td>
                 <td className="px-3 py-2.5">

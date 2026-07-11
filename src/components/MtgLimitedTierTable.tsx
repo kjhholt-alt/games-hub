@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { TierBadge } from "@/components/TierBadge";
 import { ManaDots } from "@/components/MtgManaPips";
+import { MtgCardHover } from "@/components/MtgCardHover";
 import {
   formatWinRate,
   isFadedConfidence,
@@ -92,7 +93,11 @@ export function MtgLimitedTierTable({ rows }: { rows: LimitedTierRow[] }) {
                 <td className="px-3 py-2.5">
                   <TierBadge letter={row.tier as Tier} />
                 </td>
-                <td className="px-4 py-2.5 font-medium">{row.card}</td>
+                <td className="px-4 py-2.5 font-medium">
+                  <MtgCardHover cardName={row.card} imageUrl={row.image_normal}>
+                    {row.card}
+                  </MtgCardHover>
+                </td>
                 <td className="px-3 py-2.5">
                   <RarityChip rarity={row.rarity} />
                 </td>

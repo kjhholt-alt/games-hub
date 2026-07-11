@@ -136,6 +136,9 @@ export default function MtgMethodologyPage() {
               </div>
             ))}
           </div>
+          <p className="text-xs text-text-secondary mt-4">
+            Card images via Scryfall.
+          </p>
         </div>
 
         <div className="bg-cyan-dim border border-cyan/30 rounded-2xl p-6 mb-14">
