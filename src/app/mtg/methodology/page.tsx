@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ShieldCheck, ArrowLeft } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { getMtgMeta } from "@/lib/mtg";
+import { mtgDisplay } from "@/lib/mtgFonts";
 
 export const metadata: Metadata = {
   title: "MTG Meta Hub Methodology",
@@ -62,39 +63,36 @@ export default function MtgMethodologyPage() {
   const modules = payload?.modules;
 
   return (
-    <main className="min-h-screen">
+    <main className={`min-h-screen mtg-scope ${mtgDisplay.variable}`}>
       <SiteHeader />
 
       <section className="max-w-3xl mx-auto px-6 py-12 sm:py-16">
-        <div className="flex items-center gap-2 text-cyan text-xs font-mono mb-3">
-          <ShieldCheck size={14} />
-          THE HONESTY RAIL
-        </div>
-        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-3">
-          MTG Meta Hub Methodology
+        <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-brass mb-4">
+          The honesty rail
+        </p>
+        <h1 className="mtg-display text-4xl sm:text-5xl leading-tight mb-3">
+          Methodology
         </h1>
-        <p className="text-text-secondary max-w-2xl mb-10">
+        <div className="mtg-spectrum w-44 mb-5" aria-hidden />
+        <p className="text-text-secondary max-w-2xl mb-12">
           What each module actually measures, straight from the engine that
           computed it — not a paraphrase. If we can&rsquo;t measure something
           honestly yet, the module says so instead of guessing.
         </p>
 
         {modules ? (
-          <div className="space-y-6 mb-14">
+          <div className="space-y-8 mb-14">
             {MODULE_ORDER.map((key) => {
               const mod = modules[key as keyof typeof modules];
               return (
-                <div
-                  key={key}
-                  className="bg-surface border border-border rounded-2xl p-6"
-                >
-                  <h2 className="text-lg font-semibold mb-2">
+                <div key={key} className="border-b border-border pb-8 last:border-0">
+                  <h2 className="mtg-display text-xl mb-2.5">
                     {MODULE_TITLE[key] ?? key}
                   </h2>
                   <p className="text-sm text-text-secondary leading-relaxed">
                     {mod.methodology}
                   </p>
-                  <div className="flex flex-wrap gap-x-3 gap-y-1 text-[11px] text-text-secondary mt-3">
+                  <div className="flex flex-wrap gap-x-2 gap-y-1 font-mono text-[10px] text-text-secondary/80 mt-3">
                     {mod.attribution.map((a) => (
                       <span
                         key={a}
@@ -115,7 +113,7 @@ export default function MtgMethodologyPage() {
         )}
 
         <div className="mb-14">
-          <h2 className="text-xl font-bold mb-4">Attribution</h2>
+          <h2 className="mtg-display text-2xl mb-4">Attribution</h2>
           <div className="space-y-4">
             {ATTRIBUTION.map((a) => (
               <div
@@ -126,7 +124,7 @@ export default function MtgMethodologyPage() {
                   href={a.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-medium text-cyan hover:underline"
+                  className="font-medium text-brass hover:text-brass-bright transition-colors"
                 >
                   {a.name}
                 </a>
@@ -141,8 +139,8 @@ export default function MtgMethodologyPage() {
           </p>
         </div>
 
-        <div className="bg-cyan-dim border border-cyan/30 rounded-2xl p-6 mb-14">
-          <h2 className="text-lg font-semibold mb-2">The honesty promise</h2>
+        <div className="border border-brass/40 bg-brass-dim rounded-lg p-6 mb-14">
+          <h2 className="mtg-display text-xl mb-3">The honesty promise</h2>
           <ul className="text-sm text-text-secondary space-y-2 leading-relaxed list-disc list-inside">
             <li>
               Every row carries its sources, sample size, computed-at
@@ -156,7 +154,7 @@ export default function MtgMethodologyPage() {
             <li>
               We never imply a win rate we don&rsquo;t have. Limited cards
               17lands hasn&rsquo;t recorded games for render{" "}
-              <code className="text-cyan">unrated</code>, never a guessed
+              <code className="text-brass">unrated</code>, never a guessed
               tier. Where a tracker (untapped.gg, MTGGoldfish) has real
               telemetry we don&rsquo;t, we link to them by name instead of
               guessing at a number.
@@ -174,9 +172,9 @@ export default function MtgMethodologyPage() {
             {payload && (
               <li>
                 This payload&rsquo;s status is currently{" "}
-                <code className="text-cyan">{payload.status}</code> — the
+                <code className="text-brass">{payload.status}</code> — the
                 page shows a SAMPLE DATA banner whenever it isn&rsquo;t{" "}
-                <code className="text-cyan">published</code>.
+                <code className="text-brass">published</code>.
               </li>
             )}
           </ul>
@@ -185,12 +183,21 @@ export default function MtgMethodologyPage() {
         <p className="text-sm text-text-secondary mb-4">
           <Link
             href="/mtg"
-            className="inline-flex items-center gap-1 text-cyan hover:underline"
+            className="inline-flex items-center gap-1 text-brass hover:text-brass-bright transition-colors"
           >
             <ArrowLeft size={13} />
             Back to the MTG Meta Hub
           </Link>
         </p>
+
+        {payload && (
+          <div>
+            <div className="mtg-spectrum w-full opacity-50 mb-5" aria-hidden />
+            <p className="text-xs text-text-secondary leading-relaxed">
+              {payload.boilerplate}
+            </p>
+          </div>
+        )}
       </section>
 
       <SiteFooter />

@@ -99,18 +99,18 @@ export function MtgDraftRanker({ sets }: { sets: DraftSetBlock[] }) {
               key={s.set_code}
               type="button"
               onClick={() => selectSet(i)}
-              className={`inline-flex items-center gap-2 rounded-xl border px-3 py-2 text-sm transition-colors ${
+              className={`inline-flex items-center gap-2 rounded-md border px-3 py-2 text-sm transition-colors ${
                 active
-                  ? "border-cyan/50 bg-cyan-dim text-cyan"
+                  ? "border-brass/50 bg-brass-dim text-brass"
                   : unavailable
                     ? "border-border text-text-secondary opacity-60 hover:opacity-90"
-                    : "border-border text-text-secondary hover:border-cyan/30 hover:text-foreground"
+                    : "border-border text-text-secondary hover:border-brass/30 hover:text-foreground"
               }`}
             >
               <span className="font-medium">{s.set_name}</span>
               <span className="font-mono text-xs opacity-80">{s.set_code}</span>
               {unavailable && (
-                <span className="text-[10px] font-mono uppercase rounded px-1 py-0.5 border border-border">
+                <span className="text-[10px] font-mono uppercase tracking-wide rounded px-1 py-0.5 border border-border">
                   no data
                 </span>
               )}
@@ -140,7 +140,7 @@ export function MtgDraftRanker({ sets }: { sets: DraftSetBlock[] }) {
           {activeSet.early_data && <EarlyDataBanner />}
 
           {/* View toggle */}
-          <div className="inline-flex rounded-xl border border-border bg-surface p-1 mb-4 print:hidden">
+          <div className="inline-flex rounded-md border border-border bg-surface p-0.5 mb-4 print:hidden">
             <ViewTab
               active={view === "ranker"}
               onClick={() => setView("ranker")}
@@ -170,14 +170,14 @@ export function MtgDraftRanker({ sets }: { sets: DraftSetBlock[] }) {
                       value={search}
                       onChange={(e) => setSearch(e.target.value)}
                       placeholder="Search cards..."
-                      className="bg-surface border border-border rounded-lg pl-7 pr-3 py-1.5 text-sm w-48 focus:outline-none focus:border-cyan/50"
+                      className="bg-surface border border-border rounded-md pl-7 pr-3 py-1.5 text-sm w-48 focus:outline-none focus:border-brass/50"
                     />
                   </div>
 
                   <select
                     value={pairKey}
                     onChange={(e) => setPairKey(e.target.value)}
-                    className="bg-surface border border-border rounded-lg px-2.5 py-1.5 text-sm text-text-secondary focus:outline-none focus:border-cyan/50"
+                    className="bg-surface border border-border rounded-md px-2.5 py-1.5 text-sm text-text-secondary focus:outline-none focus:border-brass/50"
                   >
                     <option value="overall">Overall (all colors)</option>
                     {COLOR_PAIRS.map((p) => (
@@ -213,7 +213,7 @@ export function MtgDraftRanker({ sets }: { sets: DraftSetBlock[] }) {
                 <PairPendingPanel pairKey={pairKey} onReset={() => setPairKey("overall")} />
               ) : (
                 <>
-                  <p className="text-xs text-text-secondary mb-2">
+                  <p className="font-mono text-[10px] uppercase tracking-wide text-text-secondary mb-2">
                     {sortedRows.length.toLocaleString("en-US")} of{" "}
                     {baseRows.length.toLocaleString("en-US")} cards shown
                     {pairKey !== "overall" ? ` — ${pairKey} pair` : ""}
@@ -256,8 +256,8 @@ function ViewTab({
     <button
       type="button"
       onClick={onClick}
-      className={`inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-sm font-medium transition-colors ${
-        active ? "bg-cyan text-background" : "text-text-secondary hover:text-foreground"
+      className={`inline-flex items-center gap-1.5 rounded px-3 py-1.5 text-sm font-medium transition-colors ${
+        active ? "bg-brass text-background" : "text-text-secondary hover:text-foreground"
       }`}
     >
       {icon}
@@ -279,10 +279,10 @@ function FacetChip({
     <button
       type="button"
       onClick={onClick}
-      className={`rounded-full border px-3 py-1 text-xs font-medium transition-colors ${
+      className={`rounded border px-2.5 py-1 text-xs font-medium transition-colors ${
         active
-          ? "border-cyan/50 bg-cyan-dim text-cyan"
-          : "border-border bg-surface text-text-secondary hover:border-cyan/30 hover:text-foreground"
+          ? "border-brass/50 bg-brass-dim text-brass"
+          : "border-border bg-surface text-text-secondary hover:border-brass/30 hover:text-foreground"
       }`}
     >
       {label}
@@ -294,8 +294,8 @@ function FacetChip({
  * this run — never an empty table with no explanation. */
 function UnavailableSetPanel({ methodology }: { methodology: string }) {
   return (
-    <div className="bg-surface border border-border rounded-2xl p-6 text-center">
-      <p className="text-sm font-semibold text-text-secondary mb-2">
+    <div className="bg-surface border border-border rounded-lg p-6 text-center">
+      <p className="font-mono text-[11px] uppercase tracking-wider text-text-secondary mb-2">
         No graded draft data for this set yet
       </p>
       <p className="text-xs text-text-secondary leading-relaxed max-w-2xl mx-auto">
@@ -310,8 +310,8 @@ function UnavailableSetPanel({ methodology }: { methodology: string }) {
  * pair-specific. */
 function PairPendingPanel({ pairKey, onReset }: { pairKey: string; onReset: () => void }) {
   return (
-    <div className="bg-surface border border-border rounded-2xl p-6 text-center">
-      <p className="text-sm font-semibold text-text-secondary mb-2">
+    <div className="bg-surface border border-border rounded-lg p-6 text-center">
+      <p className="font-mono text-[11px] uppercase tracking-wider text-text-secondary mb-2">
         Per-pair data pending upstream support
       </p>
       <p className="text-xs text-text-secondary leading-relaxed max-w-2xl mx-auto mb-4">
@@ -322,7 +322,7 @@ function PairPendingPanel({ pairKey, onReset }: { pairKey: string; onReset: () =
       <button
         type="button"
         onClick={onReset}
-        className="text-xs text-cyan hover:underline print:hidden"
+        className="text-xs text-brass hover:text-brass-bright transition-colors print:hidden"
       >
         Back to overall ratings
       </button>
@@ -332,11 +332,13 @@ function PairPendingPanel({ pairKey, onReset }: { pairKey: string; onReset: () =
 
 function EarlyDataBanner() {
   return (
-    <div className="flex items-start gap-2.5 rounded-2xl border border-amber/40 bg-amber-dim px-4 py-3 mb-6">
-      <AlertTriangle size={16} className="text-amber mt-0.5 shrink-0" />
-      <div className="text-sm">
-        <p className="font-semibold text-amber">EARLY DATA</p>
-        <p className="text-text-secondary text-xs mt-0.5 leading-relaxed">
+    <div className="flex items-start gap-3 rounded-md border border-amber/40 bg-amber-dim px-4 py-3 mb-6">
+      <AlertTriangle size={15} className="text-amber mt-0.5 shrink-0" />
+      <div>
+        <p className="font-mono text-[11px] uppercase tracking-wider text-amber mb-1">
+          Early data
+        </p>
+        <p className="text-text-secondary text-xs leading-relaxed">
           Grades will keep upgrading as sample sizes grow through the set&rsquo;s draft window —
           treat close grades as more volatile than usual right now.
         </p>

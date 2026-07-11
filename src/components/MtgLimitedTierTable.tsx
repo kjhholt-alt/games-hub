@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { TierBadge } from "@/components/TierBadge";
+import { MtgTierPlate } from "@/components/MtgTierPlate";
+import { MtgDraftRarityChip } from "@/components/MtgDraftRarityChip";
 import { ManaDots } from "@/components/MtgManaPips";
 import { MtgCardHover } from "@/components/MtgCardHover";
 import {
@@ -12,16 +13,9 @@ import {
   type Tier,
 } from "@/lib/mtg";
 
-const RARITY_STYLE: Record<string, string> = {
-  common: "text-text-secondary bg-surface border-border",
-  uncommon: "text-cyan bg-cyan-dim border-cyan/30",
-  rare: "text-amber bg-amber-dim border-amber/30",
-  mythic: "text-red bg-red-dim border-red/30",
-};
-
 const CONFIDENCE_TEXT: Record<Confidence, string> = {
   high: "text-green",
-  medium: "text-cyan",
+  medium: "text-brass",
   low: "text-amber",
   sample: "text-purple",
 };
@@ -29,18 +23,6 @@ const CONFIDENCE_TEXT: Record<Confidence, string> = {
 /** The hub page shows the top of the board; the full sortable ranker is the
  * real tool. Everything past TEASER_N is one click away, not lost. */
 const TEASER_N = 15;
-
-function RarityChip({ rarity }: { rarity: string }) {
-  return (
-    <span
-      className={`inline-flex items-center rounded px-1.5 py-0.5 text-[10px] font-mono uppercase border ${
-        RARITY_STYLE[rarity] ?? "text-text-secondary bg-surface border-border"
-      }`}
-    >
-      {rarity}
-    </span>
-  );
-}
 
 /** Sort order: rated tiers S→D first (best win rate first within a tier),
  * then unrated (17lands has no recorded games) at the bottom. */
@@ -66,49 +48,49 @@ export function MtgLimitedTierTable({ rows }: { rows: LimitedTierRow[] }) {
 
   return (
     <div>
-      <div className="overflow-x-auto border border-border rounded-2xl">
+      <div className="overflow-x-auto border border-border rounded-lg">
         <table className="w-full text-sm">
           <thead>
-            <tr className="border-b border-border bg-surface text-text-secondary text-left">
-              <th className="px-3 py-3 font-medium w-10 text-right">#</th>
-              <th className="px-3 py-3 font-medium w-12">Tier</th>
-              <th className="px-4 py-3 font-medium">Card</th>
-              <th className="px-3 py-3 font-medium">Rarity</th>
-              <th className="px-3 py-3 font-medium">Color</th>
-              <th className="px-3 py-3 font-medium text-right">Win rate</th>
-              <th className="px-3 py-3 font-medium text-right">Games</th>
+            <tr className="border-b border-border bg-surface text-left">
+              <Th className="w-10 text-right">#</Th>
+              <Th className="w-12">Tier</Th>
+              <Th wide>Card</Th>
+              <Th>Rarity</Th>
+              <Th>Color</Th>
+              <Th className="text-right">Win rate</Th>
+              <Th className="text-right">Games</Th>
             </tr>
           </thead>
           <tbody>
             {top.map((row, i) => (
               <tr
                 key={`${row.card}-${row.set}`}
-                className={`border-b border-border last:border-0 hover:bg-surface/60 transition-colors ${
+                className={`border-b border-border last:border-0 hover:bg-brass/5 transition-colors ${
                   isFadedConfidence(row.confidence) ? "opacity-60" : ""
                 }`}
               >
-                <td className="px-3 py-2.5 text-right font-mono tabular-nums text-text-secondary">
+                <td className="px-3 py-2 text-right font-mono tabular-nums text-text-secondary">
                   {i + 1}
                 </td>
-                <td className="px-3 py-2.5">
-                  <TierBadge letter={row.tier as Tier} />
+                <td className="px-3 py-2">
+                  <MtgTierPlate letter={row.tier as Tier} />
                 </td>
-                <td className="px-4 py-2.5 font-medium">
+                <td className="px-4 py-2 font-medium">
                   <MtgCardHover cardName={row.card} imageUrl={row.image_normal}>
                     {row.card}
                   </MtgCardHover>
                 </td>
-                <td className="px-3 py-2.5">
-                  <RarityChip rarity={row.rarity} />
+                <td className="px-3 py-2">
+                  <MtgDraftRarityChip rarity={row.rarity} />
                 </td>
-                <td className="px-3 py-2.5">
+                <td className="px-3 py-2">
                   <ManaDots letters={row.color} />
                 </td>
-                <td className="px-3 py-2.5 text-right tabular-nums font-semibold">
+                <td className="px-3 py-2 text-right tabular-nums font-semibold">
                   {formatWinRate(row.win_rate)}
                 </td>
                 <td
-                  className={`px-3 py-2.5 text-right font-mono tabular-nums ${CONFIDENCE_TEXT[row.confidence]}`}
+                  className={`px-3 py-2 text-right font-mono tabular-nums ${CONFIDENCE_TEXT[row.confidence]}`}
                   title={`${row.confidence} confidence — n=${row.sample_size.toLocaleString("en-US")}`}
                 >
                   {row.sample_size.toLocaleString("en-US")}
@@ -120,7 +102,7 @@ export function MtgLimitedTierTable({ rows }: { rows: LimitedTierRow[] }) {
       </div>
       <Link
         href="/mtg/draft"
-        className="group inline-flex items-center gap-2 text-sm text-cyan mt-3 hover:underline"
+        className="group inline-flex items-center gap-2 text-sm text-brass hover:text-brass-bright mt-3 transition-colors"
       >
         Top {top.length} of {rows.length} cards — open the full Draft Ranker
         to sort, filter, and search every card
@@ -130,5 +112,23 @@ export function MtgLimitedTierTable({ rows }: { rows: LimitedTierRow[] }) {
         />
       </Link>
     </div>
+  );
+}
+
+function Th({
+  children,
+  className = "",
+  wide = false,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  wide?: boolean;
+}) {
+  return (
+    <th
+      className={`${wide ? "px-4" : "px-3"} py-2.5 font-mono text-[10px] uppercase tracking-widest text-text-secondary font-medium ${className}`}
+    >
+      {children}
+    </th>
   );
 }

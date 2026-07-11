@@ -26,7 +26,7 @@ const COLUMNS: { key: DraftSortKey; label: string; align?: "right" }[] = [
 /** Games column tint — the confidence signal without a chip per row. */
 const CONFIDENCE_TEXT: Record<string, string> = {
   high: "text-green",
-  medium: "text-cyan",
+  medium: "text-brass",
   low: "text-amber",
   sample: "text-purple",
 };
@@ -52,18 +52,21 @@ export function MtgDraftTable({
   onSort: (key: DraftSortKey) => void;
 }) {
   return (
-    <div className="overflow-x-auto border border-border rounded-2xl">
+    <div className="overflow-x-auto border border-border rounded-lg">
       <table className="w-full text-sm">
         <thead>
-          <tr className="border-b border-border bg-surface text-text-secondary text-left">
+          <tr className="border-b border-border bg-surface text-left">
             {COLUMNS.map((col) => (
-              <th key={col.key} className={`px-4 py-3 font-medium ${col.align === "right" ? "text-right" : ""}`}>
+              <th
+                key={col.key}
+                className={`px-4 py-2.5 font-mono text-[10px] uppercase tracking-widest text-text-secondary font-medium ${col.align === "right" ? "text-right" : ""}`}
+              >
                 <button
                   type="button"
                   onClick={() => onSort(col.key)}
-                  className={`inline-flex items-center gap-1 hover:text-foreground transition-colors ${
+                  className={`inline-flex items-center gap-1 uppercase tracking-widest hover:text-foreground transition-colors ${
                     col.align === "right" ? "flex-row-reverse" : ""
-                  } ${sortKey === col.key ? "text-cyan" : ""}`}
+                  } ${sortKey === col.key ? "text-brass" : ""}`}
                 >
                   {col.label}
                   <SortIcon active={sortKey === col.key} dir={sortDir} />
@@ -76,43 +79,43 @@ export function MtgDraftTable({
           {rows.map((row) => (
             <tr
               key={`${row.card}-${row.color}-${row.rarity}`}
-              className={`border-b border-border last:border-0 align-top hover:bg-surface/60 transition-colors ${
+              className={`border-b border-border last:border-0 align-middle hover:bg-brass/5 transition-colors ${
                 isFadedConfidence(row.confidence) ? "opacity-60" : ""
               }`}
             >
-              <td className="px-4 py-3 text-text-secondary tabular-nums">
+              <td className="px-4 py-2 text-text-secondary font-mono tabular-nums">
                 {ranks.get(row.card) ?? "—"}
               </td>
-              <td className="px-4 py-3 font-medium">
+              <td className="px-4 py-2 font-medium">
                 <MtgCardHover cardName={row.card} imageUrl={row.image_normal}>
                   <a
                     href={scryfallSearchUrl(row.card)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 hover:text-cyan transition-colors"
+                    className="inline-flex items-center gap-1 hover:text-brass transition-colors"
                   >
                     {row.card}
                     <ExternalLink size={11} className="text-text-secondary shrink-0" />
                   </a>
                 </MtgCardHover>
               </td>
-              <td className="px-4 py-3">
+              <td className="px-4 py-2">
                 <ManaDots letters={row.color} />
               </td>
-              <td className="px-4 py-3">
+              <td className="px-4 py-2">
                 <MtgDraftRarityChip rarity={row.rarity} />
               </td>
-              <td className="px-4 py-3">
+              <td className="px-4 py-2">
                 <MtgDraftGradeBadge grade={row.grade} />
               </td>
-              <td className="px-4 py-3 text-right tabular-nums font-semibold">
+              <td className="px-4 py-2 text-right tabular-nums font-semibold">
                 {formatWinRate(row.gih_wr)}
               </td>
-              <td className="px-4 py-3 text-right tabular-nums text-text-secondary">
+              <td className="px-4 py-2 text-right tabular-nums text-text-secondary">
                 {formatDecimal(row.alsa)}
               </td>
               <td
-                className={`px-4 py-3 text-right tabular-nums font-mono ${CONFIDENCE_TEXT[row.confidence] ?? "text-text-secondary"}`}
+                className={`px-4 py-2 text-right tabular-nums font-mono ${CONFIDENCE_TEXT[row.confidence] ?? "text-text-secondary"}`}
                 title={`${row.confidence} confidence`}
               >
                 {row.sample_size.toLocaleString("en-US")}

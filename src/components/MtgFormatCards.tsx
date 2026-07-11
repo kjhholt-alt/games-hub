@@ -18,23 +18,23 @@ const LINK_LABEL: Record<string, string> = {
  */
 export function MtgFormatCards({ rows }: { rows: FormatRow[] }) {
   return (
-    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
       {rows.map((row) => (
         <div
           key={row.format}
-          className="bg-surface border border-border rounded-2xl p-4 flex flex-col"
+          className="bg-surface border border-border rounded-lg p-4 flex flex-col"
         >
-          <p className="font-semibold mb-1">{row.format_name}</p>
+          <p className="mtg-display text-lg mb-1.5">{row.format_name}</p>
 
-          <div className="flex items-center gap-2 text-xs text-text-secondary mb-2">
-            <span className="bg-surface-raised border border-border rounded-full px-2 py-0.5">
+          <div className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-wide text-text-secondary mb-2">
+            <span className="border border-border rounded px-1.5 py-0.5">
               {row.legal_sets.length} legal sets
             </span>
-            <span className="bg-red-dim border border-red/30 text-red rounded-full px-2 py-0.5">
+            <span className="border border-red/30 text-red rounded px-1.5 py-0.5">
               {row.banned_count} banned
             </span>
             {row.restricted_count > 0 && (
-              <span className="bg-amber-dim border border-amber/30 text-amber rounded-full px-2 py-0.5">
+              <span className="border border-amber/30 text-amber rounded px-1.5 py-0.5">
                 {row.restricted_count} restricted
               </span>
             )}
@@ -60,7 +60,7 @@ export function MtgFormatCards({ rows }: { rows: FormatRow[] }) {
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-xs text-cyan hover:underline"
+                className="inline-flex items-center gap-1 text-xs text-brass hover:text-brass-bright transition-colors"
               >
                 {LINK_LABEL[key] ?? key}
                 <ExternalLink size={10} />

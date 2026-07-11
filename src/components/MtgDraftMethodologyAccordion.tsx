@@ -9,10 +9,10 @@ import { ChevronDown } from "lucide-react";
  */
 export function MtgDraftMethodologyAccordion({ methodology }: { methodology: string }) {
   return (
-    <details className="bg-surface border border-border rounded-2xl mb-8 group print:hidden">
-      <summary className="flex items-center justify-between gap-2 cursor-pointer select-none px-5 py-4 text-sm font-semibold">
+    <details className="bg-surface border border-border rounded-lg mb-8 group print:hidden">
+      <summary className="flex items-center justify-between gap-2 cursor-pointer select-none px-5 py-3.5 font-mono text-[11px] uppercase tracking-wider text-text-secondary hover:text-foreground transition-colors">
         BuildKit Draft Score — full methodology
-        <ChevronDown size={16} className="text-text-secondary transition-transform group-open:rotate-180" />
+        <ChevronDown size={15} className="transition-transform group-open:rotate-180" />
       </summary>
       <p className="text-sm text-text-secondary leading-relaxed px-5 pb-5 whitespace-pre-line">
         {methodology}

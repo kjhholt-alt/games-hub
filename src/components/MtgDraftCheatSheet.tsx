@@ -2,22 +2,33 @@ import { MtgDraftGradeBadge } from "@/components/MtgDraftGradeBadge";
 import { MtgCardHover } from "@/components/MtgCardHover";
 import { cheatSheetGroups, formatWinRate, type DraftCardRow } from "@/lib/mtgDraftView";
 
-const GROUP_STYLE: Record<string, string> = {
-  W: "border-amber/30",
-  U: "border-cyan/30",
-  B: "border-border",
-  R: "border-red/30",
-  G: "border-green/30",
-  "": "border-purple/30",
+/** Lane accents in the hub's desaturated mana tones (same family as the
+ * .mtg-spectrum signature rule) — the lane IS the color, no neon. */
+const GROUP_BORDER: Record<string, string> = {
+  W: "border-t-[#b0a884]",
+  U: "border-t-[#46759e]",
+  B: "border-t-[#6d5f80]",
+  R: "border-t-[#a8543f]",
+  G: "border-t-[#4d7f5c]",
+  "": "border-t-brass/60",
 };
 
 const GROUP_TEXT: Record<string, string> = {
-  W: "text-amber",
-  U: "text-cyan",
-  B: "text-foreground",
-  R: "text-red",
-  G: "text-green",
-  "": "text-purple",
+  W: "text-[#c5bd97]",
+  U: "text-[#7da3c4]",
+  B: "text-[#9d8fb3]",
+  R: "text-[#c47862]",
+  G: "text-[#79a888]",
+  "": "text-brass",
+};
+
+const GROUP_NAME: Record<string, string> = {
+  W: "White",
+  U: "Blue",
+  B: "Black",
+  R: "Red",
+  G: "Green",
+  "": "Multi / Colorless",
 };
 
 /**
@@ -49,34 +60,34 @@ function CheatSheetSection({
   if (groups.length === 0) {
     return (
       <div>
-        <h3 className="text-base font-semibold mb-3">{title}</h3>
+        <h3 className="mtg-display text-xl mb-3">{title}</h3>
         <p className="text-sm text-text-secondary">No cards in this bucket yet.</p>
       </div>
     );
   }
   return (
     <div>
-      <h3 className="text-base font-semibold mb-3">{title}</h3>
+      <h3 className="mtg-display text-xl mb-3">{title}</h3>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 print:grid-cols-3">
         {groups.map((g) => (
           <div
             key={g.label}
-            className={`bg-surface border rounded-xl p-3 print:break-inside-avoid ${
-              GROUP_STYLE[g.color] ?? "border-border"
+            className={`bg-surface border border-border border-t-2 rounded-lg p-3 print:break-inside-avoid ${
+              GROUP_BORDER[g.color] ?? "border-t-border"
             }`}
           >
             <p
-              className={`text-xs font-mono uppercase font-semibold mb-2 ${
+              className={`font-mono text-[11px] uppercase tracking-widest font-semibold mb-2 ${
                 GROUP_TEXT[g.color] ?? "text-text-secondary"
               }`}
             >
-              {g.label === "" ? "Multi / Colorless" : g.label}
+              {GROUP_NAME[g.color] ?? g.label}
             </p>
             <ol className="space-y-1.5">
               {g.rows.map((row, i) => (
                 <li key={row.card} className="flex items-center justify-between gap-2 text-sm">
                   <span className="flex items-center gap-1.5 min-w-0">
-                    <span className="text-text-secondary tabular-nums text-xs w-3 shrink-0">
+                    <span className="text-text-secondary font-mono tabular-nums text-xs w-3 shrink-0">
                       {i + 1}
                     </span>
                     <MtgCardHover cardName={row.card} imageUrl={row.image_normal} className="truncate">

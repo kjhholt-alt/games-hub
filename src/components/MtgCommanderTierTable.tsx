@@ -1,5 +1,5 @@
 import { ExternalLink } from "lucide-react";
-import { TierBadge } from "@/components/TierBadge";
+import { MtgTierPlate } from "@/components/MtgTierPlate";
 import { ManaDots } from "@/components/MtgManaPips";
 import { MtgCardHover } from "@/components/MtgCardHover";
 import {
@@ -20,7 +20,7 @@ const TOP_N = 20;
 /**
  * Commander/Brawl leaderboards — one dense table per engine bucket
  * (trending = newest decks, established = most-viewed decks), ranked by
- * deck count. Rank number + tier mark carry the hierarchy; mana dots carry
+ * deck count. Rank number + tier plate carry the hierarchy; mana dots carry
  * color identity; the commander name links to the representative Archidekt
  * deck (the real attribution link). Sources are cited once at module level,
  * not stamped on every row — per-row honesty is the fade + the deck count.
@@ -54,44 +54,44 @@ function BucketBoard({
 
   return (
     <div>
-      <h3 className="text-sm font-mono uppercase text-text-secondary mb-3">
+      <h3 className="font-mono text-[11px] uppercase tracking-widest text-text-secondary mb-3">
         {BUCKET_LABEL[bucket]}
       </h3>
-      <div className="overflow-x-auto border border-border rounded-2xl">
+      <div className="overflow-x-auto border border-border rounded-lg">
         <table className="w-full text-sm">
           <thead>
-            <tr className="border-b border-border bg-surface text-text-secondary text-left">
-              <th className="px-3 py-3 font-medium w-10 text-right">#</th>
-              <th className="px-3 py-3 font-medium w-12">Tier</th>
-              <th className="px-4 py-3 font-medium">Commander</th>
-              <th className="px-3 py-3 font-medium">Colors</th>
-              <th className="px-3 py-3 font-medium">Format</th>
-              <th className="px-3 py-3 font-medium text-right">Decks</th>
-              <th className="px-4 py-3 font-medium hidden lg:table-cell">
+            <tr className="border-b border-border bg-surface text-left">
+              <Th className="w-10 text-right">#</Th>
+              <Th className="w-12">Tier</Th>
+              <Th wide>Commander</Th>
+              <Th>Colors</Th>
+              <Th>Format</Th>
+              <Th className="text-right">Decks</Th>
+              <Th wide className="hidden lg:table-cell">
                 Top inclusions
-              </th>
+              </Th>
             </tr>
           </thead>
           <tbody>
             {top.map((row, i) => (
               <tr
                 key={`${row.commander}-${row.format}`}
-                className={`border-b border-border last:border-0 hover:bg-surface/60 transition-colors ${
+                className={`border-b border-border last:border-0 hover:bg-brass/5 transition-colors ${
                   isFadedConfidence(row.confidence) ? "opacity-60" : ""
                 }`}
               >
-                <td className="px-3 py-2.5 text-right font-mono tabular-nums text-text-secondary">
+                <td className="px-3 py-2 text-right font-mono tabular-nums text-text-secondary">
                   {i + 1}
                 </td>
-                <td className="px-3 py-2.5">
-                  <TierBadge letter={row.tier} />
+                <td className="px-3 py-2">
+                  <MtgTierPlate letter={row.tier} />
                 </td>
-                <td className="px-4 py-2.5 font-medium">
+                <td className="px-4 py-2 font-medium">
                   <a
                     href={row.deck_url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-cyan transition-colors"
+                    className="hover:text-brass transition-colors"
                   >
                     <MtgCardHover
                       cardName={row.commander}
@@ -117,7 +117,7 @@ function BucketBoard({
                     </MtgCardHover>
                   </a>
                 </td>
-                <td className="px-3 py-2.5">
+                <td className="px-3 py-2">
                   {/* colorIdentityPips returns "C" for colorless; ManaDots
                       takes "" for its hollow colorless ring. */}
                   <ManaDots
@@ -127,13 +127,13 @@ function BucketBoard({
                     )}
                   />
                 </td>
-                <td className="px-3 py-2.5 text-text-secondary whitespace-nowrap">
+                <td className="px-3 py-2 text-text-secondary whitespace-nowrap">
                   {formatLabel(row.format)}
                 </td>
-                <td className="px-3 py-2.5 text-right font-mono tabular-nums">
+                <td className="px-3 py-2 text-right font-mono tabular-nums">
                   {row.deck_count}
                 </td>
-                <td className="px-4 py-2.5 text-text-secondary hidden lg:table-cell max-w-md truncate">
+                <td className="px-4 py-2 text-text-secondary hidden lg:table-cell max-w-md truncate">
                   {row.top_inclusions.length > 0
                     ? row.top_inclusions.slice(0, 3).join(" · ")
                     : "—"}
@@ -143,10 +143,28 @@ function BucketBoard({
           </tbody>
         </table>
       </div>
-      <p className="text-[11px] text-text-secondary mt-2">
+      <p className="font-mono text-[10px] uppercase tracking-wide text-text-secondary mt-2">
         Top {top.length} of {rows.length} commanders by deck count · faded
-        rows have small samples — the deck count is the honest signal.
+        rows = small samples
       </p>
     </div>
+  );
+}
+
+function Th({
+  children,
+  className = "",
+  wide = false,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  wide?: boolean;
+}) {
+  return (
+    <th
+      className={`${wide ? "px-4" : "px-3"} py-2.5 font-mono text-[10px] uppercase tracking-widest text-text-secondary font-medium ${className}`}
+    >
+      {children}
+    </th>
   );
 }

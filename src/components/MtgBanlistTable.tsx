@@ -12,21 +12,21 @@ import { formatLabel, type BanlistFormatRow } from "@/lib/mtg";
  */
 export function MtgBanlistTable({ rows }: { rows: BanlistFormatRow[] }) {
   return (
-    <div className="grid sm:grid-cols-2 gap-4">
+    <div className="grid sm:grid-cols-2 gap-3">
       {rows.map((row) => (
         <div
           key={row.format}
-          className="bg-surface border border-border rounded-2xl p-4 flex flex-col"
+          className="bg-surface border border-border rounded-lg p-4 flex flex-col"
         >
           <div className="flex items-center justify-between gap-2 mb-2">
-            <p className="font-semibold">
+            <p className="mtg-display text-lg">
               {row.format_name || formatLabel(row.format)}
             </p>
             <a
               href={row.wizards_announcements_url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-xs text-cyan hover:underline shrink-0"
+              className="inline-flex items-center gap-1 text-xs text-brass hover:text-brass-bright transition-colors shrink-0"
             >
               Wizards B&amp;R page
               <ExternalLink size={10} />
@@ -60,7 +60,7 @@ function CardList({ label, cards }: { label: string; cards: string[] }) {
   if (cards.length === 0) return null;
   return (
     <div className="mb-3">
-      <p className="text-[11px] font-mono uppercase text-text-secondary mb-1.5">
+      <p className="font-mono text-[10px] uppercase tracking-widest text-text-secondary mb-1.5">
         {label} ({cards.length})
       </p>
       <div className="flex flex-wrap gap-1 max-h-40 overflow-y-auto pr-1">

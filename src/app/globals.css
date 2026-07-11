@@ -26,6 +26,28 @@
   --tier-d: #475569;
   /* Draft Ranker grade bands extend the tier scale with an F (mtgDraft.ts). */
   --tier-f: #334155;
+
+  /* ── MTG Meta Hub identity ("the assayer's ledger") ─────────────────────
+     The hub trades the network cyan for rare-card brass, rarity chips wear
+     Magic's real metal vernacular, and tiers run a warm→cold heat ramp that
+     stays legible in dense tables. Flat, desaturated, zero glow. */
+  --mtg-brass: #c9a45c;
+  --mtg-brass-bright: #e0c078;
+  --mtg-brass-dim: rgba(201, 164, 92, 0.1);
+  --mtg-copper: #e07840;
+  --mtg-copper-dim: rgba(224, 120, 64, 0.12);
+  /* Rarity metals: common steel, uncommon silver, rare gold, mythic copper. */
+  --mtg-rarity-common: #96a0ab;
+  --mtg-rarity-uncommon: #b4c9d6;
+  --mtg-rarity-rare: #d4b060;
+  --mtg-rarity-mythic: #e07840;
+  /* MTG tier/grade heat ramp (S hot copper -> F cold slate). */
+  --mtg-tier-s: #e07840;
+  --mtg-tier-a: #d4b060;
+  --mtg-tier-b: #8fb4a8;
+  --mtg-tier-c: #7c8ba0;
+  --mtg-tier-d: #5a6474;
+  --mtg-tier-f: #454e5c;
 }
 
 @theme inline {
@@ -51,6 +73,21 @@
   --color-tier-c: var(--tier-c);
   --color-tier-d: var(--tier-d);
   --color-tier-f: var(--tier-f);
+  --color-brass: var(--mtg-brass);
+  --color-brass-bright: var(--mtg-brass-bright);
+  --color-brass-dim: var(--mtg-brass-dim);
+  --color-copper: var(--mtg-copper);
+  --color-copper-dim: var(--mtg-copper-dim);
+  --color-rarity-common: var(--mtg-rarity-common);
+  --color-rarity-uncommon: var(--mtg-rarity-uncommon);
+  --color-rarity-rare: var(--mtg-rarity-rare);
+  --color-rarity-mythic: var(--mtg-rarity-mythic);
+  --color-mtier-s: var(--mtg-tier-s);
+  --color-mtier-a: var(--mtg-tier-a);
+  --color-mtier-b: var(--mtg-tier-b);
+  --color-mtier-c: var(--mtg-tier-c);
+  --color-mtier-d: var(--mtg-tier-d);
+  --color-mtier-f: var(--mtg-tier-f);
   --color-mana-w: #d8d0ae;
   --color-mana-u: #4f9ad0;
   --color-mana-b: #9d8fb3;
@@ -92,4 +129,36 @@ body {
 *:focus-visible {
   outline: 2px solid var(--cyan);
   outline-offset: 2px;
+}
+
+/* ── MTG Meta Hub utilities ─────────────────────────────────────────────── */
+
+/* Inscriptional display face for hub headings (loaded per-route via
+   next/font in src/lib/mtgFonts.ts — the variable only exists inside /mtg
+   pages' <main>, everywhere else this falls back to the site sans). */
+.mtg-display {
+  font-family: var(--font-mtg-display), var(--font-geist-sans), serif;
+  font-weight: 400;
+  letter-spacing: 0.015em;
+}
+
+/* The hub's signature mark: a five-segment WUBRG spectrum hairline in
+   desaturated mana tones. Used sparingly — under the page title and above
+   the Fan Content boilerplate — never as ambient decoration. */
+.mtg-spectrum {
+  height: 2px;
+  border-radius: 1px;
+  background: linear-gradient(
+    to right,
+    #b0a884 0% 20%,
+    #46759e 20% 40%,
+    #6d5f80 40% 60%,
+    #a8543f 60% 80%,
+    #4d7f5c 80% 100%
+  );
+}
+
+/* Brass focus ring inside the hub so keyboard focus matches the accent. */
+.mtg-scope *:focus-visible {
+  outline-color: var(--mtg-brass);
 }
