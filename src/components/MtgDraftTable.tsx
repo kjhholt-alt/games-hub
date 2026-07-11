@@ -5,6 +5,8 @@ import { MtgDraftRarityChip } from "@/components/MtgDraftRarityChip";
 import { MtgCardHover } from "@/components/MtgCardHover";
 import {
   formatDecimal,
+  formatDraftScore,
+  formatIwd,
   formatWinRate,
   isFadedConfidence,
   scryfallSearchUrl,
@@ -12,14 +14,22 @@ import {
   type DraftSortKey,
 } from "@/lib/mtgDraftView";
 
-const COLUMNS: { key: DraftSortKey; label: string; align?: "right" }[] = [
+const COLUMNS: { key: DraftSortKey; label: string; align?: "right"; title?: string }[] = [
   { key: "rank", label: "#" },
   { key: "card", label: "Card" },
   { key: "color", label: "Color" },
   { key: "rarity", label: "Rarity" },
   { key: "grade", label: "Grade" },
-  { key: "gih_wr", label: "GIH WR", align: "right" },
-  { key: "alsa", label: "ALSA", align: "right" },
+  {
+    key: "draft_score",
+    label: "Score",
+    align: "right",
+    title:
+      "BuildKit Draft Score — sample-shrunk z(GIH WR) + z(IWD) composite; formula on the methodology page",
+  },
+  { key: "gih_wr", label: "GIH WR", align: "right", title: "Games-in-hand win rate" },
+  { key: "iwd", label: "IWD", align: "right", title: "Improvement when drawn, in percentage points" },
+  { key: "alsa", label: "ALSA", align: "right", title: "Average last seen at (pick position)" },
   { key: "sample_size", label: "Sample", align: "right" },
 ];
 
@@ -64,6 +74,7 @@ export function MtgDraftTable({
                 <button
                   type="button"
                   onClick={() => onSort(col.key)}
+                  title={col.title}
                   className={`inline-flex items-center gap-1 uppercase tracking-widest hover:text-foreground transition-colors ${
                     col.align === "right" ? "flex-row-reverse" : ""
                   } ${sortKey === col.key ? "text-brass" : ""}`}
@@ -108,8 +119,14 @@ export function MtgDraftTable({
               <td className="px-4 py-2">
                 <MtgDraftGradeBadge grade={row.grade} />
               </td>
+              <td className="px-4 py-2 text-right tabular-nums font-mono">
+                {formatDraftScore(row.draft_score)}
+              </td>
               <td className="px-4 py-2 text-right tabular-nums font-semibold">
                 {formatWinRate(row.gih_wr)}
+              </td>
+              <td className="px-4 py-2 text-right tabular-nums text-text-secondary">
+                {formatIwd(row.iwd)}
               </td>
               <td className="px-4 py-2 text-right tabular-nums text-text-secondary">
                 {formatDecimal(row.alsa)}
@@ -124,7 +141,7 @@ export function MtgDraftTable({
           ))}
           {rows.length === 0 && (
             <tr>
-              <td colSpan={8} className="px-4 py-8 text-center text-sm text-text-secondary">
+              <td colSpan={COLUMNS.length} className="px-4 py-8 text-center text-sm text-text-secondary">
                 No cards match the current filters.
               </td>
             </tr>

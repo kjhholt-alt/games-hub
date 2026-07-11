@@ -225,6 +225,11 @@ export function MtgDraftRanker({ sets }: { sets: DraftSetBlock[] }) {
                     sortDir={sortDir}
                     onSort={handleSort}
                   />
+                  <p className="font-mono text-[10px] uppercase tracking-wide text-text-secondary mt-2">
+                    S build-around · A high pick · B solid · C filler · D
+                    situational · F avoid — hover any grade or column header
+                    for the rubric
+                  </p>
                 </>
               )}
             </>

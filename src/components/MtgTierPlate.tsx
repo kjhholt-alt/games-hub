@@ -26,15 +26,18 @@ const SIZE = {
 export function MtgTierPlate({
   letter,
   size = "md",
+  title,
 }: {
   letter: MtgTierLetter | "unrated";
   size?: keyof typeof SIZE;
+  /** Optional hover rubric, e.g. the grade blurb. */
+  title?: string;
 }) {
   if (letter === "unrated") {
     return (
       <span
         className={`inline-flex items-center justify-center rounded border border-dashed border-border text-text-secondary font-mono ${SIZE[size]}`}
-        title="No recorded games yet — never a guessed grade"
+        title={title ?? "No recorded games yet — never a guessed grade"}
       >
         —
       </span>
@@ -43,6 +46,7 @@ export function MtgTierPlate({
   return (
     <span
       className={`inline-flex items-center justify-center rounded border font-semibold ${SIZE[size]} ${PLATE_STYLE[letter]}`}
+      title={title}
     >
       {letter}
     </span>

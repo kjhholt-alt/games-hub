@@ -206,6 +206,7 @@ export type DraftSortKey =
   | "grade"
   | "draft_score"
   | "gih_wr"
+  | "iwd"
   | "alsa"
   | "sample_size";
 
@@ -224,6 +225,8 @@ function sortValue(row: DraftCardRow, key: DraftSortKey): number | string | null
       return GRADE_ORDER.indexOf(row.grade as (typeof GRADE_ORDER)[number]);
     case "gih_wr":
       return row.gih_wr;
+    case "iwd":
+      return row.iwd;
     case "alsa":
       return row.alsa;
     case "sample_size":
@@ -273,6 +276,14 @@ export function formatDraftScore(score: number | null): string {
 
 export function formatDecimal(value: number | null, digits = 2): string {
   return value === null ? "—" : value.toFixed(digits);
+}
+
+/** IWD (improvement when drawn) ships as a win-rate fraction delta —
+ * render 17lands-style signed percentage points, e.g. 0.102 -> "+10.2pp". */
+export function formatIwd(value: number | null): string {
+  if (value === null) return "—";
+  const pp = value * 100;
+  return `${pp >= 0 ? "+" : ""}${pp.toFixed(1)}pp`;
 }
 
 /** "C" for colorless, otherwise the raw WUBRG substring — the payload
