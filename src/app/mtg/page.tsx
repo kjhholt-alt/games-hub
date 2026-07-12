@@ -8,6 +8,8 @@ import { MtgModuleHeader } from "@/components/MtgModuleHeader";
 import { MtgCommanderTierTable } from "@/components/MtgCommanderTierTable";
 import { MtgLimitedTierTable } from "@/components/MtgLimitedTierTable";
 import { MtgConstructedTierTable } from "@/components/MtgConstructedTierTable";
+import { MtgEdhTournamentTable } from "@/components/MtgEdhTournamentTable";
+import { MtgMetaMoversTable } from "@/components/MtgMetaMoversTable";
 import { MtgBanlistTable } from "@/components/MtgBanlistTable";
 import { MtgCalendarTable } from "@/components/MtgCalendarTable";
 import { MtgFormatCards } from "@/components/MtgFormatCards";
@@ -206,6 +208,73 @@ function ConstructedFormatWorld({
   );
 }
 
+/** A Historic/Timeless format's world — real Format Snapshot + Ban List
+ * cards straight from Scryfall legalities (same CommanderFormatWorld/
+ * ConstructedFormatWorld-style pattern as every other format above),
+ * followed by an honest line that PERFORMANCE tiers (win-rate-backed
+ * rankings, distinct from the legality/ban data those cards already show)
+ * still need a permitted tournament or telemetry source we don't have yet
+ * — we never invent one. */
+function HistoricFormatWorld({
+  formatId,
+  formatDisplayName,
+  formatsModule,
+  banlistModule,
+}: {
+  formatId: string;
+  formatDisplayName: string;
+  formatsModule: FormatsModule;
+  banlistModule: BanlistModule;
+}) {
+  const fRow = formatsModule.rows.find((r) => r.format === formatId);
+  const bRow = banlistModule.rows.find((r) => r.format === formatId);
+
+  return (
+    <>
+      <div className="mb-10">
+        <MtgModuleHeader
+          title="Format Snapshot"
+          status={formatsModule.status}
+          computedAt={formatsModule.computed_at}
+          methodology={formatsModule.methodology}
+          attribution={formatsModule.attribution}
+        />
+        <MtgFormatCards rows={fRow ? [fRow] : []} />
+      </div>
+      <div className="mb-10">
+        <MtgModuleHeader
+          title="Ban List & Legality"
+          status={banlistModule.status}
+          computedAt={banlistModule.computed_at}
+          methodology={banlistModule.methodology}
+          attribution={banlistModule.attribution}
+        />
+        <MtgBanlistTable rows={bRow ? [bRow] : []} />
+      </div>
+      <MtgHonestPanel title="Performance tiers not covered yet">
+        <p className="mb-2">
+          Ban/legality tracking for {formatDisplayName} above comes from the
+          same Scryfall legalities feed every format on this page reads.
+          Win-rate-backed performance tiers would need a permitted
+          tournament or telemetry source we don&rsquo;t have yet for{" "}
+          {formatDisplayName} — we won&rsquo;t invent one. For today,
+          untapped.gg is the cite-only resource we point to; we don&rsquo;t
+          ingest or re-host its numbers.
+        </p>
+        <a
+          href="https://mtga.untapped.gg"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1 text-brass hover:text-brass-bright transition-colors"
+        >
+          untapped.gg
+          <ExternalLink size={11} />
+        </a>
+      </MtgHonestPanel>
+    </>
+  );
+}
+
 export default function MtgPage() {
   const payload = getMtgMeta();
 
@@ -224,8 +293,16 @@ export default function MtgPage() {
   }
 
   const sample = isSamplePayload(payload);
-  const { commander_tiers, limited_tiers, banlist, calendar, formats, constructed_tiers } =
-    payload.modules;
+  const {
+    commander_tiers,
+    limited_tiers,
+    banlist,
+    calendar,
+    formats,
+    constructed_tiers,
+    edh_tournaments,
+    meta_movers,
+  } = payload.modules;
 
   // The engine ships limited_tiers rows with a per-row `set` code (not a
   // module-level set_name) — cross-reference the calendar module (which
@@ -285,10 +362,14 @@ export default function MtgPage() {
   ];
 
   // ── Meta lens — per-format slices reused across the Commander/Brawl axis
-  // and the Standard/Pioneer/Modern axis. "premierdraft"/"sealed"/"historic"
-  // aren't module format ids the engine emits at all (Limited isn't format-
-  // scoped; Sealed/Historic aren't ingested yet) — those three lenses are
-  // handled as their own standalone sections below. ────────────────────────
+  // and the Standard/Pioneer/Modern axis. "premierdraft"/"sealed" aren't
+  // module format ids the engine emits at all (Limited isn't format-scoped;
+  // Sealed's win rates aren't populated by 17lands yet) — those two lenses
+  // are handled as their own standalone sections below. "historic"/
+  // "timeless" ARE real format ids on formats/banlist (Scryfall legalities),
+  // just without a commander_tiers or constructed_tiers slice — their lens
+  // renders the real Format Snapshot + Ban List world via
+  // HistoricFormatWorld below rather than a pure honest panel. ────────────
   const commanderRows = commander_tiers.rows.filter((r) => r.format === "commander");
   const competitiveBrawlRows = commander_tiers.rows.filter(
     (r) => r.format === "competitivebrawl"
@@ -298,6 +379,11 @@ export default function MtgPage() {
   );
   const constructedRowsFor = (id: string) =>
     constructed_tiers ? constructed_tiers.rows.filter((r) => r.format === id) : [];
+  // Historic/Timeless chip counts: real legal-set counts from the Format
+  // Snapshot module (Scryfall legalities) — omitted entirely when the row
+  // isn't there rather than showing an invented/zero count.
+  const legalSetCountFor = (id: string) =>
+    formats.rows.find((r) => r.format === id)?.legal_sets.length;
 
   const lenses: MtgMetaLensOption[] = [
     { id: "all", label: "All" },
@@ -308,7 +394,8 @@ export default function MtgPage() {
     },
     { id: "premierdraft", label: "Premier Draft", count: publishedSet?.overall_rows.length },
     { id: "sealed", label: "Sealed" },
-    { id: "historic", label: "Historic" },
+    { id: "historic", label: "Historic", count: legalSetCountFor("historic") },
+    { id: "timeless", label: "Timeless", count: legalSetCountFor("timeless") },
     {
       id: "standardbrawl",
       label: "Brawl",
@@ -332,7 +419,43 @@ export default function MtgPage() {
     },
   ];
 
+  // Sealed honest-panel context line, precomputed (not built inline in JSX)
+  // so the real per-set numbers never collide with JSX's line-based
+  // whitespace collapsing.
+  const sealedContextLine = publishedSet
+    ? `17lands treats Sealed as a genuine, separate event type — ${publishedSet.set_name} logged ${(publishedSet.sealed_total_games ?? 0).toLocaleString("en-US")} ever-drawn Sealed games this run, against ${publishedSet.total_games.toLocaleString("en-US")} for Premier Draft (the Draft Ranker above), but its public no-auth endpoint currently returns NO per-card win-rate stats for Sealed — even when the game-count total is non-zero.`
+    : "17lands treats Sealed as a genuine, separate event type, queried under the same CC BY 4.0 license we already cite for the Draft Ranker above, but its public no-auth endpoint currently returns NO per-card win-rate stats for Sealed — even when the game-count total is non-zero.";
+
   const sections: MtgMetaLensSection[] = [
+    {
+      id: "meta-movers",
+      label: "What changed since last publish",
+      formats: ["all"],
+      node: (
+        <div className="mb-14">
+          <MtgModuleHeader
+            title="What Changed"
+            status={meta_movers?.status ?? "pending_history"}
+            computedAt={meta_movers?.computed_at ?? payload.computed_at}
+            methodology={
+              meta_movers?.methodology ??
+              "Day-over-day diff of this hub's own two most recently published runs — pending a second publish to compare against."
+            }
+            attribution={meta_movers?.attribution ?? []}
+            note={
+              meta_movers && meta_movers.status === "published" && meta_movers.rows.length > 0
+                ? `${meta_movers.rows.length} changes`
+                : undefined
+            }
+          />
+          <MtgMetaMoversTable
+            status={meta_movers?.status ?? "pending_history"}
+            computedAt={meta_movers?.computed_at ?? payload.computed_at}
+            rows={meta_movers?.rows ?? []}
+          />
+        </div>
+      ),
+    },
     {
       id: "draft-hero",
       label: "Draft Ranker hero link",
@@ -403,6 +526,43 @@ export default function MtgPage() {
             rows={commanderRows}
             emptyNote="No Commander rows in the current Archidekt scan window — the corpus refreshes daily."
           />
+        </div>
+      ),
+    },
+    {
+      id: "edh-tournaments",
+      label: "cEDH Tournament Results",
+      formats: ["all", "commander"],
+      node: (
+        <div id="edh-tournaments" className="mb-16 scroll-mt-24">
+          <MtgModuleHeader
+            title="cEDH Tournament Results"
+            status={edh_tournaments?.status ?? "pending_key"}
+            computedAt={edh_tournaments?.computed_at ?? banlist.computed_at}
+            methodology={
+              edh_tournaments?.methodology ??
+              "Real Commander/cEDH tournament results from topdeck.gg's public tournament-results API — pending a topdeck.gg key."
+            }
+            attribution={edh_tournaments?.attribution ?? []}
+            note={
+              edh_tournaments && edh_tournaments.rows.length > 0
+                ? `${edh_tournaments.rows.length} events`
+                : undefined
+            }
+          />
+          {edh_tournaments && edh_tournaments.rows.length > 0 ? (
+            <MtgEdhTournamentTable rows={edh_tournaments.rows} />
+          ) : (
+            <MtgHonestPanel
+              title={
+                edh_tournaments ? "No tournament results this run" : "Pending a topdeck.gg key"
+              }
+            >
+              {edh_tournaments
+                ? "topdeck.gg didn't return usable EDH tournament results this run — check back after the next refresh; nothing here is invented while data is unavailable."
+                : "Real cEDH tournament results are pending a topdeck.gg key (a free 2-minute signup) — real events replace this panel automatically the moment it's configured, and this module never ships an invented row in the meantime."}
+            </MtgHonestPanel>
+          )}
         </div>
       ),
     },
@@ -615,20 +775,20 @@ export default function MtgPage() {
     },
     {
       id: "sealed-roadmap",
-      label: "Sealed roadmap",
+      label: "Sealed status",
       formats: ["sealed"],
       node: (
         <div className="mb-16 scroll-mt-24">
           <h2 className="mtg-display text-2xl sm:text-[1.7rem] leading-tight mb-4">
             Sealed
           </h2>
-          <MtgHonestPanel title="On the roadmap — not ingested yet">
+          <MtgHonestPanel title="17lands serves Sealed — win rates aren't live yet">
             <p className="mb-2">
-              We ingest 17lands&rsquo; PremierDraft ratings today (the Draft
-              Ranker above). Sealed event data exists at 17lands too, under
-              the same CC BY 4.0 license we already cite — it just
-              isn&rsquo;t ingested yet. Real Sealed tiers are on the roadmap;
-              we never guess them from the draft numbers we already have.
+              {sealedContextLine} This module ships honest-absent rather
+              than a page of every card graded{" "}
+              <code className="text-brass">unrated</code>, and flips on
+              automatically the moment 17lands enables real Sealed win
+              rates.
             </p>
             <a
               href="https://www.17lands.com/about"
@@ -644,34 +804,32 @@ export default function MtgPage() {
       ),
     },
     {
-      id: "historic-panel",
-      label: "Historic coverage",
+      id: "world-historic",
+      label: "Historic world",
       formats: ["historic"],
       node: (
         <div className="mb-16 scroll-mt-24">
-          <h2 className="mtg-display text-2xl sm:text-[1.7rem] leading-tight mb-4">
-            Historic
-          </h2>
-          <MtgHonestPanel title="Not covered by the engine yet">
-            <p className="mb-2">
-              Ban/legality tracking for Historic could come from the same
-              Scryfall legalities feed the Ban List module already reads, in
-              a future engine pass. Performance tiers would need a permitted
-              tournament or telemetry source we don&rsquo;t have yet — we
-              won&rsquo;t invent one. For today, untapped.gg is the
-              cite-only resource we point to for Historic; we don&rsquo;t
-              ingest or re-host its numbers.
-            </p>
-            <a
-              href="https://mtga.untapped.gg"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-brass hover:text-brass-bright transition-colors"
-            >
-              untapped.gg
-              <ExternalLink size={11} />
-            </a>
-          </MtgHonestPanel>
+          <HistoricFormatWorld
+            formatId="historic"
+            formatDisplayName={formatLabel("historic")}
+            formatsModule={formats}
+            banlistModule={banlist}
+          />
+        </div>
+      ),
+    },
+    {
+      id: "world-timeless",
+      label: "Timeless world",
+      formats: ["timeless"],
+      node: (
+        <div className="mb-16 scroll-mt-24">
+          <HistoricFormatWorld
+            formatId="timeless"
+            formatDisplayName={formatLabel("timeless")}
+            formatsModule={formats}
+            banlistModule={banlist}
+          />
         </div>
       ),
     },

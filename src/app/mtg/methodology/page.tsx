@@ -19,18 +19,22 @@ const MODULE_TITLE: Record<string, string> = {
   commander_tiers: "Commander & Brawl Tiers",
   limited_tiers: "Limited Tier List",
   constructed_tiers: "Constructed Tiers",
+  edh_tournaments: "cEDH Tournament Results",
   banlist: "Ban List & Legality Tracker",
   calendar: "Rotation & Set Calendar",
   formats: "Format Snapshots",
+  meta_movers: "What Changed (Meta Movers)",
 };
 
 const MODULE_ORDER = [
   "commander_tiers",
   "limited_tiers",
   "constructed_tiers",
+  "edh_tournaments",
   "banlist",
   "calendar",
   "formats",
+  "meta_movers",
 ];
 
 const ATTRIBUTION = [
@@ -55,7 +59,7 @@ const ATTRIBUTION = [
   {
     name: "topdeck.gg",
     detail:
-      "Real tournament results for the Constructed Tiers module (Standard/Pioneer/Modern). The client is built but the module ships zero rows — status \"pending_key\" — until an API key is provisioned; a per-row link back to the source event on topdeck.gg appears the moment it's live.",
+      "Real tournament results powering two modules: Constructed Tiers (Standard/Pioneer/Modern aggregate event records — topdeck's API carries no archetype tags for constructed, so buckets are honest \"Unclassified Deck\" records) and cEDH Tournament Results (recent events with standings; commander names shown only where topdeck's structured deck data carries them). Every event links back to its source page on topdeck.gg.",
     url: "https://topdeck.gg",
   },
 ];
@@ -86,9 +90,10 @@ export default function MtgMethodologyPage() {
           <div className="space-y-8 mb-14">
             {MODULE_ORDER.map((key) => {
               const mod = modules[key as keyof typeof modules];
-              // constructed_tiers is additive + optional (absent from every
-              // payload published before it shipped) — render nothing for
-              // it rather than an error, same absence rule as the /mtg page.
+              // constructed_tiers/edh_tournaments/meta_movers are additive +
+              // optional (absent from every payload published before each
+              // shipped) — render nothing for a missing one rather than an
+              // error, same absence rule as the /mtg page.
               if (!mod) return null;
               return (
                 <div key={key} className="border-b border-border pb-8 last:border-0">

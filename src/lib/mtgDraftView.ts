@@ -80,6 +80,21 @@ export interface DraftSetBlock {
   /** Keyed by two-color pair (e.g. "WU"); empty today for every set — see
    * module comment. Never invented client-side. */
   pair_rows: Record<string, DraftCardRow[]>;
+  /** Additive + optional Sealed sibling to the PremierDraft fields above —
+   * the IDENTICAL BuildKit Draft Score formula computed fresh over the
+   * Sealed card pool (a card's Sealed grade is never mixed with its draft
+   * grade), sourced from 17lands' `card_ratings` endpoint with
+   * `format=Sealed`. Real fact as of this payload: 17lands serves Sealed as
+   * a genuine event type (MSH logged ~11k ever-drawn games vs ~153k for
+   * PremierDraft) but its public no-auth route currently returns NO
+   * per-card win-rate stats for Sealed even when game totals are non-zero —
+   * so `sealed_status` reads "unavailable" and `sealed_rows` ships empty
+   * rather than a page of every card graded "unrated". This flips on
+   * automatically the moment upstream enables real Sealed win rates. */
+  sealed_status?: DraftSetStatus;
+  sealed_methodology?: string;
+  sealed_total_games?: number;
+  sealed_rows?: DraftCardRow[];
 }
 
 export interface MtgDraftPayload {

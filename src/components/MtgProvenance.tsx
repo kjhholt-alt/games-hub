@@ -8,6 +8,7 @@ type AnyStatus =
   | "sample"
   | "stale"
   | "pending_key"
+  | "pending_history"
   | "unavailable";
 
 const DOT: Record<AnyStatus, string> = {
@@ -15,6 +16,7 @@ const DOT: Record<AnyStatus, string> = {
   sample: "bg-purple",
   stale: "bg-amber",
   pending_key: "bg-text-secondary",
+  pending_history: "bg-text-secondary",
   unavailable: "bg-text-secondary",
 };
 
@@ -23,6 +25,7 @@ const LABEL: Record<AnyStatus, string> = {
   sample: "sample",
   stale: "stale",
   pending_key: "pending key",
+  pending_history: "pending history",
   unavailable: "no data",
 };
 

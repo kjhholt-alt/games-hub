@@ -28,6 +28,7 @@ export type ModuleStatus =
   | "published"
   | "stale"
   | "pending_key"
+  | "pending_history"
   | "unavailable";
 export type Tier = "S" | "A" | "B" | "C" | "D";
 export type LimitedTier = Tier | "unrated";
@@ -133,6 +134,117 @@ export interface ConstructedTierRow extends MtgRowBase {
   topdeck_url: string;
 }
 
+/** One player's real result in a real cEDH event — see mtg-workstation/
+ * metahub/sources/topdeck.py's normalize_edh_tournaments. `commanders` is
+ * the standing's real commander name(s) ONLY when topdeck.gg's structured
+ * decklist import (deckObj.Commanders, verified genuinely real for roughly
+ * 43% of standings) is present for that standing; otherwise null — never
+ * inferred from an unparsed decklist string. */
+export interface EdhTournamentStanding {
+  player: string;
+  wins: number;
+  losses: number;
+  draws: number;
+  commanders: string[] | null;
+}
+
+/** A real Commander/cEDH tournament from topdeck.gg's public tournament-
+ * results API (see mtg-workstation/metahub/tiers.py's
+ * compute_edh_tournaments). `top_standings` is OUR OWN sort by win
+ * differential (wins - losses, ties broken by wins) — topdeck.gg's real API
+ * carries no organizer-tagged "placement"/"standing" field, so this is not
+ * the event's official final standings. `sample_size` = player_count (a
+ * real recorded event, not a statistical estimate). */
+export interface EdhTournamentRow extends MtgRowBase {
+  name: string;
+  tid: string;
+  date: string;
+  player_count: number;
+  /** Real link back to the source event on topdeck.gg. */
+  event_url: string;
+  /** Up to 8 players per event. */
+  top_standings: EdhTournamentStanding[];
+  /** True when at least one standing in this event had a real commander
+   * name extracted from topdeck.gg's structured decklist import. */
+  commanders_extractable: boolean;
+}
+
+/** kind discriminants for meta_movers rows (Module 4 addendum) — see
+ * mtg-workstation/metahub/tiers.py's compute_meta_movers. Every row is a
+ * pure day-over-day diff between THIS hub's own two most recently published
+ * runs — never an external source, never a guessed delta. */
+export type MetaMoverKind =
+  | "commander_riser"
+  | "commander_faller"
+  | "draft_grade_change"
+  | "banlist_add"
+  | "banlist_remove"
+  | "new_set";
+
+interface MetaMoverRowBase extends MtgRowBase {
+  kind: MetaMoverKind;
+  /** The two payload timestamps actually being diffed — distinct from this
+   * row's own computed_at (this run's publish time). */
+  previous_computed_at: string;
+  current_computed_at: string;
+}
+
+/** commander_riser / commander_faller — the top 8 commanders (each
+ * direction) by deck_count delta within the SAME format+bucket across the
+ * two runs. delta_deck_count is signed: positive on risers, negative on
+ * fallers. */
+export interface CommanderMoverRow extends MetaMoverRowBase {
+  kind: "commander_riser" | "commander_faller";
+  commander: string;
+  format: string;
+  bucket: CommanderBucket;
+  previous_deck_count: number;
+  current_deck_count: number;
+  delta_deck_count: number;
+  previous_tier: Tier;
+  current_tier: Tier;
+}
+
+/** Same literal set as lib/mtgDraftView.ts's DraftGrade — duplicated here
+ * (not imported) to keep this file's fs-reader boundary intact, per this
+ * file's header comment on the client/server split. */
+type DraftGradeValue = "S" | "A" | "B" | "C" | "D" | "F" | "unrated";
+
+/** A card whose BuildKit Draft Score grade moved between runs, for a set
+ * tracked in BOTH payloads' overall_rows. */
+export interface DraftGradeChangeRow extends MetaMoverRowBase {
+  kind: "draft_grade_change";
+  set_code: string;
+  card: string;
+  previous_grade: DraftGradeValue;
+  current_grade: DraftGradeValue;
+}
+
+/** A card that entered/left a format's banned+restricted list. */
+export interface BanlistChangeRow extends MetaMoverRowBase {
+  kind: "banlist_add" | "banlist_remove";
+  format: string;
+  card: string;
+}
+
+/** A set_code appearing in this run's calendar that was absent from the
+ * previous payload. */
+export interface NewSetMoverRow extends MetaMoverRowBase {
+  kind: "new_set";
+  set_code: string;
+  set_name: string;
+}
+
+/** meta_movers' row union — discriminated on `kind`. A first publish (no
+ * previous payload to diff) or any --dry-run ships the module itself with
+ * status "pending_history" and zero rows rather than guessing a diff (see
+ * ModuleStatus). */
+export type MetaMoverRow =
+  | CommanderMoverRow
+  | DraftGradeChangeRow
+  | BanlistChangeRow
+  | NewSetMoverRow;
+
 interface MtgModule<TRow> {
   status: ModuleStatus;
   computed_at: string;
@@ -157,6 +269,15 @@ export interface MtgMetaPayload {
      * this key is missing (see isConstructedTiersModule in mtg page.tsx),
      * never an error or an empty section. */
     constructed_tiers?: MtgModule<ConstructedTierRow>;
+    /** Additive + optional — the cEDH tournament-results lane (Module 3
+     * addendum). Absent/undefined is never expected once the engine ships
+     * it, but stays optional per the same absence-safe rule as
+     * constructed_tiers above. */
+    edh_tournaments?: MtgModule<EdhTournamentRow>;
+    /** Additive + optional — the day-over-day "what changed" diff (Module 4
+     * addendum). Status "pending_history" + zero rows on a first publish or
+     * any --dry-run; see MetaMoverRow. */
+    meta_movers?: MtgModule<MetaMoverRow>;
   };
 }
 
@@ -213,6 +334,8 @@ export const FORMAT_LABEL: Record<string, string> = {
   commander: "Commander",
   pioneer: "Pioneer",
   modern: "Modern",
+  historic: "Historic",
+  timeless: "Timeless",
 };
 
 export function formatLabel(id: string): string {
