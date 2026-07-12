@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import { headerLabels, findColumnIndex, rowCellText, parseStat } from "./helpers";
+import { headerLabels, findColumnIndex, rankerTable, rowCellText, parseStat } from "./helpers";
 
 /**
  * /mtg/draft — the Draft Ranker. Live-site smoke coverage for the
@@ -42,13 +42,13 @@ test.describe("/mtg/draft — MTG Draft Ranker", () => {
 
     await setButtons.nth(publishedIndex).click();
     await expect(page.getByText(/no graded draft data/i)).toHaveCount(0);
-    const table = page.locator("table").first();
+    const table = rankerTable(page);
     await expect(table).toBeVisible();
     expect(await table.locator("tbody tr").count()).toBeGreaterThan(0);
   });
 
   test("sorting: clicking the GIH WR header changes the top row", async ({ page }) => {
-    const table = page.locator("table").first();
+    const table = rankerTable(page);
     const labels = await headerLabels(table);
     const gihIdx = findColumnIndex(labels, /gih wr/i);
     expect(gihIdx).toBeGreaterThanOrEqual(0);
@@ -70,7 +70,7 @@ test.describe("/mtg/draft — MTG Draft Ranker", () => {
   });
 
   test("search narrows the visible rows and keeps the searched card", async ({ page }) => {
-    const table = page.locator("table").first();
+    const table = rankerTable(page);
     const labels = await headerLabels(table);
     const cardIdx = findColumnIndex(labels, /^card$/i);
     expect(cardIdx).toBeGreaterThanOrEqual(0);
@@ -98,7 +98,7 @@ test.describe("/mtg/draft — MTG Draft Ranker", () => {
   });
 
   test("rarity facet: filtering to mythic shows only mythic rows", async ({ page }) => {
-    const table = page.locator("table").first();
+    const table = rankerTable(page);
     const labels = await headerLabels(table);
     const rarityIdx = findColumnIndex(labels, /^rarity$/i);
     expect(rarityIdx).toBeGreaterThanOrEqual(0);
