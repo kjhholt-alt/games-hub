@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Swords, Flag, ShieldCheck, BookOpen } from "lucide-react";
+import { Swords, BookOpen } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Hoi4TierBands } from "@/components/Hoi4TierBands";
+import { Provenance } from "@/components/Provenance";
+import { formatDate } from "@/lib/format";
+import { networkDisplay } from "@/lib/fonts";
 import { groupByTier, countByPath } from "@/lib/hoi4";
 import { HOI4_NATIONS, HOI4_PATCH, HOI4_REVIEWED } from "@/data/hoi4-nations";
 
@@ -23,12 +26,6 @@ export default function Hoi4Page() {
   const paths = countByPath(nations);
   const sTier = nations.filter((n) => n.tier === "S");
 
-  const reviewed = new Date(HOI4_REVIEWED).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -41,7 +38,7 @@ export default function Hoi4Page() {
   };
 
   return (
-    <main className="min-h-screen">
+    <main className={`min-h-screen ${networkDisplay.variable}`}>
       <SiteHeader />
 
       <section className="max-w-5xl mx-auto px-6 py-12 sm:py-16">
@@ -49,7 +46,7 @@ export default function Hoi4Page() {
           <Swords size={14} />
           MAJOR NATIONS · FOCUS PATHS · STRATEGY
         </div>
-        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-3">
+        <h1 className="network-display text-3xl sm:text-4xl tracking-tight mb-3">
           Hearts of Iron IV — Nation Meta
         </h1>
         <p className="text-text-secondary max-w-2xl mb-4">
@@ -59,19 +56,13 @@ export default function Hoi4Page() {
           the run. Built from a hand-verified, current-patch playbook.
         </p>
 
-        <div className="flex flex-wrap items-center gap-3 text-xs text-text-secondary mb-10">
-          <span className="inline-flex items-center gap-1.5 bg-surface border border-border rounded-full px-3 py-1">
-            <ShieldCheck size={12} className="text-green" />
-            {HOI4_PATCH}
-          </span>
-          <span className="inline-flex items-center gap-1.5 bg-surface border border-border rounded-full px-3 py-1">
-            {nations.length} majors covered
-          </span>
-          <span className="inline-flex items-center gap-1.5">
-            <Flag size={12} />
-            {paths.map((p) => `${p.count} ${p.label}`).join(" · ")}
-          </span>
-          <span className="text-text-secondary">Reviewed {reviewed}</span>
+        <div className="mb-10">
+          <Provenance
+            status="curated"
+            freshness={`reviewed ${formatDate(HOI4_REVIEWED)}`}
+            note={`${nations.length} majors · ${HOI4_PATCH}`}
+            attribution={`Focus paths: ${paths.map((p) => `${p.count} ${p.label}`).join(", ")}`}
+          />
         </div>
 
         {/* S-tier highlight */}
@@ -79,13 +70,13 @@ export default function Hoi4Page() {
           {sTier.map((nation) => (
             <div
               key={nation.tag}
-              className="bg-surface border border-border rounded-2xl p-5"
+              className="bg-surface border border-border rounded-lg p-5"
             >
               <p className="text-xs font-mono text-text-secondary mb-1">
                 S-TIER
               </p>
               <p className="text-lg font-bold">{nation.name}</p>
-              <p className="text-sm text-cyan font-medium leading-snug mt-1">
+              <p className="text-sm font-medium leading-snug mt-1">
                 {nation.focusPathName}
               </p>
             </div>
@@ -95,10 +86,10 @@ export default function Hoi4Page() {
         <Hoi4TierBands nations={nations} />
 
         {/* Methodology / source */}
-        <div className="bg-surface border border-border rounded-2xl p-6 mt-12">
+        <div className="bg-surface border border-border rounded-lg p-6 mt-12">
           <div className="flex items-center gap-2 mb-2">
             <BookOpen size={16} className="text-cyan" />
-            <h2 className="text-lg font-semibold">
+            <h2 className="network-display text-lg">
               How this is ranked &amp; sourced
             </h2>
           </div>

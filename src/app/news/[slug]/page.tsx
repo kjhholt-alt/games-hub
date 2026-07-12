@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { networkDisplay } from "@/lib/fonts";
 import {
   getEdition,
   getPublishedSlugs,
@@ -74,7 +75,7 @@ function ItemCard({ item }: { item: EditionItem }) {
       })
     : null;
   return (
-    <div className="bg-surface border border-border rounded-2xl p-5">
+    <div className="bg-surface border border-border rounded-lg p-5">
       <div className="flex items-center gap-2 mb-2 flex-wrap">
         <span className="text-[10px] font-mono text-text-secondary border border-border rounded px-1.5 py-0.5">
           {KIND_LABEL[item.kind] ?? item.kind.toUpperCase()}
@@ -149,7 +150,7 @@ function SectionBlock({ section }: { section: EditionSection }) {
   return (
     <section className="mb-10">
       <div className="flex items-baseline gap-2 mb-1">
-        <h2 className="text-xl font-bold tracking-tight">
+        <h2 className="network-display text-xl tracking-tight">
           <span className="mr-2">{section.emoji}</span>
           {section.world_name}
         </h2>
@@ -161,7 +162,7 @@ function SectionBlock({ section }: { section: EditionSection }) {
         {hasItems ? (
           section.items.map((it, i) => <ItemCard key={i} item={it} />)
         ) : (
-          <div className="bg-surface border border-border rounded-2xl p-5 text-sm text-text-secondary">
+          <div className="bg-surface border border-border rounded-lg p-5 text-sm text-text-secondary">
             No confirmed changes this cycle.
             {section.crosslink && (
               <>
@@ -204,7 +205,7 @@ export default async function EditionPage({
     : null;
 
   return (
-    <main className="min-h-screen">
+    <main className={`min-h-screen ${networkDisplay.variable}`}>
       <SiteHeader />
       <article className="max-w-3xl mx-auto px-6 py-12 sm:py-16">
         <Link
@@ -218,7 +219,7 @@ export default async function EditionPage({
           <ShieldCheck size={14} />
           BUILDKIT BRIEF · GROUNDED
         </div>
-        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-3">
+        <h1 className="network-display text-3xl sm:text-4xl tracking-tight mb-3">
           {ed.title}
         </h1>
         <p className="text-text-secondary mb-4">{ed.subtitle}</p>
@@ -235,7 +236,7 @@ export default async function EditionPage({
         </div>
 
         {/* Grounding promise — this is the product's whole point. */}
-        <div className="flex items-start gap-2.5 bg-green/10 border border-green/30 rounded-xl p-4 mb-10">
+        <div className="flex items-start gap-2.5 bg-green/10 border border-green/30 rounded-lg p-4 mb-10">
           <ShieldCheck size={16} className="text-green mt-0.5 shrink-0" />
           <p className="text-sm text-text-secondary">
             <span className="text-green font-semibold">Every claim is sourced.</span>{" "}

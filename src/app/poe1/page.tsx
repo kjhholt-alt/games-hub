@@ -4,6 +4,9 @@ import { Swords, CalendarClock, BookOpen } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Poe1TierList } from "@/components/Poe1TierList";
+import { Provenance } from "@/components/Provenance";
+import { formatDate } from "@/lib/format";
+import { networkDisplay } from "@/lib/fonts";
 import {
   POE1_META,
   entriesByCategory,
@@ -48,7 +51,7 @@ export default function Poe1Page() {
   };
 
   return (
-    <main className="min-h-screen">
+    <main className={`min-h-screen ${networkDisplay.variable}`}>
       <SiteHeader />
 
       <section className="max-w-5xl mx-auto px-6 py-12 sm:py-16">
@@ -56,7 +59,7 @@ export default function Poe1Page() {
           <Swords size={14} />
           PATH OF EXILE 1 &middot; LIVE EVENT META
         </div>
-        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-3">
+        <h1 className="network-display text-3xl sm:text-4xl tracking-tight mb-3">
           {meta.league} — Build Tier List
         </h1>
         <p className="text-text-secondary max-w-2xl mb-4">
@@ -66,17 +69,18 @@ export default function Poe1Page() {
           the Ancestors layered on top.
         </p>
 
-        <div className="flex flex-wrap items-center gap-3 text-xs text-text-secondary mb-10">
-          <span className="inline-flex items-center gap-1.5">
-            <CalendarClock size={12} className="text-cyan" />
-            {fmt(meta.startsAt)} – {fmt(meta.endsAt)}
-          </span>
-          <span className="inline-flex items-center gap-1.5 bg-surface border border-border rounded-full px-3 py-1">
-            {left > 0 ? `${left} days left` : "Event ended"}
-          </span>
-          <span className="inline-flex items-center gap-1.5 bg-surface border border-border rounded-full px-3 py-1">
-            {meta.dataSource.label}
-          </span>
+        <p className="flex items-center gap-1.5 font-mono text-xs text-text-secondary mb-4">
+          <CalendarClock size={12} />
+          {fmt(meta.startsAt)} – {fmt(meta.endsAt)}
+          {left > 0 && <span>&middot; {left}d left</span>}
+        </p>
+        <div className="mb-10">
+          <Provenance
+            status="curated"
+            freshness={`curated ${formatDate(meta.curatedAt)}`}
+            note={meta.dataSource.label}
+            attribution={meta.dataSource.note}
+          />
         </div>
 
         {/* Top-3 build highlight */}
@@ -84,13 +88,13 @@ export default function Poe1Page() {
           {top.map((b, i) => (
             <div
               key={b.id}
-              className="bg-surface border border-border rounded-2xl p-5"
+              className="bg-surface border border-border rounded-lg p-5"
             >
               <p className="text-xs font-mono text-text-secondary mb-1">
                 #{i + 1} starter
               </p>
               <p className="text-lg font-bold leading-tight">{b.name}</p>
-              <p className="text-sm text-cyan font-semibold mt-1">
+              <p className="text-sm font-semibold mt-1">
                 {b.ascendancy}
               </p>
               <p className="text-xs text-text-secondary mt-2 leading-snug">
@@ -103,8 +107,8 @@ export default function Poe1Page() {
         <Poe1TierList meta={meta} />
 
         {/* Methodology */}
-        <div className="bg-surface border border-border rounded-2xl p-6 mt-12">
-          <h2 className="text-lg font-semibold mb-2">How this is ranked</h2>
+        <div className="bg-surface border border-border rounded-lg p-6 mt-12">
+          <h2 className="network-display text-lg mb-2">How this is ranked</h2>
           <p className="text-sm text-text-secondary leading-relaxed">
             {meta.league} is a brand-new 3-week event, so there is no mature
             win-rate ladder to scrape yet. These tiers are the current{" "}
@@ -128,7 +132,7 @@ export default function Poe1Page() {
 
         {/* Sources */}
         <div className="mt-8">
-          <h2 className="text-lg font-semibold mb-3 flex items-center gap-2">
+          <h2 className="network-display text-lg mb-3 flex items-center gap-2">
             <BookOpen size={16} className="text-cyan" />
             Sources
           </h2>

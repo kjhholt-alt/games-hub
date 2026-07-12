@@ -46,7 +46,7 @@ export function Sts2TierList({ data }: { data: Sts2Snapshot }) {
     <div className="space-y-8">
       {/* Filters */}
       <div className="space-y-3">
-        <div className="inline-flex rounded-xl border border-border bg-surface p-1">
+        <div className="inline-flex rounded-lg border border-border bg-surface p-1">
           <KindTab
             active={kind === "card"}
             onClick={() => setKind("card")}
@@ -85,7 +85,7 @@ export function Sts2TierList({ data }: { data: Sts2Snapshot }) {
         {TIER_ORDER.map((t) => (
           <span
             key={t}
-            className="inline-flex items-center gap-1.5 bg-surface border border-border rounded-full pl-1 pr-3 py-1"
+            className="inline-flex items-center gap-1.5 bg-surface border border-border rounded-md pl-1 pr-3 py-1"
           >
             <TierBadge letter={t} />
             <span className="tabular-nums text-text-secondary">
@@ -103,7 +103,7 @@ export function Sts2TierList({ data }: { data: Sts2Snapshot }) {
         {groups.map((group) => (
           <div
             key={group.letter}
-            className="flex flex-col sm:flex-row gap-3 bg-surface border border-border rounded-2xl p-4"
+            className="flex flex-col sm:flex-row gap-3 bg-surface border border-border rounded-lg p-4"
           >
             <div className="flex sm:flex-col items-center sm:justify-center gap-3 sm:w-40 shrink-0">
               <TierBadge letter={group.letter} size="lg" />
@@ -127,29 +127,29 @@ export function Sts2TierList({ data }: { data: Sts2Snapshot }) {
 
       {/* Full ranking table */}
       <div>
-        <h2 className="text-xl font-bold mb-4">
+        <h2 className="network-display text-xl mb-4">
           Full ranking by aggregate score
         </h2>
-        <div className="overflow-x-auto border border-border rounded-2xl">
+        <div className="overflow-x-auto border border-border rounded-lg">
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-border bg-surface text-text-secondary text-left">
-                <th className="px-4 py-3 font-medium">#</th>
-                <th className="px-4 py-3 font-medium">
+                <th className="px-3 py-2.5 font-mono text-[11px] uppercase tracking-widest">#</th>
+                <th className="px-3 py-2.5 font-mono text-[11px] uppercase tracking-widest">
                   {kind === "card" ? "Card" : "Relic"}
                 </th>
-                <th className="px-4 py-3 font-medium">Tier</th>
+                <th className="px-3 py-2.5 font-mono text-[11px] uppercase tracking-widest">Tier</th>
                 {kind === "card" && (
-                  <th className="px-4 py-3 font-medium">Character</th>
+                  <th className="px-3 py-2.5 font-mono text-[11px] uppercase tracking-widest">Character</th>
                 )}
                 {kind === "card" && (
-                  <th className="px-4 py-3 font-medium">Type</th>
+                  <th className="px-3 py-2.5 font-mono text-[11px] uppercase tracking-widest">Type</th>
                 )}
                 {kind === "card" && (
-                  <th className="px-4 py-3 font-medium text-right">Cost</th>
+                  <th className="px-3 py-2.5 font-mono text-[11px] uppercase tracking-widest text-right">Cost</th>
                 )}
-                <th className="px-4 py-3 font-medium text-right">Score</th>
-                <th className="px-4 py-3 font-medium text-right">Consensus</th>
+                <th className="px-3 py-2.5 font-mono text-[11px] uppercase tracking-widest text-right">Score</th>
+                <th className="px-3 py-2.5 font-mono text-[11px] uppercase tracking-widest text-right">Consensus</th>
               </tr>
             </thead>
             <tbody>
@@ -158,32 +158,32 @@ export function Sts2TierList({ data }: { data: Sts2Snapshot }) {
                   key={it.id}
                   className="border-b border-border last:border-0 hover:bg-surface/60 transition-colors"
                 >
-                  <td className="px-4 py-2.5 text-text-secondary tabular-nums">
+                  <td className="px-3 py-2 text-text-secondary tabular-nums">
                     {i + 1}
                   </td>
-                  <td className="px-4 py-2.5 font-medium">{it.name}</td>
-                  <td className="px-4 py-2.5">
+                  <td className="px-3 py-2 font-medium">{it.name}</td>
+                  <td className="px-3 py-2">
                     <TierBadge letter={it.tier} />
                   </td>
                   {kind === "card" && (
-                    <td className="px-4 py-2.5 text-text-secondary">
+                    <td className="px-3 py-2 text-text-secondary">
                       {it.character}
                     </td>
                   )}
                   {kind === "card" && (
-                    <td className="px-4 py-2.5 text-text-secondary">
+                    <td className="px-3 py-2 text-text-secondary">
                       {it.type ?? "—"}
                     </td>
                   )}
                   {kind === "card" && (
-                    <td className="px-4 py-2.5 text-right tabular-nums text-text-secondary">
+                    <td className="px-3 py-2 text-right tabular-nums text-text-secondary">
                       {it.cost ?? "—"}
                     </td>
                   )}
-                  <td className="px-4 py-2.5 text-right tabular-nums font-semibold">
+                  <td className="px-3 py-2 text-right tabular-nums font-semibold text-cyan">
                     {Math.round(it.score)}
                   </td>
-                  <td className="px-4 py-2.5 text-right">
+                  <td className="px-3 py-2 text-right">
                     <ConsensusDots item={it} />
                   </td>
                 </tr>
@@ -241,10 +241,10 @@ function FacetChip({
     <button
       type="button"
       onClick={onClick}
-      className={`rounded-full border px-3 py-1 text-xs font-medium transition-colors ${
+      className={`rounded-md border px-3 py-1 text-xs font-medium transition-colors ${
         active
           ? "border-cyan/50 bg-cyan-dim text-cyan"
-          : "border-border bg-surface text-text-secondary hover:border-cyan/30 hover:text-foreground"
+          : "border-border bg-surface text-text-secondary hover:border-foreground/20 hover:text-foreground"
       }`}
     >
       {label}
@@ -254,7 +254,7 @@ function FacetChip({
 
 function ItemChip({ item }: { item: RatedItem }) {
   return (
-    <div className="flex items-center gap-2 bg-surface-raised border border-border rounded-xl px-3 py-1.5">
+    <div className="flex items-center gap-2 bg-surface-raised border border-border rounded-lg px-3 py-1.5">
       <div className="leading-tight">
         <p className="text-sm font-medium">{item.name}</p>
         <p className="text-[11px] text-text-secondary tabular-nums">

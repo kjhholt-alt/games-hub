@@ -162,3 +162,31 @@ body {
 .mtg-scope *:focus-visible {
   outline-color: var(--mtg-brass);
 }
+
+/* ── Network utilities ────────────────────────────────────────────────────
+   Everything outside /mtg: home, tier-lists, hoi4, poe1, sts2, news. Cyan
+   stays the accent but is reserved for live/aggregate numbers, the one CTA,
+   and interactive states — not chips, borders, or ambient decoration. */
+
+/* The network's display face (lib/fonts.ts) — a geometric grotesk kept
+   deliberately distinct from the MTG hub's Marcellus above. Route-scoped:
+   only pages that apply networkDisplay.variable to their <main> render it;
+   everywhere else this falls back to the site sans. */
+.network-display {
+  font-family: var(--font-network-display), var(--font-geist-sans), sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* Every transition/animation across the hub (this section and the MTG rules
+   above) respects a user's OS-level motion preference. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

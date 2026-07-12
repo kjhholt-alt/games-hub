@@ -18,6 +18,7 @@ export const revalidate = 3600;
 const MODULE_TITLE: Record<string, string> = {
   commander_tiers: "Commander & Brawl Tiers",
   limited_tiers: "Limited Tier List",
+  constructed_tiers: "Constructed Tiers",
   banlist: "Ban List & Legality Tracker",
   calendar: "Rotation & Set Calendar",
   formats: "Format Snapshots",
@@ -26,6 +27,7 @@ const MODULE_TITLE: Record<string, string> = {
 const MODULE_ORDER = [
   "commander_tiers",
   "limited_tiers",
+  "constructed_tiers",
   "banlist",
   "calendar",
   "formats",
@@ -53,7 +55,7 @@ const ATTRIBUTION = [
   {
     name: "topdeck.gg",
     detail:
-      "Real tournament results for constructed formats. The client is built but disabled until an API key is provisioned — Standard/Pioneer/Modern currently render an honest \"tiers pending tournament key\" coverage state instead of a number. Full credit and a link-back will show on every row once it's live.",
+      "Real tournament results for the Constructed Tiers module (Standard/Pioneer/Modern). The client is built but the module ships zero rows — status \"pending_key\" — until an API key is provisioned; a per-row link back to the source event on topdeck.gg appears the moment it's live.",
     url: "https://topdeck.gg",
   },
 ];
@@ -84,6 +86,10 @@ export default function MtgMethodologyPage() {
           <div className="space-y-8 mb-14">
             {MODULE_ORDER.map((key) => {
               const mod = modules[key as keyof typeof modules];
+              // constructed_tiers is additive + optional (absent from every
+              // payload published before it shipped) — render nothing for
+              // it rather than an error, same absence rule as the /mtg page.
+              if (!mod) return null;
               return (
                 <div key={key} className="border-b border-border pb-8 last:border-0">
                   <h2 className="mtg-display text-xl mb-2.5">

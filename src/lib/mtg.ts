@@ -23,7 +23,12 @@ import path from "path";
 // ─── Shared row/module shape ────────────────────────────────────────────────
 
 export type Confidence = "high" | "medium" | "low" | "sample";
-export type ModuleStatus = "sample" | "published" | "stale" | "pending_key";
+export type ModuleStatus =
+  | "sample"
+  | "published"
+  | "stale"
+  | "pending_key"
+  | "unavailable";
 export type Tier = "S" | "A" | "B" | "C" | "D";
 export type LimitedTier = Tier | "unrated";
 export type CommanderBucket = "trending" | "established";
@@ -98,6 +103,36 @@ export interface FormatRow extends MtgRowBase {
   external_links: Record<string, string>;
 }
 
+/** Standard/Pioneer/Modern tournament-backed tiers (topdeck.gg) — see
+ * mtg-workstation/metahub/tiers.py's compute_constructed_tiers. `tier` can be
+ * "unrated" (zero recorded match games — never a guessed letter, same
+ * pattern as LimitedTier). `win_rate`/`best_finish` are null when there's no
+ * statistical basis for them yet, exactly like LimitedTierRow.win_rate. */
+export type ConstructedTier = Tier | "unrated";
+
+export interface ConstructedTierRow extends MtgRowBase {
+  /** Format id, e.g. "standard" | "pioneer" | "modern". */
+  format: string;
+  /** The organizer's own archetype tag when topdeck.gg carries one, else
+   * the raw deck/decklist name, else the honest "Unclassified Deck"
+   * bucket — never inferred from an unparsed decklist link. */
+  archetype_or_deck: string;
+  tier: ConstructedTier;
+  /** 0-1 fraction, or null when there are zero recorded match games. */
+  win_rate: number | null;
+  wins: number;
+  losses: number;
+  draws: number;
+  /** Distinct tournaments this archetype/deck appeared in. */
+  event_count: number;
+  /** Best final standing across those events, or null if topdeck.gg never
+   * reported one. */
+  best_finish: number | null;
+  /** Link back to the source event on topdeck.gg — the attribution
+   * link-back METAHUB-SPEC.md requires. */
+  topdeck_url: string;
+}
+
 interface MtgModule<TRow> {
   status: ModuleStatus;
   computed_at: string;
@@ -117,6 +152,11 @@ export interface MtgMetaPayload {
     banlist: MtgModule<BanlistFormatRow>;
     calendar: MtgModule<CalendarRow>;
     formats: MtgModule<FormatRow>;
+    /** Additive + optional — absent entirely from every payload published
+     * before this module shipped. The page must render nothing at all when
+     * this key is missing (see isConstructedTiersModule in mtg page.tsx),
+     * never an error or an empty section. */
+    constructed_tiers?: MtgModule<ConstructedTierRow>;
   };
 }
 
@@ -231,6 +271,25 @@ export const BUCKET_LABEL: Record<CommanderBucket, string> = {
   trending: "Trending (newest decks)",
   established: "Established (most-viewed decks)",
 };
+
+/** Group constructed_tiers rows by format, Standard/Pioneer/Modern first
+ * (the spec's named formats) then anything else alphabetically — never
+ * silently dropping a format the engine adds later. */
+const CONSTRUCTED_FORMAT_ORDER = ["standard", "pioneer", "modern"];
+
+export function groupByConstructedFormat(
+  rows: ConstructedTierRow[]
+): { format: string; rows: ConstructedTierRow[] }[] {
+  const present = [...new Set(rows.map((r) => r.format))];
+  const ordered = [
+    ...CONSTRUCTED_FORMAT_ORDER.filter((f) => present.includes(f)),
+    ...present.filter((f) => !CONSTRUCTED_FORMAT_ORDER.includes(f)).sort(),
+  ];
+  return ordered.map((format) => ({
+    format,
+    rows: rows.filter((r) => r.format === format),
+  }));
+}
 
 /** 0-1 fraction -> "NN.N%", or an explicit "unrated" when 17lands has no
  * recorded games for the card — never a guessed number. */

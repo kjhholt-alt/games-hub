@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, BookOpen, ExternalLink, FileJson } from "lucide-react";
+import { ArrowRight, BookOpen, ExternalLink, FileJson, Info } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MtgSampleBanner } from "@/components/MtgSampleBanner";
 import { MtgModuleHeader } from "@/components/MtgModuleHeader";
 import { MtgCommanderTierTable } from "@/components/MtgCommanderTierTable";
 import { MtgLimitedTierTable } from "@/components/MtgLimitedTierTable";
+import { MtgConstructedTierTable } from "@/components/MtgConstructedTierTable";
 import { MtgBanlistTable } from "@/components/MtgBanlistTable";
 import { MtgCalendarTable } from "@/components/MtgCalendarTable";
 import { MtgFormatCards } from "@/components/MtgFormatCards";
@@ -71,7 +72,7 @@ export default function MtgPage() {
   }
 
   const sample = isSamplePayload(payload);
-  const { commander_tiers, limited_tiers, banlist, calendar, formats } =
+  const { commander_tiers, limited_tiers, banlist, calendar, formats, constructed_tiers } =
     payload.modules;
 
   // The engine ships limited_tiers rows with a per-row `set` code (not a
@@ -112,9 +113,22 @@ export default function MtgPage() {
     },
     { label: "Tiers", href: "#tiers", count: `${commander_tiers.rows.length}` },
     { label: "Limited", href: "#limited", count: `${limited_tiers.rows.length}` },
+    ...(constructed_tiers
+      ? [
+          {
+            label: "Constructed",
+            href: "#constructed",
+            count:
+              constructed_tiers.status === "pending_key"
+                ? "pending"
+                : `${constructed_tiers.rows.length}`,
+          },
+        ]
+      : []),
     { label: "Bans", href: "#banlist", count: `${banlist.rows.length}` },
     { label: "Calendar", href: "#calendar", count: `${calendar.rows.length}` },
     { label: "Formats", href: "#formats", count: `${formats.rows.length}` },
+    { label: "Wildcards", href: "/mtg/wildcards", count: "calc" },
     { label: "Methodology", href: "/mtg/methodology", count: "receipts" },
   ];
 
@@ -296,6 +310,47 @@ export default function MtgPage() {
           />
           <MtgLimitedTierTable rows={limited_tiers.rows} />
         </div>
+
+        {/* Constructed tiers (Standard/Pioneer/Modern, topdeck.gg) — additive
+            module absent from every payload published before it shipped;
+            renders nothing at all when the key is missing from the payload
+            (see the `constructed_tiers &&` guard), never an error. */}
+        {constructed_tiers && (
+          <div id="constructed" className="mb-16 scroll-mt-24">
+            <MtgModuleHeader
+              title="Constructed Tiers"
+              status={constructed_tiers.status}
+              computedAt={constructed_tiers.computed_at}
+              methodology={constructed_tiers.methodology}
+              attribution={constructed_tiers.attribution}
+              note={
+                constructed_tiers.status === "pending_key"
+                  ? undefined
+                  : `${constructed_tiers.rows.length} archetypes/decks`
+              }
+            />
+            {constructed_tiers.status === "pending_key" ||
+            constructed_tiers.rows.length === 0 ? (
+              <div className="flex items-start gap-3 rounded-lg border border-border bg-surface px-5 py-4">
+                <Info size={15} className="text-brass mt-0.5 shrink-0" />
+                <div>
+                  <p className="font-mono text-[11px] uppercase tracking-wider text-brass mb-1">
+                    {constructed_tiers.status === "pending_key"
+                      ? "Pending a topdeck.gg key"
+                      : "No tournament results this run"}
+                  </p>
+                  <p className="text-text-secondary text-xs leading-relaxed max-w-2xl">
+                    {constructed_tiers.status === "pending_key"
+                      ? "Tournament-backed Standard/Pioneer/Modern tiers are pending a topdeck.gg key (a free 2-minute signup) — real tiers replace this panel automatically the moment it's configured, and this module never ships an invented row in the meantime."
+                      : "topdeck.gg didn’t return usable tournament results this run — check back after the next refresh; nothing here is invented while data is unavailable."}
+                  </p>
+                </div>
+              </div>
+            ) : (
+              <MtgConstructedTierTable rows={constructed_tiers.rows} />
+            )}
+          </div>
+        )}
 
         {/* Banlist */}
         <div id="banlist" className="mb-16 scroll-mt-24">

@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Trophy, RefreshCw, AlertTriangle } from "lucide-react";
+import { Trophy, AlertTriangle } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { HeroTierList } from "@/components/HeroTierList";
+import { Provenance } from "@/components/Provenance";
+import { formatFreshness } from "@/lib/format";
+import { networkDisplay } from "@/lib/fonts";
 import {
   buildTierList,
   fetchHeroStats,
@@ -46,12 +49,6 @@ export default async function TierListsPage() {
   const { data, live } = await getTierList();
   const top = data.heroes.slice(0, 3);
 
-  const updated = new Date(data.generatedAt).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -64,7 +61,7 @@ export default async function TierListsPage() {
   };
 
   return (
-    <main className="min-h-screen">
+    <main className={`min-h-screen ${networkDisplay.variable}`}>
       <SiteHeader />
 
       <section className="max-w-5xl mx-auto px-6 py-12 sm:py-16">
@@ -72,7 +69,7 @@ export default async function TierListsPage() {
           <Trophy size={14} />
           RANKED FROM REAL WIN-RATE DATA
         </div>
-        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-3">
+        <h1 className="network-display text-3xl sm:text-4xl tracking-tight mb-3">
           Deadlock Hero Tier List
         </h1>
         <p className="text-text-secondary max-w-2xl mb-4">
@@ -82,14 +79,13 @@ export default async function TierListsPage() {
           actually winning this patch.
         </p>
 
-        <div className="flex flex-wrap items-center gap-3 text-xs text-text-secondary mb-10">
-          <span className="inline-flex items-center gap-1.5">
-            <RefreshCw size={12} className={live ? "text-green" : "text-amber"} />
-            {live ? "Live data" : "Cached data"} &middot; updated {updated}
-          </span>
-          <span className="inline-flex items-center gap-1.5 bg-surface border border-border rounded-full px-3 py-1">
-            {data.heroes.length} heroes ranked
-          </span>
+        <div className="mb-10">
+          <Provenance
+            status={live ? "live" : "cached"}
+            freshness={formatFreshness(data.generatedAt)}
+            note={`${data.heroes.length} heroes · ${data.totalMatches.toLocaleString("en-US")} matches`}
+            attribution="deadlock-api.com"
+          />
         </div>
 
         {/* Quick top-3 highlight */}
@@ -97,7 +93,7 @@ export default async function TierListsPage() {
           {top.map((hero, i) => (
             <div
               key={hero.id}
-              className="bg-surface border border-border rounded-2xl p-5"
+              className="bg-surface border border-border rounded-lg p-5"
             >
               <p className="text-xs font-mono text-text-secondary mb-1">
                 #{i + 1} this patch
@@ -113,8 +109,8 @@ export default async function TierListsPage() {
         <HeroTierList data={data} />
 
         {/* Methodology */}
-        <div className="bg-surface border border-border rounded-2xl p-6 mt-12">
-          <h2 className="text-lg font-semibold mb-2">How this is ranked</h2>
+        <div className="bg-surface border border-border rounded-lg p-6 mt-12">
+          <h2 className="network-display text-lg mb-2">How this is ranked</h2>
           <p className="text-sm text-text-secondary leading-relaxed">
             Heroes are scored purely on win rate from the open, free{" "}
             <a

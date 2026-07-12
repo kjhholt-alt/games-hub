@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Swords, RefreshCw } from "lucide-react";
+import { Swords } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Sts2TierList } from "@/components/Sts2TierList";
+import { Provenance } from "@/components/Provenance";
+import { formatFreshness } from "@/lib/format";
+import { networkDisplay } from "@/lib/fonts";
 import { getSnapshot } from "@/lib/sts2";
 
 export const metadata: Metadata = {
@@ -21,12 +24,6 @@ export default function Sts2Page() {
     .filter((i) => i.kind === "card" && i.tier === "S")
     .slice(0, 3);
 
-  const updated = new Date(data.generatedAt).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -42,7 +39,7 @@ export default function Sts2Page() {
   };
 
   return (
-    <main className="min-h-screen">
+    <main className={`min-h-screen ${networkDisplay.variable}`}>
       <SiteHeader />
 
       <section className="max-w-5xl mx-auto px-6 py-12 sm:py-16">
@@ -50,7 +47,7 @@ export default function Sts2Page() {
           <Swords size={14} />
           AGGREGATED FROM THE BEST TIER LISTS
         </div>
-        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-3">
+        <h1 className="network-display text-3xl sm:text-4xl tracking-tight mb-3">
           Slay the Spire 2 Tier List
         </h1>
         <p className="text-text-secondary max-w-2xl mb-4">
@@ -60,14 +57,15 @@ export default function Sts2Page() {
           no single list&rsquo;s bias, just where the community actually lands.
         </p>
 
-        <div className="flex flex-wrap items-center gap-3 text-xs text-text-secondary mb-10">
-          <span className="inline-flex items-center gap-1.5">
-            <RefreshCw size={12} className="text-green" />
-            Patch {data.gamePatch ?? "current"} &middot; updated {updated}
-          </span>
-          <span className="inline-flex items-center gap-1.5 bg-surface border border-border rounded-full px-3 py-1">
-            {data.counts.cards} cards &middot; {data.counts.relics} relics ranked
-          </span>
+        <div className="mb-10">
+          <Provenance
+            status="aggregated"
+            freshness={formatFreshness(data.generatedAt)}
+            note={`${data.counts.cards} cards · ${data.counts.relics} relics · patch ${data.gamePatch ?? "current"}`}
+            attribution={
+              data.sources.length > 0 ? `via ${data.sources.join(", ")}` : undefined
+            }
+          />
         </div>
 
         {/* Quick top-3 S-tier card highlight */}
@@ -76,7 +74,7 @@ export default function Sts2Page() {
             {topCards.map((it) => (
               <div
                 key={it.id}
-                className="bg-surface border border-border rounded-2xl p-5"
+                className="bg-surface border border-border rounded-lg p-5"
               >
                 <p className="text-xs font-mono text-text-secondary mb-1">
                   S-TIER &middot; {it.character}
@@ -93,8 +91,8 @@ export default function Sts2Page() {
         <Sts2TierList data={data} />
 
         {/* Methodology */}
-        <div className="bg-surface border border-border rounded-2xl p-6 mt-12">
-          <h2 className="text-lg font-semibold mb-2">How this is ranked</h2>
+        <div className="bg-surface border border-border rounded-lg p-6 mt-12">
+          <h2 className="network-display text-lg mb-2">How this is ranked</h2>
           <p className="text-sm text-text-secondary leading-relaxed">
             Each source list rates a card or relic on an S–F scale; those letters
             map to anchor scores (S=95, A=84, B=70, C=55, D=40), we take the

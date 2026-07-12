@@ -22,7 +22,7 @@ export function HeroTierList({ data }: { data: DeadlockTierList }) {
         {groups.map((group) => (
           <div
             key={group.letter}
-            className="flex flex-col sm:flex-row gap-3 bg-surface border border-border rounded-2xl p-4"
+            className="flex flex-col sm:flex-row gap-3 bg-surface border border-border rounded-lg p-4"
           >
             <div className="flex sm:flex-col items-center sm:justify-center gap-3 sm:w-40 shrink-0">
               <TierBadge letter={group.letter} size="lg" />
@@ -41,18 +41,18 @@ export function HeroTierList({ data }: { data: DeadlockTierList }) {
 
       {/* Full ranking table */}
       <div>
-        <h2 className="text-xl font-bold mb-4">Full ranking by win rate</h2>
-        <div className="overflow-x-auto border border-border rounded-2xl">
+        <h2 className="network-display text-xl mb-4">Full ranking by win rate</h2>
+        <div className="overflow-x-auto border border-border rounded-lg">
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-border bg-surface text-text-secondary text-left">
-                <th className="px-4 py-3 font-medium">#</th>
-                <th className="px-4 py-3 font-medium">Hero</th>
-                <th className="px-4 py-3 font-medium">Tier</th>
-                <th className="px-4 py-3 font-medium text-right">Win rate</th>
-                <th className="px-4 py-3 font-medium text-right">Pick rate</th>
-                <th className="px-4 py-3 font-medium text-right">KDA</th>
-                <th className="px-4 py-3 font-medium text-right">Matches</th>
+                <th className="px-3 py-2.5 font-mono text-[11px] uppercase tracking-widest">#</th>
+                <th className="px-3 py-2.5 font-mono text-[11px] uppercase tracking-widest">Hero</th>
+                <th className="px-3 py-2.5 font-mono text-[11px] uppercase tracking-widest">Tier</th>
+                <th className="px-3 py-2.5 font-mono text-[11px] uppercase tracking-widest text-right">Win rate</th>
+                <th className="px-3 py-2.5 font-mono text-[11px] uppercase tracking-widest text-right">Pick rate</th>
+                <th className="px-3 py-2.5 font-mono text-[11px] uppercase tracking-widest text-right">KDA</th>
+                <th className="px-3 py-2.5 font-mono text-[11px] uppercase tracking-widest text-right">Matches</th>
               </tr>
             </thead>
             <tbody>
@@ -61,28 +61,28 @@ export function HeroTierList({ data }: { data: DeadlockTierList }) {
                   key={hero.id}
                   className="border-b border-border last:border-0 hover:bg-surface/60 transition-colors"
                 >
-                  <td className="px-4 py-2.5 text-text-secondary tabular-nums">
+                  <td className="px-3 py-2 text-text-secondary tabular-nums">
                     {hero.rank}
                   </td>
-                  <td className="px-4 py-2.5">
+                  <td className="px-3 py-2">
                     <div className="flex items-center gap-2.5">
                       <HeroIcon hero={hero} size={28} />
                       <span className="font-medium">{hero.name}</span>
                     </div>
                   </td>
-                  <td className="px-4 py-2.5">
+                  <td className="px-3 py-2">
                     <TierBadge letter={hero.tier} />
                   </td>
-                  <td className="px-4 py-2.5 text-right tabular-nums font-semibold">
+                  <td className="px-3 py-2 text-right tabular-nums font-semibold text-cyan">
                     {hero.winRate.toFixed(1)}%
                   </td>
-                  <td className="px-4 py-2.5 text-right tabular-nums text-text-secondary">
+                  <td className="px-3 py-2 text-right tabular-nums text-text-secondary">
                     {hero.pickRate.toFixed(1)}%
                   </td>
-                  <td className="px-4 py-2.5 text-right tabular-nums text-text-secondary">
+                  <td className="px-3 py-2 text-right tabular-nums text-text-secondary">
                     {hero.kda.toFixed(2)}
                   </td>
-                  <td className="px-4 py-2.5 text-right tabular-nums text-text-secondary">
+                  <td className="px-3 py-2 text-right tabular-nums text-text-secondary">
                     {hero.matches.toLocaleString("en-US")}
                   </td>
                 </tr>
@@ -102,7 +102,7 @@ export function HeroTierList({ data }: { data: DeadlockTierList }) {
 
 function HeroChip({ hero }: { hero: RankedHero }) {
   return (
-    <div className="flex items-center gap-2 bg-surface-raised border border-border rounded-xl pl-1.5 pr-3 py-1.5">
+    <div className="flex items-center gap-2 bg-surface-raised border border-border rounded-lg pl-1.5 pr-3 py-1.5">
       <HeroIcon hero={hero} size={32} />
       <div className="leading-tight">
         <p className="text-sm font-medium">{hero.name}</p>

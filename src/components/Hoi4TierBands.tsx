@@ -18,7 +18,7 @@ export function Hoi4TierBands({ nations }: { nations: Hoi4Nation[] }) {
         {groups.map((group) => (
           <div
             key={group.letter}
-            className="flex flex-col sm:flex-row gap-3 bg-surface border border-border rounded-2xl p-4"
+            className="flex flex-col sm:flex-row gap-3 bg-surface border border-border rounded-lg p-4"
           >
             <div className="flex sm:flex-col items-center sm:justify-center gap-3 sm:w-44 shrink-0">
               <Hoi4TierBadge letter={group.letter} size="lg" />
@@ -30,7 +30,7 @@ export function Hoi4TierBands({ nations }: { nations: Hoi4Nation[] }) {
               {group.nations.map((nation) => (
                 <span
                   key={nation.tag}
-                  className="inline-flex items-center gap-2 bg-surface-raised border border-border rounded-xl px-3 py-1.5 text-sm font-medium"
+                  className="inline-flex items-center gap-2 bg-surface-raised border border-border rounded-lg px-3 py-1.5 text-sm font-medium"
                 >
                   {nation.name}
                   <span className="text-[10px] font-mono text-text-secondary">
@@ -48,7 +48,7 @@ export function Hoi4TierBands({ nations }: { nations: Hoi4Nation[] }) {
         <div key={group.letter}>
           <div className="flex items-center gap-3 mb-4">
             <Hoi4TierBadge letter={group.letter} />
-            <h2 className="text-xl font-bold">
+            <h2 className="network-display text-xl">
               {group.letter}-Tier nations
             </h2>
             <span className="text-sm text-text-secondary">

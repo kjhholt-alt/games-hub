@@ -28,7 +28,7 @@ export function Hoi4NationCard({ nation }: { nation: Hoi4Nation }) {
   const pathColor = PATH_TEXT[path.color] ?? "text-text-secondary";
 
   return (
-    <div className="bg-surface border border-border rounded-2xl p-5 sm:p-6 flex flex-col">
+    <div className="bg-surface border border-border rounded-lg p-5 sm:p-6 flex flex-col">
       {/* Header: tier badge + name + faction */}
       <div className="flex items-start gap-4 mb-4">
         <Hoi4TierBadge letter={nation.tier} size="lg" />
@@ -55,18 +55,18 @@ export function Hoi4NationCard({ nation }: { nation: Hoi4Nation }) {
       {/* Build spine */}
       <div className="space-y-3 mb-5">
         <SpineRow
-          icon={<Route size={14} className="text-cyan" />}
+          icon={<Route size={14} className="text-text-secondary" />}
           label="Focus path"
           title={nation.focusPathName}
         />
         <SpineRow
-          icon={<Crosshair size={14} className="text-cyan" />}
+          icon={<Crosshair size={14} className="text-text-secondary" />}
           label="Signature focus"
           title={nation.signatureFocus.title}
           detail={nation.signatureFocus.why}
         />
         <SpineRow
-          icon={<FlaskConical size={14} className="text-cyan" />}
+          icon={<FlaskConical size={14} className="text-text-secondary" />}
           label="Key research"
           title={nation.keyResearch.title}
           detail={nation.keyResearch.why}
@@ -74,7 +74,7 @@ export function Hoi4NationCard({ nation }: { nation: Hoi4Nation }) {
       </div>
 
       {/* Run-ender pitfall */}
-      <div className="flex items-start gap-2.5 bg-amber-dim border border-amber/30 rounded-xl p-3.5 mb-5">
+      <div className="flex items-start gap-2.5 bg-amber-dim border border-amber/30 rounded-lg p-3.5 mb-5">
         <AlertTriangle size={15} className="text-amber mt-0.5 shrink-0" />
         <div>
           <p className="text-xs font-semibold text-amber mb-0.5">

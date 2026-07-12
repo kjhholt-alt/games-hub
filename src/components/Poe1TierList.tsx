@@ -29,7 +29,7 @@ export function Poe1TierList({ meta }: { meta: Poe1Meta }) {
     <div className="space-y-8">
       {/* Category switcher */}
       <div>
-        <div className="inline-flex flex-wrap gap-1.5 bg-surface border border-border rounded-xl p-1">
+        <div className="inline-flex flex-wrap gap-1.5 bg-surface border border-border rounded-lg p-1">
           {CATEGORIES.map((c) => {
             const active = c.id === category;
             return (
@@ -38,7 +38,7 @@ export function Poe1TierList({ meta }: { meta: Poe1Meta }) {
                 type="button"
                 onClick={() => setCategory(c.id)}
                 aria-pressed={active}
-                className={`px-4 py-1.5 rounded-lg text-sm font-medium transition-colors ${
+                className={`px-4 py-1.5 rounded-md text-sm font-medium transition-colors ${
                   active
                     ? "bg-cyan text-background"
                     : "text-text-secondary hover:text-foreground"
@@ -57,7 +57,7 @@ export function Poe1TierList({ meta }: { meta: Poe1Meta }) {
         {groups.map((group) => (
           <div
             key={group.letter}
-            className="flex flex-col sm:flex-row gap-3 bg-surface border border-border rounded-2xl p-4"
+            className="flex flex-col sm:flex-row gap-3 bg-surface border border-border rounded-lg p-4"
           >
             <div className="flex sm:flex-col items-center sm:justify-center gap-3 sm:w-40 shrink-0">
               <TierBadge letter={group.letter} size="lg" />
@@ -76,21 +76,21 @@ export function Poe1TierList({ meta }: { meta: Poe1Meta }) {
 
       {/* Full ranking table */}
       <div>
-        <h2 className="text-xl font-bold mb-4">
+        <h2 className="network-display text-xl mb-4">
           Full {CATEGORY_LABEL[category].toLowerCase()} ranking
         </h2>
-        <div className="overflow-x-auto border border-border rounded-2xl">
+        <div className="overflow-x-auto border border-border rounded-lg">
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-border bg-surface text-text-secondary text-left">
-                <th className="px-4 py-3 font-medium">Tier</th>
-                <th className="px-4 py-3 font-medium">
+                <th className="px-3 py-2.5 font-mono text-[11px] uppercase tracking-widest">Tier</th>
+                <th className="px-3 py-2.5 font-mono text-[11px] uppercase tracking-widest">
                   {CATEGORY_LABEL[category]}
                 </th>
-                <th className="px-4 py-3 font-medium">Ascendancy</th>
-                <th className="px-4 py-3 font-medium">Class</th>
-                <th className="px-4 py-3 font-medium">Style</th>
-                <th className="px-4 py-3 font-medium hidden md:table-cell">
+                <th className="px-3 py-2.5 font-mono text-[11px] uppercase tracking-widest">Ascendancy</th>
+                <th className="px-3 py-2.5 font-mono text-[11px] uppercase tracking-widest">Class</th>
+                <th className="px-3 py-2.5 font-mono text-[11px] uppercase tracking-widest">Style</th>
+                <th className="px-3 py-2.5 font-mono text-[11px] uppercase tracking-widest hidden md:table-cell">
                   Why
                 </th>
               </tr>
@@ -101,22 +101,22 @@ export function Poe1TierList({ meta }: { meta: Poe1Meta }) {
                   key={entry.id}
                   className="border-b border-border last:border-0 align-top hover:bg-surface/60 transition-colors"
                 >
-                  <td className="px-4 py-3">
+                  <td className="px-3 py-2">
                     <TierBadge letter={entry.tier} />
                   </td>
-                  <td className="px-4 py-3 font-medium">{entry.name}</td>
-                  <td className="px-4 py-3 text-text-secondary">
+                  <td className="px-3 py-2 font-medium">{entry.name}</td>
+                  <td className="px-3 py-2 text-text-secondary">
                     {entry.ascendancy}
                   </td>
-                  <td className="px-4 py-3 text-text-secondary">
+                  <td className="px-3 py-2 text-text-secondary">
                     {entry.baseClass}
                   </td>
-                  <td className="px-4 py-3">
-                    <span className="inline-flex items-center rounded-full bg-surface-raised border border-border px-2.5 py-0.5 text-xs text-text-secondary">
+                  <td className="px-3 py-2">
+                    <span className="inline-flex items-center rounded-md bg-surface-raised border border-border px-2.5 py-0.5 text-xs text-text-secondary">
                       {entry.playstyle}
                     </span>
                   </td>
-                  <td className="px-4 py-3 text-text-secondary hidden md:table-cell max-w-md">
+                  <td className="px-3 py-2 text-text-secondary hidden md:table-cell max-w-md">
                     {entry.oneLiner}
                   </td>
                 </tr>
@@ -137,7 +137,7 @@ export function Poe1TierList({ meta }: { meta: Poe1Meta }) {
 function MetaChip({ entry }: { entry: Poe1MetaEntry }) {
   const sources = resolveSources(entry);
   return (
-    <div className="bg-surface-raised border border-border rounded-xl px-3 py-2 max-w-[15rem]">
+    <div className="bg-surface-raised border border-border rounded-lg px-3 py-2 max-w-[15rem]">
       <p className="text-sm font-medium leading-tight">{entry.name}</p>
       <p className="text-[11px] text-text-secondary mt-0.5">
         {entry.ascendancy} &middot; {entry.playstyle}
