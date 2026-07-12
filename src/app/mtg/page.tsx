@@ -12,12 +12,17 @@ import { MtgBanlistTable } from "@/components/MtgBanlistTable";
 import { MtgCalendarTable } from "@/components/MtgCalendarTable";
 import { MtgFormatCards } from "@/components/MtgFormatCards";
 import { MtgTierPlate } from "@/components/MtgTierPlate";
+import { MtgMetaLens, type MtgMetaLensOption, type MtgMetaLensSection } from "@/components/MtgMetaLens";
+import { MtgHonestPanel } from "@/components/MtgHonestPanel";
 import {
   daysUntil,
   formatDaysUntil,
   formatFreshness,
+  formatLabel,
   getMtgMeta,
   isSamplePayload,
+  type CommanderTierRow,
+  type MtgMetaPayload,
 } from "@/lib/mtg";
 import { getMtgDraft } from "@/lib/mtgDraft";
 import { sortDraftRows } from "@/lib/mtgDraftView";
@@ -53,6 +58,153 @@ const EXTERNAL_RESOURCES = [
     note: "The Commander recommendation engine",
   },
 ];
+
+type FormatsModule = MtgMetaPayload["modules"]["formats"];
+type BanlistModule = MtgMetaPayload["modules"]["banlist"];
+type ConstructedModule = MtgMetaPayload["modules"]["constructed_tiers"];
+type CommanderTiersModule = MtgMetaPayload["modules"]["commander_tiers"];
+
+/** A single format's "world" inside the Commander/Brawl axis — the tier
+ * table filtered to that one format (or an honest empty panel when this
+ * run's corpus has zero rows for it, e.g. Brawl), plus its Format Snapshot
+ * and Ban List cards. Never repurposes another format's rows. */
+function CommanderFormatWorld({
+  formatId,
+  formatDisplayName,
+  commanderTiersModule,
+  formatsModule,
+  banlistModule,
+  rows,
+  emptyNote,
+}: {
+  formatId: string;
+  formatDisplayName: string;
+  commanderTiersModule: CommanderTiersModule;
+  formatsModule: FormatsModule;
+  banlistModule: BanlistModule;
+  rows: CommanderTierRow[];
+  emptyNote: string;
+}) {
+  const fRow = formatsModule.rows.find((r) => r.format === formatId);
+  const bRow = banlistModule.rows.find((r) => r.format === formatId);
+
+  return (
+    <>
+      <div className="mb-10">
+        <MtgModuleHeader
+          title={`${formatDisplayName} Tiers`}
+          status={commanderTiersModule.status}
+          computedAt={commanderTiersModule.computed_at}
+          methodology={commanderTiersModule.methodology}
+          attribution={commanderTiersModule.attribution}
+          note={rows.length > 0 ? `${rows.length} commanders` : undefined}
+        />
+        {rows.length > 0 ? (
+          <MtgCommanderTierTable rows={rows} />
+        ) : (
+          <MtgHonestPanel title="No rows this run">{emptyNote}</MtgHonestPanel>
+        )}
+      </div>
+      <div className="mb-10">
+        <MtgModuleHeader
+          title="Format Snapshot"
+          status={formatsModule.status}
+          computedAt={formatsModule.computed_at}
+          methodology={formatsModule.methodology}
+          attribution={formatsModule.attribution}
+        />
+        <MtgFormatCards rows={fRow ? [fRow] : []} />
+      </div>
+      <div>
+        <MtgModuleHeader
+          title="Ban List & Legality"
+          status={banlistModule.status}
+          computedAt={banlistModule.computed_at}
+          methodology={banlistModule.methodology}
+          attribution={banlistModule.attribution}
+        />
+        <MtgBanlistTable rows={bRow ? [bRow] : []} />
+      </div>
+    </>
+  );
+}
+
+/** A single Standard/Pioneer/Modern format's world — its Format Snapshot and
+ * Ban List cards, plus the Constructed Tiers slice for that format. Renders
+ * the honest "pending a topdeck.gg key" ledger panel inline whenever the
+ * module is absent OR present-but-empty for this format, so the lens is
+ * never silently empty (unlike the page-wide `constructed_tiers &&` guard,
+ * which renders nothing at all when the module key is missing entirely). */
+function ConstructedFormatWorld({
+  formatId,
+  formatDisplayName,
+  formatsModule,
+  banlistModule,
+  constructedModule,
+}: {
+  formatId: string;
+  formatDisplayName: string;
+  formatsModule: FormatsModule;
+  banlistModule: BanlistModule;
+  constructedModule: ConstructedModule;
+}) {
+  const fRow = formatsModule.rows.find((r) => r.format === formatId);
+  const bRow = banlistModule.rows.find((r) => r.format === formatId);
+  const cRows = constructedModule
+    ? constructedModule.rows.filter((r) => r.format === formatId)
+    : [];
+
+  return (
+    <>
+      <div className="mb-10">
+        <MtgModuleHeader
+          title="Format Snapshot"
+          status={formatsModule.status}
+          computedAt={formatsModule.computed_at}
+          methodology={formatsModule.methodology}
+          attribution={formatsModule.attribution}
+        />
+        <MtgFormatCards rows={fRow ? [fRow] : []} />
+      </div>
+
+      <div className="mb-10">
+        <MtgModuleHeader
+          title="Ban List & Legality"
+          status={banlistModule.status}
+          computedAt={banlistModule.computed_at}
+          methodology={banlistModule.methodology}
+          attribution={banlistModule.attribution}
+        />
+        <MtgBanlistTable rows={bRow ? [bRow] : []} />
+      </div>
+
+      <div>
+        <MtgModuleHeader
+          title="Constructed Tiers"
+          status={constructedModule?.status ?? "pending_key"}
+          computedAt={constructedModule?.computed_at ?? banlistModule.computed_at}
+          methodology={
+            constructedModule?.methodology ??
+            "Tournament-backed win-rate tiers from topdeck.gg — pending an API key."
+          }
+          attribution={constructedModule?.attribution ?? []}
+          note={cRows.length > 0 ? `${cRows.length} archetypes/decks` : undefined}
+        />
+        {cRows.length > 0 ? (
+          <MtgConstructedTierTable rows={cRows} />
+        ) : (
+          <MtgHonestPanel
+            title={constructedModule ? "No tournament results this run" : "Pending a topdeck.gg key"}
+          >
+            {constructedModule
+              ? `topdeck.gg didn't return usable tournament results for ${formatDisplayName} this run — check back after the next refresh; nothing here is invented while data is unavailable.`
+              : `Tournament-backed ${formatDisplayName} tiers are pending a topdeck.gg key (a free 2-minute signup) — real tiers replace this panel automatically the moment it's configured, and this module never ships an invented row in the meantime.`}
+          </MtgHonestPanel>
+        )}
+      </div>
+    </>
+  );
+}
 
 export default function MtgPage() {
   const payload = getMtgMeta();
@@ -130,6 +282,399 @@ export default function MtgPage() {
     { label: "Formats", href: "#formats", count: `${formats.rows.length}` },
     { label: "Wildcards", href: "/mtg/wildcards", count: "calc" },
     { label: "Methodology", href: "/mtg/methodology", count: "receipts" },
+  ];
+
+  // ── Meta lens — per-format slices reused across the Commander/Brawl axis
+  // and the Standard/Pioneer/Modern axis. "premierdraft"/"sealed"/"historic"
+  // aren't module format ids the engine emits at all (Limited isn't format-
+  // scoped; Sealed/Historic aren't ingested yet) — those three lenses are
+  // handled as their own standalone sections below. ────────────────────────
+  const commanderRows = commander_tiers.rows.filter((r) => r.format === "commander");
+  const competitiveBrawlRows = commander_tiers.rows.filter(
+    (r) => r.format === "competitivebrawl"
+  );
+  const standardBrawlRows = commander_tiers.rows.filter(
+    (r) => r.format === "standardbrawl"
+  );
+  const constructedRowsFor = (id: string) =>
+    constructed_tiers ? constructed_tiers.rows.filter((r) => r.format === id) : [];
+
+  const lenses: MtgMetaLensOption[] = [
+    { id: "all", label: "All" },
+    {
+      id: "standard",
+      label: "Standard",
+      count: constructedRowsFor("standard").length || undefined,
+    },
+    { id: "premierdraft", label: "Premier Draft", count: publishedSet?.overall_rows.length },
+    { id: "sealed", label: "Sealed" },
+    { id: "historic", label: "Historic" },
+    {
+      id: "standardbrawl",
+      label: "Brawl",
+      count: standardBrawlRows.length || undefined,
+    },
+    {
+      id: "competitivebrawl",
+      label: "Competitive Brawl",
+      count: competitiveBrawlRows.length || undefined,
+    },
+    { id: "commander", label: "Commander", count: commanderRows.length || undefined },
+    {
+      id: "pioneer",
+      label: "Pioneer",
+      count: constructedRowsFor("pioneer").length || undefined,
+    },
+    {
+      id: "modern",
+      label: "Modern",
+      count: constructedRowsFor("modern").length || undefined,
+    },
+  ];
+
+  const sections: MtgMetaLensSection[] = [
+    {
+      id: "draft-hero",
+      label: "Draft Ranker hero link",
+      formats: ["all", "premierdraft"],
+      node: (
+        // Draft Ranker — the hero module (METAHUB-SPEC.md ADDENDUM, wave 2)
+        <Link
+          href="/mtg/draft"
+          className="group flex items-center justify-between gap-6 border border-brass/40 bg-brass-dim rounded-lg px-6 py-5 mb-14 hover:border-brass/70 transition-colors"
+        >
+          <div className="min-w-0">
+            <p className="font-mono text-[11px] uppercase tracking-widest text-brass mb-1.5">
+              The draft ranker
+            </p>
+            <p className="mtg-display text-xl sm:text-2xl leading-snug mb-1">
+              Every draft card graded S–F from real 17lands win rates
+            </p>
+            <p className="text-sm text-text-secondary max-w-xl">
+              Sortable, filterable, sample-size-honest — free, unlike the
+              paywalled pick overlays. Plus a print-friendly cheat sheet for
+              your second screen.
+            </p>
+          </div>
+          <div className="flex flex-col items-end gap-2 shrink-0">
+            {publishedSet && (
+              <span className="font-mono text-[10px] uppercase tracking-wide text-text-secondary hidden sm:block">
+                {publishedSet.overall_rows.length} cards graded
+              </span>
+            )}
+            <ArrowRight
+              size={20}
+              className="text-brass group-hover:translate-x-1 transition-transform"
+            />
+          </div>
+        </Link>
+      ),
+    },
+    {
+      id: "tiers",
+      label: "Commander & Brawl Tiers (all formats)",
+      formats: ["all"],
+      node: (
+        <div id="tiers" className="mb-16 scroll-mt-24">
+          <MtgModuleHeader
+            title="Commander & Brawl Tiers"
+            status={commander_tiers.status}
+            computedAt={commander_tiers.computed_at}
+            methodology={commander_tiers.methodology}
+            attribution={commander_tiers.attribution}
+            note={`${commander_tiers.rows.length} commanders`}
+          />
+          <MtgCommanderTierTable rows={commander_tiers.rows} />
+        </div>
+      ),
+    },
+    {
+      id: "tiers-commander",
+      label: "Commander world",
+      formats: ["commander"],
+      node: (
+        <div className="mb-16 scroll-mt-24">
+          <CommanderFormatWorld
+            formatId="commander"
+            formatDisplayName={formatLabel("commander")}
+            commanderTiersModule={commander_tiers}
+            formatsModule={formats}
+            banlistModule={banlist}
+            rows={commanderRows}
+            emptyNote="No Commander rows in the current Archidekt scan window — the corpus refreshes daily."
+          />
+        </div>
+      ),
+    },
+    {
+      id: "tiers-competitivebrawl",
+      label: "Competitive Brawl world",
+      formats: ["competitivebrawl"],
+      node: (
+        <div className="mb-16 scroll-mt-24">
+          <CommanderFormatWorld
+            formatId="competitivebrawl"
+            formatDisplayName={formatLabel("competitivebrawl")}
+            commanderTiersModule={commander_tiers}
+            formatsModule={formats}
+            banlistModule={banlist}
+            rows={competitiveBrawlRows}
+            emptyNote="No Competitive Brawl rows in the current Archidekt scan window — the corpus refreshes daily."
+          />
+        </div>
+      ),
+    },
+    {
+      id: "tiers-standardbrawl",
+      label: "Brawl world",
+      formats: ["standardbrawl"],
+      node: (
+        <div className="mb-16 scroll-mt-24">
+          <CommanderFormatWorld
+            formatId="standardbrawl"
+            formatDisplayName={formatLabel("standardbrawl")}
+            commanderTiersModule={commander_tiers}
+            formatsModule={formats}
+            banlistModule={banlist}
+            rows={standardBrawlRows}
+            emptyNote="No Brawl rows in the current Archidekt scan window — the corpus refreshes daily."
+          />
+        </div>
+      ),
+    },
+    {
+      id: "limited",
+      label: "Limited Tier List",
+      formats: ["all", "premierdraft"],
+      node: (
+        <div id="limited" className="mb-16 scroll-mt-24">
+          <MtgModuleHeader
+            title={`Limited Tier List — ${limitedSetLabel}`}
+            status={limited_tiers.status}
+            computedAt={limited_tiers.computed_at}
+            methodology={limited_tiers.methodology}
+            attribution={limited_tiers.attribution}
+            note={`${limited_tiers.rows.length} cards`}
+          />
+          <MtgLimitedTierTable rows={limited_tiers.rows} />
+        </div>
+      ),
+    },
+    // Constructed tiers (Standard/Pioneer/Modern, topdeck.gg) — additive
+    // module absent from every payload published before it shipped; renders
+    // nothing at all in the "all" lens when the key is missing (see the
+    // `constructed_tiers &&` guard below), never an error. The per-format
+    // lenses below render an honest inline panel instead of nothing when
+    // it's absent — see ConstructedFormatWorld's doc comment.
+    ...(constructed_tiers
+      ? [
+          {
+            id: "constructed",
+            label: "Constructed Tiers (all formats)",
+            formats: ["all"],
+            node: (
+              <div id="constructed" className="mb-16 scroll-mt-24">
+                <MtgModuleHeader
+                  title="Constructed Tiers"
+                  status={constructed_tiers.status}
+                  computedAt={constructed_tiers.computed_at}
+                  methodology={constructed_tiers.methodology}
+                  attribution={constructed_tiers.attribution}
+                  note={
+                    constructed_tiers.status === "pending_key"
+                      ? undefined
+                      : `${constructed_tiers.rows.length} archetypes/decks`
+                  }
+                />
+                {constructed_tiers.status === "pending_key" ||
+                constructed_tiers.rows.length === 0 ? (
+                  <div className="flex items-start gap-3 rounded-lg border border-border bg-surface px-5 py-4">
+                    <Info size={15} className="text-brass mt-0.5 shrink-0" />
+                    <div>
+                      <p className="font-mono text-[11px] uppercase tracking-wider text-brass mb-1">
+                        {constructed_tiers.status === "pending_key"
+                          ? "Pending a topdeck.gg key"
+                          : "No tournament results this run"}
+                      </p>
+                      <p className="text-text-secondary text-xs leading-relaxed max-w-2xl">
+                        {constructed_tiers.status === "pending_key"
+                          ? "Tournament-backed Standard/Pioneer/Modern tiers are pending a topdeck.gg key (a free 2-minute signup) — real tiers replace this panel automatically the moment it's configured, and this module never ships an invented row in the meantime."
+                          : "topdeck.gg didn’t return usable tournament results this run — check back after the next refresh; nothing here is invented while data is unavailable."}
+                      </p>
+                    </div>
+                  </div>
+                ) : (
+                  <MtgConstructedTierTable rows={constructed_tiers.rows} />
+                )}
+              </div>
+            ),
+          } satisfies MtgMetaLensSection,
+        ]
+      : []),
+    {
+      id: "constructed-standard",
+      label: "Standard world",
+      formats: ["standard"],
+      node: (
+        <div className="mb-16 scroll-mt-24">
+          <ConstructedFormatWorld
+            formatId="standard"
+            formatDisplayName={formatLabel("standard")}
+            formatsModule={formats}
+            banlistModule={banlist}
+            constructedModule={constructed_tiers}
+          />
+        </div>
+      ),
+    },
+    {
+      id: "constructed-pioneer",
+      label: "Pioneer world",
+      formats: ["pioneer"],
+      node: (
+        <div className="mb-16 scroll-mt-24">
+          <ConstructedFormatWorld
+            formatId="pioneer"
+            formatDisplayName={formatLabel("pioneer")}
+            formatsModule={formats}
+            banlistModule={banlist}
+            constructedModule={constructed_tiers}
+          />
+        </div>
+      ),
+    },
+    {
+      id: "constructed-modern",
+      label: "Modern world",
+      formats: ["modern"],
+      node: (
+        <div className="mb-16 scroll-mt-24">
+          <ConstructedFormatWorld
+            formatId="modern"
+            formatDisplayName={formatLabel("modern")}
+            formatsModule={formats}
+            banlistModule={banlist}
+            constructedModule={constructed_tiers}
+          />
+        </div>
+      ),
+    },
+    {
+      id: "banlist",
+      label: "Ban List & Legality Tracker (all formats)",
+      formats: ["all"],
+      node: (
+        <div id="banlist" className="mb-16 scroll-mt-24">
+          <MtgModuleHeader
+            title="Ban List & Legality Tracker"
+            status={banlist.status}
+            computedAt={banlist.computed_at}
+            methodology={banlist.methodology}
+            attribution={banlist.attribution}
+            note={`${banlist.rows.length} formats`}
+          />
+          <MtgBanlistTable rows={banlist.rows} />
+        </div>
+      ),
+    },
+    {
+      id: "calendar",
+      label: "Rotation & Set Calendar",
+      formats: ["all", "premierdraft", "standard"],
+      node: (
+        <div id="calendar" className="mb-16 scroll-mt-24">
+          <MtgModuleHeader
+            title="Rotation & Set Calendar"
+            status={calendar.status}
+            computedAt={calendar.computed_at}
+            methodology={calendar.methodology}
+            attribution={calendar.attribution}
+            note={`${calendar.rows.length} sets`}
+          />
+          <MtgCalendarTable rows={calendar.rows} />
+        </div>
+      ),
+    },
+    {
+      id: "formats",
+      label: "Format Snapshots (all formats)",
+      formats: ["all"],
+      node: (
+        <div id="formats" className="mb-16 scroll-mt-24">
+          <MtgModuleHeader
+            title="Format Snapshots"
+            status={formats.status}
+            computedAt={formats.computed_at}
+            methodology={formats.methodology}
+            attribution={formats.attribution}
+            note={`${formats.rows.length} formats`}
+          />
+          <MtgFormatCards rows={formats.rows} />
+        </div>
+      ),
+    },
+    {
+      id: "sealed-roadmap",
+      label: "Sealed roadmap",
+      formats: ["sealed"],
+      node: (
+        <div className="mb-16 scroll-mt-24">
+          <h2 className="mtg-display text-2xl sm:text-[1.7rem] leading-tight mb-4">
+            Sealed
+          </h2>
+          <MtgHonestPanel title="On the roadmap — not ingested yet">
+            <p className="mb-2">
+              We ingest 17lands&rsquo; PremierDraft ratings today (the Draft
+              Ranker above). Sealed event data exists at 17lands too, under
+              the same CC BY 4.0 license we already cite — it just
+              isn&rsquo;t ingested yet. Real Sealed tiers are on the roadmap;
+              we never guess them from the draft numbers we already have.
+            </p>
+            <a
+              href="https://www.17lands.com/about"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-brass hover:text-brass-bright transition-colors"
+            >
+              17lands.com
+              <ExternalLink size={11} />
+            </a>
+          </MtgHonestPanel>
+        </div>
+      ),
+    },
+    {
+      id: "historic-panel",
+      label: "Historic coverage",
+      formats: ["historic"],
+      node: (
+        <div className="mb-16 scroll-mt-24">
+          <h2 className="mtg-display text-2xl sm:text-[1.7rem] leading-tight mb-4">
+            Historic
+          </h2>
+          <MtgHonestPanel title="Not covered by the engine yet">
+            <p className="mb-2">
+              Ban/legality tracking for Historic could come from the same
+              Scryfall legalities feed the Ban List module already reads, in
+              a future engine pass. Performance tiers would need a permitted
+              tournament or telemetry source we don&rsquo;t have yet — we
+              won&rsquo;t invent one. For today, untapped.gg is the
+              cite-only resource we point to for Historic; we don&rsquo;t
+              ingest or re-host its numbers.
+            </p>
+            <a
+              href="https://mtga.untapped.gg"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-brass hover:text-brass-bright transition-colors"
+            >
+              untapped.gg
+              <ExternalLink size={11} />
+            </a>
+          </MtgHonestPanel>
+        </div>
+      ),
+    },
   ];
 
   return (
@@ -233,163 +778,36 @@ export default function MtgPage() {
           </a>
         </div>
 
-        {/* Module index — the almanac's table of contents, with counts */}
-        <nav
-          aria-label="Sections"
-          className="flex flex-wrap items-center gap-2 font-mono text-[11px] uppercase tracking-wide mb-10"
-        >
-          {indexEntries.map((e) => (
-            <a
-              key={e.href}
-              href={e.href}
-              className="inline-flex items-center gap-2 border border-border rounded px-2.5 py-1 text-text-secondary hover:text-foreground hover:border-brass/40 transition-colors"
-            >
-              {e.label}
-              <span className="text-brass/80 tabular-nums normal-case">
-                {e.count}
-              </span>
-            </a>
-          ))}
-        </nav>
+        {/* Meta lens — pick a format's world; rail sits above the module
+            index nav (METAHUB-SPEC.md's lens directive). */}
+        <MtgMetaLens
+          lenses={lenses}
+          leading={
+            <>
+              {/* Module index — the almanac's table of contents, with counts */}
+              <nav
+                aria-label="Sections"
+                className="flex flex-wrap items-center gap-2 font-mono text-[11px] uppercase tracking-wide mb-10"
+              >
+                {indexEntries.map((e) => (
+                  <a
+                    key={e.href}
+                    href={e.href}
+                    className="inline-flex items-center gap-2 border border-border rounded px-2.5 py-1 text-text-secondary hover:text-foreground hover:border-brass/40 transition-colors"
+                  >
+                    {e.label}
+                    <span className="text-brass/80 tabular-nums normal-case">
+                      {e.count}
+                    </span>
+                  </a>
+                ))}
+              </nav>
 
-        {sample && <MtgSampleBanner />}
-
-        {/* Draft Ranker — the hero module (METAHUB-SPEC.md ADDENDUM, wave 2) */}
-        <Link
-          href="/mtg/draft"
-          className="group flex items-center justify-between gap-6 border border-brass/40 bg-brass-dim rounded-lg px-6 py-5 mb-14 hover:border-brass/70 transition-colors"
-        >
-          <div className="min-w-0">
-            <p className="font-mono text-[11px] uppercase tracking-widest text-brass mb-1.5">
-              The draft ranker
-            </p>
-            <p className="mtg-display text-xl sm:text-2xl leading-snug mb-1">
-              Every draft card graded S–F from real 17lands win rates
-            </p>
-            <p className="text-sm text-text-secondary max-w-xl">
-              Sortable, filterable, sample-size-honest — free, unlike the
-              paywalled pick overlays. Plus a print-friendly cheat sheet for
-              your second screen.
-            </p>
-          </div>
-          <div className="flex flex-col items-end gap-2 shrink-0">
-            {publishedSet && (
-              <span className="font-mono text-[10px] uppercase tracking-wide text-text-secondary hidden sm:block">
-                {publishedSet.overall_rows.length} cards graded
-              </span>
-            )}
-            <ArrowRight
-              size={20}
-              className="text-brass group-hover:translate-x-1 transition-transform"
-            />
-          </div>
-        </Link>
-
-        {/* Commander / Brawl tiers */}
-        <div id="tiers" className="mb-16 scroll-mt-24">
-          <MtgModuleHeader
-            title="Commander & Brawl Tiers"
-            status={commander_tiers.status}
-            computedAt={commander_tiers.computed_at}
-            methodology={commander_tiers.methodology}
-            attribution={commander_tiers.attribution}
-            note={`${commander_tiers.rows.length} commanders`}
-          />
-          <MtgCommanderTierTable rows={commander_tiers.rows} />
-        </div>
-
-        {/* Limited tiers */}
-        <div id="limited" className="mb-16 scroll-mt-24">
-          <MtgModuleHeader
-            title={`Limited Tier List — ${limitedSetLabel}`}
-            status={limited_tiers.status}
-            computedAt={limited_tiers.computed_at}
-            methodology={limited_tiers.methodology}
-            attribution={limited_tiers.attribution}
-            note={`${limited_tiers.rows.length} cards`}
-          />
-          <MtgLimitedTierTable rows={limited_tiers.rows} />
-        </div>
-
-        {/* Constructed tiers (Standard/Pioneer/Modern, topdeck.gg) — additive
-            module absent from every payload published before it shipped;
-            renders nothing at all when the key is missing from the payload
-            (see the `constructed_tiers &&` guard), never an error. */}
-        {constructed_tiers && (
-          <div id="constructed" className="mb-16 scroll-mt-24">
-            <MtgModuleHeader
-              title="Constructed Tiers"
-              status={constructed_tiers.status}
-              computedAt={constructed_tiers.computed_at}
-              methodology={constructed_tiers.methodology}
-              attribution={constructed_tiers.attribution}
-              note={
-                constructed_tiers.status === "pending_key"
-                  ? undefined
-                  : `${constructed_tiers.rows.length} archetypes/decks`
-              }
-            />
-            {constructed_tiers.status === "pending_key" ||
-            constructed_tiers.rows.length === 0 ? (
-              <div className="flex items-start gap-3 rounded-lg border border-border bg-surface px-5 py-4">
-                <Info size={15} className="text-brass mt-0.5 shrink-0" />
-                <div>
-                  <p className="font-mono text-[11px] uppercase tracking-wider text-brass mb-1">
-                    {constructed_tiers.status === "pending_key"
-                      ? "Pending a topdeck.gg key"
-                      : "No tournament results this run"}
-                  </p>
-                  <p className="text-text-secondary text-xs leading-relaxed max-w-2xl">
-                    {constructed_tiers.status === "pending_key"
-                      ? "Tournament-backed Standard/Pioneer/Modern tiers are pending a topdeck.gg key (a free 2-minute signup) — real tiers replace this panel automatically the moment it's configured, and this module never ships an invented row in the meantime."
-                      : "topdeck.gg didn’t return usable tournament results this run — check back after the next refresh; nothing here is invented while data is unavailable."}
-                  </p>
-                </div>
-              </div>
-            ) : (
-              <MtgConstructedTierTable rows={constructed_tiers.rows} />
-            )}
-          </div>
-        )}
-
-        {/* Banlist */}
-        <div id="banlist" className="mb-16 scroll-mt-24">
-          <MtgModuleHeader
-            title="Ban List & Legality Tracker"
-            status={banlist.status}
-            computedAt={banlist.computed_at}
-            methodology={banlist.methodology}
-            attribution={banlist.attribution}
-            note={`${banlist.rows.length} formats`}
-          />
-          <MtgBanlistTable rows={banlist.rows} />
-        </div>
-
-        {/* Calendar */}
-        <div id="calendar" className="mb-16 scroll-mt-24">
-          <MtgModuleHeader
-            title="Rotation & Set Calendar"
-            status={calendar.status}
-            computedAt={calendar.computed_at}
-            methodology={calendar.methodology}
-            attribution={calendar.attribution}
-            note={`${calendar.rows.length} sets`}
-          />
-          <MtgCalendarTable rows={calendar.rows} />
-        </div>
-
-        {/* Format snapshots */}
-        <div id="formats" className="mb-16 scroll-mt-24">
-          <MtgModuleHeader
-            title="Format Snapshots"
-            status={formats.status}
-            computedAt={formats.computed_at}
-            methodology={formats.methodology}
-            attribution={formats.attribution}
-            note={`${formats.rows.length} formats`}
-          />
-          <MtgFormatCards rows={formats.rows} />
-        </div>
+              {sample && <MtgSampleBanner />}
+            </>
+          }
+          sections={sections}
+        />
 
         {/* Curated external resources — cite-and-link only, never ingested */}
         <div className="border border-border rounded-lg p-6 mb-10">
