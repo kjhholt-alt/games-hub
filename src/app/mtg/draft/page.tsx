@@ -12,7 +12,7 @@ import { mtgDisplay } from "@/lib/mtgFonts";
 export const metadata: Metadata = {
   title: "MTG Draft Ranker — Real 17lands Win Rates & Draft Score Grades",
   description:
-    "The free, honest draft ranker: every card graded S–F from real 17lands game data with a transparent shrinkage formula, sortable/filterable and stamped with its sample size — no paywalled pick ratings.",
+    "The free, honest draft ranker: every card with enough games graded S–F from real 17lands game data with a transparent shrinkage formula, sortable/filterable and stamped with its sample size — no paywalled pick ratings.",
   alternates: { canonical: "https://play.buildkit.store/mtg/draft" },
 };
 
@@ -54,10 +54,10 @@ export default function MtgDraftPage() {
         </h1>
         <div className="mtg-spectrum w-44 mb-5 print:hidden" aria-hidden />
         <p className="text-text-secondary max-w-2xl mb-5 print:hidden">
-          Every card graded S through F by the BuildKit Draft Score — a transparent,
-          sample-size-shrunk composite computed from 17lands&rsquo; real, open PremierDraft
-          game data. Sort, filter, and search live; switch sets or flip to the print-friendly
-          cheat sheet for your second screen.
+          Every card with enough games graded S through F by the BuildKit Draft Score — a
+          transparent, sample-size-shrunk composite computed from 17lands&rsquo; real, open
+          PremierDraft game data. Sort, filter, and search live; switch sets or flip to the
+          print-friendly cheat sheet for your second screen.
         </p>
 
         <div className="flex flex-wrap items-center gap-2 mb-6 print:hidden">

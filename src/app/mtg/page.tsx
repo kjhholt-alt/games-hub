@@ -27,7 +27,7 @@ import {
   type MtgMetaPayload,
 } from "@/lib/mtg";
 import { getMtgDraft } from "@/lib/mtgDraft";
-import { sortDraftRows } from "@/lib/mtgDraftView";
+import { scoredRowCount, sortDraftRows } from "@/lib/mtgDraftView";
 import { mtgDisplay } from "@/lib/mtgFonts";
 
 export const metadata: Metadata = {
@@ -471,7 +471,7 @@ export default function MtgPage() {
               The draft ranker
             </p>
             <p className="mtg-display text-xl sm:text-2xl leading-snug mb-1">
-              Every draft card graded S–F from real 17lands win rates
+              Every card with enough games graded S–F from real 17lands win rates
             </p>
             <p className="text-sm text-text-secondary max-w-xl">
               Sortable, filterable, sample-size-honest — free, unlike the
@@ -482,7 +482,8 @@ export default function MtgPage() {
           <div className="flex flex-col items-end gap-2 shrink-0">
             {publishedSet && (
               <span className="font-mono text-[10px] uppercase tracking-wide text-text-secondary hidden sm:block">
-                {publishedSet.overall_rows.length} cards graded
+                {publishedSet.overall_rows.length.toLocaleString("en-US")} tracked ·{" "}
+                {scoredRowCount(publishedSet.overall_rows).toLocaleString("en-US")} scored
               </span>
             )}
             <ArrowRight

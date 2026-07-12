@@ -346,6 +346,15 @@ export function formatDraftScore(score: number | null): string {
   return `${score >= 0 ? "+" : ""}${score.toFixed(2)}`;
 }
 
+/** Count of rows that actually cleared 17lands' publish floor for a real
+ * draft_score — the honest "scored" count. Distinct from the raw tracked
+ * row count (overall_rows.length includes every card 17lands drafted this
+ * set, scored or not) — never conflate the two as "N cards graded" in
+ * user-facing copy. */
+export function scoredRowCount(rows: DraftCardRow[]): number {
+  return rows.filter((r) => r.draft_score !== null).length;
+}
+
 export function formatDecimal(value: number | null, digits = 2): string {
   return value === null ? "—" : value.toFixed(digits);
 }

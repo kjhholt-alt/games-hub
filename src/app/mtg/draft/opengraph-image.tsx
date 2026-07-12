@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const alt =
-  "MTG Draft Ranker — cards graded S-F from real 17lands win rates, no paywall";
+  "MTG Draft Ranker — cards with enough games graded S-F from real 17lands win rates, no paywall";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -112,8 +112,8 @@ export default async function Image() {
               marginBottom: 40,
             }}
           >
-            Every card graded S-F from real 17lands win rates, with a
-            transparent public formula.
+            Cards with enough games graded S-F from real 17lands win rates,
+            with a transparent public formula.
           </div>
 
           <div style={{ display: "flex", flexDirection: "row" }}>
