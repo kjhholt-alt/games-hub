@@ -1,7 +1,8 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { AlertTriangle, ListOrdered, Rows3, Search } from "lucide-react";
+import { AlertTriangle, ChevronDown, ListOrdered, Rows3, Search } from "lucide-react";
+import { MtgArchetypeTable } from "@/components/MtgArchetypeTable";
 import { MtgDraftTable } from "@/components/MtgDraftTable";
 import { MtgDraftCheatSheet } from "@/components/MtgDraftCheatSheet";
 import { MtgDraftSetHeader } from "@/components/MtgDraftSetHeader";
@@ -127,6 +128,26 @@ export function MtgDraftRanker({ sets }: { sets: DraftSetBlock[] }) {
         totalGames={activeSet.total_games}
         attribution={activeSet.attribution}
       />
+
+      {/* Additive + optional — absent entirely unless this set's archetypes
+          fetch actually published this run (independent of overall.status,
+          see DraftArchetypesModule's doc comment). Collapsed by default so
+          it never pushes the ranker table below the fold. */}
+      {activeSet.archetypes && (
+        <details className="bg-surface border border-border rounded-lg mb-6 group print:hidden">
+          <summary className="flex items-center justify-between gap-2 cursor-pointer select-none px-5 py-3.5 font-mono text-[11px] uppercase tracking-wider text-text-secondary hover:text-foreground transition-colors">
+            Color performance
+            <ChevronDown size={15} className="transition-transform group-open:rotate-180" />
+          </summary>
+          <div className="px-5 pb-5">
+            <MtgArchetypeTable
+              status={activeSet.archetypes.status}
+              rows={activeSet.archetypes.rows}
+              attribution={activeSet.archetypes.attribution}
+            />
+          </div>
+        </details>
+      )}
 
       {activeSet.status !== "published" ? (
         <>

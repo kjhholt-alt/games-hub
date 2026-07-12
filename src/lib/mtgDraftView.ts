@@ -67,6 +67,58 @@ export interface DraftCardRow extends DraftRowBase {
   image_normal?: string;
 }
 
+/** The engine only ever emits these two states for the archetypes module
+ * (`status = "published" if rows else "unavailable"`, see
+ * metahub/tiers.py's compute_archetypes) — deliberately narrower than
+ * DraftSetStatus, which also carries "sample"/"stale" for the per-card
+ * grading pipeline that archetypes doesn't share. */
+export type ArchetypeStatus = "published" | "unavailable";
+
+interface DraftArchetypeRowBase {
+  sources: string[];
+  sample_size: number;
+  computed_at: string;
+  confidence: DraftConfidence;
+}
+
+/** One 17lands color/color-pair archetype row (the Draft Ranker archetype
+ * addendum, METAHUB-SPEC.md 2026-07-11) — a set-level DECK win rate, never a
+ * per-card rating. `colors` is the WUBRG-order code the engine renamed from
+ * 17lands' own `short_name` (e.g. "W", "UB", "WUR"); `color_name` is
+ * 17lands' own label verbatim ("Mono-White", "Azorius (WU)"). `rank` is
+ * 1-indexed WITHIN this row's own `color_count` group — mono colors ranked
+ * only against other mono colors, two-color pairs only against other pairs,
+ * any real 3+ color combination 17lands actually reported only against
+ * combos of the same length — never compare `rank` across groups. A
+ * zero-games row ships both `win_rate` and `rank` `null` rather than a
+ * guessed number. */
+export interface DraftArchetypeRow extends DraftArchetypeRowBase {
+  color_name: string;
+  colors: string;
+  color_count: number;
+  wins: number;
+  games: number;
+  win_rate: number | null;
+  rank: number | null;
+}
+
+/** The optional per-set `archetypes` addendum — 17lands' `color_ratings`
+ * leaderboard, additive to the per-card overall/pair/sealed rows above and
+ * independent of the set's own `status` (archetypes can publish even when
+ * overall PremierDraft grading is too sparse to grade, and vice versa).
+ * Absent entirely (no `archetypes` key on the set block at all) when the
+ * engine's fetch failed or was skipped for that set this run — fail-closed,
+ * never an error placeholder; render nothing rather than guess. Even when
+ * present, `status` can still be "unavailable" with empty `rows` (17lands
+ * returned no combination distinct enough to publish this run). */
+export interface DraftArchetypesModule {
+  status: ArchetypeStatus;
+  computed_at: string;
+  methodology: string;
+  attribution: string[];
+  rows: DraftArchetypeRow[];
+}
+
 export interface DraftSetBlock {
   set_code: string;
   set_name: string;
@@ -95,6 +147,11 @@ export interface DraftSetBlock {
   sealed_methodology?: string;
   sealed_total_games?: number;
   sealed_rows?: DraftCardRow[];
+  /** Additive + optional color-performance leaderboard — see
+   * DraftArchetypesModule's doc comment above. Only MSH carries this as of
+   * the 2026-07-12 payload; absence on another set is a real fact (the
+   * engine's fetch failed or was skipped that run), never an error. */
+  archetypes?: DraftArchetypesModule;
 }
 
 export interface MtgDraftPayload {
@@ -351,4 +408,35 @@ export function cheatSheetGroups(
 export function scryfallSearchUrl(card: string): string {
   const q = `!"${card}"`;
   return `https://scryfall.com/search?q=${encodeURIComponent(q)}`;
+}
+
+// ─── Archetype (color performance) helpers ───────────────────────────────────
+
+export interface ArchetypeGroups {
+  pairs: DraftArchetypeRow[];
+  mono: DraftArchetypeRow[];
+  multi: DraftArchetypeRow[];
+}
+
+/** Regroups the engine's already-ranked rows (sorted color_count asc, then
+ * rank asc within each group) into the drafter-friendly reading order —
+ * two-color pairs first (the archetype drafters actually chase), then mono
+ * colors, then any real 3+ color combination 17lands reported this run.
+ * Each group keeps the engine's own within-group rank order untouched;
+ * nothing is re-sorted here. */
+export function groupArchetypeRows(rows: DraftArchetypeRow[]): ArchetypeGroups {
+  return {
+    pairs: rows.filter((r) => r.color_count === 2),
+    mono: rows.filter((r) => r.color_count === 1),
+    multi: rows.filter((r) => r.color_count >= 3),
+  };
+}
+
+/** Strips 17lands' redundant "(CODE)" suffix from a guild/pair archetype
+ * name for display next to ManaDots, which already renders the color code
+ * as pips — e.g. "Azorius (WU)" -> "Azorius". Mono-color names ("Mono-
+ * White") carry no such suffix and pass through unchanged. Cosmetic only;
+ * the payload's own `color_name` and `colors` fields are never altered. */
+export function formatArchetypeName(colorName: string): string {
+  return colorName.replace(/\s*\([A-Za-z]{2,5}\)\s*$/, "");
 }
