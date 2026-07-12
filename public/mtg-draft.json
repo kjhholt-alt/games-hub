@@ -1,14 +1,14 @@
 {
   "schema": "buildkit-mtg-draft@1",
   "status": "published",
-  "computed_at": "2026-07-12T13:45:02Z",
+  "computed_at": "2026-07-12T19:41:47Z",
   "boilerplate": "BuildKit MTG Meta Hub is unofficial Fan Content permitted under the Wizards of the Coast Fan Content Policy. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. (c) Wizards of the Coast LLC.",
   "sets": [
     {
       "set_code": "MSH",
       "set_name": "Marvel Super Heroes",
       "status": "published",
-      "computed_at": "2026-07-12T13:45:02Z",
+      "computed_at": "2026-07-12T19:41:47Z",
       "methodology": "BuildKit Draft Score = 0.75 * z(shrink(GIH WR, k=200)) + 0.25 * z(shrink(IWD, k=200)), computed from 17lands' public PremierDraft card_ratings (CC BY 4.0). shrink(x, n, k=200) = (n*x + k*mean(x over the pool)) / (n + k) is empirical-Bayes shrinkage toward the pool mean weighted by n = GIH game_count, so two cards with the SAME raw win rate but different sample sizes never tie: the low-sample card regresses harder toward the mean and cannot outrank the high-sample card. z(y) = (y - mean(y)) / population_stdev(y) is computed across EVERY card in the pool regardless of rarity -- rarity-neutral, no separate curve for commons vs mythics. Grade bands on the final score: S>=+1.25, A>=+0.5, B>=-0.25, C>=-1.0, D>=-2.0, else F; a card with no GIH data at all is 'unrated'. GIH WR = ever_drawn_win_rate, IWD = drawn_improvement_win_rate, ALSA = avg_seen, ATA = avg_pick, OH WR = opening_hand_win_rate -- 17lands' own field names, carried through unchanged. Per-color-pair rows use the identical formula computed over just that pair's card pool; a pair only publishes when 17lands' response for it is verifiably distinct from the set's overall response (seventeenlands.pair_data_is_distinct) -- 17lands' public no-auth endpoint does not currently filter by color pair for every set/pair combination, and a non-distinct pair is omitted rather than republished as fake per-pair signal. EARLY DATA -- upgrading as samples grow (148,414 total games so far). 17lands' color-pair filter returned no data distinct from the overall set this run, so pair_rows is empty rather than a duplicate of overall_rows.",
       "attribution": [
         "Win rates via 17lands.com public card ratings (CC BY 4.0)"
@@ -21,7 +21,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 1208,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Justice, Vance Astrovik",
           "color": "U",
@@ -45,7 +45,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 870,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Ka-Zar of the Savage Land",
           "color": "G",
@@ -69,7 +69,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 977,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Falcon, Winged Wonder",
           "color": "U",
@@ -93,7 +93,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 2154,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "high",
           "card": "Web Up",
           "color": "W",
@@ -117,7 +117,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 2482,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "high",
           "card": "Trickster's Stratagem",
           "color": "U",
@@ -141,7 +141,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 2671,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "high",
           "card": "Hero in Training",
           "color": "W",
@@ -165,7 +165,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 1519,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "high",
           "card": "Giant-Sized Flying Ant",
           "color": "U",
@@ -189,7 +189,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 993,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Stature, Size Shifter",
           "color": "U",
@@ -213,7 +213,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 2173,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "high",
           "card": "Murdock's Crusade",
           "color": "W",
@@ -237,7 +237,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 727,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Okoye, Dora Milaje Leader",
           "color": "W",
@@ -261,7 +261,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 735,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "She-Hulk, Jade Defender",
           "color": "G",
@@ -285,7 +285,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 675,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Dark Deed",
           "color": "B",
@@ -309,7 +309,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 1900,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "high",
           "card": "Take Up the Shield",
           "color": "W",
@@ -333,7 +333,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 2435,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "high",
           "card": "S.H.I.E.L.D. Deployment Drone",
           "color": "U",
@@ -357,7 +357,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 547,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Hydraulic Helper",
           "color": "U",
@@ -381,7 +381,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 2308,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "high",
           "card": "We Say Thee Nay!",
           "color": "U",
@@ -405,7 +405,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 1864,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "high",
           "card": "Undercover Skrull",
           "color": "G",
@@ -429,7 +429,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 533,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Falcon's Wing Harness",
           "color": "U",
@@ -453,7 +453,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 1422,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Hour of Defeat",
           "color": "B",
@@ -477,7 +477,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 1817,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "high",
           "card": "Helicarrier Strike",
           "color": "W",
@@ -501,7 +501,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 1562,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "high",
           "card": "Futurist Forge",
           "color": "U",
@@ -525,7 +525,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 1817,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "high",
           "card": "Frozen in Ice",
           "color": "U",
@@ -549,7 +549,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 727,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Agent Maria Hill",
           "color": "W",
@@ -573,7 +573,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 642,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Punishing Punch",
           "color": "G",
@@ -597,7 +597,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 1830,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "high",
           "card": "Cruel Alliance",
           "color": "B",
@@ -621,7 +621,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 655,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Subterranean Cavern",
           "color": "",
@@ -645,7 +645,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 954,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Spider-Woman, Secret Agent",
           "color": "WU",
@@ -669,7 +669,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 521,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Los Diablos Missile Base",
           "color": "",
@@ -693,7 +693,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 714,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "White Tiger, Ava Ayala",
           "color": "G",
@@ -717,7 +717,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 822,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Depower",
           "color": "U",
@@ -741,7 +741,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 761,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Wakandan Royal Guard",
           "color": "G",
@@ -765,7 +765,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 1740,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "high",
           "card": "Aerial Doombot",
           "color": "U",
@@ -789,7 +789,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 895,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Kree Sentinel",
           "color": "R",
@@ -813,7 +813,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 713,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Captain America, Living Legend",
           "color": "WU",
@@ -837,7 +837,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 544,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Super Suit",
           "color": "U",
@@ -861,7 +861,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 880,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Agent 13, Sharon Carter",
           "color": "W",
@@ -877,15 +877,15 @@
           "iwd_shrunk": 0.019114063648148088,
           "draft_score": 0.3621879497230075,
           "grade": "B",
-          "image_normal": "https://cards.scryfall.io/normal/front/1/0/107cb521-9806-47dc-92d8-b43112b63caa.jpg?1783725255",
-          "art_crop": "https://cards.scryfall.io/art_crop/front/1/0/107cb521-9806-47dc-92d8-b43112b63caa.jpg?1783725255"
+          "image_normal": "https://cards.scryfall.io/normal/front/1/0/107cb521-9806-47dc-92d8-b43112b63caa.jpg?1782681915",
+          "art_crop": "https://cards.scryfall.io/art_crop/front/1/0/107cb521-9806-47dc-92d8-b43112b63caa.jpg?1782681915"
         },
         {
           "sources": [
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 757,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Political Triumph",
           "color": "W",
@@ -909,7 +909,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 1944,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "high",
           "card": "S.H.I.E.L.D. Spy Kit",
           "color": "W",
@@ -933,7 +933,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 590,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Asgardian Citadel",
           "color": "",
@@ -957,7 +957,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 638,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "HYDRA Infiltration",
           "color": "B",
@@ -981,7 +981,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 623,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "A.I.M. Labs",
           "color": "",
@@ -1005,7 +1005,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 672,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Pym Technologies",
           "color": "",
@@ -1029,7 +1029,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 1506,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "high",
           "card": "Go Nuts!",
           "color": "G",
@@ -1053,7 +1053,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 544,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Baron Strucker, HYDRA Overlord",
           "color": "B",
@@ -1077,7 +1077,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 1043,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Serpent Specialist",
           "color": "G",
@@ -1101,7 +1101,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 720,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Patriot, Shield Wielder",
           "color": "W",
@@ -1125,7 +1125,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 805,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Baxter Building",
           "color": "",
@@ -1149,7 +1149,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 652,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Jessica Jones, Private Eye",
           "color": "R",
@@ -1173,7 +1173,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 2105,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "high",
           "card": "Brave Brawler",
           "color": "W",
@@ -1197,7 +1197,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 831,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Red Guardian, Super-Soldier",
           "color": "W",
@@ -1221,7 +1221,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 1378,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Atlantis Attacks",
           "color": "U",
@@ -1245,7 +1245,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 553,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Stark Industries",
           "color": "",
@@ -1269,7 +1269,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 538,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "White Widow, Free Agent",
           "color": "W",
@@ -1293,7 +1293,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 787,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Visions of Villainy",
           "color": "B",
@@ -1317,7 +1317,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 754,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Avengers Tower",
           "color": "",
@@ -1341,7 +1341,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 2159,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "high",
           "card": "Borough Backup",
           "color": "W",
@@ -1365,7 +1365,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 1627,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "high",
           "card": "A.I.M. Scientists",
           "color": "U",
@@ -1389,7 +1389,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 625,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Klaw, Sonic Subjugator",
           "color": "B",
@@ -1413,7 +1413,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 1502,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "high",
           "card": "Ant-Man's Army",
           "color": "G",
@@ -1437,7 +1437,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 741,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Crimson Operative",
           "color": "R",
@@ -1461,7 +1461,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 2132,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "high",
           "card": "H.E.R.B.I.E. Scout Unit",
           "color": "",
@@ -1485,7 +1485,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 577,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Kingpin's Enforcers",
           "color": "B",
@@ -1509,7 +1509,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 690,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Super Villain Lockup",
           "color": "W",
@@ -1533,7 +1533,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 642,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Birnin Zana Plaza",
           "color": "",
@@ -1557,7 +1557,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 701,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Madame Masque",
           "color": "B",
@@ -1581,7 +1581,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 921,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Avengers Hangar",
           "color": "",
@@ -1605,7 +1605,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 1297,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Savage Land Dinosaur",
           "color": "G",
@@ -1629,7 +1629,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 2151,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "high",
           "card": "Raft Security Officer",
           "color": "W",
@@ -1653,7 +1653,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 589,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "I Am Iron Man",
           "color": "U",
@@ -1677,7 +1677,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 1055,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Lightning Strike",
           "color": "R",
@@ -1701,7 +1701,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 1440,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Wakandan Drone Flock",
           "color": "W",
@@ -1725,7 +1725,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 778,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "U.S.Agent, John Walker",
           "color": "WB",
@@ -1749,7 +1749,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 2028,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "high",
           "card": "Bold Biochemist",
           "color": "U",
@@ -1773,7 +1773,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 549,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "HYDRA Troopers",
           "color": "B",
@@ -1797,7 +1797,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 825,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "HULK SMASH!",
           "color": "R",
@@ -1821,7 +1821,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 710,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Killmonger, Scourge of Wakanda",
           "color": "BG",
@@ -1845,7 +1845,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 530,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Villainous Hideout",
           "color": "",
@@ -1869,7 +1869,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 1174,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Guerrilla Gorilla",
           "color": "G",
@@ -1893,7 +1893,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 647,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Fisk Tower",
           "color": "",
@@ -1917,7 +1917,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 1282,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Widow's Bite",
           "color": "B",
@@ -1941,7 +1941,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 1348,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Pet Avengers",
           "color": "G",
@@ -1965,7 +1965,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 537,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Atlantean Cavalry",
           "color": "U",
@@ -1989,7 +1989,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 580,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Wiccan, Rising Magician",
           "color": "U",
@@ -2013,7 +2013,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 648,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Stolen Stark Tech",
           "color": "B",
@@ -2037,7 +2037,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 1303,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Red Room Recruit",
           "color": "B",
@@ -2061,7 +2061,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 1262,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Agents of S.H.I.E.L.D.",
           "color": "W",
@@ -2085,7 +2085,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 533,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Hell's Kitchen",
           "color": "",
@@ -2109,7 +2109,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 1659,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "high",
           "card": "Surveillance Room",
           "color": "",
@@ -2133,7 +2133,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 855,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Ninja of the Hand",
           "color": "B",
@@ -2157,7 +2157,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 697,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Crowd of True Believers",
           "color": "W",
@@ -2181,7 +2181,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 1228,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Agent of Atlas",
           "color": "W",
@@ -2205,7 +2205,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 581,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "HYDRA Assault Robot",
           "color": "R",
@@ -2229,7 +2229,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 1084,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Roxxon Brutes",
           "color": "B",
@@ -2253,7 +2253,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 787,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Night Nurse, Healer of Heroes",
           "color": "W",
@@ -2277,7 +2277,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 549,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "A.I.M. Synthoids",
           "color": "",
@@ -2301,7 +2301,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 662,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Repulsor Blast",
           "color": "R",
@@ -2325,7 +2325,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 723,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Rapid Rescue",
           "color": "G",
@@ -2349,7 +2349,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 766,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Knight of Wundagore",
           "color": "G",
@@ -2373,7 +2373,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 531,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Spider-Man, To the Rescue",
           "color": "WG",
@@ -2397,7 +2397,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 663,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Agents of HYDRA",
           "color": "B",
@@ -2421,7 +2421,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 385,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Agent Phil Coulson",
           "color": "W",
@@ -2445,7 +2445,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 182,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Avengers Assemble!",
           "color": "W",
@@ -2469,7 +2469,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 173,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Captain America, Super-Soldier",
           "color": "W",
@@ -2493,7 +2493,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 293,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Captain America, Wings of Freedom",
           "color": "W",
@@ -2517,7 +2517,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 205,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Captain Marvel, Earth's Protector",
           "color": "W",
@@ -2541,7 +2541,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 380,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Captain Mar-Vell, Space-Born",
           "color": "W",
@@ -2565,7 +2565,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 413,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Colleen Wing, Street Samurai",
           "color": "W",
@@ -2589,7 +2589,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 94,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Invisible Woman, Sue Storm",
           "color": "W",
@@ -2613,7 +2613,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 190,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Jennifer Walters",
           "color": "W",
@@ -2637,7 +2637,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 281,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Kree Commandos",
           "color": "W",
@@ -2661,7 +2661,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 166,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Luke Cage, Power Man",
           "color": "W",
@@ -2685,7 +2685,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 106,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "The Mind Stone",
           "color": "W",
@@ -2709,7 +2709,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 199,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Mockingbird, Ace Agent",
           "color": "W",
@@ -2733,7 +2733,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 182,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Monica Rambeau",
           "color": "W",
@@ -2757,7 +2757,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 200,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Nick Fury, Agent of S.H.I.E.L.D.",
           "color": "W",
@@ -2781,7 +2781,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 238,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Origin of the Avengers",
           "color": "W",
@@ -2805,7 +2805,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 411,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Panther Pounce",
           "color": "W",
@@ -2829,7 +2829,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 377,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Quake, Agent of S.H.I.E.L.D.",
           "color": "W",
@@ -2853,7 +2853,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 156,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "The Sentry, Golden Guardian",
           "color": "W",
@@ -2877,7 +2877,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 119,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Super-Soldier Serum",
           "color": "W",
@@ -2901,7 +2901,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 357,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Attuma, Atlantean Warlord",
           "color": "U",
@@ -2925,7 +2925,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 203,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Bruce Banner",
           "color": "U",
@@ -2949,7 +2949,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 468,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Echo, Perceptive Prodigy",
           "color": "U",
@@ -2973,7 +2973,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 464,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Iron Lad, Diverging Destiny",
           "color": "U",
@@ -2997,7 +2997,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 128,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Ironheart, Clever Champion",
           "color": "U",
@@ -3021,7 +3021,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 212,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Kang the Conqueror",
           "color": "U",
@@ -3045,7 +3045,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 400,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Kid Loki",
           "color": "U",
@@ -3069,7 +3069,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 379,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Leader, Super-Genius",
           "color": "U",
@@ -3093,7 +3093,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 330,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Loki, God of Mischief",
           "color": "U",
@@ -3117,7 +3117,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 184,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Mister Fantastic, Reed Richards",
           "color": "U",
@@ -3141,7 +3141,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 150,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Ms. Marvel, Kamala Khan",
           "color": "U",
@@ -3165,7 +3165,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 49,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Multiversal Incursion",
           "color": "U",
@@ -3189,7 +3189,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 107,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Namor the Sub-Mariner",
           "color": "U",
@@ -3213,7 +3213,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 214,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Pym Particles",
           "color": "U",
@@ -3237,7 +3237,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 62,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Rewrite History",
           "color": "U",
@@ -3261,7 +3261,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 347,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Secret Invasion",
           "color": "U",
@@ -3285,7 +3285,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 381,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "S.H.I.E.L.D. Flying Car",
           "color": "U",
@@ -3309,7 +3309,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 339,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Shuri, Wakandan Inventor",
           "color": "U",
@@ -3333,7 +3333,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 200,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Super Intelligence",
           "color": "U",
@@ -3357,7 +3357,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 138,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Thirst for Knowledge",
           "color": "U",
@@ -3381,7 +3381,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 157,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Tony Stark",
           "color": "U",
@@ -3405,7 +3405,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 396,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "The Wondrous Wasp",
           "color": "U",
@@ -3429,7 +3429,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 242,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Arnim Zola, Bio-Fanatic",
           "color": "B",
@@ -3453,7 +3453,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 68,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Baron Helmut Zemo",
           "color": "B",
@@ -3477,7 +3477,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 107,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Black Widow, Super Spy",
           "color": "B",
@@ -3501,7 +3501,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 112,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Construct a Cosmic Cube",
           "color": "B",
@@ -3525,7 +3525,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 303,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Crossbones, Malicious Mercenary",
           "color": "B",
@@ -3549,7 +3549,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 305,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Decoy Ploy",
           "color": "B",
@@ -3573,7 +3573,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 218,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Doctor Doom",
           "color": "B",
@@ -3597,7 +3597,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 158,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Doom Reigns Supreme",
           "color": "B",
@@ -3621,7 +3621,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 269,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Elektra, Daughter of the Hand",
           "color": "B",
@@ -3645,7 +3645,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 177,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Grim Reaper, Lethal Legionnaire",
           "color": "B",
@@ -3669,7 +3669,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 327,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "The Masters of Evil",
           "color": "B",
@@ -3693,7 +3693,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 158,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "M.O.D.O.K.",
           "color": "B",
@@ -3717,7 +3717,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 247,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Moonstone, Harsh Mistress",
           "color": "B",
@@ -3741,7 +3741,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 276,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Project Deathlok Soldier",
           "color": "B",
@@ -3765,7 +3765,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 111,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Robot Domination",
           "color": "B",
@@ -3789,7 +3789,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 201,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Ronin, Shadow Stalker",
           "color": "B",
@@ -3813,7 +3813,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 358,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Super-Skrull",
           "color": "B",
@@ -3837,7 +3837,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 345,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Swordsman, Sharp Scoundrel",
           "color": "B",
@@ -3861,7 +3861,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 76,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Thunderbolts Conspiracy",
           "color": "B",
@@ -3885,7 +3885,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 173,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Too Evil to Stay Dead",
           "color": "B",
@@ -3909,7 +3909,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 381,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Unliving Legionnaire",
           "color": "B",
@@ -3933,7 +3933,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 259,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Whiplash, Vengeful Engineer",
           "color": "B",
@@ -3957,7 +3957,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 425,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Yellowjacket, Heartless Marauder",
           "color": "B",
@@ -3981,7 +3981,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 130,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Avengers Disassembled",
           "color": "R",
@@ -4005,7 +4005,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 283,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Blazing Crescendo",
           "color": "R",
@@ -4029,7 +4029,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 95,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Death to Our Enemies",
           "color": "R",
@@ -4053,7 +4053,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 33,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Evil's Thrall",
           "color": "R",
@@ -4077,7 +4077,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 183,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Fin Fang Foom",
           "color": "R",
@@ -4101,7 +4101,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 200,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Hawkeye, Master Marksman",
           "color": "R",
@@ -4125,7 +4125,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 262,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Hawkeye, Young Avenger",
           "color": "R",
@@ -4149,7 +4149,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 233,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Hawkeye's Bow",
           "color": "R",
@@ -4173,7 +4173,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 20,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Hex Magic",
           "color": "R",
@@ -4197,7 +4197,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 37,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Hire a Crew",
           "color": "R",
@@ -4221,7 +4221,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 226,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Human Torch, Johnny Storm",
           "color": "R",
@@ -4245,7 +4245,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 135,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Iron Fist, Living Weapon",
           "color": "R",
@@ -4269,7 +4269,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 377,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "K'un-Lun Warrior",
           "color": "R",
@@ -4293,7 +4293,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 370,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Loki Laufeyson",
           "color": "R",
@@ -4317,7 +4317,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 330,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Machinesmith Automaton",
           "color": "R",
@@ -4341,7 +4341,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 332,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Misty Knight, Hero for Hire",
           "color": "R",
@@ -4365,7 +4365,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 108,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Mj\u00f6lnir, Hammer of Thor",
           "color": "R",
@@ -4389,7 +4389,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 449,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Photon Blast Barrage",
           "color": "R",
@@ -4413,7 +4413,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 58,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Quicksilver, Brash Blur",
           "color": "R",
@@ -4437,7 +4437,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 217,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Red Hulk",
           "color": "R",
@@ -4461,7 +4461,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 29,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "The Scarlet Witch",
           "color": "R",
@@ -4485,7 +4485,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 147,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Speed, Young Avenger",
           "color": "R",
@@ -4509,7 +4509,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 469,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Stark Industries Executive",
           "color": "R",
@@ -4533,7 +4533,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 52,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Super Speed",
           "color": "R",
@@ -4557,7 +4557,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 71,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Team Tactics",
           "color": "R",
@@ -4581,7 +4581,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 135,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Thor, God of Thunder",
           "color": "R",
@@ -4605,7 +4605,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 244,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Truck Toss",
           "color": "R",
@@ -4629,7 +4629,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 189,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Vision of Love",
           "color": "R",
@@ -4653,7 +4653,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 103,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Volcanic Villain",
           "color": "R",
@@ -4677,7 +4677,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 148,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Wonder Man, Hollywood Hero",
           "color": "R",
@@ -4701,7 +4701,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 197,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Call Damage Control",
           "color": "G",
@@ -4725,7 +4725,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 181,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Claim the Kingdom",
           "color": "G",
@@ -4749,7 +4749,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 222,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Doc Samson, Super Psychiatrist",
           "color": "G",
@@ -4773,7 +4773,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 126,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Earth's Mightiest Heroes",
           "color": "G",
@@ -4797,7 +4797,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 247,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Epic Fight",
           "color": "G",
@@ -4821,7 +4821,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 342,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Giant Growth",
           "color": "G",
@@ -4845,7 +4845,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 384,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Hellcat, Undying Vigilante",
           "color": "G",
@@ -4869,7 +4869,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 395,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Hercules, Prince of Power",
           "color": "G",
@@ -4893,7 +4893,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 88,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Heroic Feast",
           "color": "G",
@@ -4917,7 +4917,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 282,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Hulkling, Burgeoning Bruiser",
           "color": "G",
@@ -4941,7 +4941,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 370,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Mister Hyde, Monster Within",
           "color": "G",
@@ -4965,7 +4965,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 121,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Mole Man, Moloid Master",
           "color": "G",
@@ -4989,7 +4989,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 215,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Powerful Broker",
           "color": "G",
@@ -5013,7 +5013,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 318,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Reptil, Dinomorpher",
           "color": "G",
@@ -5037,7 +5037,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 293,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Restorative Technique",
           "color": "G",
@@ -5061,7 +5061,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 92,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Rick Jones, Destined Sidekick",
           "color": "G",
@@ -5085,7 +5085,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 73,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Shang-Chi, Master of Kung Fu",
           "color": "G",
@@ -5109,7 +5109,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 73,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Super Strength",
           "color": "G",
@@ -5133,7 +5133,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 236,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "The Thing, Ben Grimm",
           "color": "G",
@@ -5157,7 +5157,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 220,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Tigra, Feline Fury",
           "color": "G",
@@ -5181,7 +5181,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 231,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Training Regimen",
           "color": "G",
@@ -5205,7 +5205,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 252,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "The Unbeatable Squirrel Girl",
           "color": "G",
@@ -5229,7 +5229,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 116,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "World War Hulk",
           "color": "G",
@@ -5253,7 +5253,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 485,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Abomination, Terrifying Titan",
           "color": "RG",
@@ -5277,7 +5277,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 271,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Absorbing Man",
           "color": "UG",
@@ -5301,7 +5301,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 118,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Alien Invasion",
           "color": "RG",
@@ -5325,7 +5325,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 278,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Ant-Man, Colony Commander",
           "color": "UG",
@@ -5349,7 +5349,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 191,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Ares, God of War",
           "color": "BR",
@@ -5373,7 +5373,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 44,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Armor Wars",
           "color": "UR",
@@ -5397,7 +5397,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 218,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "The Astonishing Ant-Man",
           "color": "UG",
@@ -5421,7 +5421,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 223,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Avengers: Under Siege",
           "color": "BR",
@@ -5445,7 +5445,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 179,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Beast, Erudite Aerialist",
           "color": "UG",
@@ -5469,7 +5469,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 453,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Black Panther, Vanguard",
           "color": "WG",
@@ -5493,7 +5493,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 422,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Black Widow, Double Agent",
           "color": "WB",
@@ -5517,7 +5517,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 356,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Bullseye, Death Dealer",
           "color": "BR",
@@ -5541,7 +5541,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 270,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Cloak and Dagger, Entwined",
           "color": "WB",
@@ -5565,7 +5565,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 158,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "The Coming of Galactus",
           "color": "BG",
@@ -5589,7 +5589,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 244,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Daredevil, Man Without Fear",
           "color": "WR",
@@ -5613,7 +5613,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 185,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Ghost, Spectral Saboteur",
           "color": "UB",
@@ -5637,7 +5637,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 256,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Hulk, Gamma Goliath",
           "color": "RG",
@@ -5661,7 +5661,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 345,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Iron Man, Master of Machines",
           "color": "UR",
@@ -5685,7 +5685,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 444,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Kang, Temporal Tyrant",
           "color": "UB",
@@ -5709,7 +5709,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 155,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "King T'Challa",
           "color": "WU",
@@ -5733,7 +5733,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 206,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "The Kingpin of Crime",
           "color": "WB",
@@ -5757,7 +5757,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 261,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Madame Hydra",
           "color": "BR",
@@ -5781,7 +5781,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 346,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "The Mighty Thor, Jane Foster",
           "color": "WU",
@@ -5805,7 +5805,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 185,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Moon Girl and Devil Dinosaur",
           "color": "UG",
@@ -5829,7 +5829,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 266,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "The Ruinous Wrecking Crew",
           "color": "BR",
@@ -5853,7 +5853,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 39,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Scientist Supreme of A.I.M.",
           "color": "UB",
@@ -5877,7 +5877,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 168,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "The Serpent Society",
           "color": "BG",
@@ -5901,7 +5901,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 234,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Speedball, New Warrior",
           "color": "UR",
@@ -5925,7 +5925,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 270,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Storm, Windrider",
           "color": "WG",
@@ -5949,7 +5949,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 374,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "The Super Hero Civil War",
           "color": "WR",
@@ -5973,7 +5973,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 174,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Taskmaster, Mercenary Mimic",
           "color": "UB",
@@ -5997,7 +5997,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 81,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Thanos, the Mad Titan",
           "color": "WBR",
@@ -6021,7 +6021,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 203,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Thor Odinson",
           "color": "WR",
@@ -6045,7 +6045,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 420,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Titania, Rugged Rumbler",
           "color": "BG",
@@ -6069,7 +6069,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 360,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Vision Quest",
           "color": "UR",
@@ -6093,7 +6093,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 354,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "War Machine, Legacy of Iron",
           "color": "WR",
@@ -6117,7 +6117,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 137,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Winter Soldier, Icy Assassin",
           "color": "WB",
@@ -6141,7 +6141,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 268,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Wolverine, Fierce Fighter",
           "color": "RG",
@@ -6165,7 +6165,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Worlds Within Worlds",
           "color": "UG",
@@ -6189,7 +6189,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 6,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Arc Reactor",
           "color": "",
@@ -6213,7 +6213,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 331,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Captain America's Shield",
           "color": "",
@@ -6237,7 +6237,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 201,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Cosmic Cube",
           "color": "",
@@ -6261,7 +6261,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 477,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Dependable Quinjet",
           "color": "",
@@ -6285,7 +6285,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 168,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Iron Man Armor",
           "color": "",
@@ -6309,7 +6309,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 154,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "S.H.I.E.L.D. Helicarrier",
           "color": "",
@@ -6333,7 +6333,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 286,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Super-Adaptoid",
           "color": "",
@@ -6357,7 +6357,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 21,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "The Ten Rings",
           "color": "",
@@ -6381,7 +6381,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 108,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Ultron, Artificial Malevolence",
           "color": "",
@@ -6405,7 +6405,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 480,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Ultron Drone",
           "color": "",
@@ -6429,7 +6429,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 204,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Vibranium Energy Daggers",
           "color": "",
@@ -6453,7 +6453,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 309,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "The Vision",
           "color": "",
@@ -6477,7 +6477,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 464,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "medium",
           "card": "Viv Vision, Teen Synthezoid",
           "color": "",
@@ -6501,7 +6501,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 111,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Castle Doom",
           "color": "",
@@ -6525,7 +6525,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 162,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Dark Fortress",
           "color": "",
@@ -6549,7 +6549,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 214,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Gathering Place",
           "color": "",
@@ -6573,7 +6573,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 295,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Gleaming Bastion",
           "color": "",
@@ -6597,7 +6597,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 251,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Hidden Lair",
           "color": "",
@@ -6621,7 +6621,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 157,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "low",
           "card": "Training Compound",
           "color": "",
@@ -6645,7 +6645,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 9,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Archangel of Thune",
           "color": "W",
@@ -6669,7 +6669,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 5,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Concerted Effort",
           "color": "W",
@@ -6693,7 +6693,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 4,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Don't Move",
           "color": "W",
@@ -6717,7 +6717,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 7,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Ephemerate",
           "color": "W",
@@ -6741,7 +6741,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 20,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Final Showdown",
           "color": "W",
@@ -6765,7 +6765,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 0,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Light of Promise",
           "color": "W",
@@ -6789,7 +6789,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 15,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Path to Exile",
           "color": "W",
@@ -6813,7 +6813,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 0,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Return to the Ranks",
           "color": "W",
@@ -6837,7 +6837,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 4,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Righteous Fury",
           "color": "W",
@@ -6861,7 +6861,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 0,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Steelshaper's Gift",
           "color": "W",
@@ -6885,7 +6885,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 0,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Teferi's Protection",
           "color": "W",
@@ -6909,7 +6909,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 10,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Counterspell",
           "color": "U",
@@ -6933,7 +6933,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 2,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Cyberdrive Awakener",
           "color": "U",
@@ -6957,7 +6957,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 14,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Dig Through Time",
           "color": "U",
@@ -6981,7 +6981,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 0,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Harbinger of the Seas",
           "color": "U",
@@ -7005,7 +7005,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 2,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Lord of Atlantis",
           "color": "U",
@@ -7029,7 +7029,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 5,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Mechanized Production",
           "color": "U",
@@ -7053,7 +7053,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 5,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Narset's Reversal",
           "color": "U",
@@ -7077,7 +7077,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 29,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Reconnaissance Mission",
           "color": "U",
@@ -7101,7 +7101,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 0,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Show and Tell",
           "color": "U",
@@ -7125,7 +7125,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 7,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Simulacrum Synthesizer",
           "color": "U",
@@ -7149,7 +7149,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 6,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Three Steps Ahead",
           "color": "U",
@@ -7173,7 +7173,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 4,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Dauthi Voidwalker",
           "color": "B",
@@ -7197,7 +7197,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 6,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Deadly Dispute",
           "color": "B",
@@ -7221,7 +7221,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 17,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Extinction Event",
           "color": "B",
@@ -7245,7 +7245,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 0,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Final Act",
           "color": "B",
@@ -7269,7 +7269,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 2,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Massacre Girl",
           "color": "B",
@@ -7293,7 +7293,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 3,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "No Mercy",
           "color": "B",
@@ -7317,7 +7317,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 7,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Chaos Warp",
           "color": "R",
@@ -7341,7 +7341,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 0,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Fiery Emancipation",
           "color": "R",
@@ -7365,7 +7365,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 0,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Fury of the Horde",
           "color": "R",
@@ -7389,7 +7389,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 3,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Monstrous Rage",
           "color": "R",
@@ -7413,7 +7413,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 0,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Seize the Day",
           "color": "R",
@@ -7437,7 +7437,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 0,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Bedlam",
           "color": "R",
@@ -7461,7 +7461,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 0,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Beast Within",
           "color": "G",
@@ -7485,7 +7485,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 2,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Defense of the Heart",
           "color": "G",
@@ -7509,7 +7509,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 0,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Force of Vigor",
           "color": "G",
@@ -7533,7 +7533,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 13,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Heroic Intervention",
           "color": "G",
@@ -7557,7 +7557,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 0,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Primal Vigor",
           "color": "G",
@@ -7581,7 +7581,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 6,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Rancor",
           "color": "G",
@@ -7605,7 +7605,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 0,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Steely Resolve",
           "color": "G",
@@ -7629,7 +7629,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 0,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Unnatural Growth",
           "color": "G",
@@ -7653,7 +7653,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 3,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Anthem of Champions",
           "color": "WG",
@@ -7677,7 +7677,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 8,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Aurelia, the Warleader",
           "color": "WR",
@@ -7701,7 +7701,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 6,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Black Panther, Wakandan King",
           "color": "WG",
@@ -7725,7 +7725,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 6,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Captain America, First Avenger",
           "color": "WUR",
@@ -7749,7 +7749,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 17,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Escape to the Wilds",
           "color": "RG",
@@ -7773,7 +7773,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 3,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Fight to the Death",
           "color": "WR",
@@ -7797,7 +7797,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 7,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Iron Man, Titan of Innovation",
           "color": "UR",
@@ -7821,7 +7821,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 4,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Privileged Position",
           "color": "WG",
@@ -7845,7 +7845,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 21,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Ravenous Tyrannosaurus",
           "color": "RG",
@@ -7869,7 +7869,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 0,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Storm, Force of Nature",
           "color": "URG",
@@ -7893,7 +7893,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Sundering Growth",
           "color": "WG",
@@ -7917,7 +7917,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 15,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Warleader's Call",
           "color": "WR",
@@ -7941,7 +7941,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 4,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Wolverine, Best There Is",
           "color": "RG",
@@ -7965,7 +7965,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 0,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Horn of Greed",
           "color": "",
@@ -7989,7 +7989,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 16,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Roaming Throne",
           "color": "",
@@ -8013,7 +8013,7 @@
             "Win rates via 17lands.com public card ratings (CC BY 4.0)"
           ],
           "sample_size": 10,
-          "computed_at": "2026-07-12T13:45:02Z",
+          "computed_at": "2026-07-12T19:41:47Z",
           "confidence": "sample",
           "card": "Sword of Fire and Ice",
           "color": "",
@@ -8035,15 +8035,490 @@
       ],
       "pair_rows": {},
       "sealed_status": "unavailable",
-      "sealed_methodology": "BuildKit Draft Score = 0.75 * z(shrink(GIH WR, k=200)) + 0.25 * z(shrink(IWD, k=200)), computed from 17lands' public PremierDraft card_ratings (CC BY 4.0). shrink(x, n, k=200) = (n*x + k*mean(x over the pool)) / (n + k) is empirical-Bayes shrinkage toward the pool mean weighted by n = GIH game_count, so two cards with the SAME raw win rate but different sample sizes never tie: the low-sample card regresses harder toward the mean and cannot outrank the high-sample card. z(y) = (y - mean(y)) / population_stdev(y) is computed across EVERY card in the pool regardless of rarity -- rarity-neutral, no separate curve for commons vs mythics. Grade bands on the final score: S>=+1.25, A>=+0.5, B>=-0.25, C>=-1.0, D>=-2.0, else F; a card with no GIH data at all is 'unrated'. GIH WR = ever_drawn_win_rate, IWD = drawn_improvement_win_rate, ALSA = avg_seen, ATA = avg_pick, OH WR = opening_hand_win_rate -- 17lands' own field names, carried through unchanged. Per-color-pair rows use the identical formula computed over just that pair's card pool; a pair only publishes when 17lands' response for it is verifiably distinct from the set's overall response (seventeenlands.pair_data_is_distinct) -- 17lands' public no-auth endpoint does not currently filter by color pair for every set/pair combination, and a non-distinct pair is omitted rather than republished as fake per-pair signal. Sealed rows use the IDENTICAL BuildKit Draft Score formula computed fresh over the Sealed card pool's own mean/stdev (a card's sealed grade is never mixed with its draft grade) -- only the sample-confidence bins differ (Sealed: (20, 80, 300), vs draft's (100, 400, 1500)) since Sealed's per-card game counts run structurally lower. Sourced from 17lands' public card_ratings endpoint with `format=Sealed` (CC BY 4.0). 17lands' public Sealed card_ratings endpoint returned 9,156 ever-drawn games but NO per-card win-rate stats this run (verified live 2026-07-11: win rates appear unavailable for Sealed via this public no-auth route even when game-count totals are non-zero) -- sealed_rows ships honest-absent rather than a page of every card graded 'unrated'.",
-      "sealed_total_games": 9156,
-      "sealed_rows": []
+      "sealed_methodology": "BuildKit Draft Score = 0.75 * z(shrink(GIH WR, k=200)) + 0.25 * z(shrink(IWD, k=200)), computed from 17lands' public PremierDraft card_ratings (CC BY 4.0). shrink(x, n, k=200) = (n*x + k*mean(x over the pool)) / (n + k) is empirical-Bayes shrinkage toward the pool mean weighted by n = GIH game_count, so two cards with the SAME raw win rate but different sample sizes never tie: the low-sample card regresses harder toward the mean and cannot outrank the high-sample card. z(y) = (y - mean(y)) / population_stdev(y) is computed across EVERY card in the pool regardless of rarity -- rarity-neutral, no separate curve for commons vs mythics. Grade bands on the final score: S>=+1.25, A>=+0.5, B>=-0.25, C>=-1.0, D>=-2.0, else F; a card with no GIH data at all is 'unrated'. GIH WR = ever_drawn_win_rate, IWD = drawn_improvement_win_rate, ALSA = avg_seen, ATA = avg_pick, OH WR = opening_hand_win_rate -- 17lands' own field names, carried through unchanged. Per-color-pair rows use the identical formula computed over just that pair's card pool; a pair only publishes when 17lands' response for it is verifiably distinct from the set's overall response (seventeenlands.pair_data_is_distinct) -- 17lands' public no-auth endpoint does not currently filter by color pair for every set/pair combination, and a non-distinct pair is omitted rather than republished as fake per-pair signal. Sealed rows use the IDENTICAL BuildKit Draft Score formula computed fresh over the Sealed card pool's own mean/stdev (a card's sealed grade is never mixed with its draft grade) -- only the sample-confidence bins differ (Sealed: (20, 80, 300), vs draft's (100, 400, 1500)) since Sealed's per-card game counts run structurally lower. Sourced from 17lands' public card_ratings endpoint with `format=Sealed` (CC BY 4.0). 17lands' public Sealed card_ratings endpoint returned 11,091 ever-drawn games but NO per-card win-rate stats this run (verified live 2026-07-11: win rates appear unavailable for Sealed via this public no-auth route even when game-count totals are non-zero) -- sealed_rows ships honest-absent rather than a page of every card graded 'unrated'.",
+      "sealed_total_games": 11091,
+      "sealed_rows": [],
+      "archetypes": {
+        "status": "published",
+        "computed_at": "2026-07-12T19:41:47Z",
+        "methodology": "Set-level archetype (color) win rates from 17lands' public color_ratings endpoint (CC BY 4.0) -- PremierDraft, splashes combined. win_rate = wins/games for each real color/color-pair row; a row with zero games renders win_rate 'null' and carries no rank rather than a divide-by-zero guess. 17lands' own `is_summary` rows (aggregate totals across every archetype) are skipped entirely -- never a real archetype. rank = the archetype's win_rate position WITHIN its own color_count group -- mono colors are ranked only against other mono colors, two-color pairs only against other two-color pairs, and any 3+ color combination 17lands actually reports only against other combinations of the same length -- so a mono archetype never outranks a pair just because it carries a higher raw win rate; 1 = best in its group. Confidence bins on sample_size=games: >= 1,000 high, >= 400 medium, else low (every real row has sample_size >= 0, so there is no separate 'sample' floor here). Only the color/pair combinations 17lands' endpoint actually returns this run are published -- unreported color combinations are never synthesized.",
+        "attribution": [
+          "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+        ],
+        "rows": [
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 3934,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Mono-White",
+            "colors": "W",
+            "color_count": 1,
+            "wins": 2383,
+            "games": 3934,
+            "win_rate": 0.6057447890188103,
+            "rank": 1
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 2529,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Mono-Blue",
+            "colors": "U",
+            "color_count": 1,
+            "wins": 1472,
+            "games": 2529,
+            "win_rate": 0.5820482404112297,
+            "rank": 2
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 1884,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Mono-Green",
+            "colors": "G",
+            "color_count": 1,
+            "wins": 1042,
+            "games": 1884,
+            "win_rate": 0.5530785562632696,
+            "rank": 3
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 4299,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Mono-Black",
+            "colors": "B",
+            "color_count": 1,
+            "wins": 2296,
+            "games": 4299,
+            "win_rate": 0.5340776924866248,
+            "rank": 4
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 431,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "medium",
+            "color_name": "Mono-Red",
+            "colors": "R",
+            "color_count": 1,
+            "wins": 224,
+            "games": 431,
+            "win_rate": 0.5197215777262181,
+            "rank": 5
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 109174,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Azorius (WU)",
+            "colors": "WU",
+            "color_count": 2,
+            "wins": 64187,
+            "games": 109174,
+            "win_rate": 0.5879330243464561,
+            "rank": 1
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 52580,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Selesnya (GW)",
+            "colors": "WG",
+            "color_count": 2,
+            "wins": 30009,
+            "games": 52580,
+            "win_rate": 0.5707303157093953,
+            "rank": 2
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 31880,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Simic (GU)",
+            "colors": "UG",
+            "color_count": 2,
+            "wins": 18064,
+            "games": 31880,
+            "win_rate": 0.566624843161857,
+            "rank": 3
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 24300,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Golgari (BG)",
+            "colors": "BG",
+            "color_count": 2,
+            "wins": 13558,
+            "games": 24300,
+            "win_rate": 0.5579423868312757,
+            "rank": 4
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 35697,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Orzhov (WB)",
+            "colors": "WB",
+            "color_count": 2,
+            "wins": 19848,
+            "games": 35697,
+            "win_rate": 0.5560131103454071,
+            "rank": 5
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 25752,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Boros (RW)",
+            "colors": "WR",
+            "color_count": 2,
+            "wins": 14181,
+            "games": 25752,
+            "win_rate": 0.5506756756756757,
+            "rank": 6
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 38512,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Dimir (UB)",
+            "colors": "UB",
+            "color_count": 2,
+            "wins": 20984,
+            "games": 38512,
+            "win_rate": 0.5448691316992106,
+            "rank": 7
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 17070,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Gruul (RG)",
+            "colors": "RG",
+            "color_count": 2,
+            "wins": 9106,
+            "games": 17070,
+            "win_rate": 0.5334504979496192,
+            "rank": 8
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 31592,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Izzet (UR)",
+            "colors": "UR",
+            "color_count": 2,
+            "wins": 16754,
+            "games": 31592,
+            "win_rate": 0.5303241326918207,
+            "rank": 9
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 26612,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Rakdos (BR)",
+            "colors": "BR",
+            "color_count": 2,
+            "wins": 13702,
+            "games": 26612,
+            "win_rate": 0.5148805050353225,
+            "rank": 10
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 4855,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Sultai (UBG)",
+            "colors": "UBG",
+            "color_count": 3,
+            "wins": 2675,
+            "games": 4855,
+            "win_rate": 0.5509783728115345,
+            "rank": 1
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 4234,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Abzan (GWB)",
+            "colors": "WBG",
+            "color_count": 3,
+            "wins": 2324,
+            "games": 4234,
+            "win_rate": 0.5488899385923477,
+            "rank": 2
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 10240,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Bant (GWU)",
+            "colors": "WUG",
+            "color_count": 3,
+            "wins": 5507,
+            "games": 10240,
+            "win_rate": 0.53779296875,
+            "rank": 3
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 3154,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Temur (RGU)",
+            "colors": "URG",
+            "color_count": 3,
+            "wins": 1683,
+            "games": 3154,
+            "win_rate": 0.5336081166772353,
+            "rank": 4
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 5794,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Esper (WUB)",
+            "colors": "WUB",
+            "color_count": 3,
+            "wins": 3078,
+            "games": 5794,
+            "win_rate": 0.5312392129789437,
+            "rank": 5
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 5521,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Naya (RGW)",
+            "colors": "WRG",
+            "color_count": 3,
+            "wins": 2914,
+            "games": 5521,
+            "win_rate": 0.5278029342510415,
+            "rank": 6
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 5240,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Jeskai (WUR)",
+            "colors": "WUR",
+            "color_count": 3,
+            "wins": 2763,
+            "games": 5240,
+            "win_rate": 0.5272900763358779,
+            "rank": 7
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 4168,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Jund (BRG)",
+            "colors": "BRG",
+            "color_count": 3,
+            "wins": 2162,
+            "games": 4168,
+            "win_rate": 0.5187140115163148,
+            "rank": 8
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 3210,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Mardu (BRW)",
+            "colors": "WBR",
+            "color_count": 3,
+            "wins": 1632,
+            "games": 3210,
+            "win_rate": 0.508411214953271,
+            "rank": 9
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 3493,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Grixis (UBR)",
+            "colors": "UBR",
+            "color_count": 3,
+            "wins": 1738,
+            "games": 3493,
+            "win_rate": 0.4975665616948182,
+            "rank": 10
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 443,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "medium",
+            "color_name": "Not-Blue (BRGW)",
+            "colors": "WBRG",
+            "color_count": 4,
+            "wins": 254,
+            "games": 443,
+            "win_rate": 0.5733634311512416,
+            "rank": 1
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 326,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "low",
+            "color_name": "Not-White (UBRG)",
+            "colors": "UBRG",
+            "color_count": 4,
+            "wins": 183,
+            "games": 326,
+            "win_rate": 0.5613496932515337,
+            "rank": 2
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 224,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "low",
+            "color_name": "Not-Green (WUBR)",
+            "colors": "WUBR",
+            "color_count": 4,
+            "wins": 124,
+            "games": 224,
+            "win_rate": 0.5535714285714286,
+            "rank": 3
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 377,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "low",
+            "color_name": "Not-Red (GWUB)",
+            "colors": "WUBG",
+            "color_count": 4,
+            "wins": 203,
+            "games": 377,
+            "win_rate": 0.5384615384615384,
+            "rank": 4
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 445,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "medium",
+            "color_name": "Not-Black (RGWU)",
+            "colors": "WURG",
+            "color_count": 4,
+            "wins": 232,
+            "games": 445,
+            "win_rate": 0.5213483146067416,
+            "rank": 5
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 46,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "low",
+            "color_name": "All Colors (WUBRG)",
+            "colors": "WUBRG",
+            "color_count": 5,
+            "wins": 23,
+            "games": 46,
+            "win_rate": 0.5,
+            "rank": 1
+          }
+        ]
+      }
     },
     {
       "set_code": "SOS",
       "set_name": "Secrets of Strixhaven",
       "status": "unavailable",
-      "computed_at": "2026-07-12T13:45:02Z",
+      "computed_at": "2026-07-12T19:41:47Z",
       "methodology": "BuildKit Draft Score = 0.75 * z(shrink(GIH WR, k=200)) + 0.25 * z(shrink(IWD, k=200)), computed from 17lands' public PremierDraft card_ratings (CC BY 4.0). shrink(x, n, k=200) = (n*x + k*mean(x over the pool)) / (n + k) is empirical-Bayes shrinkage toward the pool mean weighted by n = GIH game_count, so two cards with the SAME raw win rate but different sample sizes never tie: the low-sample card regresses harder toward the mean and cannot outrank the high-sample card. z(y) = (y - mean(y)) / population_stdev(y) is computed across EVERY card in the pool regardless of rarity -- rarity-neutral, no separate curve for commons vs mythics. Grade bands on the final score: S>=+1.25, A>=+0.5, B>=-0.25, C>=-1.0, D>=-2.0, else F; a card with no GIH data at all is 'unrated'. GIH WR = ever_drawn_win_rate, IWD = drawn_improvement_win_rate, ALSA = avg_seen, ATA = avg_pick, OH WR = opening_hand_win_rate -- 17lands' own field names, carried through unchanged. Per-color-pair rows use the identical formula computed over just that pair's card pool; a pair only publishes when 17lands' response for it is verifiably distinct from the set's overall response (seventeenlands.pair_data_is_distinct) -- 17lands' public no-auth endpoint does not currently filter by color pair for every set/pair combination, and a non-distinct pair is omitted rather than republished as fake per-pair signal. This set's 17lands card_ratings response totalled 97 ever-drawn games this run -- below the 5,000-game publish floor, so no rows are graded.",
       "attribution": [
         "Win rates via 17lands.com public card ratings (CC BY 4.0)"
@@ -8055,13 +8530,488 @@
       "sealed_status": "unavailable",
       "sealed_methodology": "BuildKit Draft Score = 0.75 * z(shrink(GIH WR, k=200)) + 0.25 * z(shrink(IWD, k=200)), computed from 17lands' public PremierDraft card_ratings (CC BY 4.0). shrink(x, n, k=200) = (n*x + k*mean(x over the pool)) / (n + k) is empirical-Bayes shrinkage toward the pool mean weighted by n = GIH game_count, so two cards with the SAME raw win rate but different sample sizes never tie: the low-sample card regresses harder toward the mean and cannot outrank the high-sample card. z(y) = (y - mean(y)) / population_stdev(y) is computed across EVERY card in the pool regardless of rarity -- rarity-neutral, no separate curve for commons vs mythics. Grade bands on the final score: S>=+1.25, A>=+0.5, B>=-0.25, C>=-1.0, D>=-2.0, else F; a card with no GIH data at all is 'unrated'. GIH WR = ever_drawn_win_rate, IWD = drawn_improvement_win_rate, ALSA = avg_seen, ATA = avg_pick, OH WR = opening_hand_win_rate -- 17lands' own field names, carried through unchanged. Per-color-pair rows use the identical formula computed over just that pair's card pool; a pair only publishes when 17lands' response for it is verifiably distinct from the set's overall response (seventeenlands.pair_data_is_distinct) -- 17lands' public no-auth endpoint does not currently filter by color pair for every set/pair combination, and a non-distinct pair is omitted rather than republished as fake per-pair signal. Sealed rows use the IDENTICAL BuildKit Draft Score formula computed fresh over the Sealed card pool's own mean/stdev (a card's sealed grade is never mixed with its draft grade) -- only the sample-confidence bins differ (Sealed: (20, 80, 300), vs draft's (100, 400, 1500)) since Sealed's per-card game counts run structurally lower. Sourced from 17lands' public card_ratings endpoint with `format=Sealed` (CC BY 4.0). This set's 17lands Sealed card_ratings response totalled 0 ever-drawn games this run -- below the 2,000-game publish floor, so sealed_rows ships empty rather than guessed.",
       "sealed_total_games": 0,
-      "sealed_rows": []
+      "sealed_rows": [],
+      "archetypes": {
+        "status": "published",
+        "computed_at": "2026-07-12T19:41:47Z",
+        "methodology": "Set-level archetype (color) win rates from 17lands' public color_ratings endpoint (CC BY 4.0) -- PremierDraft, splashes combined. win_rate = wins/games for each real color/color-pair row; a row with zero games renders win_rate 'null' and carries no rank rather than a divide-by-zero guess. 17lands' own `is_summary` rows (aggregate totals across every archetype) are skipped entirely -- never a real archetype. rank = the archetype's win_rate position WITHIN its own color_count group -- mono colors are ranked only against other mono colors, two-color pairs only against other two-color pairs, and any 3+ color combination 17lands actually reports only against other combinations of the same length -- so a mono archetype never outranks a pair just because it carries a higher raw win rate; 1 = best in its group. Confidence bins on sample_size=games: >= 1,000 high, >= 400 medium, else low (every real row has sample_size >= 0, so there is no separate 'sample' floor here). Only the color/pair combinations 17lands' endpoint actually returns this run are published -- unreported color combinations are never synthesized.",
+        "attribution": [
+          "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+        ],
+        "rows": [
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 171,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "low",
+            "color_name": "Mono-Green",
+            "colors": "G",
+            "color_count": 1,
+            "wins": 99,
+            "games": 171,
+            "win_rate": 0.5789473684210527,
+            "rank": 1
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 116,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "low",
+            "color_name": "Mono-White",
+            "colors": "W",
+            "color_count": 1,
+            "wins": 65,
+            "games": 116,
+            "win_rate": 0.5603448275862069,
+            "rank": 2
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 401,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "medium",
+            "color_name": "Mono-Blue",
+            "colors": "U",
+            "color_count": 1,
+            "wins": 220,
+            "games": 401,
+            "win_rate": 0.5486284289276808,
+            "rank": 3
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 84,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "low",
+            "color_name": "Mono-Black",
+            "colors": "B",
+            "color_count": 1,
+            "wins": 43,
+            "games": 84,
+            "win_rate": 0.5119047619047619,
+            "rank": 4
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 154,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "low",
+            "color_name": "Mono-Red",
+            "colors": "R",
+            "color_count": 1,
+            "wins": 72,
+            "games": 154,
+            "win_rate": 0.4675324675324675,
+            "rank": 5
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 200879,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Orzhov (WB)",
+            "colors": "WB",
+            "color_count": 2,
+            "wins": 115069,
+            "games": 200879,
+            "win_rate": 0.5728274234738325,
+            "rank": 1
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 232743,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Boros (RW)",
+            "colors": "WR",
+            "color_count": 2,
+            "wins": 132407,
+            "games": 232743,
+            "win_rate": 0.5688978830727455,
+            "rank": 2
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 109562,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Simic (GU)",
+            "colors": "UG",
+            "color_count": 2,
+            "wins": 59785,
+            "games": 109562,
+            "win_rate": 0.5456727697559373,
+            "rank": 3
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 146548,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Golgari (BG)",
+            "colors": "BG",
+            "color_count": 2,
+            "wins": 79214,
+            "games": 146548,
+            "win_rate": 0.5405327947157246,
+            "rank": 4
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 215757,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Izzet (UR)",
+            "colors": "UR",
+            "color_count": 2,
+            "wins": 116498,
+            "games": 215757,
+            "win_rate": 0.539950036383524,
+            "rank": 5
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 1374,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Gruul (RG)",
+            "colors": "RG",
+            "color_count": 2,
+            "wins": 733,
+            "games": 1374,
+            "win_rate": 0.5334788937409025,
+            "rank": 6
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 494,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "medium",
+            "color_name": "Selesnya (GW)",
+            "colors": "WG",
+            "color_count": 2,
+            "wins": 254,
+            "games": 494,
+            "win_rate": 0.5141700404858299,
+            "rank": 7
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 698,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "medium",
+            "color_name": "Rakdos (BR)",
+            "colors": "BR",
+            "color_count": 2,
+            "wins": 353,
+            "games": 698,
+            "win_rate": 0.505730659025788,
+            "rank": 8
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 1086,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Dimir (UB)",
+            "colors": "UB",
+            "color_count": 2,
+            "wins": 531,
+            "games": 1086,
+            "win_rate": 0.4889502762430939,
+            "rank": 9
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 467,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "medium",
+            "color_name": "Azorius (WU)",
+            "colors": "WU",
+            "color_count": 2,
+            "wins": 222,
+            "games": 467,
+            "win_rate": 0.4753747323340471,
+            "rank": 10
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 3899,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Grixis (UBR)",
+            "colors": "UBR",
+            "color_count": 3,
+            "wins": 2146,
+            "games": 3899,
+            "win_rate": 0.5503975378302128,
+            "rank": 1
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 39550,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Jeskai (WUR)",
+            "colors": "WUR",
+            "color_count": 3,
+            "wins": 21344,
+            "games": 39550,
+            "win_rate": 0.5396713021491782,
+            "rank": 2
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 1560,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Naya (RGW)",
+            "colors": "WRG",
+            "color_count": 3,
+            "wins": 834,
+            "games": 1560,
+            "win_rate": 0.5346153846153846,
+            "rank": 3
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 94565,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Temur (RGU)",
+            "colors": "URG",
+            "color_count": 3,
+            "wins": 49907,
+            "games": 94565,
+            "win_rate": 0.5277533971342463,
+            "rank": 4
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 45312,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Sultai (UBG)",
+            "colors": "UBG",
+            "color_count": 3,
+            "wins": 23791,
+            "games": 45312,
+            "win_rate": 0.525048552259887,
+            "rank": 5
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 1780,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Jund (BRG)",
+            "colors": "BRG",
+            "color_count": 3,
+            "wins": 932,
+            "games": 1780,
+            "win_rate": 0.5235955056179775,
+            "rank": 6
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 1293,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Bant (GWU)",
+            "colors": "WUG",
+            "color_count": 3,
+            "wins": 659,
+            "games": 1293,
+            "win_rate": 0.5096674400618716,
+            "rank": 7
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 19596,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Mardu (BRW)",
+            "colors": "WBR",
+            "color_count": 3,
+            "wins": 9820,
+            "games": 19596,
+            "win_rate": 0.5011226780975709,
+            "rank": 8
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 11879,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Abzan (GWB)",
+            "colors": "WBG",
+            "color_count": 3,
+            "wins": 5705,
+            "games": 11879,
+            "win_rate": 0.48025928108426635,
+            "rank": 9
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 530,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "medium",
+            "color_name": "Esper (WUB)",
+            "colors": "WUB",
+            "color_count": 3,
+            "wins": 247,
+            "games": 530,
+            "win_rate": 0.4660377358490566,
+            "rank": 10
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 6713,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Not-Black (RGWU)",
+            "colors": "WURG",
+            "color_count": 4,
+            "wins": 3555,
+            "games": 6713,
+            "win_rate": 0.5295694920303888,
+            "rank": 1
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 1474,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Not-Green (WUBR)",
+            "colors": "WUBR",
+            "color_count": 4,
+            "wins": 775,
+            "games": 1474,
+            "win_rate": 0.5257801899592944,
+            "rank": 2
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 9883,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Not-White (UBRG)",
+            "colors": "UBRG",
+            "color_count": 4,
+            "wins": 5156,
+            "games": 9883,
+            "win_rate": 0.5217039360518061,
+            "rank": 3
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 1243,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Not-Red (GWUB)",
+            "colors": "WUBG",
+            "color_count": 4,
+            "wins": 630,
+            "games": 1243,
+            "win_rate": 0.5068382944489139,
+            "rank": 4
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 1437,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Not-Blue (BRGW)",
+            "colors": "WBRG",
+            "color_count": 4,
+            "wins": 707,
+            "games": 1437,
+            "win_rate": 0.4919972164231037,
+            "rank": 5
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 1502,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "All Colors (WUBRG)",
+            "colors": "WUBRG",
+            "color_count": 5,
+            "wins": 715,
+            "games": 1502,
+            "win_rate": 0.4760319573901465,
+            "rank": 1
+          }
+        ]
+      }
     },
     {
       "set_code": "TMT",
       "set_name": "Teenage Mutant Ninja Turtles",
       "status": "unavailable",
-      "computed_at": "2026-07-12T13:45:02Z",
+      "computed_at": "2026-07-12T19:41:47Z",
       "methodology": "BuildKit Draft Score = 0.75 * z(shrink(GIH WR, k=200)) + 0.25 * z(shrink(IWD, k=200)), computed from 17lands' public PremierDraft card_ratings (CC BY 4.0). shrink(x, n, k=200) = (n*x + k*mean(x over the pool)) / (n + k) is empirical-Bayes shrinkage toward the pool mean weighted by n = GIH game_count, so two cards with the SAME raw win rate but different sample sizes never tie: the low-sample card regresses harder toward the mean and cannot outrank the high-sample card. z(y) = (y - mean(y)) / population_stdev(y) is computed across EVERY card in the pool regardless of rarity -- rarity-neutral, no separate curve for commons vs mythics. Grade bands on the final score: S>=+1.25, A>=+0.5, B>=-0.25, C>=-1.0, D>=-2.0, else F; a card with no GIH data at all is 'unrated'. GIH WR = ever_drawn_win_rate, IWD = drawn_improvement_win_rate, ALSA = avg_seen, ATA = avg_pick, OH WR = opening_hand_win_rate -- 17lands' own field names, carried through unchanged. Per-color-pair rows use the identical formula computed over just that pair's card pool; a pair only publishes when 17lands' response for it is verifiably distinct from the set's overall response (seventeenlands.pair_data_is_distinct) -- 17lands' public no-auth endpoint does not currently filter by color pair for every set/pair combination, and a non-distinct pair is omitted rather than republished as fake per-pair signal. This set's 17lands card_ratings response totalled 156 ever-drawn games this run -- below the 5,000-game publish floor, so no rows are graded.",
       "attribution": [
         "Win rates via 17lands.com public card ratings (CC BY 4.0)"
@@ -8073,7 +9023,482 @@
       "sealed_status": "unavailable",
       "sealed_methodology": "BuildKit Draft Score = 0.75 * z(shrink(GIH WR, k=200)) + 0.25 * z(shrink(IWD, k=200)), computed from 17lands' public PremierDraft card_ratings (CC BY 4.0). shrink(x, n, k=200) = (n*x + k*mean(x over the pool)) / (n + k) is empirical-Bayes shrinkage toward the pool mean weighted by n = GIH game_count, so two cards with the SAME raw win rate but different sample sizes never tie: the low-sample card regresses harder toward the mean and cannot outrank the high-sample card. z(y) = (y - mean(y)) / population_stdev(y) is computed across EVERY card in the pool regardless of rarity -- rarity-neutral, no separate curve for commons vs mythics. Grade bands on the final score: S>=+1.25, A>=+0.5, B>=-0.25, C>=-1.0, D>=-2.0, else F; a card with no GIH data at all is 'unrated'. GIH WR = ever_drawn_win_rate, IWD = drawn_improvement_win_rate, ALSA = avg_seen, ATA = avg_pick, OH WR = opening_hand_win_rate -- 17lands' own field names, carried through unchanged. Per-color-pair rows use the identical formula computed over just that pair's card pool; a pair only publishes when 17lands' response for it is verifiably distinct from the set's overall response (seventeenlands.pair_data_is_distinct) -- 17lands' public no-auth endpoint does not currently filter by color pair for every set/pair combination, and a non-distinct pair is omitted rather than republished as fake per-pair signal. Sealed rows use the IDENTICAL BuildKit Draft Score formula computed fresh over the Sealed card pool's own mean/stdev (a card's sealed grade is never mixed with its draft grade) -- only the sample-confidence bins differ (Sealed: (20, 80, 300), vs draft's (100, 400, 1500)) since Sealed's per-card game counts run structurally lower. Sourced from 17lands' public card_ratings endpoint with `format=Sealed` (CC BY 4.0). This set's 17lands Sealed card_ratings response totalled 0 ever-drawn games this run -- below the 2,000-game publish floor, so sealed_rows ships empty rather than guessed.",
       "sealed_total_games": 0,
-      "sealed_rows": []
+      "sealed_rows": [],
+      "archetypes": {
+        "status": "published",
+        "computed_at": "2026-07-12T19:41:47Z",
+        "methodology": "Set-level archetype (color) win rates from 17lands' public color_ratings endpoint (CC BY 4.0) -- PremierDraft, splashes combined. win_rate = wins/games for each real color/color-pair row; a row with zero games renders win_rate 'null' and carries no rank rather than a divide-by-zero guess. 17lands' own `is_summary` rows (aggregate totals across every archetype) are skipped entirely -- never a real archetype. rank = the archetype's win_rate position WITHIN its own color_count group -- mono colors are ranked only against other mono colors, two-color pairs only against other two-color pairs, and any 3+ color combination 17lands actually reports only against other combinations of the same length -- so a mono archetype never outranks a pair just because it carries a higher raw win rate; 1 = best in its group. Confidence bins on sample_size=games: >= 1,000 high, >= 400 medium, else low (every real row has sample_size >= 0, so there is no separate 'sample' floor here). Only the color/pair combinations 17lands' endpoint actually returns this run are published -- unreported color combinations are never synthesized.",
+        "attribution": [
+          "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+        ],
+        "rows": [
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 736,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "medium",
+            "color_name": "Mono-White",
+            "colors": "W",
+            "color_count": 1,
+            "wins": 441,
+            "games": 736,
+            "win_rate": 0.5991847826086957,
+            "rank": 1
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 611,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "medium",
+            "color_name": "Mono-Blue",
+            "colors": "U",
+            "color_count": 1,
+            "wins": 347,
+            "games": 611,
+            "win_rate": 0.5679214402618658,
+            "rank": 2
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 1484,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Mono-Green",
+            "colors": "G",
+            "color_count": 1,
+            "wins": 842,
+            "games": 1484,
+            "win_rate": 0.5673854447439353,
+            "rank": 3
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 140,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "low",
+            "color_name": "Mono-Red",
+            "colors": "R",
+            "color_count": 1,
+            "wins": 68,
+            "games": 140,
+            "win_rate": 0.4857142857142857,
+            "rank": 4
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 63,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "low",
+            "color_name": "Mono-Black",
+            "colors": "B",
+            "color_count": 1,
+            "wins": 26,
+            "games": 63,
+            "win_rate": 0.4126984126984127,
+            "rank": 5
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 41620,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Orzhov (WB)",
+            "colors": "WB",
+            "color_count": 2,
+            "wins": 24218,
+            "games": 41620,
+            "win_rate": 0.5818837097549255,
+            "rank": 1
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 2172,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Azorius (WU)",
+            "colors": "WU",
+            "color_count": 2,
+            "wins": 1263,
+            "games": 2172,
+            "win_rate": 0.5814917127071824,
+            "rank": 2
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 42355,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Izzet (UR)",
+            "colors": "UR",
+            "color_count": 2,
+            "wins": 24519,
+            "games": 42355,
+            "win_rate": 0.5788926927163263,
+            "rank": 3
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 3253,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Selesnya (GW)",
+            "colors": "WG",
+            "color_count": 2,
+            "wins": 1828,
+            "games": 3253,
+            "win_rate": 0.5619428220104519,
+            "rank": 4
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 23978,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Golgari (BG)",
+            "colors": "BG",
+            "color_count": 2,
+            "wins": 13245,
+            "games": 23978,
+            "win_rate": 0.5523813495704396,
+            "rank": 5
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 23071,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Simic (GU)",
+            "colors": "UG",
+            "color_count": 2,
+            "wins": 12680,
+            "games": 23071,
+            "win_rate": 0.5496077326513805,
+            "rank": 6
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 13928,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Boros (RW)",
+            "colors": "WR",
+            "color_count": 2,
+            "wins": 7626,
+            "games": 13928,
+            "win_rate": 0.5475301550832855,
+            "rank": 7
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 1354,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Dimir (UB)",
+            "colors": "UB",
+            "color_count": 2,
+            "wins": 720,
+            "games": 1354,
+            "win_rate": 0.5317577548005908,
+            "rank": 8
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 1335,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Gruul (RG)",
+            "colors": "RG",
+            "color_count": 2,
+            "wins": 692,
+            "games": 1335,
+            "win_rate": 0.5183520599250936,
+            "rank": 9
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 527,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "medium",
+            "color_name": "Rakdos (BR)",
+            "colors": "BR",
+            "color_count": 2,
+            "wins": 245,
+            "games": 527,
+            "win_rate": 0.4648956356736243,
+            "rank": 10
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 6995,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Sultai (UBG)",
+            "colors": "UBG",
+            "color_count": 3,
+            "wins": 3919,
+            "games": 6995,
+            "win_rate": 0.5602573266619013,
+            "rank": 1
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 4141,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Temur (RGU)",
+            "colors": "URG",
+            "color_count": 3,
+            "wins": 2317,
+            "games": 4141,
+            "win_rate": 0.5595266843757547,
+            "rank": 2
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 325,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "low",
+            "color_name": "Jund (BRG)",
+            "colors": "BRG",
+            "color_count": 3,
+            "wins": 180,
+            "games": 325,
+            "win_rate": 0.5538461538461539,
+            "rank": 3
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 825,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "medium",
+            "color_name": "Bant (GWU)",
+            "colors": "WUG",
+            "color_count": 3,
+            "wins": 451,
+            "games": 825,
+            "win_rate": 0.5466666666666666,
+            "rank": 4
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 316,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "low",
+            "color_name": "Grixis (UBR)",
+            "colors": "UBR",
+            "color_count": 3,
+            "wins": 169,
+            "games": 316,
+            "win_rate": 0.5348101265822784,
+            "rank": 5
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 1182,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Jeskai (WUR)",
+            "colors": "WUR",
+            "color_count": 3,
+            "wins": 629,
+            "games": 1182,
+            "win_rate": 0.5321489001692047,
+            "rank": 6
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 2764,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "high",
+            "color_name": "Abzan (GWB)",
+            "colors": "WBG",
+            "color_count": 3,
+            "wins": 1450,
+            "games": 2764,
+            "win_rate": 0.524602026049204,
+            "rank": 7
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 615,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "medium",
+            "color_name": "Mardu (BRW)",
+            "colors": "WBR",
+            "color_count": 3,
+            "wins": 295,
+            "games": 615,
+            "win_rate": 0.4796747967479675,
+            "rank": 8
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 227,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "low",
+            "color_name": "Esper (WUB)",
+            "colors": "WUB",
+            "color_count": 3,
+            "wins": 107,
+            "games": 227,
+            "win_rate": 0.4713656387665198,
+            "rank": 9
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 234,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "low",
+            "color_name": "Naya (RGW)",
+            "colors": "WRG",
+            "color_count": 3,
+            "wins": 110,
+            "games": 234,
+            "win_rate": 0.4700854700854701,
+            "rank": 10
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 136,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "low",
+            "color_name": "Not-Black (RGWU)",
+            "colors": "WURG",
+            "color_count": 4,
+            "wins": 81,
+            "games": 136,
+            "win_rate": 0.5955882352941176,
+            "rank": 1
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 22,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "low",
+            "color_name": "Not-Green (WUBR)",
+            "colors": "WUBR",
+            "color_count": 4,
+            "wins": 13,
+            "games": 22,
+            "win_rate": 0.5909090909090909,
+            "rank": 2
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 239,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "low",
+            "color_name": "Not-White (UBRG)",
+            "colors": "UBRG",
+            "color_count": 4,
+            "wins": 139,
+            "games": 239,
+            "win_rate": 0.5815899581589958,
+            "rank": 3
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 206,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "low",
+            "color_name": "Not-Red (GWUB)",
+            "colors": "WUBG",
+            "color_count": 4,
+            "wins": 113,
+            "games": 206,
+            "win_rate": 0.5485436893203883,
+            "rank": 4
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 79,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "low",
+            "color_name": "Not-Blue (BRGW)",
+            "colors": "WBRG",
+            "color_count": 4,
+            "wins": 43,
+            "games": 79,
+            "win_rate": 0.5443037974683544,
+            "rank": 5
+          },
+          {
+            "sources": [
+              "Win rates via 17lands.com public color ratings (CC BY 4.0)"
+            ],
+            "sample_size": 4,
+            "computed_at": "2026-07-12T19:41:47Z",
+            "confidence": "low",
+            "color_name": "All Colors (WUBRG)",
+            "colors": "WUBRG",
+            "color_count": 5,
+            "wins": 1,
+            "games": 4,
+            "win_rate": 0.25,
+            "rank": 1
+          }
+        ]
+      }
     }
   ]
 }
