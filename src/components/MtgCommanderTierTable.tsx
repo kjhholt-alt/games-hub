@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 import { MtgTierPlate } from "@/components/MtgTierPlate";
 import { ManaDots } from "@/components/MtgManaPips";
@@ -10,6 +11,7 @@ import {
   isFadedConfidence,
   type CommanderTierRow,
 } from "@/lib/mtg";
+import { slugifyCommander } from "@/lib/mtgCommanderPages";
 
 /** Leaderboard depth per bucket. The full 500+ rows live in the raw payload
  * (linked from the page chrome) — rendering them all buried the signal and
@@ -21,9 +23,12 @@ const TOP_N = 20;
  * Commander/Brawl leaderboards — one dense table per engine bucket
  * (trending = newest decks, established = most-viewed decks), ranked by
  * deck count. Rank number + tier plate carry the hierarchy; mana dots carry
- * color identity; the commander name links to the representative Archidekt
- * deck (the real attribution link). Sources are cited once at module level,
- * not stamped on every row — per-row honesty is the fade + the deck count.
+ * color identity; the commander name links internally to its own detail
+ * page (/mtg/commander/<slug> — the full per-format ledger and complete
+ * top-inclusions list), while the representative Archidekt deck link-back
+ * (the real attribution link) moves to a small external-link icon beside
+ * it. Sources are cited once at module level, not stamped on every row —
+ * per-row honesty is the fade + the deck count.
  */
 export function MtgCommanderTierTable({ rows }: { rows: CommanderTierRow[] }) {
   const buckets = groupByBucket(rows);
@@ -87,35 +92,39 @@ function BucketBoard({
                   <MtgTierPlate letter={row.tier} />
                 </td>
                 <td className="px-4 py-2 font-medium">
-                  <a
-                    href={row.deck_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-brass transition-colors"
-                  >
-                    <MtgCardHover
-                      cardName={row.commander}
-                      imageUrl={row.image_normal}
-                      className="inline-flex items-center gap-2"
+                  <div className="inline-flex items-center gap-1.5">
+                    <Link
+                      href={`/mtg/commander/${slugifyCommander(row.commander)}`}
+                      className="hover:text-brass transition-colors"
                     >
-                      {row.art_crop && (
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img
-                          src={row.art_crop}
-                          alt=""
-                          loading="lazy"
-                          className="w-11 h-8 rounded object-cover border border-border shrink-0"
-                        />
-                      )}
-                      <span className="inline-flex items-center gap-1.5">
-                        {row.commander}
-                        <ExternalLink
-                          size={11}
-                          className="text-text-secondary shrink-0"
-                        />
-                      </span>
-                    </MtgCardHover>
-                  </a>
+                      <MtgCardHover
+                        cardName={row.commander}
+                        imageUrl={row.image_normal}
+                        className="inline-flex items-center gap-2"
+                      >
+                        {row.art_crop && (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img
+                            src={row.art_crop}
+                            alt=""
+                            loading="lazy"
+                            className="w-11 h-8 rounded object-cover border border-border shrink-0"
+                          />
+                        )}
+                        <span>{row.commander}</span>
+                      </MtgCardHover>
+                    </Link>
+                    <a
+                      href={row.deck_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="View the representative deck on Archidekt"
+                      aria-label={`View the representative ${row.commander} deck on Archidekt`}
+                      className="text-text-secondary hover:text-brass transition-colors shrink-0"
+                    >
+                      <ExternalLink size={11} />
+                    </a>
+                  </div>
                 </td>
                 <td className="px-3 py-2">
                   {/* colorIdentityPips returns "C" for colorless; ManaDots
