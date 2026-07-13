@@ -1,4 +1,4 @@
-// AUTO-GENERATED from deadlock-highlights/fixtures/heroes.json (38 selectable heroes).
+// AUTO-GENERATED from deadlock-highlights/fixtures/heroes.json (selectable heroes).
 // Regenerate via: npm run gen:heroes
 // Maps Deadlock hero_id -> { name, icon } for joining live hero-stats to display names + icons.
 export interface HeroMeta { id: number; name: string; icon: string | null; }
