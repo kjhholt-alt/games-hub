@@ -154,12 +154,142 @@ export interface DraftSetBlock {
   archetypes?: DraftArchetypesModule;
 }
 
+// ─── Planar Cube Day-1 Priors (METAHUB-SPEC.md 2026-07-21 addendum) ─────────
+//
+// MTG Arena's "Planar Cube Draft" launched 2026-07-21: a constant 200-card
+// "planar core" + a rotating 360-card weekly "planar module" (Week 1 =
+// Zendikar). 17lands has no per-card telemetry for it yet, so EVERY row here
+// is a DAY-1 PRIOR, never a real Planar Cube win rate — see `methodology` on
+// the module (rendered verbatim, never paraphrased) for the exact fallback
+// chain. Kruz directive (2026-07-21): no card ever renders "unrated" here —
+// every row gets a real S–F grade from the best available signal, with
+// `basis` always shown so the reader knows exactly how honest that grade is.
+
+/** Which of the 4 fallback tiers produced this row's grade — always shown
+ * next to the grade via `basis` (the human-readable form of this same
+ * fact). `cross_set_prior:<CODE>` carries the borrowed set's code. */
+export type CubePriorSource =
+  | "live_planar_cube"
+  | "powered_cube_prior"
+  | "heuristic"
+  | `cross_set_prior:${string}`;
+
+export interface CubeCardRow {
+  sources: string[];
+  sample_size: number;
+  computed_at: string;
+  confidence: DraftConfidence;
+  card: string;
+  /** ["core"], ["module"], or ["core","module"] when the same card is a
+   * fixed core card AND also reprinted into this week's rotating module
+   * (e.g. a shared fetchland). */
+  pools: string[];
+  /** The color section Wizards' own announcement article lists the card
+   * under: white/blue/black/red/green/colorless/multicolor/land. */
+  category: string;
+  /** Total physical copies across core + this week's module (a "mostly
+   * singleton" cube ships a small number of intentional duplicates). */
+  copies: number;
+  color_identity: string[] | null;
+  type_line: string | null;
+  rarity: string | null;
+  mana_cost: string | null;
+  cmc: number | null;
+  prior_source: CubePriorSource;
+  /** Human-readable form of prior_source — render this, not prior_source
+   * raw, e.g. "Cross-set prior (FIN)" / "Powered Cube sample" / "Heuristic
+   * (rarity/CMC/type)" / "Planar Cube data". */
+  basis: string;
+  gih_wr: number | null;
+  gih_games: number;
+  iwd: number | null;
+  /** Real win-rate-derived composite (empirical-Bayes z-score, or the
+   * win-rate-floor fallback for a too-small real-prior pool) — null ONLY for
+   * heuristic rows (see heuristic_score instead). Never mixed on the same
+   * scale as heuristic_score. */
+  draft_score: number | null;
+  /** The transparent, NON-statistical rarity/CMC/type point score —
+   * populated ONLY when prior_source is "heuristic", null otherwise. Never
+   * comparable to draft_score. */
+  heuristic_score: number | null;
+  /** Always a real S–F letter — cube rows never render DraftGrade's
+   * "unrated" state (Kruz directive, 2026-07-21). */
+  grade: Exclude<DraftGrade, "unrated">;
+  art_crop?: string;
+  image_normal?: string;
+}
+
+export type CubeModuleStatus = "published" | "unavailable" | "sample" | "stale";
+
+export interface CubePriorSummary {
+  live_planar_cube: number;
+  powered_cube_prior: number;
+  cross_set_prior: number;
+  heuristic: number;
+}
+
+/** The optional `cube` payload block, additive alongside `sets` — absent
+ * entirely on any payload published before this module shipped, or when the
+ * engine's cube pool data file was missing that run (tools/ingest_cube_pool.py
+ * hasn't been run yet). */
+export interface CubeModule {
+  status: CubeModuleStatus;
+  computed_at: string;
+  methodology: string;
+  attribution: string[];
+  rows: CubeCardRow[];
+  week_label: string;
+  week_start: string;
+  week_end: string;
+  source_url: string;
+  core_count: number;
+  module_count: number;
+  prior_summary: CubePriorSummary;
+}
+
 export interface MtgDraftPayload {
   schema: string;
   status: "sample" | "published";
   computed_at: string;
   boilerplate: string;
   sets: DraftSetBlock[];
+  cube?: CubeModule;
+}
+
+/** True when the cube module never got a real pool at all (the ingestion
+ * script hasn't run, or the file was unreadable) — the page should render
+ * an honest "unavailable" state rather than an empty table. */
+export function isCubeUnavailable(cube: CubeModule | undefined): boolean {
+  return !cube || cube.status === "unavailable" || cube.rows.length === 0;
+}
+
+/** Grade rank for stable secondary sort (rows already arrive pre-sorted by
+ * the engine — draft_score/heuristic_score desc within grade — this exists
+ * only for any client-side re-sort/filter that needs a tiebreaker). */
+export function cubeGradeRank(grade: CubeCardRow["grade"]): number {
+  return GRADE_ORDER.indexOf(grade as (typeof GRADE_ORDER)[number]);
+}
+
+export function matchesCubeSearch(row: CubeCardRow, query: string): boolean {
+  const q = query.trim().toLowerCase();
+  if (!q) return true;
+  return row.card.toLowerCase().includes(q);
+}
+
+export const CUBE_POOL_FILTERS = ["all", "core", "module"] as const;
+export type CubePoolFilter = (typeof CUBE_POOL_FILTERS)[number];
+
+export function matchesCubePool(row: CubeCardRow, pool: CubePoolFilter): boolean {
+  return pool === "all" || row.pools.includes(pool);
+}
+
+export const CUBE_CATEGORY_FILTERS = [
+  "all", "white", "blue", "black", "red", "green", "multicolor", "colorless", "land",
+] as const;
+export type CubeCategoryFilter = (typeof CUBE_CATEGORY_FILTERS)[number];
+
+export function matchesCubeCategory(row: CubeCardRow, category: CubeCategoryFilter): boolean {
+  return category === "all" || row.category === category;
 }
 
 /** True whenever the payload isn't a confirmed real-pipeline publish — drives

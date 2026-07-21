@@ -340,6 +340,9 @@ export default function MtgPage() {
         ? `${publishedSet.overall_rows.length}`
         : "—",
     },
+    ...(draftPayload?.cube && draftPayload.cube.rows.length > 0
+      ? [{ label: "Cube", href: "/mtg/cube", count: `${draftPayload.cube.rows.length}` }]
+      : []),
     { label: "Tiers", href: "#tiers", count: `${commander_tiers.rows.length}` },
     { label: "Limited", href: "#limited", count: `${limited_tiers.rows.length}` },
     ...(constructed_tiers

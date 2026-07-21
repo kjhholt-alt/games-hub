@@ -17,6 +17,13 @@ import path from "path";
 import type { MtgDraftPayload } from "@/lib/mtgDraftView";
 
 export type {
+  CubeCardRow,
+  CubeModule,
+  CubeModuleStatus,
+  CubePoolFilter,
+  CubeCategoryFilter,
+  CubePriorSource,
+  CubePriorSummary,
   DraftCardRow,
   DraftConfidence,
   DraftGrade,
@@ -24,7 +31,7 @@ export type {
   DraftSetStatus,
   MtgDraftPayload,
 } from "@/lib/mtgDraftView";
-export { isSampleDraftPayload } from "@/lib/mtgDraftView";
+export { isSampleDraftPayload, isCubeUnavailable } from "@/lib/mtgDraftView";
 
 const MTG_DRAFT_FILE = path.join(process.cwd(), "public", "mtg-draft.json");
 
