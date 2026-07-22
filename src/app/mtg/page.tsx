@@ -343,6 +343,9 @@ export default function MtgPage() {
     ...(draftPayload?.cube && draftPayload.cube.rows.length > 0
       ? [{ label: "Cube", href: "/mtg/cube", count: `${draftPayload.cube.rows.length}` }]
       : []),
+    ...(draftPayload?.hob && draftPayload.hob.rows.length > 0
+      ? [{ label: "The Hobbit", href: "/mtg/hob", count: `${draftPayload.hob.rows.length}` }]
+      : []),
     { label: "Tiers", href: "#tiers", count: `${commander_tiers.rows.length}` },
     { label: "Limited", href: "#limited", count: `${limited_tiers.rows.length}` },
     ...(constructed_tiers
@@ -474,19 +477,19 @@ export default function MtgPage() {
               The draft ranker
             </p>
             <p className="mtg-display text-xl sm:text-2xl leading-snug mb-1">
-              Every card with enough games graded S–F from real 17lands win rates
+              Every card in the set graded S–F — never &ldquo;unrated&rdquo;, basis always shown
             </p>
             <p className="text-sm text-text-secondary max-w-xl">
-              Sortable, filterable, sample-size-honest — free, unlike the
-              paywalled pick overlays. Plus a print-friendly cheat sheet for
-              your second screen.
+              Real 17lands win rates where the sample supports them; a cross-set prior or
+              transparent heuristic where it doesn&rsquo;t — sortable, filterable, sample-size-honest.
+              Free, unlike the paywalled pick overlays.
             </p>
           </div>
           <div className="flex flex-col items-end gap-2 shrink-0">
             {publishedSet && (
               <span className="font-mono text-[10px] uppercase tracking-wide text-text-secondary hidden sm:block">
-                {publishedSet.overall_rows.length.toLocaleString("en-US")} tracked ·{" "}
-                {scoredRowCount(publishedSet.overall_rows).toLocaleString("en-US")} scored
+                {publishedSet.overall_rows.length.toLocaleString("en-US")} graded ·{" "}
+                {scoredRowCount(publishedSet.overall_rows).toLocaleString("en-US")} real 17lands data
               </span>
             )}
             <ArrowRight

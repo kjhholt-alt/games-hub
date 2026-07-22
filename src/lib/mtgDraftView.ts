@@ -65,6 +65,22 @@ export interface DraftCardRow extends DraftRowBase {
    * ships it on every card row. */
   art_crop?: string;
   image_normal?: string;
+  /** No-bare-unrated gap-fill addendum: which of the 4 fallback tiers
+   * produced this row's grade. ABSENT (not merely null) on a row from a
+   * payload/set the engine hasn't gap-filled — e.g. pair_rows/sealed_rows
+   * NEVER carry this, and a payload published before this addendum shipped
+   * doesn't either. Present on every HOB row unconditionally (that module
+   * always routes through the gap-fill chain). See `hasGapFillBasis`. */
+  prior_source?: PriorSource;
+  /** Human-readable form of prior_source — render this, not prior_source
+   * raw, e.g. "17lands live data" / "17lands live data (thin sample)" /
+   * "Cross-set prior (FIN)" / "Heuristic (rarity/CMC/type)". Same
+   * absent-unless-gap-filled rule as prior_source. */
+  basis?: string;
+  /** The transparent, NON-statistical rarity/CMC/type point score —
+   * populated ONLY when prior_source is "heuristic" on a gap-filled row,
+   * null/absent otherwise. Never comparable to draft_score. */
+  heuristic_score?: number | null;
 }
 
 /** The engine only ever emits these two states for the archetypes module
@@ -165,14 +181,48 @@ export interface DraftSetBlock {
 // every row gets a real S–F grade from the best available signal, with
 // `basis` always shown so the reader knows exactly how honest that grade is.
 
-/** Which of the 4 fallback tiers produced this row's grade — always shown
+/** Which fallback tier produced a gap-filled row's grade — always shown
  * next to the grade via `basis` (the human-readable form of this same
- * fact). `cross_set_prior:<CODE>` carries the borrowed set's code. */
-export type CubePriorSource =
+ * fact). `cross_set_prior:<CODE>` carries the borrowed set's code.
+ * "live"/"live_low_sample" are standard-set/HOB-only (a cube module never
+ * produces them — cube's own "real live data" tier is "live_planar_cube"
+ * instead); "powered_cube_prior"/"live_planar_cube" are cube-only. One
+ * shared union since both modules render through the identical basis-
+ * column UI pattern (MtgCubeTierTable / MtgDraftTable / MtgHobTierTable). */
+export type PriorSource =
+  | "live"
+  | "live_low_sample"
   | "live_planar_cube"
   | "powered_cube_prior"
   | "heuristic"
   | `cross_set_prior:${string}`;
+
+/** @deprecated use `PriorSource` — kept as an alias so existing imports
+ * (MtgCubeTierTable.tsx, lib/mtgDraft.ts's re-export) don't need to churn. */
+export type CubePriorSource = PriorSource;
+
+/** Basis label color — one shared vocabulary across cube/standard-set/HOB
+ * tables (green=real live data, brass=a borrowed same-format prior,
+ * amber=a cross-set/cross-format prior, purple=the lowest-confidence
+ * heuristic) — zero new colors beyond what the hub already uses for
+ * confidence. */
+export function priorSourceBasisColor(priorSource: PriorSource): string {
+  if (priorSource === "live" || priorSource === "live_planar_cube") return "text-green";
+  if (priorSource === "live_low_sample") return "text-brass";
+  if (priorSource === "powered_cube_prior") return "text-brass";
+  if (priorSource === "heuristic") return "text-purple";
+  return "text-amber"; // cross_set_prior:<CODE>
+}
+
+/** True when at least one row in the set carries the no-bare-unrated
+ * gap-fill's `basis` field — drives whether a table renders the Basis
+ * column at all. A standard-set table whose rows were never gap-filled
+ * (pair_rows, sealed_rows, or a payload published before this addendum)
+ * renders the exact byte-identical table as before — same auto-detect
+ * convention the engine's own DraftScope console table uses. */
+export function hasGapFillBasis(rows: DraftCardRow[]): boolean {
+  return rows.some((r) => Boolean(r.basis));
+}
 
 export interface CubeCardRow {
   sources: string[];
@@ -247,6 +297,37 @@ export interface CubeModule {
   prior_summary: CubePriorSummary;
 }
 
+// ─── The Hobbit (HOB) Day-0 Intel Pack ───────────────────────────────────────
+//
+// MTG Arena's "The Hobbit" launches 2026-08-11; spoiler season is live now.
+// REUSES the standard DraftCardRow shape (unlike CubeCardRow — HOB flows
+// through compute_draft_set_overall_rows, the SAME function a real premier
+// set's gap-fill uses, just seeded with zero live 17lands data) — every row
+// carries prior_source/basis unconditionally (never absent), and grade is
+// never "unrated" since HOB always routes through the gap-fill chain. On
+// 2026-08-11 this module is superseded by a real `sets[]` entry once
+// 17lands starts tracking HOB PremierDraft — no code change needed then.
+
+export interface HobPriorSummary {
+  cross_set_prior: number;
+  heuristic: number;
+}
+
+export interface HobModule {
+  status: DraftSetStatus;
+  computed_at: string;
+  methodology: string;
+  attribution: string[];
+  rows: DraftCardRow[];
+  set_code: string;
+  set_name: string;
+  arena_launch_date: string;
+  revealed_count: number;
+  total_card_count: number;
+  spoiler_progress: number | null;
+  prior_summary: HobPriorSummary;
+}
+
 export interface MtgDraftPayload {
   schema: string;
   status: "sample" | "published";
@@ -254,6 +335,7 @@ export interface MtgDraftPayload {
   boilerplate: string;
   sets: DraftSetBlock[];
   cube?: CubeModule;
+  hob?: HobModule;
 }
 
 /** True when the cube module never got a real pool at all (the ingestion
@@ -261,6 +343,13 @@ export interface MtgDraftPayload {
  * an honest "unavailable" state rather than an empty table. */
 export function isCubeUnavailable(cube: CubeModule | undefined): boolean {
   return !cube || cube.status === "unavailable" || cube.rows.length === 0;
+}
+
+/** True when the HOB module has nothing revealed yet (or the source failed
+ * this run) — same "honest unavailable, never an empty table" rule as
+ * isCubeUnavailable. */
+export function isHobUnavailable(hob: HobModule | undefined): boolean {
+  return !hob || hob.status === "unavailable" || hob.rows.length === 0;
 }
 
 /** Grade rank for stable secondary sort (rows already arrive pre-sorted by

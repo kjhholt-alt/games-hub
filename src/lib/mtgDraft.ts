@@ -29,9 +29,18 @@ export type {
   DraftGrade,
   DraftSetBlock,
   DraftSetStatus,
+  HobModule,
+  HobPriorSummary,
   MtgDraftPayload,
+  PriorSource,
 } from "@/lib/mtgDraftView";
-export { isSampleDraftPayload, isCubeUnavailable } from "@/lib/mtgDraftView";
+export {
+  isSampleDraftPayload,
+  isCubeUnavailable,
+  isHobUnavailable,
+  hasGapFillBasis,
+  priorSourceBasisColor,
+} from "@/lib/mtgDraftView";
 
 const MTG_DRAFT_FILE = path.join(process.cwd(), "public", "mtg-draft.json");
 

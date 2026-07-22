@@ -7,19 +7,22 @@ import {
   formatWinRate,
   isFadedConfidence,
   priorSourceBasisColor,
-  type CubeCardRow,
+  type DraftCardRow,
 } from "@/lib/mtgDraftView";
 
 /**
- * Planar Cube Day-1 Priors table — cloned from MtgLimitedTierTable's dense
- * structure (MtgTierPlate, MtgCardHover, confidence fading, basis label
- * instead of a hidden "unrated" state). Kruz directive (2026-07-21): every
- * one of the 560-card pool's rows gets a real S–F grade here — nothing is
- * filtered out or teased behind a "top N" cut, since this page IS the full
- * list. Rows arrive PRE-SORTED by the engine (real draft_score first, best
- * to worst, then heuristic_score) — never re-sorted client-side.
+ * HOB Day-0 Intel Pack table — cloned from MtgCubeTierTable's dense
+ * structure/basis-column pattern, adapted to the STANDARD DraftCardRow
+ * shape (HOB rows come from compute_draft_set_overall_rows, the SAME
+ * function a real premier set's gap-fill uses, seeded with zero live
+ * 17lands data — see metahub/tiers.py's compute_hob_rows). Every row
+ * carries a real S–F grade and a basis label unconditionally (SPOILER
+ * SEASON priors only, never a guessed win rate) — nothing filtered out,
+ * this page IS the full revealed list. Rows arrive PRE-SORTED by the
+ * engine (real draft_score first, then heuristic_score) — never re-sorted
+ * client-side.
  */
-export function MtgCubeTierTable({ rows }: { rows: CubeCardRow[] }) {
+export function MtgHobTierTable({ rows }: { rows: DraftCardRow[] }) {
   return (
     <div className="overflow-x-auto border border-border rounded-lg">
       <table className="w-full text-sm">
@@ -28,7 +31,6 @@ export function MtgCubeTierTable({ rows }: { rows: CubeCardRow[] }) {
             <Th className="w-10 text-right">#</Th>
             <Th className="w-12">Tier</Th>
             <Th wide>Card</Th>
-            <Th>Pool</Th>
             <Th>Color</Th>
             <Th>Rarity</Th>
             <Th className="text-right">Win rate</Th>
@@ -54,23 +56,12 @@ export function MtgCubeTierTable({ rows }: { rows: CubeCardRow[] }) {
                 <MtgCardHover cardName={row.card} imageUrl={row.image_normal}>
                   {row.card}
                 </MtgCardHover>
-                {row.copies > 1 && (
-                  <span
-                    className="ml-1.5 text-[10px] font-mono text-text-secondary align-middle"
-                    title={`${row.copies} copies in this week's cube`}
-                  >
-                    ×{row.copies}
-                  </span>
-                )}
-              </td>
-              <td className="px-3 py-2 font-mono text-[10px] uppercase tracking-wide text-text-secondary">
-                {row.pools.join(" + ")}
               </td>
               <td className="px-3 py-2">
-                <ManaDots letters={(row.color_identity ?? []).join("")} />
+                <ManaDots letters={row.color} />
               </td>
               <td className="px-3 py-2">
-                <MtgDraftRarityChip rarity={row.rarity ?? "common"} />
+                <MtgDraftRarityChip rarity={row.rarity} />
               </td>
               <td className="px-3 py-2 text-right tabular-nums font-semibold">
                 {row.gih_wr !== null ? (
@@ -81,14 +72,21 @@ export function MtgCubeTierTable({ rows }: { rows: CubeCardRow[] }) {
                   </span>
                 )}
               </td>
-              <td className={`px-3 py-2 text-xs ${priorSourceBasisColor(row.prior_source)}`}>
-                {row.basis}
+              <td className={`px-3 py-2 text-xs ${row.prior_source ? priorSourceBasisColor(row.prior_source) : "text-text-secondary"}`}>
+                {row.basis ?? "—"}
               </td>
               <td className="px-3 py-2 text-right">
                 <MtgConfidenceChip confidence={row.confidence} sampleSize={row.sample_size} />
               </td>
             </tr>
           ))}
+          {rows.length === 0 && (
+            <tr>
+              <td colSpan={8} className="px-4 py-8 text-center text-sm text-text-secondary">
+                No cards revealed yet.
+              </td>
+            </tr>
+          )}
         </tbody>
       </table>
     </div>

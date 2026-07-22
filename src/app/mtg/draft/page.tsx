@@ -12,7 +12,7 @@ import { mtgDisplay } from "@/lib/mtgFonts";
 export const metadata: Metadata = {
   title: "MTG Draft Ranker — Real 17lands Win Rates & Draft Score Grades",
   description:
-    "The free, honest draft ranker: every card with enough games graded S–F from real 17lands game data with a transparent shrinkage formula, sortable/filterable and stamped with its sample size — no paywalled pick ratings.",
+    "The free, honest draft ranker: every card in the set graded S–F, never 'unrated' — real 17lands game data with a transparent shrinkage formula where the sample supports it, a cross-set prior or heuristic where it doesn't, basis always shown, no paywalled pick ratings.",
   alternates: { canonical: "https://play.buildkit.store/mtg/draft" },
 };
 
@@ -47,17 +47,19 @@ export default function MtgDraftPage() {
 
       <section className="max-w-5xl mx-auto px-6 py-12 sm:py-16">
         <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-brass mb-4 print:hidden">
-          Free · sample-size-stamped · no paywalled pick ratings
+          Free · every card graded · basis always shown
         </p>
         <h1 className="mtg-display text-4xl sm:text-5xl leading-tight mb-3">
           MTG Draft Ranker
         </h1>
         <div className="mtg-spectrum w-44 mb-5 print:hidden" aria-hidden />
         <p className="text-text-secondary max-w-2xl mb-5 print:hidden">
-          Every card with enough games graded S through F by the BuildKit Draft Score — a
-          transparent, sample-size-shrunk composite computed from 17lands&rsquo; real, open
-          PremierDraft game data. Sort, filter, and search live; switch sets or flip to the
-          print-friendly cheat sheet for your second screen.
+          Every card in the set graded S through F by the BuildKit Draft Score — never
+          &ldquo;unrated&rdquo;. Real, open 17lands PremierDraft game data with a transparent
+          sample-size-shrunk formula where the sample supports it; a cross-set 17lands prior or a
+          transparent rarity/CMC/type heuristic where it doesn&rsquo;t, always labeled in its own
+          Basis column. Sort, filter, and search live; switch sets or flip to the print-friendly
+          cheat sheet for your second screen.
         </p>
 
         <div className="flex flex-wrap items-center gap-2 mb-6 print:hidden">

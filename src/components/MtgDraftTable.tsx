@@ -8,7 +8,9 @@ import {
   formatDraftScore,
   formatIwd,
   formatWinRate,
+  hasGapFillBasis,
   isFadedConfidence,
+  priorSourceBasisColor,
   scryfallSearchUrl,
   type DraftCardRow,
   type DraftSortKey,
@@ -32,6 +34,12 @@ const COLUMNS: { key: DraftSortKey; label: string; align?: "right"; title?: stri
   { key: "alsa", label: "ALSA", align: "right", title: "Average last seen at (pick position)" },
   { key: "sample_size", label: "Sample", align: "right" },
 ];
+
+/** Basis is NOT a DraftSortKey (it's optional/absent on non-gap-filled rows,
+ * so sorting by it isn't meaningful) — rendered as a plain trailing column,
+ * same convention the engine's own DraftScope console table uses (auto-
+ * appended only `any(r.basis for r in rows)`). */
+const BASIS_LABEL = "Basis";
 
 /** Games column tint — the confidence signal without a chip per row. */
 const CONFIDENCE_TEXT: Record<string, string> = {
@@ -61,6 +69,13 @@ export function MtgDraftTable({
   sortDir: "asc" | "desc";
   onSort: (key: DraftSortKey) => void;
 }) {
+  // Draft Ranker no-bare-unrated gap-fill addendum: a Basis column only
+  // appears once at least one visible row actually carries `basis` — a
+  // pre-addendum payload, or a pair_rows/sealed_rows table (never
+  // gap-filled), renders the exact byte-identical table as before.
+  const showBasis = hasGapFillBasis(rows);
+  const colSpan = COLUMNS.length + (showBasis ? 1 : 0);
+
   return (
     <div className="overflow-x-auto border border-border rounded-lg">
       <table className="w-full text-sm">
@@ -84,6 +99,14 @@ export function MtgDraftTable({
                 </button>
               </th>
             ))}
+            {showBasis && (
+              <th
+                className="px-4 py-2.5 font-mono text-[10px] uppercase tracking-widest text-text-secondary font-medium"
+                title="Which fallback tier produced this grade — 17lands live data, a cross-set prior, or a transparent heuristic. Never hidden."
+              >
+                {BASIS_LABEL}
+              </th>
+            )}
           </tr>
         </thead>
         <tbody>
@@ -123,7 +146,15 @@ export function MtgDraftTable({
                 {formatDraftScore(row.draft_score)}
               </td>
               <td className="px-4 py-2 text-right tabular-nums font-semibold">
-                {formatWinRate(row.gih_wr)}
+                {row.gih_wr !== null ? (
+                  formatWinRate(row.gih_wr)
+                ) : row.prior_source === "heuristic" ? (
+                  <span className="font-normal text-text-secondary" title="No win-rate data — heuristic score only">
+                    heuristic
+                  </span>
+                ) : (
+                  formatWinRate(row.gih_wr)
+                )}
               </td>
               <td className="px-4 py-2 text-right tabular-nums text-text-secondary">
                 {formatIwd(row.iwd)}
@@ -137,11 +168,18 @@ export function MtgDraftTable({
               >
                 {row.sample_size.toLocaleString("en-US")}
               </td>
+              {showBasis && (
+                <td
+                  className={`px-4 py-2 text-xs ${row.prior_source ? priorSourceBasisColor(row.prior_source) : "text-text-secondary"}`}
+                >
+                  {row.basis ?? "—"}
+                </td>
+              )}
             </tr>
           ))}
           {rows.length === 0 && (
             <tr>
-              <td colSpan={COLUMNS.length} className="px-4 py-8 text-center text-sm text-text-secondary">
+              <td colSpan={colSpan} className="px-4 py-8 text-center text-sm text-text-secondary">
                 No cards match the current filters.
               </td>
             </tr>
