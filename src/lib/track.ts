@@ -26,3 +26,22 @@ export function trackPageView(page: string): void {
     fetch("/api/t", { method: "POST", body: payload, keepalive: true }).catch(() => {});
   }
 }
+
+/**
+ * Record a 404. What people type and fail to find is the most honest
+ * feature-request channel there is -- a real intent, expressed unprompted,
+ * with no survey in the way. Sent as its own event type so misses never
+ * inflate the pageview count.
+ */
+export function trackNotFound(path: string): void {
+  const payload = JSON.stringify({
+    page: path,
+    type: "not_found",
+    referrer: document.referrer || undefined,
+  });
+  if (navigator.sendBeacon) {
+    navigator.sendBeacon("/api/t", new Blob([payload], { type: "application/json" }));
+  } else {
+    fetch("/api/t", { method: "POST", body: payload, keepalive: true }).catch(() => {});
+  }
+}
