@@ -17,7 +17,20 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <nav className="flex items-center gap-5 sm:gap-6 text-xs font-mono">
+        {/*
+          Measured 464px wide inside a 369px viewport on a 375px phone, so the
+          whole PAGE scrolled sideways and the last two links (MTG Meta, News)
+          sat off-screen with no way to reach them -- on the device most of the
+          audience arrives from.
+
+          overflow-x-auto keeps the horizontal scroll INSIDE the nav rather
+          than on the document; shrink lets it give way to the wordmark instead
+          of shoving it. min-w-0 is the load-bearing part: a flex child
+          defaults to min-width:auto and refuses to shrink below its content,
+          which is exactly what pushed the page wide. Same containment pattern
+          the tier tables and MtgMetaLens already use.
+        */}
+        <nav className="flex items-center gap-5 sm:gap-6 text-xs font-mono min-w-0 shrink overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {INTERNAL_NAV.map((link) => (
             <Link
               key={link.href}

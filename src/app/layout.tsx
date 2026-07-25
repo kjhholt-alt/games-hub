@@ -32,7 +32,7 @@ export default function RootLayout({
         {children}
         <Analytics />
         <SpeedInsights />
-              <TrackingProvider />
+        <TrackingProvider />
       </body>
     </html>
   );
