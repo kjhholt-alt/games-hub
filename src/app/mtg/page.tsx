@@ -922,6 +922,14 @@ export default function MtgPage() {
         </div>
 
         <div className="flex flex-wrap items-center gap-2 mb-6">
+          <Link
+            href="/mtg/league"
+            className="inline-flex items-center gap-1.5 font-mono text-[11px] text-brass border border-brass/30 bg-brass/5 rounded-md px-2.5 py-1 hover:border-brass/60 hover:text-brass-bright transition-colors"
+            title="Open the replayable model-coached deck league"
+          >
+            <ArrowRight size={11} />
+            Proving Grounds
+          </Link>
           <span className="inline-flex items-center gap-1.5 font-mono text-[11px] text-text-secondary border border-border rounded-md px-2.5 py-1">
             payload updated {formatFreshness(payload.computed_at)}
           </span>

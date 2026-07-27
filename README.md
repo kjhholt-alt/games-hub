@@ -14,6 +14,7 @@ doesn't dilute that site's hardware SEO (topical authority / Google E-E-A-T).
 | `/` | Landing page — live tier-list preview, news preview, BuildKit network links |
 | `/tier-lists` | **Centerpiece.** Live Deadlock hero tier list (S–D) from real win-rate data |
 | `/news` | Gaming + AI trending topics, read from content-radar's feed |
+| `/mtg/league` | **MTG Proving Grounds.** Model-coached deck league receipts plus a source-linked, fail-closed Brawl admission queue |
 
 ## The Deadlock tier list (live, not mocked)
 
