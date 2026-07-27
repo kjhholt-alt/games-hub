@@ -9,8 +9,9 @@ test.describe("/mtg/league — MTG Proving Grounds", () => {
     await expect(page.getByRole("heading", { level: 1, name: "Proving Grounds" })).toBeVisible();
     await expect(page.getByText("sample", { exact: true })).toBeVisible();
     await expect(page.getByRole("heading", { name: "Brawl admission queue" })).toBeVisible();
-    await expect(page.getByText("Admission remains 0/20")).toBeVisible();
+    await expect(page.getByText("Engine admission remains 0/18")).toBeVisible();
     await expect(page.getByText("Legality verified")).toBeVisible();
+    await expect(page.getByText("legality verified", { exact: true }).first()).toBeVisible();
     await expect(page.getByText("rejected legality", { exact: true }).first()).toBeVisible();
   });
 

@@ -28,6 +28,7 @@ export default function MtgLeaguePage() {
   const rejected = intake.candidates.filter(
     (candidate) => candidate.eligibility === "rejected"
   ).length;
+  const auditHeld = audit.candidate_count - audit.legality_verified_count;
   const auditById = new Map(audit.candidates.map((candidate) => [candidate.id, candidate]));
 
   return (
@@ -89,9 +90,9 @@ export default function MtgLeaguePage() {
               <p className="font-mono text-[9px] uppercase tracking-[0.18em] text-brass">Live source intake</p>
               <h2 id="intake-title" className="mtg-display mt-1 text-2xl">Brawl admission queue</h2>
               <p className="mt-2 max-w-2xl text-sm leading-relaxed text-text-secondary">
-                These are real cached decklists discovered by MetaHub and resolved through Archidekt—not the
-                synthetic league above. Structure and frozen Oracle legality are checked; engine admission and
-                game execution remain intentionally locked.
+                These are real decklists from Archidekt&apos;s Competitive Brawl format—not the synthetic league
+                above. Structure and frozen Oracle legality are checked; engine admission and game execution
+                remain intentionally locked.
               </p>
             </div>
             <a
@@ -120,6 +121,7 @@ export default function MtgLeaguePage() {
               const cardCount = candidate.cards.reduce((total, card) => total + card.quantity, 0);
               const auditResult = auditById.get(candidate.id);
               const verdict = auditResult?.verdict ?? "held_unresolved_cards";
+              const verified = verdict === "legality_verified";
               return (
                 <div
                   key={candidate.id}
@@ -143,7 +145,11 @@ export default function MtgLeaguePage() {
                   </div>
                   <span className="font-mono text-[10px] tabular-nums text-text-secondary">{cardCount} cards</span>
                   <span
-                    className="w-fit rounded border border-red/30 bg-red-dim px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-wide text-red"
+                    className={`w-fit rounded border px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-wide ${
+                      verified
+                        ? "border-amber/30 bg-amber-dim text-amber"
+                        : "border-red/30 bg-red-dim text-red"
+                    }`}
                   >
                     {verdict.replaceAll("_", " ")}
                   </span>
@@ -155,9 +161,10 @@ export default function MtgLeaguePage() {
           <div className="flex items-start gap-3 border-t border-border bg-amber-dim p-4 text-xs leading-relaxed text-amber">
             <ShieldAlert className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
             <p>
-              Admission remains 0/{intake.candidate_count}. Frozen Oracle audit {shortSnapshot} resolved every
-              staged card name and rejected all 13 structurally valid lists for Competitive Brawl legality or
-              commander color identity. The source corpus contains Commander lists—not a usable Brawl top 20.
+              Engine admission remains 0/{intake.candidate_count}. Frozen Oracle audit {shortSnapshot} verified{" "}
+              {audit.legality_verified_count} real Competitive Brawl lists; {auditHeld} are rejected or held.
+              The verified ten now await trusted feature extraction and a real match adapter—no proxy result can
+              promote them.
             </p>
           </div>
         </section>

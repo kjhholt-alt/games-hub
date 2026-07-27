@@ -11,1168 +11,185 @@
     "network_fetch": false
   },
   "format": "competitivebrawl",
-  "candidate_count": 20,
-  "structure_valid_count": 13,
-  "legality_verified_count": 0,
+  "candidate_count": 18,
+  "structure_valid_count": 12,
+  "legality_verified_count": 10,
   "eligible_count": 0,
   "candidates": [
     {
-      "id": "archidekt-4868475",
-      "name": "Lore Of The Rings (budget build)",
-      "source_url": "https://archidekt.com/decks/4868475",
-      "commander": "Tom Bombadil",
+      "id": "archidekt-12547753",
+      "name": "Acererak Historic Brawl",
+      "source_url": "https://archidekt.com/decks/12547753",
+      "commander": "A-Acererak the Archlich",
       "commander_color_identity": [
-        "B",
+        "B"
+      ],
+      "structure_status": "structure_valid",
+      "unique_cards": 72,
+      "resolved_cards": 71,
+      "competitivebrawl_legal_cards": 71,
+      "representative_printing_on_arena": 35,
+      "issue_count": 1,
+      "issues": [
+        {
+          "name": "A-The Meathook Massacre",
+          "reasons": [
+            "unresolved"
+          ]
+        }
+      ],
+      "verdict": "held_unresolved_cards"
+    },
+    {
+      "id": "archidekt-15891877",
+      "name": "MTGArena - Brawl: Dinosaurs",
+      "source_url": "https://archidekt.com/decks/15891877",
+      "commander": "Zacama, Primal Calamity",
+      "commander_color_identity": [
         "G",
         "R",
-        "U",
         "W"
-      ],
-      "structure_status": "structure_valid",
-      "unique_cards": 95,
-      "resolved_cards": 95,
-      "competitivebrawl_legal_cards": 72,
-      "representative_printing_on_arena": 28,
-      "issue_count": 23,
-      "issues": [
-        {
-          "name": "Abundant Growth",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Bad River",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Brago, King Eternal",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Clockspinning",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Commander's Sphere",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Doomwake Giant",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Exotic Orchard",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Flood Plain",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Ghen, Arcanum Weaver",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Grasslands",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Jungle Shrine",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Krosan Verge",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Mesa Enchantress",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Mountain Valley",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Nature's Lore",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Power Conduit",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Resurgent Belief",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Rocky Tar Pit",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Scholar of New Horizons",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Seaside Citadel",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Sol Ring",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Song of Eärendil",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "The Horus Heresy",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        }
-      ],
-      "verdict": "rejected_legality"
-    },
-    {
-      "id": "archidekt-8460469",
-      "name": "Peace Offering - Bloomburrow Commander",
-      "source_url": "https://archidekt.com/decks/8460469",
-      "commander": "Ms. Bumbleflower",
-      "commander_color_identity": [
-        "G",
-        "U",
-        "W"
-      ],
-      "structure_status": "structure_valid",
-      "unique_cards": 91,
-      "resolved_cards": 91,
-      "competitivebrawl_legal_cards": 53,
-      "representative_printing_on_arena": 15,
-      "issue_count": 38,
-      "issues": [
-        {
-          "name": "Bloodroot Apothecary",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Body of Knowledge",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Coiling Oracle",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Communal Brewing",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Exotic Orchard",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Fellwar Stone",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Fisher's Talent",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Flooded Grove",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Generous Gift",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Ghirapur Orrery",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Hoofprints of the Stag",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Illusionist's Gambit",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Intellectual Offering",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Kalonian Hydra",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Managorger Hydra",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Martial Impetus",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Mr. Foxglove",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Ms. Bumbleflower",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Octomancer",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Overflowing Basin",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Perch Protection",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Perplexing Test",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Promise of Loyalty",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Riot Control",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Seaside Citadel",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Selvala, Explorer Returned",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Skycloud Expanse",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Sol Ring",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Spore Frog",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Steelburr Champion",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Sungrass Prairie",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Sunscorch Regent",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Tempt with Bunnies",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Tempt with Discovery",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Tenuous Truce",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Thought Vessel",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Twenty-Toed Toad",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Wizard Class",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        }
-      ],
-      "verdict": "rejected_legality"
-    },
-    {
-      "id": "archidekt-1904544",
-      "name": "Upping the Average - Wilhelt, the Rotcleaver",
-      "source_url": "https://archidekt.com/decks/1904544",
-      "commander": "Wilhelt, the Rotcleaver",
-      "commander_color_identity": [
-        "B",
-        "U"
       ],
       "structure_status": "rejected",
-      "unique_cards": 93,
-      "resolved_cards": 93,
-      "competitivebrawl_legal_cards": 56,
-      "representative_printing_on_arena": 16,
-      "issue_count": 37,
-      "issues": [
-        {
-          "name": "Acererak the Archlich",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Aetherspouts",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Carrion Feeder",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Cemetery Reaper",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Charcoal Diamond",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Cleaver Skaab",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Commander's Sphere",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Corpse Augur",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Crowded Crypt",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Curse of the Restless Dead",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Darkwater Catacombs",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Dimir Aqueduct",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Drown in Dreams",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Empty the Laboratory",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Endless Ranks of the Dead",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Exotic Orchard",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Ghouls' Night Out",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Gravecrawler",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Gravespawn Sovereign",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Hordewing Skaab",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Myriad Landscape",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Necrotic Hex",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Noxious Ghoul",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Pact of the Serpent",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Path of Ancestry",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Plague Belcher",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Ravenous Rotbelly",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Reality Shift",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Rooftop Storm",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Sol Ring",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Tainted Isle",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Tomb Tyrant",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Undead Alchemist",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Undead Warchief",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Vengeful Dead",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Wilhelt, the Rotcleaver",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Zombie Apocalypse",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        }
-      ],
+      "unique_cards": 97,
+      "resolved_cards": 97,
+      "competitivebrawl_legal_cards": 97,
+      "representative_printing_on_arena": 55,
+      "issue_count": 0,
+      "issues": [],
       "verdict": "rejected_structure"
     },
     {
-      "id": "archidekt-5775250",
-      "name": "Veloci-Ramp-Tor - The Lost Caverns of Ixalan Commander",
-      "source_url": "https://archidekt.com/decks/5775250",
-      "commander": "Pantlaza, Sun-Favored",
+      "id": "archidekt-24406644",
+      "name": "Comp. Brawl Breach",
+      "source_url": "https://archidekt.com/decks/24406644",
+      "commander": "Norman Osborn // Green Goblin",
       "commander_color_identity": [
-        "G",
+        "B",
         "R",
-        "W"
+        "U"
       ],
       "structure_status": "structure_valid",
-      "unique_cards": 87,
-      "resolved_cards": 87,
-      "competitivebrawl_legal_cards": 67,
-      "representative_printing_on_arena": 12,
-      "issue_count": 20,
-      "issues": [
-        {
-          "name": "Apex Altisaur",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Bronzebeak Foragers",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Curious Altisaur",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Dinosaur Egg",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Exotic Orchard",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "From the Rubble",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Generous Gift",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Jungle Shrine",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Kessig Wolf Run",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Mosswort Bridge",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Myriad Landscape",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Path of Ancestry",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Progenitor's Icon",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Regal Behemoth",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Scion of Calamity",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Sol Ring",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Sunfrill Imitator",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Temple of the False God",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Wayta, Trainer Prodigy",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Wrathful Raptors",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        }
-      ],
-      "verdict": "rejected_legality"
+      "unique_cards": 100,
+      "resolved_cards": 100,
+      "competitivebrawl_legal_cards": 100,
+      "representative_printing_on_arena": 49,
+      "issue_count": 0,
+      "issues": [],
+      "verdict": "legality_verified"
     },
     {
-      "id": "archidekt-7031486",
-      "name": "Buffs by Hans",
-      "source_url": "https://archidekt.com/decks/7031486",
-      "commander": "Xyris, the Writhing Storm",
+      "id": "archidekt-17883190",
+      "name": "Dragonclaw Ranked Brawl",
+      "source_url": "https://archidekt.com/decks/17883190",
+      "commander": "Eshki Dragonclaw",
       "commander_color_identity": [
         "G",
         "R",
         "U"
       ],
       "structure_status": "structure_valid",
-      "unique_cards": 81,
-      "resolved_cards": 81,
-      "competitivebrawl_legal_cards": 60,
-      "representative_printing_on_arena": 33,
-      "issue_count": 21,
-      "issues": [
-        {
-          "name": "Bladegriff Prototype",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Brute Force",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Coiling Oracle",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Cold-Eyed Selkie",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Djinn Illuminatus",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Geode Golem",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Gruul Turf",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Invigorate",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Izzet Boilerworks",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Kessig Wolf Run",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Kodama's Reach",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Mischievous Catgeist // Catlike Curiosity",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Mutagenic Growth",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Ohran Viper",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Simic Growth Chamber",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Snake Umbra",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Soul's Fire",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Surrakar Spellblade",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Vedalken Heretic",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Vines of Vastwood",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Xyris, the Writhing Storm",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        }
-      ],
-      "verdict": "rejected_legality"
+      "unique_cards": 97,
+      "resolved_cards": 97,
+      "competitivebrawl_legal_cards": 97,
+      "representative_printing_on_arena": 70,
+      "issue_count": 0,
+      "issues": [],
+      "verdict": "legality_verified"
     },
     {
-      "id": "archidekt-1585124",
-      "name": "Baby Lasagna",
-      "source_url": "https://archidekt.com/decks/1585124",
-      "commander": "Baba Lysaga, Night Witch",
+      "id": "archidekt-24341199",
+      "name": "Glarb Control",
+      "source_url": "https://archidekt.com/decks/24341199",
+      "commander": "Glarb, Calamity's Augur",
       "commander_color_identity": [
         "B",
-        "G"
+        "G",
+        "U"
       ],
       "structure_status": "rejected",
-      "unique_cards": 112,
-      "resolved_cards": 112,
-      "competitivebrawl_legal_cards": 82,
-      "representative_printing_on_arena": 39,
-      "issue_count": 30,
-      "issues": [
-        {
-          "name": "Animate Dead",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Aspect of Mongoose",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Baloth Prime",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Blossoming Bogbeast",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Changing Loyalty",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Deadly Tempest",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Defiling Daemogoth",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Dryad Arbor",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Dunes of the Dead",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Erinis, Gloom Stalker",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Eumidian Hatchery",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Exploration Broodship",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Galadhrim Ambush",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Gods' Eye, Gate to the Reikai",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Instill Energy",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Liquimetal Torque",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Living Death",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Mazirek, Kraul Death Priest",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Memnite",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Mishra's Factory",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Nature's Chosen",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Patriar's Seal",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Sol Ring",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Starscream, Power Hungry // Starscream, Seeker Leader",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Twilight Mire",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Undergrowth Stadium",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Urza's Saga",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Viridescent Bog",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Wild Growth",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Will of the Sultai",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        }
-      ],
+      "unique_cards": 185,
+      "resolved_cards": 185,
+      "competitivebrawl_legal_cards": 185,
+      "representative_printing_on_arena": 107,
+      "issue_count": 0,
+      "issues": [],
       "verdict": "rejected_structure"
     },
     {
-      "id": "archidekt-18520785",
-      "name": "Praise the Sun, Fire the Gun",
-      "source_url": "https://archidekt.com/decks/18520785",
-      "commander": "Heliod, Sun-Crowned",
+      "id": "archidekt-21852727",
+      "name": "Ugin, Eye of the Storms",
+      "source_url": "https://archidekt.com/decks/21852727",
+      "commander": "Ugin, Eye of the Storms",
+      "commander_color_identity": [],
+      "structure_status": "structure_valid",
+      "unique_cards": 74,
+      "resolved_cards": 74,
+      "competitivebrawl_legal_cards": 74,
+      "representative_printing_on_arena": 59,
+      "issue_count": 0,
+      "issues": [],
+      "verdict": "legality_verified"
+    },
+    {
+      "id": "archidekt-15208784",
+      "name": "Cloud, mercenaire de Midgar",
+      "source_url": "https://archidekt.com/decks/15208784",
+      "commander": "Cloud, Midgar Mercenary",
       "commander_color_identity": [
         "W"
       ],
       "structure_status": "rejected",
       "unique_cards": 83,
-      "resolved_cards": 83,
-      "competitivebrawl_legal_cards": 63,
-      "representative_printing_on_arena": 35,
-      "issue_count": 20,
+      "resolved_cards": 76,
+      "competitivebrawl_legal_cards": 53,
+      "representative_printing_on_arena": 31,
+      "issue_count": 30,
       "issues": [
         {
-          "name": "Abeyance",
+          "name": "Ardenn, Intrepid Archaeologist",
           "reasons": [
             "not_legal_competitivebrawl"
           ]
         },
         {
-          "name": "Crystal Vein",
+          "name": "Benevolent Bodyguard",
+          "reasons": [
+            "not_legal_competitivebrawl"
+          ]
+        },
+        {
+          "name": "Cat",
+          "reasons": [
+            "unresolved"
+          ]
+        },
+        {
+          "name": "Cid, Freeflier Pilot",
+          "reasons": [
+            "not_legal_competitivebrawl"
+          ]
+        },
+        {
+          "name": "City's Blessing",
+          "reasons": [
+            "unresolved"
+          ]
+        },
+        {
+          "name": "Codsworth, Handy Helper",
+          "reasons": [
+            "not_legal_competitivebrawl"
+          ]
+        },
+        {
+          "name": "Construct",
+          "reasons": [
+            "unresolved"
+          ]
+        },
+        {
+          "name": "Eiganjo Castle",
           "reasons": [
             "not_legal_competitivebrawl"
           ]
@@ -1184,2885 +201,19 @@
           ]
         },
         {
+          "name": "Flagstones of Trokair",
+          "reasons": [
+            "not_legal_competitivebrawl"
+          ]
+        },
+        {
           "name": "Galadriel's Dismissal",
           "reasons": [
             "not_legal_competitivebrawl"
           ]
         },
         {
-          "name": "Grim Monolith",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Leonin Arbiter",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Lotus Petal",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Mana Vault",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Rebuff the Wicked",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Reverent Mantra",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Salvage Scout",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Sanctum Prelate",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Scrapyard Recombiner",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Sensei's Divining Top",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Sol Ring",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Talon Gates of Madara",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "The One Ring",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Triskelion",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Walking Ballista",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Weathered Wayfarer",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        }
-      ],
-      "verdict": "rejected_structure"
-    },
-    {
-      "id": "archidekt-7097093",
-      "name": "House Always Wins",
-      "source_url": "https://archidekt.com/decks/7097093",
-      "commander": "Mr. House, President and CEO",
-      "commander_color_identity": [
-        "B",
-        "R",
-        "W"
-      ],
-      "structure_status": "structure_valid",
-      "unique_cards": 89,
-      "resolved_cards": 89,
-      "competitivebrawl_legal_cards": 42,
-      "representative_printing_on_arena": 18,
-      "issue_count": 47,
-      "issues": [
-        {
-          "name": "Attempted Murder",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Berserker's Frenzy",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Celebr-8000",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Chaos Dragon",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Circuits Act",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Clown Car",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Comet, Stellar Pup",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Component Pouch",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Contraband Livestock",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Cyberman Patrol",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Cybermen Squadron",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Danse Macabre",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Desolate Mire",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Dispatch",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Ebony Fly",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Grave Endeavor",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Idol of Oblivion",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Ingenious Artillerist",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Iron Mastiff",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Losheel, Clockwork Scholar",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Luck Bobblehead",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Monoxa, Midway Manager",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Mr. House, President and CEO",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Myriad Landscape",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Myrkul's Edict",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Night Shift of the Living Dead",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Organic Extinction",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Path of Ancestry",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Priority Boarding",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Reckless Endeavor",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Recruitment Drive",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Securitron Squadron",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Shadowblood Ridge",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Six-Sided Die",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Sol Ring",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Strength-Testing Hammer",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Sword of Hours",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Tainted Field",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Tainted Peak",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Thunderwave",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Underdark Rift",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Valiant Endeavor",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Vexing Puzzlebox",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Wand of Wonder",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Windbrisk Heights",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Wyll's Reversal",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Wyll, Blade of Frontiers",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        }
-      ],
-      "verdict": "rejected_legality"
-    },
-    {
-      "id": "archidekt-4143061",
-      "name": "Thrun SMASH",
-      "source_url": "https://archidekt.com/decks/4143061",
-      "commander": "Thrun, Breaker of Silence",
-      "commander_color_identity": [
-        "G"
-      ],
-      "structure_status": "structure_valid",
-      "unique_cards": 65,
-      "resolved_cards": 65,
-      "competitivebrawl_legal_cards": 41,
-      "representative_printing_on_arena": 17,
-      "issue_count": 24,
-      "issues": [
-        {
-          "name": "Abundance",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Arbor Elf",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Bellowing Tanglewurm",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Boar Umbra",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Fertile Ground",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Indomitable Might",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Keen Sense",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Lure",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Myriad Landscape",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Nylea's Colossus",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Overgrowth",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Primal Bellow",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Rofellos's Gift",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Seal of Primordium",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Snake Umbra",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Sol Ring",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Soul's Majesty",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Spider Umbra",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Strata Scythe",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Tanuki Transplanter",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Thrun, the Last Troll",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Verduran Enchantress",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Wild Growth",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Yavimaya Enchantress",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        }
-      ],
-      "verdict": "rejected_legality"
-    },
-    {
-      "id": "archidekt-5280254",
-      "name": "JLK's Alela | Game Knights #64",
-      "source_url": "https://archidekt.com/decks/5280254",
-      "commander": "Alela, Cunning Conqueror",
-      "commander_color_identity": [
-        "B",
-        "U"
-      ],
-      "structure_status": "structure_valid",
-      "unique_cards": 86,
-      "resolved_cards": 86,
-      "competitivebrawl_legal_cards": 61,
-      "representative_printing_on_arena": 25,
-      "issue_count": 25,
-      "issues": [
-        {
-          "name": "Alela, Cunning Conqueror",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Anowon, the Ruin Thief",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Blightwing Bandit",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Capsize",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Chain of Vapor",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Curiosity Crafter",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Dimir Aqueduct",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Liquimetal Torque",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Mocking Doppelganger",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Morphic Pool",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Myriad Landscape",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Notorious Throng",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Nymris, Oona's Trickster",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Pact of the Serpent",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Prosperous Thief",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Reality Shift",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Scion of Oona",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Shadow Rift",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Skullclamp",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Snap",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Sol Ring",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Spellstutter Sprite",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Sword of the Animist",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Tegwyll, Duke of Splendor",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Thought Vessel",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        }
-      ],
-      "verdict": "rejected_legality"
-    },
-    {
-      "id": "archidekt-17597570",
-      "name": "nico",
-      "source_url": "https://archidekt.com/decks/17597570",
-      "commander": "Nicol Bolas, the Ravager // Nicol Bolas, the Arisen",
-      "commander_color_identity": [
-        "B",
-        "R",
-        "U"
-      ],
-      "structure_status": "rejected",
-      "unique_cards": 115,
-      "resolved_cards": 115,
-      "competitivebrawl_legal_cards": 92,
-      "representative_printing_on_arena": 32,
-      "issue_count": 23,
-      "issues": [
-        {
-          "name": "Arcane Denial",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Consecrated Sphinx",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Crumbling Necropolis",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Deepglow Skate",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Exotic Orchard",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Fellwar Stone",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Geyadrone Dihada",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Jaya's Phoenix",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Luxury Suite",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Morphic Pool",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Nicol Bolas",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Nicol Bolas, Planeswalker",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Nicol Bolas, the Deceiver",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Nightscape Familiar",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Orcish Bowmasters",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Propaganda",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Ripples of Potential",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Slave of Bolas",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Sol Ring",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Training Center",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Vandalblast",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Vronos, Masked Inquisitor",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Windfall",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        }
-      ],
-      "verdict": "rejected_structure"
-    },
-    {
-      "id": "archidekt-1221862",
-      "name": "Upping the Average - Brudiclad, Telchor Engineer",
-      "source_url": "https://archidekt.com/decks/1221862",
-      "commander": "Brudiclad, Telchor Engineer",
-      "commander_color_identity": [
-        "R",
-        "U"
-      ],
-      "structure_status": "rejected",
-      "unique_cards": 95,
-      "resolved_cards": 95,
-      "competitivebrawl_legal_cards": 63,
-      "representative_printing_on_arena": 15,
-      "issue_count": 32,
-      "issues": [
-        {
-          "name": "Ancient Stone Idol",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Commander's Sphere",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Curse of Opulence",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Desolation Twin",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Etherium Sculptor",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Faerie Artisans",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Fated Infatuation",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Feldon of the Third Path",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Flameshadow Conjuring",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Foundry of the Consuls",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Gargoyle Castle",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Hate Mirage",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Hullbreacher",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Idol of Oblivion",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Izzet Boilerworks",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Kher Keep",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Loyal Apprentice",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Mimic Vat",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Mirrodin Besieged",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Mirrorworks",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Saheeli's Artistry",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Saheeli, the Gifted",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Skullclamp",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Sol Ring",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Stolen Identity",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Supplant Form",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Tempt with Vengeance",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Thopter Assembly",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Thopter Spy Network",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Trading Post",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Training Center",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Vandalblast",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        }
-      ],
-      "verdict": "rejected_structure"
-    },
-    {
-      "id": "archidekt-234654",
-      "name": "Syrah Konnor",
-      "source_url": "https://archidekt.com/decks/234654",
-      "commander": "Syr Konrad, the Grim",
-      "commander_color_identity": [
-        "B"
-      ],
-      "structure_status": "rejected",
-      "unique_cards": 101,
-      "resolved_cards": 101,
-      "competitivebrawl_legal_cards": 71,
-      "representative_printing_on_arena": 35,
-      "issue_count": 30,
-      "issues": [
-        {
-          "name": "Animate Dead",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Balthor the Defiled",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Blood Artist",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Bubbling Muck",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Butcher Ghoul",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Cabal Coffers",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Crypt Ghast",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Crypt of Agadeem",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Dread Return",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Extraplanar Lens",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Incarnation Technique",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Leaden Myr",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Living Death",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Millikin",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Mindcrank",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Morality Shift",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Orcish Bowmasters",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Out of the Tombs",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Pawn of Ulamog",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Perpetual Timepiece",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Phyrexian Altar",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Planar Atlas",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Sinister Gnarlbark",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Skullclamp",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Smothering Abomination",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Sol Ring",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Tombstone Stairwell",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Tortured Existence",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Viscera Seer",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Wake the Dead",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        }
-      ],
-      "verdict": "rejected_structure"
-    },
-    {
-      "id": "archidekt-9189744",
-      "name": "Endless Punishment - Duskmourn: House of Horror Commander",
-      "source_url": "https://archidekt.com/decks/9189744",
-      "commander": "Valgavoth, Harrower of Souls",
-      "commander_color_identity": [
-        "B",
-        "R"
-      ],
-      "structure_status": "structure_valid",
-      "unique_cards": 86,
-      "resolved_cards": 86,
-      "competitivebrawl_legal_cards": 54,
-      "representative_printing_on_arena": 9,
-      "issue_count": 32,
-      "issues": [
-        {
-          "name": "Barbflare Gremlin",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Blood Artist",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Blood Seeker",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Decree of Pain",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Enchanter's Bane",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Exotic Orchard",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Fate Unraveler",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Fellwar Stone",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Gleeful Arsonist",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Graven Cairns",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Kaervek the Merciless",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Kederekt Parasite",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Leechridden Swamp",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Nightshade Harvester",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Persistent Constrictor",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Rakdos, Lord of Riots",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Sadistic Shell Game",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Shadowblood Ridge",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Shivan Gorge",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Sol Ring",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Spiked Corridor // Torture Pit",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Spinerock Knoll",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Spiteful Visions",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Star Athlete",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Suspended Sentence",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Séance Board",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Tainted Peak",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Temple of the False God",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "The Lord of Pain",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Thought Vessel",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Valgavoth, Harrower of Souls",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Witch's Clinic",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        }
-      ],
-      "verdict": "rejected_legality"
-    },
-    {
-      "id": "archidekt-13106990",
-      "name": "Limit Break - Final Fantasy Commander",
-      "source_url": "https://archidekt.com/decks/13106990",
-      "commander": "Cloud, Ex-SOLDIER",
-      "commander_color_identity": [
-        "G",
-        "R",
-        "W"
-      ],
-      "structure_status": "structure_valid",
-      "unique_cards": 94,
-      "resolved_cards": 94,
-      "competitivebrawl_legal_cards": 47,
-      "representative_printing_on_arena": 12,
-      "issue_count": 47,
-      "issues": [
-        {
-          "name": "Armory Automaton",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Austere Command",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Avalanche of Sector 7",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Bastion Protector",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Behemoth Sledge",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Bronze Guardian",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Bugenhagen, Wise Elder",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Cait Sith, Fortune Teller",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Cid, Freeflier Pilot",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Clever Concealment",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Cloud's Limit Break",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Conformer Shuriken",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Dispatch",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Elena, Turk Recruit",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Exotic Orchard",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Explorer's Scope",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Fire-Lit Thicket",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Heidegger, Shinra Executive",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Helitrooper",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Hellkite Tyrant",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Hero's Blade",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Jungle Shrine",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Lifestream's Blessing",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Mask of Memory",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Mossfire Valley",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Nature's Lore",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Path of Ancestry",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Professor Hojo",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Puresteel Paladin",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Red XIII, Proud Warrior",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Rugged Prairie",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Sephiroth, Fallen Hero",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Skullclamp",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Slayers' Stronghold",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Sol Ring",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "SOLDIER Military Program",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Summon: Kujata",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Summoning Materia",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Sungrass Prairie",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Sunscorched Divide",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Sword of the Animist",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Ultimate Magic: Holy",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Ultimate Magic: Meteor",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Unfinished Business",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Vandalblast",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Vincent, Vengeful Atoner",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Wrecking Ball Arm",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        }
-      ],
-      "verdict": "rejected_legality"
-    },
-    {
-      "id": "archidekt-14397447",
-      "name": "World Shaper - Edge of Eternities Commander Deck",
-      "source_url": "https://archidekt.com/decks/14397447",
-      "commander": "Szarel, Genesis Shepherd",
-      "commander_color_identity": [
-        "B",
-        "G",
-        "R"
-      ],
-      "structure_status": "structure_valid",
-      "unique_cards": 87,
-      "resolved_cards": 87,
-      "competitivebrawl_legal_cards": 58,
-      "representative_printing_on_arena": 6,
-      "issue_count": 29,
-      "issues": [
-        {
-          "name": "Baloth Prime",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Centaur Vinecrasher",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Dakmor Salvage",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Eumidian Hatchery",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Eumidian Wastewaker",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Evendo Brushrazer",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Exploration Broodship",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Festering Thicket",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Formless Genesis",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Gaze of Granite",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Hammer of Purphoros",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Horizon Explorer",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Loamcrafter Faun",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Mazirek, Kraul Death Priest",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Mountain Valley",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Myriad Landscape",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Nature's Lore",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Planetary Annihilation",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Rocky Tar Pit",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Scouring Swarm",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Skyshroud Claim",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Sol Ring",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Soul of Windgrace",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Sprouting Goblin",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Twilight Mire",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Uurg, Spawn of Turg",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Vernal Fen",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Viridescent Bog",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Windgrace's Judgment",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        }
-      ],
-      "verdict": "rejected_legality"
-    },
-    {
-      "id": "archidekt-6269535",
-      "name": "Corsairs of Chronology",
-      "source_url": "https://archidekt.com/decks/6269535",
-      "commander": "Malcolm, Keen-Eyed Navigator",
-      "commander_color_identity": [
-        "U"
-      ],
-      "structure_status": "rejected",
-      "unique_cards": 89,
-      "resolved_cards": 89,
-      "competitivebrawl_legal_cards": 61,
-      "representative_printing_on_arena": 29,
-      "issue_count": 50,
-      "issues": [
-        {
-          "name": "Bitter Triumph",
-          "reasons": [
-            "outside_commander_color_identity"
-          ]
-        },
-        {
-          "name": "Bloodforged Battle-Axe",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Changeling Outcast",
-          "reasons": [
-            "outside_commander_color_identity"
-          ]
-        },
-        {
-          "name": "Choked Estuary",
-          "reasons": [
-            "outside_commander_color_identity"
-          ]
-        },
-        {
-          "name": "Clearwater Pathway // Murkwater Pathway",
-          "reasons": [
-            "outside_commander_color_identity"
-          ]
-        },
-        {
-          "name": "Cloud Pirates",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Countersquall",
-          "reasons": [
-            "not_legal_competitivebrawl",
-            "outside_commander_color_identity"
-          ]
-        },
-        {
-          "name": "Darkslick Shores",
-          "reasons": [
-            "outside_commander_color_identity"
-          ]
-        },
-        {
-          "name": "Deadeye Tracker",
-          "reasons": [
-            "outside_commander_color_identity"
-          ]
-        },
-        {
-          "name": "Dimir Signet",
-          "reasons": [
-            "outside_commander_color_identity"
-          ]
-        },
-        {
-          "name": "Echo Storm",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Exotic Orchard",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Fatal Push",
-          "reasons": [
-            "outside_commander_color_identity"
-          ]
-        },
-        {
-          "name": "Feed the Swarm",
-          "reasons": [
-            "outside_commander_color_identity"
-          ]
-        },
-        {
-          "name": "Fellwar Stone",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Foil",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Francisco, Fowl Marauder",
-          "reasons": [
-            "not_legal_competitivebrawl",
-            "outside_commander_color_identity"
-          ]
-        },
-        {
-          "name": "Gemstone Mine",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Go for the Throat",
-          "reasons": [
-            "outside_commander_color_identity"
-          ]
-        },
-        {
-          "name": "Grasping Scoundrel",
-          "reasons": [
-            "outside_commander_color_identity"
-          ]
-        },
-        {
-          "name": "Greedy Freebooter",
-          "reasons": [
-            "outside_commander_color_identity"
-          ]
-        },
-        {
-          "name": "Haunted One",
-          "reasons": [
-            "not_legal_competitivebrawl",
-            "outside_commander_color_identity"
-          ]
-        },
-        {
-          "name": "Hostage Taker",
-          "reasons": [
-            "outside_commander_color_identity"
-          ]
-        },
-        {
-          "name": "Infernal Grasp",
-          "reasons": [
-            "outside_commander_color_identity"
-          ]
-        },
-        {
-          "name": "Kitesail Freebooter",
-          "reasons": [
-            "outside_commander_color_identity"
-          ]
-        },
-        {
-          "name": "Lim-Dûl's Vault",
-          "reasons": [
-            "not_legal_competitivebrawl",
-            "outside_commander_color_identity"
-          ]
-        },
-        {
-          "name": "Malcolm, Keen-Eyed Navigator",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Misdirection",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Mothdust Changeling",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Muddle the Mixture",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Path of Ancestry",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Perplex",
-          "reasons": [
-            "not_legal_competitivebrawl",
-            "outside_commander_color_identity"
-          ]
-        },
-        {
-          "name": "Ramirez DePietro, Pillager",
-          "reasons": [
-            "not_legal_competitivebrawl",
-            "outside_commander_color_identity"
-          ]
-        },
-        {
-          "name": "Reshape",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Ringsight",
-          "reasons": [
-            "outside_commander_color_identity"
-          ]
-        },
-        {
-          "name": "River of Tears",
-          "reasons": [
-            "not_legal_competitivebrawl",
-            "outside_commander_color_identity"
-          ]
-        },
-        {
-          "name": "Shred Memory",
-          "reasons": [
-            "not_legal_competitivebrawl",
-            "outside_commander_color_identity"
-          ]
-        },
-        {
-          "name": "Skull Storm",
-          "reasons": [
-            "not_legal_competitivebrawl",
-            "outside_commander_color_identity"
-          ]
-        },
-        {
-          "name": "Slaughter Pact",
-          "reasons": [
-            "not_legal_competitivebrawl",
-            "outside_commander_color_identity"
-          ]
-        },
-        {
-          "name": "Sol Ring",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Soul Shatter",
-          "reasons": [
-            "outside_commander_color_identity"
-          ]
-        },
-        {
-          "name": "Storm Fleet Negotiator",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Swamp",
-          "reasons": [
-            "outside_commander_color_identity"
-          ]
-        },
-        {
-          "name": "Talisman of Dominance",
-          "reasons": [
-            "outside_commander_color_identity"
-          ]
-        },
-        {
-          "name": "The Indomitable",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Thran Portal",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Time Sieve",
-          "reasons": [
-            "not_legal_competitivebrawl",
-            "outside_commander_color_identity"
-          ]
-        },
-        {
-          "name": "Underground River",
-          "reasons": [
-            "outside_commander_color_identity"
-          ]
-        },
-        {
-          "name": "Vorpal Sword",
-          "reasons": [
-            "outside_commander_color_identity"
-          ]
-        },
-        {
-          "name": "Withering Torment",
-          "reasons": [
-            "outside_commander_color_identity"
-          ]
-        }
-      ],
-      "verdict": "rejected_structure"
-    },
-    {
-      "id": "archidekt-565636",
-      "name": "You Did This To Yourself",
-      "source_url": "https://archidekt.com/decks/565636",
-      "commander": "Ruhan of the Fomori",
-      "commander_color_identity": [
-        "R",
-        "U",
-        "W"
-      ],
-      "structure_status": "structure_valid",
-      "unique_cards": 82,
-      "resolved_cards": 82,
-      "competitivebrawl_legal_cards": 48,
-      "representative_printing_on_arena": 12,
-      "issue_count": 34,
-      "issues": [
-        {
-          "name": "Academy Ruins",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Acidic Soil",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Aether Flash",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Aura Thief",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Boros Fury-Shield",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Chain Reaction",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Gather Specimens",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Gisela, Blade of Goldnight",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Hibernation",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Honorable Passage",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Illusory Ambusher",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Leadership Vacuum",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Lightmine Field",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Mandate of Peace",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Mimic Vat",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Minamo, School at Water's Edge",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Mirror Strike",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Mischievous Quanar",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Parallectric Feedback",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Powerstone Minefield",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Public Enemy",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Reflect Damage",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Reins of Power",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Reiterate",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Reverse Damage",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Rod of Absorption",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Ruhan of the Fomori",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Sol Ring",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Sunforger",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Thought Sponge",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Thought Vessel",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Vesuva",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Viashino Heretic",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Windborn Muse",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        }
-      ],
-      "verdict": "rejected_legality"
-    },
-    {
-      "id": "archidekt-13107116",
-      "name": "Scions & Spellcraft - Final Fantasy Commander",
-      "source_url": "https://archidekt.com/decks/13107116",
-      "commander": "Y'shtola, Night's Blessed",
-      "commander_color_identity": [
-        "B",
-        "U",
-        "W"
-      ],
-      "structure_status": "structure_valid",
-      "unique_cards": 92,
-      "resolved_cards": 92,
-      "competitivebrawl_legal_cards": 54,
-      "representative_printing_on_arena": 20,
-      "issue_count": 38,
-      "issues": [
-        {
-          "name": "Alisaie Leveilleur",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Alphinaud Leveilleur",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Arcane Sanctum",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Archaeomancer's Map",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Ardbert, Warrior of Darkness",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Blue Mage's Cane",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Champions from Beyond",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Cut a Deal",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Dancer's Chakrams",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Darkwater Catacombs",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Desolate Mire",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Exotic Orchard",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Eye of Nidhogg",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Fandaniel, Telophoroi Ascian",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Fetid Heath",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Final Judgment",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Hermes, Overseer of Elpis",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Hildibrand Manderville // Gentleman's Rise",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Hraesvelgr of the First Brood",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Krile Baldesion",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Lethal Scheme",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Lyse Hext",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Observed Stasis",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Papalymo Totolymo",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Path of Ancestry",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Propaganda",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Reaper's Scythe",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Skycloud Expanse",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Sol Ring",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Summon: Good King Mog XII",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Sunken Ruins",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Syphon Mind",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Temple of the False God",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Thancred Waters",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Thought Vessel",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Transpose",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Urianger Augurelt",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Vindicate",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        }
-      ],
-      "verdict": "rejected_legality"
-    },
-    {
-      "id": "archidekt-4221386",
-      "name": "Sharuum slide",
-      "source_url": "https://archidekt.com/decks/4221386",
-      "commander": "Sharuum the Hegemon",
-      "commander_color_identity": [
-        "B",
-        "U",
-        "W"
-      ],
-      "structure_status": "structure_valid",
-      "unique_cards": 93,
-      "resolved_cards": 93,
-      "competitivebrawl_legal_cards": 64,
-      "representative_printing_on_arena": 32,
-      "issue_count": 29,
-      "issues": [
-        {
-          "name": "Ancient Excavation",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Arcane Sanctum",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Astral Drift",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Astral Slide",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Blasted Landscape",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Drifting Meadow",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Exotic Orchard",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Filigree Angel",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Fluctuator",
+          "name": "Guide of Souls",
           "reasons": [
             "not_legal_competitivebrawl"
           ]
@@ -4074,121 +225,322 @@
           ]
         },
         {
-          "name": "Herald of the Forgotten",
+          "name": "Helitrooper",
           "reasons": [
             "not_legal_competitivebrawl"
           ]
         },
         {
-          "name": "Magister Sphinx",
+          "name": "Human",
+          "reasons": [
+            "unresolved"
+          ]
+        },
+        {
+          "name": "Illusion",
+          "reasons": [
+            "not_legal_competitivebrawl",
+            "outside_commander_color_identity"
+          ]
+        },
+        {
+          "name": "Masterwork of Ingenuity",
           "reasons": [
             "not_legal_competitivebrawl"
           ]
         },
         {
-          "name": "Monstrosity of the Lake",
+          "name": "Ocelot Pride",
           "reasons": [
             "not_legal_competitivebrawl"
           ]
         },
         {
-          "name": "Muddle the Mixture",
+          "name": "On Thin Ice",
           "reasons": [
             "not_legal_competitivebrawl"
           ]
         },
         {
-          "name": "Perplex",
+          "name": "Phyrexian Germ",
+          "reasons": [
+            "unresolved"
+          ]
+        },
+        {
+          "name": "Pre-War Formalwear",
           "reasons": [
             "not_legal_competitivebrawl"
           ]
         },
         {
-          "name": "Polluted Mire",
+          "name": "Puresteel Paladin",
           "reasons": [
             "not_legal_competitivebrawl"
           ]
         },
         {
-          "name": "Remote Isle",
+          "name": "Ravages of War",
           "reasons": [
             "not_legal_competitivebrawl"
           ]
         },
         {
-          "name": "River of Tears",
+          "name": "Rebel",
+          "reasons": [
+            "unresolved"
+          ]
+        },
+        {
+          "name": "Reverent Mantra",
           "reasons": [
             "not_legal_competitivebrawl"
           ]
         },
         {
-          "name": "Sharuum the Hegemon",
+          "name": "Sanctifier en-Vec",
           "reasons": [
             "not_legal_competitivebrawl"
           ]
         },
         {
-          "name": "Shorikai, Genesis Engine",
+          "name": "Skullclamp",
           "reasons": [
             "not_legal_competitivebrawl"
           ]
         },
         {
-          "name": "Sol Ring",
+          "name": "Swift Reconfiguration",
           "reasons": [
             "not_legal_competitivebrawl"
           ]
         },
         {
-          "name": "Sphinx Summoner",
+          "name": "Urza's Saga",
           "reasons": [
             "not_legal_competitivebrawl"
           ]
         },
         {
-          "name": "Step Through",
+          "name": "Warrior",
           "reasons": [
-            "not_legal_competitivebrawl"
+            "unresolved"
           ]
-        },
+        }
+      ],
+      "verdict": "rejected_structure"
+    },
+    {
+      "id": "archidekt-23239443",
+      "name": "If You're Not First You're Last",
+      "source_url": "https://archidekt.com/decks/23239443",
+      "commander": "Light-Paws, Emperor's Voice",
+      "commander_color_identity": [
+        "W"
+      ],
+      "structure_status": "structure_valid",
+      "unique_cards": 82,
+      "resolved_cards": 82,
+      "competitivebrawl_legal_cards": 82,
+      "representative_printing_on_arena": 41,
+      "issue_count": 0,
+      "issues": [],
+      "verdict": "legality_verified"
+    },
+    {
+      "id": "archidekt-24456089",
+      "name": "Golos Comp. Brawl",
+      "source_url": "https://archidekt.com/decks/24456089",
+      "commander": "Golos, Tireless Pilgrim",
+      "commander_color_identity": [
+        "B",
+        "G",
+        "R",
+        "U",
+        "W"
+      ],
+      "structure_status": "structure_valid",
+      "unique_cards": 100,
+      "resolved_cards": 100,
+      "competitivebrawl_legal_cards": 100,
+      "representative_printing_on_arena": 51,
+      "issue_count": 0,
+      "issues": [],
+      "verdict": "legality_verified"
+    },
+    {
+      "id": "archidekt-24716416",
+      "name": "Nicol Bolas, Dragon-God — BrawlREC",
+      "source_url": "https://archidekt.com/decks/24716416",
+      "commander": "Nicol Bolas, Dragon-God",
+      "commander_color_identity": [
+        "B",
+        "R",
+        "U"
+      ],
+      "structure_status": "structure_valid",
+      "unique_cards": 94,
+      "resolved_cards": 94,
+      "competitivebrawl_legal_cards": 94,
+      "representative_printing_on_arena": 51,
+      "issue_count": 0,
+      "issues": [],
+      "verdict": "legality_verified"
+    },
+    {
+      "id": "archidekt-24716014",
+      "name": "Tsagan Competitive Brawl",
+      "source_url": "https://archidekt.com/decks/24716014",
+      "commander": "Tsagan, Raider Warlord",
+      "commander_color_identity": [
+        "B",
+        "R",
+        "W"
+      ],
+      "structure_status": "structure_valid",
+      "unique_cards": 98,
+      "resolved_cards": 98,
+      "competitivebrawl_legal_cards": 98,
+      "representative_printing_on_arena": 79,
+      "issue_count": 0,
+      "issues": [],
+      "verdict": "legality_verified"
+    },
+    {
+      "id": "archidekt-24712447",
+      "name": "Nicol Bolas, Dragon-God cBrawl",
+      "source_url": "https://archidekt.com/decks/24712447",
+      "commander": "Nicol Bolas, Dragon-God",
+      "commander_color_identity": [
+        "B",
+        "R",
+        "U"
+      ],
+      "structure_status": "rejected",
+      "unique_cards": 93,
+      "resolved_cards": 93,
+      "competitivebrawl_legal_cards": 93,
+      "representative_printing_on_arena": 50,
+      "issue_count": 0,
+      "issues": [],
+      "verdict": "rejected_structure"
+    },
+    {
+      "id": "archidekt-24706265",
+      "name": "Stature, Giga Avenger",
+      "source_url": "https://archidekt.com/decks/24706265",
+      "commander": "Stature, Young Avenger",
+      "commander_color_identity": [
+        "G",
+        "R"
+      ],
+      "structure_status": "structure_valid",
+      "unique_cards": 85,
+      "resolved_cards": 85,
+      "competitivebrawl_legal_cards": 84,
+      "representative_printing_on_arena": 60,
+      "issue_count": 1,
+      "issues": [
         {
-          "name": "Street Wraith",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Terisiare's Devastation",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Treasure Mage",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Tribute Mage",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Vedalken Aethermage",
-          "reasons": [
-            "not_legal_competitivebrawl"
-          ]
-        },
-        {
-          "name": "Zur the Enchanter",
+          "name": "Thran Portal",
           "reasons": [
             "not_legal_competitivebrawl"
           ]
         }
       ],
       "verdict": "rejected_legality"
+    },
+    {
+      "id": "archidekt-24703908",
+      "name": "The Mighty Thor CB",
+      "source_url": "https://archidekt.com/decks/24703908",
+      "commander": "The Mighty Thor, Jane Foster",
+      "commander_color_identity": [
+        "U",
+        "W"
+      ],
+      "structure_status": "rejected",
+      "unique_cards": 93,
+      "resolved_cards": 93,
+      "competitivebrawl_legal_cards": 93,
+      "representative_printing_on_arena": 61,
+      "issue_count": 0,
+      "issues": [],
+      "verdict": "rejected_structure"
+    },
+    {
+      "id": "archidekt-24701805",
+      "name": "Shiko Blink Brawl",
+      "source_url": "https://archidekt.com/decks/24701805",
+      "commander": "Shiko, Paragon of the Way",
+      "commander_color_identity": [
+        "R",
+        "U",
+        "W"
+      ],
+      "structure_status": "structure_valid",
+      "unique_cards": 100,
+      "resolved_cards": 100,
+      "competitivebrawl_legal_cards": 100,
+      "representative_printing_on_arena": 76,
+      "issue_count": 0,
+      "issues": [],
+      "verdict": "legality_verified"
+    },
+    {
+      "id": "archidekt-24687216",
+      "name": "Miiriym Brawl",
+      "source_url": "https://archidekt.com/decks/24687216",
+      "commander": "Miirym, Sentinel Wyrm",
+      "commander_color_identity": [
+        "G",
+        "R",
+        "U"
+      ],
+      "structure_status": "structure_valid",
+      "unique_cards": 82,
+      "resolved_cards": 82,
+      "competitivebrawl_legal_cards": 82,
+      "representative_printing_on_arena": 30,
+      "issue_count": 0,
+      "issues": [],
+      "verdict": "legality_verified"
+    },
+    {
+      "id": "archidekt-24684993",
+      "name": "blue control?",
+      "source_url": "https://archidekt.com/decks/24684993",
+      "commander": "Katara, Waterbending Master",
+      "commander_color_identity": [
+        "U"
+      ],
+      "structure_status": "structure_valid",
+      "unique_cards": 75,
+      "resolved_cards": 75,
+      "competitivebrawl_legal_cards": 75,
+      "representative_printing_on_arena": 38,
+      "issue_count": 0,
+      "issues": [],
+      "verdict": "legality_verified"
+    },
+    {
+      "id": "archidekt-24679933",
+      "name": "Comp Brawl Lands",
+      "source_url": "https://archidekt.com/decks/24679933",
+      "commander": "Hearthhull, the Worldseed",
+      "commander_color_identity": [
+        "B",
+        "G",
+        "R"
+      ],
+      "structure_status": "rejected",
+      "unique_cards": 53,
+      "resolved_cards": 53,
+      "competitivebrawl_legal_cards": 53,
+      "representative_printing_on_arena": 35,
+      "issue_count": 0,
+      "issues": [],
+      "verdict": "rejected_structure"
     }
   ],
   "limitations": [
