@@ -1,0 +1,140 @@
+{
+  "schema": "buildkit-mtg-forge-match@1",
+  "status": "rules_engine_verified",
+  "evidence_class": "rules_engine",
+  "engine": {
+    "name": "Card-Forge",
+    "version": "2.0.14-SNAPSHOT-07.26",
+    "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+  },
+  "export_receipt_hash": "170238fa6c16af2e1f996d0965d0adde5324421859da34addadf4448b817601c",
+  "deck_ids": [
+    "archidekt-23239443",
+    "archidekt-21852727"
+  ],
+  "deck_files": [
+    {
+      "deck_id": "archidekt-23239443",
+      "filename": "archidekt-23239443.dck",
+      "sha256": "c9a5e17e78d7ea486b9da7c8b78942af3889f47238ed2e6c69fa5412a8bf9a30"
+    },
+    {
+      "deck_id": "archidekt-21852727",
+      "filename": "archidekt-21852727.dck",
+      "sha256": "d62ec52e27503b517c94a8780e9e11b8725e0467fc5020f3b21c9a30605ec923"
+    }
+  ],
+  "seed": 20260726,
+  "clock_seconds": 120,
+  "runs": [
+    {
+      "run": 1,
+      "seed": 20260726,
+      "exit_code": 0,
+      "command": [
+        "java",
+        "-jar",
+        "<pinned-forge-jar>",
+        "sim",
+        "-d",
+        "archidekt-23239443.dck",
+        "archidekt-21852727.dck",
+        "-m",
+        "3",
+        "-f",
+        "Brawl",
+        "-q",
+        "-c",
+        "120",
+        "-s",
+        "20260726"
+      ],
+      "raw_log": "run-1.log",
+      "raw_log_sha256": "732b8579ab93d90a74ef84ab69a25e2b0c5f1e667401f110a5513ad0edf58a06",
+      "errors": [],
+      "normalized": {
+        "games": [
+          {
+            "game": 1,
+            "winner": "Ai(1)-If You're Not First You're Last",
+            "turns": 6
+          },
+          {
+            "game": 2,
+            "winner": "Ai(2)-Ugin, Eye of the Storms",
+            "turns": 11
+          },
+          {
+            "game": 3,
+            "winner": "Ai(2)-Ugin, Eye of the Storms",
+            "turns": 11
+          }
+        ],
+        "game_count": 3,
+        "match_winner": "Ai(2)-Ugin, Eye of the Storms",
+        "match_score": {
+          "Ai(1)-If You're Not First You're Last": 1,
+          "Ai(2)-Ugin, Eye of the Storms": 2
+        }
+      }
+    },
+    {
+      "run": 2,
+      "seed": 20260726,
+      "exit_code": 0,
+      "command": [
+        "java",
+        "-jar",
+        "<pinned-forge-jar>",
+        "sim",
+        "-d",
+        "archidekt-23239443.dck",
+        "archidekt-21852727.dck",
+        "-m",
+        "3",
+        "-f",
+        "Brawl",
+        "-q",
+        "-c",
+        "120",
+        "-s",
+        "20260726"
+      ],
+      "raw_log": "run-2.log",
+      "raw_log_sha256": "bd3351fcb32794e3c7f16045f7472530777874c4d73bd5c12407275c14b7a9a5",
+      "errors": [],
+      "normalized": {
+        "games": [
+          {
+            "game": 1,
+            "winner": "Ai(1)-If You're Not First You're Last",
+            "turns": 6
+          },
+          {
+            "game": 2,
+            "winner": "Ai(2)-Ugin, Eye of the Storms",
+            "turns": 11
+          },
+          {
+            "game": 3,
+            "winner": "Ai(2)-Ugin, Eye of the Storms",
+            "turns": 11
+          }
+        ],
+        "game_count": 3,
+        "match_winner": "Ai(2)-Ugin, Eye of the Storms",
+        "match_score": {
+          "Ai(1)-If You're Not First You're Last": 1,
+          "Ai(2)-Ugin, Eye of the Storms": 2
+        }
+      }
+    }
+  ],
+  "normalized_repeat": true,
+  "limitations": [
+    "Forge is not MTG Arena and may implement cards or AI differently.",
+    "This proves one pinned engine matchup, not a metagame win rate.",
+    "The non-tournament -D override is ignored upstream; pinned files are hash-checked in Forge's constructed deck store."
+  ],
+  "receipt_hash": "e4a13facc997d425e1a97a170c9658264489a915be4e0012a9d93047b558ff8f"
+}

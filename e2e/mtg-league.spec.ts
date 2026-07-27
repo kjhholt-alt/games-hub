@@ -8,8 +8,10 @@ test.describe("/mtg/league — MTG Proving Grounds", () => {
   test("renders the evidence rail and real admission queue", async ({ page }) => {
     await expect(page.getByRole("heading", { level: 1, name: "Proving Grounds" })).toBeVisible();
     await expect(page.getByText("sample", { exact: true })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Ugin defeats Light-Paws, 2–1" })).toBeVisible();
+    await expect(page.getByText("rules engine verified", { exact: true })).toBeVisible();
     await expect(page.getByRole("heading", { name: "Brawl admission queue" })).toBeVisible();
-    await expect(page.getByText("Engine admission remains 0/18")).toBeVisible();
+    await expect(page.getByText("Match-proven decks 2/18")).toBeVisible();
     await expect(page.getByText("Legality verified", { exact: true }).first()).toBeVisible();
     await expect(page.getByText("legality verified", { exact: true }).first()).toBeVisible();
     await expect(page.getByText("rejected legality", { exact: true }).first()).toBeVisible();

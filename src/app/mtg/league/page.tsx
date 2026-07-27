@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, ExternalLink, FileJson, ShieldAlert } from "lucide-react";
+import { ArrowLeft, CheckCircle2, ExternalLink, FileJson, ShieldAlert, Swords } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MtgLeagueObservatory } from "@/components/MtgLeagueObservatory";
-import { getMtgIntake, getMtgLeague, getMtgOracleAudit } from "@/lib/mtgLeague";
+import {
+  getMtgForgeExport,
+  getMtgForgeMatch,
+  getMtgIntake,
+  getMtgLeague,
+  getMtgOracleAudit,
+} from "@/lib/mtgLeague";
 import { mtgDisplay } from "@/lib/mtgFonts";
 
 export const metadata: Metadata = {
@@ -20,6 +26,8 @@ export default function MtgLeaguePage() {
   const payload = getMtgLeague();
   const intake = getMtgIntake();
   const audit = getMtgOracleAudit();
+  const forgeExport = getMtgForgeExport();
+  const forgeMatch = getMtgForgeMatch();
   const shortReceipt = payload.receipt_hash.slice(0, 12);
   const shortSnapshot = audit.snapshot.sha256.slice(0, 12);
   const structureValid = intake.candidates.filter(
@@ -30,6 +38,9 @@ export default function MtgLeaguePage() {
   ).length;
   const auditHeld = audit.candidate_count - audit.legality_verified_count;
   const auditById = new Map(audit.candidates.map((candidate) => [candidate.id, candidate]));
+  const engineGames = forgeMatch.runs[0]?.normalized.games ?? [];
+  const uginWins = engineGames.filter((game) => game.winner.includes("Ugin")).length;
+  const lightPawsWins = engineGames.length - uginWins;
 
   return (
     <main className={`min-h-screen mtg-scope ${mtgDisplay.variable}`}>
@@ -63,8 +74,9 @@ export default function MtgLeaguePage() {
         <p className="mb-8 max-w-3xl text-sm leading-relaxed text-text-secondary">
           Twenty deck candidates enter a seeded round robin. Qwen coaches can rank and tune candidates, but
           trusted code owns legality, scheduling, evaluation, and every replayable receipt. This first run is
-          visibly marked <strong className="font-medium text-amber">sample / proxy</strong> while the real
-          Brawl and Standard deck-admission lanes come online.
+          visibly marked <strong className="font-medium text-amber">sample / proxy</strong>. A separate pinned
+          Card-Forge proof below now contains the first repeated real-rules Brawl match; it is never mixed into
+          the synthetic standings.
         </p>
 
         <div className="mb-8 flex flex-wrap gap-2 font-mono text-[10px]">
@@ -84,6 +96,84 @@ export default function MtgLeaguePage() {
 
         <MtgLeagueObservatory payload={payload} />
 
+        <section
+          className="mt-6 overflow-hidden rounded-lg border border-green/30 bg-surface"
+          aria-labelledby="forge-proof-title"
+        >
+          <div className="grid gap-px bg-border lg:grid-cols-[1.15fr_0.85fr]">
+            <div className="bg-surface p-5 sm:p-6">
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-green" aria-hidden />
+                <div>
+                  <p className="font-mono text-[9px] uppercase tracking-[0.18em] text-green">
+                    First rules-engine proof
+                  </p>
+                  <h2 id="forge-proof-title" className="mtg-display mt-1 text-2xl">
+                    Ugin defeats Light-Paws, 2–1
+                  </h2>
+                  <p className="mt-2 max-w-2xl text-sm leading-relaxed text-text-secondary">
+                    Card-Forge executed the same seeded best-of-three twice. Both runs reproduced the same
+                    winners and turn counts with exit code 0 and no tracked import or game exceptions.
+                  </p>
+                </div>
+              </div>
+              <div className="mt-5 grid grid-cols-3 gap-px overflow-hidden rounded border border-border bg-border">
+                {engineGames.map((game) => (
+                  <div key={game.game} className="bg-background px-3 py-3 text-center">
+                    <p className="font-mono text-[9px] uppercase text-text-secondary">Game {game.game}</p>
+                    <p className="mt-1 text-sm font-medium">{game.winner.includes("Ugin") ? "Ugin" : "Light-Paws"}</p>
+                    <p className="mt-1 font-mono text-[9px] text-brass">turn {game.turns}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="bg-surface p-5 sm:p-6">
+              <div className="flex items-center gap-2">
+                <Swords className="h-4 w-4 text-brass" aria-hidden />
+                <p className="font-mono text-[9px] uppercase tracking-[0.18em] text-brass">Trust receipt</p>
+              </div>
+              <dl className="mt-4 space-y-3 text-sm">
+                <div className="flex justify-between gap-4">
+                  <dt className="text-text-secondary">Evidence</dt>
+                  <dd className="font-mono text-green">rules engine verified</dd>
+                </div>
+                <div className="flex justify-between gap-4">
+                  <dt className="text-text-secondary">Repeat</dt>
+                  <dd className="font-mono">{forgeMatch.normalized_repeat ? "2 / 2 exact" : "held"}</dd>
+                </div>
+                <div className="flex justify-between gap-4">
+                  <dt className="text-text-secondary">Score</dt>
+                  <dd className="font-mono">{uginWins}–{lightPawsWins}</dd>
+                </div>
+                <div className="flex justify-between gap-4">
+                  <dt className="text-text-secondary">Compatible decks</dt>
+                  <dd className="font-mono">
+                    {forgeExport.compatible_candidate_count}/{forgeExport.verified_candidate_count}
+                  </dd>
+                </div>
+                <div className="flex justify-between gap-4">
+                  <dt className="text-text-secondary">Seed</dt>
+                  <dd className="font-mono">{forgeMatch.seed}</dd>
+                </div>
+              </dl>
+              <div className="mt-5 flex flex-wrap gap-2">
+                <a
+                  href="/mtg-proving-grounds-forge-match.json"
+                  className="inline-flex items-center gap-1.5 rounded border border-green/30 px-2.5 py-1.5 font-mono text-[10px] text-green"
+                >
+                  <FileJson className="h-3 w-3" /> match receipt
+                </a>
+                <a
+                  href="/mtg-proving-grounds-forge-export.json"
+                  className="inline-flex items-center gap-1.5 rounded border border-border px-2.5 py-1.5 font-mono text-[10px] text-text-secondary"
+                >
+                  <FileJson className="h-3 w-3" /> import audit
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="mt-6 overflow-hidden rounded-lg border border-border bg-surface" aria-labelledby="intake-title">
           <div className="flex flex-col gap-4 border-b border-border p-5 sm:flex-row sm:items-end sm:justify-between">
             <div>
@@ -91,8 +181,8 @@ export default function MtgLeaguePage() {
               <h2 id="intake-title" className="mtg-display mt-1 text-2xl">Brawl admission queue</h2>
               <p className="mt-2 max-w-2xl text-sm leading-relaxed text-text-secondary">
                 These are real decklists from Archidekt&apos;s Competitive Brawl format—not the synthetic league
-                above. Structure and frozen Oracle legality are checked; engine admission and game execution
-                remain intentionally locked.
+                above. Structure and frozen Oracle legality are checked; all ten verified lists resolve in the
+                pinned Forge archive, and the first two have passed repeatable game execution.
               </p>
             </div>
             <a
@@ -161,10 +251,11 @@ export default function MtgLeaguePage() {
           <div className="flex items-start gap-3 border-t border-border bg-amber-dim p-4 text-xs leading-relaxed text-amber">
             <ShieldAlert className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
             <p>
-              Engine admission remains 0/{intake.candidate_count}. Frozen Oracle audit {shortSnapshot} verified{" "}
+              Match-proven decks 2/{intake.candidate_count}. Frozen Oracle audit {shortSnapshot} verified{" "}
               {audit.legality_verified_count} real Competitive Brawl lists; {auditHeld} are rejected or held.
-              The verified ten now await trusted feature extraction and a real match adapter—no proxy result can
-              promote them.
+              Forge resolves {forgeExport.compatible_candidate_count}/{forgeExport.verified_candidate_count}{" "}
+              verified lists without substitutions. Only the two decks in the repeated receipt have
+              rules-engine evidence; no proxy result can promote the rest.
             </p>
           </div>
         </section>

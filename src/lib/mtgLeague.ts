@@ -133,6 +133,38 @@ export interface MtgOracleAuditPayload {
   limitations: string[];
 }
 
+export interface MtgForgeExportPayload {
+  schema: string;
+  status: "ready" | "held";
+  compatible_candidate_count: number;
+  verified_candidate_count: number;
+  selected_deck_ids: string[];
+  receipt_hash: string;
+}
+
+export interface MtgForgeMatchPayload {
+  schema: string;
+  status: "rules_engine_verified" | "held";
+  evidence_class: "rules_engine" | "held";
+  engine: { name: string; version: string; jar_sha256: string };
+  deck_ids: string[];
+  seed: number;
+  runs: Array<{
+    run: number;
+    exit_code: number;
+    errors: string[];
+    normalized: {
+      game_count: number;
+      match_winner: string | null;
+      match_score: Record<string, number>;
+      games: Array<{ game: number; winner: string; turns: number | null }>;
+    };
+  }>;
+  normalized_repeat: boolean;
+  limitations: string[];
+  receipt_hash: string;
+}
+
 export function getMtgLeague(): MtgLeaguePayload {
   const file = path.join(process.cwd(), "public", "mtg-proving-grounds.json");
   return JSON.parse(fs.readFileSync(file, "utf8")) as MtgLeaguePayload;
@@ -146,4 +178,14 @@ export function getMtgIntake(): MtgIntakePayload {
 export function getMtgOracleAudit(): MtgOracleAuditPayload {
   const file = path.join(process.cwd(), "public", "mtg-proving-grounds-oracle-audit.json");
   return JSON.parse(fs.readFileSync(file, "utf8")) as MtgOracleAuditPayload;
+}
+
+export function getMtgForgeExport(): MtgForgeExportPayload {
+  const file = path.join(process.cwd(), "public", "mtg-proving-grounds-forge-export.json");
+  return JSON.parse(fs.readFileSync(file, "utf8")) as MtgForgeExportPayload;
+}
+
+export function getMtgForgeMatch(): MtgForgeMatchPayload {
+  const file = path.join(process.cwd(), "public", "mtg-proving-grounds-forge-match.json");
+  return JSON.parse(fs.readFileSync(file, "utf8")) as MtgForgeMatchPayload;
 }

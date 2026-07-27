@@ -1,0 +1,328 @@
+{
+  "schema": "buildkit-mtg-forge-export@1",
+  "status": "ready",
+  "engine": {
+    "name": "Card-Forge",
+    "version": "2.0.14-SNAPSHOT-07.26"
+  },
+  "inputs": {
+    "intake_sha256": "6c496852d75c7f02e22d941755711793514cbc7decfe8a0eddbd318dd9864046",
+    "audit_sha256": "a66371a20d4e347a7c1f23401093565cbe82717408fb50c5aba702d7de6d3b5a",
+    "forge_card_archive_sha256": "256b6d3bbca2110141d1ff6e9d2d048572347f8d69b4052db3e8c3ccdef2a99b",
+    "forge_card_count": 33400
+  },
+  "verified_candidate_count": 10,
+  "compatible_candidate_count": 10,
+  "candidates": [
+    {
+      "id": "archidekt-23239443",
+      "name": "If You're Not First You're Last",
+      "deck_hash": "10e009849b1f16bd099579c587231a3c5054e3410495e86d53ee45245f843ffd",
+      "commander": "Light-Paws, Emperor's Voice",
+      "unique_cards": 82,
+      "exact_cards": 82,
+      "front_face_aliases": [],
+      "missing_cards": [],
+      "substitutions": [],
+      "verdict": "forge_compatible"
+    },
+    {
+      "id": "archidekt-21852727",
+      "name": "Ugin, Eye of the Storms",
+      "deck_hash": "98d76f1e2ca35f1f4364b9b37c3461a80a21485a7c75aa9547853bbbe2978359",
+      "commander": "Ugin, Eye of the Storms",
+      "unique_cards": 74,
+      "exact_cards": 73,
+      "front_face_aliases": [
+        {
+          "oracle_name": "Treasure Map // Treasure Cove",
+          "forge_name": "Treasure Map"
+        }
+      ],
+      "missing_cards": [],
+      "substitutions": [],
+      "verdict": "forge_compatible"
+    },
+    {
+      "id": "archidekt-24456089",
+      "name": "Golos Comp. Brawl",
+      "deck_hash": "a0cb808e63d74cc41d01f8fd8d0e1f27ee94658ff6cf7e6e664cbf5dd2b13d95",
+      "commander": "Golos, Tireless Pilgrim",
+      "unique_cards": 100,
+      "exact_cards": 99,
+      "front_face_aliases": [
+        {
+          "oracle_name": "Sink into Stupor // Soporific Springs",
+          "forge_name": "Sink into Stupor"
+        }
+      ],
+      "missing_cards": [],
+      "substitutions": [],
+      "verdict": "forge_compatible"
+    },
+    {
+      "id": "archidekt-24687216",
+      "name": "Miiriym Brawl",
+      "deck_hash": "7ea4bf64dc1038f29e5acdd4c557319e12b31cfdeb9ea2be6c5ae3c5f9898f1a",
+      "commander": "Miirym, Sentinel Wyrm",
+      "unique_cards": 82,
+      "exact_cards": 81,
+      "front_face_aliases": [
+        {
+          "oracle_name": "Marang River Regent // Coil and Catch",
+          "forge_name": "Marang River Regent"
+        }
+      ],
+      "missing_cards": [],
+      "substitutions": [],
+      "verdict": "forge_compatible"
+    },
+    {
+      "id": "archidekt-24406644",
+      "name": "Comp. Brawl Breach",
+      "deck_hash": "fd6309f312f812079d5f121bb363dbf3f21ff226a8fa930393a320a223b9ec6d",
+      "commander": "Norman Osborn // Green Goblin",
+      "unique_cards": 100,
+      "exact_cards": 97,
+      "front_face_aliases": [
+        {
+          "oracle_name": "Norman Osborn // Green Goblin",
+          "forge_name": "Norman Osborn"
+        },
+        {
+          "oracle_name": "Sink into Stupor // Soporific Springs",
+          "forge_name": "Sink into Stupor"
+        },
+        {
+          "oracle_name": "Sundering Eruption // Volcanic Fissure",
+          "forge_name": "Sundering Eruption"
+        }
+      ],
+      "missing_cards": [],
+      "substitutions": [],
+      "verdict": "forge_compatible"
+    },
+    {
+      "id": "archidekt-24684993",
+      "name": "blue control?",
+      "deck_hash": "cb7cc4f4782ae8ee359b25e318bfe1d4efe559e09a4b3952e05f785de13f4fa5",
+      "commander": "Katara, Waterbending Master",
+      "unique_cards": 75,
+      "exact_cards": 72,
+      "front_face_aliases": [
+        {
+          "oracle_name": "Hydroelectric Specimen // Hydroelectric Laboratory",
+          "forge_name": "Hydroelectric Specimen"
+        },
+        {
+          "oracle_name": "Sea Gate Restoration // Sea Gate, Reborn",
+          "forge_name": "Sea Gate Restoration"
+        },
+        {
+          "oracle_name": "Sink into Stupor // Soporific Springs",
+          "forge_name": "Sink into Stupor"
+        }
+      ],
+      "missing_cards": [],
+      "substitutions": [],
+      "verdict": "forge_compatible"
+    },
+    {
+      "id": "archidekt-24716014",
+      "name": "Tsagan Competitive Brawl",
+      "deck_hash": "39dfdd0c94ae7aa9503c25972918ebf0641e7ef3356d4c1ab61d2cd248da8931",
+      "commander": "Tsagan, Raider Warlord",
+      "unique_cards": 98,
+      "exact_cards": 92,
+      "front_face_aliases": [
+        {
+          "oracle_name": "Bonecrusher Giant // Stomp",
+          "forge_name": "Bonecrusher Giant"
+        },
+        {
+          "oracle_name": "Brutal Cathar // Moonrage Brute",
+          "forge_name": "Brutal Cathar"
+        },
+        {
+          "oracle_name": "Callous Sell-Sword // Burn Together",
+          "forge_name": "Callous Sell-Sword"
+        },
+        {
+          "oracle_name": "Cecil, Dark Knight // Cecil, Redeemed Paladin",
+          "forge_name": "Cecil, Dark Knight"
+        },
+        {
+          "oracle_name": "Malakir Rebirth // Malakir Mire",
+          "forge_name": "Malakir Rebirth"
+        },
+        {
+          "oracle_name": "Spikefield Hazard // Spikefield Cave",
+          "forge_name": "Spikefield Hazard"
+        }
+      ],
+      "missing_cards": [],
+      "substitutions": [],
+      "verdict": "forge_compatible"
+    },
+    {
+      "id": "archidekt-24716416",
+      "name": "Nicol Bolas, Dragon-God — BrawlREC",
+      "deck_hash": "ff4d0bced5caa5b363beb836d5b2d39e1f138405a24d50cc10987b741d14619a",
+      "commander": "Nicol Bolas, Dragon-God",
+      "unique_cards": 94,
+      "exact_cards": 88,
+      "front_face_aliases": [
+        {
+          "oracle_name": "Clearwater Pathway // Murkwater Pathway",
+          "forge_name": "Clearwater Pathway"
+        },
+        {
+          "oracle_name": "Fell the Profane // Fell Mire",
+          "forge_name": "Fell the Profane"
+        },
+        {
+          "oracle_name": "Jwari Disruption // Jwari Ruins",
+          "forge_name": "Jwari Disruption"
+        },
+        {
+          "oracle_name": "Malakir Rebirth // Malakir Mire",
+          "forge_name": "Malakir Rebirth"
+        },
+        {
+          "oracle_name": "Nicol Bolas, the Ravager // Nicol Bolas, the Arisen",
+          "forge_name": "Nicol Bolas, the Ravager"
+        },
+        {
+          "oracle_name": "Zof Consumption // Zof Bloodbog",
+          "forge_name": "Zof Consumption"
+        }
+      ],
+      "missing_cards": [],
+      "substitutions": [],
+      "verdict": "forge_compatible"
+    },
+    {
+      "id": "archidekt-17883190",
+      "name": "Dragonclaw Ranked Brawl",
+      "deck_hash": "b53acbe718f51af6a6f4385a6f9fb8f07fd15cda98046081f847666e2010a68c",
+      "commander": "Eshki Dragonclaw",
+      "unique_cards": 97,
+      "exact_cards": 89,
+      "front_face_aliases": [
+        {
+          "oracle_name": "Barkchannel Pathway // Tidechannel Pathway",
+          "forge_name": "Barkchannel Pathway"
+        },
+        {
+          "oracle_name": "Brazen Borrower // Petty Theft",
+          "forge_name": "Brazen Borrower"
+        },
+        {
+          "oracle_name": "Cragcrown Pathway // Timbercrown Pathway",
+          "forge_name": "Cragcrown Pathway"
+        },
+        {
+          "oracle_name": "Questing Druid // Seek the Beast",
+          "forge_name": "Questing Druid"
+        },
+        {
+          "oracle_name": "Scalding Viper // Steam Clean",
+          "forge_name": "Scalding Viper"
+        },
+        {
+          "oracle_name": "Studious First-Year // Rampant Growth",
+          "forge_name": "Studious First-Year"
+        },
+        {
+          "oracle_name": "Two-Handed Axe // Sweeping Cleave",
+          "forge_name": "Two-Handed Axe"
+        },
+        {
+          "oracle_name": "Two-Headed Hunter // Twice the Rage",
+          "forge_name": "Two-Headed Hunter"
+        }
+      ],
+      "missing_cards": [],
+      "substitutions": [],
+      "verdict": "forge_compatible"
+    },
+    {
+      "id": "archidekt-24701805",
+      "name": "Shiko Blink Brawl",
+      "deck_hash": "ba9731c66eadc9232445a4b4be25f6f28c2b06167d79be89943f55346dc2ff0e",
+      "commander": "Shiko, Paragon of the Way",
+      "unique_cards": 100,
+      "exact_cards": 88,
+      "front_face_aliases": [
+        {
+          "oracle_name": "Aang, Swift Savior // Aang and La, Ocean's Fury",
+          "forge_name": "Aang, Swift Savior"
+        },
+        {
+          "oracle_name": "Emeritus of Truce // Swords to Plowshares",
+          "forge_name": "Emeritus of Truce"
+        },
+        {
+          "oracle_name": "Fable of the Mirror-Breaker // Reflection of Kiki-Jiki",
+          "forge_name": "Fable of the Mirror-Breaker"
+        },
+        {
+          "oracle_name": "Gwen Stacy // Ghost-Spider",
+          "forge_name": "Gwen Stacy"
+        },
+        {
+          "oracle_name": "Joshua, Phoenix's Dominant // Phoenix, Warden of Fire",
+          "forge_name": "Joshua, Phoenix's Dominant"
+        },
+        {
+          "oracle_name": "King T'Challa // Black Panther, Hope Enduring",
+          "forge_name": "King T'Challa"
+        },
+        {
+          "oracle_name": "Mila, Crafty Companion // Lukka, Wayward Bonder",
+          "forge_name": "Mila, Crafty Companion"
+        },
+        {
+          "oracle_name": "Monica Rambeau // Photon, Living Light",
+          "forge_name": "Monica Rambeau"
+        },
+        {
+          "oracle_name": "Needleverge Pathway // Pillarverge Pathway",
+          "forge_name": "Needleverge Pathway"
+        },
+        {
+          "oracle_name": "Riverglide Pathway // Lavaglide Pathway",
+          "forge_name": "Riverglide Pathway"
+        },
+        {
+          "oracle_name": "Skycoach Conductor // All Aboard",
+          "forge_name": "Skycoach Conductor"
+        },
+        {
+          "oracle_name": "The Legend of Kuruk // Avatar Kuruk",
+          "forge_name": "The Legend of Kuruk"
+        }
+      ],
+      "missing_cards": [],
+      "substitutions": [],
+      "verdict": "forge_compatible"
+    }
+  ],
+  "selected_deck_ids": [
+    "archidekt-23239443",
+    "archidekt-21852727"
+  ],
+  "files": [
+    {
+      "deck_id": "archidekt-23239443",
+      "filename": "archidekt-23239443.dck",
+      "sha256": "c9a5e17e78d7ea486b9da7c8b78942af3889f47238ed2e6c69fa5412a8bf9a30"
+    },
+    {
+      "deck_id": "archidekt-21852727",
+      "filename": "archidekt-21852727.dck",
+      "sha256": "d62ec52e27503b517c94a8780e9e11b8725e0467fc5020f3b21c9a30605ec923"
+    }
+  ],
+  "receipt_hash": "170238fa6c16af2e1f996d0965d0adde5324421859da34addadf4448b817601c"
+}
