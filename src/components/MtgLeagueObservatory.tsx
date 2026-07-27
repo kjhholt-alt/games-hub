@@ -234,9 +234,10 @@ export function MtgLeagueObservatory({ payload }: { payload: MtgLeaguePayload })
             <h2 className="mtg-display text-lg">What this run proves</h2>
             <p className="mt-1 max-w-3xl text-sm leading-relaxed text-text-secondary">
               The scheduler, seeds, deck hashes, standings, model identities, and replay receipts are real and
-              repeatable. The outcomes are a feature-proxy fixture—not Magic rules execution and not an Arena
-              win-rate forecast. Real leaderboard claims stay locked until full decklists pass a frozen legality
-              snapshot and a rules-engine or Arena-observed adapter produces the games.
+              repeatable. This table&apos;s outcomes remain a feature-proxy fixture—not Magic rules execution and
+              not an Arena win-rate forecast. The first two-deck rules-engine receipt appears below, but it does
+              not promote these synthetic standings. A real leaderboard stays locked until its own league
+              receipts complete.
             </p>
           </div>
         </div>
