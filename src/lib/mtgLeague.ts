@@ -165,6 +165,51 @@ export interface MtgForgeMatchPayload {
   receipt_hash: string;
 }
 
+/**
+ * Provisional standings from the resumable Forge queue. Every field that
+ * discloses incompleteness is required, not optional: a partial shard must
+ * never be renderable as a finished league.
+ */
+export interface MtgForgeStandingsPayload {
+  schema: string;
+  status: "provisional";
+  evidence_class: "rules_engine" | "none_until_executed";
+  generated_utc: string;
+  plan_receipt_hash: string;
+  planned_match_count: number;
+  promoted_match_count: number;
+  held_match_count: number;
+  unattributed_match_count: number;
+  promoted_matches: string[];
+  held_matches: Array<{ match_id: string; reasons: string[] }>;
+  unattributed_matches: Array<{
+    match_id: string;
+    match_winner: string | null;
+    reason: string;
+  }>;
+  promotion_rule: string;
+  coverage_warning: string;
+  table: Array<{
+    deck_id: string;
+    matches: number;
+    match_wins: number;
+    match_losses: number;
+    game_wins: number;
+    game_losses: number;
+    unattributed: number;
+  }>;
+  receipt_hash: string;
+}
+
+export function getMtgForgeStandings(): MtgForgeStandingsPayload {
+  const file = path.join(
+    process.cwd(),
+    "public",
+    "mtg-proving-grounds-forge-standings.json"
+  );
+  return JSON.parse(fs.readFileSync(file, "utf8")) as MtgForgeStandingsPayload;
+}
+
 export function getMtgLeague(): MtgLeaguePayload {
   const file = path.join(process.cwd(), "public", "mtg-proving-grounds.json");
   return JSON.parse(fs.readFileSync(file, "utf8")) as MtgLeaguePayload;

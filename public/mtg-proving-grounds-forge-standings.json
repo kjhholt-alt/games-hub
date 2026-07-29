@@ -1,0 +1,248 @@
+{
+  "schema": "buildkit-mtg-forge-standings@1",
+  "status": "provisional",
+  "evidence_class": "rules_engine",
+  "generated_utc": "2026-07-29T23:23:23+00:00",
+  "plan_receipt_hash": "afa7eab91734d67b491afc39274b11f44653ed659ab529123e295c3f32577572",
+  "planned_match_count": 45,
+  "promoted_match_count": 5,
+  "held_match_count": 0,
+  "unattributed_match_count": 0,
+  "promoted_matches": [
+    "forge-brawl-001",
+    "forge-brawl-002",
+    "forge-brawl-003",
+    "forge-brawl-004",
+    "forge-brawl-005"
+  ],
+  "match_receipts": [
+    {
+      "match_id": "forge-brawl-001",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260727,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-23239443",
+          "filename": "archidekt-23239443.dck",
+          "sha256": "c9a5e17e78d7ea486b9da7c8b78942af3889f47238ed2e6c69fa5412a8bf9a30",
+          "deck_name": "If You're Not First You're Last"
+        },
+        {
+          "deck_id": "archidekt-21852727",
+          "filename": "archidekt-21852727.dck",
+          "sha256": "d62ec52e27503b517c94a8780e9e11b8725e0467fc5020f3b21c9a30605ec923",
+          "deck_name": "Ugin, Eye of the Storms"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Ugin, Eye of the Storms": 2
+      },
+      "match_winner_label": "Ai(2)-Ugin, Eye of the Storms",
+      "winner_deck_id": "archidekt-21852727",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "33b1ce714830036f75ace179b5a705a5e9054f2705cf4e6d8697a89c5c0a7bb1"
+    },
+    {
+      "match_id": "forge-brawl-002",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260728,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-23239443",
+          "filename": "archidekt-23239443.dck",
+          "sha256": "c9a5e17e78d7ea486b9da7c8b78942af3889f47238ed2e6c69fa5412a8bf9a30",
+          "deck_name": "If You're Not First You're Last"
+        },
+        {
+          "deck_id": "archidekt-24456089",
+          "filename": "archidekt-24456089.dck",
+          "sha256": "8d6058556001288cc781f9c767efe19ee5fad37c0ad291c8301bd32e80b0a0ae",
+          "deck_name": "Golos Comp. Brawl"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Golos Comp. Brawl": 2
+      },
+      "match_winner_label": "Ai(2)-Golos Comp. Brawl",
+      "winner_deck_id": "archidekt-24456089",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "798daa0c12c9221d362a4b7e5bf7c9a50104cafcbdaa9cdb05791a5e173dc2c5"
+    },
+    {
+      "match_id": "forge-brawl-003",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260729,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-23239443",
+          "filename": "archidekt-23239443.dck",
+          "sha256": "c9a5e17e78d7ea486b9da7c8b78942af3889f47238ed2e6c69fa5412a8bf9a30",
+          "deck_name": "If You're Not First You're Last"
+        },
+        {
+          "deck_id": "archidekt-24687216",
+          "filename": "archidekt-24687216.dck",
+          "sha256": "55af30cb39a12ce1452bdf56358de22ea7b2b3a24091597573f5a8c6e8f17057",
+          "deck_name": "Miiriym Brawl"
+        }
+      ],
+      "match_score": {
+        "Ai(1)-If You're Not First You're Last": 1,
+        "Ai(2)-Miiriym Brawl": 2
+      },
+      "match_winner_label": "Ai(2)-Miiriym Brawl",
+      "winner_deck_id": "archidekt-24687216",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "31e679c7861548ba66bd9f05481be4deea050b8753850c4989f0020aa1d570cd"
+    },
+    {
+      "match_id": "forge-brawl-004",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260730,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-23239443",
+          "filename": "archidekt-23239443.dck",
+          "sha256": "c9a5e17e78d7ea486b9da7c8b78942af3889f47238ed2e6c69fa5412a8bf9a30",
+          "deck_name": "If You're Not First You're Last"
+        },
+        {
+          "deck_id": "archidekt-24406644",
+          "filename": "archidekt-24406644.dck",
+          "sha256": "cd63d224b10e0c29d5bf2a3bde33b67ac5290cb194a2bdf7973709fef251a9b1",
+          "deck_name": "Comp. Brawl Breach"
+        }
+      ],
+      "match_score": {
+        "Ai(1)-If You're Not First You're Last": 2
+      },
+      "match_winner_label": "Ai(1)-If You're Not First You're Last",
+      "winner_deck_id": "archidekt-23239443",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "13f1597a9255f86284fa8d9c3d2caf9dbde9e2e141a2a46e6c61c80530e24cde"
+    },
+    {
+      "match_id": "forge-brawl-005",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260731,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-23239443",
+          "filename": "archidekt-23239443.dck",
+          "sha256": "c9a5e17e78d7ea486b9da7c8b78942af3889f47238ed2e6c69fa5412a8bf9a30",
+          "deck_name": "If You're Not First You're Last"
+        },
+        {
+          "deck_id": "archidekt-24684993",
+          "filename": "archidekt-24684993.dck",
+          "sha256": "58abb5093eb17a4217195c30a3267da5d6127532a5b282bc579dc9c737dd9d03",
+          "deck_name": "blue control?"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-blue control?": 2
+      },
+      "match_winner_label": "Ai(2)-blue control?",
+      "winner_deck_id": "archidekt-24684993",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "4d0b2fadc67563e81a07ab3f7d9916400a8de9098b380d0021ec5b343c3e4b0a"
+    }
+  ],
+  "held_matches": [],
+  "unattributed_matches": [],
+  "promotion_rule": "Only completed, zero-error, hash-checked rules-engine receipts may enter standings.",
+  "coverage_warning": "5 of 45 planned matches have promoted receipts. These standings are a partial shard, not a completed league.",
+  "table": [
+    {
+      "deck_id": "archidekt-21852727",
+      "matches": 1,
+      "match_wins": 1,
+      "match_losses": 0,
+      "game_wins": 2,
+      "game_losses": 0,
+      "unattributed": 0,
+      "match_win_rate": 1.0
+    },
+    {
+      "deck_id": "archidekt-24456089",
+      "matches": 1,
+      "match_wins": 1,
+      "match_losses": 0,
+      "game_wins": 2,
+      "game_losses": 0,
+      "unattributed": 0,
+      "match_win_rate": 1.0
+    },
+    {
+      "deck_id": "archidekt-24684993",
+      "matches": 1,
+      "match_wins": 1,
+      "match_losses": 0,
+      "game_wins": 2,
+      "game_losses": 0,
+      "unattributed": 0,
+      "match_win_rate": 1.0
+    },
+    {
+      "deck_id": "archidekt-24687216",
+      "matches": 1,
+      "match_wins": 1,
+      "match_losses": 0,
+      "game_wins": 2,
+      "game_losses": 1,
+      "unattributed": 0,
+      "match_win_rate": 1.0
+    },
+    {
+      "deck_id": "archidekt-23239443",
+      "matches": 5,
+      "match_wins": 1,
+      "match_losses": 4,
+      "game_wins": 3,
+      "game_losses": 8,
+      "unattributed": 0,
+      "match_win_rate": 0.2
+    },
+    {
+      "deck_id": "archidekt-24406644",
+      "matches": 1,
+      "match_wins": 0,
+      "match_losses": 1,
+      "game_wins": 0,
+      "game_losses": 2,
+      "unattributed": 0,
+      "match_win_rate": 0.0
+    }
+  ],
+  "receipt_hash": "288a20ccb2b3d929a5863bfefdbe7d9cec9f5fcf0d1699fd326c412d4e33c3d6"
+}
