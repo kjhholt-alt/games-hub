@@ -1,0 +1,1628 @@
+{
+  "schema": "buildkit-mtg-forge-standings@1",
+  "status": "provisional",
+  "evidence_class": "rules_engine",
+  "generated_utc": "2026-07-30T06:17:00+00:00",
+  "plan_receipt_hash": "148e33734104fe583101c51b64274ed8e460afb02eaaa911f141f61ab0135470",
+  "planned_match_count": 45,
+  "promoted_match_count": 45,
+  "held_match_count": 0,
+  "unattributed_match_count": 0,
+  "promoted_matches": [
+    "forge-brawl-001",
+    "forge-brawl-002",
+    "forge-brawl-003",
+    "forge-brawl-004",
+    "forge-brawl-005",
+    "forge-brawl-006",
+    "forge-brawl-007",
+    "forge-brawl-008",
+    "forge-brawl-009",
+    "forge-brawl-010",
+    "forge-brawl-011",
+    "forge-brawl-012",
+    "forge-brawl-013",
+    "forge-brawl-014",
+    "forge-brawl-015",
+    "forge-brawl-016",
+    "forge-brawl-017",
+    "forge-brawl-018",
+    "forge-brawl-019",
+    "forge-brawl-020",
+    "forge-brawl-021",
+    "forge-brawl-022",
+    "forge-brawl-023",
+    "forge-brawl-024",
+    "forge-brawl-025",
+    "forge-brawl-026",
+    "forge-brawl-027",
+    "forge-brawl-028",
+    "forge-brawl-029",
+    "forge-brawl-030",
+    "forge-brawl-031",
+    "forge-brawl-032",
+    "forge-brawl-033",
+    "forge-brawl-034",
+    "forge-brawl-035",
+    "forge-brawl-036",
+    "forge-brawl-037",
+    "forge-brawl-038",
+    "forge-brawl-039",
+    "forge-brawl-040",
+    "forge-brawl-041",
+    "forge-brawl-042",
+    "forge-brawl-043",
+    "forge-brawl-044",
+    "forge-brawl-045"
+  ],
+  "match_receipts": [
+    {
+      "match_id": "forge-brawl-001",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260730,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-azorius",
+          "filename": "cube-azorius.dck",
+          "sha256": "20c7a02099f5859002c00b4b1ec5cc0d1494d3486d8b59cc9705302b4c41396e",
+          "deck_name": "Azorius Cube"
+        },
+        {
+          "deck_id": "cube-orzhov",
+          "filename": "cube-orzhov.dck",
+          "sha256": "f8a8fa514b541ba8bf30aa0dbceb4a71696897275b08f4c371bdf62d534b06d4",
+          "deck_name": "Orzhov Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(1)-Azorius Cube": 2
+      },
+      "match_winner_label": "Ai(1)-Azorius Cube",
+      "winner_deck_id": "cube-azorius",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "8be13156ad8f9d6b643f94edfaceb4c161dc65ae1bfe8363d05af509d4fe5bf5"
+    },
+    {
+      "match_id": "forge-brawl-002",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260731,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-azorius",
+          "filename": "cube-azorius.dck",
+          "sha256": "20c7a02099f5859002c00b4b1ec5cc0d1494d3486d8b59cc9705302b4c41396e",
+          "deck_name": "Azorius Cube"
+        },
+        {
+          "deck_id": "cube-boros",
+          "filename": "cube-boros.dck",
+          "sha256": "0edd516c8e75cda875911d415588b1857e097860ed3e8c154c8b2de61041394b",
+          "deck_name": "Boros Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Boros Cube": 1,
+        "Ai(1)-Azorius Cube": 2
+      },
+      "match_winner_label": "Ai(1)-Azorius Cube",
+      "winner_deck_id": "cube-azorius",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "7d3336a005ab9bcb6bb6ec20357f5f0a230802fa6b879815c22625c3636a31f7"
+    },
+    {
+      "match_id": "forge-brawl-003",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260732,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-azorius",
+          "filename": "cube-azorius.dck",
+          "sha256": "20c7a02099f5859002c00b4b1ec5cc0d1494d3486d8b59cc9705302b4c41396e",
+          "deck_name": "Azorius Cube"
+        },
+        {
+          "deck_id": "cube-selesnya",
+          "filename": "cube-selesnya.dck",
+          "sha256": "3defb91be6924fc7774c8eb1288f048b86dc681f62540f6bc5223986926eb20b",
+          "deck_name": "Selesnya Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Selesnya Cube": 2
+      },
+      "match_winner_label": "Ai(2)-Selesnya Cube",
+      "winner_deck_id": "cube-selesnya",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "7f6c1248f64203c79847ae4ebaa527b75ac26f74cfcf80eafe043aa3ec498cfd"
+    },
+    {
+      "match_id": "forge-brawl-004",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260733,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-azorius",
+          "filename": "cube-azorius.dck",
+          "sha256": "20c7a02099f5859002c00b4b1ec5cc0d1494d3486d8b59cc9705302b4c41396e",
+          "deck_name": "Azorius Cube"
+        },
+        {
+          "deck_id": "cube-dimir",
+          "filename": "cube-dimir.dck",
+          "sha256": "95c7a653f9fedf6649e67734e13ea6bbf28d9bd8a6bad02aedb427722c9a91be",
+          "deck_name": "Dimir Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(1)-Azorius Cube": 1,
+        "Ai(2)-Dimir Cube": 2
+      },
+      "match_winner_label": "Ai(2)-Dimir Cube",
+      "winner_deck_id": "cube-dimir",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "f75cd04c2eb48c17c5a095eaedaaffc23bad0312c7a4f9482156f32ee45c83ca"
+    },
+    {
+      "match_id": "forge-brawl-005",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260734,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-azorius",
+          "filename": "cube-azorius.dck",
+          "sha256": "20c7a02099f5859002c00b4b1ec5cc0d1494d3486d8b59cc9705302b4c41396e",
+          "deck_name": "Azorius Cube"
+        },
+        {
+          "deck_id": "cube-izzet",
+          "filename": "cube-izzet.dck",
+          "sha256": "3a825d9f5daad19e0628a0ec210c2ceaf623834f9c892b165745cf2d9d922d8a",
+          "deck_name": "Izzet Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Izzet Cube": 1,
+        "Ai(1)-Azorius Cube": 2
+      },
+      "match_winner_label": "Ai(1)-Azorius Cube",
+      "winner_deck_id": "cube-azorius",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "bbc20d5623e61ab248e7c19cb86d5627b07d63c20b7599e114820585e1699f2b"
+    },
+    {
+      "match_id": "forge-brawl-006",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260735,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-azorius",
+          "filename": "cube-azorius.dck",
+          "sha256": "20c7a02099f5859002c00b4b1ec5cc0d1494d3486d8b59cc9705302b4c41396e",
+          "deck_name": "Azorius Cube"
+        },
+        {
+          "deck_id": "cube-simic",
+          "filename": "cube-simic.dck",
+          "sha256": "441a85f59066eb5be96e644cbe4f2f3c2d36ffbff98f8250c6f99c4eecedba4c",
+          "deck_name": "Simic Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Simic Cube": 2
+      },
+      "match_winner_label": "Ai(2)-Simic Cube",
+      "winner_deck_id": "cube-simic",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "ee6c8e2b6c9441a0c7564b26f35df0375622b9d9741fd221fd3a4f5487a7727f"
+    },
+    {
+      "match_id": "forge-brawl-007",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260736,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-azorius",
+          "filename": "cube-azorius.dck",
+          "sha256": "20c7a02099f5859002c00b4b1ec5cc0d1494d3486d8b59cc9705302b4c41396e",
+          "deck_name": "Azorius Cube"
+        },
+        {
+          "deck_id": "cube-rakdos",
+          "filename": "cube-rakdos.dck",
+          "sha256": "8ecb69ec9f2418069edb106a1724e3907d0f02e010868ffe83f5e737020aeb51",
+          "deck_name": "Rakdos Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Rakdos Cube": 2
+      },
+      "match_winner_label": "Ai(2)-Rakdos Cube",
+      "winner_deck_id": "cube-rakdos",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "c79db65d485f88e23a0567c2b92787f8436911ea9a6d2cf35d66529ea3181398"
+    },
+    {
+      "match_id": "forge-brawl-008",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260737,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-azorius",
+          "filename": "cube-azorius.dck",
+          "sha256": "20c7a02099f5859002c00b4b1ec5cc0d1494d3486d8b59cc9705302b4c41396e",
+          "deck_name": "Azorius Cube"
+        },
+        {
+          "deck_id": "cube-golgari",
+          "filename": "cube-golgari.dck",
+          "sha256": "e78269c48037dd3dce8b372a38f9643ba02a32f59451b0596273e2c54f216056",
+          "deck_name": "Golgari Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(1)-Azorius Cube": 1,
+        "Ai(2)-Golgari Cube": 2
+      },
+      "match_winner_label": "Ai(2)-Golgari Cube",
+      "winner_deck_id": "cube-golgari",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "feab3acb5dc04b1edd00b661d9ed3cb94f4dc13dbee4fa3269b4743ed43b509e"
+    },
+    {
+      "match_id": "forge-brawl-009",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260738,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-azorius",
+          "filename": "cube-azorius.dck",
+          "sha256": "20c7a02099f5859002c00b4b1ec5cc0d1494d3486d8b59cc9705302b4c41396e",
+          "deck_name": "Azorius Cube"
+        },
+        {
+          "deck_id": "cube-gruul",
+          "filename": "cube-gruul.dck",
+          "sha256": "85e3f757861b52288ff6e03ee3d799666f8e652fd4b8ff8ae2df0d603b668f08",
+          "deck_name": "Gruul Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(1)-Azorius Cube": 1,
+        "Ai(2)-Gruul Cube": 2
+      },
+      "match_winner_label": "Ai(2)-Gruul Cube",
+      "winner_deck_id": "cube-gruul",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "585fd635fc9b454f47278424e81439abdb0932be17094a3e1b4d5180533b4e6d"
+    },
+    {
+      "match_id": "forge-brawl-010",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260739,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-orzhov",
+          "filename": "cube-orzhov.dck",
+          "sha256": "f8a8fa514b541ba8bf30aa0dbceb4a71696897275b08f4c371bdf62d534b06d4",
+          "deck_name": "Orzhov Cube"
+        },
+        {
+          "deck_id": "cube-boros",
+          "filename": "cube-boros.dck",
+          "sha256": "0edd516c8e75cda875911d415588b1857e097860ed3e8c154c8b2de61041394b",
+          "deck_name": "Boros Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(1)-Orzhov Cube": 1,
+        "Ai(2)-Boros Cube": 2
+      },
+      "match_winner_label": "Ai(2)-Boros Cube",
+      "winner_deck_id": "cube-boros",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "6a54aec0fce4616259f3e39f0bd491e1f0efde867df7b932908b1b3104c83fcd"
+    },
+    {
+      "match_id": "forge-brawl-011",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260740,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-orzhov",
+          "filename": "cube-orzhov.dck",
+          "sha256": "f8a8fa514b541ba8bf30aa0dbceb4a71696897275b08f4c371bdf62d534b06d4",
+          "deck_name": "Orzhov Cube"
+        },
+        {
+          "deck_id": "cube-selesnya",
+          "filename": "cube-selesnya.dck",
+          "sha256": "3defb91be6924fc7774c8eb1288f048b86dc681f62540f6bc5223986926eb20b",
+          "deck_name": "Selesnya Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(1)-Orzhov Cube": 2
+      },
+      "match_winner_label": "Ai(1)-Orzhov Cube",
+      "winner_deck_id": "cube-orzhov",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "49b504fa70cd638cac7d68fe3952918b6e322b6516250c461fc12da4a18cd257"
+    },
+    {
+      "match_id": "forge-brawl-012",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260741,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-orzhov",
+          "filename": "cube-orzhov.dck",
+          "sha256": "f8a8fa514b541ba8bf30aa0dbceb4a71696897275b08f4c371bdf62d534b06d4",
+          "deck_name": "Orzhov Cube"
+        },
+        {
+          "deck_id": "cube-dimir",
+          "filename": "cube-dimir.dck",
+          "sha256": "95c7a653f9fedf6649e67734e13ea6bbf28d9bd8a6bad02aedb427722c9a91be",
+          "deck_name": "Dimir Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Dimir Cube": 2
+      },
+      "match_winner_label": "Ai(2)-Dimir Cube",
+      "winner_deck_id": "cube-dimir",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "8ccb08b1f4c44e4d91027ed697e07628c7851c70e4bd40967cb86ed6458fdb79"
+    },
+    {
+      "match_id": "forge-brawl-013",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260742,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-orzhov",
+          "filename": "cube-orzhov.dck",
+          "sha256": "f8a8fa514b541ba8bf30aa0dbceb4a71696897275b08f4c371bdf62d534b06d4",
+          "deck_name": "Orzhov Cube"
+        },
+        {
+          "deck_id": "cube-izzet",
+          "filename": "cube-izzet.dck",
+          "sha256": "3a825d9f5daad19e0628a0ec210c2ceaf623834f9c892b165745cf2d9d922d8a",
+          "deck_name": "Izzet Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Izzet Cube": 2,
+        "Ai(1)-Orzhov Cube": 1
+      },
+      "match_winner_label": "Ai(2)-Izzet Cube",
+      "winner_deck_id": "cube-izzet",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "32901c9b0718afea292a8bfb94f55b39129e55e4ada96434a3a51cd84945cebb"
+    },
+    {
+      "match_id": "forge-brawl-014",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260743,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-orzhov",
+          "filename": "cube-orzhov.dck",
+          "sha256": "f8a8fa514b541ba8bf30aa0dbceb4a71696897275b08f4c371bdf62d534b06d4",
+          "deck_name": "Orzhov Cube"
+        },
+        {
+          "deck_id": "cube-simic",
+          "filename": "cube-simic.dck",
+          "sha256": "441a85f59066eb5be96e644cbe4f2f3c2d36ffbff98f8250c6f99c4eecedba4c",
+          "deck_name": "Simic Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Simic Cube": 1,
+        "Ai(1)-Orzhov Cube": 2
+      },
+      "match_winner_label": "Ai(1)-Orzhov Cube",
+      "winner_deck_id": "cube-orzhov",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "ec4127a7b5e221e9b7d140f415fc42dedc270d850206de59b35e3c3f06c44537"
+    },
+    {
+      "match_id": "forge-brawl-015",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260744,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-orzhov",
+          "filename": "cube-orzhov.dck",
+          "sha256": "f8a8fa514b541ba8bf30aa0dbceb4a71696897275b08f4c371bdf62d534b06d4",
+          "deck_name": "Orzhov Cube"
+        },
+        {
+          "deck_id": "cube-rakdos",
+          "filename": "cube-rakdos.dck",
+          "sha256": "8ecb69ec9f2418069edb106a1724e3907d0f02e010868ffe83f5e737020aeb51",
+          "deck_name": "Rakdos Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(1)-Orzhov Cube": 2
+      },
+      "match_winner_label": "Ai(1)-Orzhov Cube",
+      "winner_deck_id": "cube-orzhov",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "ecb9c3ce4bff8dea076d17034e8aa44a1dedc563ddc912e33189fb22fb9df459"
+    },
+    {
+      "match_id": "forge-brawl-016",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260745,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-orzhov",
+          "filename": "cube-orzhov.dck",
+          "sha256": "f8a8fa514b541ba8bf30aa0dbceb4a71696897275b08f4c371bdf62d534b06d4",
+          "deck_name": "Orzhov Cube"
+        },
+        {
+          "deck_id": "cube-golgari",
+          "filename": "cube-golgari.dck",
+          "sha256": "e78269c48037dd3dce8b372a38f9643ba02a32f59451b0596273e2c54f216056",
+          "deck_name": "Golgari Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Golgari Cube": 1,
+        "Ai(1)-Orzhov Cube": 2
+      },
+      "match_winner_label": "Ai(1)-Orzhov Cube",
+      "winner_deck_id": "cube-orzhov",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "cf113ee359cafe204cc91e5719a3a761f57cd5cd810003afe00ce52bc77ff200"
+    },
+    {
+      "match_id": "forge-brawl-017",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260746,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-orzhov",
+          "filename": "cube-orzhov.dck",
+          "sha256": "f8a8fa514b541ba8bf30aa0dbceb4a71696897275b08f4c371bdf62d534b06d4",
+          "deck_name": "Orzhov Cube"
+        },
+        {
+          "deck_id": "cube-gruul",
+          "filename": "cube-gruul.dck",
+          "sha256": "85e3f757861b52288ff6e03ee3d799666f8e652fd4b8ff8ae2df0d603b668f08",
+          "deck_name": "Gruul Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(1)-Orzhov Cube": 2
+      },
+      "match_winner_label": "Ai(1)-Orzhov Cube",
+      "winner_deck_id": "cube-orzhov",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "b93565ab578595dc752a4ee66f11309849d5065c5978304f37a1581bf68bfa74"
+    },
+    {
+      "match_id": "forge-brawl-018",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260747,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-boros",
+          "filename": "cube-boros.dck",
+          "sha256": "0edd516c8e75cda875911d415588b1857e097860ed3e8c154c8b2de61041394b",
+          "deck_name": "Boros Cube"
+        },
+        {
+          "deck_id": "cube-selesnya",
+          "filename": "cube-selesnya.dck",
+          "sha256": "3defb91be6924fc7774c8eb1288f048b86dc681f62540f6bc5223986926eb20b",
+          "deck_name": "Selesnya Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Selesnya Cube": 2,
+        "Ai(1)-Boros Cube": 1
+      },
+      "match_winner_label": "Ai(2)-Selesnya Cube",
+      "winner_deck_id": "cube-selesnya",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "873aa1529a599c3b1a3af21458b2feb0e34e869bbcaa11060a6afdb39db09327"
+    },
+    {
+      "match_id": "forge-brawl-019",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260748,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-boros",
+          "filename": "cube-boros.dck",
+          "sha256": "0edd516c8e75cda875911d415588b1857e097860ed3e8c154c8b2de61041394b",
+          "deck_name": "Boros Cube"
+        },
+        {
+          "deck_id": "cube-dimir",
+          "filename": "cube-dimir.dck",
+          "sha256": "95c7a653f9fedf6649e67734e13ea6bbf28d9bd8a6bad02aedb427722c9a91be",
+          "deck_name": "Dimir Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(1)-Boros Cube": 2
+      },
+      "match_winner_label": "Ai(1)-Boros Cube",
+      "winner_deck_id": "cube-boros",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "a4bdf4ab3fc81522464548a8eb8b6c8d5ebe98057cf9db29d3571e70338af418"
+    },
+    {
+      "match_id": "forge-brawl-020",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260749,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-boros",
+          "filename": "cube-boros.dck",
+          "sha256": "0edd516c8e75cda875911d415588b1857e097860ed3e8c154c8b2de61041394b",
+          "deck_name": "Boros Cube"
+        },
+        {
+          "deck_id": "cube-izzet",
+          "filename": "cube-izzet.dck",
+          "sha256": "3a825d9f5daad19e0628a0ec210c2ceaf623834f9c892b165745cf2d9d922d8a",
+          "deck_name": "Izzet Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(1)-Boros Cube": 2
+      },
+      "match_winner_label": "Ai(1)-Boros Cube",
+      "winner_deck_id": "cube-boros",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "9f0e6462cd3b8335f02bf556e6c0a3b456a078768710e2cc5687e34bd870c2ba"
+    },
+    {
+      "match_id": "forge-brawl-021",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260750,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-boros",
+          "filename": "cube-boros.dck",
+          "sha256": "0edd516c8e75cda875911d415588b1857e097860ed3e8c154c8b2de61041394b",
+          "deck_name": "Boros Cube"
+        },
+        {
+          "deck_id": "cube-simic",
+          "filename": "cube-simic.dck",
+          "sha256": "441a85f59066eb5be96e644cbe4f2f3c2d36ffbff98f8250c6f99c4eecedba4c",
+          "deck_name": "Simic Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Simic Cube": 2
+      },
+      "match_winner_label": "Ai(2)-Simic Cube",
+      "winner_deck_id": "cube-simic",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "856ba6511f953245e05611ddc25a04e0e73940ad0e5864e3b40fe75069dd0dce"
+    },
+    {
+      "match_id": "forge-brawl-022",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260751,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-boros",
+          "filename": "cube-boros.dck",
+          "sha256": "0edd516c8e75cda875911d415588b1857e097860ed3e8c154c8b2de61041394b",
+          "deck_name": "Boros Cube"
+        },
+        {
+          "deck_id": "cube-rakdos",
+          "filename": "cube-rakdos.dck",
+          "sha256": "8ecb69ec9f2418069edb106a1724e3907d0f02e010868ffe83f5e737020aeb51",
+          "deck_name": "Rakdos Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Rakdos Cube": 1,
+        "Ai(1)-Boros Cube": 2
+      },
+      "match_winner_label": "Ai(1)-Boros Cube",
+      "winner_deck_id": "cube-boros",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "1c589639e674529942e6bf01f8825f787d7ad62efedbf2f381057afa06421694"
+    },
+    {
+      "match_id": "forge-brawl-023",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260752,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-boros",
+          "filename": "cube-boros.dck",
+          "sha256": "0edd516c8e75cda875911d415588b1857e097860ed3e8c154c8b2de61041394b",
+          "deck_name": "Boros Cube"
+        },
+        {
+          "deck_id": "cube-golgari",
+          "filename": "cube-golgari.dck",
+          "sha256": "e78269c48037dd3dce8b372a38f9643ba02a32f59451b0596273e2c54f216056",
+          "deck_name": "Golgari Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Golgari Cube": 2,
+        "Ai(1)-Boros Cube": 1
+      },
+      "match_winner_label": "Ai(2)-Golgari Cube",
+      "winner_deck_id": "cube-golgari",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "cb17850ae09fcfe7563ea7f6f177dee8923827a1d2db38c9a775ac7b748c432a"
+    },
+    {
+      "match_id": "forge-brawl-024",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260753,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-boros",
+          "filename": "cube-boros.dck",
+          "sha256": "0edd516c8e75cda875911d415588b1857e097860ed3e8c154c8b2de61041394b",
+          "deck_name": "Boros Cube"
+        },
+        {
+          "deck_id": "cube-gruul",
+          "filename": "cube-gruul.dck",
+          "sha256": "85e3f757861b52288ff6e03ee3d799666f8e652fd4b8ff8ae2df0d603b668f08",
+          "deck_name": "Gruul Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(1)-Boros Cube": 2
+      },
+      "match_winner_label": "Ai(1)-Boros Cube",
+      "winner_deck_id": "cube-boros",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "46683aa010322ea59ddcc29c5ac6104dacdb9efc1a734e4c50a08cdb29df4b79"
+    },
+    {
+      "match_id": "forge-brawl-025",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260754,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-selesnya",
+          "filename": "cube-selesnya.dck",
+          "sha256": "3defb91be6924fc7774c8eb1288f048b86dc681f62540f6bc5223986926eb20b",
+          "deck_name": "Selesnya Cube"
+        },
+        {
+          "deck_id": "cube-dimir",
+          "filename": "cube-dimir.dck",
+          "sha256": "95c7a653f9fedf6649e67734e13ea6bbf28d9bd8a6bad02aedb427722c9a91be",
+          "deck_name": "Dimir Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(1)-Selesnya Cube": 2
+      },
+      "match_winner_label": "Ai(1)-Selesnya Cube",
+      "winner_deck_id": "cube-selesnya",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "c6883666995c73ced8e36353dfb5ec3f6c3a0dcc1be93d398b9362204677c2fc"
+    },
+    {
+      "match_id": "forge-brawl-026",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260755,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-selesnya",
+          "filename": "cube-selesnya.dck",
+          "sha256": "3defb91be6924fc7774c8eb1288f048b86dc681f62540f6bc5223986926eb20b",
+          "deck_name": "Selesnya Cube"
+        },
+        {
+          "deck_id": "cube-izzet",
+          "filename": "cube-izzet.dck",
+          "sha256": "3a825d9f5daad19e0628a0ec210c2ceaf623834f9c892b165745cf2d9d922d8a",
+          "deck_name": "Izzet Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(1)-Selesnya Cube": 2
+      },
+      "match_winner_label": "Ai(1)-Selesnya Cube",
+      "winner_deck_id": "cube-selesnya",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "eb95ebc6ce0b59850f0f9e48e68e702db3acf3f3f754c50cf1488f833d66d3f8"
+    },
+    {
+      "match_id": "forge-brawl-027",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260756,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-selesnya",
+          "filename": "cube-selesnya.dck",
+          "sha256": "3defb91be6924fc7774c8eb1288f048b86dc681f62540f6bc5223986926eb20b",
+          "deck_name": "Selesnya Cube"
+        },
+        {
+          "deck_id": "cube-simic",
+          "filename": "cube-simic.dck",
+          "sha256": "441a85f59066eb5be96e644cbe4f2f3c2d36ffbff98f8250c6f99c4eecedba4c",
+          "deck_name": "Simic Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Simic Cube": 1,
+        "Ai(1)-Selesnya Cube": 2
+      },
+      "match_winner_label": "Ai(1)-Selesnya Cube",
+      "winner_deck_id": "cube-selesnya",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "09d505a1fac8c24db16096826cc697cb031ec648344aec9b854c2c5b20c4e2c6"
+    },
+    {
+      "match_id": "forge-brawl-028",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260757,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-selesnya",
+          "filename": "cube-selesnya.dck",
+          "sha256": "3defb91be6924fc7774c8eb1288f048b86dc681f62540f6bc5223986926eb20b",
+          "deck_name": "Selesnya Cube"
+        },
+        {
+          "deck_id": "cube-rakdos",
+          "filename": "cube-rakdos.dck",
+          "sha256": "8ecb69ec9f2418069edb106a1724e3907d0f02e010868ffe83f5e737020aeb51",
+          "deck_name": "Rakdos Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(1)-Selesnya Cube": 2
+      },
+      "match_winner_label": "Ai(1)-Selesnya Cube",
+      "winner_deck_id": "cube-selesnya",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "23d82478b6d69a1c2038531b325f70d5dac4e491c66bb69ad46a1b81e08aa14a"
+    },
+    {
+      "match_id": "forge-brawl-029",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260758,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-selesnya",
+          "filename": "cube-selesnya.dck",
+          "sha256": "3defb91be6924fc7774c8eb1288f048b86dc681f62540f6bc5223986926eb20b",
+          "deck_name": "Selesnya Cube"
+        },
+        {
+          "deck_id": "cube-golgari",
+          "filename": "cube-golgari.dck",
+          "sha256": "e78269c48037dd3dce8b372a38f9643ba02a32f59451b0596273e2c54f216056",
+          "deck_name": "Golgari Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Golgari Cube": 2,
+        "Ai(1)-Selesnya Cube": 1
+      },
+      "match_winner_label": "Ai(2)-Golgari Cube",
+      "winner_deck_id": "cube-golgari",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "864ec71510f8cf8be6174a25c0a4efb8f9abd4cc740d493ae36180b7d95d2810"
+    },
+    {
+      "match_id": "forge-brawl-030",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260759,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-selesnya",
+          "filename": "cube-selesnya.dck",
+          "sha256": "3defb91be6924fc7774c8eb1288f048b86dc681f62540f6bc5223986926eb20b",
+          "deck_name": "Selesnya Cube"
+        },
+        {
+          "deck_id": "cube-gruul",
+          "filename": "cube-gruul.dck",
+          "sha256": "85e3f757861b52288ff6e03ee3d799666f8e652fd4b8ff8ae2df0d603b668f08",
+          "deck_name": "Gruul Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(1)-Selesnya Cube": 1,
+        "Ai(2)-Gruul Cube": 2
+      },
+      "match_winner_label": "Ai(2)-Gruul Cube",
+      "winner_deck_id": "cube-gruul",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "ee477f3dca4431ac975d5d98205a4d2b81f2c04014079e1a5e9cc6ea1161611b"
+    },
+    {
+      "match_id": "forge-brawl-031",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260760,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-dimir",
+          "filename": "cube-dimir.dck",
+          "sha256": "95c7a653f9fedf6649e67734e13ea6bbf28d9bd8a6bad02aedb427722c9a91be",
+          "deck_name": "Dimir Cube"
+        },
+        {
+          "deck_id": "cube-izzet",
+          "filename": "cube-izzet.dck",
+          "sha256": "3a825d9f5daad19e0628a0ec210c2ceaf623834f9c892b165745cf2d9d922d8a",
+          "deck_name": "Izzet Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Izzet Cube": 2
+      },
+      "match_winner_label": "Ai(2)-Izzet Cube",
+      "winner_deck_id": "cube-izzet",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "9a648e98626355f40209c950154ceb66dff48002a9bb6d54683999dedafe129a"
+    },
+    {
+      "match_id": "forge-brawl-032",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260761,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-dimir",
+          "filename": "cube-dimir.dck",
+          "sha256": "95c7a653f9fedf6649e67734e13ea6bbf28d9bd8a6bad02aedb427722c9a91be",
+          "deck_name": "Dimir Cube"
+        },
+        {
+          "deck_id": "cube-simic",
+          "filename": "cube-simic.dck",
+          "sha256": "441a85f59066eb5be96e644cbe4f2f3c2d36ffbff98f8250c6f99c4eecedba4c",
+          "deck_name": "Simic Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Simic Cube": 2
+      },
+      "match_winner_label": "Ai(2)-Simic Cube",
+      "winner_deck_id": "cube-simic",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "e65fbbd958d4a003ec8aca2ebaa58b1b8b2b8642efc4bb349c923840d1aed557"
+    },
+    {
+      "match_id": "forge-brawl-033",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260762,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-dimir",
+          "filename": "cube-dimir.dck",
+          "sha256": "95c7a653f9fedf6649e67734e13ea6bbf28d9bd8a6bad02aedb427722c9a91be",
+          "deck_name": "Dimir Cube"
+        },
+        {
+          "deck_id": "cube-rakdos",
+          "filename": "cube-rakdos.dck",
+          "sha256": "8ecb69ec9f2418069edb106a1724e3907d0f02e010868ffe83f5e737020aeb51",
+          "deck_name": "Rakdos Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(1)-Dimir Cube": 2
+      },
+      "match_winner_label": "Ai(1)-Dimir Cube",
+      "winner_deck_id": "cube-dimir",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "b511ce449bb01c7a91fb53cb2e0ef0fe5c378f4fb9508d9c30de1d2e1905c503"
+    },
+    {
+      "match_id": "forge-brawl-034",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260763,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-dimir",
+          "filename": "cube-dimir.dck",
+          "sha256": "95c7a653f9fedf6649e67734e13ea6bbf28d9bd8a6bad02aedb427722c9a91be",
+          "deck_name": "Dimir Cube"
+        },
+        {
+          "deck_id": "cube-golgari",
+          "filename": "cube-golgari.dck",
+          "sha256": "e78269c48037dd3dce8b372a38f9643ba02a32f59451b0596273e2c54f216056",
+          "deck_name": "Golgari Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Golgari Cube": 2,
+        "Ai(1)-Dimir Cube": 1
+      },
+      "match_winner_label": "Ai(2)-Golgari Cube",
+      "winner_deck_id": "cube-golgari",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "84bcde71ce7ce6422ee382c1a7e43434d68a4b4d1be055b1bf8333081d1780d4"
+    },
+    {
+      "match_id": "forge-brawl-035",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260764,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-dimir",
+          "filename": "cube-dimir.dck",
+          "sha256": "95c7a653f9fedf6649e67734e13ea6bbf28d9bd8a6bad02aedb427722c9a91be",
+          "deck_name": "Dimir Cube"
+        },
+        {
+          "deck_id": "cube-gruul",
+          "filename": "cube-gruul.dck",
+          "sha256": "85e3f757861b52288ff6e03ee3d799666f8e652fd4b8ff8ae2df0d603b668f08",
+          "deck_name": "Gruul Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(1)-Dimir Cube": 2
+      },
+      "match_winner_label": "Ai(1)-Dimir Cube",
+      "winner_deck_id": "cube-dimir",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "24cecc2762486c88debd858b6fc26af3ba838bf5cca8833e83e13f0b4d4981a7"
+    },
+    {
+      "match_id": "forge-brawl-036",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260765,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-izzet",
+          "filename": "cube-izzet.dck",
+          "sha256": "3a825d9f5daad19e0628a0ec210c2ceaf623834f9c892b165745cf2d9d922d8a",
+          "deck_name": "Izzet Cube"
+        },
+        {
+          "deck_id": "cube-simic",
+          "filename": "cube-simic.dck",
+          "sha256": "441a85f59066eb5be96e644cbe4f2f3c2d36ffbff98f8250c6f99c4eecedba4c",
+          "deck_name": "Simic Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Simic Cube": 2
+      },
+      "match_winner_label": "Ai(2)-Simic Cube",
+      "winner_deck_id": "cube-simic",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "4449f022e29542ee4025f47ccf6f466dd1e6503277f59ff6f9351f2d4774eeea"
+    },
+    {
+      "match_id": "forge-brawl-037",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260766,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-izzet",
+          "filename": "cube-izzet.dck",
+          "sha256": "3a825d9f5daad19e0628a0ec210c2ceaf623834f9c892b165745cf2d9d922d8a",
+          "deck_name": "Izzet Cube"
+        },
+        {
+          "deck_id": "cube-rakdos",
+          "filename": "cube-rakdos.dck",
+          "sha256": "8ecb69ec9f2418069edb106a1724e3907d0f02e010868ffe83f5e737020aeb51",
+          "deck_name": "Rakdos Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(1)-Izzet Cube": 1,
+        "Ai(2)-Rakdos Cube": 2
+      },
+      "match_winner_label": "Ai(2)-Rakdos Cube",
+      "winner_deck_id": "cube-rakdos",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "967bd6bf5d67969571aa5a9a558e25b13ca0b936d435bfa9899b2af290b9e031"
+    },
+    {
+      "match_id": "forge-brawl-038",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260767,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-izzet",
+          "filename": "cube-izzet.dck",
+          "sha256": "3a825d9f5daad19e0628a0ec210c2ceaf623834f9c892b165745cf2d9d922d8a",
+          "deck_name": "Izzet Cube"
+        },
+        {
+          "deck_id": "cube-golgari",
+          "filename": "cube-golgari.dck",
+          "sha256": "e78269c48037dd3dce8b372a38f9643ba02a32f59451b0596273e2c54f216056",
+          "deck_name": "Golgari Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Golgari Cube": 2,
+        "Ai(1)-Izzet Cube": 1
+      },
+      "match_winner_label": "Ai(2)-Golgari Cube",
+      "winner_deck_id": "cube-golgari",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "4d558121dcb3e8c2df297871542df61ee7086826681dd35cbd473e4add580cf2"
+    },
+    {
+      "match_id": "forge-brawl-039",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260768,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-izzet",
+          "filename": "cube-izzet.dck",
+          "sha256": "3a825d9f5daad19e0628a0ec210c2ceaf623834f9c892b165745cf2d9d922d8a",
+          "deck_name": "Izzet Cube"
+        },
+        {
+          "deck_id": "cube-gruul",
+          "filename": "cube-gruul.dck",
+          "sha256": "85e3f757861b52288ff6e03ee3d799666f8e652fd4b8ff8ae2df0d603b668f08",
+          "deck_name": "Gruul Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Gruul Cube": 2,
+        "Ai(1)-Izzet Cube": 1
+      },
+      "match_winner_label": "Ai(2)-Gruul Cube",
+      "winner_deck_id": "cube-gruul",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "619643c938b481a502c7663ad1b0847e1b0c99d994639efe0c986948e6c74051"
+    },
+    {
+      "match_id": "forge-brawl-040",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260769,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-simic",
+          "filename": "cube-simic.dck",
+          "sha256": "441a85f59066eb5be96e644cbe4f2f3c2d36ffbff98f8250c6f99c4eecedba4c",
+          "deck_name": "Simic Cube"
+        },
+        {
+          "deck_id": "cube-rakdos",
+          "filename": "cube-rakdos.dck",
+          "sha256": "8ecb69ec9f2418069edb106a1724e3907d0f02e010868ffe83f5e737020aeb51",
+          "deck_name": "Rakdos Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(1)-Simic Cube": 2
+      },
+      "match_winner_label": "Ai(1)-Simic Cube",
+      "winner_deck_id": "cube-simic",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "52fe5151d3ae4e0ea79b89f895dba841a7e7624a3b80b672b4a5857e31f12d36"
+    },
+    {
+      "match_id": "forge-brawl-041",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260770,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-simic",
+          "filename": "cube-simic.dck",
+          "sha256": "441a85f59066eb5be96e644cbe4f2f3c2d36ffbff98f8250c6f99c4eecedba4c",
+          "deck_name": "Simic Cube"
+        },
+        {
+          "deck_id": "cube-golgari",
+          "filename": "cube-golgari.dck",
+          "sha256": "e78269c48037dd3dce8b372a38f9643ba02a32f59451b0596273e2c54f216056",
+          "deck_name": "Golgari Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(1)-Simic Cube": 2
+      },
+      "match_winner_label": "Ai(1)-Simic Cube",
+      "winner_deck_id": "cube-simic",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "0f0931e87e5a60af728b3bc02bf18d33489b116531bb540d3b6daf06fc56e5c0"
+    },
+    {
+      "match_id": "forge-brawl-042",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260771,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-simic",
+          "filename": "cube-simic.dck",
+          "sha256": "441a85f59066eb5be96e644cbe4f2f3c2d36ffbff98f8250c6f99c4eecedba4c",
+          "deck_name": "Simic Cube"
+        },
+        {
+          "deck_id": "cube-gruul",
+          "filename": "cube-gruul.dck",
+          "sha256": "85e3f757861b52288ff6e03ee3d799666f8e652fd4b8ff8ae2df0d603b668f08",
+          "deck_name": "Gruul Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Gruul Cube": 2
+      },
+      "match_winner_label": "Ai(2)-Gruul Cube",
+      "winner_deck_id": "cube-gruul",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "6d2f36c51602eb7f58db6732f08776497dc688f57c0cbfb2aa6b4bab95950563"
+    },
+    {
+      "match_id": "forge-brawl-043",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260772,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-rakdos",
+          "filename": "cube-rakdos.dck",
+          "sha256": "8ecb69ec9f2418069edb106a1724e3907d0f02e010868ffe83f5e737020aeb51",
+          "deck_name": "Rakdos Cube"
+        },
+        {
+          "deck_id": "cube-golgari",
+          "filename": "cube-golgari.dck",
+          "sha256": "e78269c48037dd3dce8b372a38f9643ba02a32f59451b0596273e2c54f216056",
+          "deck_name": "Golgari Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Golgari Cube": 2,
+        "Ai(1)-Rakdos Cube": 1
+      },
+      "match_winner_label": "Ai(2)-Golgari Cube",
+      "winner_deck_id": "cube-golgari",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "dacedbf630175283432cbb98cedcfde90c44e11e933730aee93cc66266134514"
+    },
+    {
+      "match_id": "forge-brawl-044",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260773,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-rakdos",
+          "filename": "cube-rakdos.dck",
+          "sha256": "8ecb69ec9f2418069edb106a1724e3907d0f02e010868ffe83f5e737020aeb51",
+          "deck_name": "Rakdos Cube"
+        },
+        {
+          "deck_id": "cube-gruul",
+          "filename": "cube-gruul.dck",
+          "sha256": "85e3f757861b52288ff6e03ee3d799666f8e652fd4b8ff8ae2df0d603b668f08",
+          "deck_name": "Gruul Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Gruul Cube": 2
+      },
+      "match_winner_label": "Ai(2)-Gruul Cube",
+      "winner_deck_id": "cube-gruul",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "3a4b2221c1df4432ea13c6a59029681e215b3ba7125ac13180c93f68a3ad8d3d"
+    },
+    {
+      "match_id": "forge-brawl-045",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260774,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "cube-golgari",
+          "filename": "cube-golgari.dck",
+          "sha256": "e78269c48037dd3dce8b372a38f9643ba02a32f59451b0596273e2c54f216056",
+          "deck_name": "Golgari Cube"
+        },
+        {
+          "deck_id": "cube-gruul",
+          "filename": "cube-gruul.dck",
+          "sha256": "85e3f757861b52288ff6e03ee3d799666f8e652fd4b8ff8ae2df0d603b668f08",
+          "deck_name": "Gruul Cube"
+        }
+      ],
+      "match_score": {
+        "Ai(1)-Golgari Cube": 2
+      },
+      "match_winner_label": "Ai(1)-Golgari Cube",
+      "winner_deck_id": "cube-golgari",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "64d7e1d3d52e808d2e3f0adc336deaa0074947f8a35eda6e8fc1934a83882a88"
+    }
+  ],
+  "held_matches": [],
+  "unattributed_matches": [],
+  "promotion_rule": "Only completed, zero-error, hash-checked rules-engine receipts may enter standings.",
+  "coverage_complete": true,
+  "coverage_warning": "All 45 planned matches have promoted receipts and every deck played every other once. This is still one seeded best-of-three per pairing under a pinned engine — a single experiment, not a metagame win rate.",
+  "table": [
+    {
+      "deck_id": "cube-golgari",
+      "matches": 9,
+      "match_wins": 7,
+      "match_losses": 2,
+      "game_wins": 15,
+      "game_losses": 10,
+      "unattributed": 0,
+      "match_win_rate": 0.7778
+    },
+    {
+      "deck_id": "cube-simic",
+      "matches": 9,
+      "match_wins": 6,
+      "match_losses": 3,
+      "game_wins": 14,
+      "game_losses": 6,
+      "unattributed": 0,
+      "match_win_rate": 0.6667
+    },
+    {
+      "deck_id": "cube-selesnya",
+      "matches": 9,
+      "match_wins": 6,
+      "match_losses": 3,
+      "game_wins": 14,
+      "game_losses": 8,
+      "unattributed": 0,
+      "match_win_rate": 0.6667
+    },
+    {
+      "deck_id": "cube-boros",
+      "matches": 9,
+      "match_wins": 5,
+      "match_losses": 4,
+      "game_wins": 13,
+      "game_losses": 10,
+      "unattributed": 0,
+      "match_win_rate": 0.5556
+    },
+    {
+      "deck_id": "cube-orzhov",
+      "matches": 9,
+      "match_wins": 5,
+      "match_losses": 4,
+      "game_wins": 12,
+      "game_losses": 10,
+      "unattributed": 0,
+      "match_win_rate": 0.5556
+    },
+    {
+      "deck_id": "cube-gruul",
+      "matches": 9,
+      "match_wins": 5,
+      "match_losses": 4,
+      "game_wins": 10,
+      "game_losses": 11,
+      "unattributed": 0,
+      "match_win_rate": 0.5556
+    },
+    {
+      "deck_id": "cube-dimir",
+      "matches": 9,
+      "match_wins": 4,
+      "match_losses": 5,
+      "game_wins": 9,
+      "game_losses": 11,
+      "unattributed": 0,
+      "match_win_rate": 0.4444
+    },
+    {
+      "deck_id": "cube-azorius",
+      "matches": 9,
+      "match_wins": 3,
+      "match_losses": 6,
+      "game_wins": 9,
+      "game_losses": 14,
+      "unattributed": 0,
+      "match_win_rate": 0.3333
+    },
+    {
+      "deck_id": "cube-izzet",
+      "matches": 9,
+      "match_wins": 2,
+      "match_losses": 7,
+      "game_wins": 8,
+      "game_losses": 15,
+      "unattributed": 0,
+      "match_win_rate": 0.2222
+    },
+    {
+      "deck_id": "cube-rakdos",
+      "matches": 9,
+      "match_wins": 2,
+      "match_losses": 7,
+      "game_wins": 6,
+      "game_losses": 15,
+      "unattributed": 0,
+      "match_win_rate": 0.2222
+    }
+  ],
+  "receipt_hash": "bf2ca224b317dceaf6af9746b106af0f0a00d0070dcf94db6882ad1311ea7d0d"
+}

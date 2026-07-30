@@ -188,6 +188,25 @@ test.describe("/mtg/league — MTG Proving Grounds", () => {
     await expect(section.getByText(/never .this deck is stronger/)).toBeVisible();
   });
 
+  test("Cube Sealed standings match the published receipt", async ({ page, request }) => {
+    const response = await request.get("/mtg-proving-grounds-cube-standings.json");
+    expect(response.ok()).toBeTruthy();
+    const standings = await response.json();
+
+    expect(standings.evidence_class).toBe("rules_engine");
+    expect(standings.promoted_match_count).toBe(45);
+    expect(standings.held_match_count).toBe(0);
+    expect(standings.unattributed_match_count).toBe(0);
+    expect(standings.coverage_complete).toBe(true);
+    expect(standings.table).toHaveLength(10);
+
+    const section = page.locator("section[aria-labelledby='cube-standings-title']");
+    await expect(section.getByText("45 of 45 Cube matches promoted")).toBeVisible();
+    await expect(section.getByText("Golgari Cube")).toBeVisible();
+    await expect(section.getByText("7-2")).toBeVisible();
+    await expect(section.getByText("not an Arena Cube tier list")).toBeVisible();
+  });
+
   test("selecting a standing updates the deck inspector", async ({ page }) => {
     await page.getByRole("button", { name: /Grixis Reanimator/ }).click();
     await expect(

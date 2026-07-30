@@ -6,6 +6,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { MtgLeagueObservatory } from "@/components/MtgLeagueObservatory";
 import {
   getMtgForgeAgreement,
+  getMtgForgeCubeStandings,
   getMtgForgeExport,
   getMtgForgeMatch,
   getMtgForgeStandings,
@@ -23,6 +24,15 @@ export const metadata: Metadata = {
 };
 
 export const revalidate = 3600;
+
+function cubeDeckName(deckId: string) {
+  const guild = deckId
+    .replace(/^cube-/, "")
+    .split("-")
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
+  return `${guild} Cube`;
+}
 
 export default function MtgLeaguePage() {
   const payload = getMtgLeague();
@@ -57,6 +67,7 @@ export default function MtgLeaguePage() {
   // more than others. Saying so is the difference between a partial table and a
   // misleading one.
   const agreement = getMtgForgeAgreement();
+  const cubeStandings = getMtgForgeCubeStandings();
   const matchesPlayed = standings.table.map((row) => row.matches);
   const shardIsUneven =
     matchesPlayed.length > 1 &&
@@ -456,6 +467,82 @@ export default function MtgLeaguePage() {
             </div>
           </section>
         ) : null}
+
+        <section
+          className="mt-6 overflow-hidden rounded-lg border border-green/30 bg-surface"
+          aria-labelledby="cube-standings-title"
+        >
+          <div className="flex flex-col gap-4 border-b border-border p-5 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="font-mono text-[9px] uppercase tracking-[0.18em] text-green">
+                Planar Cube · Sealed rules-engine proof
+              </p>
+              <h2 id="cube-standings-title" className="mtg-display mt-1 text-2xl">
+                {cubeStandings.promoted_match_count} of {cubeStandings.planned_match_count} Cube matches promoted
+              </h2>
+              <p className="mt-2 max-w-2xl text-sm leading-relaxed text-text-secondary">
+                Ten two-color shells built from the live Cube pool played one complete Forge Sealed round robin.
+                Every match ran twice with the same normalized result before promotion. This verifies the export,
+                card compatibility, and match pipeline; it does not simulate drafting decisions.
+              </p>
+            </div>
+            <a
+              href="/mtg-proving-grounds-cube-standings.json"
+              className="inline-flex shrink-0 items-center gap-1.5 rounded border border-green/30 px-2.5 py-1.5 font-mono text-[10px] text-green transition-colors hover:border-green/60"
+            >
+              <FileJson className="h-3 w-3" />
+              Cube standings {cubeStandings.receipt_hash.slice(0, 12)}
+            </a>
+          </div>
+
+          <div className="grid grid-cols-2 gap-px border-b border-border bg-border sm:grid-cols-4">
+            {[
+              ["Promoted", cubeStandings.promoted_match_count],
+              ["Held", cubeStandings.held_match_count],
+              ["Unattributed", cubeStandings.unattributed_match_count],
+              ["Decks", cubeStandings.table.length],
+            ].map(([label, value]) => (
+              <div key={String(label)} className="bg-surface px-4 py-3">
+                <p className="font-mono text-[9px] uppercase tracking-wide text-text-secondary">{label}</p>
+                <p className="mt-1 text-xl font-semibold text-foreground">{value}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="hidden gap-3 border-b border-border px-4 py-2 font-mono text-[9px] uppercase tracking-wide text-text-secondary sm:grid sm:grid-cols-[34px_minmax(0,1fr)_92px_92px]">
+            <span>#</span>
+            <span>Guild shell</span>
+            <span className="text-right">Matches</span>
+            <span className="text-right">Games</span>
+          </div>
+          <div className="divide-y divide-border/70">
+            {cubeStandings.table.map((row, index) => (
+              <div
+                key={row.deck_id}
+                className="grid gap-2 px-4 py-3 sm:grid-cols-[34px_minmax(0,1fr)_92px_92px] sm:items-center sm:gap-3"
+              >
+                <span className="hidden font-mono text-xs tabular-nums text-text-secondary sm:block">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <span className="truncate text-sm font-medium">{cubeDeckName(row.deck_id)}</span>
+                <span className="font-mono text-[10px] tabular-nums sm:text-right">
+                  {row.match_wins}-{row.match_losses}
+                </span>
+                <span className="font-mono text-[10px] tabular-nums text-text-secondary sm:text-right">
+                  {row.game_wins}-{row.game_losses}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex items-start gap-3 border-t border-border bg-amber-dim p-4 text-xs leading-relaxed text-amber">
+            <ShieldAlert className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
+            <p>
+              One seeded Forge round robin is an engine experiment, not an Arena Cube tier list. Deck AI quality
+              and the fixed guild-shell construction both influence these records.
+            </p>
+          </div>
+        </section>
 
         <section className="mt-6 overflow-hidden rounded-lg border border-border bg-surface" aria-labelledby="intake-title">
           <div className="flex flex-col gap-4 border-b border-border p-5 sm:flex-row sm:items-end sm:justify-between">

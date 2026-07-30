@@ -286,6 +286,15 @@ export function getMtgForgeStandings(): MtgForgeStandingsPayload {
   return JSON.parse(fs.readFileSync(file, "utf8")) as MtgForgeStandingsPayload;
 }
 
+export function getMtgForgeCubeStandings(): MtgForgeStandingsPayload {
+  const file = path.join(
+    process.cwd(),
+    "public",
+    "mtg-proving-grounds-cube-standings.json"
+  );
+  return JSON.parse(fs.readFileSync(file, "utf8")) as MtgForgeStandingsPayload;
+}
+
 export function getMtgLeague(): MtgLeaguePayload {
   const file = path.join(process.cwd(), "public", "mtg-proving-grounds.json");
   return JSON.parse(fs.readFileSync(file, "utf8")) as MtgLeaguePayload;
