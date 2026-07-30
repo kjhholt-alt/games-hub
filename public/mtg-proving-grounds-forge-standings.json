@@ -2,10 +2,10 @@
   "schema": "buildkit-mtg-forge-standings@1",
   "status": "provisional",
   "evidence_class": "rules_engine",
-  "generated_utc": "2026-07-29T23:23:23+00:00",
+  "generated_utc": "2026-07-30T01:46:14+00:00",
   "plan_receipt_hash": "afa7eab91734d67b491afc39274b11f44653ed659ab529123e295c3f32577572",
   "planned_match_count": 45,
-  "promoted_match_count": 5,
+  "promoted_match_count": 45,
   "held_match_count": 0,
   "unattributed_match_count": 0,
   "promoted_matches": [
@@ -13,7 +13,47 @@
     "forge-brawl-002",
     "forge-brawl-003",
     "forge-brawl-004",
-    "forge-brawl-005"
+    "forge-brawl-005",
+    "forge-brawl-006",
+    "forge-brawl-007",
+    "forge-brawl-008",
+    "forge-brawl-009",
+    "forge-brawl-010",
+    "forge-brawl-011",
+    "forge-brawl-012",
+    "forge-brawl-013",
+    "forge-brawl-014",
+    "forge-brawl-015",
+    "forge-brawl-016",
+    "forge-brawl-017",
+    "forge-brawl-018",
+    "forge-brawl-019",
+    "forge-brawl-020",
+    "forge-brawl-021",
+    "forge-brawl-022",
+    "forge-brawl-023",
+    "forge-brawl-024",
+    "forge-brawl-025",
+    "forge-brawl-026",
+    "forge-brawl-027",
+    "forge-brawl-028",
+    "forge-brawl-029",
+    "forge-brawl-030",
+    "forge-brawl-031",
+    "forge-brawl-032",
+    "forge-brawl-033",
+    "forge-brawl-034",
+    "forge-brawl-035",
+    "forge-brawl-036",
+    "forge-brawl-037",
+    "forge-brawl-038",
+    "forge-brawl-039",
+    "forge-brawl-040",
+    "forge-brawl-041",
+    "forge-brawl-042",
+    "forge-brawl-043",
+    "forge-brawl-044",
+    "forge-brawl-045"
   ],
   "match_receipts": [
     {
@@ -176,73 +216,1408 @@
       "credited": true,
       "normalized_repeat": true,
       "receipt_hash": "4d0b2fadc67563e81a07ab3f7d9916400a8de9098b380d0021ec5b343c3e4b0a"
+    },
+    {
+      "match_id": "forge-brawl-006",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260732,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-23239443",
+          "filename": "archidekt-23239443.dck",
+          "sha256": "c9a5e17e78d7ea486b9da7c8b78942af3889f47238ed2e6c69fa5412a8bf9a30",
+          "deck_name": "If You're Not First You're Last"
+        },
+        {
+          "deck_id": "archidekt-24716014",
+          "filename": "archidekt-24716014.dck",
+          "sha256": "6a26edcf68639807ec9e08ebf7900fb00690712df985c00b15989e8107988d77",
+          "deck_name": "Tsagan Competitive Brawl"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Tsagan Competitive Brawl": 2
+      },
+      "match_winner_label": "Ai(2)-Tsagan Competitive Brawl",
+      "winner_deck_id": "archidekt-24716014",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "49daa4de7fedf7a1b1719eef9f31bb9cb4ecfebfcc5c5d1e6531c81b6f3eaedf"
+    },
+    {
+      "match_id": "forge-brawl-007",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260733,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-23239443",
+          "filename": "archidekt-23239443.dck",
+          "sha256": "c9a5e17e78d7ea486b9da7c8b78942af3889f47238ed2e6c69fa5412a8bf9a30",
+          "deck_name": "If You're Not First You're Last"
+        },
+        {
+          "deck_id": "archidekt-24716416",
+          "filename": "archidekt-24716416.dck",
+          "sha256": "303fbe0681fef5b2de211abcabb68b8b6baa89025843936e18f5b4e11945ca04",
+          "deck_name": "Nicol Bolas, Dragon-God — BrawlREC"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Nicol Bolas, Dragon-God — BrawlREC": 2
+      },
+      "match_winner_label": "Ai(2)-Nicol Bolas, Dragon-God — BrawlREC",
+      "winner_deck_id": "archidekt-24716416",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "02b8d2a5ef9d6d611228113655108f1fc7bdf321eba5b2e845a8c9c5abd3be0c"
+    },
+    {
+      "match_id": "forge-brawl-008",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260734,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-23239443",
+          "filename": "archidekt-23239443.dck",
+          "sha256": "c9a5e17e78d7ea486b9da7c8b78942af3889f47238ed2e6c69fa5412a8bf9a30",
+          "deck_name": "If You're Not First You're Last"
+        },
+        {
+          "deck_id": "archidekt-17883190",
+          "filename": "archidekt-17883190.dck",
+          "sha256": "e67cbe5f5c129502449ae4a553bc063d6d1b633b4488ecfb42da0e8a845f1bd0",
+          "deck_name": "Dragonclaw Ranked Brawl"
+        }
+      ],
+      "match_score": {
+        "Ai(1)-If You're Not First You're Last": 2
+      },
+      "match_winner_label": "Ai(1)-If You're Not First You're Last",
+      "winner_deck_id": "archidekt-23239443",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "20cdc562e01ef802c48de0d7aed43ed8580dc5af0819a805f6c7e4d19ef34a5e"
+    },
+    {
+      "match_id": "forge-brawl-009",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260735,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-23239443",
+          "filename": "archidekt-23239443.dck",
+          "sha256": "c9a5e17e78d7ea486b9da7c8b78942af3889f47238ed2e6c69fa5412a8bf9a30",
+          "deck_name": "If You're Not First You're Last"
+        },
+        {
+          "deck_id": "archidekt-24701805",
+          "filename": "archidekt-24701805.dck",
+          "sha256": "33030b82998e0f989ea63aeaa9def2322107c1267f5f81d9c8275919a64f7caa",
+          "deck_name": "Shiko Blink Brawl"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Shiko Blink Brawl": 2
+      },
+      "match_winner_label": "Ai(2)-Shiko Blink Brawl",
+      "winner_deck_id": "archidekt-24701805",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "bd5b843a00bdba50bf79141810e619a415c467849cfa94ea844519266f2f75e1"
+    },
+    {
+      "match_id": "forge-brawl-010",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260736,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-21852727",
+          "filename": "archidekt-21852727.dck",
+          "sha256": "d62ec52e27503b517c94a8780e9e11b8725e0467fc5020f3b21c9a30605ec923",
+          "deck_name": "Ugin, Eye of the Storms"
+        },
+        {
+          "deck_id": "archidekt-24456089",
+          "filename": "archidekt-24456089.dck",
+          "sha256": "8d6058556001288cc781f9c767efe19ee5fad37c0ad291c8301bd32e80b0a0ae",
+          "deck_name": "Golos Comp. Brawl"
+        }
+      ],
+      "match_score": {
+        "Ai(1)-Ugin, Eye of the Storms": 2
+      },
+      "match_winner_label": "Ai(1)-Ugin, Eye of the Storms",
+      "winner_deck_id": "archidekt-21852727",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "b1e30094d921b41bf67454ac9f6f7269193ffbe5fd8ad9341ed2b0be4c158cc9"
+    },
+    {
+      "match_id": "forge-brawl-011",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260737,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-21852727",
+          "filename": "archidekt-21852727.dck",
+          "sha256": "d62ec52e27503b517c94a8780e9e11b8725e0467fc5020f3b21c9a30605ec923",
+          "deck_name": "Ugin, Eye of the Storms"
+        },
+        {
+          "deck_id": "archidekt-24687216",
+          "filename": "archidekt-24687216.dck",
+          "sha256": "55af30cb39a12ce1452bdf56358de22ea7b2b3a24091597573f5a8c6e8f17057",
+          "deck_name": "Miiriym Brawl"
+        }
+      ],
+      "match_score": {
+        "Ai(1)-Ugin, Eye of the Storms": 1,
+        "Ai(2)-Miiriym Brawl": 2
+      },
+      "match_winner_label": "Ai(2)-Miiriym Brawl",
+      "winner_deck_id": "archidekt-24687216",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "f91b1e932c2d7fd2d256a0e79bb3caae461c1e24b652638a6198a5801498111a"
+    },
+    {
+      "match_id": "forge-brawl-012",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260738,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-21852727",
+          "filename": "archidekt-21852727.dck",
+          "sha256": "d62ec52e27503b517c94a8780e9e11b8725e0467fc5020f3b21c9a30605ec923",
+          "deck_name": "Ugin, Eye of the Storms"
+        },
+        {
+          "deck_id": "archidekt-24406644",
+          "filename": "archidekt-24406644.dck",
+          "sha256": "cd63d224b10e0c29d5bf2a3bde33b67ac5290cb194a2bdf7973709fef251a9b1",
+          "deck_name": "Comp. Brawl Breach"
+        }
+      ],
+      "match_score": {
+        "Ai(1)-Ugin, Eye of the Storms": 2
+      },
+      "match_winner_label": "Ai(1)-Ugin, Eye of the Storms",
+      "winner_deck_id": "archidekt-21852727",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "e6c97227c2b1c5c163d30f0e2fcb4856abd338a020071deec708514d6e244b67"
+    },
+    {
+      "match_id": "forge-brawl-013",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260739,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-21852727",
+          "filename": "archidekt-21852727.dck",
+          "sha256": "d62ec52e27503b517c94a8780e9e11b8725e0467fc5020f3b21c9a30605ec923",
+          "deck_name": "Ugin, Eye of the Storms"
+        },
+        {
+          "deck_id": "archidekt-24684993",
+          "filename": "archidekt-24684993.dck",
+          "sha256": "58abb5093eb17a4217195c30a3267da5d6127532a5b282bc579dc9c737dd9d03",
+          "deck_name": "blue control?"
+        }
+      ],
+      "match_score": {
+        "Ai(1)-Ugin, Eye of the Storms": 2
+      },
+      "match_winner_label": "Ai(1)-Ugin, Eye of the Storms",
+      "winner_deck_id": "archidekt-21852727",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "858d987fcebe0703d205f93db4c3401615d3d34be7ba9ab86f3d91c531e71f2f"
+    },
+    {
+      "match_id": "forge-brawl-014",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260740,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-21852727",
+          "filename": "archidekt-21852727.dck",
+          "sha256": "d62ec52e27503b517c94a8780e9e11b8725e0467fc5020f3b21c9a30605ec923",
+          "deck_name": "Ugin, Eye of the Storms"
+        },
+        {
+          "deck_id": "archidekt-24716014",
+          "filename": "archidekt-24716014.dck",
+          "sha256": "6a26edcf68639807ec9e08ebf7900fb00690712df985c00b15989e8107988d77",
+          "deck_name": "Tsagan Competitive Brawl"
+        }
+      ],
+      "match_score": {
+        "Ai(1)-Ugin, Eye of the Storms": 1,
+        "Ai(2)-Tsagan Competitive Brawl": 2
+      },
+      "match_winner_label": "Ai(2)-Tsagan Competitive Brawl",
+      "winner_deck_id": "archidekt-24716014",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "be5eeaa6cbe77baea3c3d97cd53f036b890158d79e0eef3e2e44375173cfcbd8"
+    },
+    {
+      "match_id": "forge-brawl-015",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260741,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-21852727",
+          "filename": "archidekt-21852727.dck",
+          "sha256": "d62ec52e27503b517c94a8780e9e11b8725e0467fc5020f3b21c9a30605ec923",
+          "deck_name": "Ugin, Eye of the Storms"
+        },
+        {
+          "deck_id": "archidekt-24716416",
+          "filename": "archidekt-24716416.dck",
+          "sha256": "303fbe0681fef5b2de211abcabb68b8b6baa89025843936e18f5b4e11945ca04",
+          "deck_name": "Nicol Bolas, Dragon-God — BrawlREC"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Nicol Bolas, Dragon-God — BrawlREC": 1,
+        "Ai(1)-Ugin, Eye of the Storms": 2
+      },
+      "match_winner_label": "Ai(1)-Ugin, Eye of the Storms",
+      "winner_deck_id": "archidekt-21852727",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "8e3246b7a388e890159d81155d76f9402b34e018187d472a4c396a8f92e14ddb"
+    },
+    {
+      "match_id": "forge-brawl-016",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260742,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-21852727",
+          "filename": "archidekt-21852727.dck",
+          "sha256": "d62ec52e27503b517c94a8780e9e11b8725e0467fc5020f3b21c9a30605ec923",
+          "deck_name": "Ugin, Eye of the Storms"
+        },
+        {
+          "deck_id": "archidekt-17883190",
+          "filename": "archidekt-17883190.dck",
+          "sha256": "e67cbe5f5c129502449ae4a553bc063d6d1b633b4488ecfb42da0e8a845f1bd0",
+          "deck_name": "Dragonclaw Ranked Brawl"
+        }
+      ],
+      "match_score": {
+        "Ai(1)-Ugin, Eye of the Storms": 2
+      },
+      "match_winner_label": "Ai(1)-Ugin, Eye of the Storms",
+      "winner_deck_id": "archidekt-21852727",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "9189f2f4dd6a8e7ec14873c4e723cedf26bc5df57e1203081124c9181e2a6743"
+    },
+    {
+      "match_id": "forge-brawl-017",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260743,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-21852727",
+          "filename": "archidekt-21852727.dck",
+          "sha256": "d62ec52e27503b517c94a8780e9e11b8725e0467fc5020f3b21c9a30605ec923",
+          "deck_name": "Ugin, Eye of the Storms"
+        },
+        {
+          "deck_id": "archidekt-24701805",
+          "filename": "archidekt-24701805.dck",
+          "sha256": "33030b82998e0f989ea63aeaa9def2322107c1267f5f81d9c8275919a64f7caa",
+          "deck_name": "Shiko Blink Brawl"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Shiko Blink Brawl": 2,
+        "Ai(1)-Ugin, Eye of the Storms": 1
+      },
+      "match_winner_label": "Ai(2)-Shiko Blink Brawl",
+      "winner_deck_id": "archidekt-24701805",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "5774dc2796146fc3cc8c6dec23dcb230efceb0b6c8d7c53ca85df88e40d55a98"
+    },
+    {
+      "match_id": "forge-brawl-018",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260744,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-24456089",
+          "filename": "archidekt-24456089.dck",
+          "sha256": "8d6058556001288cc781f9c767efe19ee5fad37c0ad291c8301bd32e80b0a0ae",
+          "deck_name": "Golos Comp. Brawl"
+        },
+        {
+          "deck_id": "archidekt-24687216",
+          "filename": "archidekt-24687216.dck",
+          "sha256": "55af30cb39a12ce1452bdf56358de22ea7b2b3a24091597573f5a8c6e8f17057",
+          "deck_name": "Miiriym Brawl"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Miiriym Brawl": 2,
+        "Ai(1)-Golos Comp. Brawl": 1
+      },
+      "match_winner_label": "Ai(2)-Miiriym Brawl",
+      "winner_deck_id": "archidekt-24687216",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "aa1ace0f2cc91e7f325642e8cc1bd93029c0fe776c2deaab3d64ff8a23358065"
+    },
+    {
+      "match_id": "forge-brawl-019",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260745,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-24456089",
+          "filename": "archidekt-24456089.dck",
+          "sha256": "8d6058556001288cc781f9c767efe19ee5fad37c0ad291c8301bd32e80b0a0ae",
+          "deck_name": "Golos Comp. Brawl"
+        },
+        {
+          "deck_id": "archidekt-24406644",
+          "filename": "archidekt-24406644.dck",
+          "sha256": "cd63d224b10e0c29d5bf2a3bde33b67ac5290cb194a2bdf7973709fef251a9b1",
+          "deck_name": "Comp. Brawl Breach"
+        }
+      ],
+      "match_score": {
+        "Ai(1)-Golos Comp. Brawl": 1,
+        "Ai(2)-Comp. Brawl Breach": 2
+      },
+      "match_winner_label": "Ai(2)-Comp. Brawl Breach",
+      "winner_deck_id": "archidekt-24406644",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "eb23a2686ce996fd4a8b52a6c3ecb9f45a762101731f9a2c0c82f31659364884"
+    },
+    {
+      "match_id": "forge-brawl-020",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260746,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-24456089",
+          "filename": "archidekt-24456089.dck",
+          "sha256": "8d6058556001288cc781f9c767efe19ee5fad37c0ad291c8301bd32e80b0a0ae",
+          "deck_name": "Golos Comp. Brawl"
+        },
+        {
+          "deck_id": "archidekt-24684993",
+          "filename": "archidekt-24684993.dck",
+          "sha256": "58abb5093eb17a4217195c30a3267da5d6127532a5b282bc579dc9c737dd9d03",
+          "deck_name": "blue control?"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-blue control?": 2
+      },
+      "match_winner_label": "Ai(2)-blue control?",
+      "winner_deck_id": "archidekt-24684993",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "9bd8bfe632730a0ef24c09ec13f7b333b4e891bb7bdd3ce51dc7e0d461b9766d"
+    },
+    {
+      "match_id": "forge-brawl-021",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260747,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-24456089",
+          "filename": "archidekt-24456089.dck",
+          "sha256": "8d6058556001288cc781f9c767efe19ee5fad37c0ad291c8301bd32e80b0a0ae",
+          "deck_name": "Golos Comp. Brawl"
+        },
+        {
+          "deck_id": "archidekt-24716014",
+          "filename": "archidekt-24716014.dck",
+          "sha256": "6a26edcf68639807ec9e08ebf7900fb00690712df985c00b15989e8107988d77",
+          "deck_name": "Tsagan Competitive Brawl"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Tsagan Competitive Brawl": 2
+      },
+      "match_winner_label": "Ai(2)-Tsagan Competitive Brawl",
+      "winner_deck_id": "archidekt-24716014",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "41fd860edb0783667c8c6973a2ceff46a64e38275f2aad38ba7988157b198ae5"
+    },
+    {
+      "match_id": "forge-brawl-022",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260748,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-24456089",
+          "filename": "archidekt-24456089.dck",
+          "sha256": "8d6058556001288cc781f9c767efe19ee5fad37c0ad291c8301bd32e80b0a0ae",
+          "deck_name": "Golos Comp. Brawl"
+        },
+        {
+          "deck_id": "archidekt-24716416",
+          "filename": "archidekt-24716416.dck",
+          "sha256": "303fbe0681fef5b2de211abcabb68b8b6baa89025843936e18f5b4e11945ca04",
+          "deck_name": "Nicol Bolas, Dragon-God — BrawlREC"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Nicol Bolas, Dragon-God — BrawlREC": 2,
+        "Ai(1)-Golos Comp. Brawl": 1
+      },
+      "match_winner_label": "Ai(2)-Nicol Bolas, Dragon-God — BrawlREC",
+      "winner_deck_id": "archidekt-24716416",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "4819b5455ed2c917b592cd4d1a2aecbdfadc0d74121abfce8bd8a1dfc54ee10e"
+    },
+    {
+      "match_id": "forge-brawl-023",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260749,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-24456089",
+          "filename": "archidekt-24456089.dck",
+          "sha256": "8d6058556001288cc781f9c767efe19ee5fad37c0ad291c8301bd32e80b0a0ae",
+          "deck_name": "Golos Comp. Brawl"
+        },
+        {
+          "deck_id": "archidekt-17883190",
+          "filename": "archidekt-17883190.dck",
+          "sha256": "e67cbe5f5c129502449ae4a553bc063d6d1b633b4488ecfb42da0e8a845f1bd0",
+          "deck_name": "Dragonclaw Ranked Brawl"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Dragonclaw Ranked Brawl": 2
+      },
+      "match_winner_label": "Ai(2)-Dragonclaw Ranked Brawl",
+      "winner_deck_id": "archidekt-17883190",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "8ace336e05d442abbb63ecc896d92a723bcb3185c429e8c8d00b41ddc56b20f3"
+    },
+    {
+      "match_id": "forge-brawl-024",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260750,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-24456089",
+          "filename": "archidekt-24456089.dck",
+          "sha256": "8d6058556001288cc781f9c767efe19ee5fad37c0ad291c8301bd32e80b0a0ae",
+          "deck_name": "Golos Comp. Brawl"
+        },
+        {
+          "deck_id": "archidekt-24701805",
+          "filename": "archidekt-24701805.dck",
+          "sha256": "33030b82998e0f989ea63aeaa9def2322107c1267f5f81d9c8275919a64f7caa",
+          "deck_name": "Shiko Blink Brawl"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Shiko Blink Brawl": 2
+      },
+      "match_winner_label": "Ai(2)-Shiko Blink Brawl",
+      "winner_deck_id": "archidekt-24701805",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "22bd33a970bc172e07a6479ffe8fe458f70f6e26db4ee6240d24258ec0ff6f43"
+    },
+    {
+      "match_id": "forge-brawl-025",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260751,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-24687216",
+          "filename": "archidekt-24687216.dck",
+          "sha256": "55af30cb39a12ce1452bdf56358de22ea7b2b3a24091597573f5a8c6e8f17057",
+          "deck_name": "Miiriym Brawl"
+        },
+        {
+          "deck_id": "archidekt-24406644",
+          "filename": "archidekt-24406644.dck",
+          "sha256": "cd63d224b10e0c29d5bf2a3bde33b67ac5290cb194a2bdf7973709fef251a9b1",
+          "deck_name": "Comp. Brawl Breach"
+        }
+      ],
+      "match_score": {
+        "Ai(1)-Miiriym Brawl": 2
+      },
+      "match_winner_label": "Ai(1)-Miiriym Brawl",
+      "winner_deck_id": "archidekt-24687216",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "b4b45890fc04c821c149ae745b6cc55b10f2f2428b5c6e8f8874341d2a0b4bfb"
+    },
+    {
+      "match_id": "forge-brawl-026",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260752,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-24687216",
+          "filename": "archidekt-24687216.dck",
+          "sha256": "55af30cb39a12ce1452bdf56358de22ea7b2b3a24091597573f5a8c6e8f17057",
+          "deck_name": "Miiriym Brawl"
+        },
+        {
+          "deck_id": "archidekt-24684993",
+          "filename": "archidekt-24684993.dck",
+          "sha256": "58abb5093eb17a4217195c30a3267da5d6127532a5b282bc579dc9c737dd9d03",
+          "deck_name": "blue control?"
+        }
+      ],
+      "match_score": {
+        "Ai(1)-Miiriym Brawl": 1,
+        "Ai(2)-blue control?": 2
+      },
+      "match_winner_label": "Ai(2)-blue control?",
+      "winner_deck_id": "archidekt-24684993",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "15dc20a3b1640552bcc580dbdf19d185390c950a8fb14d8914983fdc81174c6f"
+    },
+    {
+      "match_id": "forge-brawl-027",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260753,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-24687216",
+          "filename": "archidekt-24687216.dck",
+          "sha256": "55af30cb39a12ce1452bdf56358de22ea7b2b3a24091597573f5a8c6e8f17057",
+          "deck_name": "Miiriym Brawl"
+        },
+        {
+          "deck_id": "archidekt-24716014",
+          "filename": "archidekt-24716014.dck",
+          "sha256": "6a26edcf68639807ec9e08ebf7900fb00690712df985c00b15989e8107988d77",
+          "deck_name": "Tsagan Competitive Brawl"
+        }
+      ],
+      "match_score": {
+        "Ai(1)-Miiriym Brawl": 1,
+        "Ai(2)-Tsagan Competitive Brawl": 2
+      },
+      "match_winner_label": "Ai(2)-Tsagan Competitive Brawl",
+      "winner_deck_id": "archidekt-24716014",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "7c81fd712f7db418f9ed2963466d3108a2b4f9729048be1d5691c8fb2fd6dc07"
+    },
+    {
+      "match_id": "forge-brawl-028",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260754,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-24687216",
+          "filename": "archidekt-24687216.dck",
+          "sha256": "55af30cb39a12ce1452bdf56358de22ea7b2b3a24091597573f5a8c6e8f17057",
+          "deck_name": "Miiriym Brawl"
+        },
+        {
+          "deck_id": "archidekt-24716416",
+          "filename": "archidekt-24716416.dck",
+          "sha256": "303fbe0681fef5b2de211abcabb68b8b6baa89025843936e18f5b4e11945ca04",
+          "deck_name": "Nicol Bolas, Dragon-God — BrawlREC"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Nicol Bolas, Dragon-God — BrawlREC": 1,
+        "Ai(1)-Miiriym Brawl": 2
+      },
+      "match_winner_label": "Ai(1)-Miiriym Brawl",
+      "winner_deck_id": "archidekt-24687216",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "47b8d7430d46e25281a194fe0eaba5a6dfc1642394fd3215662522a6c1fdf953"
+    },
+    {
+      "match_id": "forge-brawl-029",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260755,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-24687216",
+          "filename": "archidekt-24687216.dck",
+          "sha256": "55af30cb39a12ce1452bdf56358de22ea7b2b3a24091597573f5a8c6e8f17057",
+          "deck_name": "Miiriym Brawl"
+        },
+        {
+          "deck_id": "archidekt-17883190",
+          "filename": "archidekt-17883190.dck",
+          "sha256": "e67cbe5f5c129502449ae4a553bc063d6d1b633b4488ecfb42da0e8a845f1bd0",
+          "deck_name": "Dragonclaw Ranked Brawl"
+        }
+      ],
+      "match_score": {
+        "Ai(1)-Miiriym Brawl": 2
+      },
+      "match_winner_label": "Ai(1)-Miiriym Brawl",
+      "winner_deck_id": "archidekt-24687216",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "89bd817508bfacc304673615d73b90a91ade5329b3baeed5beb2170da8caf736"
+    },
+    {
+      "match_id": "forge-brawl-030",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260756,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-24687216",
+          "filename": "archidekt-24687216.dck",
+          "sha256": "55af30cb39a12ce1452bdf56358de22ea7b2b3a24091597573f5a8c6e8f17057",
+          "deck_name": "Miiriym Brawl"
+        },
+        {
+          "deck_id": "archidekt-24701805",
+          "filename": "archidekt-24701805.dck",
+          "sha256": "33030b82998e0f989ea63aeaa9def2322107c1267f5f81d9c8275919a64f7caa",
+          "deck_name": "Shiko Blink Brawl"
+        }
+      ],
+      "match_score": {
+        "Ai(1)-Miiriym Brawl": 2,
+        "Ai(2)-Shiko Blink Brawl": 1
+      },
+      "match_winner_label": "Ai(1)-Miiriym Brawl",
+      "winner_deck_id": "archidekt-24687216",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "21de07879e67a7c9048a22b2a3edd38d24f9e1bd8e029f18a1983acd13f0bed9"
+    },
+    {
+      "match_id": "forge-brawl-031",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260757,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-24406644",
+          "filename": "archidekt-24406644.dck",
+          "sha256": "cd63d224b10e0c29d5bf2a3bde33b67ac5290cb194a2bdf7973709fef251a9b1",
+          "deck_name": "Comp. Brawl Breach"
+        },
+        {
+          "deck_id": "archidekt-24684993",
+          "filename": "archidekt-24684993.dck",
+          "sha256": "58abb5093eb17a4217195c30a3267da5d6127532a5b282bc579dc9c737dd9d03",
+          "deck_name": "blue control?"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-blue control?": 2
+      },
+      "match_winner_label": "Ai(2)-blue control?",
+      "winner_deck_id": "archidekt-24684993",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "d042751374eaef37c447fe7541ca10e7270690ed292bfe3a6bf1fc4a4dab5721"
+    },
+    {
+      "match_id": "forge-brawl-032",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260758,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-24406644",
+          "filename": "archidekt-24406644.dck",
+          "sha256": "cd63d224b10e0c29d5bf2a3bde33b67ac5290cb194a2bdf7973709fef251a9b1",
+          "deck_name": "Comp. Brawl Breach"
+        },
+        {
+          "deck_id": "archidekt-24716014",
+          "filename": "archidekt-24716014.dck",
+          "sha256": "6a26edcf68639807ec9e08ebf7900fb00690712df985c00b15989e8107988d77",
+          "deck_name": "Tsagan Competitive Brawl"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Tsagan Competitive Brawl": 2
+      },
+      "match_winner_label": "Ai(2)-Tsagan Competitive Brawl",
+      "winner_deck_id": "archidekt-24716014",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "aa3ec29d5ef6dd17b9362dcf1679c6b2835c5d9fbece6f060b3203754ad04faa"
+    },
+    {
+      "match_id": "forge-brawl-033",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260759,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-24406644",
+          "filename": "archidekt-24406644.dck",
+          "sha256": "cd63d224b10e0c29d5bf2a3bde33b67ac5290cb194a2bdf7973709fef251a9b1",
+          "deck_name": "Comp. Brawl Breach"
+        },
+        {
+          "deck_id": "archidekt-24716416",
+          "filename": "archidekt-24716416.dck",
+          "sha256": "303fbe0681fef5b2de211abcabb68b8b6baa89025843936e18f5b4e11945ca04",
+          "deck_name": "Nicol Bolas, Dragon-God — BrawlREC"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Nicol Bolas, Dragon-God — BrawlREC": 2
+      },
+      "match_winner_label": "Ai(2)-Nicol Bolas, Dragon-God — BrawlREC",
+      "winner_deck_id": "archidekt-24716416",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "3667f477eb7d8d88cce5338ed13c4da6da433980637738a90ed634cb00e42bff"
+    },
+    {
+      "match_id": "forge-brawl-034",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260760,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-24406644",
+          "filename": "archidekt-24406644.dck",
+          "sha256": "cd63d224b10e0c29d5bf2a3bde33b67ac5290cb194a2bdf7973709fef251a9b1",
+          "deck_name": "Comp. Brawl Breach"
+        },
+        {
+          "deck_id": "archidekt-17883190",
+          "filename": "archidekt-17883190.dck",
+          "sha256": "e67cbe5f5c129502449ae4a553bc063d6d1b633b4488ecfb42da0e8a845f1bd0",
+          "deck_name": "Dragonclaw Ranked Brawl"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Dragonclaw Ranked Brawl": 2
+      },
+      "match_winner_label": "Ai(2)-Dragonclaw Ranked Brawl",
+      "winner_deck_id": "archidekt-17883190",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "c23a3bc581d129c5d9a0575726c951344d304ac4c8eed836dba6e3bf6c18bcc0"
+    },
+    {
+      "match_id": "forge-brawl-035",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260761,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-24406644",
+          "filename": "archidekt-24406644.dck",
+          "sha256": "cd63d224b10e0c29d5bf2a3bde33b67ac5290cb194a2bdf7973709fef251a9b1",
+          "deck_name": "Comp. Brawl Breach"
+        },
+        {
+          "deck_id": "archidekt-24701805",
+          "filename": "archidekt-24701805.dck",
+          "sha256": "33030b82998e0f989ea63aeaa9def2322107c1267f5f81d9c8275919a64f7caa",
+          "deck_name": "Shiko Blink Brawl"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Shiko Blink Brawl": 2
+      },
+      "match_winner_label": "Ai(2)-Shiko Blink Brawl",
+      "winner_deck_id": "archidekt-24701805",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "4f54389d6ba24bee1078b7069a77092956b4d4a4f9e75649ba921149318b779f"
+    },
+    {
+      "match_id": "forge-brawl-036",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260762,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-24684993",
+          "filename": "archidekt-24684993.dck",
+          "sha256": "58abb5093eb17a4217195c30a3267da5d6127532a5b282bc579dc9c737dd9d03",
+          "deck_name": "blue control?"
+        },
+        {
+          "deck_id": "archidekt-24716014",
+          "filename": "archidekt-24716014.dck",
+          "sha256": "6a26edcf68639807ec9e08ebf7900fb00690712df985c00b15989e8107988d77",
+          "deck_name": "Tsagan Competitive Brawl"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Tsagan Competitive Brawl": 2
+      },
+      "match_winner_label": "Ai(2)-Tsagan Competitive Brawl",
+      "winner_deck_id": "archidekt-24716014",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "f505f35b4bfd9ed6cf7af6d14d05ef0785cc3bbe6a17c9283f2eaec3ec634169"
+    },
+    {
+      "match_id": "forge-brawl-037",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260763,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-24684993",
+          "filename": "archidekt-24684993.dck",
+          "sha256": "58abb5093eb17a4217195c30a3267da5d6127532a5b282bc579dc9c737dd9d03",
+          "deck_name": "blue control?"
+        },
+        {
+          "deck_id": "archidekt-24716416",
+          "filename": "archidekt-24716416.dck",
+          "sha256": "303fbe0681fef5b2de211abcabb68b8b6baa89025843936e18f5b4e11945ca04",
+          "deck_name": "Nicol Bolas, Dragon-God — BrawlREC"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Nicol Bolas, Dragon-God — BrawlREC": 2
+      },
+      "match_winner_label": "Ai(2)-Nicol Bolas, Dragon-God — BrawlREC",
+      "winner_deck_id": "archidekt-24716416",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "5aa0624a23b1ee2e8a4be9f87d30534fca255833c5bf09097847ca1b0205e32a"
+    },
+    {
+      "match_id": "forge-brawl-038",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260764,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-24684993",
+          "filename": "archidekt-24684993.dck",
+          "sha256": "58abb5093eb17a4217195c30a3267da5d6127532a5b282bc579dc9c737dd9d03",
+          "deck_name": "blue control?"
+        },
+        {
+          "deck_id": "archidekt-17883190",
+          "filename": "archidekt-17883190.dck",
+          "sha256": "e67cbe5f5c129502449ae4a553bc063d6d1b633b4488ecfb42da0e8a845f1bd0",
+          "deck_name": "Dragonclaw Ranked Brawl"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Dragonclaw Ranked Brawl": 1,
+        "Ai(1)-blue control?": 2
+      },
+      "match_winner_label": "Ai(1)-blue control?",
+      "winner_deck_id": "archidekt-24684993",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "66038ba6c416d0efa0ba3f1a25de0d428ea7153ef3bb3f0280fd0c803309a4e2"
+    },
+    {
+      "match_id": "forge-brawl-039",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260765,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-24684993",
+          "filename": "archidekt-24684993.dck",
+          "sha256": "58abb5093eb17a4217195c30a3267da5d6127532a5b282bc579dc9c737dd9d03",
+          "deck_name": "blue control?"
+        },
+        {
+          "deck_id": "archidekt-24701805",
+          "filename": "archidekt-24701805.dck",
+          "sha256": "33030b82998e0f989ea63aeaa9def2322107c1267f5f81d9c8275919a64f7caa",
+          "deck_name": "Shiko Blink Brawl"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Shiko Blink Brawl": 2
+      },
+      "match_winner_label": "Ai(2)-Shiko Blink Brawl",
+      "winner_deck_id": "archidekt-24701805",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "8840b9885d206fa97135e0f97471f7e5ce2f79c48cd1313ec406fd441a0eebac"
+    },
+    {
+      "match_id": "forge-brawl-040",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260766,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-24716014",
+          "filename": "archidekt-24716014.dck",
+          "sha256": "6a26edcf68639807ec9e08ebf7900fb00690712df985c00b15989e8107988d77",
+          "deck_name": "Tsagan Competitive Brawl"
+        },
+        {
+          "deck_id": "archidekt-24716416",
+          "filename": "archidekt-24716416.dck",
+          "sha256": "303fbe0681fef5b2de211abcabb68b8b6baa89025843936e18f5b4e11945ca04",
+          "deck_name": "Nicol Bolas, Dragon-God — BrawlREC"
+        }
+      ],
+      "match_score": {
+        "Ai(1)-Tsagan Competitive Brawl": 2
+      },
+      "match_winner_label": "Ai(1)-Tsagan Competitive Brawl",
+      "winner_deck_id": "archidekt-24716014",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "600bee92371f4b7e57db0a1e2f10bd82b7742eb31fb6f17f2bd440a41e84b22e"
+    },
+    {
+      "match_id": "forge-brawl-041",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260767,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-24716014",
+          "filename": "archidekt-24716014.dck",
+          "sha256": "6a26edcf68639807ec9e08ebf7900fb00690712df985c00b15989e8107988d77",
+          "deck_name": "Tsagan Competitive Brawl"
+        },
+        {
+          "deck_id": "archidekt-17883190",
+          "filename": "archidekt-17883190.dck",
+          "sha256": "e67cbe5f5c129502449ae4a553bc063d6d1b633b4488ecfb42da0e8a845f1bd0",
+          "deck_name": "Dragonclaw Ranked Brawl"
+        }
+      ],
+      "match_score": {
+        "Ai(1)-Tsagan Competitive Brawl": 2
+      },
+      "match_winner_label": "Ai(1)-Tsagan Competitive Brawl",
+      "winner_deck_id": "archidekt-24716014",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "62cabf3fc7ba2d263d71ba0b924924b74fdcc296340288089bcf164144e0e494"
+    },
+    {
+      "match_id": "forge-brawl-042",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260768,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-24716014",
+          "filename": "archidekt-24716014.dck",
+          "sha256": "6a26edcf68639807ec9e08ebf7900fb00690712df985c00b15989e8107988d77",
+          "deck_name": "Tsagan Competitive Brawl"
+        },
+        {
+          "deck_id": "archidekt-24701805",
+          "filename": "archidekt-24701805.dck",
+          "sha256": "33030b82998e0f989ea63aeaa9def2322107c1267f5f81d9c8275919a64f7caa",
+          "deck_name": "Shiko Blink Brawl"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Shiko Blink Brawl": 2,
+        "Ai(1)-Tsagan Competitive Brawl": 1
+      },
+      "match_winner_label": "Ai(2)-Shiko Blink Brawl",
+      "winner_deck_id": "archidekt-24701805",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "f401d6948bb0bd6c4df1b0f9db1ea00d66be284132a5168d275811a48679c980"
+    },
+    {
+      "match_id": "forge-brawl-043",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260769,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-24716416",
+          "filename": "archidekt-24716416.dck",
+          "sha256": "303fbe0681fef5b2de211abcabb68b8b6baa89025843936e18f5b4e11945ca04",
+          "deck_name": "Nicol Bolas, Dragon-God — BrawlREC"
+        },
+        {
+          "deck_id": "archidekt-17883190",
+          "filename": "archidekt-17883190.dck",
+          "sha256": "e67cbe5f5c129502449ae4a553bc063d6d1b633b4488ecfb42da0e8a845f1bd0",
+          "deck_name": "Dragonclaw Ranked Brawl"
+        }
+      ],
+      "match_score": {
+        "Ai(1)-Nicol Bolas, Dragon-God — BrawlREC": 1,
+        "Ai(2)-Dragonclaw Ranked Brawl": 2
+      },
+      "match_winner_label": "Ai(2)-Dragonclaw Ranked Brawl",
+      "winner_deck_id": "archidekt-17883190",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "251c672e9775fba1bf67d671190fbad6301a14a30cb747cb6269068fc3fd157c"
+    },
+    {
+      "match_id": "forge-brawl-044",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260770,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-24716416",
+          "filename": "archidekt-24716416.dck",
+          "sha256": "303fbe0681fef5b2de211abcabb68b8b6baa89025843936e18f5b4e11945ca04",
+          "deck_name": "Nicol Bolas, Dragon-God — BrawlREC"
+        },
+        {
+          "deck_id": "archidekt-24701805",
+          "filename": "archidekt-24701805.dck",
+          "sha256": "33030b82998e0f989ea63aeaa9def2322107c1267f5f81d9c8275919a64f7caa",
+          "deck_name": "Shiko Blink Brawl"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Shiko Blink Brawl": 2
+      },
+      "match_winner_label": "Ai(2)-Shiko Blink Brawl",
+      "winner_deck_id": "archidekt-24701805",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "6937177ebf9e952114fd302a67b414d3e33437decbabeb1df7641d26f21916e1"
+    },
+    {
+      "match_id": "forge-brawl-045",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "seed": 20260771,
+      "best_of": 3,
+      "deck_files": [
+        {
+          "deck_id": "archidekt-17883190",
+          "filename": "archidekt-17883190.dck",
+          "sha256": "e67cbe5f5c129502449ae4a553bc063d6d1b633b4488ecfb42da0e8a845f1bd0",
+          "deck_name": "Dragonclaw Ranked Brawl"
+        },
+        {
+          "deck_id": "archidekt-24701805",
+          "filename": "archidekt-24701805.dck",
+          "sha256": "33030b82998e0f989ea63aeaa9def2322107c1267f5f81d9c8275919a64f7caa",
+          "deck_name": "Shiko Blink Brawl"
+        }
+      ],
+      "match_score": {
+        "Ai(2)-Shiko Blink Brawl": 2
+      },
+      "match_winner_label": "Ai(2)-Shiko Blink Brawl",
+      "winner_deck_id": "archidekt-24701805",
+      "credited": true,
+      "normalized_repeat": true,
+      "receipt_hash": "a5df37fda48147b305bdd212217d081431eb94fea8438e416c23068f9e92931c"
     }
   ],
   "held_matches": [],
   "unattributed_matches": [],
   "promotion_rule": "Only completed, zero-error, hash-checked rules-engine receipts may enter standings.",
-  "coverage_warning": "5 of 45 planned matches have promoted receipts. These standings are a partial shard, not a completed league.",
+  "coverage_complete": true,
+  "coverage_warning": "All 45 planned matches have promoted receipts and every deck played every other once. This is still one seeded best-of-three per pairing under a pinned engine -- a single experiment, not a metagame win rate.",
   "table": [
     {
-      "deck_id": "archidekt-21852727",
-      "matches": 1,
-      "match_wins": 1,
-      "match_losses": 0,
-      "game_wins": 2,
-      "game_losses": 0,
+      "deck_id": "archidekt-24701805",
+      "matches": 9,
+      "match_wins": 8,
+      "match_losses": 1,
+      "game_wins": 17,
+      "game_losses": 4,
       "unattributed": 0,
-      "match_win_rate": 1.0
+      "match_win_rate": 0.8889
     },
     {
-      "deck_id": "archidekt-24456089",
-      "matches": 1,
-      "match_wins": 1,
-      "match_losses": 0,
-      "game_wins": 2,
-      "game_losses": 0,
+      "deck_id": "archidekt-24716014",
+      "matches": 9,
+      "match_wins": 8,
+      "match_losses": 1,
+      "game_wins": 17,
+      "game_losses": 4,
       "unattributed": 0,
-      "match_win_rate": 1.0
-    },
-    {
-      "deck_id": "archidekt-24684993",
-      "matches": 1,
-      "match_wins": 1,
-      "match_losses": 0,
-      "game_wins": 2,
-      "game_losses": 0,
-      "unattributed": 0,
-      "match_win_rate": 1.0
+      "match_win_rate": 0.8889
     },
     {
       "deck_id": "archidekt-24687216",
-      "matches": 1,
-      "match_wins": 1,
-      "match_losses": 0,
-      "game_wins": 2,
-      "game_losses": 1,
+      "matches": 9,
+      "match_wins": 7,
+      "match_losses": 2,
+      "game_wins": 16,
+      "game_losses": 9,
       "unattributed": 0,
-      "match_win_rate": 1.0
+      "match_win_rate": 0.7778
+    },
+    {
+      "deck_id": "archidekt-21852727",
+      "matches": 9,
+      "match_wins": 6,
+      "match_losses": 3,
+      "game_wins": 15,
+      "game_losses": 7,
+      "unattributed": 0,
+      "match_win_rate": 0.6667
+    },
+    {
+      "deck_id": "archidekt-24684993",
+      "matches": 9,
+      "match_wins": 5,
+      "match_losses": 4,
+      "game_wins": 10,
+      "game_losses": 10,
+      "unattributed": 0,
+      "match_win_rate": 0.5556
+    },
+    {
+      "deck_id": "archidekt-24716416",
+      "matches": 9,
+      "match_wins": 4,
+      "match_losses": 5,
+      "game_wins": 11,
+      "game_losses": 11,
+      "unattributed": 0,
+      "match_win_rate": 0.4444
+    },
+    {
+      "deck_id": "archidekt-17883190",
+      "matches": 9,
+      "match_wins": 3,
+      "match_losses": 6,
+      "game_wins": 7,
+      "game_losses": 13,
+      "unattributed": 0,
+      "match_win_rate": 0.3333
     },
     {
       "deck_id": "archidekt-23239443",
-      "matches": 5,
-      "match_wins": 1,
-      "match_losses": 4,
-      "game_wins": 3,
-      "game_losses": 8,
+      "matches": 9,
+      "match_wins": 2,
+      "match_losses": 7,
+      "game_wins": 5,
+      "game_losses": 14,
       "unattributed": 0,
-      "match_win_rate": 0.2
+      "match_win_rate": 0.2222
+    },
+    {
+      "deck_id": "archidekt-24456089",
+      "matches": 9,
+      "match_wins": 1,
+      "match_losses": 8,
+      "game_wins": 5,
+      "game_losses": 16,
+      "unattributed": 0,
+      "match_win_rate": 0.1111
     },
     {
       "deck_id": "archidekt-24406644",
-      "matches": 1,
-      "match_wins": 0,
-      "match_losses": 1,
-      "game_wins": 0,
-      "game_losses": 2,
+      "matches": 9,
+      "match_wins": 1,
+      "match_losses": 8,
+      "game_wins": 2,
+      "game_losses": 17,
       "unattributed": 0,
-      "match_win_rate": 0.0
+      "match_win_rate": 0.1111
     }
   ],
-  "receipt_hash": "288a20ccb2b3d929a5863bfefdbe7d9cec9f5fcf0d1699fd326c412d4e33c3d6"
+  "receipt_hash": "c16666f0c11f64b0127b8b90ac66f3b6f2330f14ef9713e8d6c40c5af75997db"
 }

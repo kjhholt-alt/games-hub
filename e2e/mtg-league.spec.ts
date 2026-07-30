@@ -55,8 +55,23 @@ test.describe("/mtg/league — MTG Proving Grounds", () => {
       page.getByText(`Match-proven decks ${standings.table.length}/18`)
     ).toBeVisible();
 
-    // Coverage must be disclosed, never a bare leaderboard.
-    await expect(page.getByText(/partial shard, not a completed league/)).toBeVisible();
+    // Coverage must be disclosed either way, and the claim must match reality:
+    // an unfinished queue says "shard", a finished one must stop saying it while
+    // still refusing to be read as a win rate.
+    expect(standings.coverage_complete).toBe(
+      standings.promoted_match_count === standings.planned_match_count
+    );
+    if (standings.coverage_complete) {
+      await expect(page.getByText(/not a metagame win rate/)).toBeVisible();
+      await expect(page.getByText(/partial shard, not a completed league/)).toHaveCount(0);
+      // A complete round robin means every deck played every other exactly once.
+      const expected = standings.table.length - 1;
+      for (const row of standings.table) {
+        expect(row.matches).toBe(expected);
+      }
+    } else {
+      await expect(page.getByText(/partial shard, not a completed league/)).toBeVisible();
+    }
 
     // Every ranked deck is rendered with its record.
     const section = page.locator("section[aria-labelledby='forge-standings-title']");

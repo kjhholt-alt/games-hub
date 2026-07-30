@@ -92,13 +92,14 @@ export default function MtgLeaguePage() {
         <p className="mb-8 max-w-3xl text-sm leading-relaxed text-text-secondary">
           Twenty deck candidates enter a seeded round robin. Qwen coaches can rank and tune candidates, but
           trusted code owns legality, scheduling, evaluation, and every replayable receipt. This first run is
-          visibly marked <strong className="font-medium text-amber">sample / proxy</strong>. Below it, a pinned
-          Card-Forge shard has now executed{" "}
+          visibly marked <strong className="font-medium text-amber">sample / proxy</strong>. Below it, pinned
+          Card-Forge has now executed{" "}
           <strong className="font-medium text-green">
             {standings.promoted_match_count} of {standings.planned_match_count}
           </strong>{" "}
-          real-rules Brawl matches, each reproduced twice. Those receipts are scored separately and are never
-          mixed into the synthetic standings.
+          real-rules Brawl matches, each reproduced twice
+          {standings.coverage_complete ? " — the full round robin" : ""}. Those receipts are scored separately
+          and are never mixed into the synthetic standings.
         </p>
 
         <div className="mb-8 flex flex-wrap gap-2 font-mono text-[10px]">
@@ -203,7 +204,8 @@ export default function MtgLeaguePage() {
           <div className="flex flex-col gap-4 border-b border-border p-5 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <p className="font-mono text-[9px] uppercase tracking-[0.18em] text-green">
-                Rules-engine standings · partial shard
+                Rules-engine standings ·{" "}
+                {standings.coverage_complete ? "complete round robin" : "partial shard"}
               </p>
               <h2 id="forge-standings-title" className="mtg-display mt-1 text-2xl">
                 {standings.promoted_match_count} of {standings.planned_match_count} queued matches executed
@@ -211,8 +213,10 @@ export default function MtgLeaguePage() {
               <p className="mt-2 max-w-2xl text-sm leading-relaxed text-text-secondary">
                 Real Card-Forge games between pinned Competitive Brawl lists, each played twice on a fixed seed
                 and promoted only when both runs normalized identically. This table is scored from those
-                receipts alone — it is a shard of the {standings.planned_match_count}-match round robin, not a
-                finished league, and it never mixes with the synthetic standings above.
+                receipts alone and never mixes with the synthetic standings above.{" "}
+                {standings.coverage_complete
+                  ? `Every deck has now played all ${standings.table.length - 1} of its opponents.`
+                  : `It is a shard of the ${standings.planned_match_count}-match round robin, not a finished league.`}
               </p>
             </div>
             <a

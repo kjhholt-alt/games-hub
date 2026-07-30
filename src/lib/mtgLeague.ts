@@ -188,6 +188,7 @@ export interface MtgForgeStandingsPayload {
     reason: string;
   }>;
   promotion_rule: string;
+  coverage_complete: boolean;
   coverage_warning: string;
   table: Array<{
     deck_id: string;
