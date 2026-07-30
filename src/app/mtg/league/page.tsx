@@ -377,7 +377,7 @@ export default function MtgLeaguePage() {
               <span>Deck</span>
               <span className="text-right">Swept</span>
               <span className="text-right">Swept vs</span>
-              <span className="text-right">Win rate</span>
+              <span className="text-right">Seed wins</span>
             </div>
             <div className="divide-y divide-border/70">
               {agreement.table.map((row, index) => (
@@ -403,7 +403,7 @@ export default function MtgLeaguePage() {
                     {row.swept_against}
                   </span>
                   <span className="font-mono text-[10px] tabular-nums sm:text-right">
-                    {Math.round(row.win_rate_across_seeds * 100)}%
+                    {row.wins_across_seeds}
                     <span className="text-text-secondary"> / {row.observations}</span>
                   </span>
                 </div>

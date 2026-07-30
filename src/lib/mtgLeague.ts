@@ -214,6 +214,10 @@ export interface MtgForgeAgreementPayload {
   seed_set_count: number;
   /** False until at least two seed sets have run — one agrees with itself. */
   reproducibility_proven: boolean;
+  evidence_identity: {
+    engine_jar_sha256: string | null;
+    deck_sha256_by_id: Record<string, string>;
+  };
   seed_sets: Array<{
     seed: number | null;
     plan_receipt_hash: string;

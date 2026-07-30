@@ -87,6 +87,17 @@ test.describe("/mtg/league — MTG Proving Grounds", () => {
 
     expect(agreement.seed_set_count).toBeGreaterThan(1);
     expect(agreement.evidence_class).toBe("rules_engine");
+    expect(agreement.evidence_identity.engine_jar_sha256).toMatch(
+      /^[0-9a-f]{64}$/
+    );
+    expect(
+      Object.keys(agreement.evidence_identity.deck_sha256_by_id)
+    ).toHaveLength(10);
+    for (const deckHash of Object.values(
+      agreement.evidence_identity.deck_sha256_by_id as Record<string, string>
+    )) {
+      expect(deckHash).toMatch(/^[0-9a-f]{64}$/);
+    }
 
     // A pairing may only be called reproducible if every seed set agreed, and
     // every seed set's plan must be distinct — otherwise this is one run counted
@@ -154,6 +165,8 @@ test.describe("/mtg/league — MTG Proving Grounds", () => {
 
     // "Played" and "reproduced" must read as different claims.
     await expect(section.getByText(/what reproduced/)).toBeVisible();
+    await expect(section.getByText("Seed wins", { exact: true })).toBeVisible();
+    await expect(section.getByText("Win rate", { exact: true })).toHaveCount(0);
 
     // Every seed-sensitive pairing is named on the page with its shape, never
     // just counted in a total.

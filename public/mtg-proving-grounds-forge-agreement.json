@@ -2,14 +2,29 @@
   "schema": "buildkit-mtg-forge-agreement@1",
   "status": "provisional",
   "evidence_class": "rules_engine",
-  "generated_utc": "2026-07-30T03:53:45+00:00",
+  "generated_utc": "2026-07-30T04:54:43+00:00",
   "seed_set_count": 2,
   "reproducibility_proven": true,
+  "evidence_identity": {
+    "engine_jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107",
+    "deck_sha256_by_id": {
+      "archidekt-17883190": "e67cbe5f5c129502449ae4a553bc063d6d1b633b4488ecfb42da0e8a845f1bd0",
+      "archidekt-21852727": "d62ec52e27503b517c94a8780e9e11b8725e0467fc5020f3b21c9a30605ec923",
+      "archidekt-23239443": "c9a5e17e78d7ea486b9da7c8b78942af3889f47238ed2e6c69fa5412a8bf9a30",
+      "archidekt-24406644": "cd63d224b10e0c29d5bf2a3bde33b67ac5290cb194a2bdf7973709fef251a9b1",
+      "archidekt-24456089": "8d6058556001288cc781f9c767efe19ee5fad37c0ad291c8301bd32e80b0a0ae",
+      "archidekt-24684993": "58abb5093eb17a4217195c30a3267da5d6127532a5b282bc579dc9c737dd9d03",
+      "archidekt-24687216": "55af30cb39a12ce1452bdf56358de22ea7b2b3a24091597573f5a8c6e8f17057",
+      "archidekt-24701805": "33030b82998e0f989ea63aeaa9def2322107c1267f5f81d9c8275919a64f7caa",
+      "archidekt-24716014": "6a26edcf68639807ec9e08ebf7900fb00690712df985c00b15989e8107988d77",
+      "archidekt-24716416": "303fbe0681fef5b2de211abcabb68b8b6baa89025843936e18f5b4e11945ca04"
+    }
+  },
   "seed_sets": [
     {
       "seed": 20260727,
       "plan_receipt_hash": "afa7eab91734d67b491afc39274b11f44653ed659ab529123e295c3f32577572",
-      "standings_receipt_hash": "eb0927405a38a903d9c9999fb59204cdbe5c61d0e897f81f169d0bb5a6ca68e5",
+      "standings_receipt_hash": "f4f6182caa54d36ea4280ad091b82ecf32433439bca60f161a6dbeab034a44ed",
       "planned_match_count": 45,
       "promoted_match_count": 45,
       "held_match_count": 0,
@@ -19,7 +34,7 @@
     {
       "seed": 20270801,
       "plan_receipt_hash": "8f1997b50e5f52eaeb323009043569a81c92358d35efe83fd87284b61b7db3ad",
-      "standings_receipt_hash": "0c9c57293e6fbd5afa0e5115787c7500e8bd46e12fa9bc9384f3f33caac3135f",
+      "standings_receipt_hash": "d869d561bc1d77fc77692b143fad2518a05dab050c2a02c60f9dcad998bb2551",
       "planned_match_count": 45,
       "promoted_match_count": 45,
       "held_match_count": 0,
@@ -1065,5 +1080,5 @@
     "Agreement measures reproducibility under a pinned engine and pinned decks, not deck strength.",
     "Forge is not MTG Arena; deck AI quality is part of every result."
   ],
-  "receipt_hash": "53c67eeb2ab2c68d89213fb1edc488cddd4af0ee2947c75849c52ef0b4fb42b8"
+  "receipt_hash": "ce3e813b4e44f175f72221ad14a5ddf1262185117f1e7f4a95bf827b8df8ae8c"
 }
