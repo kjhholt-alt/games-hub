@@ -202,6 +202,77 @@ export interface MtgForgeStandingsPayload {
   receipt_hash: string;
 }
 
+/**
+ * Cross-seed reproducibility. Separate from standings on purpose: standings say
+ * what was played, this says how much of it held up when the seed changed.
+ */
+export interface MtgForgeAgreementPayload {
+  schema: string;
+  status: "provisional";
+  evidence_class: "rules_engine" | "none_until_replayed";
+  generated_utc: string;
+  seed_set_count: number;
+  /** False until at least two seed sets have run — one agrees with itself. */
+  reproducibility_proven: boolean;
+  seed_sets: Array<{
+    seed: number | null;
+    plan_receipt_hash: string;
+    standings_receipt_hash: string;
+    planned_match_count: number;
+    promoted_match_count: number;
+    held_match_count: number;
+    unattributed_match_count: number;
+    coverage_complete: boolean;
+  }>;
+  pairing_count: number;
+  fully_observed_pairing_count: number;
+  reproducible_pairing_count: number;
+  split_pairing_count: number;
+  agreement_rate: number;
+  /** Histogram of disagreement shapes, e.g. {"6":31,"5-1":9,"3-3":2}. */
+  split_shapes: Record<string, number>;
+  /** False below 4 seed sets — a bare 1-1 does not establish a coin flip. */
+  coin_flip_threshold_met: boolean;
+  /** Pairings whose top winner holds 50% or less. Null until the threshold. */
+  coin_flip_pairing_count: number | null;
+  split_pairings: string[];
+  pairings: Array<{
+    pairing: string;
+    deck_ids: string[];
+    observations: number;
+    winners: Record<string, number>;
+    seeds_seen: Array<number | null>;
+    fully_observed: boolean;
+    reproducible: boolean;
+    majority_winner: string | null;
+    split_shape: string;
+    dominant_fraction: number;
+  }>;
+  table: Array<{
+    deck_id: string;
+    pairings: number;
+    reproducible_pairings: number;
+    swept: number;
+    swept_against: number;
+    wins_across_seeds: number;
+    observations: number;
+    win_rate_across_seeds: number;
+  }>;
+  limitations: string[];
+  receipt_hash: string;
+}
+
+export function getMtgForgeAgreement(): MtgForgeAgreementPayload | null {
+  const file = path.join(
+    process.cwd(),
+    "public",
+    "mtg-proving-grounds-forge-agreement.json"
+  );
+  // Absent until more than one seed set has run; the page must render without it.
+  if (!fs.existsSync(file)) return null;
+  return JSON.parse(fs.readFileSync(file, "utf8")) as MtgForgeAgreementPayload;
+}
+
 export function getMtgForgeStandings(): MtgForgeStandingsPayload {
   const file = path.join(
     process.cwd(),

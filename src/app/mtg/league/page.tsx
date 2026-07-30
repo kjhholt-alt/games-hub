@@ -5,6 +5,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MtgLeagueObservatory } from "@/components/MtgLeagueObservatory";
 import {
+  getMtgForgeAgreement,
   getMtgForgeExport,
   getMtgForgeMatch,
   getMtgForgeStandings,
@@ -55,6 +56,7 @@ export default function MtgLeaguePage() {
   // The queue runs in plan order, so an unfinished shard covers some decks far
   // more than others. Saying so is the difference between a partial table and a
   // misleading one.
+  const agreement = getMtgForgeAgreement();
   const matchesPlayed = standings.table.map((row) => row.matches);
   const shardIsUneven =
     matchesPlayed.length > 1 &&
@@ -317,6 +319,143 @@ export default function MtgLeaguePage() {
             </p>
           </div>
         </section>
+
+        {agreement &&
+        agreement.reproducibility_proven &&
+        agreement.fully_observed_pairing_count > 0 ? (
+          <section
+            className="mt-6 overflow-hidden rounded-lg border border-brass/30 bg-surface"
+            aria-labelledby="forge-agreement-title"
+          >
+            <div className="flex flex-col gap-4 border-b border-border p-5 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <p className="font-mono text-[9px] uppercase tracking-[0.18em] text-brass">
+                  Reproducibility · {agreement.seed_set_count} seed sets
+                </p>
+                <h2 id="forge-agreement-title" className="mtg-display mt-1 text-2xl">
+                  {agreement.reproducible_pairing_count} of {agreement.fully_observed_pairing_count} pairings
+                  gave the same winner every time
+                </h2>
+                <p className="mt-2 max-w-2xl text-sm leading-relaxed text-text-secondary">
+                  The standings above say what was <em>played</em>. This says what <em>reproduced</em>. The same{" "}
+                  {agreement.pairing_count} pairings were replayed under {agreement.seed_set_count} different seed
+                  sets — {agreement.seed_sets.reduce((n, s) => n + s.promoted_match_count, 0)} promoted matches in
+                  all — and a pairing counts as reproducible only when every seed set credited the same deck.
+                  Split pairings are the interesting result, not a defect, so they are named below with the shape
+                  of the disagreement.
+                </p>
+              </div>
+              <a
+                href="/mtg-proving-grounds-forge-agreement.json"
+                className="inline-flex shrink-0 items-center gap-1.5 rounded border border-brass/30 px-2.5 py-1.5 font-mono text-[10px] text-brass transition-colors hover:border-brass/60"
+              >
+                <FileJson className="h-3 w-3" />
+                agreement {agreement.receipt_hash.slice(0, 12)}
+              </a>
+            </div>
+
+            <div className="grid grid-cols-2 gap-px border-b border-border bg-border sm:grid-cols-4">
+              {[
+                ["Agreement", `${Math.round(agreement.agreement_rate * 100)}%`],
+                ["Reproducible", agreement.reproducible_pairing_count],
+                ["Seed-sensitive", agreement.split_pairing_count],
+                // Only claimed once there are enough seed sets to tell a 3-3
+                // from a 5-1; before that the slot shows the sample instead.
+                agreement.coin_flip_threshold_met
+                  ? ["Coin flips", agreement.coin_flip_pairing_count ?? 0]
+                  : ["Seed sets", agreement.seed_set_count],
+              ].map(([label, value]) => (
+                <div key={String(label)} className="bg-surface px-4 py-3">
+                  <p className="font-mono text-[9px] uppercase tracking-wide text-text-secondary">{label}</p>
+                  <p className="mt-1 text-xl font-semibold text-foreground">{value}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="hidden gap-3 border-b border-border px-4 py-2 font-mono text-[9px] uppercase tracking-wide text-text-secondary sm:grid sm:grid-cols-[34px_minmax(0,1fr)_78px_78px_84px]">
+              <span>#</span>
+              <span>Deck</span>
+              <span className="text-right">Swept</span>
+              <span className="text-right">Swept vs</span>
+              <span className="text-right">Win rate</span>
+            </div>
+            <div className="divide-y divide-border/70">
+              {agreement.table.map((row, index) => (
+                <div
+                  key={row.deck_id}
+                  className="grid gap-2 px-4 py-3 sm:grid-cols-[34px_minmax(0,1fr)_78px_78px_84px] sm:items-center sm:gap-3"
+                >
+                  <span className="hidden font-mono text-xs tabular-nums text-text-secondary sm:block">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <div className="min-w-0">
+                    <span className="truncate text-sm font-medium">
+                      {nameByDeckId.get(row.deck_id) ?? row.deck_id}
+                    </span>
+                    <p className="mt-0.5 truncate font-mono text-[9px] text-text-secondary">
+                      {row.reproducible_pairings}/{row.pairings} pairings reproduced
+                    </p>
+                  </div>
+                  <span className="font-mono text-[10px] tabular-nums text-green sm:text-right">
+                    {row.swept}
+                  </span>
+                  <span className="font-mono text-[10px] tabular-nums text-text-secondary sm:text-right">
+                    {row.swept_against}
+                  </span>
+                  <span className="font-mono text-[10px] tabular-nums sm:text-right">
+                    {Math.round(row.win_rate_across_seeds * 100)}%
+                    <span className="text-text-secondary"> / {row.observations}</span>
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            {agreement.split_pairing_count > 0 ? (
+              <div className="border-t border-border px-4 py-3">
+                <p className="font-mono text-[9px] uppercase tracking-wide text-brass">
+                  Seed-sensitive pairings — the same two decks, different winners
+                </p>
+                <p className="mt-1 font-mono text-[9px] text-text-secondary">
+                  shapes:{" "}
+                  {Object.entries(agreement.split_shapes)
+                    .map(([shape, count]) => `${shape} ×${count}`)
+                    .join("  ·  ")}
+                </p>
+                <ul className="mt-2 space-y-1">
+                  {agreement.pairings
+                    .filter((row) => row.fully_observed && !row.reproducible)
+                    .sort((a, b) => a.dominant_fraction - b.dominant_fraction)
+                    .map((row) => (
+                      <li key={row.pairing} className="font-mono text-[10px] text-text-secondary">
+                        <span
+                          className={
+                            agreement.coin_flip_threshold_met &&
+                            row.dominant_fraction <= 0.5
+                              ? "text-red"
+                              : "text-amber"
+                          }
+                        >
+                          {row.split_shape}
+                        </span>{" "}
+                        {/* The counts already name both decks, so listing the
+                            pairing separately just repeats them. Separator is a
+                            middot because several deck names contain em dashes. */}
+                        {Object.entries(row.winners)
+                          .sort((a, b) => b[1] - a[1])
+                          .map(([id, count]) => `${nameByDeckId.get(id) ?? id} ${count}`)
+                          .join("  ·  ")}
+                      </li>
+                    ))}
+                </ul>
+              </div>
+            ) : null}
+
+            <div className="flex items-start gap-3 border-t border-border bg-amber-dim p-4 text-xs leading-relaxed text-amber">
+              <ShieldAlert className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
+              <p>{agreement.limitations.join(" ")}</p>
+            </div>
+          </section>
+        ) : null}
 
         <section className="mt-6 overflow-hidden rounded-lg border border-border bg-surface" aria-labelledby="intake-title">
           <div className="flex flex-col gap-4 border-b border-border p-5 sm:flex-row sm:items-end sm:justify-between">

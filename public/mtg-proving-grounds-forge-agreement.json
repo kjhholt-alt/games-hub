@@ -1,0 +1,1069 @@
+{
+  "schema": "buildkit-mtg-forge-agreement@1",
+  "status": "provisional",
+  "evidence_class": "rules_engine",
+  "generated_utc": "2026-07-30T03:53:45+00:00",
+  "seed_set_count": 2,
+  "reproducibility_proven": true,
+  "seed_sets": [
+    {
+      "seed": 20260727,
+      "plan_receipt_hash": "afa7eab91734d67b491afc39274b11f44653ed659ab529123e295c3f32577572",
+      "standings_receipt_hash": "eb0927405a38a903d9c9999fb59204cdbe5c61d0e897f81f169d0bb5a6ca68e5",
+      "planned_match_count": 45,
+      "promoted_match_count": 45,
+      "held_match_count": 0,
+      "unattributed_match_count": 0,
+      "coverage_complete": true
+    },
+    {
+      "seed": 20270801,
+      "plan_receipt_hash": "8f1997b50e5f52eaeb323009043569a81c92358d35efe83fd87284b61b7db3ad",
+      "standings_receipt_hash": "0c9c57293e6fbd5afa0e5115787c7500e8bd46e12fa9bc9384f3f33caac3135f",
+      "planned_match_count": 45,
+      "promoted_match_count": 45,
+      "held_match_count": 0,
+      "unattributed_match_count": 0,
+      "coverage_complete": true
+    }
+  ],
+  "pairing_count": 45,
+  "fully_observed_pairing_count": 45,
+  "reproducible_pairing_count": 37,
+  "split_pairing_count": 8,
+  "agreement_rate": 0.8222,
+  "split_shapes": {
+    "2": 37,
+    "1-1": 8
+  },
+  "coin_flip_threshold_met": false,
+  "coin_flip_pairing_count": null,
+  "split_pairings": [
+    "archidekt-17883190 vs archidekt-24716416",
+    "archidekt-21852727 vs archidekt-24716416",
+    "archidekt-23239443 vs archidekt-24456089",
+    "archidekt-23239443 vs archidekt-24684993",
+    "archidekt-23239443 vs archidekt-24716416",
+    "archidekt-24406644 vs archidekt-24456089",
+    "archidekt-24687216 vs archidekt-24701805",
+    "archidekt-24687216 vs archidekt-24716416"
+  ],
+  "pairings": [
+    {
+      "pairing": "archidekt-17883190 vs archidekt-21852727",
+      "deck_ids": [
+        "archidekt-17883190",
+        "archidekt-21852727"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-21852727": 2
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": true,
+      "majority_winner": "archidekt-21852727",
+      "split_shape": "2",
+      "dominant_fraction": 1.0
+    },
+    {
+      "pairing": "archidekt-17883190 vs archidekt-23239443",
+      "deck_ids": [
+        "archidekt-17883190",
+        "archidekt-23239443"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-23239443": 2
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": true,
+      "majority_winner": "archidekt-23239443",
+      "split_shape": "2",
+      "dominant_fraction": 1.0
+    },
+    {
+      "pairing": "archidekt-17883190 vs archidekt-24406644",
+      "deck_ids": [
+        "archidekt-17883190",
+        "archidekt-24406644"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-17883190": 2
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": true,
+      "majority_winner": "archidekt-17883190",
+      "split_shape": "2",
+      "dominant_fraction": 1.0
+    },
+    {
+      "pairing": "archidekt-17883190 vs archidekt-24456089",
+      "deck_ids": [
+        "archidekt-17883190",
+        "archidekt-24456089"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-17883190": 2
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": true,
+      "majority_winner": "archidekt-17883190",
+      "split_shape": "2",
+      "dominant_fraction": 1.0
+    },
+    {
+      "pairing": "archidekt-17883190 vs archidekt-24684993",
+      "deck_ids": [
+        "archidekt-17883190",
+        "archidekt-24684993"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-24684993": 2
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": true,
+      "majority_winner": "archidekt-24684993",
+      "split_shape": "2",
+      "dominant_fraction": 1.0
+    },
+    {
+      "pairing": "archidekt-17883190 vs archidekt-24687216",
+      "deck_ids": [
+        "archidekt-17883190",
+        "archidekt-24687216"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-24687216": 2
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": true,
+      "majority_winner": "archidekt-24687216",
+      "split_shape": "2",
+      "dominant_fraction": 1.0
+    },
+    {
+      "pairing": "archidekt-17883190 vs archidekt-24701805",
+      "deck_ids": [
+        "archidekt-17883190",
+        "archidekt-24701805"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-24701805": 2
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": true,
+      "majority_winner": "archidekt-24701805",
+      "split_shape": "2",
+      "dominant_fraction": 1.0
+    },
+    {
+      "pairing": "archidekt-17883190 vs archidekt-24716014",
+      "deck_ids": [
+        "archidekt-17883190",
+        "archidekt-24716014"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-24716014": 2
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": true,
+      "majority_winner": "archidekt-24716014",
+      "split_shape": "2",
+      "dominant_fraction": 1.0
+    },
+    {
+      "pairing": "archidekt-17883190 vs archidekt-24716416",
+      "deck_ids": [
+        "archidekt-17883190",
+        "archidekt-24716416"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-17883190": 1,
+        "archidekt-24716416": 1
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": false,
+      "majority_winner": null,
+      "split_shape": "1-1",
+      "dominant_fraction": 0.5
+    },
+    {
+      "pairing": "archidekt-21852727 vs archidekt-23239443",
+      "deck_ids": [
+        "archidekt-21852727",
+        "archidekt-23239443"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-21852727": 2
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": true,
+      "majority_winner": "archidekt-21852727",
+      "split_shape": "2",
+      "dominant_fraction": 1.0
+    },
+    {
+      "pairing": "archidekt-21852727 vs archidekt-24406644",
+      "deck_ids": [
+        "archidekt-21852727",
+        "archidekt-24406644"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-21852727": 2
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": true,
+      "majority_winner": "archidekt-21852727",
+      "split_shape": "2",
+      "dominant_fraction": 1.0
+    },
+    {
+      "pairing": "archidekt-21852727 vs archidekt-24456089",
+      "deck_ids": [
+        "archidekt-21852727",
+        "archidekt-24456089"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-21852727": 2
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": true,
+      "majority_winner": "archidekt-21852727",
+      "split_shape": "2",
+      "dominant_fraction": 1.0
+    },
+    {
+      "pairing": "archidekt-21852727 vs archidekt-24684993",
+      "deck_ids": [
+        "archidekt-21852727",
+        "archidekt-24684993"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-21852727": 2
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": true,
+      "majority_winner": "archidekt-21852727",
+      "split_shape": "2",
+      "dominant_fraction": 1.0
+    },
+    {
+      "pairing": "archidekt-21852727 vs archidekt-24687216",
+      "deck_ids": [
+        "archidekt-21852727",
+        "archidekt-24687216"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-24687216": 2
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": true,
+      "majority_winner": "archidekt-24687216",
+      "split_shape": "2",
+      "dominant_fraction": 1.0
+    },
+    {
+      "pairing": "archidekt-21852727 vs archidekt-24701805",
+      "deck_ids": [
+        "archidekt-21852727",
+        "archidekt-24701805"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-24701805": 2
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": true,
+      "majority_winner": "archidekt-24701805",
+      "split_shape": "2",
+      "dominant_fraction": 1.0
+    },
+    {
+      "pairing": "archidekt-21852727 vs archidekt-24716014",
+      "deck_ids": [
+        "archidekt-21852727",
+        "archidekt-24716014"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-24716014": 2
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": true,
+      "majority_winner": "archidekt-24716014",
+      "split_shape": "2",
+      "dominant_fraction": 1.0
+    },
+    {
+      "pairing": "archidekt-21852727 vs archidekt-24716416",
+      "deck_ids": [
+        "archidekt-21852727",
+        "archidekt-24716416"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-21852727": 1,
+        "archidekt-24716416": 1
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": false,
+      "majority_winner": null,
+      "split_shape": "1-1",
+      "dominant_fraction": 0.5
+    },
+    {
+      "pairing": "archidekt-23239443 vs archidekt-24406644",
+      "deck_ids": [
+        "archidekt-23239443",
+        "archidekt-24406644"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-23239443": 2
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": true,
+      "majority_winner": "archidekt-23239443",
+      "split_shape": "2",
+      "dominant_fraction": 1.0
+    },
+    {
+      "pairing": "archidekt-23239443 vs archidekt-24456089",
+      "deck_ids": [
+        "archidekt-23239443",
+        "archidekt-24456089"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-24456089": 1,
+        "archidekt-23239443": 1
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": false,
+      "majority_winner": null,
+      "split_shape": "1-1",
+      "dominant_fraction": 0.5
+    },
+    {
+      "pairing": "archidekt-23239443 vs archidekt-24684993",
+      "deck_ids": [
+        "archidekt-23239443",
+        "archidekt-24684993"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-24684993": 1,
+        "archidekt-23239443": 1
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": false,
+      "majority_winner": null,
+      "split_shape": "1-1",
+      "dominant_fraction": 0.5
+    },
+    {
+      "pairing": "archidekt-23239443 vs archidekt-24687216",
+      "deck_ids": [
+        "archidekt-23239443",
+        "archidekt-24687216"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-24687216": 2
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": true,
+      "majority_winner": "archidekt-24687216",
+      "split_shape": "2",
+      "dominant_fraction": 1.0
+    },
+    {
+      "pairing": "archidekt-23239443 vs archidekt-24701805",
+      "deck_ids": [
+        "archidekt-23239443",
+        "archidekt-24701805"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-24701805": 2
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": true,
+      "majority_winner": "archidekt-24701805",
+      "split_shape": "2",
+      "dominant_fraction": 1.0
+    },
+    {
+      "pairing": "archidekt-23239443 vs archidekt-24716014",
+      "deck_ids": [
+        "archidekt-23239443",
+        "archidekt-24716014"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-24716014": 2
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": true,
+      "majority_winner": "archidekt-24716014",
+      "split_shape": "2",
+      "dominant_fraction": 1.0
+    },
+    {
+      "pairing": "archidekt-23239443 vs archidekt-24716416",
+      "deck_ids": [
+        "archidekt-23239443",
+        "archidekt-24716416"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-24716416": 1,
+        "archidekt-23239443": 1
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": false,
+      "majority_winner": null,
+      "split_shape": "1-1",
+      "dominant_fraction": 0.5
+    },
+    {
+      "pairing": "archidekt-24406644 vs archidekt-24456089",
+      "deck_ids": [
+        "archidekt-24406644",
+        "archidekt-24456089"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-24406644": 1,
+        "archidekt-24456089": 1
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": false,
+      "majority_winner": null,
+      "split_shape": "1-1",
+      "dominant_fraction": 0.5
+    },
+    {
+      "pairing": "archidekt-24406644 vs archidekt-24684993",
+      "deck_ids": [
+        "archidekt-24406644",
+        "archidekt-24684993"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-24684993": 2
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": true,
+      "majority_winner": "archidekt-24684993",
+      "split_shape": "2",
+      "dominant_fraction": 1.0
+    },
+    {
+      "pairing": "archidekt-24406644 vs archidekt-24687216",
+      "deck_ids": [
+        "archidekt-24406644",
+        "archidekt-24687216"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-24687216": 2
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": true,
+      "majority_winner": "archidekt-24687216",
+      "split_shape": "2",
+      "dominant_fraction": 1.0
+    },
+    {
+      "pairing": "archidekt-24406644 vs archidekt-24701805",
+      "deck_ids": [
+        "archidekt-24406644",
+        "archidekt-24701805"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-24701805": 2
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": true,
+      "majority_winner": "archidekt-24701805",
+      "split_shape": "2",
+      "dominant_fraction": 1.0
+    },
+    {
+      "pairing": "archidekt-24406644 vs archidekt-24716014",
+      "deck_ids": [
+        "archidekt-24406644",
+        "archidekt-24716014"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-24716014": 2
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": true,
+      "majority_winner": "archidekt-24716014",
+      "split_shape": "2",
+      "dominant_fraction": 1.0
+    },
+    {
+      "pairing": "archidekt-24406644 vs archidekt-24716416",
+      "deck_ids": [
+        "archidekt-24406644",
+        "archidekt-24716416"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-24716416": 2
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": true,
+      "majority_winner": "archidekt-24716416",
+      "split_shape": "2",
+      "dominant_fraction": 1.0
+    },
+    {
+      "pairing": "archidekt-24456089 vs archidekt-24684993",
+      "deck_ids": [
+        "archidekt-24456089",
+        "archidekt-24684993"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-24684993": 2
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": true,
+      "majority_winner": "archidekt-24684993",
+      "split_shape": "2",
+      "dominant_fraction": 1.0
+    },
+    {
+      "pairing": "archidekt-24456089 vs archidekt-24687216",
+      "deck_ids": [
+        "archidekt-24456089",
+        "archidekt-24687216"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-24687216": 2
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": true,
+      "majority_winner": "archidekt-24687216",
+      "split_shape": "2",
+      "dominant_fraction": 1.0
+    },
+    {
+      "pairing": "archidekt-24456089 vs archidekt-24701805",
+      "deck_ids": [
+        "archidekt-24456089",
+        "archidekt-24701805"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-24701805": 2
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": true,
+      "majority_winner": "archidekt-24701805",
+      "split_shape": "2",
+      "dominant_fraction": 1.0
+    },
+    {
+      "pairing": "archidekt-24456089 vs archidekt-24716014",
+      "deck_ids": [
+        "archidekt-24456089",
+        "archidekt-24716014"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-24716014": 2
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": true,
+      "majority_winner": "archidekt-24716014",
+      "split_shape": "2",
+      "dominant_fraction": 1.0
+    },
+    {
+      "pairing": "archidekt-24456089 vs archidekt-24716416",
+      "deck_ids": [
+        "archidekt-24456089",
+        "archidekt-24716416"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-24716416": 2
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": true,
+      "majority_winner": "archidekt-24716416",
+      "split_shape": "2",
+      "dominant_fraction": 1.0
+    },
+    {
+      "pairing": "archidekt-24684993 vs archidekt-24687216",
+      "deck_ids": [
+        "archidekt-24684993",
+        "archidekt-24687216"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-24684993": 2
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": true,
+      "majority_winner": "archidekt-24684993",
+      "split_shape": "2",
+      "dominant_fraction": 1.0
+    },
+    {
+      "pairing": "archidekt-24684993 vs archidekt-24701805",
+      "deck_ids": [
+        "archidekt-24684993",
+        "archidekt-24701805"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-24701805": 2
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": true,
+      "majority_winner": "archidekt-24701805",
+      "split_shape": "2",
+      "dominant_fraction": 1.0
+    },
+    {
+      "pairing": "archidekt-24684993 vs archidekt-24716014",
+      "deck_ids": [
+        "archidekt-24684993",
+        "archidekt-24716014"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-24716014": 2
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": true,
+      "majority_winner": "archidekt-24716014",
+      "split_shape": "2",
+      "dominant_fraction": 1.0
+    },
+    {
+      "pairing": "archidekt-24684993 vs archidekt-24716416",
+      "deck_ids": [
+        "archidekt-24684993",
+        "archidekt-24716416"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-24716416": 2
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": true,
+      "majority_winner": "archidekt-24716416",
+      "split_shape": "2",
+      "dominant_fraction": 1.0
+    },
+    {
+      "pairing": "archidekt-24687216 vs archidekt-24701805",
+      "deck_ids": [
+        "archidekt-24687216",
+        "archidekt-24701805"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-24687216": 1,
+        "archidekt-24701805": 1
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": false,
+      "majority_winner": null,
+      "split_shape": "1-1",
+      "dominant_fraction": 0.5
+    },
+    {
+      "pairing": "archidekt-24687216 vs archidekt-24716014",
+      "deck_ids": [
+        "archidekt-24687216",
+        "archidekt-24716014"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-24716014": 2
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": true,
+      "majority_winner": "archidekt-24716014",
+      "split_shape": "2",
+      "dominant_fraction": 1.0
+    },
+    {
+      "pairing": "archidekt-24687216 vs archidekt-24716416",
+      "deck_ids": [
+        "archidekt-24687216",
+        "archidekt-24716416"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-24687216": 1,
+        "archidekt-24716416": 1
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": false,
+      "majority_winner": null,
+      "split_shape": "1-1",
+      "dominant_fraction": 0.5
+    },
+    {
+      "pairing": "archidekt-24701805 vs archidekt-24716014",
+      "deck_ids": [
+        "archidekt-24701805",
+        "archidekt-24716014"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-24701805": 2
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": true,
+      "majority_winner": "archidekt-24701805",
+      "split_shape": "2",
+      "dominant_fraction": 1.0
+    },
+    {
+      "pairing": "archidekt-24701805 vs archidekt-24716416",
+      "deck_ids": [
+        "archidekt-24701805",
+        "archidekt-24716416"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-24701805": 2
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": true,
+      "majority_winner": "archidekt-24701805",
+      "split_shape": "2",
+      "dominant_fraction": 1.0
+    },
+    {
+      "pairing": "archidekt-24716014 vs archidekt-24716416",
+      "deck_ids": [
+        "archidekt-24716014",
+        "archidekt-24716416"
+      ],
+      "observations": 2,
+      "winners": {
+        "archidekt-24716014": 2
+      },
+      "seeds_seen": [
+        20260727,
+        20270801
+      ],
+      "fully_observed": true,
+      "reproducible": true,
+      "majority_winner": "archidekt-24716014",
+      "split_shape": "2",
+      "dominant_fraction": 1.0
+    }
+  ],
+  "table": [
+    {
+      "deck_id": "archidekt-24701805",
+      "pairings": 9,
+      "reproducible_pairings": 8,
+      "swept": 8,
+      "swept_against": 0,
+      "wins_across_seeds": 17,
+      "observations": 18,
+      "win_rate_across_seeds": 0.9444
+    },
+    {
+      "deck_id": "archidekt-24716014",
+      "pairings": 9,
+      "reproducible_pairings": 9,
+      "swept": 8,
+      "swept_against": 1,
+      "wins_across_seeds": 16,
+      "observations": 18,
+      "win_rate_across_seeds": 0.8889
+    },
+    {
+      "deck_id": "archidekt-24687216",
+      "pairings": 9,
+      "reproducible_pairings": 7,
+      "swept": 5,
+      "swept_against": 2,
+      "wins_across_seeds": 12,
+      "observations": 18,
+      "win_rate_across_seeds": 0.6667
+    },
+    {
+      "deck_id": "archidekt-21852727",
+      "pairings": 9,
+      "reproducible_pairings": 8,
+      "swept": 5,
+      "swept_against": 3,
+      "wins_across_seeds": 11,
+      "observations": 18,
+      "win_rate_across_seeds": 0.6111
+    },
+    {
+      "deck_id": "archidekt-24716416",
+      "pairings": 9,
+      "reproducible_pairings": 5,
+      "swept": 3,
+      "swept_against": 2,
+      "wins_across_seeds": 10,
+      "observations": 18,
+      "win_rate_across_seeds": 0.5556
+    },
+    {
+      "deck_id": "archidekt-24684993",
+      "pairings": 9,
+      "reproducible_pairings": 8,
+      "swept": 4,
+      "swept_against": 4,
+      "wins_across_seeds": 9,
+      "observations": 18,
+      "win_rate_across_seeds": 0.5
+    },
+    {
+      "deck_id": "archidekt-23239443",
+      "pairings": 9,
+      "reproducible_pairings": 6,
+      "swept": 2,
+      "swept_against": 4,
+      "wins_across_seeds": 7,
+      "observations": 18,
+      "win_rate_across_seeds": 0.3889
+    },
+    {
+      "deck_id": "archidekt-17883190",
+      "pairings": 9,
+      "reproducible_pairings": 8,
+      "swept": 2,
+      "swept_against": 6,
+      "wins_across_seeds": 5,
+      "observations": 18,
+      "win_rate_across_seeds": 0.2778
+    },
+    {
+      "deck_id": "archidekt-24456089",
+      "pairings": 9,
+      "reproducible_pairings": 7,
+      "swept": 0,
+      "swept_against": 7,
+      "wins_across_seeds": 2,
+      "observations": 18,
+      "win_rate_across_seeds": 0.1111
+    },
+    {
+      "deck_id": "archidekt-24406644",
+      "pairings": 9,
+      "reproducible_pairings": 8,
+      "swept": 0,
+      "swept_against": 8,
+      "wins_across_seeds": 1,
+      "observations": 18,
+      "win_rate_across_seeds": 0.0556
+    }
+  ],
+  "limitations": [
+    "2 seed sets is a tiny sample. It supports 'this pairing is seed-sensitive' and never 'this deck is stronger in the metagame'.",
+    "Agreement measures reproducibility under a pinned engine and pinned decks, not deck strength.",
+    "Forge is not MTG Arena; deck AI quality is part of every result."
+  ],
+  "receipt_hash": "53c67eeb2ab2c68d89213fb1edc488cddd4af0ee2947c75849c52ef0b4fb42b8"
+}
