@@ -2,7 +2,7 @@
   "schema": "buildkit-mtg-forge-standings@1",
   "status": "provisional",
   "evidence_class": "rules_engine",
-  "generated_utc": "2026-07-30T01:46:14+00:00",
+  "generated_utc": "2026-07-30T02:03:56+00:00",
   "plan_receipt_hash": "afa7eab91734d67b491afc39274b11f44653ed659ab529123e295c3f32577572",
   "planned_match_count": 45,
   "promoted_match_count": 45,
@@ -1516,7 +1516,7 @@
   "unattributed_matches": [],
   "promotion_rule": "Only completed, zero-error, hash-checked rules-engine receipts may enter standings.",
   "coverage_complete": true,
-  "coverage_warning": "All 45 planned matches have promoted receipts and every deck played every other once. This is still one seeded best-of-three per pairing under a pinned engine -- a single experiment, not a metagame win rate.",
+  "coverage_warning": "All 45 planned matches have promoted receipts and every deck played every other once. This is still one seeded best-of-three per pairing under a pinned engine — a single experiment, not a metagame win rate.",
   "table": [
     {
       "deck_id": "archidekt-24701805",
@@ -1619,5 +1619,5 @@
       "match_win_rate": 0.1111
     }
   ],
-  "receipt_hash": "c16666f0c11f64b0127b8b90ac66f3b6f2330f14ef9713e8d6c40c5af75997db"
+  "receipt_hash": "bdb514b255c4d8eda24ed92fabd78d4db54444e1f6b92b0d98fb2a58ef5853ac"
 }
