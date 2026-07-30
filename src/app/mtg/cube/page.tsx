@@ -11,9 +11,9 @@ import { formatFreshness, isCubeUnavailable } from "@/lib/mtgDraftView";
 import { mtgDisplay } from "@/lib/mtgFonts";
 
 export const metadata: Metadata = {
-  title: "MTG Planar Cube Tier List — Day-1 Priors, Honestly Labeled",
+  title: "MTG Planar Cube Tier List — Every Card Tiered, Honestly Labeled",
   description:
-    "Every card in MTG Arena's new Planar Cube Draft pool gets a real S–F tier — from real 17lands data when it exists, a Powered Cube or cross-set prior, or a transparent rarity/CMC/type heuristic. The basis is always shown, never hidden behind an invented win rate.",
+    "Every card in MTG Arena's Planar Cube Draft pool gets a real S–F tier — from real 17lands data when it exists, a Powered Cube or cross-set prior, or a transparent rarity/CMC/type heuristic. The basis is always shown, never hidden behind an invented win rate.",
   alternates: { canonical: "https://play.buildkit.store/mtg/cube" },
 };
 
@@ -87,15 +87,33 @@ export default function MtgCubePage() {
 
         {sample && <MtgSampleBanner />}
 
-        {/* Day-1 priors callout — up front, per the honesty rails. Never a
+        {/* Priors callout — up front, per the honesty rails. Never a
             paraphrase — this is a short human summary; the FULL verbatim
-            methodology string is in the accordion below and on the card. */}
+            methodology string is in the accordion below and on the card.
+            Copy is DRIVEN BY THE PAYLOAD (live-row count + week dates), so
+            it can never claim "launched today" weeks after launch: the
+            headline flips on its own the day real telemetry appears. */}
         <div className="flex items-start gap-3 rounded-md border border-amber/40 bg-amber-dim px-4 py-3.5 mb-6">
           <AlertTriangle size={15} className="text-amber mt-0.5 shrink-0" />
           <p className="text-text-secondary text-sm leading-relaxed">
-            <span className="font-semibold text-amber">These are Day-1 priors, not real Planar Cube win rates.</span>{" "}
-            Planar Cube Draft launched on Arena today — 17lands has no per-card telemetry for it
-            yet. Every card below still gets a real tier, graded by the best signal available: real
+            {live_planar_cube === 0 ? (
+              <>
+                <span className="font-semibold text-amber">These are priors, not real Planar Cube win rates.</span>{" "}
+                Planar Cube Draft is live on Arena
+                {cube.week_start ? ` (this module's week started ${cube.week_start})` : ""}, but
+                17lands still publishes no per-card telemetry for it.
+              </>
+            ) : (
+              <>
+                <span className="font-semibold text-amber">
+                  {live_planar_cube} of {cube.rows.length} cards now carry real Planar Cube data;
+                  the rest are still priors.
+                </span>{" "}
+                17lands telemetry for Planar Cube Draft is landing but does not yet cover the
+                whole pool.
+              </>
+            )}{" "}
+            Every card below still gets a real tier, graded by the best signal available: real
             live Planar Cube data when it exists, a Powered Cube or cross-set 17lands prior, or a
             transparent rarity/CMC/type heuristic when neither has data. The basis is always shown
             in its own column — nothing is hidden behind an invented win rate, and nothing renders
