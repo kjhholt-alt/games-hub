@@ -10,12 +10,29 @@ import { getMtgDraft } from "@/lib/mtgDraft";
 import { formatFreshness, isCubeUnavailable } from "@/lib/mtgDraftView";
 import { mtgDisplay } from "@/lib/mtgFonts";
 
-export const metadata: Metadata = {
-  title: "MTG Planar Cube Tier List — Every Card Tiered, Honestly Labeled",
-  description:
-    "Every card in MTG Arena's Planar Cube Draft pool gets a real S–F tier — from real 17lands data when it exists, a Powered Cube or cross-set prior, or a transparent rarity/CMC/type heuristic. The basis is always shown, never hidden behind an invented win rate.",
-  alternates: { canonical: "https://play.buildkit.store/mtg/cube" },
-};
+const BASE_DESCRIPTION =
+  "Every card in MTG Arena's Planar Cube Draft pool gets a real S–F tier — from real 17lands data when it exists, a Powered Cube or cross-set prior, or a transparent rarity/CMC/type heuristic. The basis is always shown, never hidden behind an invented win rate.";
+
+// The week label comes straight off the committed cube payload
+// (mtg-draft.json cube.week_label) -- never a hand-typed/guessed value, so
+// the title and og:title/og:description can never drift from what the page
+// itself renders in the week banner.
+export async function generateMetadata(): Promise<Metadata> {
+  const payload = getMtgDraft();
+  const cube = payload?.cube;
+  const weekLabel = cube && !isCubeUnavailable(cube) ? cube.week_label : null;
+
+  const title = weekLabel
+    ? `MTG Planar Cube Tier List — ${weekLabel} — Every Card Tiered, Honestly Labeled`
+    : "MTG Planar Cube Tier List — Every Card Tiered, Honestly Labeled";
+  const description = weekLabel ? `${weekLabel}. ${BASE_DESCRIPTION}` : BASE_DESCRIPTION;
+
+  return {
+    title,
+    description,
+    alternates: { canonical: "https://play.buildkit.store/mtg/cube" },
+  };
+}
 
 // The pipeline republishes at most a few times a day; matches every other
 // /mtg page's ISR window.
