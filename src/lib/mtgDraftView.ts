@@ -297,6 +297,63 @@ export interface CubeModule {
   prior_summary: CubePriorSummary;
 }
 
+// ─── Cube week-over-week diff (gl-0573) ──────────────────────────────────────
+//
+// Derived by scripts/build-cube-week-diff.mjs by walking THIS repo's own git
+// history for public/mtg-draft.json — the published payload's commit log is
+// the true record (there is no separate mtg-workstation/metahub pipeline on
+// this node to diff against). Absent entirely when the script hasn't run yet
+// or found no prior distinct week in history (fail-closed, never a guessed
+// delta); even when present, `isCubeWeekDiffCurrent` must still hold before
+// a caller renders it — a diff file left over from a prior module swap
+// carries a stale `current_week_label` and must never render next to a
+// newer week's table.
+
+export interface CubeWeekDiffCardRef {
+  card: string;
+  grade: Exclude<DraftGrade, "unrated">;
+}
+
+export interface CubeWeekDiffTierMove {
+  name: string;
+  from_tier: Exclude<DraftGrade, "unrated">;
+  to_tier: Exclude<DraftGrade, "unrated">;
+}
+
+export interface CubeWeekDiffCounts {
+  added: number;
+  removed: number;
+  tier_moves: number;
+}
+
+export interface CubeWeekDiffPayload {
+  schema: string;
+  computed_at: string;
+  /** One-line human summary of exactly what was diffed against what — render
+   * this verbatim, never paraphrase (same rail as `methodology` elsewhere in
+   * this file). */
+  basis: string;
+  current_week_label: string;
+  previous_week_label: string;
+  current_commit: string;
+  previous_commit: string;
+  counts: CubeWeekDiffCounts;
+  added: CubeWeekDiffCardRef[];
+  removed: CubeWeekDiffCardRef[];
+  tier_moves: CubeWeekDiffTierMove[];
+}
+
+/** True only when the diff file exists AND its `current_week_label` matches
+ * the LIVE cube module's `week_label` — the single gate that keeps the
+ * What-Changed-This-Week strip from ever rendering a stale or mismatched
+ * diff (e.g. after a module swap the diff script hasn't re-run for yet). */
+export function isCubeWeekDiffCurrent(
+  diff: CubeWeekDiffPayload | null,
+  cube: CubeModule | undefined
+): diff is CubeWeekDiffPayload {
+  return Boolean(diff && cube && diff.current_week_label === cube.week_label);
+}
+
 // ─── The Hobbit (HOB) Day-0 Intel Pack ───────────────────────────────────────
 //
 // MTG Arena's "The Hobbit" launches 2026-08-11; spoiler season is live now.
