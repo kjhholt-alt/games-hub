@@ -4,7 +4,7 @@ import { ExternalLink, BookOpen, AlertTriangle } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MtgSampleBanner } from "@/components/MtgSampleBanner";
-import { MtgCubeTierTable } from "@/components/MtgCubeTierTable";
+import { MtgCubeExplorer } from "@/components/MtgCubeExplorer";
 import { MtgDraftMethodologyAccordion } from "@/components/MtgDraftMethodologyAccordion";
 import { getMtgDraft } from "@/lib/mtgDraft";
 import { formatFreshness, isCubeUnavailable } from "@/lib/mtgDraftView";
@@ -149,7 +149,7 @@ export default function MtgCubePage() {
 
         <MtgDraftMethodologyAccordion methodology={cube.methodology} />
 
-        <MtgCubeTierTable rows={cube.rows} />
+        <MtgCubeExplorer rows={cube.rows} />
 
         <p className="text-sm text-text-secondary mt-10 mb-3 print:hidden">
           <Link

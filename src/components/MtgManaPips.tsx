@@ -32,7 +32,7 @@ export function ManaDots({
   const dim = size === "md" ? "w-2.5 h-2.5" : "w-2 h-2";
   if (!letters) {
     return (
-      <span className="inline-flex items-center" title="Colorless">
+      <span className="relative inline-flex items-center" title="Colorless">
         <span className={`${dim} rounded-full border border-mana-c`} />
         <span className="sr-only">Colorless</span>
       </span>
@@ -43,7 +43,7 @@ export function ManaDots({
     .map((c) => MANA_NAME[c] ?? c)
     .join(" / ");
   return (
-    <span className="inline-flex items-center gap-1" title={names}>
+    <span className="relative inline-flex items-center gap-1" title={names}>
       {letters.split("").map((c, i) => (
         <span
           key={`${c}-${i}`}
