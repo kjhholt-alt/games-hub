@@ -341,7 +341,10 @@ export default function MtgPage() {
         : "—",
     },
     ...(draftPayload?.cube && draftPayload.cube.rows.length > 0
-      ? [{ label: "Cube", href: "/mtg/cube", count: `${draftPayload.cube.rows.length}` }]
+      ? [
+          { label: "Cube", href: "/mtg/cube", count: `${draftPayload.cube.rows.length}` },
+          { label: "Cube trainer", href: "/mtg/cube/trainer", count: "P1P1" },
+        ]
       : []),
     ...(draftPayload?.hob && draftPayload.hob.rows.length > 0
       ? [{ label: "The Hobbit", href: "/mtg/hob", count: `${draftPayload.hob.rows.length}` }]

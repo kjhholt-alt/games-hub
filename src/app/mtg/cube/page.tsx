@@ -168,6 +168,15 @@ export default function MtgCubePage() {
 
         <MtgDraftMethodologyAccordion methodology={cube.methodology} />
 
+        <p className="mb-6 print:hidden">
+          <Link
+            href="/mtg/cube/trainer"
+            className="inline-flex items-center gap-2 rounded-md border border-brass/40 bg-brass-dim px-4 py-2 text-sm font-medium text-brass hover:border-brass/70 transition-colors"
+          >
+            Practice P1P1s with the pick trainer &rarr;
+          </Link>
+        </p>
+
         {isCubeWeekDiffCurrent(weekDiff, cube) && <MtgCubeWeekDiffStrip diff={weekDiff} />}
 
         <MtgCubeExplorer rows={cube.rows} />
