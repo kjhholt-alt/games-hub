@@ -4,8 +4,14 @@ import { headerLabels, findColumnIndex, rowCellText } from "./helpers";
 /**
  * /mtg/cube — Planar Cube Tier List. Live-site smoke coverage for the
  * gl-0571 filter bar (search/color/rarity/type/tier/basis + explicit client
- * sort with URL-param state, server order default) and the 10-guild ranked
- * strip. Column labels/order are read at runtime, never hardcoded indices.
+ * sort with URL-param state, server order default), the 10-guild ranked
+ * strip, and the gl-0573 What-Changed-This-Week diff strip. Column
+ * labels/order are read at runtime, never hardcoded indices. The diff strip
+ * only renders when public/mtg-cube-week-diff.json exists AND its
+ * current_week_label matches the live cube's week_label — a real fact about
+ * this run, not always true (e.g. right after a module swap before the diff
+ * script re-runs) — so its presence is asserted conditionally rather than
+ * required, mirroring the hub's own honest-absence convention.
  */
 test.describe("/mtg/cube — Planar Cube filter bar + guild strip", () => {
   test.beforeEach(async ({ page }) => {
@@ -136,6 +142,37 @@ test.describe("/mtg/cube — Planar Cube filter bar + guild strip", () => {
     for (let i = 0; i < sampleSize; i++) {
       expect((await rowCellText(rows.nth(i), rarityIdx)).toLowerCase()).toBe("mythic");
     }
+  });
+
+  test("What-Changed-This-Week strip: when present, shows both week labels, counts, and an honest basis line", async ({
+    page,
+  }) => {
+    const strip = page.getByText("What changed this week", { exact: true });
+    if ((await strip.count()) === 0) {
+      test.skip(true, "no current-week diff published for this run — honest absence, not a failure");
+      return;
+    }
+
+    await expect(strip).toBeVisible();
+    const container = strip.locator("xpath=ancestor::div[2]");
+    await expect(container.getByText(/added/i).first()).toBeVisible();
+    await expect(container.getByText(/removed/i).first()).toBeVisible();
+    await expect(container.getByText(/tier moves/i).first()).toBeVisible();
+    await expect(container.getByText(/diff of published payload history/i)).toBeVisible();
+  });
+
+  test("What-Changed-This-Week strip: the full-diff disclosure expands without layout error", async ({
+    page,
+  }) => {
+    const summary = page.getByText("Show full diff", { exact: true });
+    if ((await summary.count()) === 0) {
+      test.skip(true, "no diff detail to expand this run");
+      return;
+    }
+    await summary.click();
+    await expect(
+      page.getByText(/^Added \(/).or(page.getByText(/^Tier moves \(/)).first()
+    ).toBeVisible();
   });
 
   test("has no horizontal overflow at mobile width, filter bar included", async ({ page }) => {

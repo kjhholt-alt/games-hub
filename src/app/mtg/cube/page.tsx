@@ -5,9 +5,10 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MtgSampleBanner } from "@/components/MtgSampleBanner";
 import { MtgCubeExplorer } from "@/components/MtgCubeExplorer";
+import { MtgCubeWeekDiffStrip } from "@/components/MtgCubeWeekDiffStrip";
 import { MtgDraftMethodologyAccordion } from "@/components/MtgDraftMethodologyAccordion";
-import { getMtgDraft } from "@/lib/mtgDraft";
-import { formatFreshness, isCubeUnavailable } from "@/lib/mtgDraftView";
+import { getMtgCubeWeekDiff, getMtgDraft } from "@/lib/mtgDraft";
+import { formatFreshness, isCubeUnavailable, isCubeWeekDiffCurrent } from "@/lib/mtgDraftView";
 import { mtgDisplay } from "@/lib/mtgFonts";
 
 export const metadata: Metadata = {
@@ -51,6 +52,7 @@ export default function MtgCubePage() {
 
   const sample = payload.status !== "published";
   const { live_planar_cube, powered_cube_prior, cross_set_prior, heuristic } = cube.prior_summary;
+  const weekDiff = getMtgCubeWeekDiff();
 
   return (
     <main className={`min-h-screen mtg-scope ${mtgDisplay.variable}`}>
@@ -148,6 +150,8 @@ export default function MtgCubePage() {
         )}
 
         <MtgDraftMethodologyAccordion methodology={cube.methodology} />
+
+        {isCubeWeekDiffCurrent(weekDiff, cube) && <MtgCubeWeekDiffStrip diff={weekDiff} />}
 
         <MtgCubeExplorer rows={cube.rows} />
 

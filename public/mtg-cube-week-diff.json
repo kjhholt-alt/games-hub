@@ -1,0 +1,2845 @@
+{
+  "schema": "buildkit-mtg-cube-week-diff@1",
+  "computed_at": "2026-07-31T01:04:31.698Z",
+  "basis": "Diff of published payload history (git log -- public/mtg-draft.json): Week 1 -- Zendikar -> Week 2 -- Innistrad.",
+  "current_week_label": "Week 2 -- Innistrad",
+  "previous_week_label": "Week 1 -- Zendikar",
+  "current_commit": "0a21d4bc035c982908323879c059820392e8ba97",
+  "previous_commit": "5842fc3f6bb9d66e47136895218854f38bfe0ba8",
+  "counts": {
+    "added": 348,
+    "removed": 337,
+    "tier_moves": 17
+  },
+  "added": [
+    {
+      "card": "Adeline, Resplendent Cathar",
+      "grade": "A"
+    },
+    {
+      "card": "Aftermath Analyst",
+      "grade": "B"
+    },
+    {
+      "card": "Alchemist's Greeting",
+      "grade": "D"
+    },
+    {
+      "card": "Anguished Unmaking",
+      "grade": "S"
+    },
+    {
+      "card": "Animate Dead",
+      "grade": "B"
+    },
+    {
+      "card": "Anje, Maid of Dishonor",
+      "grade": "S"
+    },
+    {
+      "card": "Anje's Ravager",
+      "grade": "A"
+    },
+    {
+      "card": "Antiquities on the Loose",
+      "grade": "S"
+    },
+    {
+      "card": "Archangel Avacyn",
+      "grade": "A"
+    },
+    {
+      "card": "Archmage of Runes",
+      "grade": "C"
+    },
+    {
+      "card": "Argoth, Sanctum of Nature",
+      "grade": "C"
+    },
+    {
+      "card": "Ark of Hunger",
+      "grade": "S"
+    },
+    {
+      "card": "Arlinn Kord",
+      "grade": "S"
+    },
+    {
+      "card": "Arlinn, the Pack's Hope",
+      "grade": "B"
+    },
+    {
+      "card": "Ashling, Flame Dancer",
+      "grade": "D"
+    },
+    {
+      "card": "Asylum Visitor",
+      "grade": "B"
+    },
+    {
+      "card": "Augur of Autumn",
+      "grade": "A"
+    },
+    {
+      "card": "Avabruck Caretaker",
+      "grade": "S"
+    },
+    {
+      "card": "Avacyn's Judgment",
+      "grade": "B"
+    },
+    {
+      "card": "Avacyn's Pilgrim",
+      "grade": "C"
+    },
+    {
+      "card": "Balustrade Wurm",
+      "grade": "B"
+    },
+    {
+      "card": "Bedlam Reveler",
+      "grade": "B"
+    },
+    {
+      "card": "Blazing Rootwalla",
+      "grade": "C"
+    },
+    {
+      "card": "Blighted Nightmare",
+      "grade": "B"
+    },
+    {
+      "card": "Blood Artist",
+      "grade": "A"
+    },
+    {
+      "card": "Blood Fountain",
+      "grade": "C"
+    },
+    {
+      "card": "Blood Operative",
+      "grade": "B"
+    },
+    {
+      "card": "Bloodhall Priest",
+      "grade": "B"
+    },
+    {
+      "card": "Bloodline Keeper",
+      "grade": "S"
+    },
+    {
+      "card": "Bloodthirsty Adversary",
+      "grade": "A"
+    },
+    {
+      "card": "Bloodtithe Harvester",
+      "grade": "C"
+    },
+    {
+      "card": "Bloodvial Purveyor",
+      "grade": "A"
+    },
+    {
+      "card": "Borrowed Time",
+      "grade": "A"
+    },
+    {
+      "card": "Brimstone Volley",
+      "grade": "B"
+    },
+    {
+      "card": "Bruna, the Fading Light",
+      "grade": "B"
+    },
+    {
+      "card": "Brutal Cathar",
+      "grade": "S"
+    },
+    {
+      "card": "Burn Down the House",
+      "grade": "B"
+    },
+    {
+      "card": "By Invitation Only",
+      "grade": "B"
+    },
+    {
+      "card": "Bygone Bishop",
+      "grade": "A"
+    },
+    {
+      "card": "Callous Dismissal",
+      "grade": "D"
+    },
+    {
+      "card": "Captain Howler, Sea Scourge",
+      "grade": "B"
+    },
+    {
+      "card": "Carnage, Crimson Chaos",
+      "grade": "A"
+    },
+    {
+      "card": "Cathar Commando",
+      "grade": "B"
+    },
+    {
+      "card": "Cemetery Gatekeeper",
+      "grade": "B"
+    },
+    {
+      "card": "Cemetery Illuminator",
+      "grade": "B"
+    },
+    {
+      "card": "Cemetery Protector",
+      "grade": "B"
+    },
+    {
+      "card": "Cerise, Slayer of Fear",
+      "grade": "B"
+    },
+    {
+      "card": "Champion of Dusk",
+      "grade": "B"
+    },
+    {
+      "card": "Champion of the Perished",
+      "grade": "A"
+    },
+    {
+      "card": "Chomping Mastasaur",
+      "grade": "B"
+    },
+    {
+      "card": "Clarion Spirit",
+      "grade": "B"
+    },
+    {
+      "card": "Cling to Dust",
+      "grade": "B"
+    },
+    {
+      "card": "Clone Crafter",
+      "grade": "B"
+    },
+    {
+      "card": "Collective Defiance",
+      "grade": "A"
+    },
+    {
+      "card": "Colossal Skyturtle",
+      "grade": "C"
+    },
+    {
+      "card": "Commit // Memory",
+      "grade": "B"
+    },
+    {
+      "card": "Consider",
+      "grade": "C"
+    },
+    {
+      "card": "Cool but Rude",
+      "grade": "D"
+    },
+    {
+      "card": "Coppercoat Vanguard",
+      "grade": "B"
+    },
+    {
+      "card": "Coruscation Mage",
+      "grade": "C"
+    },
+    {
+      "card": "Cryptbreaker",
+      "grade": "A"
+    },
+    {
+      "card": "Cryptcaller Chariot",
+      "grade": "C"
+    },
+    {
+      "card": "Cursecloth Wrappings",
+      "grade": "A"
+    },
+    {
+      "card": "Dark Salvation",
+      "grade": "A"
+    },
+    {
+      "card": "Davriel, Soul Broker",
+      "grade": "S"
+    },
+    {
+      "card": "Dead Weight",
+      "grade": "C"
+    },
+    {
+      "card": "Deathcap Glade",
+      "grade": "B"
+    },
+    {
+      "card": "Declaration in Stone",
+      "grade": "B"
+    },
+    {
+      "card": "Deep Analysis",
+      "grade": "C"
+    },
+    {
+      "card": "Delver of Secrets",
+      "grade": "D"
+    },
+    {
+      "card": "Descend upon the Sinful",
+      "grade": "A"
+    },
+    {
+      "card": "Deserted Beach",
+      "grade": "S"
+    },
+    {
+      "card": "Devil's Play",
+      "grade": "B"
+    },
+    {
+      "card": "Diamond Weapon",
+      "grade": "B"
+    },
+    {
+      "card": "Diregraf Captain",
+      "grade": "B"
+    },
+    {
+      "card": "Diregraf Colossus",
+      "grade": "A"
+    },
+    {
+      "card": "Doom Whisperer",
+      "grade": "S"
+    },
+    {
+      "card": "Doomed Traveler",
+      "grade": "C"
+    },
+    {
+      "card": "Dragon's Rage Channeler",
+      "grade": "B"
+    },
+    {
+      "card": "Dream Eater",
+      "grade": "A"
+    },
+    {
+      "card": "Dreamroot Cascade",
+      "grade": "B"
+    },
+    {
+      "card": "Dredger's Insight",
+      "grade": "B"
+    },
+    {
+      "card": "Dungeon Geists",
+      "grade": "B"
+    },
+    {
+      "card": "Duskwatch Recruiter",
+      "grade": "B"
+    },
+    {
+      "card": "Eccentric Farmer",
+      "grade": "D"
+    },
+    {
+      "card": "Eddymurk Crab",
+      "grade": "B"
+    },
+    {
+      "card": "Edgar, Charmed Groom",
+      "grade": "A"
+    },
+    {
+      "card": "Elite Spellbinder",
+      "grade": "A"
+    },
+    {
+      "card": "Emeritus of Woe",
+      "grade": "A"
+    },
+    {
+      "card": "Emrakul, the Promised End",
+      "grade": "B"
+    },
+    {
+      "card": "Enter the God-Eternals",
+      "grade": "B"
+    },
+    {
+      "card": "Essence Anchor",
+      "grade": "C"
+    },
+    {
+      "card": "Eternal Witness",
+      "grade": "C"
+    },
+    {
+      "card": "Exhibition Tidecaller",
+      "grade": "A"
+    },
+    {
+      "card": "Exquisite Firecraft",
+      "grade": "B"
+    },
+    {
+      "card": "Extraction Specialist",
+      "grade": "A"
+    },
+    {
+      "card": "Fading Hope",
+      "grade": "B"
+    },
+    {
+      "card": "Faithless Looting",
+      "grade": "D"
+    },
+    {
+      "card": "Faithless Salvaging",
+      "grade": "C"
+    },
+    {
+      "card": "Falkenrath Aristocrat",
+      "grade": "B"
+    },
+    {
+      "card": "Falkenrath Gorger",
+      "grade": "B"
+    },
+    {
+      "card": "Falkenrath Pit Fighter",
+      "grade": "C"
+    },
+    {
+      "card": "Fallaji Archaeologist",
+      "grade": "B"
+    },
+    {
+      "card": "Fateful Absence",
+      "grade": "B"
+    },
+    {
+      "card": "Fauna Shaman",
+      "grade": "C"
+    },
+    {
+      "card": "Fiend Artisan",
+      "grade": "S"
+    },
+    {
+      "card": "Fiery Temper",
+      "grade": "B"
+    },
+    {
+      "card": "Fleeting Spirit",
+      "grade": "B"
+    },
+    {
+      "card": "Flow State",
+      "grade": "B"
+    },
+    {
+      "card": "Forbidden Alchemy",
+      "grade": "C"
+    },
+    {
+      "card": "Gaea's Blessing",
+      "grade": "B"
+    },
+    {
+      "card": "Garruk Relentless",
+      "grade": "S"
+    },
+    {
+      "card": "Geist of Saint Traft",
+      "grade": "A"
+    },
+    {
+      "card": "General Kudro of Drannith",
+      "grade": "A"
+    },
+    {
+      "card": "Geralf, the Fleshwright",
+      "grade": "B"
+    },
+    {
+      "card": "Geralf's Masterpiece",
+      "grade": "A"
+    },
+    {
+      "card": "Gisa and Geralf",
+      "grade": "A"
+    },
+    {
+      "card": "Gisa, the Hellraiser",
+      "grade": "A"
+    },
+    {
+      "card": "Gisela, the Broken Blade",
+      "grade": "S"
+    },
+    {
+      "card": "Gitrog, Horror of Zhava",
+      "grade": "B"
+    },
+    {
+      "card": "Gnarlwood Dryad",
+      "grade": "C"
+    },
+    {
+      "card": "Gnaw to the Bone",
+      "grade": "C"
+    },
+    {
+      "card": "God-Eternal Kefnet",
+      "grade": "A"
+    },
+    {
+      "card": "God-Pharaoh's Gift",
+      "grade": "B"
+    },
+    {
+      "card": "Gorex, the Tombshell",
+      "grade": "C"
+    },
+    {
+      "card": "Grapple with the Past",
+      "grade": "C"
+    },
+    {
+      "card": "Graveshifter",
+      "grade": "C"
+    },
+    {
+      "card": "Graveyard Trespasser",
+      "grade": "S"
+    },
+    {
+      "card": "Grim Flayer",
+      "grade": "A"
+    },
+    {
+      "card": "Griselbrand",
+      "grade": "D"
+    },
+    {
+      "card": "Grist, Voracious Larva",
+      "grade": "C"
+    },
+    {
+      "card": "Guardian of Faith",
+      "grade": "A"
+    },
+    {
+      "card": "Halana and Alena, Partners",
+      "grade": "A"
+    },
+    {
+      "card": "Hamlet Captain",
+      "grade": "C"
+    },
+    {
+      "card": "Hanweir Battlements",
+      "grade": "A"
+    },
+    {
+      "card": "Hanweir Garrison",
+      "grade": "A"
+    },
+    {
+      "card": "Hanweir Militia Captain",
+      "grade": "B"
+    },
+    {
+      "card": "Hard Evidence",
+      "grade": "D"
+    },
+    {
+      "card": "Haunted Ridge",
+      "grade": "S"
+    },
+    {
+      "card": "Hauntwoods Shrieker",
+      "grade": "B"
+    },
+    {
+      "card": "Hedge Shredder",
+      "grade": "C"
+    },
+    {
+      "card": "Hell Mongrel",
+      "grade": "D"
+    },
+    {
+      "card": "Hellrider",
+      "grade": "B"
+    },
+    {
+      "card": "High-Society Hunter",
+      "grade": "A"
+    },
+    {
+      "card": "Highway Robbery",
+      "grade": "D"
+    },
+    {
+      "card": "Honor the God-Pharaoh",
+      "grade": "D"
+    },
+    {
+      "card": "Hopeful Initiate",
+      "grade": "A"
+    },
+    {
+      "card": "Hullbreaker Horror",
+      "grade": "A"
+    },
+    {
+      "card": "Huntmaster of the Fells",
+      "grade": "B"
+    },
+    {
+      "card": "Ill-Timed Explosion",
+      "grade": "A"
+    },
+    {
+      "card": "Incendiary Flow",
+      "grade": "C"
+    },
+    {
+      "card": "Incorrigible Youths",
+      "grade": "C"
+    },
+    {
+      "card": "Indulgent Aristocrat",
+      "grade": "B"
+    },
+    {
+      "card": "Infernal Grasp",
+      "grade": "A"
+    },
+    {
+      "card": "Insolent Neonate",
+      "grade": "D"
+    },
+    {
+      "card": "Intrepid Adversary",
+      "grade": "B"
+    },
+    {
+      "card": "Intrude on the Mind",
+      "grade": "B"
+    },
+    {
+      "card": "Ishkanah, Broodmother",
+      "grade": "A"
+    },
+    {
+      "card": "Ishkanah, Grafwidow",
+      "grade": "A"
+    },
+    {
+      "card": "Ivora, Insatiable Heir",
+      "grade": "B"
+    },
+    {
+      "card": "Jace, Wielder of Mysteries",
+      "grade": "D"
+    },
+    {
+      "card": "Jack-o'-Lantern",
+      "grade": "C"
+    },
+    {
+      "card": "Jadzi, Steward of Fate",
+      "grade": "A"
+    },
+    {
+      "card": "Jarsyl, Dark Age Scion",
+      "grade": "A"
+    },
+    {
+      "card": "Jerren, Corrupted Bishop",
+      "grade": "A"
+    },
+    {
+      "card": "Katilda and Lier",
+      "grade": "A"
+    },
+    {
+      "card": "Katilda, Dawnhart Prime",
+      "grade": "A"
+    },
+    {
+      "card": "Kiora, the Rising Tide",
+      "grade": "A"
+    },
+    {
+      "card": "Kishla Skimmer",
+      "grade": "B"
+    },
+    {
+      "card": "Lam, Storm Crane Elder",
+      "grade": "A"
+    },
+    {
+      "card": "Lasyd Prowler",
+      "grade": "B"
+    },
+    {
+      "card": "Ledger Shredder",
+      "grade": "A"
+    },
+    {
+      "card": "Lier, Disciple of the Drowned",
+      "grade": "S"
+    },
+    {
+      "card": "Liesa, Forgotten Archangel",
+      "grade": "A"
+    },
+    {
+      "card": "Lightning Axe",
+      "grade": "B"
+    },
+    {
+      "card": "Liliana, Heretical Healer",
+      "grade": "S"
+    },
+    {
+      "card": "Liliana, the Last Hope",
+      "grade": "S"
+    },
+    {
+      "card": "Liliana's Mastery",
+      "grade": "B"
+    },
+    {
+      "card": "Lingering Souls",
+      "grade": "B"
+    },
+    {
+      "card": "Lluwen, Imperfect Naturalist",
+      "grade": "A"
+    },
+    {
+      "card": "Malevolent Hermit",
+      "grade": "B"
+    },
+    {
+      "card": "Manaform Hellkite",
+      "grade": "S"
+    },
+    {
+      "card": "Markov Baron",
+      "grade": "B"
+    },
+    {
+      "card": "Markov Enforcer",
+      "grade": "B"
+    },
+    {
+      "card": "Mayor of Avabruck",
+      "grade": "B"
+    },
+    {
+      "card": "Memory Deluge",
+      "grade": "A"
+    },
+    {
+      "card": "Midnight Reaper",
+      "grade": "A"
+    },
+    {
+      "card": "Midnight Tilling",
+      "grade": "B"
+    },
+    {
+      "card": "Mikaeus, the Lunarch",
+      "grade": "S"
+    },
+    {
+      "card": "Mindwrack Demon",
+      "grade": "A"
+    },
+    {
+      "card": "Molt Tender",
+      "grade": "B"
+    },
+    {
+      "card": "Molten-Core Maestro",
+      "grade": "A"
+    },
+    {
+      "card": "Monastery Mentor",
+      "grade": "C"
+    },
+    {
+      "card": "Monument to Endurance",
+      "grade": "D"
+    },
+    {
+      "card": "Moon-Vigil Adherents",
+      "grade": "A"
+    },
+    {
+      "card": "Moonveil Regent",
+      "grade": "A"
+    },
+    {
+      "card": "Morbid Opportunist",
+      "grade": "A"
+    },
+    {
+      "card": "Mulch",
+      "grade": "C"
+    },
+    {
+      "card": "Muldrotha, the Gravetide",
+      "grade": "A"
+    },
+    {
+      "card": "Nahiri, the Harbinger",
+      "grade": "S"
+    },
+    {
+      "card": "Nantuko Slicer",
+      "grade": "B"
+    },
+    {
+      "card": "Necrogoyf",
+      "grade": "B"
+    },
+    {
+      "card": "Nemesis of Mortals",
+      "grade": "C"
+    },
+    {
+      "card": "Niblis of Frost",
+      "grade": "A"
+    },
+    {
+      "card": "Nightpack Ambusher",
+      "grade": "A"
+    },
+    {
+      "card": "Obsessive Collector",
+      "grade": "B"
+    },
+    {
+      "card": "Obzedat, Ghost Council",
+      "grade": "B"
+    },
+    {
+      "card": "Olivia, Mobilized for War",
+      "grade": "A"
+    },
+    {
+      "card": "Omnivorous Flytrap",
+      "grade": "B"
+    },
+    {
+      "card": "Organ Hoarder",
+      "grade": "A"
+    },
+    {
+      "card": "Outland Liberator",
+      "grade": "D"
+    },
+    {
+      "card": "Overcharged Amalgam",
+      "grade": "A"
+    },
+    {
+      "card": "Overgrown Farmland",
+      "grade": "S"
+    },
+    {
+      "card": "Ox of Agonas",
+      "grade": "A"
+    },
+    {
+      "card": "Patchwork Beastie",
+      "grade": "B"
+    },
+    {
+      "card": "Phoenix of Ash",
+      "grade": "B"
+    },
+    {
+      "card": "Phoenix of Iteration",
+      "grade": "B"
+    },
+    {
+      "card": "Phyrexian Missionary",
+      "grade": "A"
+    },
+    {
+      "card": "Picklock Prankster",
+      "grade": "B"
+    },
+    {
+      "card": "Pieces of the Puzzle",
+      "grade": "D"
+    },
+    {
+      "card": "Play with Fire",
+      "grade": "B"
+    },
+    {
+      "card": "Poppet Stitcher",
+      "grade": "A"
+    },
+    {
+      "card": "Priest of Forgotten Gods",
+      "grade": "A"
+    },
+    {
+      "card": "Prized Amalgam",
+      "grade": "B"
+    },
+    {
+      "card": "Prophetic Titan",
+      "grade": "C"
+    },
+    {
+      "card": "Raging Goblinoids",
+      "grade": "C"
+    },
+    {
+      "card": "Rahilda, Wanted Cutthroat",
+      "grade": "A"
+    },
+    {
+      "card": "Reanimate",
+      "grade": "B"
+    },
+    {
+      "card": "Reckless Stormseeker",
+      "grade": "A"
+    },
+    {
+      "card": "Reckless Wurm",
+      "grade": "D"
+    },
+    {
+      "card": "Reclusive Taxidermist",
+      "grade": "B"
+    },
+    {
+      "card": "Regrowth",
+      "grade": "C"
+    },
+    {
+      "card": "Relentless Dead",
+      "grade": "S"
+    },
+    {
+      "card": "Restoration Angel",
+      "grade": "A"
+    },
+    {
+      "card": "Rielle, the Everwise",
+      "grade": "S"
+    },
+    {
+      "card": "Rise from the Tides",
+      "grade": "C"
+    },
+    {
+      "card": "Riverchurn Monument",
+      "grade": "A"
+    },
+    {
+      "card": "Roar of the Wurm",
+      "grade": "C"
+    },
+    {
+      "card": "Rocket-Powered Goblin Glider",
+      "grade": "B"
+    },
+    {
+      "card": "Rockfall Vale",
+      "grade": "S"
+    },
+    {
+      "card": "Sadistic Slash",
+      "grade": "B"
+    },
+    {
+      "card": "Sanctuary Lockdown",
+      "grade": "C"
+    },
+    {
+      "card": "Sanguine Evangelist",
+      "grade": "S"
+    },
+    {
+      "card": "Sapphire Collector",
+      "grade": "B"
+    },
+    {
+      "card": "Satyr Wayfinder",
+      "grade": "C"
+    },
+    {
+      "card": "Scrabbling Claws",
+      "grade": "C"
+    },
+    {
+      "card": "Seasoned Pyromancer",
+      "grade": "B"
+    },
+    {
+      "card": "Seasons Past",
+      "grade": "A"
+    },
+    {
+      "card": "Selfless Spirit",
+      "grade": "A"
+    },
+    {
+      "card": "Serra Paragon",
+      "grade": "B"
+    },
+    {
+      "card": "Settle the Wreckage",
+      "grade": "A"
+    },
+    {
+      "card": "Shattered Sanctum",
+      "grade": "B"
+    },
+    {
+      "card": "Sheltered by Ghosts",
+      "grade": "B"
+    },
+    {
+      "card": "Shifting Woodland",
+      "grade": "C"
+    },
+    {
+      "card": "Shipwreck Marsh",
+      "grade": "S"
+    },
+    {
+      "card": "Shoreline Looter",
+      "grade": "A"
+    },
+    {
+      "card": "Sibsig Appraiser",
+      "grade": "A"
+    },
+    {
+      "card": "Sigarda, Champion of Light",
+      "grade": "S"
+    },
+    {
+      "card": "Sigarda, Font of Blessings",
+      "grade": "A"
+    },
+    {
+      "card": "Sigardian Evangel",
+      "grade": "C"
+    },
+    {
+      "card": "Silent Departure",
+      "grade": "D"
+    },
+    {
+      "card": "Smoldering Egg",
+      "grade": "B"
+    },
+    {
+      "card": "Snapcaster Mage",
+      "grade": "C"
+    },
+    {
+      "card": "Sorin of House Markov",
+      "grade": "C"
+    },
+    {
+      "card": "Sorin the Mirthless",
+      "grade": "S"
+    },
+    {
+      "card": "Sorin, Imperious Bloodlord",
+      "grade": "S"
+    },
+    {
+      "card": "Spectral Adversary",
+      "grade": "A"
+    },
+    {
+      "card": "Spectral Sailor",
+      "grade": "B"
+    },
+    {
+      "card": "Spell Queller",
+      "grade": "B"
+    },
+    {
+      "card": "Spider Spawning",
+      "grade": "C"
+    },
+    {
+      "card": "Spider-Islanders",
+      "grade": "D"
+    },
+    {
+      "card": "Spinerock Tyrant",
+      "grade": "S"
+    },
+    {
+      "card": "Spineseeker Centipede",
+      "grade": "B"
+    },
+    {
+      "card": "Spinner of Souls",
+      "grade": "S"
+    },
+    {
+      "card": "Startled Awake",
+      "grade": "A"
+    },
+    {
+      "card": "Steal the Show",
+      "grade": "C"
+    },
+    {
+      "card": "Stitcher's Supplier",
+      "grade": "B"
+    },
+    {
+      "card": "Stoke the Flames",
+      "grade": "B"
+    },
+    {
+      "card": "Stormcarved Coast",
+      "grade": "B"
+    },
+    {
+      "card": "Stormchaser's Talent",
+      "grade": "B"
+    },
+    {
+      "card": "Stromkirk Noble",
+      "grade": "B"
+    },
+    {
+      "card": "Stromkirk Occultist",
+      "grade": "C"
+    },
+    {
+      "card": "Sundown Pass",
+      "grade": "B"
+    },
+    {
+      "card": "Sungold Sentinel",
+      "grade": "A"
+    },
+    {
+      "card": "Suspicious Stowaway",
+      "grade": "S"
+    },
+    {
+      "card": "Syncopate",
+      "grade": "B"
+    },
+    {
+      "card": "Tamiyo, Collector of Tales",
+      "grade": "C"
+    },
+    {
+      "card": "Teferi, Who Slows the Sunset",
+      "grade": "B"
+    },
+    {
+      "card": "Terminal Agony",
+      "grade": "C"
+    },
+    {
+      "card": "Tersa Lightshatter",
+      "grade": "B"
+    },
+    {
+      "card": "Teval, the Balanced Scale",
+      "grade": "S"
+    },
+    {
+      "card": "Thalia and The Gitrog Monster",
+      "grade": "B"
+    },
+    {
+      "card": "Thalia, Guardian of Thraben",
+      "grade": "B"
+    },
+    {
+      "card": "Thalia, Heretic Cathar",
+      "grade": "A"
+    },
+    {
+      "card": "Thalia's Lieutenant",
+      "grade": "A"
+    },
+    {
+      "card": "Thassa's Oracle",
+      "grade": "A"
+    },
+    {
+      "card": "The Gitrog Monster",
+      "grade": "S"
+    },
+    {
+      "card": "The Meathook Massacre",
+      "grade": "S"
+    },
+    {
+      "card": "The Rollercrusher Ride",
+      "grade": "A"
+    },
+    {
+      "card": "The Scarab God",
+      "grade": "S"
+    },
+    {
+      "card": "The Swarmweaver",
+      "grade": "S"
+    },
+    {
+      "card": "Thermo-Alchemist",
+      "grade": "B"
+    },
+    {
+      "card": "Thing in the Ice",
+      "grade": "A"
+    },
+    {
+      "card": "Think Twice",
+      "grade": "C"
+    },
+    {
+      "card": "Thirst for Discovery",
+      "grade": "C"
+    },
+    {
+      "card": "Thought Scour",
+      "grade": "C"
+    },
+    {
+      "card": "Thraben Charm",
+      "grade": "B"
+    },
+    {
+      "card": "Thraben Inspector",
+      "grade": "A"
+    },
+    {
+      "card": "Timeless Witness",
+      "grade": "B"
+    },
+    {
+      "card": "Titania, Voice of Gaea",
+      "grade": "B"
+    },
+    {
+      "card": "Tome of Gadwick",
+      "grade": "B"
+    },
+    {
+      "card": "Tomebound Lich",
+      "grade": "C"
+    },
+    {
+      "card": "Torens, Fist of the Angels",
+      "grade": "A"
+    },
+    {
+      "card": "Torgal, A Fine Hound",
+      "grade": "B"
+    },
+    {
+      "card": "Tovolar's Huntmaster",
+      "grade": "S"
+    },
+    {
+      "card": "Travel Preparations",
+      "grade": "C"
+    },
+    {
+      "card": "Traverse the Ulvenwald",
+      "grade": "A"
+    },
+    {
+      "card": "Turn the Earth",
+      "grade": "C"
+    },
+    {
+      "card": "Ulvenwald Oddity",
+      "grade": "C"
+    },
+    {
+      "card": "Unbreakable Remnant",
+      "grade": "C"
+    },
+    {
+      "card": "Unburial Rites",
+      "grade": "D"
+    },
+    {
+      "card": "Undead Augur",
+      "grade": "B"
+    },
+    {
+      "card": "Undead Butler",
+      "grade": "C"
+    },
+    {
+      "card": "Under the Skin",
+      "grade": "A"
+    },
+    {
+      "card": "Unholy Heat",
+      "grade": "B"
+    },
+    {
+      "card": "Urborg Lhurgoyf",
+      "grade": "C"
+    },
+    {
+      "card": "Urborg, Tomb of Yawgmoth",
+      "grade": "S"
+    },
+    {
+      "card": "Vana'diel Adventurers",
+      "grade": "C"
+    },
+    {
+      "card": "Vastlands Scavenger",
+      "grade": "B"
+    },
+    {
+      "card": "Vein Ripper",
+      "grade": "S"
+    },
+    {
+      "card": "Verdant Dread",
+      "grade": "A"
+    },
+    {
+      "card": "Vessel of Nascency",
+      "grade": "D"
+    },
+    {
+      "card": "Vilespawn Spider",
+      "grade": "C"
+    },
+    {
+      "card": "Vizier of Many Faces",
+      "grade": "A"
+    },
+    {
+      "card": "Voldaren Bloodcaster",
+      "grade": "A"
+    },
+    {
+      "card": "Voldaren Epicure",
+      "grade": "B"
+    },
+    {
+      "card": "Voldaren Thrillseeker",
+      "grade": "A"
+    },
+    {
+      "card": "Wedding Announcement",
+      "grade": "B"
+    },
+    {
+      "card": "Welcoming Vampire",
+      "grade": "A"
+    },
+    {
+      "card": "Winding Way",
+      "grade": "D"
+    },
+    {
+      "card": "Winota, Joiner of Forces",
+      "grade": "S"
+    },
+    {
+      "card": "Witch Enchanter",
+      "grade": "B"
+    },
+    {
+      "card": "Woodland Investigation",
+      "grade": "C"
+    },
+    {
+      "card": "Wrenn and Seven",
+      "grade": "S"
+    },
+    {
+      "card": "Xathrid Necromancer",
+      "grade": "B"
+    },
+    {
+      "card": "Yahenni, Undying Partisan",
+      "grade": "A"
+    },
+    {
+      "card": "Zealous Conscripts",
+      "grade": "A"
+    },
+    {
+      "card": "Zul Ashur, Lich Lord",
+      "grade": "C"
+    }
+  ],
+  "removed": [
+    {
+      "card": "Aclazotz, Deepest Betrayal",
+      "grade": "S"
+    },
+    {
+      "card": "Acquisitions Expert",
+      "grade": "C"
+    },
+    {
+      "card": "Adarkar Wastes",
+      "grade": "S"
+    },
+    {
+      "card": "Aether Channeler",
+      "grade": "A"
+    },
+    {
+      "card": "Agent of Raffine",
+      "grade": "B"
+    },
+    {
+      "card": "Akoum Hellhound",
+      "grade": "D"
+    },
+    {
+      "card": "Ambassador of Evendo",
+      "grade": "B"
+    },
+    {
+      "card": "Ambrosia Whiteheart",
+      "grade": "B"
+    },
+    {
+      "card": "Arboreal Grazer",
+      "grade": "C"
+    },
+    {
+      "card": "Archangel of Wrath",
+      "grade": "S"
+    },
+    {
+      "card": "Archivist of Oghma",
+      "grade": "A"
+    },
+    {
+      "card": "Archon of Emeria",
+      "grade": "A"
+    },
+    {
+      "card": "Ashaya, Soul of the Wild",
+      "grade": "S"
+    },
+    {
+      "card": "Ashiok, Nightmare Weaver",
+      "grade": "S"
+    },
+    {
+      "card": "Ashling's Command",
+      "grade": "S"
+    },
+    {
+      "card": "Back-Alley Gardener",
+      "grade": "A"
+    },
+    {
+      "card": "Bala Ged Recovery",
+      "grade": "A"
+    },
+    {
+      "card": "Battlefield Forge",
+      "grade": "S"
+    },
+    {
+      "card": "Beza, the Bounding Spring",
+      "grade": "C"
+    },
+    {
+      "card": "Bitterbloom Bearer",
+      "grade": "B"
+    },
+    {
+      "card": "Blade Splicer",
+      "grade": "B"
+    },
+    {
+      "card": "Bloodchief's Thirst",
+      "grade": "C"
+    },
+    {
+      "card": "Bloodghast",
+      "grade": "A"
+    },
+    {
+      "card": "Blossoming Tortoise",
+      "grade": "B"
+    },
+    {
+      "card": "Bonehoard Dracosaur",
+      "grade": "S"
+    },
+    {
+      "card": "Bountiful Landscape",
+      "grade": "C"
+    },
+    {
+      "card": "Brainstorm",
+      "grade": "C"
+    },
+    {
+      "card": "Brainsurge",
+      "grade": "B"
+    },
+    {
+      "card": "Brazen Borrower",
+      "grade": "C"
+    },
+    {
+      "card": "Bristly Bill, Spine Sower",
+      "grade": "C"
+    },
+    {
+      "card": "Brushfire Elemental",
+      "grade": "C"
+    },
+    {
+      "card": "Brushland",
+      "grade": "C"
+    },
+    {
+      "card": "Buried in the Garden",
+      "grade": "A"
+    },
+    {
+      "card": "Caustic Bronco",
+      "grade": "C"
+    },
+    {
+      "card": "Cavalier of Dawn",
+      "grade": "A"
+    },
+    {
+      "card": "Cavalier of Flame",
+      "grade": "A"
+    },
+    {
+      "card": "Cavalier of Gales",
+      "grade": "A"
+    },
+    {
+      "card": "Cavalier of Night",
+      "grade": "A"
+    },
+    {
+      "card": "Cavalier of Thorns",
+      "grade": "A"
+    },
+    {
+      "card": "Caves of Koilos",
+      "grade": "S"
+    },
+    {
+      "card": "Chandra, Awakened Inferno",
+      "grade": "S"
+    },
+    {
+      "card": "Chandra, Flamecaller",
+      "grade": "S"
+    },
+    {
+      "card": "Chandra, Torch of Defiance",
+      "grade": "C"
+    },
+    {
+      "card": "Chevill, Bane of Monsters",
+      "grade": "A"
+    },
+    {
+      "card": "Cleansing Wildfire",
+      "grade": "C"
+    },
+    {
+      "card": "Cloudkin Seer",
+      "grade": "D"
+    },
+    {
+      "card": "Contaminated Landscape",
+      "grade": "C"
+    },
+    {
+      "card": "Cori-Steel Cutter",
+      "grade": "B"
+    },
+    {
+      "card": "Courser of Kruphix",
+      "grade": "D"
+    },
+    {
+      "card": "Crucias, Titan of the Waves",
+      "grade": "A"
+    },
+    {
+      "card": "Crumbling Vestige",
+      "grade": "C"
+    },
+    {
+      "card": "Dark Fortress",
+      "grade": "A"
+    },
+    {
+      "card": "Darkstar Banisher",
+      "grade": "B"
+    },
+    {
+      "card": "Deceit",
+      "grade": "A"
+    },
+    {
+      "card": "Deceptive Landscape",
+      "grade": "C"
+    },
+    {
+      "card": "Dedicated Dollmaker",
+      "grade": "B"
+    },
+    {
+      "card": "Deep-Cavern Bat",
+      "grade": "C"
+    },
+    {
+      "card": "Deeproot Wayfinder",
+      "grade": "B"
+    },
+    {
+      "card": "Den of the Bugbear",
+      "grade": "A"
+    },
+    {
+      "card": "Disfigure",
+      "grade": "B"
+    },
+    {
+      "card": "Draconautics Engineer",
+      "grade": "B"
+    },
+    {
+      "card": "Dragonmaster Outcast",
+      "grade": "S"
+    },
+    {
+      "card": "Drana, Liberator of Malakir",
+      "grade": "S"
+    },
+    {
+      "card": "Dryad of the Ilysian Grove",
+      "grade": "S"
+    },
+    {
+      "card": "Earthbender Ascension",
+      "grade": "A"
+    },
+    {
+      "card": "Eclipsed Flamekin",
+      "grade": "A"
+    },
+    {
+      "card": "Eldrazi Displacer",
+      "grade": "A"
+    },
+    {
+      "card": "Eldrazi Linebreaker",
+      "grade": "B"
+    },
+    {
+      "card": "Elegy Acolyte",
+      "grade": "C"
+    },
+    {
+      "card": "Elite Interceptor",
+      "grade": "A"
+    },
+    {
+      "card": "Elspeth, Sun's Champion",
+      "grade": "S"
+    },
+    {
+      "card": "Embercleave",
+      "grade": "A"
+    },
+    {
+      "card": "Emerald Collector",
+      "grade": "B"
+    },
+    {
+      "card": "Emeritus of Conflict",
+      "grade": "B"
+    },
+    {
+      "card": "Emeritus of Ideation",
+      "grade": "S"
+    },
+    {
+      "card": "Emeritus of Truce",
+      "grade": "B"
+    },
+    {
+      "card": "Emmara, Voice of the Conclave",
+      "grade": "B"
+    },
+    {
+      "card": "Emptiness",
+      "grade": "B"
+    },
+    {
+      "card": "Erode",
+      "grade": "B"
+    },
+    {
+      "card": "Ertai Resurrected",
+      "grade": "C"
+    },
+    {
+      "card": "Evolved Sleeper",
+      "grade": "A"
+    },
+    {
+      "card": "Exclude",
+      "grade": "C"
+    },
+    {
+      "card": "Explore",
+      "grade": "D"
+    },
+    {
+      "card": "Explosive Prodigy",
+      "grade": "B"
+    },
+    {
+      "card": "Expressive Iteration",
+      "grade": "C"
+    },
+    {
+      "card": "Faerie Mastermind",
+      "grade": "C"
+    },
+    {
+      "card": "Fecund Greenshell",
+      "grade": "S"
+    },
+    {
+      "card": "Felidar Retreat",
+      "grade": "A"
+    },
+    {
+      "card": "Field of Ruin",
+      "grade": "A"
+    },
+    {
+      "card": "Field of the Dead",
+      "grade": "D"
+    },
+    {
+      "card": "Figure of Fable",
+      "grade": "S"
+    },
+    {
+      "card": "Flamebraider",
+      "grade": "A"
+    },
+    {
+      "card": "Flitterwing Nuisance",
+      "grade": "A"
+    },
+    {
+      "card": "Floodpits Drowner",
+      "grade": "B"
+    },
+    {
+      "card": "Force of Negation",
+      "grade": "C"
+    },
+    {
+      "card": "Force of Will",
+      "grade": "B"
+    },
+    {
+      "card": "Force Spike",
+      "grade": "C"
+    },
+    {
+      "card": "Foreboding Landscape",
+      "grade": "C"
+    },
+    {
+      "card": "Gate to the Citadel",
+      "grade": "B"
+    },
+    {
+      "card": "Gatekeeper of Malakir",
+      "grade": "C"
+    },
+    {
+      "card": "Gathering Place",
+      "grade": "A"
+    },
+    {
+      "card": "Genemorph Imago",
+      "grade": "A"
+    },
+    {
+      "card": "Ghostfire Slice",
+      "grade": "B"
+    },
+    {
+      "card": "Gideon, Ally of Zendikar",
+      "grade": "B"
+    },
+    {
+      "card": "Giver of Runes",
+      "grade": "B"
+    },
+    {
+      "card": "Gix, Yawgmoth Praetor",
+      "grade": "S"
+    },
+    {
+      "card": "Glaring Fleshraker",
+      "grade": "B"
+    },
+    {
+      "card": "Gleaming Bastion",
+      "grade": "A"
+    },
+    {
+      "card": "Gloryheath Lynx",
+      "grade": "A"
+    },
+    {
+      "card": "Glyph Elemental",
+      "grade": "B"
+    },
+    {
+      "card": "Go for the Throat",
+      "grade": "C"
+    },
+    {
+      "card": "Goblin Dark-Dwellers",
+      "grade": "B"
+    },
+    {
+      "card": "Goblin Rabblemaster",
+      "grade": "A"
+    },
+    {
+      "card": "Goldvein Hydra",
+      "grade": "S"
+    },
+    {
+      "card": "Golos, Tireless Pilgrim",
+      "grade": "C"
+    },
+    {
+      "card": "Gonti, Lord of Luxury",
+      "grade": "A"
+    },
+    {
+      "card": "Grasp of Darkness",
+      "grade": "C"
+    },
+    {
+      "card": "Grave Expectations",
+      "grade": "B"
+    },
+    {
+      "card": "Greensleeves, Maro-Sorcerer",
+      "grade": "S"
+    },
+    {
+      "card": "Grenzo, Crooked Jailer",
+      "grade": "B"
+    },
+    {
+      "card": "Harmonized Trio",
+      "grade": "C"
+    },
+    {
+      "card": "Harvester of Misery",
+      "grade": "C"
+    },
+    {
+      "card": "Hedron Archive",
+      "grade": "B"
+    },
+    {
+      "card": "Hidden Lair",
+      "grade": "A"
+    },
+    {
+      "card": "Hired Claw",
+      "grade": "A"
+    },
+    {
+      "card": "Horned Loch-Whale",
+      "grade": "S"
+    },
+    {
+      "card": "Hurloon Battle Hymn",
+      "grade": "B"
+    },
+    {
+      "card": "Icetill Explorer",
+      "grade": "C"
+    },
+    {
+      "card": "Ignoble Hierarch",
+      "grade": "C"
+    },
+    {
+      "card": "Illuminating Lash",
+      "grade": "C"
+    },
+    {
+      "card": "Impetuous Lootmonger",
+      "grade": "C"
+    },
+    {
+      "card": "Inferno Titan",
+      "grade": "B"
+    },
+    {
+      "card": "Into the Roil",
+      "grade": "C"
+    },
+    {
+      "card": "Iridescent Vinelasher",
+      "grade": "B"
+    },
+    {
+      "card": "Jace, Mirror Mage",
+      "grade": "S"
+    },
+    {
+      "card": "Jace, the Mind Sculptor",
+      "grade": "B"
+    },
+    {
+      "card": "Jegantha, the Wellspring",
+      "grade": "B"
+    },
+    {
+      "card": "Jet Collector",
+      "grade": "B"
+    },
+    {
+      "card": "Jewel Mine Overseer",
+      "grade": "A"
+    },
+    {
+      "card": "Kalitas, Traitor of Ghet",
+      "grade": "S"
+    },
+    {
+      "card": "Kargan Intimidator",
+      "grade": "B"
+    },
+    {
+      "card": "Kari Zev, Crew of Two",
+      "grade": "A"
+    },
+    {
+      "card": "Karplusan Forest",
+      "grade": "S"
+    },
+    {
+      "card": "Kazandu Mammoth",
+      "grade": "A"
+    },
+    {
+      "card": "Kellan, Planar Trailblazer",
+      "grade": "B"
+    },
+    {
+      "card": "Kitesail Larcenist",
+      "grade": "S"
+    },
+    {
+      "card": "Knight of the Ebon Legion",
+      "grade": "A"
+    },
+    {
+      "card": "Knight of the Reliquary",
+      "grade": "C"
+    },
+    {
+      "card": "Kozilek's Command",
+      "grade": "A"
+    },
+    {
+      "card": "Kraven the Hunter",
+      "grade": "B"
+    },
+    {
+      "card": "Kroxa, Titan of Death's Hunger",
+      "grade": "C"
+    },
+    {
+      "card": "Lair of the Hydra",
+      "grade": "B"
+    },
+    {
+      "card": "Legion Warboss",
+      "grade": "A"
+    },
+    {
+      "card": "Legion's Landing",
+      "grade": "A"
+    },
+    {
+      "card": "Leyline Binding",
+      "grade": "C"
+    },
+    {
+      "card": "Lightning Helix",
+      "grade": "B"
+    },
+    {
+      "card": "Lightstall Inquisitor",
+      "grade": "A"
+    },
+    {
+      "card": "Liliana, Dreadhorde General",
+      "grade": "S"
+    },
+    {
+      "card": "Llanowar Wastes",
+      "grade": "S"
+    },
+    {
+      "card": "Loch Mare",
+      "grade": "A"
+    },
+    {
+      "card": "Lonely End",
+      "grade": "B"
+    },
+    {
+      "card": "Lord of Extinction",
+      "grade": "A"
+    },
+    {
+      "card": "Lotus Cobra",
+      "grade": "C"
+    },
+    {
+      "card": "Luminarch Aspirant",
+      "grade": "A"
+    },
+    {
+      "card": "Lurrus of the Dream-Den",
+      "grade": "C"
+    },
+    {
+      "card": "Maelstrom Artisan",
+      "grade": "C"
+    },
+    {
+      "card": "Magmatic Hellkite",
+      "grade": "B"
+    },
+    {
+      "card": "Maha, Its Feathers Night",
+      "grade": "S"
+    },
+    {
+      "card": "Malcolm, Alluring Scoundrel",
+      "grade": "C"
+    },
+    {
+      "card": "Mana Tithe",
+      "grade": "B"
+    },
+    {
+      "card": "Mardu Thunderkite",
+      "grade": "A"
+    },
+    {
+      "card": "Matter Reshaper",
+      "grade": "A"
+    },
+    {
+      "card": "Maul of the Skyclaves",
+      "grade": "B"
+    },
+    {
+      "card": "Menagerie Curator",
+      "grade": "C"
+    },
+    {
+      "card": "Mightform Harmonizer",
+      "grade": "A"
+    },
+    {
+      "card": "Mine Security",
+      "grade": "C"
+    },
+    {
+      "card": "Molten Collapse",
+      "grade": "B"
+    },
+    {
+      "card": "Moment of Reckoning",
+      "grade": "S"
+    },
+    {
+      "card": "Mosswood Dreadknight",
+      "grade": "D"
+    },
+    {
+      "card": "Multani, Yavimaya's Avatar",
+      "grade": "A"
+    },
+    {
+      "card": "Mutavault",
+      "grade": "A"
+    },
+    {
+      "card": "Mystic Sanctuary",
+      "grade": "B"
+    },
+    {
+      "card": "Mythweaver Poq",
+      "grade": "A"
+    },
+    {
+      "card": "Nahiri's Resolve",
+      "grade": "B"
+    },
+    {
+      "card": "Nighthawk Scavenger",
+      "grade": "A"
+    },
+    {
+      "card": "Nissa, Resurgent Animist",
+      "grade": "C"
+    },
+    {
+      "card": "Nissa, Vastwood Seer",
+      "grade": "S"
+    },
+    {
+      "card": "Nissa, Voice of Zendikar",
+      "grade": "S"
+    },
+    {
+      "card": "Nissa, Who Shakes the World",
+      "grade": "C"
+    },
+    {
+      "card": "No More Lies",
+      "grade": "B"
+    },
+    {
+      "card": "Noble Hierarch",
+      "grade": "C"
+    },
+    {
+      "card": "Nova Hellkite",
+      "grade": "A"
+    },
+    {
+      "card": "Nulldrifter",
+      "grade": "B"
+    },
+    {
+      "card": "Nullpriest of Oblivion",
+      "grade": "A"
+    },
+    {
+      "card": "Oath of Nissa",
+      "grade": "B"
+    },
+    {
+      "card": "Ob Nixilis Reignited",
+      "grade": "S"
+    },
+    {
+      "card": "Ocelot Pride",
+      "grade": "S"
+    },
+    {
+      "card": "Ojer Pakpatiq, Deepest Epoch",
+      "grade": "A"
+    },
+    {
+      "card": "Omenpath Journey",
+      "grade": "A"
+    },
+    {
+      "card": "Omnath, Locus of Creation",
+      "grade": "C"
+    },
+    {
+      "card": "Omnath, Locus of the Roil",
+      "grade": "S"
+    },
+    {
+      "card": "Oracle of Mul Daya",
+      "grade": "A"
+    },
+    {
+      "card": "Oracle of the Alpha",
+      "grade": "C"
+    },
+    {
+      "card": "Oust",
+      "grade": "B"
+    },
+    {
+      "card": "Painful Truths",
+      "grade": "A"
+    },
+    {
+      "card": "Paradigm Shifter",
+      "grade": "A"
+    },
+    {
+      "card": "Part the Waterveil",
+      "grade": "A"
+    },
+    {
+      "card": "Perilous Landscape",
+      "grade": "C"
+    },
+    {
+      "card": "Phlage, Titan of Fire's Fury",
+      "grade": "A"
+    },
+    {
+      "card": "Plasma Bolt",
+      "grade": "B"
+    },
+    {
+      "card": "Polterheist",
+      "grade": "B"
+    },
+    {
+      "card": "Prairie Survivalist",
+      "grade": "B"
+    },
+    {
+      "card": "Preacher of the Schism",
+      "grade": "C"
+    },
+    {
+      "card": "Primeval Titan",
+      "grade": "D"
+    },
+    {
+      "card": "Professor Dellian Fel",
+      "grade": "A"
+    },
+    {
+      "card": "Prophetic Prism",
+      "grade": "B"
+    },
+    {
+      "card": "Quantum Riddler",
+      "grade": "B"
+    },
+    {
+      "card": "Radha's Firebrand",
+      "grade": "A"
+    },
+    {
+      "card": "Radiant Flames",
+      "grade": "B"
+    },
+    {
+      "card": "Rampaging Raptor",
+      "grade": "B"
+    },
+    {
+      "card": "Reckless Pyrosurfer",
+      "grade": "B"
+    },
+    {
+      "card": "Reflector Mage",
+      "grade": "B"
+    },
+    {
+      "card": "Restless Anchorage",
+      "grade": "B"
+    },
+    {
+      "card": "Restless Bivouac",
+      "grade": "B"
+    },
+    {
+      "card": "Restless Cottage",
+      "grade": "C"
+    },
+    {
+      "card": "Restless Fortress",
+      "grade": "D"
+    },
+    {
+      "card": "Restless Prairie",
+      "grade": "C"
+    },
+    {
+      "card": "Restless Reef",
+      "grade": "B"
+    },
+    {
+      "card": "Restless Ridgeline",
+      "grade": "C"
+    },
+    {
+      "card": "Restless Spire",
+      "grade": "A"
+    },
+    {
+      "card": "Restless Vents",
+      "grade": "C"
+    },
+    {
+      "card": "Restless Vinestalk",
+      "grade": "C"
+    },
+    {
+      "card": "Rimekin Recluse",
+      "grade": "A"
+    },
+    {
+      "card": "Risen Reef",
+      "grade": "B"
+    },
+    {
+      "card": "Robber of the Rich",
+      "grade": "B"
+    },
+    {
+      "card": "Roil Cartographer",
+      "grade": "B"
+    },
+    {
+      "card": "Routeway Moose",
+      "grade": "B"
+    },
+    {
+      "card": "Ruby Collector",
+      "grade": "B"
+    },
+    {
+      "card": "Ruin Crab",
+      "grade": "B"
+    },
+    {
+      "card": "Ruinous Path",
+      "grade": "B"
+    },
+    {
+      "card": "Runaway Steam-Kin",
+      "grade": "A"
+    },
+    {
+      "card": "Rusko, Clockmaker",
+      "grade": "C"
+    },
+    {
+      "card": "Sage of the Skies",
+      "grade": "A"
+    },
+    {
+      "card": "Salacinder and Soot, Rascals",
+      "grade": "A"
+    },
+    {
+      "card": "Sandman, Shifting Scoundrel",
+      "grade": "B"
+    },
+    {
+      "card": "Sapling Nursery",
+      "grade": "B"
+    },
+    {
+      "card": "Sarulf, Realm Eater",
+      "grade": "A"
+    },
+    {
+      "card": "Sazh's Chocobo",
+      "grade": "A"
+    },
+    {
+      "card": "Scythecat Cub",
+      "grade": "B"
+    },
+    {
+      "card": "Sea Gate Stormcaller",
+      "grade": "A"
+    },
+    {
+      "card": "See Double",
+      "grade": "B"
+    },
+    {
+      "card": "Seething Landscape",
+      "grade": "C"
+    },
+    {
+      "card": "Shattered Landscape",
+      "grade": "C"
+    },
+    {
+      "card": "Shatterskull Smashing",
+      "grade": "S"
+    },
+    {
+      "card": "Sheltering Landscape",
+      "grade": "B"
+    },
+    {
+      "card": "Shiko, Paragon of the Way",
+      "grade": "S"
+    },
+    {
+      "card": "Shivan Devastator",
+      "grade": "A"
+    },
+    {
+      "card": "Shivan Reef",
+      "grade": "S"
+    },
+    {
+      "card": "Showdown of the Skalds",
+      "grade": "A"
+    },
+    {
+      "card": "Sire of Seven Deaths",
+      "grade": "A"
+    },
+    {
+      "card": "Skyclave Apparition",
+      "grade": "B"
+    },
+    {
+      "card": "Skyclave Shade",
+      "grade": "B"
+    },
+    {
+      "card": "Skycoach Conductor",
+      "grade": "B"
+    },
+    {
+      "card": "Sleep-Cursed Faerie",
+      "grade": "A"
+    },
+    {
+      "card": "Slogurk, the Overslime",
+      "grade": "B"
+    },
+    {
+      "card": "Soul of Windgrace",
+      "grade": "S"
+    },
+    {
+      "card": "Sowing Mycospawn",
+      "grade": "C"
+    },
+    {
+      "card": "Spell Snare",
+      "grade": "D"
+    },
+    {
+      "card": "Spirited Simulacrum",
+      "grade": "B"
+    },
+    {
+      "card": "Springheart Nantuko",
+      "grade": "C"
+    },
+    {
+      "card": "Spymaster's Vault",
+      "grade": "B"
+    },
+    {
+      "card": "Stalwart Realmwarden",
+      "grade": "B"
+    },
+    {
+      "card": "Stoic Sphinx",
+      "grade": "A"
+    },
+    {
+      "card": "Sulfurous Springs",
+      "grade": "S"
+    },
+    {
+      "card": "Sunderflock",
+      "grade": "S"
+    },
+    {
+      "card": "Sundering Eruption",
+      "grade": "B"
+    },
+    {
+      "card": "Sundering Sentinel",
+      "grade": "A"
+    },
+    {
+      "card": "Sunfall",
+      "grade": "C"
+    },
+    {
+      "card": "Sunspine Lynx",
+      "grade": "D"
+    },
+    {
+      "card": "Sunstar Expansionist",
+      "grade": "B"
+    },
+    {
+      "card": "Sutina, Speaker of the Tajuru",
+      "grade": "C"
+    },
+    {
+      "card": "Tajic, Legion's Valor",
+      "grade": "A"
+    },
+    {
+      "card": "Talion's Throneguard",
+      "grade": "B"
+    },
+    {
+      "card": "Tannuk, Memorial Ensign",
+      "grade": "B"
+    },
+    {
+      "card": "Teferi, Hero of Dominaria",
+      "grade": "B"
+    },
+    {
+      "card": "Teferi, Time Raveler",
+      "grade": "B"
+    },
+    {
+      "card": "Tenacious Underdog",
+      "grade": "B"
+    },
+    {
+      "card": "Territorial Kavu",
+      "grade": "C"
+    },
+    {
+      "card": "Terrors of the Track",
+      "grade": "B"
+    },
+    {
+      "card": "Teysa, Opulent Oligarch",
+      "grade": "A"
+    },
+    {
+      "card": "The Regalia",
+      "grade": "B"
+    },
+    {
+      "card": "Thief of Existence",
+      "grade": "C"
+    },
+    {
+      "card": "Thieving Aven",
+      "grade": "C"
+    },
+    {
+      "card": "Thought-Knot Seer",
+      "grade": "B"
+    },
+    {
+      "card": "Thoughtseize",
+      "grade": "C"
+    },
+    {
+      "card": "Thunderkin Awakener",
+      "grade": "B"
+    },
+    {
+      "card": "Tifa Lockhart",
+      "grade": "D"
+    },
+    {
+      "card": "Tireless Provisioner",
+      "grade": "A"
+    },
+    {
+      "card": "Tourach, Dread Cantor",
+      "grade": "S"
+    },
+    {
+      "card": "Toxic Deluge",
+      "grade": "C"
+    },
+    {
+      "card": "Training Compound",
+      "grade": "A"
+    },
+    {
+      "card": "Tranquil Landscape",
+      "grade": "C"
+    },
+    {
+      "card": "Tribal Flames",
+      "grade": "D"
+    },
+    {
+      "card": "Triumphant Getaway",
+      "grade": "B"
+    },
+    {
+      "card": "Twisted Landscape",
+      "grade": "C"
+    },
+    {
+      "card": "Ulamog, the Ceaseless Hunger",
+      "grade": "D"
+    },
+    {
+      "card": "Underground River",
+      "grade": "S"
+    },
+    {
+      "card": "Undergrowth Champion",
+      "grade": "A"
+    },
+    {
+      "card": "Ureni, the Song Unending",
+      "grade": "S"
+    },
+    {
+      "card": "Uro, Titan of Nature's Wrath",
+      "grade": "C"
+    },
+    {
+      "card": "Utopia Sprawl",
+      "grade": "C"
+    },
+    {
+      "card": "Valakut Awakening",
+      "grade": "S"
+    },
+    {
+      "card": "Valakut Exploration",
+      "grade": "A"
+    },
+    {
+      "card": "Vesperlark",
+      "grade": "C"
+    },
+    {
+      "card": "Vibrance",
+      "grade": "A"
+    },
+    {
+      "card": "Virtue of Loyalty",
+      "grade": "B"
+    },
+    {
+      "card": "Voice of Resurgence",
+      "grade": "B"
+    },
+    {
+      "card": "Voice of Victory",
+      "grade": "A"
+    },
+    {
+      "card": "Vorinclex",
+      "grade": "S"
+    },
+    {
+      "card": "Wan Shi Tong, Librarian",
+      "grade": "S"
+    },
+    {
+      "card": "Warren Warleader",
+      "grade": "S"
+    },
+    {
+      "card": "Wary Zone Guard",
+      "grade": "C"
+    },
+    {
+      "card": "Wastescape Battlemage",
+      "grade": "B"
+    },
+    {
+      "card": "Weather Maker",
+      "grade": "A"
+    },
+    {
+      "card": "Weave the Nightmare",
+      "grade": "B"
+    },
+    {
+      "card": "Whisperwood Elemental",
+      "grade": "A"
+    },
+    {
+      "card": "White Orchid Phantom",
+      "grade": "A"
+    },
+    {
+      "card": "Wildgrowth Archaic",
+      "grade": "B"
+    },
+    {
+      "card": "Wistfulness",
+      "grade": "A"
+    },
+    {
+      "card": "Woodland Wanderer",
+      "grade": "B"
+    },
+    {
+      "card": "World Breaker",
+      "grade": "A"
+    },
+    {
+      "card": "Wrenn and Six",
+      "grade": "C"
+    },
+    {
+      "card": "Yarok, the Desecrated",
+      "grade": "S"
+    },
+    {
+      "card": "Yavimaya Coast",
+      "grade": "S"
+    },
+    {
+      "card": "Ygra, Eater of All",
+      "grade": "S"
+    },
+    {
+      "card": "Zell Dincht",
+      "grade": "B"
+    },
+    {
+      "card": "Zulaport Cutthroat",
+      "grade": "A"
+    }
+  ],
+  "tier_moves": [
+    {
+      "name": "Cankerbloom",
+      "from_tier": "C",
+      "to_tier": "D"
+    },
+    {
+      "name": "Chromatic Star",
+      "from_tier": "C",
+      "to_tier": "D"
+    },
+    {
+      "name": "Counterspell",
+      "from_tier": "B",
+      "to_tier": "C"
+    },
+    {
+      "name": "Day of Judgment",
+      "from_tier": "B",
+      "to_tier": "A"
+    },
+    {
+      "name": "Flame Slash",
+      "from_tier": "B",
+      "to_tier": "A"
+    },
+    {
+      "name": "Kytheon, Hero of Akros",
+      "from_tier": "B",
+      "to_tier": "A"
+    },
+    {
+      "name": "Marsh Flats",
+      "from_tier": "B",
+      "to_tier": "C"
+    },
+    {
+      "name": "Night's Whisper",
+      "from_tier": "C",
+      "to_tier": "D"
+    },
+    {
+      "name": "Overgrown Tomb",
+      "from_tier": "C",
+      "to_tier": "D"
+    },
+    {
+      "name": "Raucous Theater",
+      "from_tier": "C",
+      "to_tier": "D"
+    },
+    {
+      "name": "Reprieve",
+      "from_tier": "B",
+      "to_tier": "A"
+    },
+    {
+      "name": "Scrapwork Mutt",
+      "from_tier": "B",
+      "to_tier": "A"
+    },
+    {
+      "name": "Spyglass Siren",
+      "from_tier": "A",
+      "to_tier": "S"
+    },
+    {
+      "name": "Tear Asunder",
+      "from_tier": "C",
+      "to_tier": "D"
+    },
+    {
+      "name": "Tireless Tracker",
+      "from_tier": "C",
+      "to_tier": "D"
+    },
+    {
+      "name": "Treasure Cruise",
+      "from_tier": "C",
+      "to_tier": "D"
+    },
+    {
+      "name": "Underground Mortuary",
+      "from_tier": "C",
+      "to_tier": "D"
+    }
+  ]
+}
