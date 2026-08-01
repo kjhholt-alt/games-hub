@@ -5,9 +5,9 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MtgSampleBanner } from "@/components/MtgSampleBanner";
 import { MtgModuleHeader } from "@/components/MtgModuleHeader";
-import { MtgCommanderTierTable } from "@/components/MtgCommanderTierTable";
+import { MtgCommanderTierExplorer } from "@/components/MtgCommanderTierExplorer";
 import { MtgLimitedTierTable } from "@/components/MtgLimitedTierTable";
-import { MtgConstructedTierTable } from "@/components/MtgConstructedTierTable";
+import { MtgConstructedTierExplorer } from "@/components/MtgConstructedTierExplorer";
 import { MtgEdhTournamentTable } from "@/components/MtgEdhTournamentTable";
 import { MtgMetaMoversTable } from "@/components/MtgMetaMoversTable";
 import { MtgBanlistTable } from "@/components/MtgBanlistTable";
@@ -102,7 +102,7 @@ function CommanderFormatWorld({
           note={rows.length > 0 ? `${rows.length} commanders` : undefined}
         />
         {rows.length > 0 ? (
-          <MtgCommanderTierTable rows={rows} />
+          <MtgCommanderTierExplorer rows={rows} idPrefix={`commander-${formatId}`} />
         ) : (
           <MtgHonestPanel title="No rows this run">{emptyNote}</MtgHonestPanel>
         )}
@@ -193,7 +193,7 @@ function ConstructedFormatWorld({
           note={cRows.length > 0 ? `${cRows.length} archetypes/decks` : undefined}
         />
         {cRows.length > 0 ? (
-          <MtgConstructedTierTable rows={cRows} />
+          <MtgConstructedTierExplorer rows={cRows} idPrefix={`constructed-${formatId}`} />
         ) : (
           <MtgHonestPanel
             title={constructedModule ? "No tournament results this run" : "Pending a topdeck.gg key"}
@@ -518,7 +518,7 @@ export default function MtgPage() {
             attribution={commander_tiers.attribution}
             note={`${commander_tiers.rows.length} commanders`}
           />
-          <MtgCommanderTierTable rows={commander_tiers.rows} />
+          <MtgCommanderTierExplorer rows={commander_tiers.rows} idPrefix="commander-tiers" />
         </div>
       ),
     },
@@ -675,7 +675,7 @@ export default function MtgPage() {
                     </div>
                   </div>
                 ) : (
-                  <MtgConstructedTierTable rows={constructed_tiers.rows} />
+                  <MtgConstructedTierExplorer rows={constructed_tiers.rows} idPrefix="constructed-tiers" />
                 )}
               </div>
             ),

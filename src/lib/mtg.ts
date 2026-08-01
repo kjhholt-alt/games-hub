@@ -19,6 +19,14 @@
 
 import fs from "fs";
 import path from "path";
+import { TIER_ORDER, type CommanderBucket, type Tier } from "./mtgDisplay";
+
+// Re-exports every pure display/formatting helper split out to
+// lib/mtgDisplay.ts (gl-0593) — kept fs-free so client components (the tier
+// explorers) can import them without pulling this file's fs reader into the
+// browser bundle. Every existing importer of these names from "@/lib/mtg"
+// keeps working unchanged.
+export * from "./mtgDisplay";
 
 // ─── Shared row/module shape ────────────────────────────────────────────────
 
@@ -30,9 +38,7 @@ export type ModuleStatus =
   | "pending_key"
   | "pending_history"
   | "unavailable";
-export type Tier = "S" | "A" | "B" | "C" | "D";
 export type LimitedTier = Tier | "unrated";
-export type CommanderBucket = "trending" | "established";
 
 /** Fields every row carries — the honesty rail, applied everywhere. Sources
  * are plain citation strings from the engine (e.g. "Decklists via Archidekt
@@ -306,8 +312,10 @@ export function isSamplePayload(payload: MtgMetaPayload): boolean {
 }
 
 // ─── Display helpers ─────────────────────────────────────────────────────────
-
-export const TIER_ORDER: Tier[] = ["S", "A", "B", "C", "D"];
+// TIER_ORDER, FORMAT_LABEL/formatLabel, colorIdentityPips, isFadedConfidence,
+// BUCKET_LABEL/groupByBucket, groupByConstructedFormat, and formatWinRate
+// live in lib/mtgDisplay.ts now (gl-0593) and are re-exported via the
+// `export * from "./mtgDisplay"` above — see that file's header comment.
 
 export const TIER_BLURB: Record<Tier, string> = {
   S: "Top of the current meta",
@@ -324,48 +332,6 @@ export const CONFIDENCE_LABEL: Record<Confidence, string> = {
   sample: "Sample data",
 };
 
-/** Known format ids -> display names, for rows (like commander_tiers) that
- * only carry the id. Falls back to the raw id for anything unrecognized
- * rather than hiding it. */
-export const FORMAT_LABEL: Record<string, string> = {
-  standard: "Standard",
-  competitivebrawl: "Competitive Brawl",
-  standardbrawl: "Brawl",
-  commander: "Commander",
-  pioneer: "Pioneer",
-  modern: "Modern",
-  historic: "Historic",
-  timeless: "Timeless",
-};
-
-export function formatLabel(id: string): string {
-  return FORMAT_LABEL[id] ?? id;
-}
-
-const COLOR_PIP: Record<string, string> = {
-  White: "W",
-  Blue: "U",
-  Black: "B",
-  Red: "R",
-  Green: "G",
-};
-const WUBRG_ORDER = ["White", "Blue", "Black", "Red", "Green"];
-
-/** Full color names -> WUBRG-order pip string, "C" for colorless. */
-export function colorIdentityPips(colors: string[]): string {
-  if (colors.length === 0) return "C";
-  return WUBRG_ORDER.filter((c) => colors.includes(c))
-    .map((c) => COLOR_PIP[c] ?? "")
-    .join("");
-}
-
-/** Rows with weak statistical backing render faded with the count visible —
- * "the one trick the sharpest competitor does for ONE format; we do it
- * everywhere" (METAHUB-SPEC.md). */
-export function isFadedConfidence(confidence: Confidence): boolean {
-  return confidence === "low" || confidence === "sample";
-}
-
 /** Group rows into tier bands in S→D order, dropping empty tiers. Takes a
  * tier accessor so it works for both the strict Tier rows (commander) and
  * the Tier | "unrated" rows (limited) after the caller filters unrated out. */
@@ -377,48 +343,6 @@ export function groupByTier<T>(
     letter,
     rows: rows.filter((r) => getTier(r) === letter),
   })).filter((g) => g.rows.length > 0);
-}
-
-/** Split commander_tiers rows into trending / established sections, dropping
- * an empty bucket. */
-export function groupByBucket(
-  rows: CommanderTierRow[]
-): { bucket: CommanderBucket; rows: CommanderTierRow[] }[] {
-  const buckets: CommanderBucket[] = ["trending", "established"];
-  return buckets
-    .map((bucket) => ({ bucket, rows: rows.filter((r) => r.bucket === bucket) }))
-    .filter((g) => g.rows.length > 0);
-}
-
-export const BUCKET_LABEL: Record<CommanderBucket, string> = {
-  trending: "Trending (newest decks)",
-  established: "Established (most-viewed decks)",
-};
-
-/** Group constructed_tiers rows by format, Standard/Pioneer/Modern first
- * (the spec's named formats) then anything else alphabetically — never
- * silently dropping a format the engine adds later. */
-const CONSTRUCTED_FORMAT_ORDER = ["standard", "pioneer", "modern"];
-
-export function groupByConstructedFormat(
-  rows: ConstructedTierRow[]
-): { format: string; rows: ConstructedTierRow[] }[] {
-  const present = [...new Set(rows.map((r) => r.format))];
-  const ordered = [
-    ...CONSTRUCTED_FORMAT_ORDER.filter((f) => present.includes(f)),
-    ...present.filter((f) => !CONSTRUCTED_FORMAT_ORDER.includes(f)).sort(),
-  ];
-  return ordered.map((format) => ({
-    format,
-    rows: rows.filter((r) => r.format === format),
-  }));
-}
-
-/** 0-1 fraction -> "NN.N%", or an explicit "unrated" when 17lands has no
- * recorded games for the card — never a guessed number. */
-export function formatWinRate(winRate: number | null): string {
-  if (winRate === null) return "unrated";
-  return `${(winRate * 100).toFixed(1)}%`;
 }
 
 /** Human freshness string relative to now, e.g. "2h ago", "3d ago". Falls back
