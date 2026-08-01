@@ -4,18 +4,36 @@ import { ExternalLink, BookOpen, AlertTriangle } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MtgSampleBanner } from "@/components/MtgSampleBanner";
-import { MtgCubeTierTable } from "@/components/MtgCubeTierTable";
+import { MtgCubeExplorer } from "@/components/MtgCubeExplorer";
+import { MtgCubeWeekDiffStrip } from "@/components/MtgCubeWeekDiffStrip";
 import { MtgDraftMethodologyAccordion } from "@/components/MtgDraftMethodologyAccordion";
-import { getMtgDraft } from "@/lib/mtgDraft";
-import { formatFreshness, isCubeUnavailable } from "@/lib/mtgDraftView";
+import { getMtgCubeWeekDiff, getMtgDraft } from "@/lib/mtgDraft";
+import { formatFreshness, isCubeUnavailable, isCubeWeekDiffCurrent } from "@/lib/mtgDraftView";
 import { mtgDisplay } from "@/lib/mtgFonts";
 
-export const metadata: Metadata = {
-  title: "MTG Planar Cube Tier List — Every Card Tiered, Honestly Labeled",
-  description:
-    "Every card in MTG Arena's Planar Cube Draft pool gets a real S–F tier — from real 17lands data when it exists, a Powered Cube or cross-set prior, or a transparent rarity/CMC/type heuristic. The basis is always shown, never hidden behind an invented win rate.",
-  alternates: { canonical: "https://play.buildkit.store/mtg/cube" },
-};
+const BASE_DESCRIPTION =
+  "Every card in MTG Arena's Planar Cube Draft pool gets a real S–F tier — from real 17lands data when it exists, a Powered Cube or cross-set prior, or a transparent rarity/CMC/type heuristic. The basis is always shown, never hidden behind an invented win rate.";
+
+// The week label comes straight off the committed cube payload
+// (mtg-draft.json cube.week_label) -- never a hand-typed/guessed value, so
+// the title and og:title/og:description can never drift from what the page
+// itself renders in the week banner.
+export async function generateMetadata(): Promise<Metadata> {
+  const payload = getMtgDraft();
+  const cube = payload?.cube;
+  const weekLabel = cube && !isCubeUnavailable(cube) ? cube.week_label : null;
+
+  const title = weekLabel
+    ? `MTG Planar Cube Tier List — ${weekLabel} — Every Card Tiered, Honestly Labeled`
+    : "MTG Planar Cube Tier List — Every Card Tiered, Honestly Labeled";
+  const description = weekLabel ? `${weekLabel}. ${BASE_DESCRIPTION}` : BASE_DESCRIPTION;
+
+  return {
+    title,
+    description,
+    alternates: { canonical: "https://play.buildkit.store/mtg/cube" },
+  };
+}
 
 // The pipeline republishes at most a few times a day; matches every other
 // /mtg page's ISR window.
@@ -51,6 +69,7 @@ export default function MtgCubePage() {
 
   const sample = payload.status !== "published";
   const { live_planar_cube, powered_cube_prior, cross_set_prior, heuristic } = cube.prior_summary;
+  const weekDiff = getMtgCubeWeekDiff();
 
   return (
     <main className={`min-h-screen mtg-scope ${mtgDisplay.variable}`}>
@@ -149,7 +168,18 @@ export default function MtgCubePage() {
 
         <MtgDraftMethodologyAccordion methodology={cube.methodology} />
 
-        <MtgCubeTierTable rows={cube.rows} />
+        <p className="mb-6 print:hidden">
+          <Link
+            href="/mtg/cube/trainer"
+            className="inline-flex items-center gap-2 rounded-md border border-brass/40 bg-brass-dim px-4 py-2 text-sm font-medium text-brass hover:border-brass/70 transition-colors"
+          >
+            Practice P1P1s with the pick trainer &rarr;
+          </Link>
+        </p>
+
+        {isCubeWeekDiffCurrent(weekDiff, cube) && <MtgCubeWeekDiffStrip diff={weekDiff} />}
+
+        <MtgCubeExplorer rows={cube.rows} />
 
         <p className="text-sm text-text-secondary mt-10 mb-3 print:hidden">
           <Link

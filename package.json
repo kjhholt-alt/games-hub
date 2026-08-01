@@ -9,6 +9,7 @@
     "type-check": "tsc --noEmit",
     "gen:heroes": "node scripts/gen-heroes.mjs",
     "gen:tierlist": "node scripts/generate-deadlock-tierlist.mjs",
+    "gen:cube-week-diff": "node scripts/build-cube-week-diff.mjs",
     "e2e": "playwright test"
   },
   "dependencies": {

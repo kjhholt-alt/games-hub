@@ -297,6 +297,63 @@ export interface CubeModule {
   prior_summary: CubePriorSummary;
 }
 
+// ─── Cube week-over-week diff (gl-0573) ──────────────────────────────────────
+//
+// Derived by scripts/build-cube-week-diff.mjs by walking THIS repo's own git
+// history for public/mtg-draft.json — the published payload's commit log is
+// the true record (there is no separate mtg-workstation/metahub pipeline on
+// this node to diff against). Absent entirely when the script hasn't run yet
+// or found no prior distinct week in history (fail-closed, never a guessed
+// delta); even when present, `isCubeWeekDiffCurrent` must still hold before
+// a caller renders it — a diff file left over from a prior module swap
+// carries a stale `current_week_label` and must never render next to a
+// newer week's table.
+
+export interface CubeWeekDiffCardRef {
+  card: string;
+  grade: Exclude<DraftGrade, "unrated">;
+}
+
+export interface CubeWeekDiffTierMove {
+  name: string;
+  from_tier: Exclude<DraftGrade, "unrated">;
+  to_tier: Exclude<DraftGrade, "unrated">;
+}
+
+export interface CubeWeekDiffCounts {
+  added: number;
+  removed: number;
+  tier_moves: number;
+}
+
+export interface CubeWeekDiffPayload {
+  schema: string;
+  computed_at: string;
+  /** One-line human summary of exactly what was diffed against what — render
+   * this verbatim, never paraphrase (same rail as `methodology` elsewhere in
+   * this file). */
+  basis: string;
+  current_week_label: string;
+  previous_week_label: string;
+  current_commit: string;
+  previous_commit: string;
+  counts: CubeWeekDiffCounts;
+  added: CubeWeekDiffCardRef[];
+  removed: CubeWeekDiffCardRef[];
+  tier_moves: CubeWeekDiffTierMove[];
+}
+
+/** True only when the diff file exists AND its `current_week_label` matches
+ * the LIVE cube module's `week_label` — the single gate that keeps the
+ * What-Changed-This-Week strip from ever rendering a stale or mismatched
+ * diff (e.g. after a module swap the diff script hasn't re-run for yet). */
+export function isCubeWeekDiffCurrent(
+  diff: CubeWeekDiffPayload | null,
+  cube: CubeModule | undefined
+): diff is CubeWeekDiffPayload {
+  return Boolean(diff && cube && diff.current_week_label === cube.week_label);
+}
+
 // ─── The Hobbit (HOB) Day-0 Intel Pack ───────────────────────────────────────
 //
 // MTG Arena's "The Hobbit" launches 2026-08-11; spoiler season is live now.
@@ -379,6 +436,204 @@ export type CubeCategoryFilter = (typeof CUBE_CATEGORY_FILTERS)[number];
 
 export function matchesCubeCategory(row: CubeCardRow, category: CubeCategoryFilter): boolean {
   return category === "all" || row.category === category;
+}
+
+// ─── Cube filter bar (gl-0571: search/color/rarity/type/tier/basis + sort) ──
+
+export function matchesCubeRarity(row: CubeCardRow, rarity: RarityFilter): boolean {
+  return rarity === "all" || row.rarity === rarity;
+}
+
+/** Broad card-type buckets parsed from `type_line` (e.g. "Legendary Creature
+ * — Elf Warrior" matches "creature"). Deliberately lenient substring match —
+ * "Artifact Creature" matches both "artifact" and "creature" facets, the
+ * natural drafter read ("show me my creatures" includes artifact creatures)
+ * rather than an exclusive single-bucket classification. */
+export const CUBE_TYPE_FILTERS = [
+  "all", "creature", "instant", "sorcery", "artifact", "enchantment", "planeswalker", "land",
+] as const;
+export type CubeTypeFilter = (typeof CUBE_TYPE_FILTERS)[number];
+
+export function matchesCubeType(row: CubeCardRow, type: CubeTypeFilter): boolean {
+  if (type === "all") return true;
+  return Boolean(row.type_line?.toLowerCase().includes(type));
+}
+
+export const CUBE_TIER_FILTERS = ["all", "S", "A", "B", "C", "D", "F"] as const;
+export type CubeTierFilter = (typeof CUBE_TIER_FILTERS)[number];
+
+export function matchesCubeTier(row: CubeCardRow, tier: CubeTierFilter): boolean {
+  return tier === "all" || row.grade === tier;
+}
+
+/** Buckets the (open-ended, `cross_set_prior:<CODE>` included) PriorSource
+ * union into the same 4 groups the page's own prior-source scoreboard
+ * already shows — one honesty vocabulary for the stat row, the basis
+ * filter, and the basis sort column. */
+export function cubeBasisBucket(
+  priorSource: CubePriorSource
+): "live_planar_cube" | "powered_cube_prior" | "cross_set_prior" | "heuristic" {
+  if (priorSource === "live_planar_cube") return "live_planar_cube";
+  if (priorSource === "powered_cube_prior") return "powered_cube_prior";
+  if (priorSource === "heuristic") return "heuristic";
+  return "cross_set_prior";
+}
+
+export const CUBE_BASIS_FILTERS = [
+  "all", "live_planar_cube", "powered_cube_prior", "cross_set_prior", "heuristic",
+] as const;
+export type CubeBasisFilter = (typeof CUBE_BASIS_FILTERS)[number];
+
+export const CUBE_BASIS_LABELS: Record<Exclude<CubeBasisFilter, "all">, string> = {
+  live_planar_cube: "Live Planar Cube",
+  powered_cube_prior: "Powered Cube prior",
+  cross_set_prior: "Cross-set prior",
+  heuristic: "Heuristic",
+};
+
+export function matchesCubeBasis(row: CubeCardRow, basis: CubeBasisFilter): boolean {
+  return basis === "all" || cubeBasisBucket(row.prior_source) === basis;
+}
+
+export const CUBE_SORT_KEYS = ["grade", "card", "category", "rarity", "gih_wr", "basis"] as const;
+export type CubeSortKey = (typeof CUBE_SORT_KEYS)[number];
+
+/** S=best..F=worst as a 5..0 power score — the same scale the guild strip
+ * averages over. Grade is always a real letter on a cube row (never
+ * "unrated"), so this is total. */
+const CUBE_GRADE_POWER: Record<Exclude<DraftGrade, "unrated">, number> = {
+  S: 5, A: 4, B: 3, C: 2, D: 1, F: 0,
+};
+
+const CUBE_BASIS_RANK: Record<ReturnType<typeof cubeBasisBucket>, number> = {
+  live_planar_cube: 3,
+  powered_cube_prior: 2,
+  cross_set_prior: 1,
+  heuristic: 0,
+};
+
+function cubeSortValue(row: CubeCardRow, key: CubeSortKey): number | string | null {
+  switch (key) {
+    case "grade":
+      return CUBE_GRADE_POWER[row.grade];
+    case "card":
+      return row.card.toLowerCase();
+    case "category":
+      return row.category;
+    case "rarity":
+      return row.rarity ? RARITY_ORDER.indexOf(row.rarity) : -1;
+    case "gih_wr":
+      return row.gih_wr;
+    case "basis":
+      return CUBE_BASIS_RANK[cubeBasisBucket(row.prior_source)];
+    default:
+      return null;
+  }
+}
+
+/** Default sort direction the first time a column is activated — name-ish
+ * columns read naturally A→Z, everything else reads naturally best/most
+ * first. Matches the Draft Ranker's own convention (MtgDraftRanker). */
+export function cubeSortDefaultDir(key: CubeSortKey): "asc" | "desc" {
+  return key === "card" || key === "category" || key === "rarity" ? "asc" : "desc";
+}
+
+/** Explicit client sort, only ever invoked once the visitor picks a column —
+ * the cube table's true default is the ENGINE's own pre-sort order
+ * (draft_score desc, then heuristic_score desc; see MtgCubeTierTable's
+ * header comment), which this function never touches. Nulls always trail
+ * regardless of direction, same rule as sortDraftRows. */
+export function sortCubeRows(
+  rows: CubeCardRow[],
+  key: CubeSortKey,
+  dir: "asc" | "desc"
+): CubeCardRow[] {
+  const factor = dir === "asc" ? 1 : -1;
+  return [...rows].sort((a, b) => {
+    const av = cubeSortValue(a, key);
+    const bv = cubeSortValue(b, key);
+    if (av === null && bv === null) return 0;
+    if (av === null) return 1;
+    if (bv === null) return -1;
+    if (typeof av === "string" && typeof bv === "string") {
+      return av.localeCompare(bv) * factor;
+    }
+    return ((av as number) - (bv as number)) * factor;
+  });
+}
+
+/** Server-order rank (1 = engine's #1 card), keyed by card name, computed
+ * once over the FULL unfiltered pool — same "# reflects true standing even
+ * while filtered/sorted" convention as draftScoreRanks. */
+export function cubeServerRanks(rows: CubeCardRow[]): Map<string, number> {
+  return new Map(rows.map((r, i) => [r.card, i + 1]));
+}
+
+// ─── Cube guild strip (gl-0571) ──────────────────────────────────────────────
+
+export interface CubeGuildStanding {
+  key: string;
+  guild: string;
+  /** How many pool cards fit this guild's two-color identity. */
+  count: number;
+  /** Mean CUBE_GRADE_POWER (0-5) across matching cards, null when count is 0
+   * — never a fabricated average over an empty set. */
+  avgPower: number | null;
+  /** % of matching cards backed by cube-native signal (real Planar Cube
+   * telemetry or a Powered Cube sample) rather than a borrowed cross-set
+   * prior or the rarity/CMC/type heuristic — disclosed unconditionally so a
+   * high-ranked guild built mostly on heuristic guesses reads as such. Null
+   * when count is 0. */
+  coveragePct: number | null;
+  /** 1-indexed rank by avgPower desc among guilds with at least one card;
+   * null (unranked, sorts last) when count is 0. */
+  rank: number | null;
+}
+
+/** A card "fits" a guild when its full color identity is contained in the
+ * guild's two colors — mono-color cards count toward both guilds that share
+ * their color (the natural "decks I could actually play this in" read).
+ * Colorless cards fit no guild; this strip is about color identity, not
+ * cube-wide playability. */
+function fitsGuild(row: CubeCardRow, pairKey: string): boolean {
+  const identity = row.color_identity ?? [];
+  if (identity.length === 0) return false;
+  const allowed = pairKey.split("");
+  return identity.every((c) => allowed.includes(c));
+}
+
+/** Ranks the 10 two-color guilds purely from this week's cube row data — no
+ * invented win rates. Average power is the mean grade (S..F) of cards that
+ * fit the guild; coverage is always disclosed alongside the rank so a guild
+ * near the top on mostly-heuristic grades doesn't read as more certain than
+ * it is. A guild with zero matching cards this week ranks last with an
+ * honest null rather than a fabricated score. */
+export function computeCubeGuildStandings(rows: CubeCardRow[]): CubeGuildStanding[] {
+  const raw = COLOR_PAIRS.map(({ key, guild }) => {
+    const matches = rows.filter((r) => fitsGuild(r, key));
+    if (matches.length === 0) {
+      return { key, guild, count: 0, avgPower: null, coveragePct: null, rank: null } as CubeGuildStanding;
+    }
+    const avgPower =
+      matches.reduce((sum, r) => sum + CUBE_GRADE_POWER[r.grade], 0) / matches.length;
+    const realCount = matches.filter((r) => {
+      const bucket = cubeBasisBucket(r.prior_source);
+      return bucket === "live_planar_cube" || bucket === "powered_cube_prior";
+    }).length;
+    const coveragePct = Math.round((realCount / matches.length) * 100);
+    return { key, guild, count: matches.length, avgPower, coveragePct, rank: null } as CubeGuildStanding;
+  });
+
+  const rankByKey = new Map(
+    [...raw]
+      .filter((s) => s.avgPower !== null)
+      .sort((a, b) => (b.avgPower as number) - (a.avgPower as number))
+      .map((s, i) => [s.key, i + 1])
+  );
+
+  return raw
+    .map((s) => ({ ...s, rank: rankByKey.get(s.key) ?? null }))
+    .sort((a, b) => (a.rank ?? 99) - (b.rank ?? 99));
 }
 
 /** True whenever the payload isn't a confirmed real-pipeline publish — drives

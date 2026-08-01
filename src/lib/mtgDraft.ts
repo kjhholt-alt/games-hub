@@ -14,7 +14,7 @@
 
 import fs from "fs";
 import path from "path";
-import type { MtgDraftPayload } from "@/lib/mtgDraftView";
+import type { CubeWeekDiffPayload, MtgDraftPayload } from "@/lib/mtgDraftView";
 
 export type {
   CubeCardRow,
@@ -24,6 +24,10 @@ export type {
   CubeCategoryFilter,
   CubePriorSource,
   CubePriorSummary,
+  CubeWeekDiffCardRef,
+  CubeWeekDiffCounts,
+  CubeWeekDiffPayload,
+  CubeWeekDiffTierMove,
   DraftCardRow,
   DraftConfidence,
   DraftGrade,
@@ -37,12 +41,14 @@ export type {
 export {
   isSampleDraftPayload,
   isCubeUnavailable,
+  isCubeWeekDiffCurrent,
   isHobUnavailable,
   hasGapFillBasis,
   priorSourceBasisColor,
 } from "@/lib/mtgDraftView";
 
 const MTG_DRAFT_FILE = path.join(process.cwd(), "public", "mtg-draft.json");
+const MTG_CUBE_WEEK_DIFF_FILE = path.join(process.cwd(), "public", "mtg-cube-week-diff.json");
 
 function readFile(): MtgDraftPayload | null {
   try {
@@ -56,4 +62,18 @@ function readFile(): MtgDraftPayload | null {
  * handle null — an absent payload is a build-time honesty state too. */
 export function getMtgDraft(): MtgDraftPayload | null {
   return readFile();
+}
+
+/** The cube week-over-week diff (scripts/build-cube-week-diff.mjs), or null
+ * if it's missing/unparseable — the same fail-closed "null is a real state"
+ * rule as getMtgDraft. Callers must ALSO check isCubeWeekDiffCurrent before
+ * rendering anything from this — a present-but-stale file is expected
+ * (fail-closed means the builder skips writing, it doesn't delete an old
+ * one) and must render as absent. */
+export function getMtgCubeWeekDiff(): CubeWeekDiffPayload | null {
+  try {
+    return JSON.parse(fs.readFileSync(MTG_CUBE_WEEK_DIFF_FILE, "utf-8")) as CubeWeekDiffPayload;
+  } catch {
+    return null;
+  }
 }
