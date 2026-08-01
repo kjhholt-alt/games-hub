@@ -8,6 +8,14 @@
 // or an id the pipeline didn't emit.
 
 import { getMtgMeta, type CommanderTierRow } from "@/lib/mtg";
+import { slugifyCommander } from "@/lib/mtgDisplay";
+
+// Re-exported for backward compat — every existing importer of
+// slugifyCommander from "@/lib/mtgCommanderPages" keeps working unchanged.
+// The real definition now lives in lib/mtgDisplay.ts (gl-0593) so client
+// components can use it without pulling this file's fs-based getMtgMeta
+// into the browser bundle.
+export { slugifyCommander };
 
 export interface CommanderPageEntry {
   slug: string;
@@ -19,24 +27,6 @@ export interface CommanderPageEntry {
    * payload rather than silently overwriting it or crashing. */
   name: string;
   rows: CommanderTierRow[];
-}
-
-/** Kebab-case a commander name for use as a URL slug. Strips diacritics
- * defensively (Scryfall names are occasionally accented) via Unicode
- * normalization + a `\p{M}` (combining mark) strip, lowercases, and
- * collapses everything that isn't a-z0-9 into single hyphens — handles
- * punctuation-heavy real names (e.g. "K'rrik, Son of Yawgmoth") and
- * double-faced " // " commanders the same way. Never returns an empty
- * string for a non-empty input; a name that's entirely punctuation (never
- * seen in practice) falls back to "commander" rather than an empty slug. */
-export function slugifyCommander(name: string): string {
-  const slug = name
-    .normalize("NFKD")
-    .replace(/\p{M}/gu, "")
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
-  return slug || "commander";
 }
 
 /** Group commander_tiers rows into one entry per unique slug — the dedupe

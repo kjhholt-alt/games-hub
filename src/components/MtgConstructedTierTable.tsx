@@ -1,14 +1,16 @@
 import { ExternalLink } from "lucide-react";
 import { MtgTierPlate } from "@/components/MtgTierPlate";
+import { MtgSortableTh } from "@/components/MtgSortableTh";
+import type { ConstructedTierRow } from "@/lib/mtg";
 import {
   formatLabel,
   formatWinRate,
   groupByConstructedFormat,
   isFadedConfidence,
   TIER_ORDER,
-  type ConstructedTierRow,
   type Tier,
-} from "@/lib/mtg";
+} from "@/lib/mtgDisplay";
+import { sortConstructedRows, type ConstructedSortKey } from "@/lib/mtgTierView";
 
 /** Leaderboard depth per format — same "top of the board is the product"
  * rule as the commander/limited tables. */
@@ -33,8 +35,23 @@ function sortRows(rows: ConstructedTierRow[]): ConstructedTierRow[] {
  * archetype_or_deck carries whatever label topdeck.gg's organizers gave it
  * (never invented); low-sample rows fade per the hub's honesty rail; every
  * row links back to its source event on topdeck.gg.
+ *
+ * `sortKey`/`sortDir`/`onSort` are optional (gl-0593, MtgConstructedTierExplorer)
+ * — when `sortKey` is null/omitted each format board keeps its original
+ * tier-then-win-rate order (sortRows below) untouched; once a visitor clicks
+ * a sortable header the board renders that explicit client sort instead.
  */
-export function MtgConstructedTierTable({ rows }: { rows: ConstructedTierRow[] }) {
+export function MtgConstructedTierTable({
+  rows,
+  sortKey = null,
+  sortDir = "desc",
+  onSort,
+}: {
+  rows: ConstructedTierRow[];
+  sortKey?: ConstructedSortKey | null;
+  sortDir?: "asc" | "desc";
+  onSort?: (key: ConstructedSortKey) => void;
+}) {
   const groups = groupByConstructedFormat(rows);
 
   if (groups.length === 0) {
@@ -48,7 +65,14 @@ export function MtgConstructedTierTable({ rows }: { rows: ConstructedTierRow[] }
   return (
     <div className="space-y-10">
       {groups.map((g) => (
-        <FormatBoard key={g.format} format={g.format} rows={g.rows} />
+        <FormatBoard
+          key={g.format}
+          format={g.format}
+          rows={g.rows}
+          sortKey={sortKey}
+          sortDir={sortDir}
+          onSort={onSort}
+        />
       ))}
       <p className="text-xs text-text-secondary max-w-3xl">
         Tier = real match win rate across recorded tournament results (S&gt;=60%,
@@ -60,9 +84,22 @@ export function MtgConstructedTierTable({ rows }: { rows: ConstructedTierRow[] }
   );
 }
 
-function FormatBoard({ format, rows }: { format: string; rows: ConstructedTierRow[] }) {
-  const sorted = sortRows(rows);
+function FormatBoard({
+  format,
+  rows,
+  sortKey,
+  sortDir,
+  onSort,
+}: {
+  format: string;
+  rows: ConstructedTierRow[];
+  sortKey: ConstructedSortKey | null;
+  sortDir: "asc" | "desc";
+  onSort?: (key: ConstructedSortKey) => void;
+}) {
+  const sorted = sortKey ? sortConstructedRows(rows, sortKey, sortDir) : sortRows(rows);
   const top = sorted.slice(0, TOP_N);
+  const handleSort = onSort ? (key: string) => onSort(key as ConstructedSortKey) : undefined;
 
   return (
     <div>
@@ -73,13 +110,60 @@ function FormatBoard({ format, rows }: { format: string; rows: ConstructedTierRo
         <table className="w-full text-sm">
           <thead>
             <tr className="border-b border-border bg-surface text-left">
-              <Th className="w-10 text-right">#</Th>
-              <Th className="w-12">Tier</Th>
-              <Th wide>Archetype / Deck</Th>
-              <Th className="text-right">Win rate</Th>
-              <Th className="text-right">W-L-D</Th>
-              <Th className="text-right">Events</Th>
-              <Th className="text-right hidden lg:table-cell">Best finish</Th>
+              <MtgSortableTh
+                label="#"
+                sortKey={null}
+                activeKey={sortKey}
+                dir={sortDir}
+                className="w-10 text-right"
+              />
+              <MtgSortableTh
+                label="Tier"
+                sortKey="tier"
+                activeKey={sortKey}
+                dir={sortDir}
+                onSort={handleSort}
+                className="w-12"
+              />
+              <MtgSortableTh
+                label="Archetype / Deck"
+                sortKey="archetype_or_deck"
+                activeKey={sortKey}
+                dir={sortDir}
+                onSort={handleSort}
+                wide
+              />
+              <MtgSortableTh
+                label="Win rate"
+                sortKey="win_rate"
+                activeKey={sortKey}
+                dir={sortDir}
+                onSort={handleSort}
+                align="right"
+              />
+              <MtgSortableTh
+                label="W-L-D"
+                sortKey={null}
+                activeKey={sortKey}
+                dir={sortDir}
+                align="right"
+              />
+              <MtgSortableTh
+                label="Events"
+                sortKey="event_count"
+                activeKey={sortKey}
+                dir={sortDir}
+                onSort={handleSort}
+                align="right"
+              />
+              <MtgSortableTh
+                label="Best finish"
+                sortKey={null}
+                activeKey={sortKey}
+                dir={sortDir}
+                align="right"
+                className="hidden lg:table-cell"
+              />
             </tr>
           </thead>
           <tbody>
@@ -129,27 +213,9 @@ function FormatBoard({ format, rows }: { format: string; rows: ConstructedTierRo
         </table>
       </div>
       <p className="font-mono text-[10px] uppercase tracking-wide text-text-secondary mt-2">
-        Top {top.length} of {rows.length} archetypes/decks by win rate ·
+        Top {top.length} of {rows.length} archetypes/decks{sortKey ? "" : " by win rate"} ·
         faded rows = small samples
       </p>
     </div>
-  );
-}
-
-function Th({
-  children,
-  className = "",
-  wide = false,
-}: {
-  children: React.ReactNode;
-  className?: string;
-  wide?: boolean;
-}) {
-  return (
-    <th
-      className={`${wide ? "px-4" : "px-3"} py-2.5 font-mono text-[10px] uppercase tracking-widest text-text-secondary font-medium ${className}`}
-    >
-      {children}
-    </th>
   );
 }

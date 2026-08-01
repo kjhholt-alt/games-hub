@@ -3,15 +3,17 @@ import { ExternalLink } from "lucide-react";
 import { MtgTierPlate } from "@/components/MtgTierPlate";
 import { ManaDots } from "@/components/MtgManaPips";
 import { MtgCardHover } from "@/components/MtgCardHover";
+import { MtgSortableTh } from "@/components/MtgSortableTh";
+import type { CommanderTierRow } from "@/lib/mtg";
 import {
   BUCKET_LABEL,
   colorIdentityPips,
   formatLabel,
   groupByBucket,
   isFadedConfidence,
-  type CommanderTierRow,
-} from "@/lib/mtg";
-import { slugifyCommander } from "@/lib/mtgCommanderPages";
+  slugifyCommander,
+} from "@/lib/mtgDisplay";
+import { sortCommanderRows, type CommanderSortKey } from "@/lib/mtgTierView";
 
 /** Leaderboard depth per bucket. The full 500+ rows live in the raw payload
  * (linked from the page chrome) — rendering them all buried the signal and
@@ -29,14 +31,36 @@ const TOP_N = 20;
  * (the real attribution link) moves to a small external-link icon beside
  * it. Sources are cited once at module level, not stamped on every row —
  * per-row honesty is the fade + the deck count.
+ *
+ * `sortKey`/`sortDir`/`onSort` are optional (gl-0593, MtgCommanderTierExplorer)
+ * — when `sortKey` is null/omitted each bucket keeps its original
+ * deck-count-descending order untouched; once a visitor clicks a sortable
+ * header the bucket renders that explicit client sort instead.
  */
-export function MtgCommanderTierTable({ rows }: { rows: CommanderTierRow[] }) {
+export function MtgCommanderTierTable({
+  rows,
+  sortKey = null,
+  sortDir = "desc",
+  onSort,
+}: {
+  rows: CommanderTierRow[];
+  sortKey?: CommanderSortKey | null;
+  sortDir?: "asc" | "desc";
+  onSort?: (key: CommanderSortKey) => void;
+}) {
   const buckets = groupByBucket(rows);
 
   return (
     <div className="space-y-10">
       {buckets.map((b) => (
-        <BucketBoard key={b.bucket} bucket={b.bucket} rows={b.rows} />
+        <BucketBoard
+          key={b.bucket}
+          bucket={b.bucket}
+          rows={b.rows}
+          sortKey={sortKey}
+          sortDir={sortDir}
+          onSort={onSort}
+        />
       ))}
       <p className="text-xs text-text-secondary max-w-3xl">
         Tier = deck-count rank-percentile within the bucket — a popularity
@@ -50,12 +74,21 @@ export function MtgCommanderTierTable({ rows }: { rows: CommanderTierRow[] }) {
 function BucketBoard({
   bucket,
   rows,
+  sortKey,
+  sortDir,
+  onSort,
 }: {
   bucket: CommanderTierRow["bucket"];
   rows: CommanderTierRow[];
+  sortKey: CommanderSortKey | null;
+  sortDir: "asc" | "desc";
+  onSort?: (key: CommanderSortKey) => void;
 }) {
-  const sorted = [...rows].sort((a, b) => b.deck_count - a.deck_count);
+  const sorted = sortKey
+    ? sortCommanderRows(rows, sortKey, sortDir)
+    : [...rows].sort((a, b) => b.deck_count - a.deck_count);
   const top = sorted.slice(0, TOP_N);
+  const handleSort = onSort ? (key: string) => onSort(key as CommanderSortKey) : undefined;
 
   return (
     <div>
@@ -66,15 +99,47 @@ function BucketBoard({
         <table className="w-full text-sm">
           <thead>
             <tr className="border-b border-border bg-surface text-left">
-              <Th className="w-10 text-right">#</Th>
-              <Th className="w-12">Tier</Th>
-              <Th wide>Commander</Th>
-              <Th>Colors</Th>
-              <Th>Format</Th>
-              <Th className="text-right">Decks</Th>
-              <Th wide className="hidden lg:table-cell">
-                Top inclusions
-              </Th>
+              <MtgSortableTh
+                label="#"
+                sortKey={null}
+                activeKey={sortKey}
+                dir={sortDir}
+                className="w-10 text-right"
+              />
+              <MtgSortableTh
+                label="Tier"
+                sortKey="tier"
+                activeKey={sortKey}
+                dir={sortDir}
+                onSort={handleSort}
+                className="w-12"
+              />
+              <MtgSortableTh
+                label="Commander"
+                sortKey="commander"
+                activeKey={sortKey}
+                dir={sortDir}
+                onSort={handleSort}
+                wide
+              />
+              <MtgSortableTh label="Colors" sortKey={null} activeKey={sortKey} dir={sortDir} />
+              <MtgSortableTh label="Format" sortKey={null} activeKey={sortKey} dir={sortDir} />
+              <MtgSortableTh
+                label="Decks"
+                sortKey="deck_count"
+                activeKey={sortKey}
+                dir={sortDir}
+                onSort={handleSort}
+                align="right"
+              />
+              <MtgSortableTh
+                label="Top inclusions"
+                sortKey={null}
+                activeKey={sortKey}
+                dir={sortDir}
+                wide
+                className="hidden lg:table-cell"
+              />
             </tr>
           </thead>
           <tbody>
@@ -153,27 +218,9 @@ function BucketBoard({
         </table>
       </div>
       <p className="font-mono text-[10px] uppercase tracking-wide text-text-secondary mt-2">
-        Top {top.length} of {rows.length} commanders by deck count · faded
+        Top {top.length} of {rows.length} commanders{sortKey ? "" : " by deck count"} · faded
         rows = small samples
       </p>
     </div>
-  );
-}
-
-function Th({
-  children,
-  className = "",
-  wide = false,
-}: {
-  children: React.ReactNode;
-  className?: string;
-  wide?: boolean;
-}) {
-  return (
-    <th
-      className={`${wide ? "px-4" : "px-3"} py-2.5 font-mono text-[10px] uppercase tracking-widest text-text-secondary font-medium ${className}`}
-    >
-      {children}
-    </th>
   );
 }
