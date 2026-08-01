@@ -349,6 +349,7 @@ export default function MtgPage() {
     ...(draftPayload?.hob && draftPayload.hob.rows.length > 0
       ? [{ label: "The Hobbit", href: "/mtg/hob", count: `${draftPayload.hob.rows.length}` }]
       : []),
+    { label: "Deck check", href: "/mtg/check", count: "paste" },
     { label: "Tiers", href: "#tiers", count: `${commander_tiers.rows.length}` },
     { label: "Limited", href: "#limited", count: `${limited_tiers.rows.length}` },
     ...(constructed_tiers
