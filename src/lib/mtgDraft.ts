@@ -18,6 +18,8 @@ import type { CubeWeekDiffPayload, MtgDraftPayload } from "@/lib/mtgDraftView";
 
 export type {
   CubeCardRow,
+  CubeEngineStatsBlock,
+  CubeEngineStatsCard,
   CubeModule,
   CubeModuleStatus,
   CubePoolFilter,

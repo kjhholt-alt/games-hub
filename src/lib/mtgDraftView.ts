@@ -186,14 +186,25 @@ export interface DraftSetBlock {
  * fact). `cross_set_prior:<CODE>` carries the borrowed set's code.
  * "live"/"live_low_sample" are standard-set/HOB-only (a cube module never
  * produces them — cube's own "real live data" tier is "live_planar_cube"
- * instead); "powered_cube_prior"/"live_planar_cube" are cube-only. One
- * shared union since both modules render through the identical basis-
- * column UI pattern (MtgCubeTierTable / MtgDraftTable / MtgHobTierTable). */
+ * instead); "powered_cube_prior"/"live_planar_cube"/"forge_engine" are
+ * cube-only. One shared union since both modules render through the
+ * identical basis-column UI pattern (MtgCubeTierTable / MtgDraftTable /
+ * MtgHobTierTable).
+ *
+ * "forge_engine" — the Data Counter-offensive (gl-0590): a real per-card
+ * win rate computed ONLY from our own receipted Card-Forge rules-engine
+ * matches (see cube.engine_stats), never from 17lands or an estimate. It
+ * only ever REPLACES "heuristic" (the weakest, non-statistical tier) on a
+ * row that cleared cube.engine_stats.floor_games — a row already carrying
+ * real 17lands data or a Powered Cube/cross-set prior keeps that basis
+ * untouched, always. Rendered as "Engine (N games)" — see
+ * engine_wr/engine_games on CubeCardRow. */
 export type PriorSource =
   | "live"
   | "live_low_sample"
   | "live_planar_cube"
   | "powered_cube_prior"
+  | "forge_engine"
   | "heuristic"
   | `cross_set_prior:${string}`;
 
@@ -210,6 +221,10 @@ export function priorSourceBasisColor(priorSource: PriorSource): string {
   if (priorSource === "live" || priorSource === "live_planar_cube") return "text-green";
   if (priorSource === "live_low_sample") return "text-brass";
   if (priorSource === "powered_cube_prior") return "text-brass";
+  // Real same-cube rules-engine evidence, same bucket as powered_cube_prior
+  // (a genuine sample, just not live Arena telemetry) — never the purple
+  // "no statistics at all" heuristic tier it replaced.
+  if (priorSource === "forge_engine") return "text-brass";
   if (priorSource === "heuristic") return "text-purple";
   return "text-amber"; // cross_set_prior:<CODE>
 }
@@ -267,6 +282,24 @@ export interface CubeCardRow {
   grade: Exclude<DraftGrade, "unrated">;
   art_crop?: string;
   image_normal?: string;
+  /** Data Counter-offensive (gl-0590) — additive, ABSENT (not merely null)
+   * on every row below cube.engine_stats.floor_games, and on any payload
+   * published before this addendum. A real win rate computed strictly from
+   * our own receipted Card-Forge cube round-robin matches: this card's
+   * total credited games/wins, summed across every deck (of the 10 real
+   * Planar-Cube guild decks) that carries it in its list, across every
+   * receipted seed set. NOT a per-card draft signal — it's a deck-carries-
+   * this-card signal, confounded by deck strength like any constructed
+   * win rate, so it is never written onto draft_score's scale. See
+   * cube.engine_stats for the full methodology + floor. */
+  engine_wr?: number;
+  /** Total credited games backing engine_wr — the same number `floor_games`
+   * was compared against, and what "Engine (N games)" renders as N when
+   * this row's basis is "forge_engine". */
+  engine_games?: number;
+  /** How many of the 10 real guild decks carry this card — context for how
+   * concentrated (vs. spread across the pool) engine_wr's evidence is. */
+  engine_decks?: number;
 }
 
 export type CubeModuleStatus = "published" | "unavailable" | "sample" | "stale";
@@ -276,6 +309,57 @@ export interface CubePriorSummary {
   powered_cube_prior: number;
   cross_set_prior: number;
   heuristic: number;
+  /** Additive + optional — rows upgraded heuristic -> forge_engine this run
+   * (gl-0590). Absent/undefined on any payload published before this
+   * addendum; the `heuristic` count above is already net of this many. */
+  forge_engine?: number;
+}
+
+/** One card's full engine evidence — gl-0590's Data Counter-offensive.
+ * Only cards that cleared `floor_games` appear here (the same gate that
+ * controls whether CubeCardRow.engine_wr/engine_games are present on that
+ * card's row) — this array is the audit trail for exactly those numbers,
+ * plus `engine_decks` for cards whose row doesn't otherwise show it. */
+export interface CubeEngineStatsCard {
+  card: string;
+  engine_games: number;
+  engine_wins: number;
+  engine_wr: number;
+  engine_decks: number;
+}
+
+/** The optional `cube.engine_stats` block — additive alongside `rows`,
+ * absent entirely on any payload published before gl-0590. Real per-card
+ * win rates computed ONLY from receipted Card-Forge cube round-robin
+ * matches (mtg-forge-shard), never from 17lands or an estimate; the raw
+ * match receipts themselves stay in mtg-forge-shard (retained, not
+ * duplicated here) — this block is the aggregated, disclosed result. */
+export interface CubeEngineStatsBlock {
+  status: "published" | "unavailable";
+  evidence_class: "rules_engine";
+  generated_utc: string;
+  methodology: string;
+  engine: { name: string; version: string; jar_sha256: string };
+  /** The disclosed floor: a card needs at least this many credited engine
+   * games before engine_wr/engine_games/basis="forge_engine" appear
+   * anywhere for it — never a guessed win rate off a handful of games. */
+  floor_games: number;
+  /** Independent seed sets (each its own round-robin plan/receipts
+   * directory) folded into this aggregate — chained like the existing
+   * Brawl plan-s2..s6 lineage, just for the cube's 10 guild decks. */
+  seed_sets: number;
+  total_planned_matches: number;
+  total_receipted_matches: number;
+  total_held_matches: number;
+  total_credited_matches: number;
+  /** Cards with ANY engine games observed, floor cleared or not. */
+  cards_tracked: number;
+  /** Cards that cleared `floor_games` — the count backing
+   * prior_summary.forge_engine plus every row that already had a stronger
+   * basis and so kept it (real engine data, just not the row's basis). */
+  cards_above_floor: number;
+  limitations: string[];
+  cards: CubeEngineStatsCard[];
 }
 
 /** The optional `cube` payload block, additive alongside `sets` — absent
@@ -295,6 +379,9 @@ export interface CubeModule {
   core_count: number;
   module_count: number;
   prior_summary: CubePriorSummary;
+  /** Additive + optional — see CubeEngineStatsBlock. Absent entirely until
+   * gl-0590's aggregation has run at least once. */
+  engine_stats?: CubeEngineStatsBlock;
 }
 
 // ─── Cube week-over-week diff (gl-0573) ──────────────────────────────────────
@@ -467,26 +554,32 @@ export function matchesCubeTier(row: CubeCardRow, tier: CubeTierFilter): boolean
 }
 
 /** Buckets the (open-ended, `cross_set_prior:<CODE>` included) PriorSource
- * union into the same 4 groups the page's own prior-source scoreboard
- * already shows — one honesty vocabulary for the stat row, the basis
- * filter, and the basis sort column. */
+ * union into the same groups the page's own prior-source scoreboard already
+ * shows — one honesty vocabulary for the stat row, the basis filter, and
+ * the basis sort column. "forge_engine" (gl-0590's Data Counter-offensive)
+ * gets its own bucket rather than falling into cross_set_prior — it is
+ * neither a borrowed cross-set number nor the plain heuristic tier it
+ * replaced, so lumping it into either would misrepresent both the filter
+ * and the "% real signal" guild coverage math below. */
 export function cubeBasisBucket(
   priorSource: CubePriorSource
-): "live_planar_cube" | "powered_cube_prior" | "cross_set_prior" | "heuristic" {
+): "live_planar_cube" | "powered_cube_prior" | "forge_engine" | "cross_set_prior" | "heuristic" {
   if (priorSource === "live_planar_cube") return "live_planar_cube";
   if (priorSource === "powered_cube_prior") return "powered_cube_prior";
+  if (priorSource === "forge_engine") return "forge_engine";
   if (priorSource === "heuristic") return "heuristic";
   return "cross_set_prior";
 }
 
 export const CUBE_BASIS_FILTERS = [
-  "all", "live_planar_cube", "powered_cube_prior", "cross_set_prior", "heuristic",
+  "all", "live_planar_cube", "powered_cube_prior", "forge_engine", "cross_set_prior", "heuristic",
 ] as const;
 export type CubeBasisFilter = (typeof CUBE_BASIS_FILTERS)[number];
 
 export const CUBE_BASIS_LABELS: Record<Exclude<CubeBasisFilter, "all">, string> = {
   live_planar_cube: "Live Planar Cube",
   powered_cube_prior: "Powered Cube prior",
+  forge_engine: "Engine (Forge)",
   cross_set_prior: "Cross-set prior",
   heuristic: "Heuristic",
 };
@@ -506,8 +599,9 @@ const CUBE_GRADE_POWER: Record<Exclude<DraftGrade, "unrated">, number> = {
 };
 
 const CUBE_BASIS_RANK: Record<ReturnType<typeof cubeBasisBucket>, number> = {
-  live_planar_cube: 3,
-  powered_cube_prior: 2,
+  live_planar_cube: 4,
+  powered_cube_prior: 3,
+  forge_engine: 2,
   cross_set_prior: 1,
   heuristic: 0,
 };
@@ -580,10 +674,11 @@ export interface CubeGuildStanding {
    * — never a fabricated average over an empty set. */
   avgPower: number | null;
   /** % of matching cards backed by cube-native signal (real Planar Cube
-   * telemetry or a Powered Cube sample) rather than a borrowed cross-set
-   * prior or the rarity/CMC/type heuristic — disclosed unconditionally so a
-   * high-ranked guild built mostly on heuristic guesses reads as such. Null
-   * when count is 0. */
+   * telemetry, a Powered Cube sample, or a receipted Card-Forge engine win
+   * rate — gl-0590) rather than a borrowed cross-set prior or the
+   * rarity/CMC/type heuristic — disclosed unconditionally so a high-ranked
+   * guild built mostly on heuristic guesses reads as such. Null when count
+   * is 0. */
   coveragePct: number | null;
   /** 1-indexed rank by avgPower desc among guilds with at least one card;
    * null (unranked, sorts last) when count is 0. */
@@ -618,7 +713,7 @@ export function computeCubeGuildStandings(rows: CubeCardRow[]): CubeGuildStandin
       matches.reduce((sum, r) => sum + CUBE_GRADE_POWER[r.grade], 0) / matches.length;
     const realCount = matches.filter((r) => {
       const bucket = cubeBasisBucket(r.prior_source);
-      return bucket === "live_planar_cube" || bucket === "powered_cube_prior";
+      return bucket === "live_planar_cube" || bucket === "powered_cube_prior" || bucket === "forge_engine";
     }).length;
     const coveragePct = Math.round((realCount / matches.length) * 100);
     return { key, guild, count: matches.length, avgPower, coveragePct, rank: null } as CubeGuildStanding;

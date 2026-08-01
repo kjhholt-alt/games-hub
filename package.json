@@ -10,6 +10,7 @@
     "gen:heroes": "node scripts/gen-heroes.mjs",
     "gen:tierlist": "node scripts/generate-deadlock-tierlist.mjs",
     "gen:cube-week-diff": "node scripts/build-cube-week-diff.mjs",
+    "merge:cube-engine-stats": "python scripts/merge_cube_engine_stats.py",
     "e2e": "playwright test"
   },
   "dependencies": {

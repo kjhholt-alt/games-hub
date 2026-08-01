@@ -146,8 +146,32 @@ export default function MtgCubePage() {
           <Stat label="Live Planar Cube" value={live_planar_cube} color="text-green" />
           <Stat label="Powered Cube prior" value={powered_cube_prior} color="text-brass" />
           <Stat label="Cross-set prior" value={cross_set_prior} color="text-amber" />
+          {Boolean(cube.prior_summary.forge_engine) && (
+            <Stat label="Engine (Forge)" value={cube.prior_summary.forge_engine!} color="text-brass" />
+          )}
           <Stat label="Heuristic" value={heuristic} color="text-purple" />
         </div>
+
+        {/* Data Counter-offensive disclosure (gl-0590) — only when the
+            engine module has published at least once; every number here
+            traces to receipted Card-Forge matches, never an estimate. */}
+        {cube.engine_stats && cube.engine_stats.status === "published" && (
+          <div className="flex items-start gap-3 rounded-md border border-brass/40 bg-brass-dim px-4 py-3.5 mb-8">
+            <BookOpen size={15} className="text-brass mt-0.5 shrink-0" />
+            <p className="text-text-secondary text-sm leading-relaxed">
+              <span className="font-semibold text-brass">
+                {cube.engine_stats.cards_above_floor} cards now carry a real engine win rate
+              </span>{" "}
+              from {cube.engine_stats.total_receipted_matches.toLocaleString()} receipted
+              Card-Forge rules-engine matches across {cube.engine_stats.seed_sets} seed sets (
+              {cube.engine_stats.total_held_matches} held, excluded). A card needs at least{" "}
+              {cube.engine_stats.floor_games} credited games before it earns the{" "}
+              <span className="text-brass">Engine (N games)</span> basis — and it only ever
+              replaces the Heuristic tier, never a real 17lands or Powered Cube prior. Full match
+              receipts are retained in the Forge shard, not duplicated into this payload.
+            </p>
+          </div>
+        )}
 
         {cube.source_url && (
           <a

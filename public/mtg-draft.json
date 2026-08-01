@@ -90812,10 +90812,11 @@
   "cube": {
     "status": "published",
     "computed_at": "2026-07-31T13:45:05Z",
-    "methodology": "IMPORTANT: these are DAY-1 PRIORS, NOT real Planar Cube win rates -- Planar Cube Draft launched on MTG Arena 2026-07-21 and 17lands has not yet accumulated per-card telemetry for it (verified live 2026-07-21: their public 'Cube - Planar' card_ratings endpoint returns HTTP 200 with zero rows). EVERY card in the pool (the constant 200-card planar core + the current week's 360-card rotating planar module, per Wizards' own announcement article) gets a real tier -- we never withhold a grade behind an 'unrated' placeholder. Each card is graded by the BEST available signal, tried in this order, with the basis always shown on the row: (1) REAL live 'Cube - Planar' data, the instant 17lands starts publishing a real win rate for that card -- this module upgrades automatically, since the live fetch is attempted every refresh; (2) a 'Cube - Powered' prior (the prior Arena Powered Cube event, June 2-23 2026) -- REAL historical per-card win rates we aggregate ourselves from 17lands' public bulk S3 game-data archive (one CSV row per completed game, CC BY 4.0, whitelisted in METAHUB-SPEC.md's legal rails), since that event's LIVE endpoint only ever returns near-empty totals for an ended/rotated-out queue; (3) a cross-set prior -- that SAME bulk-archive mechanism applied to each card's own designated historical premier set (its Scryfall oracle-cards representative printing's set, already-cached bulk data, cross-checked against 17lands' real bulk-dataset catalog), so a 20-year-old reprint gets its OWN most recent premier-draft set's real GIH (games-in-hand) win rate rather than a guess -- current-set live data (today's active premier set, reused from the Draft Ranker's own fetch) is tried first per card, the bulk archive fills every set the live queue can't reach; sets covering fewer than a handful of pool cards are skipped (logged, never silently) since the point of a multi-ten-MB archive download isn't worth it for one card -- those cards fall to (4) same as any other real 'no prior data' case; (4) a HEURISTIC prior when none of the above have data -- a transparent, documented (NOT statistical) score from the card's own Scryfall-grounded rarity + mana value + type line PLUS a bucketed `edhrec_rank` popularity bonus (also already in the cached Scryfall bulk -- grounded, no EDHREC scraping; NEVER a win-rate proxy, just more transparent points on the same never-comparable scale -- see CUBE_HEURISTIC_* constants for the exact weights), clearly labeled 'heuristic' and never presented as a win rate or a real performance signal. BuildKit Draft Score (the identical empirical-Bayes-shrunk z-score formula as the Draft Ranker -- see DRAFT_SCORE_METHODOLOGY, k=200 games) is computed over ONLY the cube pool's own mean/stdev of whatever REAL priors ((1)/(2)/(3)) were found this run -- a prior card's score is never benchmarked against its original set's baseline, and the empirical-Bayes shrinkage means a thin-sample cross-set card (a few dozen bulk-archive games) and a thick-sample one (thousands) never read the same just because their raw win rates happen to match; heuristic rows never get a draft_score (they carry heuristic_score instead, on its own separate never-comparable scale). Confidence on any (2)/(3) prior row is capped at 'low' no matter how large the borrowed sample was -- a card's performance in a DIFFERENT format/cube/set is real data but not the same signal as its performance in Planar Cube, so it can never earn 'medium'/'high' from a borrowed prior. Heuristic (4) rows always carry 'sample' confidence -- the lowest tier, rendered faded -- since no performance data backs them at all. Only a real (1) live-data row can reach 'medium'/'high' confidence. If very few cards found a real prior this run, the z-score itself can be mathematically undefined (a population of one has no variance) -- those rows fall back to a plain win-rate-floor grade (S>=56%, A>=53%, B>=50.5%, C>=48%, else D -- the same floors as the Limited tier list) so a real recorded win rate is never hidden behind an 'unrated' placeholder either. Uncertainty is communicated ONLY through confidence + fading + the visible basis label -- never by omitting a tier.",
+    "methodology": "IMPORTANT: these are DAY-1 PRIORS, NOT real Planar Cube win rates -- Planar Cube Draft launched on MTG Arena 2026-07-21 and 17lands has not yet accumulated per-card telemetry for it (verified live 2026-07-21: their public 'Cube - Planar' card_ratings endpoint returns HTTP 200 with zero rows). EVERY card in the pool (the constant 200-card planar core + the current week's 360-card rotating planar module, per Wizards' own announcement article) gets a real tier -- we never withhold a grade behind an 'unrated' placeholder. Each card is graded by the BEST available signal, tried in this order, with the basis always shown on the row: (1) REAL live 'Cube - Planar' data, the instant 17lands starts publishing a real win rate for that card -- this module upgrades automatically, since the live fetch is attempted every refresh; (2) a 'Cube - Powered' prior (the prior Arena Powered Cube event, June 2-23 2026) -- REAL historical per-card win rates we aggregate ourselves from 17lands' public bulk S3 game-data archive (one CSV row per completed game, CC BY 4.0, whitelisted in METAHUB-SPEC.md's legal rails), since that event's LIVE endpoint only ever returns near-empty totals for an ended/rotated-out queue; (3) a cross-set prior -- that SAME bulk-archive mechanism applied to each card's own designated historical premier set (its Scryfall oracle-cards representative printing's set, already-cached bulk data, cross-checked against 17lands' real bulk-dataset catalog), so a 20-year-old reprint gets its OWN most recent premier-draft set's real GIH (games-in-hand) win rate rather than a guess -- current-set live data (today's active premier set, reused from the Draft Ranker's own fetch) is tried first per card, the bulk archive fills every set the live queue can't reach; sets covering fewer than a handful of pool cards are skipped (logged, never silently) since the point of a multi-ten-MB archive download isn't worth it for one card -- those cards fall to (4) same as any other real 'no prior data' case; (4) a HEURISTIC prior when none of the above have data -- a transparent, documented (NOT statistical) score from the card's own Scryfall-grounded rarity + mana value + type line PLUS a bucketed `edhrec_rank` popularity bonus (also already in the cached Scryfall bulk -- grounded, no EDHREC scraping; NEVER a win-rate proxy, just more transparent points on the same never-comparable scale -- see CUBE_HEURISTIC_* constants for the exact weights), clearly labeled 'heuristic' and never presented as a win rate or a real performance signal. BuildKit Draft Score (the identical empirical-Bayes-shrunk z-score formula as the Draft Ranker -- see DRAFT_SCORE_METHODOLOGY, k=200 games) is computed over ONLY the cube pool's own mean/stdev of whatever REAL priors ((1)/(2)/(3)) were found this run -- a prior card's score is never benchmarked against its original set's baseline, and the empirical-Bayes shrinkage means a thin-sample cross-set card (a few dozen bulk-archive games) and a thick-sample one (thousands) never read the same just because their raw win rates happen to match; heuristic rows never get a draft_score (they carry heuristic_score instead, on its own separate never-comparable scale). Confidence on any (2)/(3) prior row is capped at 'low' no matter how large the borrowed sample was -- a card's performance in a DIFFERENT format/cube/set is real data but not the same signal as its performance in Planar Cube, so it can never earn 'medium'/'high' from a borrowed prior. Heuristic (4) rows always carry 'sample' confidence -- the lowest tier, rendered faded -- since no performance data backs them at all. Only a real (1) live-data row can reach 'medium'/'high' confidence. If very few cards found a real prior this run, the z-score itself can be mathematically undefined (a population of one has no variance) -- those rows fall back to a plain win-rate-floor grade (S>=56%, A>=53%, B>=50.5%, C>=48%, else D -- the same floors as the Limited tier list) so a real recorded win rate is never hidden behind an 'unrated' placeholder either. Uncertainty is communicated ONLY through confidence + fading + the visible basis label -- never by omitting a tier.\n\nDATA COUNTER-OFFENSIVE ADDENDUM (gl-0590): cube.engine_stats is a genuinely independent evidence source, computed by us rather than scraped -- our own Card-Forge rules engine (mtg-forge-shard) plays the 10 real Planar-Cube guild decks (one per two-color pair, built from this same pool under the same heuristic-construction rules used everywhere on this page) against each other in repeated best-of-three round robins, chained across freshly-seeded seed sets exactly like the existing plan-s2..s6 lineage, with every match run TWICE and only promoted to \"rules_engine_verified\" when both runs normalize identically -- a held or non-repeating run earns nothing. Every card in a deck's real decklist is credited with that deck's game wins/losses in every match it plays, so a card's engine_wr is wins/games summed across every credited game from every guild deck that carries it, across every receipted seed set -- computed strictly from receipts, never estimated. A card only earns engine_wr/engine_games/engine_decks on its row, and the \"forge_engine\" basis (rendered \"Engine (N games)\"), once its total credited games clear cube.engine_stats.floor_games; below that floor nothing is shown. forge_engine ONLY ever replaces the \"heuristic\" tier (rarity/CMC/type points, zero real data behind them) -- a row already carrying real 17lands data, a Powered Cube prior, or a cross-set prior keeps that basis exactly as it was, never silently overridden. This is NOT a per-card draft signal: it is a constructed guild-deck win rate shared across every card that deck carries, so a strong deck inflates every card in it the same way any constructed win rate would -- read it as \"this card's deck wins with the Forge AI\", not \"this card is individually strong\" (grade/draft_score/heuristic_score are computed by the real pipeline and are never rewritten by this addendum). Card-Forge is not MTG Arena and its AI may value cards differently than a human drafter. Full match receipts (every run's raw log, hash, and normalized result) are retained in the Forge shard for audit; this payload carries only the aggregated numbers, kept small on purpose.",
     "attribution": [
       "Win rates via 17lands.com public card ratings (CC BY 4.0)",
-      "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
+      "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)",
+      "Card-Forge rules-engine round-robin matches, self-hosted (BuildKit Proving Grounds)"
     ],
     "rows": [
       {
@@ -90880,7 +90881,10 @@
         "mana_cost": "{4}{G}{G}",
         "cmc": 6.0,
         "image_normal": "https://cards.scryfall.io/normal/front/c/0/c0c358b4-5af2-438f-8bd5-beb0ee6b518b.jpg?1783924827",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/c/0/c0c358b4-5af2-438f-8bd5-beb0ee6b518b.jpg?1783924827"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/c/0/c0c358b4-5af2-438f-8bd5-beb0ee6b518b.jpg?1783924827",
+        "engine_wr": 0.5852,
+        "engine_games": 176,
+        "engine_decks": 4
       },
       {
         "sources": [
@@ -90912,7 +90916,10 @@
         "mana_cost": "{1}{W}{W}",
         "cmc": 3.0,
         "image_normal": "https://cards.scryfall.io/normal/front/6/8/68ee92cd-51af-4de5-bcc8-34d0bb2fd398.jpg?1783903707",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/6/8/68ee92cd-51af-4de5-bcc8-34d0bb2fd398.jpg?1783903707"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/6/8/68ee92cd-51af-4de5-bcc8-34d0bb2fd398.jpg?1783903707",
+        "engine_wr": 0.5104,
+        "engine_games": 386,
+        "engine_decks": 4
       },
       {
         "sources": [
@@ -91075,7 +91082,10 @@
         "mana_cost": "{2}{R}{W}",
         "cmc": 4.0,
         "image_normal": "https://cards.scryfall.io/normal/front/7/9/79d01c19-162b-4a12-9e27-18366d95eaa0.jpg?1783903651",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/7/9/79d01c19-162b-4a12-9e27-18366d95eaa0.jpg?1783903651"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/7/9/79d01c19-162b-4a12-9e27-18366d95eaa0.jpg?1783903651",
+        "engine_wr": 0.4386,
+        "engine_games": 57,
+        "engine_decks": 1
       },
       {
         "sources": [
@@ -91107,7 +91117,10 @@
         "mana_cost": "{3}{B}{B}{B}",
         "cmc": 6.0,
         "image_normal": "https://cards.scryfall.io/normal/front/0/7/078933b3-6d82-45f2-94e8-addf54cf1704.jpg?1783912890",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/0/7/078933b3-6d82-45f2-94e8-addf54cf1704.jpg?1783912890"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/0/7/078933b3-6d82-45f2-94e8-addf54cf1704.jpg?1783912890",
+        "engine_wr": 0.4977,
+        "engine_games": 215,
+        "engine_decks": 3
       },
       {
         "sources": [
@@ -91140,7 +91153,10 @@
         "mana_cost": "{2}{B}{R}",
         "cmc": 4.0,
         "image_normal": "https://cards.scryfall.io/normal/front/1/b/1bfac4ab-97f1-448c-8554-42ed03eb5656.jpg?1783924794",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/1/b/1bfac4ab-97f1-448c-8554-42ed03eb5656.jpg?1783924794"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/1/b/1bfac4ab-97f1-448c-8554-42ed03eb5656.jpg?1783924794",
+        "engine_wr": 0.3571,
+        "engine_games": 42,
+        "engine_decks": 1
       },
       {
         "sources": [
@@ -91462,7 +91478,10 @@
         "mana_cost": "{2}{B}{B}",
         "cmc": 4.0,
         "image_normal": "https://cards.scryfall.io/normal/front/4/8/4889c58b-8b84-42af-a56c-e886655aa997.jpg?1783924871",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/4/8/4889c58b-8b84-42af-a56c-e886655aa997.jpg?1783924871"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/4/8/4889c58b-8b84-42af-a56c-e886655aa997.jpg?1783924871",
+        "engine_wr": 0.5576,
+        "engine_games": 217,
+        "engine_decks": 3
       },
       {
         "sources": [
@@ -92074,7 +92093,10 @@
         "mana_cost": "{1}{W}{W}",
         "cmc": 3.0,
         "image_normal": "https://cards.scryfall.io/normal/front/1/d/1de30c12-2011-495a-be25-f7a46b23e142.jpg?1783907131",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/1/d/1de30c12-2011-495a-be25-f7a46b23e142.jpg?1783907131"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/1/d/1de30c12-2011-495a-be25-f7a46b23e142.jpg?1783907131",
+        "engine_wr": 0.5104,
+        "engine_games": 386,
+        "engine_decks": 4
       },
       {
         "sources": [
@@ -92202,7 +92224,10 @@
         "mana_cost": "{B}",
         "cmc": 1.0,
         "image_normal": "https://cards.scryfall.io/normal/front/8/d/8d8e6941-ad6e-4d2f-93c0-be79e75bdf06.jpg?1783925622",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/8/d/8d8e6941-ad6e-4d2f-93c0-be79e75bdf06.jpg?1783925622"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/8/d/8d8e6941-ad6e-4d2f-93c0-be79e75bdf06.jpg?1783925622",
+        "engine_wr": 0.42,
+        "engine_games": 50,
+        "engine_decks": 1
       },
       {
         "sources": [
@@ -92362,7 +92387,10 @@
         "mana_cost": "{2}{B}{B}",
         "cmc": 4.0,
         "image_normal": "https://cards.scryfall.io/normal/front/d/5/d5803b32-4a81-46c2-9b10-3198a709611d.jpg?1783907896",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/d/5/d5803b32-4a81-46c2-9b10-3198a709611d.jpg?1783907896"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/d/5/d5803b32-4a81-46c2-9b10-3198a709611d.jpg?1783907896",
+        "engine_wr": 0.42,
+        "engine_games": 50,
+        "engine_decks": 1
       },
       {
         "sources": [
@@ -92811,7 +92839,10 @@
         "mana_cost": "{4}{G}{G}",
         "cmc": 6.0,
         "image_normal": "https://cards.scryfall.io/normal/front/a/e/ae4f3aaf-3960-48cd-b34b-32e4ae5ae088.jpg?1785161492",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/a/e/ae4f3aaf-3960-48cd-b34b-32e4ae5ae088.jpg?1785161492"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/a/e/ae4f3aaf-3960-48cd-b34b-32e4ae5ae088.jpg?1785161492",
+        "engine_wr": 0.6591,
+        "engine_games": 44,
+        "engine_decks": 1
       },
       {
         "sources": [
@@ -92971,7 +93002,10 @@
         "mana_cost": "{2}{W}{W}",
         "cmc": 4.0,
         "image_normal": "https://cards.scryfall.io/normal/front/9/6/96e84bdc-8a9a-4c58-ba8b-9f052fd60069.jpg?1783909086",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/9/6/96e84bdc-8a9a-4c58-ba8b-9f052fd60069.jpg?1783909086"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/9/6/96e84bdc-8a9a-4c58-ba8b-9f052fd60069.jpg?1783909086",
+        "engine_wr": 0.4791,
+        "engine_games": 263,
+        "engine_decks": 3
       },
       {
         "sources": [
@@ -93163,7 +93197,10 @@
         "mana_cost": "{2}{W}",
         "cmc": 3.0,
         "image_normal": "https://cards.scryfall.io/normal/front/3/e/3eeef24b-b937-408e-a32e-1a546d3e7b0f.jpg?1783925665",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/3/e/3eeef24b-b937-408e-a32e-1a546d3e7b0f.jpg?1783925665"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/3/e/3eeef24b-b937-408e-a32e-1a546d3e7b0f.jpg?1783925665",
+        "engine_wr": 0.4503,
+        "engine_games": 151,
+        "engine_decks": 1
       },
       {
         "sources": [
@@ -93390,7 +93427,10 @@
         "mana_cost": "{2}{U}{R}",
         "cmc": 4.0,
         "image_normal": "https://cards.scryfall.io/normal/front/0/9/0957c90f-e10d-40f8-a4be-9e9ef623dd43.jpg?1783907861",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/0/9/0957c90f-e10d-40f8-a4be-9e9ef623dd43.jpg?1783907861"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/0/9/0957c90f-e10d-40f8-a4be-9e9ef623dd43.jpg?1783907861",
+        "engine_wr": 0.4222,
+        "engine_games": 45,
+        "engine_decks": 1
       },
       {
         "sources": [
@@ -93422,7 +93462,10 @@
         "mana_cost": "{3}{G}{G}",
         "cmc": 5.0,
         "image_normal": "https://cards.scryfall.io/normal/front/7/6/76610e6e-b60f-494f-bb11-68371eb494f2.jpg?1783909460",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/7/6/76610e6e-b60f-494f-bb11-68371eb494f2.jpg?1783909460"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/7/6/76610e6e-b60f-494f-bb11-68371eb494f2.jpg?1783909460",
+        "engine_wr": 0.5852,
+        "engine_games": 176,
+        "engine_decks": 4
       },
       {
         "sources": [
@@ -93614,7 +93657,10 @@
         "mana_cost": "{2}{W}",
         "cmc": 3.0,
         "image_normal": "https://cards.scryfall.io/normal/front/c/4/c45f11cd-a0aa-4d14-aa21-57f0969f3e2b.jpg?1783905999",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/c/4/c45f11cd-a0aa-4d14-aa21-57f0969f3e2b.jpg?1783905999"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/c/4/c45f11cd-a0aa-4d14-aa21-57f0969f3e2b.jpg?1783905999",
+        "engine_wr": 0.5104,
+        "engine_games": 386,
+        "engine_decks": 4
       },
       {
         "sources": [
@@ -93742,7 +93788,10 @@
         "mana_cost": "{1}{U}{U}",
         "cmc": 3.0,
         "image_normal": "https://cards.scryfall.io/normal/front/5/4/5417022e-0f07-4c39-8f60-b2dfc538d519.jpg?1783925102",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/5/4/5417022e-0f07-4c39-8f60-b2dfc538d519.jpg?1783925102"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/5/4/5417022e-0f07-4c39-8f60-b2dfc538d519.jpg?1783925102",
+        "engine_wr": 0.4662,
+        "engine_games": 133,
+        "engine_decks": 3
       },
       {
         "sources": [
@@ -93935,7 +93984,10 @@
         "mana_cost": "{1}{R}",
         "cmc": 2.0,
         "image_normal": "https://cards.scryfall.io/normal/front/7/9/7956ae00-8f0c-48f0-8110-19ff53863876.jpg?1783909473",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/7/9/7956ae00-8f0c-48f0-8110-19ff53863876.jpg?1783909473"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/7/9/7956ae00-8f0c-48f0-8110-19ff53863876.jpg?1783909473",
+        "engine_wr": 0.4468,
+        "engine_games": 141,
+        "engine_decks": 3
       },
       {
         "sources": [
@@ -94159,7 +94211,10 @@
         "mana_cost": "{1}{B}",
         "cmc": 2.0,
         "image_normal": "https://cards.scryfall.io/normal/front/c/c/cc0c2bab-4392-4e7b-9d14-2901f4ffbae8.jpg?1783903787",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/c/c/cc0c2bab-4392-4e7b-9d14-2901f4ffbae8.jpg?1783903787"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/c/c/cc0c2bab-4392-4e7b-9d14-2901f4ffbae8.jpg?1783903787",
+        "engine_wr": 0.5251,
+        "engine_games": 259,
+        "engine_decks": 4
       },
       {
         "sources": [
@@ -94352,7 +94407,10 @@
         "mana_cost": "{2}{W}{W}",
         "cmc": 4.0,
         "image_normal": "https://cards.scryfall.io/normal/front/c/0/c00731eb-69fe-42f3-9919-66a4cdec00f7.jpg?1783924926",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/c/0/c00731eb-69fe-42f3-9919-66a4cdec00f7.jpg?1783924926"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/c/0/c00731eb-69fe-42f3-9919-66a4cdec00f7.jpg?1783924926",
+        "engine_wr": 0.5104,
+        "engine_games": 386,
+        "engine_decks": 4
       },
       {
         "sources": [
@@ -94543,7 +94601,10 @@
         "mana_cost": "{R}",
         "cmc": 1.0,
         "image_normal": "https://cards.scryfall.io/normal/front/2/1/2105a0d9-ea2e-4ffc-be08-424b5617205d.jpg?1783918467",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/2/1/2105a0d9-ea2e-4ffc-be08-424b5617205d.jpg?1783918467"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/2/1/2105a0d9-ea2e-4ffc-be08-424b5617205d.jpg?1783918467",
+        "engine_wr": 0.4222,
+        "engine_games": 45,
+        "engine_decks": 1
       },
       {
         "sources": [
@@ -94736,7 +94797,10 @@
         "mana_cost": "{3}{R}{R}",
         "cmc": 5.0,
         "image_normal": "https://cards.scryfall.io/normal/front/2/0/20ded7af-8086-465e-a980-3099217d324c.jpg?1783925604",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/2/0/20ded7af-8086-465e-a980-3099217d324c.jpg?1783925604"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/2/0/20ded7af-8086-465e-a980-3099217d324c.jpg?1783925604",
+        "engine_wr": 0.4206,
+        "engine_games": 126,
+        "engine_decks": 3
       },
       {
         "sources": [
@@ -94961,7 +95025,10 @@
         "mana_cost": "{1}{W}",
         "cmc": 2.0,
         "image_normal": "https://cards.scryfall.io/normal/front/7/c/7cd21530-ca72-4986-a0f2-142b9f23c413.jpg?1783908185",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/7/c/7cd21530-ca72-4986-a0f2-142b9f23c413.jpg?1783908185"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/7/c/7cd21530-ca72-4986-a0f2-142b9f23c413.jpg?1783908185",
+        "engine_wr": 0.4903,
+        "engine_games": 206,
+        "engine_decks": 2
       },
       {
         "sources": [
@@ -94993,7 +95060,10 @@
         "mana_cost": "{3}{W}{W}",
         "cmc": 5.0,
         "image_normal": "https://cards.scryfall.io/normal/front/7/e/7e176daf-fc47-40da-bfbf-a6cdfdc01500.jpg?1783925120",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/7/e/7e176daf-fc47-40da-bfbf-a6cdfdc01500.jpg?1783925120"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/7/e/7e176daf-fc47-40da-bfbf-a6cdfdc01500.jpg?1783925120",
+        "engine_wr": 0.5228,
+        "engine_games": 329,
+        "engine_decks": 3
       },
       {
         "sources": [
@@ -95185,7 +95255,10 @@
         "mana_cost": "{R}",
         "cmc": 1.0,
         "image_normal": "https://cards.scryfall.io/normal/front/b/c/bce25bcd-5890-4f5d-92de-d6d754144ebf.jpg?1783903962",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/b/c/bce25bcd-5890-4f5d-92de-d6d754144ebf.jpg?1783903962"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/b/c/bce25bcd-5890-4f5d-92de-d6d754144ebf.jpg?1783903962",
+        "engine_wr": 0.4468,
+        "engine_games": 141,
+        "engine_decks": 3
       },
       {
         "sources": [
@@ -95671,7 +95744,10 @@
         "mana_cost": "{1}{B}",
         "cmc": 2.0,
         "image_normal": "https://cards.scryfall.io/normal/front/5/d/5da14d86-0780-4821-a799-96f64b377df4.jpg?1783911284",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/5/d/5da14d86-0780-4821-a799-96f64b377df4.jpg?1783911284"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/5/d/5da14d86-0780-4821-a799-96f64b377df4.jpg?1783911284",
+        "engine_wr": 0.5251,
+        "engine_games": 259,
+        "engine_decks": 4
       },
       {
         "sources": [
@@ -96460,7 +96536,10 @@
         "mana_cost": "{3}{U}{U}",
         "cmc": 5.0,
         "image_normal": "https://cards.scryfall.io/normal/front/3/3/334b5018-2da9-49f1-9d09-83d312ecfb02.jpg?1783909121",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/3/3/334b5018-2da9-49f1-9d09-83d312ecfb02.jpg?1783909121"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/3/3/334b5018-2da9-49f1-9d09-83d312ecfb02.jpg?1783909121",
+        "engine_wr": 0.4577,
+        "engine_games": 284,
+        "engine_decks": 4
       },
       {
         "sources": [
@@ -96712,7 +96791,10 @@
         "mana_cost": "{G}",
         "cmc": 1.0,
         "image_normal": "https://cards.scryfall.io/normal/front/4/9/492c2f9a-51e7-4e0f-9899-23bf43ea988b.jpg?1783903230",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/4/9/492c2f9a-51e7-4e0f-9899-23bf43ea988b.jpg?1783903230"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/4/9/492c2f9a-51e7-4e0f-9899-23bf43ea988b.jpg?1783903230",
+        "engine_wr": 0.5852,
+        "engine_games": 176,
+        "engine_decks": 4
       },
       {
         "sources": [
@@ -97159,7 +97241,10 @@
         "mana_cost": "{2}{U}",
         "cmc": 3.0,
         "image_normal": "https://cards.scryfall.io/normal/front/0/4/04e02176-16ee-4676-8b33-cedebdb18cbc.jpg?1783906045",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/0/4/04e02176-16ee-4676-8b33-cedebdb18cbc.jpg?1783906045"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/0/4/04e02176-16ee-4676-8b33-cedebdb18cbc.jpg?1783906045",
+        "engine_wr": 0.4662,
+        "engine_games": 133,
+        "engine_decks": 3
       },
       {
         "sources": [
@@ -97611,7 +97696,10 @@
         "mana_cost": "{1}{R}",
         "cmc": 2.0,
         "image_normal": "https://cards.scryfall.io/normal/front/3/4/34e2cc5c-6c5c-4dc5-bf04-6a462dd3644b.jpg?1783907958",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/3/4/34e2cc5c-6c5c-4dc5-bf04-6a462dd3644b.jpg?1783907958"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/3/4/34e2cc5c-6c5c-4dc5-bf04-6a462dd3644b.jpg?1783907958",
+        "engine_wr": 0.4262,
+        "engine_games": 183,
+        "engine_decks": 4
       },
       {
         "sources": [
@@ -97870,7 +97958,10 @@
         "mana_cost": "{1}{B}",
         "cmc": 2.0,
         "image_normal": "https://cards.scryfall.io/normal/front/c/5/c5333556-eea2-41ae-833e-007b9d540700.jpg?1783907094",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/c/5/c5333556-eea2-41ae-833e-007b9d540700.jpg?1783907094"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/c/5/c5333556-eea2-41ae-833e-007b9d540700.jpg?1783907094",
+        "engine_wr": 0.5576,
+        "engine_games": 217,
+        "engine_decks": 3
       },
       {
         "sources": [
@@ -98255,7 +98346,10 @@
         "mana_cost": "{B}",
         "cmc": 1.0,
         "image_normal": "https://cards.scryfall.io/normal/front/d/d/dd03651e-ada0-41dc-8722-0eba476943e3.jpg?1783924872",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/d/d/dd03651e-ada0-41dc-8722-0eba476943e3.jpg?1783924872"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/d/d/dd03651e-ada0-41dc-8722-0eba476943e3.jpg?1783924872",
+        "engine_wr": 0.5251,
+        "engine_games": 259,
+        "engine_decks": 4
       },
       {
         "sources": [
@@ -98582,7 +98676,10 @@
         "mana_cost": "{B}",
         "cmc": 1.0,
         "image_normal": "https://cards.scryfall.io/normal/front/1/e/1ee98955-4c47-4d45-9377-608dfa755337.jpg?1783926865",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/1/e/1ee98955-4c47-4d45-9377-608dfa755337.jpg?1783926865"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/1/e/1ee98955-4c47-4d45-9377-608dfa755337.jpg?1783926865",
+        "engine_wr": 0.5251,
+        "engine_games": 259,
+        "engine_decks": 4
       },
       {
         "sources": [
@@ -98713,7 +98810,10 @@
         "mana_cost": "{2}{G}{G}",
         "cmc": 4.0,
         "image_normal": "https://cards.scryfall.io/normal/front/3/9/39e83502-2ffd-4169-94e3-116701323ed5.jpg?1783909453",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/3/9/39e83502-2ffd-4169-94e3-116701323ed5.jpg?1783909453"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/3/9/39e83502-2ffd-4169-94e3-116701323ed5.jpg?1783909453",
+        "engine_wr": 0.6,
+        "engine_games": 55,
+        "engine_decks": 1
       },
       {
         "sources": [
@@ -99100,7 +99200,10 @@
         "mana_cost": "{G}",
         "cmc": 1.0,
         "image_normal": "https://cards.scryfall.io/normal/front/a/3/a390a7df-b8da-41aa-93e5-2c0db938a27e.jpg?1783925334",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/a/3/a390a7df-b8da-41aa-93e5-2c0db938a27e.jpg?1783925334"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/a/3/a390a7df-b8da-41aa-93e5-2c0db938a27e.jpg?1783925334",
+        "engine_wr": 0.6,
+        "engine_games": 55,
+        "engine_decks": 1
       },
       {
         "sources": [
@@ -99231,7 +99334,10 @@
         "mana_cost": "{3}{B}",
         "cmc": 4.0,
         "image_normal": "https://cards.scryfall.io/normal/front/a/0/a0c8259c-055e-4bff-b945-c0ecb057a8f0.jpg?1783907897",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/a/0/a0c8259c-055e-4bff-b945-c0ecb057a8f0.jpg?1783907897"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/a/0/a0c8259c-055e-4bff-b945-c0ecb057a8f0.jpg?1783907897",
+        "engine_wr": 0.5576,
+        "engine_games": 217,
+        "engine_decks": 3
       },
       {
         "sources": [
@@ -99394,7 +99500,10 @@
         "mana_cost": "{2}{R}{R}",
         "cmc": 4.0,
         "image_normal": "https://cards.scryfall.io/normal/front/4/0/40463be5-89e2-410b-9a4b-770f70d14293.jpg?1783911273",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/4/0/40463be5-89e2-410b-9a4b-770f70d14293.jpg?1783911273"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/4/0/40463be5-89e2-410b-9a4b-770f70d14293.jpg?1783911273",
+        "engine_wr": 0.4262,
+        "engine_games": 183,
+        "engine_decks": 4
       },
       {
         "sources": [
@@ -99424,7 +99533,10 @@
         "mana_cost": "{1}",
         "cmc": 1.0,
         "image_normal": "https://cards.scryfall.io/normal/front/c/2/c2e8d492-2c67-410b-b556-c157a14c4cec.jpg?1783927757",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/c/2/c2e8d492-2c67-410b-b556-c157a14c4cec.jpg?1783927757"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/c/2/c2e8d492-2c67-410b-b556-c157a14c4cec.jpg?1783927757",
+        "engine_wr": 0.4762,
+        "engine_games": 189,
+        "engine_decks": 2
       },
       {
         "sources": [
@@ -99456,7 +99568,10 @@
         "mana_cost": "{1}{G}",
         "cmc": 2.0,
         "image_normal": "https://cards.scryfall.io/normal/front/8/9/89b39293-6f57-4294-85fc-c718bdbb4d40.jpg?1783918019",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/8/9/89b39293-6f57-4294-85fc-c718bdbb4d40.jpg?1783918019"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/8/9/89b39293-6f57-4294-85fc-c718bdbb4d40.jpg?1783918019",
+        "engine_wr": 0.5914,
+        "engine_games": 93,
+        "engine_decks": 2
       },
       {
         "sources": [
@@ -100427,16 +100542,16 @@
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 123,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (123 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 4.425,
+        "heuristic_score": null,
         "grade": "S",
         "card": "Anguished Unmaking",
         "pools": [
@@ -100453,7 +100568,10 @@
         "mana_cost": "{1}{W}{B}",
         "cmc": 3.0,
         "image_normal": "https://cards.scryfall.io/normal/front/4/0/407183c6-c962-4f8c-867e-abc309b6c573.jpg?1783903759",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/4/0/407183c6-c962-4f8c-867e-abc309b6c573.jpg?1783903759"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/4/0/407183c6-c962-4f8c-867e-abc309b6c573.jpg?1783903759",
+        "engine_wr": 0.5772,
+        "engine_games": 123,
+        "engine_decks": 1
       },
       {
         "sources": [
@@ -101031,16 +101149,16 @@
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 259,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (259 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 3.775,
+        "heuristic_score": null,
         "grade": "S",
         "card": "Bloodline Keeper",
         "pools": [
@@ -101056,22 +101174,25 @@
         "mana_cost": "{2}{B}{B}",
         "cmc": 4.0,
         "image_normal": "https://cards.scryfall.io/normal/front/6/0/60658907-dd63-478d-a66a-123e4e9d2a00.jpg?1783908156",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/6/0/60658907-dd63-478d-a66a-123e4e9d2a00.jpg?1783908156"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/6/0/60658907-dd63-478d-a66a-123e4e9d2a00.jpg?1783908156",
+        "engine_wr": 0.5251,
+        "engine_games": 259,
+        "engine_decks": 4
       },
       {
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 55,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (55 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 3.775,
+        "heuristic_score": null,
         "grade": "S",
         "card": "Gisela, the Broken Blade",
         "pools": [
@@ -101087,7 +101208,10 @@
         "mana_cost": "{2}{W}{W}",
         "cmc": 4.0,
         "image_normal": "https://cards.scryfall.io/normal/front/0/4/04506bad-3856-4184-8dda-941ded60f41a.jpg?1783908181",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/0/4/04506bad-3856-4184-8dda-941ded60f41a.jpg?1783908181"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/0/4/04506bad-3856-4184-8dda-941ded60f41a.jpg?1783908181",
+        "engine_wr": 0.6,
+        "engine_games": 55,
+        "engine_decks": 1
       },
       {
         "sources": [
@@ -101281,16 +101405,16 @@
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 94,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (94 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 3.625,
+        "heuristic_score": null,
         "grade": "S",
         "card": "Doom Whisperer",
         "pools": [
@@ -101306,7 +101430,10 @@
         "mana_cost": "{3}{B}{B}",
         "cmc": 5.0,
         "image_normal": "https://cards.scryfall.io/normal/front/e/8/e8aabcaf-0968-402f-bc9f-289756e4d4b7.jpg?1783913007",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/e/8/e8aabcaf-0968-402f-bc9f-289756e4d4b7.jpg?1783913007"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/e/8/e8aabcaf-0968-402f-bc9f-289756e4d4b7.jpg?1783913007",
+        "engine_wr": 0.5319,
+        "engine_games": 94,
+        "engine_decks": 2
       },
       {
         "sources": [
@@ -101471,16 +101598,16 @@
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 102,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (102 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 3.425,
+        "heuristic_score": null,
         "grade": "A",
         "card": "Bloodthirsty Adversary",
         "pools": [
@@ -101496,7 +101623,10 @@
         "mana_cost": "{1}{R}",
         "cmc": 2.0,
         "image_normal": "https://cards.scryfall.io/normal/front/1/d/1d6d5c4b-01ec-407f-b3b6-854ab5127bdc.jpg?1783911923",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/1/d/1d6d5c4b-01ec-407f-b3b6-854ab5127bdc.jpg?1783911923"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/1/d/1d6d5c4b-01ec-407f-b3b6-854ab5127bdc.jpg?1783911923",
+        "engine_wr": 0.4314,
+        "engine_games": 102,
+        "engine_decks": 2
       },
       {
         "sources": [
@@ -101881,16 +102011,16 @@
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 57,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (57 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 3.375,
+        "heuristic_score": null,
         "grade": "A",
         "card": "Archangel Avacyn",
         "pools": [
@@ -101907,22 +102037,25 @@
         "mana_cost": "{3}{W}{W}",
         "cmc": 5.0,
         "image_normal": "https://cards.scryfall.io/normal/front/f/e/fe675f03-cbb5-4177-b7d7-64a30260ee2a.jpg?1783908191",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/f/e/fe675f03-cbb5-4177-b7d7-64a30260ee2a.jpg?1783908191"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/f/e/fe675f03-cbb5-4177-b7d7-64a30260ee2a.jpg?1783908191",
+        "engine_wr": 0.4386,
+        "engine_games": 57,
+        "engine_decks": 1
       },
       {
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 386,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (386 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 3.375,
+        "heuristic_score": null,
         "grade": "A",
         "card": "Baneslayer Angel",
         "pools": [
@@ -101938,7 +102071,10 @@
         "mana_cost": "{3}{W}{W}",
         "cmc": 5.0,
         "image_normal": "https://cards.scryfall.io/normal/front/4/b/4bd3014b-94bb-4a9f-92cf-239a2dcc7e97.jpg?1783930746",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/4/b/4bd3014b-94bb-4a9f-92cf-239a2dcc7e97.jpg?1783930746"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/4/b/4bd3014b-94bb-4a9f-92cf-239a2dcc7e97.jpg?1783930746",
+        "engine_wr": 0.5104,
+        "engine_games": 386,
+        "engine_decks": 4
       },
       {
         "sources": [
@@ -102411,16 +102547,16 @@
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 386,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (386 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 2.975,
+        "heuristic_score": null,
         "grade": "A",
         "card": "Descend upon the Sinful",
         "pools": [
@@ -102436,22 +102572,25 @@
         "mana_cost": "{4}{W}{W}",
         "cmc": 6.0,
         "image_normal": "https://cards.scryfall.io/normal/front/8/3/83245e11-a020-4d81-9d83-e1505f1d125e.jpg?1783911947",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/8/3/83245e11-a020-4d81-9d83-e1505f1d125e.jpg?1783911947"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/8/3/83245e11-a020-4d81-9d83-e1505f1d125e.jpg?1783911947",
+        "engine_wr": 0.5104,
+        "engine_games": 386,
+        "engine_decks": 4
       },
       {
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 284,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (284 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 2.975,
+        "heuristic_score": null,
         "grade": "A",
         "card": "Dream Eater",
         "pools": [
@@ -102467,7 +102606,10 @@
         "mana_cost": "{4}{U}{U}",
         "cmc": 6.0,
         "image_normal": "https://cards.scryfall.io/normal/front/c/7/c721d449-fc77-4d86-8baf-158181e37087.jpg?1783909628",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/c/7/c721d449-fc77-4d86-8baf-158181e37087.jpg?1783909628"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/c/7/c721d449-fc77-4d86-8baf-158181e37087.jpg?1783909628",
+        "engine_wr": 0.4577,
+        "engine_games": 284,
+        "engine_decks": 4
       },
       {
         "sources": [
@@ -102504,16 +102646,16 @@
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 176,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (176 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 2.925,
+        "heuristic_score": null,
         "grade": "A",
         "card": "Augur of Autumn",
         "pools": [
@@ -102529,22 +102671,25 @@
         "mana_cost": "{1}{G}{G}",
         "cmc": 3.0,
         "image_normal": "https://cards.scryfall.io/normal/front/c/0/c09f0e1b-c13b-4e53-ab0e-c8b8a6151d82.jpg?1783906036",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/c/0/c09f0e1b-c13b-4e53-ab0e-c8b8a6151d82.jpg?1783906036"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/c/0/c09f0e1b-c13b-4e53-ab0e-c8b8a6151d82.jpg?1783906036",
+        "engine_wr": 0.5852,
+        "engine_games": 176,
+        "engine_decks": 4
       },
       {
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 173,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (173 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 2.925,
+        "heuristic_score": null,
         "grade": "A",
         "card": "Blood Artist",
         "pools": [
@@ -102560,7 +102705,10 @@
         "mana_cost": "{1}{B}",
         "cmc": 2.0,
         "image_normal": "https://cards.scryfall.io/normal/front/b/5/b5275d76-2947-4219-be21-614c7421614a.jpg?1783903786",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/b/5/b5275d76-2947-4219-be21-614c7421614a.jpg?1783903786"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/b/5/b5275d76-2947-4219-be21-614c7421614a.jpg?1783903786",
+        "engine_wr": 0.5318,
+        "engine_games": 173,
+        "engine_decks": 2
       },
       {
         "sources": [
@@ -103030,16 +103178,16 @@
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 183,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (183 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 2.675,
+        "heuristic_score": null,
         "grade": "A",
         "card": "Anger of the Gods",
         "pools": [
@@ -103055,22 +103203,25 @@
         "mana_cost": "{1}{R}{R}",
         "cmc": 3.0,
         "image_normal": "https://cards.scryfall.io/normal/front/f/9/f92088c2-74c2-4e63-8a54-83d39f9d6ad6.jpg?1783921892",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/f/9/f92088c2-74c2-4e63-8a54-83d39f9d6ad6.jpg?1783921892"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/f/9/f92088c2-74c2-4e63-8a54-83d39f9d6ad6.jpg?1783921892",
+        "engine_wr": 0.4262,
+        "engine_games": 183,
+        "engine_decks": 4
       },
       {
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 183,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (183 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 2.675,
+        "heuristic_score": null,
         "grade": "A",
         "card": "Anje's Ravager",
         "pools": [
@@ -103086,22 +103237,25 @@
         "mana_cost": "{2}{R}",
         "cmc": 3.0,
         "image_normal": "https://cards.scryfall.io/normal/front/4/2/4230560e-51b2-459d-86b9-8509a8b5b99d.jpg?1783924951",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/4/2/4230560e-51b2-459d-86b9-8509a8b5b99d.jpg?1783924951"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/4/2/4230560e-51b2-459d-86b9-8509a8b5b99d.jpg?1783924951",
+        "engine_wr": 0.4262,
+        "engine_games": 183,
+        "engine_decks": 4
       },
       {
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 151,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (151 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 2.675,
+        "heuristic_score": null,
         "grade": "A",
         "card": "Bygone Bishop",
         "pools": [
@@ -103117,7 +103271,10 @@
         "mana_cost": "{2}{W}",
         "cmc": 3.0,
         "image_normal": "https://cards.scryfall.io/normal/front/c/f/cf879fc7-9f84-40a7-a7be-9cc98a720af5.jpg?1783922492",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/c/f/cf879fc7-9f84-40a7-a7be-9cc98a720af5.jpg?1783922492"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/c/f/cf879fc7-9f84-40a7-a7be-9cc98a720af5.jpg?1783922492",
+        "engine_wr": 0.4503,
+        "engine_games": 151,
+        "engine_decks": 1
       },
       {
         "sources": [
@@ -103866,16 +104023,16 @@
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 176,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (176 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 2.475,
+        "heuristic_score": null,
         "grade": "B",
         "card": "Kogla, the Titan Ape",
         "pools": [
@@ -103891,7 +104048,10 @@
         "mana_cost": "{3}{G}{G}{G}",
         "cmc": 6.0,
         "image_normal": "https://cards.scryfall.io/normal/front/3/c/3c35ca79-eb72-427a-a8ed-404b2214389a.jpg?1783931034",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/3/c/3c35ca79-eb72-427a-a8ed-404b2214389a.jpg?1783931034"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/3/c/3c35ca79-eb72-427a-a8ed-404b2214389a.jpg?1783931034",
+        "engine_wr": 0.5852,
+        "engine_games": 176,
+        "engine_decks": 4
       },
       {
         "sources": [
@@ -103928,16 +104088,16 @@
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 176,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (176 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 2.425,
+        "heuristic_score": null,
         "grade": "B",
         "card": "Aftermath Analyst",
         "pools": [
@@ -103953,22 +104113,25 @@
         "mana_cost": "{1}{G}",
         "cmc": 2.0,
         "image_normal": "https://cards.scryfall.io/normal/front/6/6/66f135b4-8cb3-4a4e-86ae-81a3cf4b7259.jpg?1783906036",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/6/6/66f135b4-8cb3-4a4e-86ae-81a3cf4b7259.jpg?1783906036"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/6/6/66f135b4-8cb3-4a4e-86ae-81a3cf4b7259.jpg?1783906036",
+        "engine_wr": 0.5852,
+        "engine_games": 176,
+        "engine_decks": 4
       },
       {
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 141,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (141 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 2.425,
+        "heuristic_score": null,
         "grade": "B",
         "card": "Avacyn's Judgment",
         "pools": [
@@ -103984,22 +104147,25 @@
         "mana_cost": "{1}{R}",
         "cmc": 2.0,
         "image_normal": "https://cards.scryfall.io/normal/front/2/6/2642eb44-becf-4e99-934f-7241fcc32dee.jpg?1783924949",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/2/6/2642eb44-becf-4e99-934f-7241fcc32dee.jpg?1783924949"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/2/6/2642eb44-becf-4e99-934f-7241fcc32dee.jpg?1783924949",
+        "engine_wr": 0.4468,
+        "engine_games": 141,
+        "engine_decks": 3
       },
       {
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 136,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (136 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 2.425,
+        "heuristic_score": null,
         "grade": "B",
         "card": "Blood Operative",
         "pools": [
@@ -104015,22 +104181,25 @@
         "mana_cost": "{1}{B}{B}",
         "cmc": 3.0,
         "image_normal": "https://cards.scryfall.io/normal/front/0/0/000ac9e5-3c95-4e87-9424-109e2eea6b45.jpg?1783934178",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/0/0/000ac9e5-3c95-4e87-9424-109e2eea6b45.jpg?1783934178"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/0/0/000ac9e5-3c95-4e87-9424-109e2eea6b45.jpg?1783934178",
+        "engine_wr": 0.4779,
+        "engine_games": 136,
+        "engine_decks": 3
       },
       {
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 176,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (176 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 2.425,
+        "heuristic_score": null,
         "grade": "B",
         "card": "Boon Satyr",
         "pools": [
@@ -104046,22 +104215,25 @@
         "mana_cost": "{1}{G}{G}",
         "cmc": 3.0,
         "image_normal": "https://cards.scryfall.io/normal/front/4/7/477a30f3-3cbe-42a5-9fae-fe5885a8cf25.jpg?1783934292",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/4/7/477a30f3-3cbe-42a5-9fae-fe5885a8cf25.jpg?1783934292"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/4/7/477a30f3-3cbe-42a5-9fae-fe5885a8cf25.jpg?1783934292",
+        "engine_wr": 0.5852,
+        "engine_games": 176,
+        "engine_decks": 4
       },
       {
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 94,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (94 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 2.425,
+        "heuristic_score": null,
         "grade": "B",
         "card": "Cackling Observer",
         "pools": [
@@ -104077,22 +104249,25 @@
         "mana_cost": "{1}{B}{B}",
         "cmc": 3.0,
         "image_normal": "https://cards.scryfall.io/normal/front/7/b/7b2d29d6-1f2c-451c-a00b-73c1776849a5.jpg?1783912439",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/7/b/7b2d29d6-1f2c-451c-a00b-73c1776849a5.jpg?1783912439"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/7/b/7b2d29d6-1f2c-451c-a00b-73c1776849a5.jpg?1783912439",
+        "engine_wr": 0.5319,
+        "engine_games": 94,
+        "engine_decks": 2
       },
       {
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 189,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (189 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 2.425,
+        "heuristic_score": null,
         "grade": "B",
         "card": "Clone Crafter",
         "pools": [
@@ -104108,7 +104283,10 @@
         "mana_cost": "{1}{U}",
         "cmc": 2.0,
         "image_normal": "https://cards.scryfall.io/normal/front/7/9/79e9c05e-964f-488c-a2b1-309044643ae1.jpg?1783924557",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/7/9/79e9c05e-964f-488c-a2b1-309044643ae1.jpg?1783924557"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/7/9/79e9c05e-964f-488c-a2b1-309044643ae1.jpg?1783924557",
+        "engine_wr": 0.4762,
+        "engine_games": 189,
+        "engine_decks": 2
       },
       {
         "sources": [
@@ -104582,16 +104760,16 @@
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 136,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (136 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 2.375,
+        "heuristic_score": null,
         "grade": "B",
         "card": "Champion of Dusk",
         "pools": [
@@ -104607,7 +104785,10 @@
         "mana_cost": "{3}{B}{B}",
         "cmc": 5.0,
         "image_normal": "https://cards.scryfall.io/normal/front/5/f/5fa1674a-86cc-4fdf-8671-860b2bf5043d.jpg?1783913877",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/5/f/5fa1674a-86cc-4fdf-8671-860b2bf5043d.jpg?1783913877"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/5/f/5fa1674a-86cc-4fdf-8671-860b2bf5043d.jpg?1783913877",
+        "engine_wr": 0.4779,
+        "engine_games": 136,
+        "engine_decks": 3
       },
       {
         "sources": [
@@ -104644,16 +104825,16 @@
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 123,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (123 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 2.325,
+        "heuristic_score": null,
         "grade": "B",
         "card": "Bruna, the Fading Light",
         "pools": [
@@ -104669,22 +104850,25 @@
         "mana_cost": "{5}{W}{W}",
         "cmc": 7.0,
         "image_normal": "https://cards.scryfall.io/normal/front/6/f/6fccdb60-5fce-4a6e-a709-b986f9a4b653.jpg?1783908189",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/6/f/6fccdb60-5fce-4a6e-a709-b986f9a4b653.jpg?1783908189"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/6/f/6fccdb60-5fce-4a6e-a709-b986f9a4b653.jpg?1783908189",
+        "engine_wr": 0.5772,
+        "engine_games": 123,
+        "engine_decks": 1
       },
       {
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 42,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (42 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 2.275,
+        "heuristic_score": null,
         "grade": "B",
         "card": "Bloodhall Priest",
         "pools": [
@@ -104701,7 +104885,10 @@
         "mana_cost": "{2}{B}{R}",
         "cmc": 4.0,
         "image_normal": "https://cards.scryfall.io/normal/front/b/4/b4ea5e44-0487-4e72-983a-02d7db26d075.jpg?1783908080",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/b/4/b4ea5e44-0487-4e72-983a-02d7db26d075.jpg?1783908080"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/b/4/b4ea5e44-0487-4e72-983a-02d7db26d075.jpg?1783908080",
+        "engine_wr": 0.3571,
+        "engine_games": 42,
+        "engine_decks": 1
       },
       {
         "sources": [
@@ -104738,16 +104925,16 @@
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 234,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (234 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 2.275,
+        "heuristic_score": null,
         "grade": "B",
         "card": "Dungeon Geists",
         "pools": [
@@ -104763,7 +104950,10 @@
         "mana_cost": "{2}{U}{U}",
         "cmc": 4.0,
         "image_normal": "https://cards.scryfall.io/normal/front/d/3/d3c81fda-c23d-437c-85f0-62d7b492ea32.jpg?1783933011",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/d/3/d3c81fda-c23d-437c-85f0-62d7b492ea32.jpg?1783933011"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/d/3/d3c81fda-c23d-437c-85f0-62d7b492ea32.jpg?1783933011",
+        "engine_wr": 0.4658,
+        "engine_games": 234,
+        "engine_decks": 3
       },
       {
         "sources": [
@@ -105083,16 +105273,16 @@
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 259,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (259 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 2.2249999999999996,
+        "heuristic_score": null,
         "grade": "B",
         "card": "Blighted Nightmare",
         "pools": [
@@ -105108,7 +105298,10 @@
         "mana_cost": "{2}{B}",
         "cmc": 3.0,
         "image_normal": "https://cards.scryfall.io/normal/front/e/8/e81bb6c4-7394-4c5d-8708-7e6071593afd.jpg?1783904259",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/e/8/e81bb6c4-7394-4c5d-8708-7e6071593afd.jpg?1783904259"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/e/8/e81bb6c4-7394-4c5d-8708-7e6071593afd.jpg?1783904259",
+        "engine_wr": 0.5251,
+        "engine_games": 259,
+        "engine_decks": 4
       },
       {
         "sources": [
@@ -105205,16 +105398,16 @@
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 123,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (123 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 2.125,
+        "heuristic_score": null,
         "grade": "B",
         "card": "Cerise, Slayer of Fear",
         "pools": [
@@ -105230,7 +105423,10 @@
         "mana_cost": "{3}{W}{W}",
         "cmc": 5.0,
         "image_normal": "https://cards.scryfall.io/normal/front/6/b/6bae30ba-1402-4a42-8dee-a899150fcc6e.jpg?1783914738",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/6/b/6bae30ba-1402-4a42-8dee-a899150fcc6e.jpg?1783914738"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/6/b/6bae30ba-1402-4a42-8dee-a899150fcc6e.jpg?1783914738",
+        "engine_wr": 0.5772,
+        "engine_games": 123,
+        "engine_decks": 1
       },
       {
         "sources": [
@@ -105453,16 +105649,16 @@
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 183,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (183 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 1.975,
+        "heuristic_score": null,
         "grade": "B",
         "card": "Chomping Mastasaur",
         "pools": [
@@ -105478,22 +105674,25 @@
         "mana_cost": "{4}{R}{R}",
         "cmc": 6.0,
         "image_normal": "https://cards.scryfall.io/normal/front/0/a/0a4db818-47f9-4a4f-a2fa-e617a91475fc.jpg?1783907505",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/0/a/0a4db818-47f9-4a4f-a2fa-e617a91475fc.jpg?1783907505"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/0/a/0a4db818-47f9-4a4f-a2fa-e617a91475fc.jpg?1783907505",
+        "engine_wr": 0.4262,
+        "engine_games": 183,
+        "engine_decks": 4
       },
       {
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 144,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (144 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 1.975,
+        "heuristic_score": null,
         "grade": "B",
         "card": "Markov Enforcer",
         "pools": [
@@ -105509,22 +105708,25 @@
         "mana_cost": "{4}{R}{R}",
         "cmc": 6.0,
         "image_normal": "https://cards.scryfall.io/normal/front/5/9/597bc4ae-335d-4d1d-8a57-530291abc540.jpg?1783924998",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/5/9/597bc4ae-335d-4d1d-8a57-530291abc540.jpg?1783924998"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/5/9/597bc4ae-335d-4d1d-8a57-530291abc540.jpg?1783924998",
+        "engine_wr": 0.4097,
+        "engine_games": 144,
+        "engine_decks": 3
       },
       {
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 126,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (126 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 1.925,
+        "heuristic_score": null,
         "grade": "B",
         "card": "Brimstone Volley",
         "pools": [
@@ -105540,22 +105742,25 @@
         "mana_cost": "{2}{R}",
         "cmc": 3.0,
         "image_normal": "https://cards.scryfall.io/normal/front/9/4/94fa0577-f02a-4d24-835b-fef8d849b37a.jpg?1783930170",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/9/4/94fa0577-f02a-4d24-835b-fef8d849b37a.jpg?1783930170"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/9/4/94fa0577-f02a-4d24-835b-fef8d849b37a.jpg?1783930170",
+        "engine_wr": 0.4206,
+        "engine_games": 126,
+        "engine_decks": 3
       },
       {
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 189,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (189 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 1.925,
+        "heuristic_score": null,
         "grade": "B",
         "card": "Chart a Course",
         "pools": [
@@ -105571,7 +105776,10 @@
         "mana_cost": "{1}{U}",
         "cmc": 2.0,
         "image_normal": "https://cards.scryfall.io/normal/front/7/5/7599d459-fe71-48f4-8c65-0f519bb63a68.jpg?1783908936",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/7/5/7599d459-fe71-48f4-8c65-0f519bb63a68.jpg?1783908936"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/7/5/7599d459-fe71-48f4-8c65-0f519bb63a68.jpg?1783908936",
+        "engine_wr": 0.4762,
+        "engine_games": 189,
+        "engine_decks": 2
       },
       {
         "sources": [
@@ -105918,16 +106126,16 @@
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 55,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (55 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 1.725,
+        "heuristic_score": null,
         "grade": "B",
         "card": "Coldsteel Heart",
         "pools": [
@@ -105941,7 +106149,10 @@
         "mana_cost": "{2}",
         "cmc": 2.0,
         "image_normal": "https://cards.scryfall.io/normal/front/b/2/b2548ad2-3c62-4ed1-899c-1002b46cdd8f.jpg?1783921794",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/b/2/b2548ad2-3c62-4ed1-899c-1002b46cdd8f.jpg?1783921794"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/b/2/b2548ad2-3c62-4ed1-899c-1002b46cdd8f.jpg?1783921794",
+        "engine_wr": 0.6,
+        "engine_games": 55,
+        "engine_decks": 1
       },
       {
         "sources": [
@@ -105978,16 +106189,16 @@
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 259,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (259 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 1.675,
+        "heuristic_score": null,
         "grade": "B",
         "card": "Asylum Visitor",
         "pools": [
@@ -106003,7 +106214,10 @@
         "mana_cost": "{1}{B}",
         "cmc": 2.0,
         "image_normal": "https://cards.scryfall.io/normal/front/0/2/02046824-6c48-40bb-9f0b-4fd280c6ed85.jpg?1783908149",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/0/2/02046824-6c48-40bb-9f0b-4fd280c6ed85.jpg?1783908149"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/0/2/02046824-6c48-40bb-9f0b-4fd280c6ed85.jpg?1783908149",
+        "engine_wr": 0.5251,
+        "engine_games": 259,
+        "engine_decks": 4
       },
       {
         "sources": [
@@ -106040,16 +106254,16 @@
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 206,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (206 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 1.675,
+        "heuristic_score": null,
         "grade": "B",
         "card": "Clarion Spirit",
         "pools": [
@@ -106065,7 +106279,10 @@
         "mana_cost": "{1}{W}",
         "cmc": 2.0,
         "image_normal": "https://cards.scryfall.io/normal/front/8/6/86a4c348-1012-4339-960a-c7bc7fd84fbb.jpg?1783928286",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/8/6/86a4c348-1012-4339-960a-c7bc7fd84fbb.jpg?1783928286"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/8/6/86a4c348-1012-4339-960a-c7bc7fd84fbb.jpg?1783928286",
+        "engine_wr": 0.4903,
+        "engine_games": 206,
+        "engine_decks": 2
       },
       {
         "sources": [
@@ -106253,16 +106470,16 @@
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 44,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (44 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 1.5750000000000002,
+        "heuristic_score": null,
         "grade": "B",
         "card": "Binding the Old Gods",
         "pools": [
@@ -106279,22 +106496,25 @@
         "mana_cost": "{2}{B}{G}",
         "cmc": 4.0,
         "image_normal": "https://cards.scryfall.io/normal/front/4/1/41802f18-7d46-431a-acb3-dbcc82eb415a.jpg?1783904539",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/4/1/41802f18-7d46-431a-acb3-dbcc82eb415a.jpg?1783904539"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/4/1/41802f18-7d46-431a-acb3-dbcc82eb415a.jpg?1783904539",
+        "engine_wr": 0.6591,
+        "engine_games": 44,
+        "engine_decks": 1
       },
       {
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 183,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (183 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 1.425,
+        "heuristic_score": null,
         "grade": "C",
         "card": "Anguished Recollection",
         "pools": [
@@ -106310,7 +106530,10 @@
         "mana_cost": "{1}{R}",
         "cmc": 2.0,
         "image_normal": "https://cards.scryfall.io/normal/front/7/0/7058e778-23ad-4e9c-a5c6-8c5f63811d11.jpg?1783909197",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/7/0/7058e778-23ad-4e9c-a5c6-8c5f63811d11.jpg?1783909197"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/7/0/7058e778-23ad-4e9c-a5c6-8c5f63811d11.jpg?1783909197",
+        "engine_wr": 0.4262,
+        "engine_games": 183,
+        "engine_decks": 4
       },
       {
         "sources": [
@@ -106690,16 +106913,16 @@
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 386,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (386 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 1.275,
+        "heuristic_score": null,
         "grade": "C",
         "card": "Benalish Knight-Counselor",
         "pools": [
@@ -106715,22 +106938,25 @@
         "mana_cost": "{W}",
         "cmc": 1.0,
         "image_normal": "https://cards.scryfall.io/normal/front/2/f/2fdbcf55-4b8e-43ce-98b8-c556f892e09c.jpg?1783921005",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/2/f/2fdbcf55-4b8e-43ce-98b8-c556f892e09c.jpg?1783921005"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/2/f/2fdbcf55-4b8e-43ce-98b8-c556f892e09c.jpg?1783921005",
+        "engine_wr": 0.5104,
+        "engine_games": 386,
+        "engine_decks": 4
       },
       {
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 183,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (183 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 1.275,
+        "heuristic_score": null,
         "grade": "C",
         "card": "Blazing Rootwalla",
         "pools": [
@@ -106746,7 +106972,10 @@
         "mana_cost": "{R}",
         "cmc": 1.0,
         "image_normal": "https://cards.scryfall.io/normal/front/4/4/4404fc9c-ef02-479c-9638-0cc163f0b48f.jpg?1783926849",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/4/4/4404fc9c-ef02-479c-9638-0cc163f0b48f.jpg?1783926849"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/4/4/4404fc9c-ef02-479c-9638-0cc163f0b48f.jpg?1783926849",
+        "engine_wr": 0.4262,
+        "engine_games": 183,
+        "engine_decks": 4
       },
       {
         "sources": [
@@ -107000,16 +107229,16 @@
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 201,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (201 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 1.225,
+        "heuristic_score": null,
         "grade": "C",
         "card": "Rise from the Tides",
         "pools": [
@@ -107025,7 +107254,10 @@
         "mana_cost": "{5}{U}",
         "cmc": 6.0,
         "image_normal": "https://cards.scryfall.io/normal/front/a/1/a16fccff-ca97-4416-b42f-86d314b1d0af.jpg?1783908155",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/a/1/a16fccff-ca97-4416-b42f-86d314b1d0af.jpg?1783908155"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/a/1/a16fccff-ca97-4416-b42f-86d314b1d0af.jpg?1783908155",
+        "engine_wr": 0.4428,
+        "engine_games": 201,
+        "engine_decks": 2
       },
       {
         "sources": [
@@ -107404,16 +107636,16 @@
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 234,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (234 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 0.775,
+        "heuristic_score": null,
         "grade": "C",
         "card": "Deep Analysis",
         "pools": [
@@ -107429,7 +107661,10 @@
         "mana_cost": "{3}{U}",
         "cmc": 4.0,
         "image_normal": "https://cards.scryfall.io/normal/front/1/a/1a297bae-f259-4fc7-b76a-285f972d69e3.jpg?1783903240",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/1/a/1a297bae-f259-4fc7-b76a-285f972d69e3.jpg?1783903240"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/1/a/1a297bae-f259-4fc7-b76a-285f972d69e3.jpg?1783903240",
+        "engine_wr": 0.4658,
+        "engine_games": 234,
+        "engine_decks": 3
       },
       {
         "sources": [
@@ -107622,16 +107857,16 @@
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 189,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (189 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 0.425,
+        "heuristic_score": null,
         "grade": "D",
         "card": "Callous Dismissal",
         "pools": [
@@ -107647,7 +107882,10 @@
         "mana_cost": "{1}{U}",
         "cmc": 2.0,
         "image_normal": "https://cards.scryfall.io/normal/front/6/6/66cef326-339c-49e5-9905-21a1603a46ae.jpg?1783933467",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/6/6/66cef326-339c-49e5-9905-21a1603a46ae.jpg?1783933467"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/6/6/66cef326-339c-49e5-9905-21a1603a46ae.jpg?1783933467",
+        "engine_wr": 0.4762,
+        "engine_games": 189,
+        "engine_decks": 2
       },
       {
         "sources": [
@@ -107808,16 +108046,16 @@
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 189,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (189 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 0.32500000000000007,
+        "heuristic_score": null,
         "grade": "D",
         "card": "Chromatic Sphere",
         "pools": [
@@ -107831,7 +108069,10 @@
         "mana_cost": "{1}",
         "cmc": 1.0,
         "image_normal": "https://cards.scryfall.io/normal/front/e/d/edabc8b2-4413-48e4-8d6f-521b19d839a6.jpg?1783930341",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/e/d/edabc8b2-4413-48e4-8d6f-521b19d839a6.jpg?1783930341"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/e/d/edabc8b2-4413-48e4-8d6f-521b19d839a6.jpg?1783930341",
+        "engine_wr": 0.4762,
+        "engine_games": 189,
+        "engine_decks": 2
       },
       {
         "sources": [
@@ -108085,16 +108326,16 @@
         "sources": [
           "Card pool via Wizards of the Coast (magic.wizards.com Planar Cube Draft announcement)"
         ],
-        "sample_size": 0,
+        "sample_size": 183,
         "computed_at": "2026-07-31T13:45:05Z",
-        "confidence": "sample",
-        "prior_source": "heuristic",
-        "basis": "Heuristic (rarity/CMC/type)",
+        "confidence": "low",
+        "prior_source": "forge_engine",
+        "basis": "Engine (183 games)",
         "gih_wr": null,
         "gih_games": 0,
         "iwd": null,
         "draft_score": null,
-        "heuristic_score": 0.125,
+        "heuristic_score": null,
         "grade": "D",
         "card": "Alchemist's Greeting",
         "pools": [
@@ -108110,7 +108351,10 @@
         "mana_cost": "{4}{R}",
         "cmc": 5.0,
         "image_normal": "https://cards.scryfall.io/normal/front/f/3/f36e2146-b6a9-4b61-9ccf-969a2c79b747.jpg?1783908129",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/f/3/f36e2146-b6a9-4b61-9ccf-969a2c79b747.jpg?1783908129"
+        "art_crop": "https://cards.scryfall.io/art_crop/front/f/3/f36e2146-b6a9-4b61-9ccf-969a2c79b747.jpg?1783908129",
+        "engine_wr": 0.4262,
+        "engine_games": 183,
+        "engine_decks": 4
       },
       {
         "sources": [
@@ -108185,7 +108429,602 @@
       "live_planar_cube": 0,
       "powered_cube_prior": 138,
       "cross_set_prior": 153,
-      "heuristic": 257
+      "heuristic": 214,
+      "forge_engine": 43
+    },
+    "engine_stats": {
+      "status": "published",
+      "evidence_class": "rules_engine",
+      "generated_utc": "2026-08-01T09:03:20Z",
+      "methodology": "DATA COUNTER-OFFENSIVE ADDENDUM (gl-0590): cube.engine_stats is a genuinely independent evidence source, computed by us rather than scraped -- our own Card-Forge rules engine (mtg-forge-shard) plays the 10 real Planar-Cube guild decks (one per two-color pair, built from this same pool under the same heuristic-construction rules used everywhere on this page) against each other in repeated best-of-three round robins, chained across freshly-seeded seed sets exactly like the existing plan-s2..s6 lineage, with every match run TWICE and only promoted to \"rules_engine_verified\" when both runs normalize identically -- a held or non-repeating run earns nothing. Every card in a deck's real decklist is credited with that deck's game wins/losses in every match it plays, so a card's engine_wr is wins/games summed across every credited game from every guild deck that carries it, across every receipted seed set -- computed strictly from receipts, never estimated. A card only earns engine_wr/engine_games/engine_decks on its row, and the \"forge_engine\" basis (rendered \"Engine (N games)\"), once its total credited games clear cube.engine_stats.floor_games; below that floor nothing is shown. forge_engine ONLY ever replaces the \"heuristic\" tier (rarity/CMC/type points, zero real data behind them) -- a row already carrying real 17lands data, a Powered Cube prior, or a cross-set prior keeps that basis exactly as it was, never silently overridden. This is NOT a per-card draft signal: it is a constructed guild-deck win rate shared across every card that deck carries, so a strong deck inflates every card in it the same way any constructed win rate would -- read it as \"this card's deck wins with the Forge AI\", not \"this card is individually strong\" (grade/draft_score/heuristic_score are computed by the real pipeline and are never rewritten by this addendum). Card-Forge is not MTG Arena and its AI may value cards differently than a human drafter. Full match receipts (every run's raw log, hash, and normalized result) are retained in the Forge shard for audit; this payload carries only the aggregated numbers, kept small on purpose.",
+      "engine": {
+        "name": "Card-Forge",
+        "version": "2.0.14-SNAPSHOT-07.26",
+        "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+      },
+      "floor_games": 40,
+      "seed_sets": 9,
+      "total_planned_matches": 132,
+      "total_receipted_matches": 131,
+      "total_held_matches": 1,
+      "total_credited_matches": 131,
+      "cards_tracked": 88,
+      "cards_above_floor": 81,
+      "limitations": [
+        "Card-Forge is not MTG Arena and may implement cards or AI differently.",
+        "This is a constructed guild-deck win rate credited to every card in that deck's list, not an isolated per-card draft signal -- a strong deck inflates every card it carries.",
+        "Only the 10 guild constructed decks are exercised; most pool cards never appear in any of them and carry no engine data at all.",
+        "One pinned engine version and one family of AI-vs-AI matchups -- proves reproducible engine results, not a live metagame win rate."
+      ],
+      "cards": [
+        {
+          "card": "Adeline, Resplendent Cathar",
+          "engine_games": 386,
+          "engine_wins": 197,
+          "engine_wr": 0.5104,
+          "engine_decks": 4
+        },
+        {
+          "card": "Antiquities on the Loose",
+          "engine_games": 386,
+          "engine_wins": 197,
+          "engine_wr": 0.5104,
+          "engine_decks": 4
+        },
+        {
+          "card": "Baneslayer Angel",
+          "engine_games": 386,
+          "engine_wins": 197,
+          "engine_wr": 0.5104,
+          "engine_decks": 4
+        },
+        {
+          "card": "Banishing Light",
+          "engine_games": 386,
+          "engine_wins": 197,
+          "engine_wr": 0.5104,
+          "engine_decks": 4
+        },
+        {
+          "card": "Benalish Knight-Counselor",
+          "engine_games": 386,
+          "engine_wins": 197,
+          "engine_wr": 0.5104,
+          "engine_decks": 4
+        },
+        {
+          "card": "Cemetery Protector",
+          "engine_games": 386,
+          "engine_wins": 197,
+          "engine_wr": 0.5104,
+          "engine_decks": 4
+        },
+        {
+          "card": "Descend upon the Sinful",
+          "engine_games": 386,
+          "engine_wins": 197,
+          "engine_wr": 0.5104,
+          "engine_decks": 4
+        },
+        {
+          "card": "By Invitation Only",
+          "engine_games": 329,
+          "engine_wins": 172,
+          "engine_wr": 0.5228,
+          "engine_decks": 3
+        },
+        {
+          "card": "Archmage of Runes",
+          "engine_games": 284,
+          "engine_wins": 130,
+          "engine_wr": 0.4577,
+          "engine_decks": 4
+        },
+        {
+          "card": "Dream Eater",
+          "engine_games": 284,
+          "engine_wins": 130,
+          "engine_wr": 0.4577,
+          "engine_decks": 4
+        },
+        {
+          "card": "Day of Judgment",
+          "engine_games": 263,
+          "engine_wins": 126,
+          "engine_wr": 0.4791,
+          "engine_decks": 3
+        },
+        {
+          "card": "Accursed Marauder",
+          "engine_games": 259,
+          "engine_wins": 136,
+          "engine_wr": 0.5251,
+          "engine_decks": 4
+        },
+        {
+          "card": "Animate Dead",
+          "engine_games": 259,
+          "engine_wins": 136,
+          "engine_wr": 0.5251,
+          "engine_decks": 4
+        },
+        {
+          "card": "Asylum Visitor",
+          "engine_games": 259,
+          "engine_wins": 136,
+          "engine_wr": 0.5251,
+          "engine_decks": 4
+        },
+        {
+          "card": "Blighted Nightmare",
+          "engine_games": 259,
+          "engine_wins": 136,
+          "engine_wr": 0.5251,
+          "engine_decks": 4
+        },
+        {
+          "card": "Blood Fountain",
+          "engine_games": 259,
+          "engine_wins": 136,
+          "engine_wr": 0.5251,
+          "engine_decks": 4
+        },
+        {
+          "card": "Bloodline Keeper",
+          "engine_games": 259,
+          "engine_wins": 136,
+          "engine_wr": 0.5251,
+          "engine_decks": 4
+        },
+        {
+          "card": "Bone Shards",
+          "engine_games": 259,
+          "engine_wins": 136,
+          "engine_wr": 0.5251,
+          "engine_decks": 4
+        },
+        {
+          "card": "Deep Analysis",
+          "engine_games": 234,
+          "engine_wins": 109,
+          "engine_wr": 0.4658,
+          "engine_decks": 3
+        },
+        {
+          "card": "Dungeon Geists",
+          "engine_games": 234,
+          "engine_wins": 109,
+          "engine_wr": 0.4658,
+          "engine_decks": 3
+        },
+        {
+          "card": "Bitter Triumph",
+          "engine_games": 217,
+          "engine_wins": 121,
+          "engine_wr": 0.5576,
+          "engine_decks": 3
+        },
+        {
+          "card": "Bloodvial Purveyor",
+          "engine_games": 217,
+          "engine_wins": 121,
+          "engine_wr": 0.5576,
+          "engine_decks": 3
+        },
+        {
+          "card": "Cryptcaller Chariot",
+          "engine_games": 217,
+          "engine_wins": 121,
+          "engine_wr": 0.5576,
+          "engine_decks": 3
+        },
+        {
+          "card": "Vein Ripper",
+          "engine_games": 215,
+          "engine_wins": 107,
+          "engine_wr": 0.4977,
+          "engine_decks": 3
+        },
+        {
+          "card": "Cathar Commando",
+          "engine_games": 206,
+          "engine_wins": 101,
+          "engine_wr": 0.4903,
+          "engine_decks": 2
+        },
+        {
+          "card": "Clarion Spirit",
+          "engine_games": 206,
+          "engine_wins": 101,
+          "engine_wr": 0.4903,
+          "engine_decks": 2
+        },
+        {
+          "card": "Rise from the Tides",
+          "engine_games": 201,
+          "engine_wins": 89,
+          "engine_wr": 0.4428,
+          "engine_decks": 2
+        },
+        {
+          "card": "Callous Dismissal",
+          "engine_games": 189,
+          "engine_wins": 90,
+          "engine_wr": 0.4762,
+          "engine_decks": 2
+        },
+        {
+          "card": "Chart a Course",
+          "engine_games": 189,
+          "engine_wins": 90,
+          "engine_wr": 0.4762,
+          "engine_decks": 2
+        },
+        {
+          "card": "Chromatic Sphere",
+          "engine_games": 189,
+          "engine_wins": 90,
+          "engine_wr": 0.4762,
+          "engine_decks": 2
+        },
+        {
+          "card": "Chromatic Star",
+          "engine_games": 189,
+          "engine_wins": 90,
+          "engine_wr": 0.4762,
+          "engine_decks": 2
+        },
+        {
+          "card": "Clone Crafter",
+          "engine_games": 189,
+          "engine_wins": 90,
+          "engine_wr": 0.4762,
+          "engine_decks": 2
+        },
+        {
+          "card": "Abrade",
+          "engine_games": 183,
+          "engine_wins": 78,
+          "engine_wr": 0.4262,
+          "engine_decks": 4
+        },
+        {
+          "card": "Alchemist's Greeting",
+          "engine_games": 183,
+          "engine_wins": 78,
+          "engine_wr": 0.4262,
+          "engine_decks": 4
+        },
+        {
+          "card": "Anger of the Gods",
+          "engine_games": 183,
+          "engine_wins": 78,
+          "engine_wr": 0.4262,
+          "engine_decks": 4
+        },
+        {
+          "card": "Anguished Recollection",
+          "engine_games": 183,
+          "engine_wins": 78,
+          "engine_wr": 0.4262,
+          "engine_decks": 4
+        },
+        {
+          "card": "Anje's Ravager",
+          "engine_games": 183,
+          "engine_wins": 78,
+          "engine_wr": 0.4262,
+          "engine_decks": 4
+        },
+        {
+          "card": "Ashling, Flame Dancer",
+          "engine_games": 183,
+          "engine_wins": 78,
+          "engine_wr": 0.4262,
+          "engine_decks": 4
+        },
+        {
+          "card": "Blazing Rootwalla",
+          "engine_games": 183,
+          "engine_wins": 78,
+          "engine_wr": 0.4262,
+          "engine_decks": 4
+        },
+        {
+          "card": "Chomping Mastasaur",
+          "engine_games": 183,
+          "engine_wins": 78,
+          "engine_wr": 0.4262,
+          "engine_decks": 4
+        },
+        {
+          "card": "Aftermath Analyst",
+          "engine_games": 176,
+          "engine_wins": 103,
+          "engine_wr": 0.5852,
+          "engine_decks": 4
+        },
+        {
+          "card": "Augur of Autumn",
+          "engine_games": 176,
+          "engine_wins": 103,
+          "engine_wr": 0.5852,
+          "engine_decks": 4
+        },
+        {
+          "card": "Avabruck Caretaker",
+          "engine_games": 176,
+          "engine_wins": 103,
+          "engine_wr": 0.5852,
+          "engine_decks": 4
+        },
+        {
+          "card": "Balustrade Wurm",
+          "engine_games": 176,
+          "engine_wins": 103,
+          "engine_wr": 0.5852,
+          "engine_decks": 4
+        },
+        {
+          "card": "Birds of Paradise",
+          "engine_games": 176,
+          "engine_wins": 103,
+          "engine_wr": 0.5852,
+          "engine_decks": 4
+        },
+        {
+          "card": "Boon Satyr",
+          "engine_games": 176,
+          "engine_wins": 103,
+          "engine_wr": 0.5852,
+          "engine_decks": 4
+        },
+        {
+          "card": "Kogla, the Titan Ape",
+          "engine_games": 176,
+          "engine_wins": 103,
+          "engine_wr": 0.5852,
+          "engine_decks": 4
+        },
+        {
+          "card": "Blood Artist",
+          "engine_games": 173,
+          "engine_wins": 92,
+          "engine_wr": 0.5318,
+          "engine_decks": 2
+        },
+        {
+          "card": "Borrowed Time",
+          "engine_games": 151,
+          "engine_wins": 68,
+          "engine_wr": 0.4503,
+          "engine_decks": 1
+        },
+        {
+          "card": "Bygone Bishop",
+          "engine_games": 151,
+          "engine_wins": 68,
+          "engine_wr": 0.4503,
+          "engine_decks": 1
+        },
+        {
+          "card": "Markov Enforcer",
+          "engine_games": 144,
+          "engine_wins": 59,
+          "engine_wr": 0.4097,
+          "engine_decks": 3
+        },
+        {
+          "card": "Avacyn's Judgment",
+          "engine_games": 141,
+          "engine_wins": 63,
+          "engine_wr": 0.4468,
+          "engine_decks": 3
+        },
+        {
+          "card": "Betrayer's Bargain",
+          "engine_games": 141,
+          "engine_wins": 63,
+          "engine_wr": 0.4468,
+          "engine_decks": 3
+        },
+        {
+          "card": "Burst Lightning",
+          "engine_games": 141,
+          "engine_wins": 63,
+          "engine_wr": 0.4468,
+          "engine_decks": 3
+        },
+        {
+          "card": "Blood Operative",
+          "engine_games": 136,
+          "engine_wins": 65,
+          "engine_wr": 0.4779,
+          "engine_decks": 3
+        },
+        {
+          "card": "Champion of Dusk",
+          "engine_games": 136,
+          "engine_wins": 65,
+          "engine_wr": 0.4779,
+          "engine_decks": 3
+        },
+        {
+          "card": "Cemetery Illuminator",
+          "engine_games": 133,
+          "engine_wins": 62,
+          "engine_wr": 0.4662,
+          "engine_decks": 3
+        },
+        {
+          "card": "Chrome Host Seedshark",
+          "engine_games": 133,
+          "engine_wins": 62,
+          "engine_wr": 0.4662,
+          "engine_decks": 3
+        },
+        {
+          "card": "Brimstone Volley",
+          "engine_games": 126,
+          "engine_wins": 53,
+          "engine_wr": 0.4206,
+          "engine_decks": 3
+        },
+        {
+          "card": "Burn Down the House",
+          "engine_games": 126,
+          "engine_wins": 53,
+          "engine_wr": 0.4206,
+          "engine_decks": 3
+        },
+        {
+          "card": "Anguished Unmaking",
+          "engine_games": 123,
+          "engine_wins": 71,
+          "engine_wr": 0.5772,
+          "engine_decks": 1
+        },
+        {
+          "card": "Bruna, the Fading Light",
+          "engine_games": 123,
+          "engine_wins": 71,
+          "engine_wr": 0.5772,
+          "engine_decks": 1
+        },
+        {
+          "card": "Cerise, Slayer of Fear",
+          "engine_games": 123,
+          "engine_wins": 71,
+          "engine_wr": 0.5772,
+          "engine_decks": 1
+        },
+        {
+          "card": "Bloodthirsty Adversary",
+          "engine_games": 102,
+          "engine_wins": 44,
+          "engine_wr": 0.4314,
+          "engine_decks": 2
+        },
+        {
+          "card": "Cackling Observer",
+          "engine_games": 94,
+          "engine_wins": 50,
+          "engine_wr": 0.5319,
+          "engine_decks": 2
+        },
+        {
+          "card": "Doom Whisperer",
+          "engine_games": 94,
+          "engine_wins": 50,
+          "engine_wr": 0.5319,
+          "engine_decks": 2
+        },
+        {
+          "card": "Cankerbloom",
+          "engine_games": 93,
+          "engine_wins": 55,
+          "engine_wr": 0.5914,
+          "engine_decks": 2
+        },
+        {
+          "card": "Archangel Avacyn",
+          "engine_games": 57,
+          "engine_wins": 25,
+          "engine_wr": 0.4386,
+          "engine_decks": 1
+        },
+        {
+          "card": "Ark of Hunger",
+          "engine_games": 57,
+          "engine_wins": 25,
+          "engine_wr": 0.4386,
+          "engine_decks": 1
+        },
+        {
+          "card": "Avacyn's Pilgrim",
+          "engine_games": 55,
+          "engine_wins": 33,
+          "engine_wr": 0.6,
+          "engine_decks": 1
+        },
+        {
+          "card": "Coldsteel Heart",
+          "engine_games": 55,
+          "engine_wins": 33,
+          "engine_wr": 0.6,
+          "engine_decks": 1
+        },
+        {
+          "card": "Gisela, the Broken Blade",
+          "engine_games": 55,
+          "engine_wins": 33,
+          "engine_wr": 0.6,
+          "engine_decks": 1
+        },
+        {
+          "card": "Hedge Shredder",
+          "engine_games": 55,
+          "engine_wins": 33,
+          "engine_wr": 0.6,
+          "engine_decks": 1
+        },
+        {
+          "card": "Champion of the Perished",
+          "engine_games": 50,
+          "engine_wins": 21,
+          "engine_wr": 0.42,
+          "engine_decks": 1
+        },
+        {
+          "card": "Cursecloth Wrappings",
+          "engine_games": 50,
+          "engine_wins": 21,
+          "engine_wr": 0.42,
+          "engine_decks": 1
+        },
+        {
+          "card": "Captain Howler, Sea Scourge",
+          "engine_games": 45,
+          "engine_wins": 19,
+          "engine_wr": 0.4222,
+          "engine_decks": 1
+        },
+        {
+          "card": "Chain Lightning",
+          "engine_games": 45,
+          "engine_wins": 19,
+          "engine_wr": 0.4222,
+          "engine_decks": 1
+        },
+        {
+          "card": "Binding the Old Gods",
+          "engine_games": 44,
+          "engine_wins": 29,
+          "engine_wr": 0.6591,
+          "engine_decks": 1
+        },
+        {
+          "card": "Lumra, Bellow of the Woods",
+          "engine_games": 44,
+          "engine_wins": 29,
+          "engine_wr": 0.6591,
+          "engine_decks": 1
+        },
+        {
+          "card": "Anje, Maid of Dishonor",
+          "engine_games": 42,
+          "engine_wins": 15,
+          "engine_wr": 0.3571,
+          "engine_decks": 1
+        },
+        {
+          "card": "Bloodhall Priest",
+          "engine_games": 42,
+          "engine_wins": 15,
+          "engine_wr": 0.3571,
+          "engine_decks": 1
+        }
+      ]
     }
   },
   "hob": {

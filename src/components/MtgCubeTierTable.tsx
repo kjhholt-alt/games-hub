@@ -117,6 +117,15 @@ export function MtgCubeTierTable({
               <td className="px-3 py-2 text-right tabular-nums font-semibold">
                 {row.gih_wr !== null ? (
                   formatWinRate(row.gih_wr)
+                ) : row.engine_wr !== undefined ? (
+                  <span
+                    title={`${row.engine_games} credited games across ${row.engine_decks} of the 10 round-robin guild decks — Card-Forge rules-engine matches, not 17lands telemetry`}
+                  >
+                    {formatWinRate(row.engine_wr)}
+                    <span className="ml-1 font-normal text-text-secondary text-[10px] uppercase tracking-wide">
+                      engine
+                    </span>
+                  </span>
                 ) : (
                   <span className="font-normal text-text-secondary" title="No win-rate data — heuristic score only">
                     heuristic

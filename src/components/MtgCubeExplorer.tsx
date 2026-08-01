@@ -312,7 +312,7 @@ function GuildStrip({ standings }: { standings: ReturnType<typeof computeCubeGui
             title={
               s.count === 0
                 ? `No pool cards fit ${s.guild}'s color identity this week`
-                : `${s.count} cards fit ${s.guild} · ${s.coveragePct}% backed by cube-native signal (live Planar Cube data or a Powered Cube sample), rest heuristic/cross-set`
+                : `${s.count} cards fit ${s.guild} · ${s.coveragePct}% backed by cube-native signal (live Planar Cube data, a Powered Cube sample, or a receipted Forge engine win rate), rest heuristic/cross-set`
             }
           >
             <div className="flex items-center justify-between gap-1.5">
