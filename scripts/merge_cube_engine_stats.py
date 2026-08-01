@@ -144,11 +144,19 @@ def main() -> int:
 
         if row["prior_source"] == "heuristic":
             row["prior_source"] = "forge_engine"
+            row["heuristic_score"] = None
+            upgraded += 1
+
+        # Refreshed every merge, not just on the upgrade run that first sets
+        # prior_source -- a top-up that grows engine_games on an
+        # already-upgraded row must move its human-readable basis/sample_size
+        # in lockstep, or they go stale (frozen at whatever engine_games was
+        # the run this row first upgraded) even though engine_games itself
+        # keeps climbing on every subsequent re-merge.
+        if row["prior_source"] == "forge_engine":
             row["basis"] = f"Engine ({stat['engine_games']} games)"
             row["confidence"] = "low"
             row["sample_size"] = stat["engine_games"]
-            row["heuristic_score"] = None
-            upgraded += 1
 
     # Recomputed by scanning every row fresh (never a per-run delta) so this
     # script stays idempotent across repeated merges as more seed sets land
