@@ -744,6 +744,37 @@ export function matchesColorFilter(row: DraftCardRow, colors: string[]): boolean
   return colors.some((c) => c !== "C" && row.color.includes(c));
 }
 
+/** Tier facet — the same S–F grade vocabulary as the Grade column, plus the
+ * type's own "unrated" literal (never invented; a row only ever carries that
+ * value for real, when the engine genuinely has nothing to grade it on). */
+export const TIER_FILTERS = ["all", ...GRADE_ORDER, "unrated"] as const;
+export type TierFilter = (typeof TIER_FILTERS)[number];
+
+export function matchesTierFilter(row: DraftCardRow, tier: TierFilter): boolean {
+  return tier === "all" || row.grade === tier;
+}
+
+/** Basis facet — buckets the free-form `prior_source` into the same three
+ * honesty tiers the Basis column's color already encodes (real live data,
+ * a borrowed cross-set prior, or the non-statistical heuristic), so the
+ * filter reads the same vocabulary a reader already sees in that column.
+ * A row with no `prior_source` at all (never gap-filled) buckets as "live"
+ * — the only case that's true of is a payload published before the
+ * gap-fill addendum shipped, where every row IS genuine 17lands data. */
+export const BASIS_FILTERS = ["all", "live", "cross_set_prior", "heuristic"] as const;
+export type BasisFilter = (typeof BASIS_FILTERS)[number];
+
+export function basisFilterBucket(row: DraftCardRow): Exclude<BasisFilter, "all"> {
+  const source = row.prior_source;
+  if (!source || source === "live" || source === "live_low_sample") return "live";
+  if (source === "heuristic") return "heuristic";
+  return "cross_set_prior";
+}
+
+export function matchesBasisFilter(row: DraftCardRow, basis: BasisFilter): boolean {
+  return basis === "all" || basisFilterBucket(row) === basis;
+}
+
 export type DraftSortKey =
   | "rank"
   | "card"
@@ -922,4 +953,57 @@ export function groupArchetypeRows(rows: DraftArchetypeRow[]): ArchetypeGroups {
  * the payload's own `color_name` and `colors` fields are never altered. */
 export function formatArchetypeName(colorName: string): string {
   return colorName.replace(/\s*\([A-Za-z]{2,5}\)\s*$/, "");
+}
+
+// ─── Color-pair synergy view helpers ─────────────────────────────────────────
+//
+// The synergy view is built ENTIRELY from rows the pipeline already
+// publishes — the two-color rows inside a set's optional `archetypes`
+// module (a real 17lands deck win rate per guild pair) plus the set's own
+// `overall_rows` (real per-card grades) — no new payload field, no derived
+// statistic invented client-side. A pair with no distinct archetype row
+// yet (archetypes absent, or 17lands hasn't published that specific guild
+// this run) renders honestly unrated rather than a guessed number.
+
+/** Finds one of `archetypeRows`' two-color rows for a guild pair, tolerant
+ * of either color order the engine might key by (same tolerance as
+ * getPairRows) — `undefined` when 17lands hasn't published a distinct
+ * sample for this exact pair this run, which the caller renders as an
+ * honest unrated tile rather than inventing a number. */
+export function getPairArchetypeRow(
+  archetypeRows: DraftArchetypeRow[],
+  pairKey: string
+): DraftArchetypeRow | undefined {
+  const reversed = pairKey.split("").reverse().join("");
+  return archetypeRows.find(
+    (r) => r.color_count === 2 && (r.colors === pairKey || r.colors === reversed)
+  );
+}
+
+/** True when a card is playable in a given two-color pair — its own color
+ * identity is a non-empty subset of the pair's two letters (so both mono
+ * cards in either color and the pair's own gold cards qualify; colorless
+ * and off-color/three-plus-color cards don't, since those aren't specific
+ * to this pair). Pure string check over the real `color` field — no color
+ * is ever added or inferred. */
+export function cardMatchesPair(row: DraftCardRow, pairKey: string): boolean {
+  if (row.color === "") return false;
+  return row.color.split("").every((c) => pairKey.includes(c));
+}
+
+/** Top N cards (by the engine's own draft_score, best first, nulls last —
+ * same ordering rule as sortDraftRows) that fit a color pair, from the
+ * set's real overall_rows. This is the "top picks" list a synergy tile
+ * shows; it's a client-side filter + sort of already-published rows, never
+ * a new rating. */
+export function topCardsForPair(
+  overallRows: DraftCardRow[],
+  pairKey: string,
+  limit = 5
+): DraftCardRow[] {
+  return sortDraftRows(
+    overallRows.filter((r) => cardMatchesPair(r, pairKey)),
+    "draft_score",
+    "desc"
+  ).slice(0, limit);
 }

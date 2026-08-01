@@ -1,33 +1,48 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { AlertTriangle, ChevronDown, ListOrdered, Rows3, Search } from "lucide-react";
+import { AlertTriangle, ChevronDown, ListOrdered, Rows3, Search, Sparkles } from "lucide-react";
 import { MtgArchetypeTable } from "@/components/MtgArchetypeTable";
 import { MtgDraftTable } from "@/components/MtgDraftTable";
 import { MtgDraftCheatSheet } from "@/components/MtgDraftCheatSheet";
+import { MtgColorPairSynergy } from "@/components/MtgColorPairSynergy";
 import { MtgDraftSetHeader } from "@/components/MtgDraftSetHeader";
 import { MtgDraftMethodologyAccordion } from "@/components/MtgDraftMethodologyAccordion";
 import {
+  BASIS_FILTERS,
   COLOR_PAIRS,
   MONO_COLORS,
   RARITY_FILTERS,
+  TIER_FILTERS,
   draftScoreRanks,
   getPairRows,
+  matchesBasisFilter,
   matchesColorFilter,
   matchesRarityFilter,
   matchesSearch,
+  matchesTierFilter,
   sortDraftRows,
+  type BasisFilter,
   type DraftSetBlock,
   type DraftSortKey,
   type RarityFilter,
+  type TierFilter,
 } from "@/lib/mtgDraftView";
 
-type ViewMode = "ranker" | "cheatsheet";
+type ViewMode = "ranker" | "cheatsheet" | "synergy";
+
+const BASIS_FILTER_LABEL: Record<BasisFilter, string> = {
+  all: "All basis",
+  live: "Live data",
+  cross_set_prior: "Cross-set prior",
+  heuristic: "Heuristic",
+};
 
 /**
  * The interactive half of /mtg/draft — set switcher, view toggle (ranker
- * table vs cheat sheet), search/rarity/color filters, the color-pair picker,
- * and column sorting. All computed client-side over the payload the server
+ * table, color-pair synergy grid, or cheat sheet), a shared search/rarity/
+ * color/tier/basis filter bar, the ranker's own color-pair row picker, and
+ * column sorting. All computed client-side over the payload the server
  * component already read; nothing here fetches anything.
  */
 export function MtgDraftRanker({ sets }: { sets: DraftSetBlock[] }) {
@@ -41,6 +56,8 @@ export function MtgDraftRanker({ sets }: { sets: DraftSetBlock[] }) {
   const [search, setSearch] = useState("");
   const [rarity, setRarity] = useState<RarityFilter>("all");
   const [colors, setColors] = useState<string[]>([]);
+  const [tier, setTier] = useState<TierFilter>("all");
+  const [basis, setBasis] = useState<BasisFilter>("all");
   const [sortKey, setSortKey] = useState<DraftSortKey>("draft_score");
   const [sortDir, setSortDir] = useState<"asc" | "desc">("desc");
 
@@ -61,8 +78,25 @@ export function MtgDraftRanker({ sets }: { sets: DraftSetBlock[] }) {
       baseRows
         .filter((r) => matchesSearch(r, search))
         .filter((r) => matchesRarityFilter(r, rarity))
-        .filter((r) => matchesColorFilter(r, colors)),
-    [baseRows, search, rarity, colors]
+        .filter((r) => matchesColorFilter(r, colors))
+        .filter((r) => matchesTierFilter(r, tier))
+        .filter((r) => matchesBasisFilter(r, basis)),
+    [baseRows, search, rarity, colors, tier, basis]
+  );
+
+  // Search/rarity/tier/basis, applied to the set's full overall_rows —
+  // shared with the synergy view's "top picks" lists so every filter chip on
+  // the page means the same thing regardless of which tab is active. Color
+  // is deliberately excluded here: in the synergy view it gates which pair
+  // TILES render (see MtgColorPairSynergy), not which cards inside a tile do.
+  const synergyCards = useMemo(
+    () =>
+      activeSet.overall_rows
+        .filter((r) => matchesSearch(r, search))
+        .filter((r) => matchesRarityFilter(r, rarity))
+        .filter((r) => matchesTierFilter(r, tier))
+        .filter((r) => matchesBasisFilter(r, basis)),
+    [activeSet, search, rarity, tier, basis]
   );
 
   const sortedRows = useMemo(
@@ -169,6 +203,12 @@ export function MtgDraftRanker({ sets }: { sets: DraftSetBlock[] }) {
               label="Ranker"
             />
             <ViewTab
+              active={view === "synergy"}
+              onClick={() => setView("synergy")}
+              icon={<Sparkles size={14} />}
+              label="Color pairs"
+            />
+            <ViewTab
               active={view === "cheatsheet"}
               onClick={() => setView("cheatsheet")}
               icon={<Rows3 size={14} />}
@@ -176,25 +216,27 @@ export function MtgDraftRanker({ sets }: { sets: DraftSetBlock[] }) {
             />
           </div>
 
-          {view === "ranker" ? (
-            <>
-              {/* Filters */}
-              <div className="flex flex-col gap-3 mb-4 print:hidden">
-                <div className="flex flex-wrap items-center gap-3">
-                  <div className="relative">
-                    <Search
-                      size={13}
-                      className="absolute left-2.5 top-1/2 -translate-y-1/2 text-text-secondary"
-                    />
-                    <input
-                      type="search"
-                      value={search}
-                      onChange={(e) => setSearch(e.target.value)}
-                      placeholder="Search cards..."
-                      className="bg-surface border border-border rounded-md pl-7 pr-3 py-1.5 text-sm w-48 focus:outline-none focus:border-brass/50"
-                    />
-                  </div>
+          {view !== "cheatsheet" && (
+            /* Filters — shared by the ranker table and the color-pair synergy
+               view below, same search/rarity/color/tier/basis facets, so
+               switching tabs never resets what the reader was looking for. */
+            <div className="flex flex-col gap-3 mb-4 print:hidden">
+              <div className="flex flex-wrap items-center gap-3">
+                <div className="relative">
+                  <Search
+                    size={13}
+                    className="absolute left-2.5 top-1/2 -translate-y-1/2 text-text-secondary"
+                  />
+                  <input
+                    type="search"
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                    placeholder="Search cards..."
+                    className="bg-surface border border-border rounded-md pl-7 pr-3 py-1.5 text-sm w-48 focus:outline-none focus:border-brass/50"
+                  />
+                </div>
 
+                {view === "ranker" && (
                   <select
                     value={pairKey}
                     onChange={(e) => setPairKey(e.target.value)}
@@ -207,56 +249,89 @@ export function MtgDraftRanker({ sets }: { sets: DraftSetBlock[] }) {
                       </option>
                     ))}
                   </select>
-                </div>
+                )}
 
-                <div className="flex flex-wrap gap-2">
-                  {RARITY_FILTERS.map((r) => (
-                    <FacetChip
-                      key={r}
-                      active={rarity === r}
-                      onClick={() => setRarity(r)}
-                      label={r === "all" ? "All rarities" : r}
-                    />
+                <select
+                  value={tier}
+                  onChange={(e) => setTier(e.target.value as typeof tier)}
+                  className="bg-surface border border-border rounded-md px-2.5 py-1.5 text-sm text-text-secondary focus:outline-none focus:border-brass/50"
+                >
+                  {TIER_FILTERS.map((t) => (
+                    <option key={t} value={t}>
+                      {t === "all" ? "All tiers" : t === "unrated" ? "Unrated" : `Tier ${t}`}
+                    </option>
                   ))}
-                  <span className="w-px bg-border mx-1" aria-hidden />
-                  {MONO_COLORS.map((c) => (
-                    <FacetChip key={c} active={colors.includes(c)} onClick={() => toggleColor(c)} label={c} />
+                </select>
+
+                <select
+                  value={basis}
+                  onChange={(e) => setBasis(e.target.value as typeof basis)}
+                  className="bg-surface border border-border rounded-md px-2.5 py-1.5 text-sm text-text-secondary focus:outline-none focus:border-brass/50"
+                >
+                  {BASIS_FILTERS.map((b) => (
+                    <option key={b} value={b}>
+                      {BASIS_FILTER_LABEL[b]}
+                    </option>
                   ))}
-                  <FacetChip
-                    active={colors.includes("C")}
-                    onClick={() => toggleColor("C")}
-                    label="Colorless"
-                  />
-                </div>
+                </select>
               </div>
 
-              {pairPending ? (
-                <PairPendingPanel pairKey={pairKey} onReset={() => setPairKey("overall")} />
-              ) : (
-                <>
-                  <p className="font-mono text-[10px] uppercase tracking-wide text-text-secondary mb-2">
-                    {sortedRows.length.toLocaleString("en-US")} of{" "}
-                    {baseRows.length.toLocaleString("en-US")} cards shown
-                    {pairKey !== "overall" ? ` — ${pairKey} pair` : ""}
-                  </p>
-                  <MtgDraftTable
-                    rows={sortedRows}
-                    ranks={ranks}
-                    sortKey={sortKey}
-                    sortDir={sortDir}
-                    onSort={handleSort}
+              <div className="flex flex-wrap gap-2">
+                {RARITY_FILTERS.map((r) => (
+                  <FacetChip
+                    key={r}
+                    active={rarity === r}
+                    onClick={() => setRarity(r)}
+                    label={r === "all" ? "All rarities" : r}
                   />
-                  <p className="font-mono text-[10px] uppercase tracking-wide text-text-secondary mt-2">
-                    S build-around · A high pick · B solid · C filler · D
-                    situational · F avoid — hover any grade or column header
-                    for the rubric
-                  </p>
-                </>
-              )}
-            </>
-          ) : (
-            <MtgDraftCheatSheet rows={activeSet.overall_rows} />
+                ))}
+                <span className="w-px bg-border mx-1" aria-hidden />
+                {MONO_COLORS.map((c) => (
+                  <FacetChip key={c} active={colors.includes(c)} onClick={() => toggleColor(c)} label={c} />
+                ))}
+                <FacetChip
+                  active={colors.includes("C")}
+                  onClick={() => toggleColor("C")}
+                  label="Colorless"
+                />
+              </div>
+            </div>
           )}
+
+          {view === "synergy" && (
+            <MtgColorPairSynergy
+              archetypeRows={activeSet.archetypes?.rows}
+              cards={synergyCards}
+              colors={colors}
+            />
+          )}
+
+          {view === "ranker" &&
+            (pairPending ? (
+              <PairPendingPanel pairKey={pairKey} onReset={() => setPairKey("overall")} />
+            ) : (
+              <>
+                <p className="font-mono text-[10px] uppercase tracking-wide text-text-secondary mb-2">
+                  {sortedRows.length.toLocaleString("en-US")} of{" "}
+                  {baseRows.length.toLocaleString("en-US")} cards shown
+                  {pairKey !== "overall" ? ` — ${pairKey} pair` : ""}
+                </p>
+                <MtgDraftTable
+                  rows={sortedRows}
+                  ranks={ranks}
+                  sortKey={sortKey}
+                  sortDir={sortDir}
+                  onSort={handleSort}
+                />
+                <p className="font-mono text-[10px] uppercase tracking-wide text-text-secondary mt-2">
+                  S build-around · A high pick · B solid · C filler · D
+                  situational · F avoid — hover any grade or column header
+                  for the rubric
+                </p>
+              </>
+            ))}
+
+          {view === "cheatsheet" && <MtgDraftCheatSheet rows={activeSet.overall_rows} />}
 
           <div className="mt-8">
             <MtgDraftMethodologyAccordion methodology={activeSet.methodology} />
