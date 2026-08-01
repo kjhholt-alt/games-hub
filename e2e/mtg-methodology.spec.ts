@@ -25,4 +25,19 @@ test.describe("/mtg/methodology", () => {
       await expect(page.getByRole("link", { name, exact: true })).toBeVisible();
     }
   });
+
+  test("shows the closing audit table with all three groups", async ({
+    page,
+  }) => {
+    await expect(
+      page.getByRole("heading", { level: 2, name: "Us vs. untapped.gg" })
+    ).toBeVisible();
+    await expect(page.getByText("What we match")).toBeVisible();
+    await expect(page.getByText("What we beat")).toBeVisible();
+    await expect(page.getByText("What we don't do — and why")).toBeVisible();
+    await expect(page.getByText("Day-one cube intelligence")).toBeVisible();
+    await expect(
+      page.getByRole("link", { name: /untapped\.gg ↗/ }).first()
+    ).toHaveAttribute("href", /untapped\.gg/);
+  });
 });

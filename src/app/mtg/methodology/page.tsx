@@ -37,6 +37,86 @@ const MODULE_ORDER = [
   "meta_movers",
 ];
 
+type AuditRow = {
+  feature: string;
+  us: string;
+  them: string;
+  citeUrl?: string;
+};
+
+type AuditGroup = {
+  title: string;
+  rows: AuditRow[];
+};
+
+const UNTAPPED_MTGA_URL = "https://mtga.untapped.gg";
+
+const CLOSING_AUDIT: AuditGroup[] = [
+  {
+    title: "What we match",
+    rows: [
+      {
+        feature: "Format meta coverage",
+        us: "Standard, Pioneer, Modern, Commander, and Brawl tier lists, refreshed from live tournament and decklist data.",
+        them: "Standard, Pioneer, Modern, and Commander/Brawl meta reports and tier lists, built from its own tracked match data.",
+        citeUrl: UNTAPPED_MTGA_URL,
+      },
+      {
+        feature: "Ban list & format legality",
+        us: "A ban list and legality tracker cross-checked against Scryfall's legality data every rotation.",
+        them: "Format legality reflected across its meta reports and deck-building tools.",
+        citeUrl: UNTAPPED_MTGA_URL,
+      },
+    ],
+  },
+  {
+    title: "What we beat",
+    rows: [
+      {
+        feature: "Day-one cube intelligence",
+        us: "Every card in a brand-new 560-card cube gets a real, engine-computed S–F tier the day the cube is built — before a single game is logged.",
+        them: "No custom-cube support. Its ratings depend on aggregated match telemetry that doesn't exist yet for a cube nobody has played.",
+        citeUrl: UNTAPPED_MTGA_URL,
+      },
+      {
+        feature: "Transparent basis chips",
+        us: "Every rating carries a basis chip naming exactly what it's computed from — 17lands sample, heuristic proxy, or price signal — plus the sample size behind it.",
+        them: "Ratings surface as a single number or tier; the underlying blend isn't shown row by row.",
+        citeUrl: UNTAPPED_MTGA_URL,
+      },
+      {
+        feature: "Receipted rules-engine league",
+        us: "League standings come from real, reproducible rules-engine games — every promoted result links back to its own match receipt.",
+        them: "Meta stats are aggregated from player telemetry, not a receipted, reproducible log per matchup.",
+        citeUrl: UNTAPPED_MTGA_URL,
+      },
+      {
+        feature: "No login, no install, no ads",
+        us: "The whole hub loads in a browser. No account to create, no companion app to install, nothing running in the background.",
+        them: "A companion app download is required for its tracker and draft overlay, and an account is required for personalized stats.",
+        citeUrl: UNTAPPED_MTGA_URL,
+      },
+    ],
+  },
+  {
+    title: "What we don't do — and why",
+    rows: [
+      {
+        feature: "Telemetry volume",
+        us: "Zero player-match telemetry — we don't watch anyone's games, in Arena or anywhere else. We won't publish a win-rate number at that scale we can't back with a receipt, so we don't try.",
+        them: "Draws its win-rate numbers from millions of games tracked through its companion app.",
+        citeUrl: UNTAPPED_MTGA_URL,
+      },
+      {
+        feature: "In-game overlay",
+        us: "No live draft-pick assistant and no opponent-card tracker while you play. A client-side Arena integration is out of scope for a static, public site that has no companion app to run it from.",
+        them: "Its Draftsmith tool gives live, adaptive card ratings during drafts, and the companion overlay tracks opponents' played cards mid-match.",
+        citeUrl: UNTAPPED_MTGA_URL,
+      },
+    ],
+  },
+];
+
 const ATTRIBUTION = [
   {
     name: "Scryfall",
@@ -191,6 +271,92 @@ export default function MtgMethodologyPage() {
           </ul>
         </div>
 
+        <div className="mb-14">
+          <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-brass mb-4">
+            The closing audit
+          </p>
+          <h2 className="mtg-display text-2xl mb-3">Us vs. untapped.gg</h2>
+          <p className="text-sm text-text-secondary max-w-2xl mb-6 leading-relaxed">
+            Untapped.gg is the largest third-party tracker for Magic: The
+            Gathering Arena. Here&rsquo;s the honest side-by-side — where we
+            land in the same place, where we&rsquo;re ahead, and where we
+            deliberately don&rsquo;t compete. Every claim about untapped.gg
+            below is cited to its own site — we don&rsquo;t fetch, mirror, or
+            guess at what it does.
+          </p>
+
+          <div className="overflow-x-auto border border-border rounded-lg">
+            <table className="w-full text-xs sm:text-sm">
+              <thead>
+                <tr className="border-b border-border bg-surface text-left">
+                  <Th wide>Feature</Th>
+                  <Th wide>play.buildkit.store/mtg</Th>
+                  <Th wide>untapped.gg</Th>
+                </tr>
+              </thead>
+              {CLOSING_AUDIT.map((group) => (
+                <tbody key={group.title}>
+                  <tr className="bg-brass-dim/60">
+                    <td
+                      colSpan={3}
+                      className="px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.15em] text-brass"
+                    >
+                      {group.title}
+                    </td>
+                  </tr>
+                  {group.rows.map((row) => (
+                    <tr
+                      key={row.feature}
+                      className="border-b border-border last:border-0 align-top"
+                    >
+                      <td className="px-3 py-3 font-medium">{row.feature}</td>
+                      <td className="px-3 py-3 text-text-secondary leading-relaxed">
+                        {row.us}
+                      </td>
+                      <td className="px-3 py-3 text-text-secondary leading-relaxed">
+                        {row.them}{" "}
+                        {row.citeUrl && (
+                          <a
+                            href={row.citeUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="whitespace-nowrap font-mono text-[10px] text-brass hover:text-brass-bright transition-colors"
+                          >
+                            [untapped.gg ↗]
+                          </a>
+                        )}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              ))}
+            </table>
+          </div>
+          <p className="text-xs text-text-secondary mt-3">
+            Sourced from{" "}
+            <a
+              href="https://untapped.gg"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-brass hover:text-brass-bright transition-colors"
+            >
+              untapped.gg
+            </a>{" "}
+            and{" "}
+            <a
+              href={UNTAPPED_MTGA_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-brass hover:text-brass-bright transition-colors"
+            >
+              mtga.untapped.gg
+            </a>
+            &rsquo;s own public pages, read on 2026-07-31. We don&rsquo;t
+            re-host or ingest anything from it — link out and check for
+            yourself.
+          </p>
+        </div>
+
         <p className="text-sm text-text-secondary mb-4">
           <Link
             href="/mtg"
@@ -213,5 +379,23 @@ export default function MtgMethodologyPage() {
 
       <SiteFooter />
     </main>
+  );
+}
+
+function Th({
+  children,
+  className = "",
+  wide = false,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  wide?: boolean;
+}) {
+  return (
+    <th
+      className={`${wide ? "px-3" : "px-2"} py-2.5 font-mono text-[10px] uppercase tracking-widest text-text-secondary font-medium ${className}`}
+    >
+      {children}
+    </th>
   );
 }
