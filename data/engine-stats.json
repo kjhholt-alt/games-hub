@@ -1,0 +1,678 @@
+{
+  "schema": "buildkit-cube-engine-stats-artifact@1",
+  "generated_utc": "2026-08-01T21:04:26Z",
+  "week_label": "Week 2 -- Innistrad",
+  "evidence_class": "rules_engine",
+  "engine": {
+    "name": "Card-Forge",
+    "version": "2.0.14-SNAPSHOT-07.26",
+    "jar_sha256": "daa63959f2b4cbdf59bf0a9c2d161f7e1ce7f1e41883069d576a95e34cef3107"
+  },
+  "seed_sets": 19,
+  "source_receipt_dirs": [
+    "cube-receipts-hardened",
+    "cube-receipts-s2",
+    "cube-receipts-s3",
+    "cube-receipts-s4",
+    "cube-receipts-s5",
+    "cube-receipts-s6",
+    "cube-receipts-s7",
+    "cube-receipts-s8",
+    "cube-receipts-s9",
+    "cube-receipts-s10",
+    "cube-receipts-s11",
+    "cube-receipts-s12",
+    "cube-receipts-s13",
+    "cube-receipts-s16",
+    "cube-receipts-s17",
+    "cube-receipts-s18",
+    "cube-receipts-s19",
+    "cube-receipts-s20",
+    "cube-receipts-s21"
+  ],
+  "shard_receipt_counts": {
+    "cube-receipts-hardened": 45,
+    "cube-receipts-s2": 45,
+    "cube-receipts-s3": 45,
+    "cube-receipts-s4": 17,
+    "cube-receipts-s5": 45,
+    "cube-receipts-s6": 45,
+    "cube-receipts-s7": 45,
+    "cube-receipts-s8": 45,
+    "cube-receipts-s9": 18,
+    "cube-receipts-s10": 45,
+    "cube-receipts-s11": 45,
+    "cube-receipts-s12": 45,
+    "cube-receipts-s13": 45,
+    "cube-receipts-s16": 45,
+    "cube-receipts-s17": 45,
+    "cube-receipts-s18": 45,
+    "cube-receipts-s19": 45,
+    "cube-receipts-s20": 45,
+    "cube-receipts-s21": 45
+  },
+  "total_shard_receipts": 800,
+  "total_planned_matches": 800,
+  "total_receipted_matches": 201,
+  "total_held_matches": 599,
+  "total_credited_matches": 201,
+  "deck_count": 10,
+  "cards": [
+    {
+      "card": "Adeline, Resplendent Cathar",
+      "engine_games": 604,
+      "engine_wins": 301,
+      "engine_wr": 0.4983,
+      "engine_decks": 4
+    },
+    {
+      "card": "Antiquities on the Loose",
+      "engine_games": 604,
+      "engine_wins": 301,
+      "engine_wr": 0.4983,
+      "engine_decks": 4
+    },
+    {
+      "card": "Baneslayer Angel",
+      "engine_games": 604,
+      "engine_wins": 301,
+      "engine_wr": 0.4983,
+      "engine_decks": 4
+    },
+    {
+      "card": "Banishing Light",
+      "engine_games": 604,
+      "engine_wins": 301,
+      "engine_wr": 0.4983,
+      "engine_decks": 4
+    },
+    {
+      "card": "Benalish Knight-Counselor",
+      "engine_games": 604,
+      "engine_wins": 301,
+      "engine_wr": 0.4983,
+      "engine_decks": 4
+    },
+    {
+      "card": "Cemetery Protector",
+      "engine_games": 604,
+      "engine_wins": 301,
+      "engine_wr": 0.4983,
+      "engine_decks": 4
+    },
+    {
+      "card": "Descend upon the Sinful",
+      "engine_games": 604,
+      "engine_wins": 301,
+      "engine_wr": 0.4983,
+      "engine_decks": 4
+    },
+    {
+      "card": "By Invitation Only",
+      "engine_games": 493,
+      "engine_wins": 259,
+      "engine_wr": 0.5254,
+      "engine_decks": 3
+    },
+    {
+      "card": "Archmage of Runes",
+      "engine_games": 420,
+      "engine_wins": 197,
+      "engine_wr": 0.469,
+      "engine_decks": 4
+    },
+    {
+      "card": "Dream Eater",
+      "engine_games": 420,
+      "engine_wins": 197,
+      "engine_wr": 0.469,
+      "engine_decks": 4
+    },
+    {
+      "card": "Day of Judgment",
+      "engine_games": 405,
+      "engine_wins": 181,
+      "engine_wr": 0.4469,
+      "engine_decks": 3
+    },
+    {
+      "card": "Accursed Marauder",
+      "engine_games": 400,
+      "engine_wins": 219,
+      "engine_wr": 0.5475,
+      "engine_decks": 4
+    },
+    {
+      "card": "Animate Dead",
+      "engine_games": 400,
+      "engine_wins": 219,
+      "engine_wr": 0.5475,
+      "engine_decks": 4
+    },
+    {
+      "card": "Asylum Visitor",
+      "engine_games": 400,
+      "engine_wins": 219,
+      "engine_wr": 0.5475,
+      "engine_decks": 4
+    },
+    {
+      "card": "Blighted Nightmare",
+      "engine_games": 400,
+      "engine_wins": 219,
+      "engine_wr": 0.5475,
+      "engine_decks": 4
+    },
+    {
+      "card": "Blood Fountain",
+      "engine_games": 400,
+      "engine_wins": 219,
+      "engine_wr": 0.5475,
+      "engine_decks": 4
+    },
+    {
+      "card": "Bloodline Keeper",
+      "engine_games": 400,
+      "engine_wins": 219,
+      "engine_wr": 0.5475,
+      "engine_decks": 4
+    },
+    {
+      "card": "Bone Shards",
+      "engine_games": 400,
+      "engine_wins": 219,
+      "engine_wr": 0.5475,
+      "engine_decks": 4
+    },
+    {
+      "card": "Deep Analysis",
+      "engine_games": 351,
+      "engine_wins": 169,
+      "engine_wr": 0.4815,
+      "engine_decks": 3
+    },
+    {
+      "card": "Dungeon Geists",
+      "engine_games": 351,
+      "engine_wins": 169,
+      "engine_wr": 0.4815,
+      "engine_decks": 3
+    },
+    {
+      "card": "Vein Ripper",
+      "engine_games": 341,
+      "engine_wins": 180,
+      "engine_wr": 0.5279,
+      "engine_decks": 3
+    },
+    {
+      "card": "Bitter Triumph",
+      "engine_games": 327,
+      "engine_wins": 187,
+      "engine_wr": 0.5719,
+      "engine_decks": 3
+    },
+    {
+      "card": "Bloodvial Purveyor",
+      "engine_games": 327,
+      "engine_wins": 187,
+      "engine_wr": 0.5719,
+      "engine_decks": 3
+    },
+    {
+      "card": "Cryptcaller Chariot",
+      "engine_games": 327,
+      "engine_wins": 187,
+      "engine_wr": 0.5719,
+      "engine_decks": 3
+    },
+    {
+      "card": "Abrade",
+      "engine_games": 305,
+      "engine_wins": 131,
+      "engine_wr": 0.4295,
+      "engine_decks": 4
+    },
+    {
+      "card": "Alchemist's Greeting",
+      "engine_games": 305,
+      "engine_wins": 131,
+      "engine_wr": 0.4295,
+      "engine_decks": 4
+    },
+    {
+      "card": "Anger of the Gods",
+      "engine_games": 305,
+      "engine_wins": 131,
+      "engine_wr": 0.4295,
+      "engine_decks": 4
+    },
+    {
+      "card": "Anguished Recollection",
+      "engine_games": 305,
+      "engine_wins": 131,
+      "engine_wr": 0.4295,
+      "engine_decks": 4
+    },
+    {
+      "card": "Anje's Ravager",
+      "engine_games": 305,
+      "engine_wins": 131,
+      "engine_wr": 0.4295,
+      "engine_decks": 4
+    },
+    {
+      "card": "Ashling, Flame Dancer",
+      "engine_games": 305,
+      "engine_wins": 131,
+      "engine_wr": 0.4295,
+      "engine_decks": 4
+    },
+    {
+      "card": "Blazing Rootwalla",
+      "engine_games": 305,
+      "engine_wins": 131,
+      "engine_wr": 0.4295,
+      "engine_decks": 4
+    },
+    {
+      "card": "Chomping Mastasaur",
+      "engine_games": 305,
+      "engine_wins": 131,
+      "engine_wr": 0.4295,
+      "engine_decks": 4
+    },
+    {
+      "card": "Cathar Commando",
+      "engine_games": 294,
+      "engine_wins": 139,
+      "engine_wr": 0.4728,
+      "engine_decks": 2
+    },
+    {
+      "card": "Clarion Spirit",
+      "engine_games": 294,
+      "engine_wins": 139,
+      "engine_wr": 0.4728,
+      "engine_decks": 2
+    },
+    {
+      "card": "Callous Dismissal",
+      "engine_games": 284,
+      "engine_wins": 137,
+      "engine_wr": 0.4824,
+      "engine_decks": 2
+    },
+    {
+      "card": "Chart a Course",
+      "engine_games": 284,
+      "engine_wins": 137,
+      "engine_wr": 0.4824,
+      "engine_decks": 2
+    },
+    {
+      "card": "Chromatic Sphere",
+      "engine_games": 284,
+      "engine_wins": 137,
+      "engine_wr": 0.4824,
+      "engine_decks": 2
+    },
+    {
+      "card": "Chromatic Star",
+      "engine_games": 284,
+      "engine_wins": 137,
+      "engine_wr": 0.4824,
+      "engine_decks": 2
+    },
+    {
+      "card": "Clone Crafter",
+      "engine_games": 284,
+      "engine_wins": 137,
+      "engine_wr": 0.4824,
+      "engine_decks": 2
+    },
+    {
+      "card": "Rise from the Tides",
+      "engine_games": 283,
+      "engine_wins": 124,
+      "engine_wr": 0.4382,
+      "engine_decks": 2
+    },
+    {
+      "card": "Blood Artist",
+      "engine_games": 268,
+      "engine_wins": 148,
+      "engine_wr": 0.5522,
+      "engine_decks": 2
+    },
+    {
+      "card": "Aftermath Analyst",
+      "engine_games": 263,
+      "engine_wins": 148,
+      "engine_wr": 0.5627,
+      "engine_decks": 4
+    },
+    {
+      "card": "Augur of Autumn",
+      "engine_games": 263,
+      "engine_wins": 148,
+      "engine_wr": 0.5627,
+      "engine_decks": 4
+    },
+    {
+      "card": "Avabruck Caretaker",
+      "engine_games": 263,
+      "engine_wins": 148,
+      "engine_wr": 0.5627,
+      "engine_decks": 4
+    },
+    {
+      "card": "Balustrade Wurm",
+      "engine_games": 263,
+      "engine_wins": 148,
+      "engine_wr": 0.5627,
+      "engine_decks": 4
+    },
+    {
+      "card": "Birds of Paradise",
+      "engine_games": 263,
+      "engine_wins": 148,
+      "engine_wr": 0.5627,
+      "engine_decks": 4
+    },
+    {
+      "card": "Boon Satyr",
+      "engine_games": 263,
+      "engine_wins": 148,
+      "engine_wr": 0.5627,
+      "engine_decks": 4
+    },
+    {
+      "card": "Kogla, the Titan Ape",
+      "engine_games": 263,
+      "engine_wins": 148,
+      "engine_wr": 0.5627,
+      "engine_decks": 4
+    },
+    {
+      "card": "Markov Enforcer",
+      "engine_games": 251,
+      "engine_wins": 106,
+      "engine_wr": 0.4223,
+      "engine_decks": 3
+    },
+    {
+      "card": "Avacyn's Judgment",
+      "engine_games": 232,
+      "engine_wins": 99,
+      "engine_wr": 0.4267,
+      "engine_decks": 3
+    },
+    {
+      "card": "Betrayer's Bargain",
+      "engine_games": 232,
+      "engine_wins": 99,
+      "engine_wr": 0.4267,
+      "engine_decks": 3
+    },
+    {
+      "card": "Burst Lightning",
+      "engine_games": 232,
+      "engine_wins": 99,
+      "engine_wr": 0.4267,
+      "engine_decks": 3
+    },
+    {
+      "card": "Borrowed Time",
+      "engine_games": 214,
+      "engine_wins": 96,
+      "engine_wr": 0.4486,
+      "engine_decks": 1
+    },
+    {
+      "card": "Bygone Bishop",
+      "engine_games": 214,
+      "engine_wins": 96,
+      "engine_wr": 0.4486,
+      "engine_decks": 1
+    },
+    {
+      "card": "Cemetery Illuminator",
+      "engine_games": 206,
+      "engine_wins": 101,
+      "engine_wr": 0.4903,
+      "engine_decks": 3
+    },
+    {
+      "card": "Chrome Host Seedshark",
+      "engine_games": 206,
+      "engine_wins": 101,
+      "engine_wr": 0.4903,
+      "engine_decks": 3
+    },
+    {
+      "card": "Blood Operative",
+      "engine_games": 201,
+      "engine_wins": 99,
+      "engine_wr": 0.4925,
+      "engine_decks": 3
+    },
+    {
+      "card": "Champion of Dusk",
+      "engine_games": 201,
+      "engine_wins": 99,
+      "engine_wr": 0.4925,
+      "engine_decks": 3
+    },
+    {
+      "card": "Anguished Unmaking",
+      "engine_games": 199,
+      "engine_wins": 120,
+      "engine_wr": 0.603,
+      "engine_decks": 1
+    },
+    {
+      "card": "Bruna, the Fading Light",
+      "engine_games": 199,
+      "engine_wins": 120,
+      "engine_wr": 0.603,
+      "engine_decks": 1
+    },
+    {
+      "card": "Cerise, Slayer of Fear",
+      "engine_games": 199,
+      "engine_wins": 120,
+      "engine_wr": 0.603,
+      "engine_decks": 1
+    },
+    {
+      "card": "Brimstone Volley",
+      "engine_games": 194,
+      "engine_wins": 89,
+      "engine_wr": 0.4588,
+      "engine_decks": 3
+    },
+    {
+      "card": "Burn Down the House",
+      "engine_games": 194,
+      "engine_wins": 89,
+      "engine_wr": 0.4588,
+      "engine_decks": 3
+    },
+    {
+      "card": "Bloodthirsty Adversary",
+      "engine_games": 178,
+      "engine_wins": 74,
+      "engine_wr": 0.4157,
+      "engine_decks": 2
+    },
+    {
+      "card": "Cankerbloom",
+      "engine_games": 150,
+      "engine_wins": 84,
+      "engine_wr": 0.56,
+      "engine_decks": 2
+    },
+    {
+      "card": "Cackling Observer",
+      "engine_games": 128,
+      "engine_wins": 67,
+      "engine_wr": 0.5234,
+      "engine_decks": 2
+    },
+    {
+      "card": "Doom Whisperer",
+      "engine_games": 128,
+      "engine_wins": 67,
+      "engine_wr": 0.5234,
+      "engine_decks": 2
+    },
+    {
+      "card": "Archangel Avacyn",
+      "engine_games": 111,
+      "engine_wins": 42,
+      "engine_wr": 0.3784,
+      "engine_decks": 1
+    },
+    {
+      "card": "Ark of Hunger",
+      "engine_games": 111,
+      "engine_wins": 42,
+      "engine_wr": 0.3784,
+      "engine_decks": 1
+    },
+    {
+      "card": "Avacyn's Pilgrim",
+      "engine_games": 80,
+      "engine_wins": 43,
+      "engine_wr": 0.5375,
+      "engine_decks": 1
+    },
+    {
+      "card": "Coldsteel Heart",
+      "engine_games": 80,
+      "engine_wins": 43,
+      "engine_wr": 0.5375,
+      "engine_decks": 1
+    },
+    {
+      "card": "Gisela, the Broken Blade",
+      "engine_games": 80,
+      "engine_wins": 43,
+      "engine_wr": 0.5375,
+      "engine_decks": 1
+    },
+    {
+      "card": "Hedge Shredder",
+      "engine_games": 80,
+      "engine_wins": 43,
+      "engine_wr": 0.5375,
+      "engine_decks": 1
+    },
+    {
+      "card": "Anje, Maid of Dishonor",
+      "engine_games": 73,
+      "engine_wins": 32,
+      "engine_wr": 0.4384,
+      "engine_decks": 1
+    },
+    {
+      "card": "Bloodhall Priest",
+      "engine_games": 73,
+      "engine_wins": 32,
+      "engine_wr": 0.4384,
+      "engine_decks": 1
+    },
+    {
+      "card": "Applied Geometry",
+      "engine_games": 70,
+      "engine_wins": 41,
+      "engine_wr": 0.5857,
+      "engine_decks": 1
+    },
+    {
+      "card": "Eccentric Farmer",
+      "engine_games": 70,
+      "engine_wins": 41,
+      "engine_wr": 0.5857,
+      "engine_decks": 1
+    },
+    {
+      "card": "Geralf's Masterpiece",
+      "engine_games": 70,
+      "engine_wins": 41,
+      "engine_wr": 0.5857,
+      "engine_decks": 1
+    },
+    {
+      "card": "God-Eternal Kefnet",
+      "engine_games": 70,
+      "engine_wins": 41,
+      "engine_wr": 0.5857,
+      "engine_decks": 1
+    },
+    {
+      "card": "Champion of the Perished",
+      "engine_games": 69,
+      "engine_wins": 28,
+      "engine_wr": 0.4058,
+      "engine_decks": 1
+    },
+    {
+      "card": "Cursecloth Wrappings",
+      "engine_games": 69,
+      "engine_wins": 28,
+      "engine_wr": 0.4058,
+      "engine_decks": 1
+    },
+    {
+      "card": "Captain Howler, Sea Scourge",
+      "engine_games": 67,
+      "engine_wins": 32,
+      "engine_wr": 0.4776,
+      "engine_decks": 1
+    },
+    {
+      "card": "Chain Lightning",
+      "engine_games": 67,
+      "engine_wins": 32,
+      "engine_wr": 0.4776,
+      "engine_decks": 1
+    },
+    {
+      "card": "Binding the Old Gods",
+      "engine_games": 59,
+      "engine_wins": 39,
+      "engine_wr": 0.661,
+      "engine_decks": 1
+    },
+    {
+      "card": "Lumra, Bellow of the Woods",
+      "engine_games": 59,
+      "engine_wins": 39,
+      "engine_wr": 0.661,
+      "engine_decks": 1
+    },
+    {
+      "card": "Arlinn Kord",
+      "engine_games": 54,
+      "engine_wins": 25,
+      "engine_wr": 0.463,
+      "engine_decks": 1
+    },
+    {
+      "card": "Arlinn, the Pack's Hope",
+      "engine_games": 54,
+      "engine_wins": 25,
+      "engine_wr": 0.463,
+      "engine_decks": 1
+    },
+    {
+      "card": "Halana and Alena, Partners",
+      "engine_games": 54,
+      "engine_wins": 25,
+      "engine_wr": 0.463,
+      "engine_decks": 1
+    }
+  ]
+}

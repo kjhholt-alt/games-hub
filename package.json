@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "python scripts/merge_cube_engine_stats.py",
     "build": "next build",
     "start": "next start",
     "type-check": "tsc --noEmit",

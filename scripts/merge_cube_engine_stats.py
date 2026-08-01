@@ -21,12 +21,29 @@ real data behind it), upgrades that row's basis to "forge_engine" -- never
 touching a row that already carries real 17lands data or a Powered
 Cube/cross-set prior.
 
-Input: the aggregate artifact from mtg-forge-shard/aggregate_cube_cards.py
-(per-card {engine_games, engine_wins, engine_wr, engine_decks} computed
-strictly from receipted Card-Forge matches). Raw match receipts stay in
-mtg-forge-shard -- this script never copies them into the web payload.
+Input: data/engine-stats.json by default -- games-hub's OWN committed source
+artifact (gl-0600), built by scripts/build_engine_stats_artifact.py from
+mtg-forge-shard's aggregate_cube_cards.py output. Committing this artifact
+INSIDE games-hub (rather than only ever reading the sibling mtg-forge-shard
+checkout live) is the whole fix for the failure mode this script's history
+warns about: a from-scratch publisher refresh of mtg-draft.json wipes
+cube.engine_stats because it doesn't know that block exists, and previously
+there was no committed record in this repo to re-merge from afterward. Now
+there is -- this script is wired into `npm run build` (see package.json's
+"prebuild") so every build re-applies it automatically. Raw match receipts
+still stay in mtg-forge-shard -- this script never copies them into the web
+payload, only the aggregated numbers.
 
-Usage: py scripts/merge_cube_engine_stats.py [path/to/cube-engine-stats.json]
+Fails CLOSED (skips the merge, exits 0, leaves the payload byte-for-byte
+untouched) rather than applying stale evidence, whenever:
+  - public/mtg-draft.json has no `cube` module at all, or
+  - the artifact's `week_label` doesn't match the live payload's
+    `cube.week_label` -- the cube's card pool rotates weekly, so an artifact
+    aggregated against a prior week's pool must never be silently reapplied
+    to a different week's rows; re-run build_engine_stats_artifact.py against
+    the new week first.
+
+Usage: py scripts/merge_cube_engine_stats.py [path/to/engine-stats.json]
 """
 
 from __future__ import annotations
@@ -85,7 +102,7 @@ def main() -> int:
     artifact_path = (
         Path(sys.argv[1]).resolve()
         if len(sys.argv) > 1
-        else ROOT.parent / "mtg-forge-shard" / "cube-engine-stats.json"
+        else ROOT / "data" / "engine-stats.json"
     )
     payload_path = ROOT / "public" / "mtg-draft.json"
 
@@ -94,7 +111,21 @@ def main() -> int:
 
     cube = payload.get("cube")
     if not cube:
-        raise SystemExit("mtg-draft.json has no cube module -- nothing to merge into")
+        print(
+            "merge_cube_engine_stats: mtg-draft.json has no cube module -- "
+            "skipping (fail-closed, payload left untouched)"
+        )
+        return 0
+
+    if artifact["week_label"] != cube["week_label"]:
+        print(
+            "merge_cube_engine_stats: artifact week_label "
+            f"{artifact['week_label']!r} != live cube week_label "
+            f"{cube['week_label']!r} -- skipping (fail-closed, payload left "
+            "untouched); re-run build_engine_stats_artifact.py against the "
+            "current week's receipts first"
+        )
+        return 0
 
     card_index = {c["card"]: c for c in artifact["cards"]}
 
