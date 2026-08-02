@@ -188,6 +188,89 @@ test.describe("/mtg/league — MTG Proving Grounds", () => {
     await expect(section.getByText(/never .this deck is stronger/)).toBeVisible();
   });
 
+  test("six-seed combined standings match the published receipt", async ({ page, request }) => {
+    const response = await request.get("/mtg-proving-grounds-forge-combined.json");
+    expect(response.ok()).toBeTruthy();
+    const combined = await response.json();
+
+    // This is the one payload on the page allowed to say "receipted" instead
+    // of "sample" or "provisional" -- only because coverage is complete.
+    expect(combined.status).toBe("receipted");
+    expect(combined.evidence_class).toBe("rules_engine");
+    expect(combined.coverage_complete).toBe(true);
+    expect(combined.held_match_count).toBe(0);
+    expect(combined.unattributed_match_count).toBe(0);
+    expect(combined.promoted_match_count).toBe(combined.planned_match_count);
+    expect(combined.shard_count).toBeGreaterThanOrEqual(2);
+    expect(combined.seed_sets).toHaveLength(combined.shard_count);
+    expect(combined.matches).toHaveLength(combined.promoted_match_count);
+    expect(combined.table.length).toBeGreaterThan(0);
+
+    // Every deck played every other deck exactly once per shard -- an even,
+    // complete round robin repeated across every seed.
+    const expectedMatchesPerDeck = (combined.table.length - 1) * combined.shard_count;
+    for (const row of combined.table) {
+      expect(row.matches).toBe(expectedMatchesPerDeck);
+      expect(row.match_wins + row.match_losses).toBe(row.matches);
+    }
+
+    // Every match receipt traces to a real hash, and its two decks are two of
+    // the ranked decks in the table.
+    const rankedIds = new Set(combined.table.map((row: { deck_id: string }) => row.deck_id));
+    for (const match of combined.matches) {
+      expect(match.receipt_hash).toMatch(/^[0-9a-f]{64}$/);
+      expect(match.normalized_repeat).toBe(true);
+      expect(rankedIds.has(match.deck_a_id)).toBe(true);
+      expect(rankedIds.has(match.deck_b_id)).toBe(true);
+      expect([match.deck_a_id, match.deck_b_id]).toContain(match.winner_deck_id);
+    }
+
+    await expect(
+      page.getByRole("heading", {
+        name: `${combined.promoted_match_count} of ${combined.planned_match_count} matches receipted across ${combined.shard_count} seeds`,
+      })
+    ).toBeVisible();
+
+    const section = page.locator("section[aria-labelledby='forge-combined-title']");
+    for (const row of combined.table) {
+      await expect(section.locator(`a[href="/mtg/league/receipts/${row.deck_id}"]`).first()).toBeVisible();
+    }
+  });
+
+  test("every combined standings score links to a receipt drill-down", async ({ page, request }) => {
+    const response = await request.get("/mtg-proving-grounds-forge-combined.json");
+    const combined = await response.json();
+    const firstDeckId = combined.table[0].deck_id;
+
+    const section = page.locator("section[aria-labelledby='forge-combined-title']");
+    const link = section.locator(`a[href="/mtg/league/receipts/${firstDeckId}"]`).first();
+    await expect(link).toBeVisible();
+    await link.click();
+
+    await expect(page).toHaveURL(`/mtg/league/receipts/${firstDeckId}`);
+    const row = combined.table.find((r: { deck_id: string }) => r.deck_id === firstDeckId);
+    await expect(
+      page.getByText(`${row.match_wins}-${row.match_losses}`, { exact: true }).first()
+    ).toBeVisible();
+    const matchesForDeck = combined.matches.filter(
+      (m: { deck_a_id: string; deck_b_id: string }) =>
+        m.deck_a_id === firstDeckId || m.deck_b_id === firstDeckId
+    );
+    expect(matchesForDeck).toHaveLength(row.matches);
+    // Every row on the drill-down page carries a real receipt hash prefix.
+    await expect(page.getByText(matchesForDeck[0].receipt_hash.slice(0, 12))).toBeVisible();
+  });
+
+  test("why these numbers are different explains the three evidence tiers", async ({ page }) => {
+    const section = page.locator("section[aria-labelledby='numbers-differ-title']");
+    await expect(section.getByText("Engine-receipted", { exact: false })).toBeVisible();
+    await expect(section.getByText("Crowd telemetry", { exact: false })).toBeVisible();
+    await expect(section.getByText("Externals (cite-only)", { exact: false })).toBeVisible();
+    await expect(
+      page.getByRole("heading", { name: "Three kinds of evidence on this page, never mixed" })
+    ).toBeVisible();
+  });
+
   test("Cube Sealed standings match the published receipt", async ({ page, request }) => {
     const response = await request.get("/mtg-proving-grounds-cube-standings.json");
     expect(response.ok()).toBeTruthy();

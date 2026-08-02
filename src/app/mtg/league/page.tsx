@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, BookOpen, CheckCircle2, ExternalLink, FileJson, ShieldAlert, Swords } from "lucide-react";
+import { ArrowLeft, BookOpen, CheckCircle2, ExternalLink, FileJson, ShieldAlert, Swords, Microscope } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MtgLeagueObservatory } from "@/components/MtgLeagueObservatory";
 import {
   getMtgForgeAgreement,
+  getMtgForgeCombined,
   getMtgForgeCubeStandings,
   getMtgForgeExport,
   getMtgForgeMatch,
@@ -67,6 +68,7 @@ export default function MtgLeaguePage() {
   // more than others. Saying so is the difference between a partial table and a
   // misleading one.
   const agreement = getMtgForgeAgreement();
+  const combined = getMtgForgeCombined();
   const cubeStandings = getMtgForgeCubeStandings();
   const matchesPlayed = standings.table.map((row) => row.matches);
   const shardIsUneven =
@@ -112,7 +114,12 @@ export default function MtgLeaguePage() {
           </strong>{" "}
           real-rules Brawl matches, each reproduced twice
           {standings.coverage_complete ? " — the full round robin" : ""}. Those receipts are scored separately
-          and are never mixed into the synthetic standings.
+          and are never mixed into the synthetic standings.{" "}
+          <strong className="font-medium text-amber">This sample stays sample permanently, by design</strong>:
+          its twenty fixture participants aren&rsquo;t the ten real decks Forge plays, so no volume of real
+          receipts could ever honestly cover this specific standings table — relabeling it would be exactly the
+          fabrication this league refuses to do. The real, receipted evidence lives in the sections below
+          instead.
         </p>
 
         <div className="mb-8 flex flex-wrap gap-2 font-mono text-[10px]">
@@ -293,10 +300,21 @@ export default function MtgLeaguePage() {
                   <span className="font-mono text-[10px] tabular-nums text-text-secondary sm:text-right">
                     {row.matches}
                   </span>
-                  <span className="font-mono text-[10px] tabular-nums sm:text-right">
-                    <span className="text-green">{row.match_wins}</span>
-                    <span className="text-text-secondary">–{row.match_losses}</span>
-                  </span>
+                  {combined ? (
+                    <Link
+                      href={`/mtg/league/receipts/${row.deck_id}`}
+                      className="group font-mono text-[10px] tabular-nums sm:text-right"
+                      title="Open receipt drill-down"
+                    >
+                      <span className="text-green group-hover:underline">{row.match_wins}</span>
+                      <span className="text-text-secondary group-hover:underline">–{row.match_losses}</span>
+                    </Link>
+                  ) : (
+                    <span className="font-mono text-[10px] tabular-nums sm:text-right">
+                      <span className="text-green">{row.match_wins}</span>
+                      <span className="text-text-secondary">–{row.match_losses}</span>
+                    </span>
+                  )}
                   <span className="font-mono text-[10px] tabular-nums sm:text-right">
                     <span className="text-foreground">{row.game_wins}</span>
                     <span className="text-text-secondary">–{row.game_losses}</span>
@@ -310,6 +328,9 @@ export default function MtgLeaguePage() {
             <ShieldAlert className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
             <p>
               {standings.coverage_warning} {standings.promotion_rule}
+              {combined
+                ? ` Every score in this shard links to a receipt drill-down (click the Match W–L column) with the full six-seed combined history.`
+                : ""}
               {shardIsUneven
                 ? ` Matches are drawn in plan order, so decks here have played between ${Math.min(
                     ...matchesPlayed
@@ -328,6 +349,132 @@ export default function MtgLeaguePage() {
                 ? ` ${standings.unattributed_match_count} promoted match(es) could not be tied to a seat and were credited to nobody.`
                 : ""}
             </p>
+          </div>
+        </section>
+
+        {combined ? (
+          <section
+            className="mt-6 overflow-hidden rounded-lg border border-green/40 bg-surface"
+            aria-labelledby="forge-combined-title"
+          >
+            <div className="flex flex-col gap-4 border-b border-border p-5 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <p className="font-mono text-[9px] uppercase tracking-[0.18em] text-green">
+                  Six-seed combined · {combined.status}
+                </p>
+                <h2 id="forge-combined-title" className="mtg-display mt-1 text-2xl">
+                  {combined.promoted_match_count} of {combined.planned_match_count} matches receipted across{" "}
+                  {combined.shard_count} seeds
+                </h2>
+                <p className="mt-2 max-w-2xl text-sm leading-relaxed text-text-secondary">
+                  The shard above is one seeded round robin. This sums every deck&rsquo;s receipted games across
+                  all {combined.shard_count} independently-seeded round robins run so far (
+                  {combined.seed_sets.map((s) => s.seed).join(", ")}) — {combined.promoted_match_count} real
+                  Card-Forge matches, each reproduced twice before counting. Coverage is even and complete, so
+                  this table is the only one on this page whose status reads{" "}
+                  <strong className="font-medium text-green">receipted</strong> rather than provisional or
+                  sample. Click any score to open that deck&rsquo;s full receipt drill-down.
+                </p>
+              </div>
+              <a
+                href="/mtg-proving-grounds-forge-combined.json"
+                className="inline-flex shrink-0 items-center gap-1.5 rounded border border-green/40 px-2.5 py-1.5 font-mono text-[10px] text-green transition-colors hover:border-green/70"
+              >
+                <FileJson className="h-3 w-3" />
+                combined {combined.receipt_hash.slice(0, 12)}
+              </a>
+            </div>
+
+            <div className="hidden gap-3 border-b border-border px-4 py-2 font-mono text-[9px] uppercase tracking-wide text-text-secondary sm:grid sm:grid-cols-[34px_minmax(0,1fr)_70px_86px_86px]">
+              <span>#</span>
+              <span>Deck</span>
+              <span className="text-right">Matches</span>
+              <span className="text-right">Match W–L</span>
+              <span className="text-right">Game W–L</span>
+            </div>
+            <div className="divide-y divide-border/70">
+              {combined.table.map((row, index) => (
+                <div
+                  key={row.deck_id}
+                  className="grid gap-2 px-4 py-3 sm:grid-cols-[34px_minmax(0,1fr)_70px_86px_86px] sm:items-center sm:gap-3"
+                >
+                  <span className="hidden font-mono text-xs tabular-nums text-text-secondary sm:block">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <Link
+                    href={`/mtg/league/receipts/${row.deck_id}`}
+                    className="min-w-0 truncate text-sm font-medium transition-colors hover:text-brass"
+                  >
+                    {nameByDeckId.get(row.deck_id) ?? row.deck_id}
+                    <span className="ml-1.5 inline-flex align-middle">
+                      <Microscope className="h-3 w-3 text-text-secondary" aria-hidden />
+                    </span>
+                  </Link>
+                  <span className="font-mono text-[10px] tabular-nums text-text-secondary sm:text-right">
+                    {row.matches}
+                  </span>
+                  <Link
+                    href={`/mtg/league/receipts/${row.deck_id}`}
+                    className="group font-mono text-[10px] tabular-nums sm:text-right"
+                    title="Open receipt drill-down"
+                  >
+                    <span className="text-green group-hover:underline">{row.match_wins}</span>
+                    <span className="text-text-secondary group-hover:underline">–{row.match_losses}</span>
+                  </Link>
+                  <span className="font-mono text-[10px] tabular-nums sm:text-right">
+                    <span className="text-foreground">{row.game_wins}</span>
+                    <span className="text-text-secondary">–{row.game_losses}</span>
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex items-start gap-3 border-t border-border bg-amber-dim p-4 text-xs leading-relaxed text-amber">
+              <ShieldAlert className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
+              <p>{combined.limitations.join(" ")}</p>
+            </div>
+          </section>
+        ) : null}
+
+        <section
+          className="mt-6 overflow-hidden rounded-lg border border-brass/30 bg-surface"
+          aria-labelledby="numbers-differ-title"
+        >
+          <div className="p-5 sm:p-6">
+            <p className="font-mono text-[9px] uppercase tracking-[0.18em] text-brass">Why these numbers are different</p>
+            <h2 id="numbers-differ-title" className="mtg-display mt-1 text-xl">
+              Three kinds of evidence on this page, never mixed
+            </h2>
+            <dl className="mt-4 space-y-3 text-sm leading-relaxed text-text-secondary">
+              <div>
+                <dt className="font-medium text-foreground">Engine-receipted (the standings above)</dt>
+                <dd>
+                  Real Card-Forge rules-engine matches we ran ourselves, twice each, on a pinned engine jar and
+                  pinned decklists. Every score traces to a receipt hash you can open — that&rsquo;s what the
+                  drill-down links go to. Small, honest sample; zero guessing.
+                </dd>
+              </div>
+              <div>
+                <dt className="font-medium text-foreground">Crowd telemetry (what we don&rsquo;t have)</dt>
+                <dd>
+                  Sites like untapped.gg compute win rates from aggregated real-player match telemetry at a
+                  scale we can&rsquo;t reproduce — thousands of live Arena games a day. We have zero player-match
+                  telemetry and won&rsquo;t publish a win-rate number at that scale we can&rsquo;t back with a
+                  receipt, so none of the numbers above claim to be that.
+                </dd>
+              </div>
+              <div>
+                <dt className="font-medium text-foreground">Externals (cite-only)</dt>
+                <dd>
+                  untapped.gg, MTGGoldfish, EDHREC, and similar trackers are linked by name wherever they have
+                  real telemetry we don&rsquo;t — never scraped, never re-hosted as our own numbers. See{" "}
+                  <Link href="/mtg/methodology#us-vs-untapped" className="text-brass hover:text-brass-bright">
+                    Us vs. untapped.gg
+                  </Link>{" "}
+                  for the full comparison.
+                </dd>
+              </div>
+            </dl>
           </div>
         </section>
 
@@ -400,9 +547,18 @@ export default function MtgLeaguePage() {
                     {String(index + 1).padStart(2, "0")}
                   </span>
                   <div className="min-w-0">
-                    <span className="truncate text-sm font-medium">
-                      {nameByDeckId.get(row.deck_id) ?? row.deck_id}
-                    </span>
+                    {combined ? (
+                      <Link
+                        href={`/mtg/league/receipts/${row.deck_id}`}
+                        className="truncate text-sm font-medium transition-colors hover:text-brass"
+                      >
+                        {nameByDeckId.get(row.deck_id) ?? row.deck_id}
+                      </Link>
+                    ) : (
+                      <span className="truncate text-sm font-medium">
+                        {nameByDeckId.get(row.deck_id) ?? row.deck_id}
+                      </span>
+                    )}
                     <p className="mt-0.5 truncate font-mono text-[9px] text-text-secondary">
                       {row.reproducible_pairings}/{row.pairings} pairings reproduced
                     </p>

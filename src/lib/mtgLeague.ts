@@ -266,6 +266,72 @@ export interface MtgForgeAgreementPayload {
   receipt_hash: string;
 }
 
+/**
+ * Six-seed combined Brawl standings: every one of the 45 pairings replayed
+ * across all six seeded round robins (270 matches total), summed per deck.
+ * Additive to -forge-standings.json (single shard) and -forge-agreement.json
+ * (cross-seed reproducibility, not summed records) -- this is the third,
+ * independent view: "add up every receipted game this deck played."
+ * status is only ever "receipted" because the builder script
+ * (scripts/build-forge-combined-standings.mjs) verifies full, even coverage
+ * across every deck before it will write the file at all.
+ */
+export interface MtgForgeCombinedMatch {
+  match_id: string;
+  shard: string;
+  seed: number;
+  executed_utc: string;
+  deck_a_id: string;
+  deck_b_id: string;
+  winner_deck_id: string;
+  loser_deck_id: string;
+  game_count: number;
+  games: Array<{ game: number; winner_deck_id: string; turns: number | null }>;
+  game_wins: Record<string, number>;
+  normalized_repeat: boolean;
+  receipt_hash: string;
+}
+
+export interface MtgForgeCombinedPayload {
+  schema: string;
+  status: "receipted";
+  evidence_class: "rules_engine";
+  generated_utc: string;
+  engine: { name: string; version: string; jar_sha256: string };
+  seed_sets: Array<{ shard: string; seed: number; match_count: number }>;
+  shard_count: number;
+  planned_match_count: number;
+  promoted_match_count: number;
+  held_match_count: number;
+  unattributed_match_count: number;
+  coverage_complete: boolean;
+  promotion_rule: string;
+  limitations: string[];
+  table: Array<{
+    deck_id: string;
+    matches: number;
+    match_wins: number;
+    match_losses: number;
+    game_wins: number;
+    game_losses: number;
+    match_win_rate: number;
+  }>;
+  matches: MtgForgeCombinedMatch[];
+  receipt_hash: string;
+}
+
+export function getMtgForgeCombined(): MtgForgeCombinedPayload | null {
+  const file = path.join(
+    process.cwd(),
+    "public",
+    "mtg-proving-grounds-forge-combined.json"
+  );
+  // Absent until the six-shard aggregation has been run; the page must
+  // render without it rather than assume it exists.
+  if (!fs.existsSync(file)) return null;
+  return JSON.parse(fs.readFileSync(file, "utf8")) as MtgForgeCombinedPayload;
+}
+
 export function getMtgForgeAgreement(): MtgForgeAgreementPayload | null {
   const file = path.join(
     process.cwd(),
