@@ -275,7 +275,7 @@ export default function MtgMethodologyPage() {
           <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-brass mb-4">
             The closing audit
           </p>
-          <h2 className="mtg-display text-2xl mb-3">Us vs. untapped.gg</h2>
+          <h2 id="us-vs-untapped" className="mtg-display text-2xl mb-3 scroll-mt-24">Us vs. untapped.gg</h2>
           <p className="text-sm text-text-secondary max-w-2xl mb-6 leading-relaxed">
             Untapped.gg is the largest third-party tracker for Magic: The
             Gathering Arena. Here&rsquo;s the honest side-by-side — where we
