@@ -1,6 +1,12 @@
 import { MtgDraftGradeBadge } from "@/components/MtgDraftGradeBadge";
 import { MtgCardHover } from "@/components/MtgCardHover";
-import { cheatSheetGroups, formatWinRate, type DraftCardRow } from "@/lib/mtgDraftView";
+import {
+  cheatSheetGroups,
+  formatWinRate,
+  isFadedConfidence,
+  priorSourceBasisColor,
+  type DraftCardRow,
+} from "@/lib/mtgDraftView";
 
 /** Lane accents in the hub's desaturated mana tones (same family as the
  * .mtg-spectrum signature rule) — the lane IS the color, no neon. */
@@ -85,7 +91,12 @@ function CheatSheetSection({
             </p>
             <ol className="space-y-1.5">
               {g.rows.map((row, i) => (
-                <li key={row.card} className="flex items-center justify-between gap-2 text-sm">
+                <li
+                  key={row.card}
+                  className={`flex items-center justify-between gap-2 text-sm ${
+                    isFadedConfidence(row.confidence) ? "opacity-60" : ""
+                  }`}
+                >
                   <span className="flex items-center gap-1.5 min-w-0">
                     <span className="text-text-secondary font-mono tabular-nums text-xs w-3 shrink-0">
                       {i + 1}
@@ -95,7 +106,14 @@ function CheatSheetSection({
                     </MtgCardHover>
                   </span>
                   <span className="flex items-center gap-1.5 shrink-0">
-                    <span className="text-[11px] text-text-secondary tabular-nums">
+                    <span
+                      className={`text-[11px] tabular-nums ${
+                        row.prior_source
+                          ? priorSourceBasisColor(row.prior_source)
+                          : "text-text-secondary"
+                      }`}
+                      title={row.basis ?? "17lands live data"}
+                    >
                       {formatWinRate(row.gih_wr)}
                     </span>
                     <MtgDraftGradeBadge grade={row.grade} size="sm" />

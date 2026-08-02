@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, CheckCircle2, ExternalLink, FileJson, ShieldAlert, Swords } from "lucide-react";
+import { ArrowLeft, BookOpen, CheckCircle2, ExternalLink, FileJson, ShieldAlert, Swords } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MtgLeagueObservatory } from "@/components/MtgLeagueObservatory";
@@ -630,7 +630,17 @@ export default function MtgLeaguePage() {
           </div>
         </section>
 
-        <div className="mt-10">
+        <p className="mt-10 text-sm text-text-secondary">
+          <Link
+            href="/mtg/methodology"
+            className="inline-flex items-center gap-1 text-brass hover:text-brass-bright transition-colors"
+          >
+            <BookOpen size={13} className="inline -mt-0.5 mr-1" />
+            Read the full MTG Meta Hub methodology &amp; attribution
+          </Link>
+        </p>
+
+        <div className="mt-6">
           <div className="mtg-spectrum mb-5 w-full opacity-60" aria-hidden />
           <p className="text-xs leading-relaxed text-text-secondary">
             Magic: The Gathering is © Wizards of the Coast. BuildKit is unofficial Fan Content permitted under
