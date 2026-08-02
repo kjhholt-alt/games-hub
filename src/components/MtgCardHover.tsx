@@ -129,6 +129,7 @@ export function MtgCardHover({ cardName, imageUrl, children, className }: MtgCar
             src={imageUrl}
             alt={cardName}
             loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover"
             onError={() => setBroken(true)}
           />

@@ -24,6 +24,8 @@ export function MtgCalendarTable({ rows }: { rows: CalendarRow[] }) {
               <img
                 src={row.icon_svg_uri}
                 alt=""
+                loading="lazy"
+                decoding="async"
                 className="w-3.5 h-3.5 opacity-70"
                 style={{ filter: "invert(1)" }}
               />

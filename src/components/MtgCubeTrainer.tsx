@@ -115,6 +115,7 @@ export function MtgCubeTrainer({ rows }: { rows: CubeCardRow[] }) {
                   src={card.row.image_normal}
                   alt={card.row.card}
                   loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover"
                 />
                 {revealed && (

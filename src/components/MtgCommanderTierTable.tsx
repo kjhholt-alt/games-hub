@@ -173,6 +173,7 @@ function BucketBoard({
                             src={row.art_crop}
                             alt=""
                             loading="lazy"
+                            decoding="async"
                             className="w-11 h-8 rounded object-cover border border-border shrink-0"
                           />
                         )}
