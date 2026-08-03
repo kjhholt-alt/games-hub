@@ -320,6 +320,17 @@ export interface MtgForgeCombinedPayload {
   receipt_hash: string;
 }
 
+/** "cube-azorius" -> "Azorius Cube". The only naming source for the ten
+ * Forge-admitted Cube guild shells -- they have no intake candidate row. */
+export function cubeDeckName(deckId: string): string {
+  const guild = deckId
+    .replace(/^cube-/, "")
+    .split("-")
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
+  return `${guild} Cube`;
+}
+
 export function getMtgForgeCombined(): MtgForgeCombinedPayload | null {
   const file = path.join(
     process.cwd(),
@@ -327,6 +338,25 @@ export function getMtgForgeCombined(): MtgForgeCombinedPayload | null {
     "mtg-proving-grounds-forge-combined.json"
   );
   // Absent until the six-shard aggregation has been run; the page must
+  // render without it rather than assume it exists.
+  if (!fs.existsSync(file)) return null;
+  return JSON.parse(fs.readFileSync(file, "utf8")) as MtgForgeCombinedPayload;
+}
+
+/**
+ * Six-seed combined cube Sealed standings: same shape and same fail-closed
+ * contract as MtgForgeCombinedPayload above (built by
+ * scripts/build-cube-sealed-combined.mjs), scored from the ten guild Cube
+ * shells' Sealed round robins instead of the six Brawl decks. Separate file,
+ * separate deck-id namespace (cube-*) -- never merged into the Brawl table.
+ */
+export function getMtgCubeSealedCombined(): MtgForgeCombinedPayload | null {
+  const file = path.join(
+    process.cwd(),
+    "public",
+    "mtg-proving-grounds-cube-sealed-combined.json"
+  );
+  // Absent until the six-shard cube aggregation has been run; the page must
   // render without it rather than assume it exists.
   if (!fs.existsSync(file)) return null;
   return JSON.parse(fs.readFileSync(file, "utf8")) as MtgForgeCombinedPayload;

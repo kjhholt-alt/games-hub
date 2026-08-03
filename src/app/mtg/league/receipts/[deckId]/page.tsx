@@ -5,6 +5,8 @@ import { ArrowLeft, ExternalLink, FileJson, ShieldAlert } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import {
+  cubeDeckName,
+  getMtgCubeSealedCombined,
   getMtgForgeCombined,
   getMtgIntake,
   type MtgForgeCombinedMatch,
@@ -14,23 +16,37 @@ import { mtgDisplay } from "@/lib/mtgFonts";
 // Same republish cadence as the league page this drills down from.
 export const revalidate = 3600;
 
-// The combined payload only ever covers exactly the ten Forge-admitted
-// decks; a deck id outside that set 404s rather than rendering an empty
-// shell that looks like a hidden receipt.
+// The combined payloads only ever cover exactly the six Forge-admitted Brawl
+// decks and the ten Forge-admitted Cube guild shells; a deck id outside both
+// sets 404s rather than rendering an empty shell that looks like a hidden
+// receipt.
 export const dynamicParams = false;
 
 export function generateStaticParams() {
   const combined = getMtgForgeCombined();
-  if (!combined) return [];
-  return combined.table.map((row) => ({ deckId: row.deck_id }));
+  const cubeCombined = getMtgCubeSealedCombined();
+  return [
+    ...(combined?.table.map((row) => ({ deckId: row.deck_id })) ?? []),
+    ...(cubeCombined?.table.map((row) => ({ deckId: row.deck_id })) ?? []),
+  ];
 }
 
+// Brawl and Cube deck ids never overlap (Cube ids are always "cube-*"), so a
+// deck id resolves to exactly one of the two combined payloads.
 function findRow(deckId: string) {
   const combined = getMtgForgeCombined();
-  if (!combined) return null;
-  const row = combined.table.find((r) => r.deck_id === deckId);
-  if (!row) return null;
-  return { combined, row };
+  if (combined) {
+    const row = combined.table.find((r) => r.deck_id === deckId);
+    if (row) return { combined, row, kind: "brawl" as const };
+  }
+
+  const cubeCombined = getMtgCubeSealedCombined();
+  if (cubeCombined) {
+    const row = cubeCombined.table.find((r) => r.deck_id === deckId);
+    if (row) return { combined: cubeCombined, row, kind: "cube" as const };
+  }
+
+  return null;
 }
 
 export async function generateMetadata({
@@ -41,11 +57,14 @@ export async function generateMetadata({
   const { deckId } = await params;
   const found = findRow(deckId);
   if (!found) return { title: "Receipt not found" };
-  const intake = getMtgIntake();
-  const name = intake.candidates.find((c) => c.id === deckId)?.name ?? deckId;
+  const name =
+    found.kind === "cube"
+      ? cubeDeckName(deckId)
+      : getMtgIntake().candidates.find((c) => c.id === deckId)?.name ?? deckId;
+  const formatLabel = found.kind === "cube" ? "Cube Sealed" : "Brawl";
   return {
-    title: `${name} — Brawl receipt drill-down`,
-    description: `Every Card-Forge Brawl match ${name} played across all six receipted seed shards, with a per-match receipt hash and per-game result.`,
+    title: `${name} — ${formatLabel} receipt drill-down`,
+    description: `Every Card-Forge ${formatLabel} match ${name} played across all six receipted seed shards, with a per-match receipt hash and per-game result.`,
     alternates: {
       canonical: `https://play.buildkit.store/mtg/league/receipts/${deckId}`,
     },
@@ -64,13 +83,18 @@ export default async function MtgLeagueReceiptPage({
   const { deckId } = await params;
   const found = findRow(deckId);
   if (!found) notFound();
-  const { combined, row } = found;
+  const { combined, row, kind } = found;
+  const isCube = kind === "cube";
 
   const intake = getMtgIntake();
   const nameByDeckId = new Map(intake.candidates.map((c) => [c.id, c.name]));
   const sourceByDeckId = new Map(intake.candidates.map((c) => [c.id, c.source_url]));
-  const deckName = nameByDeckId.get(deckId) ?? deckId;
-  const deckSource = sourceByDeckId.get(deckId);
+  const deckName = isCube ? cubeDeckName(deckId) : nameByDeckId.get(deckId) ?? deckId;
+  const deckSource = isCube ? undefined : sourceByDeckId.get(deckId);
+  const formatLabel = isCube ? "Cube Sealed" : "Brawl";
+  const jsonHref = isCube
+    ? "/mtg-proving-grounds-cube-sealed-combined.json"
+    : "/mtg-proving-grounds-forge-combined.json";
 
   const matches = combined.matches
     .filter((m) => m.deck_a_id === deckId || m.deck_b_id === deckId)
@@ -89,7 +113,7 @@ export default async function MtgLeagueReceiptPage({
         </Link>
 
         <p className="mb-2 font-mono text-[11px] uppercase tracking-[0.2em] text-brass">
-          Receipt drill-down · six-seed combined
+          Receipt drill-down · six-seed combined · {formatLabel}
         </p>
         <h1 className="mtg-display mb-3 text-3xl leading-tight sm:text-4xl">{deckName}</h1>
         {deckSource ? (
@@ -139,7 +163,7 @@ export default async function MtgLeagueReceiptPage({
                   className="grid gap-2 px-4 py-3 sm:grid-cols-[1fr_90px_70px_90px_1fr] sm:items-center"
                 >
                   <span className="truncate text-sm font-medium">
-                    {nameByDeckId.get(opponentId) ?? opponentId}
+                    {isCube ? cubeDeckName(opponentId) : nameByDeckId.get(opponentId) ?? opponentId}
                   </span>
                   <span className="font-mono text-[10px] text-text-secondary">
                     {match.shard} · {match.seed}
@@ -173,7 +197,7 @@ export default async function MtgLeagueReceiptPage({
         </div>
 
         <a
-          href="/mtg-proving-grounds-forge-combined.json"
+          href={jsonHref}
           className="mt-4 inline-flex items-center gap-1.5 rounded border border-green/30 px-2.5 py-1.5 font-mono text-[10px] text-green transition-colors hover:border-green/60"
         >
           <FileJson className="h-3 w-3" />

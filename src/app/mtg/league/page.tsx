@@ -5,6 +5,8 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MtgLeagueObservatory } from "@/components/MtgLeagueObservatory";
 import {
+  cubeDeckName,
+  getMtgCubeSealedCombined,
   getMtgForgeAgreement,
   getMtgForgeCombined,
   getMtgForgeCubeStandings,
@@ -25,15 +27,6 @@ export const metadata: Metadata = {
 };
 
 export const revalidate = 3600;
-
-function cubeDeckName(deckId: string) {
-  const guild = deckId
-    .replace(/^cube-/, "")
-    .split("-")
-    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
-    .join(" ");
-  return `${guild} Cube`;
-}
 
 export default function MtgLeaguePage() {
   const payload = getMtgLeague();
@@ -70,6 +63,7 @@ export default function MtgLeaguePage() {
   const agreement = getMtgForgeAgreement();
   const combined = getMtgForgeCombined();
   const cubeStandings = getMtgForgeCubeStandings();
+  const cubeCombined = getMtgCubeSealedCombined();
   const matchesPlayed = standings.table.map((row) => row.matches);
   const shardIsUneven =
     matchesPlayed.length > 1 &&
@@ -699,6 +693,90 @@ export default function MtgLeaguePage() {
             </p>
           </div>
         </section>
+
+        {cubeCombined ? (
+          <section
+            className="mt-6 overflow-hidden rounded-lg border border-green/40 bg-surface"
+            aria-labelledby="cube-combined-title"
+          >
+            <div className="flex flex-col gap-4 border-b border-border p-5 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <p className="font-mono text-[9px] uppercase tracking-[0.18em] text-green">
+                  Six-seed combined · Cube Sealed · {cubeCombined.status}
+                </p>
+                <h2 id="cube-combined-title" className="mtg-display mt-1 text-2xl">
+                  {cubeCombined.promoted_match_count} of {cubeCombined.planned_match_count} Cube matches receipted
+                  across {cubeCombined.shard_count} seeds
+                </h2>
+                <p className="mt-2 max-w-2xl text-sm leading-relaxed text-text-secondary">
+                  The Cube shard above is one seeded Sealed round robin. This sums every guild shell&rsquo;s
+                  receipted games across all {cubeCombined.shard_count} independently-seeded round robins run so
+                  far ({cubeCombined.seed_sets.map((s) => s.seed).join(", ")}) —{" "}
+                  {cubeCombined.promoted_match_count} real Card-Forge Sealed matches, each reproduced twice before
+                  counting. Coverage is even and complete, so this table reads{" "}
+                  <strong className="font-medium text-green">receipted</strong> rather than provisional or sample.
+                  Click any score to open that shell&rsquo;s full receipt drill-down.
+                </p>
+              </div>
+              <a
+                href="/mtg-proving-grounds-cube-sealed-combined.json"
+                className="inline-flex shrink-0 items-center gap-1.5 rounded border border-green/40 px-2.5 py-1.5 font-mono text-[10px] text-green transition-colors hover:border-green/70"
+              >
+                <FileJson className="h-3 w-3" />
+                combined {cubeCombined.receipt_hash.slice(0, 12)}
+              </a>
+            </div>
+
+            <div className="hidden gap-3 border-b border-border px-4 py-2 font-mono text-[9px] uppercase tracking-wide text-text-secondary sm:grid sm:grid-cols-[34px_minmax(0,1fr)_70px_86px_86px]">
+              <span>#</span>
+              <span>Guild shell</span>
+              <span className="text-right">Matches</span>
+              <span className="text-right">Match W–L</span>
+              <span className="text-right">Game W–L</span>
+            </div>
+            <div className="divide-y divide-border/70">
+              {cubeCombined.table.map((row, index) => (
+                <div
+                  key={row.deck_id}
+                  className="grid gap-2 px-4 py-3 sm:grid-cols-[34px_minmax(0,1fr)_70px_86px_86px] sm:items-center sm:gap-3"
+                >
+                  <span className="hidden font-mono text-xs tabular-nums text-text-secondary sm:block">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <Link
+                    href={`/mtg/league/receipts/${row.deck_id}`}
+                    className="min-w-0 truncate text-sm font-medium transition-colors hover:text-brass"
+                  >
+                    {cubeDeckName(row.deck_id)}
+                    <span className="ml-1.5 inline-flex align-middle">
+                      <Microscope className="h-3 w-3 text-text-secondary" aria-hidden />
+                    </span>
+                  </Link>
+                  <span className="font-mono text-[10px] tabular-nums text-text-secondary sm:text-right">
+                    {row.matches}
+                  </span>
+                  <Link
+                    href={`/mtg/league/receipts/${row.deck_id}`}
+                    className="group font-mono text-[10px] tabular-nums sm:text-right"
+                    title="Open receipt drill-down"
+                  >
+                    <span className="text-green group-hover:underline">{row.match_wins}</span>
+                    <span className="text-text-secondary group-hover:underline">–{row.match_losses}</span>
+                  </Link>
+                  <span className="font-mono text-[10px] tabular-nums sm:text-right">
+                    <span className="text-foreground">{row.game_wins}</span>
+                    <span className="text-text-secondary">–{row.game_losses}</span>
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex items-start gap-3 border-t border-border bg-amber-dim p-4 text-xs leading-relaxed text-amber">
+              <ShieldAlert className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
+              <p>{cubeCombined.limitations.join(" ")}</p>
+            </div>
+          </section>
+        ) : null}
 
         <section className="mt-6 overflow-hidden rounded-lg border border-border bg-surface" aria-labelledby="intake-title">
           <div className="flex flex-col gap-4 border-b border-border p-5 sm:flex-row sm:items-end sm:justify-between">
