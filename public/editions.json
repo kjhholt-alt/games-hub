@@ -3,6 +3,770 @@
   "items": [
     {
       "schema": "buildkit-brief/edition@1",
+      "slug": "2026-09-01-public",
+      "edition": "public",
+      "status": "published",
+      "date": "2026-09-01",
+      "title": "BuildKit Brief — Gaming & Tech — September 01, 2026",
+      "subtitle": "What changed this cycle across the games worth your time. Every claim sourced.",
+      "generated_utc": "2026-09-01T13:30:11Z",
+      "sources_count": 17,
+      "total_items": 17,
+      "newsletter": {
+        "subject": "BuildKit Brief — Gaming & Tech — September 01, 2026 — 17 updates",
+        "preview": "Path of Exile 2: 0.5.5 Event League & Duelist Deep Dive · Fan Art Competition Highlights #3 · Counter-Strike 2 Update · There's a new Deadlock mod that syncs your gameplay with your vibrator. You're welcome, I think",
+        "from_name": "BuildKit Brief"
+      },
+      "sections": [
+        {
+          "world_key": "poe2",
+          "world_name": "Path of Exile 2",
+          "emoji": "🔱",
+          "blurb": "Your main ARPG. League state + balance patches move your build.",
+          "items": [
+            {
+              "id": "pathofexile2055eventleagueduelistdeepdive",
+              "headline": "Path of Exile 2: 0.5.5 Event League & Duelist Deep Dive",
+              "summary": "Play the Forbidden Rites Event on September 4 During GGG Live earlier today, we revealed our next 0.5.5 update for Path of Exile 2, releasing September 4 at 1 PM PDT!",
+              "bullets": [],
+              "kind": "patch",
+              "confidence": "confirmed",
+              "published": "2026-08-27T20:14:48Z",
+              "source": {
+                "name": "Path of Exile 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1842212951301197",
+                "stamp": "patch=0.5.5",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.2694490",
+                "source_name": "Path of Exile 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1842212951301197",
+                "stamp": {
+                  "version": null,
+                  "patch": "0.5.5",
+                  "league": null,
+                  "published": "2026-08-27T20:14:48Z",
+                  "last_grounded": "2026-09-01T13:30:11Z",
+                  "detail": {
+                    "appid": 2694490,
+                    "feed": "Community Announcements",
+                    "gid": "1842212951301197"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-09-01T13:30:11Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "fanartcompetitionhighlights3",
+              "headline": "Fan Art Competition Highlights #3",
+              "summary": "We’ve launched the Fan Art Competition a while back, which is inspired by the latest expansions in Path of Exile 1 and Path of Exile 2. Since then, the community has shared plenty of incredible artwork, and we’ve gathered some of the latest highlights to showcase in today’s news post!",
+              "bullets": [],
+              "kind": "news",
+              "confidence": "confirmed",
+              "published": "2026-08-31T22:52:18Z",
+              "source": {
+                "name": "Path of Exile 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1842212951311626",
+                "stamp": "published=2026-08-31T22:52:18Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.2694490",
+                "source_name": "Path of Exile 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1842212951311626",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-08-31T22:52:18Z",
+                  "last_grounded": "2026-09-01T13:30:11Z",
+                  "detail": {
+                    "appid": 2694490,
+                    "feed": "Community Announcements",
+                    "gid": "1842212951311626"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-09-01T13:30:11Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "pathofexile2forbiddenritesfaq",
+              "headline": "Path of Exile 2: Forbidden Rites FAQ",
+              "summary": "Last week, we announced Forbidden Rites, an event league in Path of Exile 2 launching alongside the 0.5.5 patch on September 4th PDT. In this news post, we’ve answered some of the most common questions from our community about the event. Is Duelist in 0.5.5?",
+              "bullets": [],
+              "kind": "news",
+              "confidence": "confirmed",
+              "published": "2026-08-31T00:13:11Z",
+              "source": {
+                "name": "Path of Exile 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1842212951308718",
+                "stamp": "published=2026-08-31T00:13:11Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.2694490",
+                "source_name": "Path of Exile 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1842212951308718",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-08-31T00:13:11Z",
+                  "last_grounded": "2026-09-01T13:30:11Z",
+                  "detail": {
+                    "appid": 2694490,
+                    "feed": "Community Announcements",
+                    "gid": "1842212951308718"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-09-01T13:30:11Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            }
+          ],
+          "rumors": [],
+          "buzz": null,
+          "character": null,
+          "character_note": "",
+          "crosslink": null
+        },
+        {
+          "world_key": "poe1",
+          "world_name": "Path of Exile",
+          "emoji": "⚔️",
+          "blurb": "PoE1 events + league cycle (separate game from PoE2).",
+          "items": [
+            {
+              "id": "fanartcompetitionhighlights3",
+              "headline": "Fan Art Competition Highlights #3",
+              "summary": "We’ve launched the Fan Art Competition a while back, which is inspired by the latest expansions in Path of Exile 1 and Path of Exile 2. Since then, the community has shared plenty of incredible artwork, and we’ve gathered some of the latest highlights to showcase in today’s news post!",
+              "bullets": [],
+              "kind": "news",
+              "confidence": "confirmed",
+              "published": "2026-08-31T22:52:14Z",
+              "source": {
+                "name": "Path of Exile — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1842212951311625",
+                "stamp": "published=2026-08-31T22:52:14Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.238960",
+                "source_name": "Path of Exile — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1842212951311625",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-08-31T22:52:14Z",
+                  "last_grounded": "2026-09-01T13:30:11Z",
+                  "detail": {
+                    "appid": 238960,
+                    "feed": "Community Announcements",
+                    "gid": "1842212951311625"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-09-01T13:30:11Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "pathofexile1exileconqualifiersbeginnextweek",
+              "headline": "Path of Exile 1 ExileCon Qualifiers Begin Next Week",
+              "summary": "It’s finally happening! The ExileCon Path of Exile 1 Qualifiers kick off next week, with the top racers from all four qualifier events earning the chance to compete in the live final at ExileCon in New Zealand.",
+              "bullets": [
+                "Qualifier One - September 4 2PM PDT",
+                "Qualifier Two - September 11 2PM PDT",
+                "Qualifier Three - September 18 2PM PDT",
+                "Qualifier Four - September 25 2PM PDT"
+              ],
+              "kind": "news",
+              "confidence": "confirmed",
+              "published": "2026-08-25T03:00:53Z",
+              "source": {
+                "name": "Path of Exile — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1841579228677152",
+                "stamp": "published=2026-08-25T03:00:53Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.238960",
+                "source_name": "Path of Exile — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1841579228677152",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-08-25T03:00:53Z",
+                  "last_grounded": "2026-09-01T13:30:11Z",
+                  "detail": {
+                    "appid": 238960,
+                    "feed": "Community Announcements",
+                    "gid": "1841579228677152"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-09-01T13:30:11Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "fanartcompetitionhighlights2",
+              "headline": "Fan Art Competition Highlights #2",
+              "summary": "Our Fan Art competition, themed around the latest expansions in Path of Exile 1 and Path of Exile 2, is in full swing! Check out the recent highlights below!",
+              "bullets": [],
+              "kind": "news",
+              "confidence": "confirmed",
+              "published": "2026-08-23T21:29:27Z",
+              "source": {
+                "name": "Path of Exile — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1841579228674081",
+                "stamp": "published=2026-08-23T21:29:27Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.238960",
+                "source_name": "Path of Exile — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1841579228674081",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-08-23T21:29:27Z",
+                  "last_grounded": "2026-09-01T13:30:11Z",
+                  "detail": {
+                    "appid": 238960,
+                    "feed": "Community Announcements",
+                    "gid": "1841579228674081"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-09-01T13:30:11Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "poe1leagueallflame",
+              "headline": "League check: Allflame is live",
+              "summary": "Current PoE1 challenge league: **Allflame**. Started Jul 24, 2026.",
+              "bullets": [],
+              "kind": "meta",
+              "confidence": "confirmed",
+              "published": "2026-07-24T20:00:00Z",
+              "source": {
+                "name": "Path of Exile — Official leagues API (GGG)",
+                "url": "https://www.pathofexile.com/leagues",
+                "stamp": "league=Allflame",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "ggg.leagues",
+                "source_name": "Path of Exile — Official leagues API (GGG)",
+                "url": "https://www.pathofexile.com/leagues",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": "Allflame",
+                  "published": "2026-07-24T20:00:00Z",
+                  "last_grounded": "2026-09-01T13:30:11Z",
+                  "detail": {
+                    "endAt": null,
+                    "api": "pathofexile.com/api/leagues"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-09-01T13:30:11Z",
+                "freshness": "fresh",
+                "note": "Live from GGG's public leagues endpoint."
+              },
+              "crosslink": null
+            }
+          ],
+          "rumors": [],
+          "buzz": null,
+          "character": null,
+          "character_note": "",
+          "crosslink": null
+        },
+        {
+          "world_key": "cs2",
+          "world_name": "Counter-Strike 2",
+          "emoji": "🔫",
+          "blurb": "Updates, map/economy changes, and the pro circuit.",
+          "items": [
+            {
+              "id": "counterstrike2update",
+              "headline": "Counter-Strike 2 Update",
+              "summary": "Added custom_hud_layout entity: custom_hud_layouts are the entry point for scripted maps to provide custom UI. Panel, Label, Image, and Button panel types are supported. Styling with css is supported. Events and client side scripting are not supported. Maintains state during tools mode reloads.",
+              "bullets": [
+                "Added custom_hud_layout entity:",
+                "custom_hud_layouts are the entry point for scripted maps to provide custom UI.",
+                "Panel, Label, Image, and Button panel types are supported.",
+                "Styling with css is supported.",
+                "Events and client side scripting are not supported.",
+                "Maintains state during tools mode reloads."
+              ],
+              "kind": "patch",
+              "confidence": "confirmed",
+              "published": "2026-08-24T23:39:20Z",
+              "source": {
+                "name": "Counter-Strike 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1841579228676851",
+                "stamp": "published=2026-08-24T23:39:20Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.730",
+                "source_name": "Counter-Strike 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1841579228676851",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-08-24T23:39:20Z",
+                  "last_grounded": "2026-09-01T13:30:11Z",
+                  "detail": {
+                    "appid": 730,
+                    "feed": "Community Announcements",
+                    "gid": "1841579228676851"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-09-01T13:30:11Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            }
+          ],
+          "rumors": [],
+          "buzz": null,
+          "character": null,
+          "character_note": "",
+          "crosslink": null
+        },
+        {
+          "world_key": "deadlock",
+          "world_name": "Deadlock",
+          "emoji": "🕵️",
+          "blurb": "Valve's hero shooter — patch cadence + hero balance.",
+          "items": [
+            {
+              "id": "theresanewdeadlockmodthatsyncsyourgameplaywithyo",
+              "headline": "There's a new Deadlock mod that syncs your gameplay with your vibrator. You're welcome, I think",
+              "summary": "A new Deadlock mod syncs your deaths and kills with your vibrator. Great if you're good or bad at the game, albeit potentially too good. Read the full story on PCGamesN: There's a new Deadlock mod that syncs your gameplay with your vibrator. You're welcome, I think",
+              "bullets": [],
+              "kind": "news",
+              "confidence": "confirmed",
+              "published": "2026-09-01T11:09:07Z",
+              "source": {
+                "name": "Deadlock — PCGamesN",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/PCGamesN/1842212951313181",
+                "stamp": "published=2026-09-01T11:09:07Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.1422450",
+                "source_name": "Deadlock — PCGamesN",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/PCGamesN/1842212951313181",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-09-01T11:09:07Z",
+                  "last_grounded": "2026-09-01T13:30:11Z",
+                  "detail": {
+                    "appid": 1422450,
+                    "feed": "PCGamesN",
+                    "gid": "1842212951313181"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-09-01T13:30:11Z",
+                "freshness": "fresh",
+                "note": "Press coverage of a real update."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "minorupdate08222026",
+              "headline": "Minor Update - 08-22-2026",
+              "summary": "- Radiant Regeneration: Heal on cast reduced from 70 to 65- Restorative Locket: Spirit Resistance reduced from 10% to 8%- Celeste: Dazzling Trick cooldown increased from 32s to 34s- Celeste: Dazzling Trick T2 barrier rescaled from \"+80 and +0.7 scaling\" to \"+70 and +0.76\"- Celeste: Dazzling Trick…",
+              "bullets": [],
+              "kind": "patch",
+              "confidence": "confirmed",
+              "published": "2026-08-22T21:40:46Z",
+              "source": {
+                "name": "Deadlock — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1841579228672283",
+                "stamp": "published=2026-08-22T21:40:46Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.1422450",
+                "source_name": "Deadlock — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1841579228672283",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-08-22T21:40:46Z",
+                  "last_grounded": "2026-09-01T13:30:11Z",
+                  "detail": {
+                    "appid": 1422450,
+                    "feed": "Community Announcements",
+                    "gid": "1841579228672283"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-09-01T13:30:11Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "minorupdate08122026",
+              "headline": "Minor Update - 08-12-2026",
+              "summary": "- Apollo: Riposte melee resist reduction increased from -22% to -25% - Apollo: Riposte T2 changed from \"-30% Melee Resist\" to \"-25% Melee Resist and +0.4s Stun Duration\" - Apollo: Riposte T3 increased from 60% Lifesteal for 7s to 75% Lifesteal for 13s - Apollo: Fixed Itani Lo Sahn being canceled…",
+              "bullets": [],
+              "kind": "patch",
+              "confidence": "confirmed",
+              "published": "2026-08-12T22:57:44Z",
+              "source": {
+                "name": "Deadlock — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1840944183775204",
+                "stamp": "published=2026-08-12T22:57:44Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.1422450",
+                "source_name": "Deadlock — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1840944183775204",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-08-12T22:57:44Z",
+                  "last_grounded": "2026-09-01T13:30:11Z",
+                  "detail": {
+                    "appid": 1422450,
+                    "feed": "Community Announcements",
+                    "gid": "1840944183775204"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-09-01T13:30:11Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            }
+          ],
+          "rumors": [],
+          "buzz": null,
+          "character": null,
+          "character_note": "",
+          "crosslink": null
+        },
+        {
+          "world_key": "sts2",
+          "world_name": "Slay the Spire 2",
+          "emoji": "🃏",
+          "blurb": "Early-access deckbuilder — balance + RNG fixes matter.",
+          "items": [
+            {
+              "id": "betapatchnotesv01110",
+              "headline": "Beta Patch Notes - v0.111.0",
+              "summary": "Time for another beta patch! Heads up that there won't be a patch on the 27th as our team is taking a break in the last week of August.",
+              "bullets": [
+                "Nerfed Tezcatara's Brightest Flame card: max HP loss increased from 1 → 2",
+                "Nerfed Nonupeipe's Beautiful Bracelet relic: now Enchants 4 random cards instead of allowing you to select the cards to Enchant",
+                "Buffed Axebot:",
+                "Hammer Uppercut move damage increased from 12(14) → 14(18)",
+                "Now gains +10 Max HP each time it respawns",
+                "The One-Two damage from 9(10)x2 → 10(11)x2"
+              ],
+              "kind": "patch",
+              "confidence": "confirmed",
+              "published": "2026-08-14T01:07:02Z",
+              "source": {
+                "name": "Slay the Spire 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1840944183778277",
+                "stamp": "patch=0.111.0",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.2868840",
+                "source_name": "Slay the Spire 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1840944183778277",
+                "stamp": {
+                  "version": null,
+                  "patch": "0.111.0",
+                  "league": null,
+                  "published": "2026-08-14T01:07:02Z",
+                  "last_grounded": "2026-09-01T13:30:11Z",
+                  "detail": {
+                    "appid": 2868840,
+                    "feed": "Community Announcements",
+                    "gid": "1840944183778277"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-09-01T13:30:11Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "theneowsletteraugust2026",
+              "headline": "The Neowsletter - August 2026",
+              "summary": "Hi Slayers, the August Neowsletter is here! The team has been hard at work on new content but it'll be at least a month until any of it hits the beta branch. We'll be out of office during late August for our annual team break, so there won't be an August 27 patch.",
+              "bullets": [],
+              "kind": "news",
+              "confidence": "confirmed",
+              "published": "2026-08-14T23:52:17Z",
+              "source": {
+                "name": "Slay the Spire 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1840944183781031",
+                "stamp": "published=2026-08-14T23:52:17Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.2868840",
+                "source_name": "Slay the Spire 2 — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1840944183781031",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-08-14T23:52:17Z",
+                  "last_grounded": "2026-09-01T13:30:11Z",
+                  "detail": {
+                    "appid": 2868840,
+                    "feed": "Community Announcements",
+                    "gid": "1840944183781031"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-09-01T13:30:11Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "slaythespire2updatesareslowingdownagainbutanewch",
+              "headline": "Slay the Spire 2 updates are slowing down again, but a new character and alternate act are next",
+              "summary": "In its August Slay the Spire 2 Neowsletter, developer Mega Crit reveals it's actively working on another Act Two and the next new character. Read the full story on PCGamesN: Slay the Spire 2 updates are slowing down again, but a new character and alternate act are next",
+              "bullets": [],
+              "kind": "news",
+              "confidence": "confirmed",
+              "published": "2026-08-15T09:50:14Z",
+              "source": {
+                "name": "Slay the Spire 2 — PCGamesN",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/PCGamesN/1840944183781963",
+                "stamp": "published=2026-08-15T09:50:14Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.2868840",
+                "source_name": "Slay the Spire 2 — PCGamesN",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/PCGamesN/1840944183781963",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-08-15T09:50:14Z",
+                  "last_grounded": "2026-09-01T13:30:11Z",
+                  "detail": {
+                    "appid": 2868840,
+                    "feed": "PCGamesN",
+                    "gid": "1840944183781963"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-09-01T13:30:11Z",
+                "freshness": "fresh",
+                "note": "Press coverage of a real update."
+              },
+              "crosslink": null
+            }
+          ],
+          "rumors": [],
+          "buzz": null,
+          "character": null,
+          "character_note": "",
+          "crosslink": null
+        },
+        {
+          "world_key": "hoi4",
+          "world_name": "Hearts of Iron IV",
+          "emoji": "🗺️",
+          "blurb": "Grand strategy — dev diaries + version betas.",
+          "items": [
+            {
+              "id": "hoiivopenbetaseupdate303",
+              "headline": "HOI IV | Open Beta SE™ Update 3.03",
+              "summary": "Generals! Hello, I’m Zwirbaum, Game Designer for Hearts of Iron, and I want to welcome you to yet another Open Beta SE™ (Not really trademarked) Update for Hearts of Iron IV.",
+              "bullets": [
+                "Right-click the game in your library",
+                "Select Properties from the drop-down menu",
+                "Select Game Versions & Betas",
+                "Select the beta branch called open_beta If you are already on the Open Beta client, you should get an update automatically. Finally, to report any issues you…",
+                "Interwar Light, Medium and Heavy Tank Chassis gets -5% Soft, Hard and Air Attack bonus for module additive values.",
+                "Improved and Advanced Light, Medium and Heavy Tank Chassis get respectively +5% and +10% Soft, Hard and Air Attack bonus for module additive values. (5% for…"
+              ],
+              "kind": "patch",
+              "confidence": "confirmed",
+              "published": "2026-08-28T13:07:34Z",
+              "source": {
+                "name": "Hearts of Iron IV — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1842212951303180",
+                "stamp": "patch=3.03",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.394360",
+                "source_name": "Hearts of Iron IV — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1842212951303180",
+                "stamp": {
+                  "version": null,
+                  "patch": "3.03",
+                  "league": null,
+                  "published": "2026-08-28T13:07:34Z",
+                  "last_grounded": "2026-09-01T13:30:11Z",
+                  "detail": {
+                    "appid": 394360,
+                    "feed": "Community Announcements",
+                    "gid": "1842212951303180"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-09-01T13:30:11Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "hoiivdevcornerinlaywindowscongress",
+              "headline": "HOI IV Dev Corner | Inlay Windows & Congress",
+              "summary": "Hello there! Welcome to the next Dev Corner, where we might present something we’re working on or gauging people’s thoughts on mechanics and other things.",
+              "bullets": [],
+              "kind": "news",
+              "confidence": "confirmed",
+              "published": "2026-09-01T13:06:30Z",
+              "source": {
+                "name": "Hearts of Iron IV — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1842212951313354",
+                "stamp": "published=2026-09-01T13:06:30Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.394360",
+                "source_name": "Hearts of Iron IV — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1842212951313354",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-09-01T13:06:30Z",
+                  "last_grounded": "2026-09-01T13:30:11Z",
+                  "detail": {
+                    "appid": 394360,
+                    "feed": "Community Announcements",
+                    "gid": "1842212951313354"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-09-01T13:30:11Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            },
+            {
+              "id": "hoiivdevcornerromaniaanindustrydivided",
+              "headline": "HOI IV Dev Corner | Romania, an Industry Divided",
+              "summary": "Hello all! In today's Dev Corner, we're diving into the economic crossroads of Romania. Like many nations in the 1930s, Romania was torn between its agrarian foundation and a push for rapid industrialization.",
+              "bullets": [],
+              "kind": "news",
+              "confidence": "confirmed",
+              "published": "2026-08-25T13:01:41Z",
+              "source": {
+                "name": "Hearts of Iron IV — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1841579228678273",
+                "stamp": "published=2026-08-25T13:01:41Z",
+                "freshness": "fresh"
+              },
+              "provenance": {
+                "source_id": "steam_news.394360",
+                "source_name": "Hearts of Iron IV — Official",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1841579228678273",
+                "stamp": {
+                  "version": null,
+                  "patch": null,
+                  "league": null,
+                  "published": "2026-08-25T13:01:41Z",
+                  "last_grounded": "2026-09-01T13:30:11Z",
+                  "detail": {
+                    "appid": 394360,
+                    "feed": "Community Announcements",
+                    "gid": "1841579228678273"
+                  }
+                },
+                "confidence": "confirmed",
+                "produced_at": "2026-09-01T13:30:11Z",
+                "freshness": "fresh",
+                "note": "Official developer post."
+              },
+              "crosslink": null
+            }
+          ],
+          "rumors": [],
+          "buzz": null,
+          "character": null,
+          "character_note": "",
+          "crosslink": null
+        },
+        {
+          "world_key": "hardware",
+          "world_name": "PC Hardware & Your Wishlist",
+          "emoji": "🖥️",
+          "blurb": "Part-price drops on your wishlist + hardware moves. Deep specs live on PC Bottleneck (we link, never duplicate).",
+          "items": [],
+          "rumors": [],
+          "buzz": null,
+          "character": null,
+          "character_note": "",
+          "crosslink": "https://pcbottleneck.buildkit.store"
+        }
+      ],
+      "grounding_note": "Every item below is tied to a primary source with a freshness stamp. Rumors are labelled and never appear in the public edition. If we could not verify it, we did not publish it."
+    },
+    {
+      "schema": "buildkit-brief/edition@1",
       "slug": "2026-08-29-public",
       "edition": "public",
       "status": "published",
