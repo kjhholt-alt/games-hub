@@ -1,12 +1,12 @@
 {
   "schema": "buildkit-mtg-meta@1",
   "status": "published",
-  "computed_at": "2026-09-20T13:45:03Z",
+  "computed_at": "2026-09-21T13:45:03Z",
   "boilerplate": "BuildKit MTG Meta Hub is unofficial Fan Content permitted under the Wizards of the Coast Fan Content Policy. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. (c) Wizards of the Coast LLC.",
   "modules": {
     "banlist": {
       "status": "published",
-      "computed_at": "2026-09-20T13:45:03Z",
+      "computed_at": "2026-09-21T13:45:03Z",
       "methodology": "Snapshot of Scryfall's machine-readable legalities (the ban truth) as of this bulk-data pull. Scryfall's legality statuses are legal/not_legal/restricted/banned \u2014 there is no separate 'suspended' status, so Vintage-style restricted cards are reported alongside banned rather than inventing a status Scryfall doesn't expose. See the linked Wizards announcement page for the human explanation and change history; Scryfall doesn't carry ban dates, so this row does not claim a 'last B&R change' date it can't ground.",
       "attribution": [
         "Card legalities + sets via Scryfall (scryfall.com)"
@@ -17,7 +17,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 13,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "format": "standard",
           "format_name": "Standard",
@@ -44,7 +44,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 10,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "format": "competitivebrawl",
           "format_name": "Competitive Brawl",
@@ -68,7 +68,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 0,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "format": "standardbrawl",
           "format_name": "Brawl",
@@ -81,7 +81,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 83,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "format": "commander",
           "format_name": "Commander",
@@ -178,7 +178,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 31,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "format": "pioneer",
           "format_name": "Pioneer",
@@ -223,7 +223,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 52,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "format": "modern",
           "format_name": "Modern",
@@ -289,7 +289,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 77,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "format": "historic",
           "format_name": "Historic",
@@ -380,7 +380,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 4,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "format": "timeless",
           "format_name": "Timeless",
@@ -397,7 +397,7 @@
     },
     "calendar": {
       "status": "published",
-      "computed_at": "2026-09-20T13:45:03Z",
+      "computed_at": "2026-09-21T13:45:03Z",
       "methodology": "Recent real (non-digital) expansion/core/commander/masters sets from Scryfall's /sets endpoint, newest first \u2014 near-zero maintenance per METAHUB-SPEC.md module 4. 'standard_legal' is read directly off whether Scryfall reports ANY card from that set as Standard-legal (ground truth, not a hand-maintained rotation calendar).",
       "attribution": [
         "Card legalities + sets via Scryfall (scryfall.com)"
@@ -408,7 +408,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 135,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "set_code": "TRK",
           "set_name": "Star Trek",
@@ -422,7 +422,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 41,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "set_code": "TRC",
           "set_name": "Star Trek Commander",
@@ -436,7 +436,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 80,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "set_code": "MBC",
           "set_name": "Mystery Booster Commander Edition",
@@ -450,7 +450,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 461,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "set_code": "FRA",
           "set_name": "Reality Fracture",
@@ -464,7 +464,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 103,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "set_code": "FRC",
           "set_name": "Reality Fracture Commander",
@@ -478,7 +478,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 321,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "set_code": "HOB",
           "set_name": "The Hobbit",
@@ -492,7 +492,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 453,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "set_code": "MSH",
           "set_name": "Marvel Super Heroes",
@@ -506,7 +506,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 866,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "set_code": "MSC",
           "set_name": "Marvel Super Heroes Commander",
@@ -520,7 +520,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 426,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "set_code": "SOC",
           "set_name": "Secrets of Strixhaven Commander",
@@ -534,7 +534,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 368,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "set_code": "SOS",
           "set_name": "Secrets of Strixhaven",
@@ -548,7 +548,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 320,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "set_code": "TMT",
           "set_name": "Teenage Mutant Ninja Turtles",
@@ -562,7 +562,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 408,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "set_code": "ECL",
           "set_name": "Lorwyn Eclipsed",
@@ -575,7 +575,7 @@
     },
     "edh_tournaments": {
       "status": "published",
-      "computed_at": "2026-09-20T13:45:03Z",
+      "computed_at": "2026-09-21T13:45:03Z",
       "methodology": "Real Commander/cEDH tournament results from topdeck.gg's public tournament-results API (last 30 days, format=EDH) -- see the per-event event_url for the source. Up to 40 of the most recent events are shown; top_standings = up to 8 players per event, ranked by OUR OWN win differential (wins - losses, ties broken by wins) -- topdeck.gg's real API carries no organizer-tagged 'placement'/'standing' field, so this is not the event's official final standings. commanders = the standing's real commander name(s) ONLY when topdeck.gg's structured decklist import (deckObj.Commanders, verified live 2026-07-11 as genuinely real for roughly 43% of standings -- most commonly a Moxfield import) is present for that standing; otherwise null, never inferred from an unparsed decklist. sample_size = player_count (a real recorded event, not a statistical estimate, hence always-high confidence like the banlist/calendar modules).",
       "attribution": [
         "Tournament results via topdeck.gg"
@@ -586,7 +586,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 32,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "name": "Test Event for Dan and Noam",
           "tid": "test-event-for-dan-and-noam",
@@ -660,7 +660,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 15,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "name": "Temp event",
           "tid": "temp-event",
@@ -732,7 +732,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 8,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "name": "Test Tournament Setup",
           "tid": "test-tournament-setup",
@@ -804,7 +804,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 12,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "name": "CommandFest LI 2026 (TEST)",
           "tid": "commandfest-li-2026-test",
@@ -876,7 +876,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 36,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "name": "FNM Commander",
           "tid": "fnm-commander-701",
@@ -948,7 +948,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 12,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "name": "Test Tournoi Multi",
           "tid": "test-tournoi-multi",
@@ -1020,7 +1020,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 13,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "name": "Liga Dark Ritual 2 Jornada 2",
           "tid": "liga-dark-ritual-2-jornada-2",
@@ -1097,7 +1097,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 15,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "name": "Magic 20-09-26",
           "tid": "magic-20-09-26",
@@ -1169,7 +1169,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 13,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "name": "HOB: Commander B3",
           "tid": "hob-commander-b3-525",
@@ -1241,7 +1241,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 13,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "name": "Sunday Commander",
           "tid": "sunday-commander-361",
@@ -1313,7 +1313,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 13,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "name": "commander sunday",
           "tid": "commander-sunday-117",
@@ -1385,7 +1385,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 23,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "name": "Obsidian Games - Casual Commander",
           "tid": "obsidian-games-casual-commander-2",
@@ -1457,7 +1457,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 11,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "name": "CEDH At The Lair",
           "tid": "cedh-at-the-lair-6",
@@ -1529,7 +1529,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 8,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "name": "Budget Mono-Color Madness Commander Tournament",
           "tid": "monocolor-matter-commander-tournament",
@@ -1617,7 +1617,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 14,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "name": "Season 10 Tour 1 Week 1",
           "tid": "season-10-tour-1-week-1",
@@ -1689,7 +1689,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 9,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "name": "Commander",
           "tid": "commander-copy-copy-copy-copy-copy-6",
@@ -1761,7 +1761,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 13,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "name": "Hellspawn Weekly CEDH",
           "tid": "hellspawn-weekly-cedh-copy-copy",
@@ -1841,7 +1841,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 6,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "name": "Magic: The Gathering | The Hobbit Commander Party",
           "tid": "magic-the-gathering-the-hobbit-commander-party-copy",
@@ -1899,7 +1899,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 16,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "name": "The Hobbit Commander Party",
           "tid": "the-hobbit-commander-party",
@@ -1971,7 +1971,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 16,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "name": "The Hobbit Play Booster Top Prize cEDH Tournament",
           "tid": "the-hobbit-play-booster-top-proze-cedh-tournament",
@@ -2048,7 +2048,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 17,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "name": "Chromatic Dragon Games CEDH",
           "tid": "chromatic-dragon-games-cedh-519",
@@ -2122,7 +2122,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 16,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "name": "L7 Summer Invitational 2026",
           "tid": "l7-summer-invitational-2026",
@@ -2215,7 +2215,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 7,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "name": "Bracket 3 9/19",
           "tid": "bracket-3-919",
@@ -2280,7 +2280,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 13,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "name": "Bracket 3 tournament",
           "tid": "bracket-3-tournament-548",
@@ -2352,7 +2352,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 16,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "name": "Bracket 3 tournament",
           "tid": "bracket-3-tournament-883",
@@ -2424,7 +2424,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 20,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "name": "Killerfinds Commander Night",
           "tid": "killerfinds-commander-night-362",
@@ -2496,7 +2496,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 14,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "name": "Tribal Wars Casual Commander",
           "tid": "tribal-wars-casual-commander-10",
@@ -2580,7 +2580,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 8,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "name": "CEDH fiestas patrias",
           "tid": "cedh-fiestas-patrias",
@@ -2652,7 +2652,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 12,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "name": "OneNDunn Cards cEDH",
           "tid": "onendunn-cards-cedh-6",
@@ -2726,7 +2726,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 7,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "name": "CeDH Learn to Play",
           "tid": "cedh-for-miku-sol-ring",
@@ -2791,7 +2791,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 8,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "name": "Dawns Quest Pack Commander Night",
           "tid": "dawns-quest-pack-commander-night",
@@ -2863,7 +2863,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 5,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "name": "Games Explosion The Hobbit Bracket 3 Tournament",
           "tid": "games-explosion-the-hobbit-bracket-3-tournament",
@@ -2914,7 +2914,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 8,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "name": "Utopia Games Cedh (Copy)",
           "tid": "utopia-games-cedh-copy",
@@ -2995,7 +2995,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 25,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "name": "Battlegrounds cEDH Monthly September",
           "tid": "battlegrounds-cedh-monthly-copy",
@@ -3085,7 +3085,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 12,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "name": "Third Saturday cEDH",
           "tid": "third-saturday-cedh-2",
@@ -3157,7 +3157,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 19,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "name": "September PGS cEDH",
           "tid": "september-pgs-cedh-2",
@@ -3247,7 +3247,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 8,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "name": "Commander Invitational Qualifier - Discordia Games",
           "tid": "commander-invitational-qualifier-discordia-games-4",
@@ -3338,7 +3338,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 9,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "name": "Magic Stronghold cEDH Medium Rare Stakes Tournament",
           "tid": "magic-stronghold-cedh-medium-rare-stakes-tournament-5",
@@ -3430,7 +3430,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 15,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "name": "Saturday CEDH",
           "tid": "saturday-cedh-879",
@@ -3502,7 +3502,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 8,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "name": "Saturday Full proxy Edh Event",
           "tid": "saturday-full-proxy-edh-event-498",
@@ -3573,7 +3573,7 @@
     },
     "constructed_tiers": {
       "status": "published",
-      "computed_at": "2026-09-20T13:45:03Z",
+      "computed_at": "2026-09-21T13:45:03Z",
       "methodology": "Real tournament-backed win rates for Standard/Pioneer/Modern, computed by us from topdeck.gg's public tournament-results API (Tournament results via topdeck.gg -- see the per-row topdeck_url for the source event). archetype_or_deck = the organizer's own archetype tag when topdeck.gg carries one for that standing, else the raw deck/decklist name reported, else the honest 'Unclassified Deck' bucket -- we never infer an archetype from an unparsed decklist link. sample_size = total recorded match games (wins+losses+draws) across every event counted this run; event_count = distinct tournaments the archetype/deck appeared in; best_finish = its best final standing across those events. Tier = match win rate (S>=60%, A>=55%, B>=50%, C>=45%, else D); an archetype with zero recorded games renders 'unrated', never a guessed tier.",
       "attribution": [
         "Tournament results via topdeck.gg"
@@ -3584,7 +3584,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 960,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "format": "modern",
           "archetype_or_deck": "Unclassified Deck",
@@ -3602,7 +3602,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 18,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "low",
           "format": "pioneer",
           "archetype_or_deck": "Unclassified Deck",
@@ -3620,7 +3620,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 518,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "format": "standard",
           "archetype_or_deck": "Unclassified Deck",
@@ -3637,7 +3637,7 @@
     },
     "commander_tiers": {
       "status": "published",
-      "computed_at": "2026-09-20T13:45:03Z",
+      "computed_at": "2026-09-21T13:45:03Z",
       "methodology": "Deck-frequency tiers computed by us from the Archidekt public decklist corpus: 'trending' = newest decks (orderBy=-createdAt), 'established' = most-viewed decks (orderBy=-viewCount). Tier is the commander's deck-count rank-percentile within its bucket (S>=90th, A>=70th, B>=40th, C>=15th, else D). This measures popularity + momentum, NOT a constructed win rate \u2014 we don't have proprietary tracker telemetry for that (see METAHUB-SPEC.md's honesty rails). top_inclusions = the non-land cards most often played alongside that commander across the decks we scanned. Tournament-result axis (topdeck.gg): published.",
       "attribution": [
         "Decklists via Archidekt (archidekt.com)"
@@ -3648,7 +3648,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "sample",
           "commander": "Xyris, the Writhing Storm",
           "format": "commander",
@@ -3661,14 +3661,14 @@
           ],
           "tier": "S",
           "top_inclusions": [
+            "Growth Spiral",
+            "Vedalken Heretic",
             "Fully Grown",
-            "Colossal Growth",
+            "Kodama's Reach",
+            "Season of Growth",
+            "Tyvar's Stand",
             "Soul's Fire",
-            "Stormchaser Drake",
-            "Snakeskin Veil",
-            "Bladegriff Prototype",
-            "Goldvein Pick",
-            "Blazing Crescendo"
+            "Eureka Moment"
           ],
           "deck_url": "https://archidekt.com/decks/7031486",
           "art_crop": "https://cards.scryfall.io/art_crop/front/a/f/af0db1d6-5cb1-4917-8e8f-69d5dc184404.jpg?1783921402",
@@ -3679,7 +3679,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "sample",
           "commander": "Baba Lysaga, Night Witch",
           "format": "commander",
@@ -3691,14 +3691,14 @@
           ],
           "tier": "A",
           "top_inclusions": [
-            "Soul Shatter",
-            "Assassin's Trophy",
-            "Beifong's Bounty Hunters",
+            "Splendid Reclamation",
             "Jolrael, Mwonvuli Recluse",
-            "Rancor",
-            "Obsessive Pursuit",
-            "Nowhere to Run",
-            "Tear Asunder"
+            "Necrogen Communion",
+            "Galadhrim Ambush",
+            "Mazirek, Kraul Death Priest",
+            "Deadly Tempest",
+            "Blossoming Bogbeast",
+            "Crucible of Worlds"
           ],
           "deck_url": "https://archidekt.com/decks/1585124",
           "art_crop": "https://cards.scryfall.io/art_crop/front/2/e/2ef42c3f-f22e-4e99-adb0-9e8f8d442347.jpg?1783922697",
@@ -3709,7 +3709,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "sample",
           "commander": "Heliod, Sun-Crowned",
           "format": "commander",
@@ -3720,14 +3720,14 @@
           ],
           "tier": "A",
           "top_inclusions": [
-            "Aven Interrupter",
-            "Abeyance",
+            "Linvala, Keeper of Silence",
             "Rule of Law",
-            "Orim's Chant",
-            "Weathered Wayfarer",
-            "Reverent Mantra",
-            "Angel's Grace",
-            "Smothering Tithe"
+            "Soulless Jailer",
+            "Grand Abolisher",
+            "Salvage Scout",
+            "Liberator, Urza's Battlethopter",
+            "Rest in Peace",
+            "Mana Vault"
           ],
           "deck_url": "https://archidekt.com/decks/18520785",
           "art_crop": "https://cards.scryfall.io/art_crop/front/3/2/3245ff74-1f9c-4518-a23f-1579f338f232.jpg?1783915722",
@@ -3738,7 +3738,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "sample",
           "commander": "Mr. House, President and CEO",
           "format": "commander",
@@ -3751,14 +3751,14 @@
           ],
           "tier": "B",
           "top_inclusions": [
-            "Idol of Oblivion",
+            "Reckless Fireweaver",
+            "Clown Car",
             "Lightning Greaves",
-            "Attempted Murder",
-            "Barbarian Class",
             "Swords to Plowshares",
-            "Jan Jansen, Chaos Crafter",
-            "Vexing Puzzlebox",
-            "Strength-Testing Hammer"
+            "Maddening Hex",
+            "Recruitment Drive",
+            "Marionette Master",
+            "Iron Mastiff"
           ],
           "deck_url": "https://archidekt.com/decks/7097093",
           "art_crop": "https://cards.scryfall.io/art_crop/front/2/3/23eb3cf7-c90d-4bfa-b125-4fbcb5614468.jpg?1783912421",
@@ -3769,7 +3769,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "sample",
           "commander": "Thrun, Breaker of Silence",
           "format": "commander",
@@ -3780,14 +3780,14 @@
           ],
           "tier": "B",
           "top_inclusions": [
+            "Abundance",
             "Kami of Transience",
-            "Primal Might",
-            "Prodigious Growth",
-            "Primal Bellow",
-            "Scavenging Ooze",
-            "Wild Growth",
-            "Soul's Majesty",
-            "Audacity"
+            "Thrun, the Last Troll",
+            "Nylea's Colossus",
+            "Eidolon of Blossoms",
+            "Boar Umbra",
+            "Sixth Sense",
+            "Fireshrieker"
           ],
           "deck_url": "https://archidekt.com/decks/4143061",
           "art_crop": "https://cards.scryfall.io/art_crop/front/1/4/143142a4-0e32-45ca-8036-d0aef5cce122.jpg?1783918195",
@@ -3798,7 +3798,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "sample",
           "commander": "Nicol Bolas, the Ravager // Nicol Bolas, the Arisen",
           "format": "commander",
@@ -3811,14 +3811,14 @@
           ],
           "tier": "B",
           "top_inclusions": [
-            "Flux Channeler",
-            "Demonic Tutor",
-            "Nicol Bolas, Planeswalker",
-            "The Eldest Reborn",
-            "Liliana, Dreadhorde General",
-            "Izzet Signet",
-            "Notion Thief",
-            "Inexorable Tide"
+            "The Chain Veil",
+            "Experimental Augury",
+            "Talisman of Indulgence",
+            "Ichormoon Gauntlet",
+            "Tekuthal, Inquiry Dominus",
+            "Dreamtide Whale",
+            "Dark Intimations",
+            "Baleful Strix"
           ],
           "deck_url": "https://archidekt.com/decks/17597570",
           "art_crop": "https://cards.scryfall.io/art_crop/front/7/b/7b215968-93a6-4278-ac61-4e3e8c3c3943.jpg?1783934524",
@@ -3829,7 +3829,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "sample",
           "commander": "Alela, Cunning Conqueror",
           "format": "commander",
@@ -3841,14 +3841,14 @@
           ],
           "tier": "C",
           "top_inclusions": [
-            "Brainstorm",
-            "Soul Shatter",
-            "Spellstutter Sprite",
-            "Blightwing Bandit",
+            "Mystic Remora",
+            "Thought Scour",
             "Kindred Discovery",
-            "Scion of Oona",
+            "Sword of the Animist",
+            "Grim Hireling",
             "Silundi Vision // Silundi Isle",
-            "Skullclamp"
+            "Pongify",
+            "Scion of Oona"
           ],
           "deck_url": "https://archidekt.com/decks/5280254",
           "art_crop": "https://cards.scryfall.io/art_crop/front/7/9/79ba5c35-6e5c-406a-b95f-844d5ec296ab.jpg?1783914990",
@@ -3859,7 +3859,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "sample",
           "commander": "Valgavoth, Harrower of Souls",
           "format": "commander",
@@ -3871,14 +3871,14 @@
           ],
           "tier": "C",
           "top_inclusions": [
-            "Lightning Greaves",
-            "Mogis, God of Slaughter",
-            "Basilisk Collar",
+            "Spiked Corridor // Torture Pit",
+            "Feed the Swarm",
+            "Combustible Gearhulk",
             "Talisman of Indulgence",
-            "Fear of Burning Alive",
-            "Blood Seeker",
-            "Enchanter's Bane",
-            "Rakdos Signet"
+            "Stormfist Crusader",
+            "Spiteful Visions",
+            "Bastion of Remembrance",
+            "Lightning Greaves"
           ],
           "deck_url": "https://archidekt.com/decks/9189744",
           "art_crop": "https://cards.scryfall.io/art_crop/front/8/d/8d7c1f6c-af45-4449-8cf8-e13830b3df8a.jpg?1783909662",
@@ -3889,7 +3889,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "sample",
           "commander": "Cloud, Ex-SOLDIER",
           "format": "commander",
@@ -3902,14 +3902,14 @@
           ],
           "tier": "D",
           "top_inclusions": [
+            "Summon: Kujata",
+            "Conqueror's Flail",
+            "Decimate",
+            "Lifestream's Blessing",
             "Lightning Greaves",
-            "Colossus Hammer",
-            "Trailblazer's Boots",
-            "Ultimate Magic: Holy",
-            "Aerith, Last Ancient",
-            "Hero's Heirloom",
-            "Champion's Helm",
-            "Decimate"
+            "Sword of the Animist",
+            "Vanquish the Horde",
+            "Bronze Guardian"
           ],
           "deck_url": "https://archidekt.com/decks/13106990",
           "art_crop": "https://cards.scryfall.io/art_crop/front/1/8/18263a99-378d-45af-8bc1-7188ca2a83a5.jpg?1783906400",
@@ -3920,222 +3920,180 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "sample",
-          "commander": "Wilhelt, the Rotcleaver",
+          "commander": "Whtz, the Bibliophile",
           "format": "commander",
           "bucket": "trending",
           "deck_count": 1,
           "color_identity": [
-            "Black",
-            "Blue"
+            "Blue",
+            "White"
           ],
           "tier": "S",
           "top_inclusions": [
-            "Undead Augur",
-            "Grave Pact",
-            "Demonic Tutor",
-            "Liliana, Dreadhorde General",
-            "Warren Soultrader",
-            "Bird",
-            "Radiation",
-            "Mystical Tutor"
+            "Battle of Wits"
           ],
-          "deck_url": "https://archidekt.com/decks/26600866",
-          "art_crop": "https://cards.scryfall.io/art_crop/front/2/5/2501a911-d072-436d-ae3b-a5164e3b30aa.jpg?1783925384",
-          "image_normal": "https://cards.scryfall.io/normal/front/2/5/2501a911-d072-436d-ae3b-a5164e3b30aa.jpg?1783925384"
+          "deck_url": "https://archidekt.com/decks/26635618",
+          "art_crop": "https://cards.scryfall.io/art_crop/front/7/2/726f8ac7-d7a3-442c-adb6-82836e4490a7.jpg?1785764790",
+          "image_normal": "https://cards.scryfall.io/normal/front/7/2/726f8ac7-d7a3-442c-adb6-82836e4490a7.jpg?1785764790"
         },
         {
           "sources": [
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "sample",
-          "commander": "Saskia the Unyielding",
+          "commander": "Scarlet Witch, Chaotic Avenger",
           "format": "commander",
           "bucket": "trending",
           "deck_count": 1,
           "color_identity": [
-            "Black",
-            "Green",
-            "Red",
-            "White"
+            "Blue",
+            "Red"
           ],
           "tier": "A",
           "top_inclusions": [],
-          "deck_url": "https://archidekt.com/decks/26600864",
-          "art_crop": "https://cards.scryfall.io/art_crop/front/5/b/5b483db6-b614-4af1-820a-42a4ee0c8707.jpg?1783937083",
-          "image_normal": "https://cards.scryfall.io/normal/front/5/b/5b483db6-b614-4af1-820a-42a4ee0c8707.jpg?1783937083"
+          "deck_url": "https://archidekt.com/decks/26635617",
+          "art_crop": "https://cards.scryfall.io/art_crop/front/d/a/daad7625-bbdb-487e-81a3-9dd27ea91e54.jpg?1783903352",
+          "image_normal": "https://cards.scryfall.io/normal/front/d/a/daad7625-bbdb-487e-81a3-9dd27ea91e54.jpg?1783903352"
         },
         {
           "sources": [
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "sample",
-          "commander": "Codie, Ravenous Codex",
+          "commander": "Vivi Ornitier",
           "format": "commander",
           "bucket": "trending",
           "deck_count": 1,
           "color_identity": [
-            "Black",
             "Blue",
-            "Green",
-            "Red",
-            "White"
+            "Red"
           ],
           "tier": "A",
           "top_inclusions": [
-            "Harmonized Trio // Brainstorm",
-            "Swords to Plowshares",
-            "Beast Whisperer",
-            "Faeburrow Elder",
-            "Chromatic Orrery",
-            "Jegantha, the Wellspring",
-            "Blazing Firesinger // Seething Song",
-            "Veyran, Voice of Duality"
+            "Gandalf's Sanction",
+            "Cackling Counterpart",
+            "Izzet Signet",
+            "Spectacular Skywhale",
+            "Niv-Mizzet, Visionary",
+            "Impolite Entrance",
+            "Thieving Otter",
+            "Kitsa, Otterball Elite"
           ],
-          "deck_url": "https://archidekt.com/decks/26600861",
-          "art_crop": "https://cards.scryfall.io/art_crop/front/c/3/c3192390-1518-49fc-8716-f2c7a0384f39.jpg?1789646811",
-          "image_normal": "https://cards.scryfall.io/normal/front/c/3/c3192390-1518-49fc-8716-f2c7a0384f39.jpg?1789646811"
+          "deck_url": "https://archidekt.com/decks/26635613",
+          "art_crop": "https://cards.scryfall.io/art_crop/front/e/c/ecc1027a-8c07-44a0-bdde-fa2844cff694.jpg?1783906561",
+          "image_normal": "https://cards.scryfall.io/normal/front/e/c/ecc1027a-8c07-44a0-bdde-fa2844cff694.jpg?1783906561"
         },
         {
           "sources": [
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "sample",
-          "commander": "Octavia, Living Thesis",
+          "commander": "Tannuk, Memorial Ensign",
           "format": "commander",
           "bucket": "trending",
           "deck_count": 1,
           "color_identity": [
-            "Blue"
+            "Green",
+            "Red"
           ],
           "tier": "B",
           "top_inclusions": [
-            "Archmage Emeritus",
-            "Brainstorm",
-            "Sol Ring"
+            "Hexhaven Invigorator"
           ],
-          "deck_url": "https://archidekt.com/decks/26600860",
-          "art_crop": "https://cards.scryfall.io/art_crop/front/e/9/e9591647-bad3-4015-90d1-1646a9eb4d14.jpg?1783911940",
-          "image_normal": "https://cards.scryfall.io/normal/front/e/9/e9591647-bad3-4015-90d1-1646a9eb4d14.jpg?1783911940"
+          "deck_url": "https://archidekt.com/decks/26635612",
+          "art_crop": "https://cards.scryfall.io/art_crop/front/5/2/52498b7b-0389-4e7b-b29f-7ac86aab9229.jpg?1783905921",
+          "image_normal": "https://cards.scryfall.io/normal/front/5/2/52498b7b-0389-4e7b-b29f-7ac86aab9229.jpg?1783905921"
         },
         {
           "sources": [
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "sample",
-          "commander": "Titania, Voice of Gaea",
+          "commander": "Suki, Courageous Rescuer",
           "format": "commander",
           "bucket": "trending",
           "deck_count": 1,
           "color_identity": [
-            "Green"
+            "White"
           ],
           "tier": "B",
           "top_inclusions": [],
-          "deck_url": "https://archidekt.com/decks/26600858",
-          "art_crop": "https://cards.scryfall.io/art_crop/front/d/e/deeb6a21-23b0-44f1-b70e-5899bb9d4a84.jpg?1783920039",
-          "image_normal": "https://cards.scryfall.io/normal/front/d/e/deeb6a21-23b0-44f1-b70e-5899bb9d4a84.jpg?1783920039"
+          "deck_url": "https://archidekt.com/decks/26635609",
+          "art_crop": "https://cards.scryfall.io/art_crop/front/3/3/33b97433-e16c-422e-a0ca-f6b1e98d8681.jpg?1783904995",
+          "image_normal": "https://cards.scryfall.io/normal/front/3/3/33b97433-e16c-422e-a0ca-f6b1e98d8681.jpg?1783904995"
         },
         {
           "sources": [
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "sample",
-          "commander": "Otrimi, the Ever-Playful",
+          "commander": "Flubs, the Fool",
           "format": "commander",
           "bucket": "trending",
           "deck_count": 1,
           "color_identity": [
-            "Black",
             "Blue",
-            "Green"
+            "Green",
+            "Red"
           ],
           "tier": "C",
           "top_inclusions": [
-            "Ivy, Gleeful Spellthief",
-            "Brokkos, Apex of Forever"
+            "Augur of Autumn",
+            "Ancient Greenwarden",
+            "Ramunap Excavator"
           ],
-          "deck_url": "https://archidekt.com/decks/26600857",
-          "art_crop": "https://cards.scryfall.io/art_crop/front/6/3/639df7bc-b87d-4bf5-8005-8eabc54e955b.jpg?1783931231",
-          "image_normal": "https://cards.scryfall.io/normal/front/6/3/639df7bc-b87d-4bf5-8005-8eabc54e955b.jpg?1783931231"
+          "deck_url": "https://archidekt.com/decks/26635606",
+          "art_crop": "https://cards.scryfall.io/art_crop/front/4/1/41e58eb8-e5b9-4ef6-be1f-00e28cebb998.jpg?1783910621",
+          "image_normal": "https://cards.scryfall.io/normal/front/4/1/41e58eb8-e5b9-4ef6-be1f-00e28cebb998.jpg?1783910621"
         },
         {
           "sources": [
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "sample",
-          "commander": "Muldrotha, the Gravetide",
+          "commander": "Kwia Vigorbloom",
           "format": "commander",
           "bucket": "trending",
           "deck_count": 1,
           "color_identity": [
-            "Black",
-            "Blue",
-            "Green"
-          ],
-          "tier": "C",
-          "top_inclusions": [
-            "The Meathook Massacre",
-            "Culling Ritual",
-            "Fyndhorn Elves",
-            "Necropotence",
-            "Delighted Halfling",
-            "Mindcrank",
-            "Ledger Shredder",
-            "Finale of Devastation"
-          ],
-          "deck_url": "https://archidekt.com/decks/26600855",
-          "art_crop": "https://cards.scryfall.io/art_crop/front/7/0/705b4d97-2f50-47f7-9053-d748f4337553.jpg?1783904538",
-          "image_normal": "https://cards.scryfall.io/normal/front/7/0/705b4d97-2f50-47f7-9053-d748f4337553.jpg?1783904538"
-        },
-        {
-          "sources": [
-            "Decklists via Archidekt (archidekt.com)"
-          ],
-          "sample_size": 1,
-          "computed_at": "2026-09-20T13:45:03Z",
-          "confidence": "sample",
-          "commander": "Seluma, Light of Aysen",
-          "format": "commander",
-          "bucket": "trending",
-          "deck_count": 1,
-          "color_identity": [
+            "Green",
             "White"
           ],
           "tier": "D",
           "top_inclusions": [
-            "Gisela, the Broken Blade",
-            "Lightning Greaves",
-            "The Queen of Dale",
-            "The Mind Stone",
-            "Aurelia, the Warleader",
-            "Vanquish the Horde",
-            "Gleaming Splendor",
-            "Lyra, Tolarian Archangel"
+            "Serra Ascendant",
+            "Heroic Intervention",
+            "Haywire Mite",
+            "Archangel of Thune",
+            "Swords to Plowshares",
+            "Bloombrute",
+            "The Great Henge",
+            "Ondu Inversion // Ondu Skyruins"
           ],
-          "deck_url": "https://archidekt.com/decks/26600849",
-          "art_crop": "https://cards.scryfall.io/art_crop/front/1/e/1eb501cc-0f83-40ca-8987-424bbee5f584.jpg?1787065592",
-          "image_normal": "https://cards.scryfall.io/normal/front/1/e/1eb501cc-0f83-40ca-8987-424bbee5f584.jpg?1787065592"
+          "deck_url": "https://archidekt.com/decks/26635604",
+          "art_crop": "https://cards.scryfall.io/art_crop/front/2/d/2d6ff182-a853-4898-895b-072c89324ca7.jpg?1788878236",
+          "image_normal": "https://cards.scryfall.io/normal/front/2/d/2d6ff182-a853-4898-895b-072c89324ca7.jpg?1788878236"
         },
         {
           "sources": [
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "sample",
           "commander": "Eshki Dragonclaw",
           "format": "competitivebrawl",
@@ -4148,14 +4106,14 @@
           ],
           "tier": "S",
           "top_inclusions": [
-            "Worldly Tutor",
-            "Basilisk Collar",
-            "Delighted Halfling",
-            "Unable to Scream",
+            "Heroic Intervention",
+            "Bulk Up",
+            "Chrome Mox",
+            "Fuel Tank Feaster",
+            "Studious First-Year // Rampant Growth",
             "Goblin Anarchomancer",
-            "Mana Drain",
-            "Utopia Sprawl",
-            "Arcane Signet"
+            "Unleash Fury",
+            "Questing Druid // Seek the Beast"
           ],
           "deck_url": "https://archidekt.com/decks/17883190",
           "art_crop": "https://cards.scryfall.io/art_crop/front/0/d/0d369c44-78ee-4f3c-bf2b-cddba7fe26d4.jpg?1783907322",
@@ -4166,36 +4124,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-09-20T13:45:03Z",
-          "confidence": "sample",
-          "commander": "Sheoldred, the Apocalypse",
-          "format": "competitivebrawl",
-          "bucket": "established",
-          "deck_count": 1,
-          "color_identity": [
-            "Black"
-          ],
-          "tier": "S",
-          "top_inclusions": [
-            "Lightning Greaves",
-            "Phyrexian Obliterator",
-            "The Meathook Massacre",
-            "Palant\u00edr of Orthanc",
-            "Dismember",
-            "Demonic Tutor",
-            "Arcane Signet",
-            "Bitter Triumph"
-          ],
-          "deck_url": "https://archidekt.com/decks/21339688",
-          "art_crop": "https://cards.scryfall.io/art_crop/front/d/6/d67be074-cdd4-41d9-ac89-0a0456c4e4b2.jpg?1783921327",
-          "image_normal": "https://cards.scryfall.io/normal/front/d/6/d67be074-cdd4-41d9-ac89-0a0456c4e4b2.jpg?1783921327"
-        },
-        {
-          "sources": [
-            "Decklists via Archidekt (archidekt.com)"
-          ],
-          "sample_size": 1,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "sample",
           "commander": "A-Acererak the Archlich",
           "format": "competitivebrawl",
@@ -4204,16 +4133,16 @@
           "color_identity": [
             "Black"
           ],
-          "tier": "A",
+          "tier": "S",
           "top_inclusions": [
-            "Defense Grid",
-            "Urza's Incubator",
-            "Aetherflux Reservoir",
-            "Summon: Bahamut",
-            "Yahenni's Expertise",
-            "A-The Meathook Massacre",
-            "Tendrils of Agony",
-            "Thoughtseize"
+            "Feed the Swarm",
+            "Baleful Mastery",
+            "Damnation",
+            "Bolas's Citadel",
+            "Invoke Despair",
+            "Chrome Mox",
+            "Cloud Key",
+            "Jhoira's Familiar"
           ],
           "deck_url": "https://archidekt.com/decks/12547753",
           "art_crop": "https://cards.scryfall.io/art_crop/front/e/b/eb363654-2004-4db8-bbd2-5b121da4f2a0.jpg?1783924483",
@@ -4224,7 +4153,36 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
+          "confidence": "sample",
+          "commander": "Sheoldred, the Apocalypse",
+          "format": "competitivebrawl",
+          "bucket": "established",
+          "deck_count": 1,
+          "color_identity": [
+            "Black"
+          ],
+          "tier": "A",
+          "top_inclusions": [
+            "Feed the Swarm",
+            "Damnation",
+            "Lightning Greaves",
+            "Vito, Thorn of the Dusk Rose",
+            "Night's Whisper",
+            "Necrodominance",
+            "Blasphemous Edict",
+            "Go for the Throat"
+          ],
+          "deck_url": "https://archidekt.com/decks/21339688",
+          "art_crop": "https://cards.scryfall.io/art_crop/front/d/6/d67be074-cdd4-41d9-ac89-0a0456c4e4b2.jpg?1783921327",
+          "image_normal": "https://cards.scryfall.io/normal/front/d/6/d67be074-cdd4-41d9-ac89-0a0456c4e4b2.jpg?1783921327"
+        },
+        {
+          "sources": [
+            "Decklists via Archidekt (archidekt.com)"
+          ],
+          "sample_size": 1,
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "sample",
           "commander": "Krenko, Mob Boss",
           "format": "competitivebrawl",
@@ -4235,14 +4193,14 @@
           ],
           "tier": "A",
           "top_inclusions": [
-            "Firebending Lesson",
-            "Torch the Tower",
-            "Siege-Gang Commander",
-            "Ojer Axonil, Deepest Might // Temple of Power",
+            "Swarming Goblins",
+            "Ornery Goblin",
             "Battle Cry Goblin",
-            "Krenko, Tin Street Kingpin",
+            "Goblin Rabblemaster",
+            "Ruby Medallion",
+            "Heartfire",
             "Lavaspur Boots",
-            "Chromatic Sphere"
+            "Goblin Warchief"
           ],
           "deck_url": "https://archidekt.com/decks/6476901",
           "art_crop": "https://cards.scryfall.io/art_crop/front/8/2/824b2d73-2151-4e5e-9f05-8f63e2bdcaa9.jpg?1783909065",
@@ -4253,7 +4211,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "sample",
           "commander": "Zacama, Primal Calamity",
           "format": "competitivebrawl",
@@ -4266,14 +4224,14 @@
           ],
           "tier": "B",
           "top_inclusions": [
-            "Urza's Incubator",
-            "Delighted Halfling",
-            "Beast Whisperer",
-            "The Great Henge",
+            "Heroic Intervention",
+            "Etali, Primal Conqueror // Etali, Primal Sickness",
             "Swords to Plowshares",
-            "Pantlaza, Sun-Favored",
-            "Topiary Stomper",
-            "Kinjalli's Sunwing"
+            "Zetalpa, Primal Dawn",
+            "The Great Henge",
+            "Shared Roots",
+            "Hexing Squelcher",
+            "Goblin Anarchomancer"
           ],
           "deck_url": "https://archidekt.com/decks/15891877",
           "art_crop": "https://cards.scryfall.io/art_crop/front/0/5/05c5a9a8-badd-43ab-8408-a13e75407681.jpg?1783913841",
@@ -4284,7 +4242,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "sample",
           "commander": "Baral, Chief of Compliance",
           "format": "competitivebrawl",
@@ -4295,14 +4253,14 @@
           ],
           "tier": "B",
           "top_inclusions": [
-            "Three Steps Ahead",
-            "Mischievous Mystic",
-            "Unable to Scream",
-            "Ertai's Scorn",
-            "Keep Safe",
-            "Ledger Shredder",
-            "Solve the Equation",
-            "Reconnaissance Mission"
+            "Invoke the Winds",
+            "Sink into Stupor // Soporific Springs",
+            "Kira, Great Glass-Spinner",
+            "Tale's End",
+            "Consuming Tide",
+            "Summary Dismissal",
+            "Curious Homunculus // Voracious Reader",
+            "Murmuring Mystic"
           ],
           "deck_url": "https://archidekt.com/decks/24528615",
           "art_crop": "https://cards.scryfall.io/art_crop/front/2/7/2709614c-9b08-4d5b-853a-a4d061d85d70.jpg?1783917308",
@@ -4313,7 +4271,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "sample",
           "commander": "Marwyn, the Nurturer",
           "format": "competitivebrawl",
@@ -4324,14 +4282,14 @@
           ],
           "tier": "B",
           "top_inclusions": [
-            "Dwynen's Elite",
-            "Rofellos, Llanowar Emissary",
-            "Beast Whisperer",
-            "Allosaurus Shepherd",
+            "Imperious Perfect",
+            "Trash the Town",
+            "Heroic Intervention",
+            "Elven Ambush",
+            "Tyvar's Stand",
             "Bounty of Skemfar",
-            "Elvish Clancaller",
-            "Finale of Devastation",
-            "Return of the Wildspeaker"
+            "Piercing Exhale",
+            "Llanowar Elves"
           ],
           "deck_url": "https://archidekt.com/decks/24483898",
           "art_crop": "https://cards.scryfall.io/art_crop/front/a/a/aad61d99-5c8e-47b7-ab1a-e70905f59205.jpg?1783928311",
@@ -4342,7 +4300,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "sample",
           "commander": "Ugin, Eye of the Storms",
           "format": "competitivebrawl",
@@ -4351,14 +4309,14 @@
           "color_identity": [],
           "tier": "C",
           "top_inclusions": [
+            "Foundry Inspector",
+            "Scampering Surveyor",
+            "Bender's Waterskin",
             "The Aetherspark",
-            "Lion Heart",
-            "Ugin, the Spirit Dragon",
-            "Sword of Fire and Ice",
-            "Living Brain, Mechanical Marvel",
-            "Marketback Walker",
-            "Goldvein Pick",
-            "Ultron, Artificial Malevolence"
+            "Starting Column",
+            "Bygone Colossus",
+            "Nettlecyst",
+            "H.E.R.B.I.E. Scout Unit"
           ],
           "deck_url": "https://archidekt.com/decks/21852727",
           "art_crop": "https://cards.scryfall.io/art_crop/front/6/4/64a5d494-efa1-446b-bebe-2ad36e154376.jpg?1783907421",
@@ -4369,7 +4327,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "sample",
           "commander": "Norman Osborn // Green Goblin",
           "format": "competitivebrawl",
@@ -4382,14 +4340,14 @@
           ],
           "tier": "C",
           "top_inclusions": [
-            "Defense Grid",
-            "Talisman of Creativity",
+            "Artist's Talent",
+            "Doomsday",
+            "Chrome Mox",
             "Sink into Stupor // Soporific Springs",
-            "Brainstorm",
-            "Saw in Half",
             "Talisman of Indulgence",
-            "Brain Freeze",
-            "Tendrils of Agony"
+            "Hoarding Broodlord",
+            "Force of Negation",
+            "Hullbreaker Horror"
           ],
           "deck_url": "https://archidekt.com/decks/24406644",
           "art_crop": "https://cards.scryfall.io/art_crop/front/d/5/d5c53af9-7150-4e78-8771-2de7980aa307.jpg?1783905356",
@@ -4400,7 +4358,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "sample",
           "commander": "Beorn the Fierce",
           "format": "competitivebrawl",
@@ -4411,14 +4369,14 @@
           ],
           "tier": "D",
           "top_inclusions": [
-            "Disciple of Freyalise // Garden of Freyalise",
-            "Runeclaw Bear",
-            "Beastmaster Ascension",
-            "Fyndhorn Elves",
-            "Forest Bear",
-            "Ayula's Influence",
-            "Return of the Wildspeaker",
-            "Wild Growth"
+            "Unnatural Growth",
+            "Bridgeworks Battle // Tanglespan Bridgeworks",
+            "Kodama's Reach",
+            "Words of Wilding",
+            "Vivien, Champion of the Wilds",
+            "Lifestream's Blessing",
+            "Bosco, Just a Bear",
+            "Selfless Safewright"
           ],
           "deck_url": "https://archidekt.com/decks/25270545",
           "art_crop": "https://cards.scryfall.io/art_crop/front/3/6/367d5f8b-77ee-47f7-bc71-972d62c280a9.jpg?1784632151",
@@ -4428,38 +4386,97 @@
           "sources": [
             "Decklists via Archidekt (archidekt.com)"
           ],
-          "sample_size": 2,
-          "computed_at": "2026-09-20T13:45:03Z",
-          "confidence": "low",
-          "commander": "Gisa and Geralf",
+          "sample_size": 1,
+          "computed_at": "2026-09-21T13:45:03Z",
+          "confidence": "sample",
+          "commander": "Rocco, Cabaretti Caterer",
           "format": "competitivebrawl",
           "bucket": "trending",
-          "deck_count": 2,
+          "deck_count": 1,
           "color_identity": [
-            "Black",
-            "Blue"
+            "Green",
+            "Red",
+            "White"
           ],
           "tier": "S",
           "top_inclusions": [
-            "Vile Entomber",
-            "Undead Augur",
-            "Grave Titan",
-            "Zul Ashur, Lich Lord",
-            "Gleaming Overseer",
-            "Liliana, Untouched by Death",
-            "Headless Rider",
-            "Arcane Signet"
+            "Rebellious Strike",
+            "Bulk Up",
+            "Mirrorwing Dragon",
+            "Tyvar's Stand",
+            "Primal Amulet // Primal Wellspring",
+            "Boros Charm",
+            "Path to Exile",
+            "Impolite Entrance"
           ],
-          "deck_url": "https://archidekt.com/decks/26534909",
-          "art_crop": "https://cards.scryfall.io/art_crop/front/b/c/bce9bf8d-4d22-4967-bd9e-27fe444ef3f6.jpg?1783908077",
-          "image_normal": "https://cards.scryfall.io/normal/front/b/c/bce9bf8d-4d22-4967-bd9e-27fe444ef3f6.jpg?1783908077"
+          "deck_url": "https://archidekt.com/decks/26626931",
+          "art_crop": "https://cards.scryfall.io/art_crop/front/b/6/b6cf8b35-2a81-40fd-b383-becb81bef806.jpg?1783923072",
+          "image_normal": "https://cards.scryfall.io/normal/front/b/6/b6cf8b35-2a81-40fd-b383-becb81bef806.jpg?1783923072"
         },
         {
           "sources": [
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
+          "confidence": "sample",
+          "commander": "Arahbo, the First Fang",
+          "format": "competitivebrawl",
+          "bucket": "trending",
+          "deck_count": 1,
+          "color_identity": [
+            "White"
+          ],
+          "tier": "A",
+          "top_inclusions": [
+            "Felidar Cub",
+            "Prideful Parent",
+            "Leonin Relic-Warder",
+            "Regal Caracal",
+            "Eater of Virtue",
+            "Leonin Skyhunter",
+            "Dawnwing Marshal",
+            "Patriar's Humiliation"
+          ],
+          "deck_url": "https://archidekt.com/decks/26626258",
+          "art_crop": "https://cards.scryfall.io/art_crop/front/a/a/aad69296-4b74-4f33-a2a5-330dda781399.jpg?1783908570",
+          "image_normal": "https://cards.scryfall.io/normal/front/a/a/aad69296-4b74-4f33-a2a5-330dda781399.jpg?1783908570"
+        },
+        {
+          "sources": [
+            "Decklists via Archidekt (archidekt.com)"
+          ],
+          "sample_size": 1,
+          "computed_at": "2026-09-21T13:45:03Z",
+          "confidence": "sample",
+          "commander": "Shang-Chi, Master of Kung Fu",
+          "format": "competitivebrawl",
+          "bucket": "trending",
+          "deck_count": 1,
+          "color_identity": [
+            "Green"
+          ],
+          "tier": "A",
+          "top_inclusions": [
+            "Heroic Intervention",
+            "Once Upon a Time",
+            "Chrome Mox",
+            "Natural Order",
+            "Chord of Calling",
+            "The Great Henge",
+            "Craterhoof Behemoth",
+            "Llanowar Elves"
+          ],
+          "deck_url": "https://archidekt.com/decks/26601745",
+          "art_crop": "https://cards.scryfall.io/art_crop/front/2/e/2edbb62f-ad45-4422-850b-68dcc18b4c73.jpg?1783902911",
+          "image_normal": "https://cards.scryfall.io/normal/front/2/e/2edbb62f-ad45-4422-850b-68dcc18b4c73.jpg?1783902911"
+        },
+        {
+          "sources": [
+            "Decklists via Archidekt (archidekt.com)"
+          ],
+          "sample_size": 1,
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "sample",
           "commander": "Codie, Ravenous Codex",
           "format": "competitivebrawl",
@@ -4472,16 +4489,16 @@
             "Red",
             "White"
           ],
-          "tier": "A",
+          "tier": "B",
           "top_inclusions": [
-            "Harmonized Trio // Brainstorm",
+            "Wonder",
+            "Heroic Intervention",
+            "Goblin Glasswright // Craft with Pride",
+            "Arcane Denial",
+            "Bloodline Recollector // Ancestral Craving",
             "Swords to Plowshares",
-            "Beast Whisperer",
-            "Faeburrow Elder",
-            "Chromatic Orrery",
-            "Jegantha, the Wellspring",
-            "Blazing Firesinger // Seething Song",
-            "Veyran, Voice of Duality"
+            "Storm-Kiln Artist",
+            "Emeritus of Truce // Swords to Plowshares"
           ],
           "deck_url": "https://archidekt.com/decks/26599956",
           "art_crop": "https://cards.scryfall.io/art_crop/front/c/3/c3192390-1518-49fc-8716-f2c7a0384f39.jpg?1789646811",
@@ -4492,7 +4509,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "sample",
           "commander": "Urabrask // The Great Work",
           "format": "competitivebrawl",
@@ -4501,16 +4518,16 @@
           "color_identity": [
             "Red"
           ],
-          "tier": "A",
+          "tier": "B",
           "top_inclusions": [
-            "Hit the Mother Lode",
-            "Seething Song",
-            "Strike It Rich",
-            "Expedite",
-            "Blazing Firesinger // Seething Song",
-            "Jeska's Will",
-            "Great Train Heist",
-            "Seize the Spoils"
+            "Goblin Glasswright // Craft with Pride",
+            "Birgi, God of Storytelling // Harnfel, Horn of Bounty",
+            "Rile",
+            "Impolite Entrance",
+            "Grinning Ignus",
+            "Pyretic Ritual",
+            "The Last Agni Kai",
+            "Glimpse the Impossible"
           ],
           "deck_url": "https://archidekt.com/decks/26599519",
           "art_crop": "https://cards.scryfall.io/art_crop/front/7/1/712fb9e5-bd67-4173-a2d4-061aeb6253b5.jpg?1783916984",
@@ -4521,7 +4538,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "sample",
           "commander": "Rosheen, Roaring Prophet",
           "format": "competitivebrawl",
@@ -4533,14 +4550,14 @@
           ],
           "tier": "B",
           "top_inclusions": [
-            "Worldly Tutor",
-            "Primal Might",
-            "Momentous Fall",
-            "The Great Henge",
-            "Reap the Past",
-            "Jeska's Will",
-            "Return of the Wildspeaker",
-            "Electrodominance"
+            "Heroic Intervention",
+            "Heaven // Earth",
+            "Fated Firepower",
+            "Colossal Majesty",
+            "Radagast of Rhosgobel",
+            "Doubling Season",
+            "Steelbane Hydra",
+            "Open the Way"
           ],
           "deck_url": "https://archidekt.com/decks/26595321",
           "art_crop": "https://cards.scryfall.io/art_crop/front/b/5/b5ac88b2-a92e-4a12-9ba3-5a4b8cdb58dc.jpg?1783911245",
@@ -4551,7 +4568,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "sample",
           "commander": "Chromium, the Mutable",
           "format": "competitivebrawl",
@@ -4562,16 +4579,16 @@
             "Blue",
             "White"
           ],
-          "tier": "B",
+          "tier": "C",
           "top_inclusions": [
-            "Consult the Star Charts",
-            "Three Steps Ahead",
-            "Memory Lapse",
+            "Wan Shi Tong, Librarian",
+            "Drannith Magistrate",
             "Sink into Stupor // Soporific Springs",
-            "Brainstorm",
+            "Requiting Hex",
+            "Solitude",
             "Swords to Plowshares",
-            "Psychic Frog",
-            "Baleful Strix"
+            "Ondu Inversion // Ondu Skyruins",
+            "Path to Exile"
           ],
           "deck_url": "https://archidekt.com/decks/26580940",
           "art_crop": "https://cards.scryfall.io/art_crop/front/5/0/50c1de2c-1acc-47c8-9b5e-a9dae3da8a49.jpg?1783934522",
@@ -4582,7 +4599,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "sample",
           "commander": "Doran, Besieged by Time",
           "format": "competitivebrawl",
@@ -4595,14 +4612,14 @@
           ],
           "tier": "C",
           "top_inclusions": [
-            "Lightning Greaves",
-            "Zombify",
+            "Trash the Town",
+            "Vizier of the Menagerie",
+            "Keep Out",
             "Fountainport Bell",
-            "Swords to Plowshares",
-            "Soul Search",
-            "Humiliate",
-            "Catapult Fodder // Catapult Captain",
-            "Enduring Innocence"
+            "Lightning Greaves",
+            "Unflinching Courage",
+            "Ancient Lumberknot",
+            "Swords to Plowshares"
           ],
           "deck_url": "https://archidekt.com/decks/26558753",
           "art_crop": "https://cards.scryfall.io/art_crop/front/5/6/568aa70a-6765-486a-bd37-5d38b16c46de.jpg?1783904413",
@@ -4613,7 +4630,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "sample",
           "commander": "Thranduil, the Elvenking",
           "format": "competitivebrawl",
@@ -4624,63 +4641,33 @@
             "Blue",
             "Green"
           ],
-          "tier": "C",
+          "tier": "D",
           "top_inclusions": [
+            "Marwyn, the Nurturer",
+            "Trystan, Callous Cultivator // Trystan, Penitent Culler",
             "Lightning Greaves",
-            "Disciple of Freyalise // Garden of Freyalise",
-            "Rofellos, Llanowar Emissary",
-            "Delighted Halfling",
-            "Beast Whisperer",
-            "Allosaurus Shepherd",
-            "Leovold, Emissary of Trest",
-            "Craterhoof Behemoth"
+            "Tale's End",
+            "Craterhoof Behemoth",
+            "Llanowar Elves",
+            "Woodland Weavemaster",
+            "Bitter Triumph"
           ],
           "deck_url": "https://archidekt.com/decks/26555047",
           "art_crop": "https://cards.scryfall.io/art_crop/front/f/e/fe2fe8fa-3b99-44c1-bab9-922e5c864952.jpg?1784377043",
           "image_normal": "https://cards.scryfall.io/normal/front/f/e/fe2fe8fa-3b99-44c1-bab9-922e5c864952.jpg?1784377043"
-        },
-        {
-          "sources": [
-            "Decklists via Archidekt (archidekt.com)"
-          ],
-          "sample_size": 1,
-          "computed_at": "2026-09-20T13:45:03Z",
-          "confidence": "sample",
-          "commander": "Merry, Esquire of Rohan",
-          "format": "competitivebrawl",
-          "bucket": "trending",
-          "deck_count": 1,
-          "color_identity": [
-            "Red",
-            "White"
-          ],
-          "tier": "D",
-          "top_inclusions": [
-            "The Queen of Dale",
-            "Mana Tithe",
-            "Phelia, Exuberant Shepherd",
-            "Swords to Plowshares",
-            "Orim's Chant",
-            "Tomik, Distinguished Advokist",
-            "Doorkeeper Thrull",
-            "Tajic, Legion's Edge"
-          ],
-          "deck_url": "https://archidekt.com/decks/26542691",
-          "art_crop": "https://cards.scryfall.io/art_crop/front/c/e/ce325c45-4ae9-43f3-9652-ce21c11a0143.jpg?1783916367",
-          "image_normal": "https://cards.scryfall.io/normal/front/c/e/ce325c45-4ae9-43f3-9652-ce21c11a0143.jpg?1783916367"
         }
       ]
     },
     "limited_tiers": {
       "status": "unavailable",
-      "computed_at": "2026-09-20T13:45:03Z",
+      "computed_at": "2026-09-21T13:45:03Z",
       "methodology": "17lands unavailable: published",
       "attribution": [],
       "rows": []
     },
     "formats": {
       "status": "published",
-      "computed_at": "2026-09-20T13:45:03Z",
+      "computed_at": "2026-09-21T13:45:03Z",
       "methodology": "One hub-card row per tracked format: legal-set list + banned/restricted counts from Scryfall legalities (ground truth), our own coverage state for this hub (honest 'pending' where a module isn't live yet), and cite-and-link-only external tracker URLs (untapped.gg, MTGGoldfish) \u2014 we NEVER ingest their numbers, only link to them by name.",
       "attribution": [
         "Card legalities + sets via Scryfall (scryfall.com)"
@@ -4691,7 +4678,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 45,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "format": "standard",
           "format_name": "Standard",
@@ -4755,7 +4742,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 254,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "format": "competitivebrawl",
           "format_name": "Competitive Brawl",
@@ -5028,7 +5015,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 45,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "format": "standardbrawl",
           "format_name": "Brawl",
@@ -5092,7 +5079,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 278,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "format": "commander",
           "format_name": "Commander",
@@ -5389,7 +5376,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 145,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "format": "pioneer",
           "format_name": "Pioneer",
@@ -5553,7 +5540,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 206,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "format": "modern",
           "format_name": "Modern",
@@ -5778,7 +5765,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 253,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "format": "historic",
           "format_name": "Historic",
@@ -6050,7 +6037,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 254,
-          "computed_at": "2026-09-20T13:45:03Z",
+          "computed_at": "2026-09-21T13:45:03Z",
           "confidence": "high",
           "format": "timeless",
           "format_name": "Timeless",
@@ -6322,328 +6309,12 @@
     },
     "meta_movers": {
       "status": "published",
-      "computed_at": "2026-09-20T13:45:03Z",
+      "computed_at": "2026-09-21T13:45:03Z",
       "methodology": "Day-over-day diff of THIS hub's own two most recently published mtg-meta.json / mtg-draft.json payloads -- not an external source. Computed at publish time by reading the games-hub clone's EXISTING payload before it is overwritten this run. commander_riser / commander_faller = the top 8 commanders (each direction) by deck_count delta within the SAME format+bucket across the two runs; draft_grade_change = cards whose BuildKit Draft Score grade moved between runs for a set tracked in BOTH payloads' overall_rows; banlist_add / banlist_remove = cards that entered/left a format's banned+restricted list; new_set = a set_code appearing in calendar this run that was not in the previous payload. Every row carries this run's own computed_at (the standard honesty field) PLUS previous_computed_at/current_computed_at -- the two payload timestamps actually being compared. A first publish (no previous payload found in games-hub) or any --dry-run (which never touches the games-hub clone) both ship the honest 'pending_history' status with zero rows rather than guessing a diff.",
       "attribution": [
         "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
       ],
-      "rows": [
-        {
-          "sources": [
-            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
-          ],
-          "sample_size": 2,
-          "computed_at": "2026-09-20T13:45:03Z",
-          "confidence": "high",
-          "kind": "draft_grade_change",
-          "previous_computed_at": "2026-09-19T13:45:03Z",
-          "current_computed_at": "2026-09-20T13:45:03Z",
-          "set_code": "HOB",
-          "card": "Long Lake Nuisance",
-          "previous_grade": "A",
-          "current_grade": "S"
-        },
-        {
-          "sources": [
-            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
-          ],
-          "sample_size": 2,
-          "computed_at": "2026-09-20T13:45:03Z",
-          "confidence": "high",
-          "kind": "draft_grade_change",
-          "previous_computed_at": "2026-09-19T13:45:03Z",
-          "current_computed_at": "2026-09-20T13:45:03Z",
-          "set_code": "HOB",
-          "card": "Bilbo, Luckwearer",
-          "previous_grade": "C",
-          "current_grade": "S"
-        },
-        {
-          "sources": [
-            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
-          ],
-          "sample_size": 2,
-          "computed_at": "2026-09-20T13:45:03Z",
-          "confidence": "high",
-          "kind": "draft_grade_change",
-          "previous_computed_at": "2026-09-19T13:45:03Z",
-          "current_computed_at": "2026-09-20T13:45:03Z",
-          "set_code": "HOB",
-          "card": "Bilbo, Luckwearer // Burglar's Plot",
-          "previous_grade": "C",
-          "current_grade": "S"
-        },
-        {
-          "sources": [
-            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
-          ],
-          "sample_size": 2,
-          "computed_at": "2026-09-20T13:45:03Z",
-          "confidence": "high",
-          "kind": "draft_grade_change",
-          "previous_computed_at": "2026-09-19T13:45:03Z",
-          "current_computed_at": "2026-09-20T13:45:03Z",
-          "set_code": "HOB",
-          "card": "Master's Councillors",
-          "previous_grade": "S",
-          "current_grade": "A"
-        },
-        {
-          "sources": [
-            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
-          ],
-          "sample_size": 2,
-          "computed_at": "2026-09-20T13:45:03Z",
-          "confidence": "high",
-          "kind": "draft_grade_change",
-          "previous_computed_at": "2026-09-19T13:45:03Z",
-          "current_computed_at": "2026-09-20T13:45:03Z",
-          "set_code": "HOB",
-          "card": "Gollum, Silent Slinker",
-          "previous_grade": "B",
-          "current_grade": "A"
-        },
-        {
-          "sources": [
-            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
-          ],
-          "sample_size": 2,
-          "computed_at": "2026-09-20T13:45:03Z",
-          "confidence": "high",
-          "kind": "draft_grade_change",
-          "previous_computed_at": "2026-09-19T13:45:03Z",
-          "current_computed_at": "2026-09-20T13:45:03Z",
-          "set_code": "HOB",
-          "card": "Gollum, Silent Slinker // Meager Meal",
-          "previous_grade": "B",
-          "current_grade": "A"
-        },
-        {
-          "sources": [
-            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
-          ],
-          "sample_size": 2,
-          "computed_at": "2026-09-20T13:45:03Z",
-          "confidence": "high",
-          "kind": "draft_grade_change",
-          "previous_computed_at": "2026-09-19T13:45:03Z",
-          "current_computed_at": "2026-09-20T13:45:03Z",
-          "set_code": "HOB",
-          "card": "Crude Bent Blade",
-          "previous_grade": "B",
-          "current_grade": "A"
-        },
-        {
-          "sources": [
-            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
-          ],
-          "sample_size": 2,
-          "computed_at": "2026-09-20T13:45:03Z",
-          "confidence": "high",
-          "kind": "draft_grade_change",
-          "previous_computed_at": "2026-09-19T13:45:03Z",
-          "current_computed_at": "2026-09-20T13:45:03Z",
-          "set_code": "HOB",
-          "card": "Mirkwood Nurturer",
-          "previous_grade": "C",
-          "current_grade": "B"
-        },
-        {
-          "sources": [
-            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
-          ],
-          "sample_size": 2,
-          "computed_at": "2026-09-20T13:45:03Z",
-          "confidence": "high",
-          "kind": "draft_grade_change",
-          "previous_computed_at": "2026-09-19T13:45:03Z",
-          "current_computed_at": "2026-09-20T13:45:03Z",
-          "set_code": "HOB",
-          "card": "Dori, Bearer of Friends",
-          "previous_grade": "C",
-          "current_grade": "B"
-        },
-        {
-          "sources": [
-            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
-          ],
-          "sample_size": 2,
-          "computed_at": "2026-09-20T13:45:03Z",
-          "confidence": "high",
-          "kind": "draft_grade_change",
-          "previous_computed_at": "2026-09-19T13:45:03Z",
-          "current_computed_at": "2026-09-20T13:45:03Z",
-          "set_code": "HOB",
-          "card": "Magnificent End",
-          "previous_grade": "C",
-          "current_grade": "B"
-        },
-        {
-          "sources": [
-            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
-          ],
-          "sample_size": 2,
-          "computed_at": "2026-09-20T13:45:03Z",
-          "confidence": "high",
-          "kind": "draft_grade_change",
-          "previous_computed_at": "2026-09-19T13:45:03Z",
-          "current_computed_at": "2026-09-20T13:45:03Z",
-          "set_code": "HOB",
-          "card": "Stir Up Trouble",
-          "previous_grade": "D",
-          "current_grade": "B"
-        },
-        {
-          "sources": [
-            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
-          ],
-          "sample_size": 2,
-          "computed_at": "2026-09-20T13:45:03Z",
-          "confidence": "high",
-          "kind": "draft_grade_change",
-          "previous_computed_at": "2026-09-19T13:45:03Z",
-          "current_computed_at": "2026-09-20T13:45:03Z",
-          "set_code": "HOB",
-          "card": "Smaug, the Great Calamity",
-          "previous_grade": "D",
-          "current_grade": "C"
-        },
-        {
-          "sources": [
-            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
-          ],
-          "sample_size": 2,
-          "computed_at": "2026-09-20T13:45:03Z",
-          "confidence": "high",
-          "kind": "draft_grade_change",
-          "previous_computed_at": "2026-09-19T13:45:03Z",
-          "current_computed_at": "2026-09-20T13:45:03Z",
-          "set_code": "HOB",
-          "card": "Smaug, the Great Calamity // Spew Flame",
-          "previous_grade": "D",
-          "current_grade": "C"
-        },
-        {
-          "sources": [
-            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
-          ],
-          "sample_size": 2,
-          "computed_at": "2026-09-20T13:45:03Z",
-          "confidence": "high",
-          "kind": "draft_grade_change",
-          "previous_computed_at": "2026-09-19T13:45:03Z",
-          "current_computed_at": "2026-09-20T13:45:03Z",
-          "set_code": "HOB",
-          "card": "Hobbit Hole",
-          "previous_grade": "S",
-          "current_grade": "C"
-        },
-        {
-          "sources": [
-            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
-          ],
-          "sample_size": 2,
-          "computed_at": "2026-09-20T13:45:03Z",
-          "confidence": "high",
-          "kind": "draft_grade_change",
-          "previous_computed_at": "2026-09-19T13:45:03Z",
-          "current_computed_at": "2026-09-20T13:45:03Z",
-          "set_code": "HOB",
-          "card": "Rage into the Valley",
-          "previous_grade": "D",
-          "current_grade": "C"
-        },
-        {
-          "sources": [
-            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
-          ],
-          "sample_size": 2,
-          "computed_at": "2026-09-20T13:45:03Z",
-          "confidence": "high",
-          "kind": "draft_grade_change",
-          "previous_computed_at": "2026-09-19T13:45:03Z",
-          "current_computed_at": "2026-09-20T13:45:03Z",
-          "set_code": "HOB",
-          "card": "Ravening Warg",
-          "previous_grade": "D",
-          "current_grade": "C"
-        },
-        {
-          "sources": [
-            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
-          ],
-          "sample_size": 2,
-          "computed_at": "2026-09-20T13:45:03Z",
-          "confidence": "high",
-          "kind": "draft_grade_change",
-          "previous_computed_at": "2026-09-19T13:45:03Z",
-          "current_computed_at": "2026-09-20T13:45:03Z",
-          "set_code": "HOB",
-          "card": "Bilbo's Deadly Slice",
-          "previous_grade": "C",
-          "current_grade": "D"
-        },
-        {
-          "sources": [
-            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
-          ],
-          "sample_size": 2,
-          "computed_at": "2026-09-20T13:45:03Z",
-          "confidence": "high",
-          "kind": "draft_grade_change",
-          "previous_computed_at": "2026-09-19T13:45:03Z",
-          "current_computed_at": "2026-09-20T13:45:03Z",
-          "set_code": "HOB",
-          "card": "Attercop",
-          "previous_grade": "C",
-          "current_grade": "F"
-        },
-        {
-          "sources": [
-            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
-          ],
-          "sample_size": 2,
-          "computed_at": "2026-09-20T13:45:03Z",
-          "confidence": "high",
-          "kind": "draft_grade_change",
-          "previous_computed_at": "2026-09-19T13:45:03Z",
-          "current_computed_at": "2026-09-20T13:45:03Z",
-          "set_code": "HOB",
-          "card": "Goblin Plate Mail",
-          "previous_grade": "D",
-          "current_grade": "F"
-        },
-        {
-          "sources": [
-            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
-          ],
-          "sample_size": 2,
-          "computed_at": "2026-09-20T13:45:03Z",
-          "confidence": "high",
-          "kind": "draft_grade_change",
-          "previous_computed_at": "2026-09-19T13:45:03Z",
-          "current_computed_at": "2026-09-20T13:45:03Z",
-          "set_code": "HOB",
-          "card": "Troop of Ponies",
-          "previous_grade": "C",
-          "current_grade": "B"
-        },
-        {
-          "sources": [
-            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
-          ],
-          "sample_size": 2,
-          "computed_at": "2026-09-20T13:45:03Z",
-          "confidence": "high",
-          "kind": "draft_grade_change",
-          "previous_computed_at": "2026-09-19T13:45:03Z",
-          "current_computed_at": "2026-09-20T13:45:03Z",
-          "set_code": "HOB",
-          "card": "Stony-Voiced Goblins",
-          "previous_grade": "C",
-          "current_grade": "D"
-        }
-      ]
+      "rows": []
     }
   }
 }
