@@ -1,12 +1,12 @@
 {
   "schema": "buildkit-mtg-meta@1",
   "status": "published",
-  "computed_at": "2026-11-08T14:45:02Z",
+  "computed_at": "2026-11-09T14:45:02Z",
   "boilerplate": "BuildKit MTG Meta Hub is unofficial Fan Content permitted under the Wizards of the Coast Fan Content Policy. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. (c) Wizards of the Coast LLC.",
   "modules": {
     "banlist": {
       "status": "published",
-      "computed_at": "2026-11-08T14:45:02Z",
+      "computed_at": "2026-11-09T14:45:02Z",
       "methodology": "Snapshot of Scryfall's machine-readable legalities (the ban truth) as of this bulk-data pull. Scryfall's legality statuses are legal/not_legal/restricted/banned \u2014 there is no separate 'suspended' status, so Vintage-style restricted cards are reported alongside banned rather than inventing a status Scryfall doesn't expose. See the linked Wizards announcement page for the human explanation and change history; Scryfall doesn't carry ban dates, so this row does not claim a 'last B&R change' date it can't ground.",
       "attribution": [
         "Card legalities + sets via Scryfall (scryfall.com)"
@@ -17,7 +17,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 13,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "high",
           "format": "standard",
           "format_name": "Standard",
@@ -44,7 +44,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 13,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "high",
           "format": "competitivebrawl",
           "format_name": "Competitive Brawl",
@@ -72,7 +72,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 0,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "high",
           "format": "standardbrawl",
           "format_name": "Brawl",
@@ -85,7 +85,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 83,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "high",
           "format": "commander",
           "format_name": "Commander",
@@ -182,7 +182,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 31,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "high",
           "format": "pioneer",
           "format_name": "Pioneer",
@@ -227,7 +227,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 52,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "high",
           "format": "modern",
           "format_name": "Modern",
@@ -293,7 +293,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 84,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "high",
           "format": "historic",
           "format_name": "Historic",
@@ -391,7 +391,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 4,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "high",
           "format": "timeless",
           "format_name": "Timeless",
@@ -408,7 +408,7 @@
     },
     "calendar": {
       "status": "published",
-      "computed_at": "2026-11-08T14:45:02Z",
+      "computed_at": "2026-11-09T14:45:02Z",
       "methodology": "Recent real (non-digital) expansion/core/commander/masters sets from Scryfall's /sets endpoint, newest first \u2014 near-zero maintenance per METAHUB-SPEC.md module 4. 'standard_legal' is read directly off whether Scryfall reports ANY card from that set as Standard-legal (ground truth, not a hand-maintained rotation calendar).",
       "attribution": [
         "Card legalities + sets via Scryfall (scryfall.com)"
@@ -419,3116 +419,183 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "high",
           "set_code": "MDC",
           "set_name": "Darkhold Destiny Commander",
           "set_type": "commander",
           "released_at": "2027-04-09",
           "standard_legal": false,
-          "icon_svg_uri": "https://svgs.scryfall.io/sets/mdc.svg?1793595600"
+          "icon_svg_uri": "https://svgs.scryfall.io/sets/mdc.svg?1794200400"
         },
         {
           "sources": [
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 12,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "high",
           "set_code": "MDD",
           "set_name": "Marvel: Darkhold Destiny",
           "set_type": "expansion",
           "released_at": "2027-04-09",
           "standard_legal": true,
-          "icon_svg_uri": "https://svgs.scryfall.io/sets/mdd.svg?1793595600"
+          "icon_svg_uri": "https://svgs.scryfall.io/sets/mdd.svg?1794200400"
         },
         {
           "sources": [
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 0,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "high",
           "set_code": "NAU",
           "set_name": "Nauctis: The Sunken Realm",
           "set_type": "expansion",
           "released_at": "2027-02-05",
           "standard_legal": false,
-          "icon_svg_uri": "https://svgs.scryfall.io/sets/default.svg?1793595600"
+          "icon_svg_uri": "https://svgs.scryfall.io/sets/default.svg?1794200400"
         },
         {
           "sources": [
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 556,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "high",
           "set_code": "TRC",
           "set_name": "Star Trek Commander",
           "set_type": "commander",
           "released_at": "2026-11-13",
           "standard_legal": true,
-          "icon_svg_uri": "https://svgs.scryfall.io/sets/trc.svg?1793595600"
+          "icon_svg_uri": "https://svgs.scryfall.io/sets/trc.svg?1794200400"
         },
         {
           "sources": [
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 586,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "high",
           "set_code": "TRK",
           "set_name": "Star Trek",
           "set_type": "expansion",
           "released_at": "2026-11-13",
           "standard_legal": true,
-          "icon_svg_uri": "https://svgs.scryfall.io/sets/trk.svg?1793595600"
+          "icon_svg_uri": "https://svgs.scryfall.io/sets/trk.svg?1794200400"
         },
         {
           "sources": [
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 80,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "high",
           "set_code": "MBC",
           "set_name": "Mystery Booster Commander Edition",
           "set_type": "draft_innovation",
           "released_at": "2026-10-19",
           "standard_legal": false,
-          "icon_svg_uri": "https://svgs.scryfall.io/sets/mbc.svg?1793595600"
+          "icon_svg_uri": "https://svgs.scryfall.io/sets/mbc.svg?1794200400"
         },
         {
           "sources": [
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 103,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "high",
           "set_code": "FRC",
           "set_name": "Reality Fracture Commander",
           "set_type": "commander",
           "released_at": "2026-10-02",
           "standard_legal": true,
-          "icon_svg_uri": "https://svgs.scryfall.io/sets/frc.svg?1793595600"
+          "icon_svg_uri": "https://svgs.scryfall.io/sets/frc.svg?1794200400"
         },
         {
           "sources": [
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 462,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "high",
           "set_code": "FRA",
           "set_name": "Reality Fracture",
           "set_type": "expansion",
           "released_at": "2026-10-02",
           "standard_legal": true,
-          "icon_svg_uri": "https://svgs.scryfall.io/sets/fra.svg?1793595600"
+          "icon_svg_uri": "https://svgs.scryfall.io/sets/fra.svg?1794200400"
         },
         {
           "sources": [
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 321,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "high",
           "set_code": "HOB",
           "set_name": "The Hobbit",
           "set_type": "expansion",
           "released_at": "2026-08-14",
           "standard_legal": true,
-          "icon_svg_uri": "https://svgs.scryfall.io/sets/hob.svg?1793595600"
+          "icon_svg_uri": "https://svgs.scryfall.io/sets/hob.svg?1794200400"
         },
         {
           "sources": [
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 866,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "high",
           "set_code": "MSC",
           "set_name": "Marvel Super Heroes Commander",
           "set_type": "commander",
           "released_at": "2026-06-26",
           "standard_legal": true,
-          "icon_svg_uri": "https://svgs.scryfall.io/sets/msc.svg?1793595600"
+          "icon_svg_uri": "https://svgs.scryfall.io/sets/msc.svg?1794200400"
         },
         {
           "sources": [
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 453,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "high",
           "set_code": "MSH",
           "set_name": "Marvel Super Heroes",
           "set_type": "expansion",
           "released_at": "2026-06-26",
           "standard_legal": true,
-          "icon_svg_uri": "https://svgs.scryfall.io/sets/msh.svg?1793595600"
+          "icon_svg_uri": "https://svgs.scryfall.io/sets/msh.svg?1794200400"
         },
         {
           "sources": [
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 426,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "high",
           "set_code": "SOC",
           "set_name": "Secrets of Strixhaven Commander",
           "set_type": "commander",
           "released_at": "2026-04-24",
           "standard_legal": true,
-          "icon_svg_uri": "https://svgs.scryfall.io/sets/soc.svg?1793595600"
+          "icon_svg_uri": "https://svgs.scryfall.io/sets/soc.svg?1794200400"
         }
       ]
     },
     "edh_tournaments": {
-      "status": "published",
-      "computed_at": "2026-11-08T14:45:02Z",
-      "methodology": "Real Commander/cEDH tournament results from topdeck.gg's public tournament-results API (last 30 days, format=EDH) -- see the per-event event_url for the source. Up to 40 of the most recent events are shown; top_standings = up to 8 players per event, ranked by OUR OWN win differential (wins - losses, ties broken by wins) -- topdeck.gg's real API carries no organizer-tagged 'placement'/'standing' field, so this is not the event's official final standings. commanders = the standing's real commander name(s) ONLY when topdeck.gg's structured decklist import (deckObj.Commanders, verified live 2026-07-11 as genuinely real for roughly 43% of standings -- most commonly a Moxfield import) is present for that standing; otherwise null, never inferred from an unparsed decklist. sample_size = player_count (a real recorded event, not a statistical estimate, hence always-high confidence like the banlist/calendar modules).",
+      "status": "pending_key",
+      "computed_at": "2026-11-09T14:45:02Z",
+      "methodology": "Real Commander/cEDH tournament results from topdeck.gg's public tournament-results API (last 30 days, format=EDH) -- see the per-event event_url for the source. Up to 40 of the most recent events are shown; top_standings = up to 8 players per event, ranked by OUR OWN win differential (wins - losses, ties broken by wins) -- topdeck.gg's real API carries no organizer-tagged 'placement'/'standing' field, so this is not the event's official final standings. commanders = the standing's real commander name(s) ONLY when topdeck.gg's structured decklist import (deckObj.Commanders, verified live 2026-07-11 as genuinely real for roughly 43% of standings -- most commonly a Moxfield import) is present for that standing; otherwise null, never inferred from an unparsed decklist. sample_size = player_count (a real recorded event, not a statistical estimate, hence always-high confidence like the banlist/calendar modules). Status: pending_key -- this module ships zero rows until TOPDECK_API_KEY is configured (a free 2-minute signup at https://topdeck.gg); it never invents a tournament while the key is absent.",
       "attribution": [
         "Tournament results via topdeck.gg"
       ],
-      "rows": [
-        {
-          "sources": [
-            "Tournament results via topdeck.gg"
-          ],
-          "sample_size": 32,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "high",
-          "name": "Test Event for Dan and Noam",
-          "tid": "test-event-for-dan-and-noam",
-          "date": "2030-10-26T16:00:00Z",
-          "player_count": 32,
-          "event_url": "https://topdeck.gg/event/test-event-for-dan-and-noam",
-          "top_standings": [
-            {
-              "player": "Player 07",
-              "wins": 1,
-              "losses": 0,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Player 11",
-              "wins": 1,
-              "losses": 0,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Player 12",
-              "wins": 1,
-              "losses": 0,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Player 13",
-              "wins": 1,
-              "losses": 0,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Dan Aronowitz [NJcEDH]",
-              "wins": 1,
-              "losses": 0,
-              "draws": 0,
-              "commanders": [
-                "Kinnan, Bonder Prodigy"
-              ]
-            },
-            {
-              "player": "Noam Opitz [NjcEDH]",
-              "wins": 1,
-              "losses": 0,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Player 15",
-              "wins": 0,
-              "losses": 0,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "Player 16",
-              "wins": 0,
-              "losses": 0,
-              "draws": 1,
-              "commanders": null
-            }
-          ],
-          "commanders_extractable": true
-        },
-        {
-          "sources": [
-            "Tournament results via topdeck.gg"
-          ],
-          "sample_size": 15,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "high",
-          "name": "Temp event",
-          "tid": "temp-event",
-          "date": "2027-12-31T04:00:00Z",
-          "player_count": 15,
-          "event_url": "https://topdeck.gg/event/temp-event",
-          "top_standings": [
-            {
-              "player": "Larry",
-              "wins": 2,
-              "losses": 0,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Gerald",
-              "wins": 1,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Ian",
-              "wins": 1,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Andrew",
-              "wins": 1,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Eeto",
-              "wins": 1,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Gabriel",
-              "wins": 1,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Kancheong",
-              "wins": 1,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Vincent",
-              "wins": 0,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            }
-          ],
-          "commanders_extractable": false
-        },
-        {
-          "sources": [
-            "Tournament results via topdeck.gg"
-          ],
-          "sample_size": 20,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "high",
-          "name": "Test Tourney",
-          "tid": "test-tourney-411",
-          "date": "2027-12-27T19:00:00Z",
-          "player_count": 20,
-          "event_url": "https://topdeck.gg/event/test-tourney-411",
-          "top_standings": [
-            {
-              "player": "Bot 10",
-              "wins": 1,
-              "losses": 0,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "17",
-              "wins": 1,
-              "losses": 0,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "Bot 2",
-              "wins": 1,
-              "losses": 0,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "12",
-              "wins": 1,
-              "losses": 0,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "20",
-              "wins": 1,
-              "losses": 0,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "Bot 3",
-              "wins": 1,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "16",
-              "wins": 1,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "19",
-              "wins": 1,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            }
-          ],
-          "commanders_extractable": false
-        },
-        {
-          "sources": [
-            "Tournament results via topdeck.gg"
-          ],
-          "sample_size": 49,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "high",
-          "name": "Testing",
-          "tid": "quantun-nexus-highlander-10k",
-          "date": "2027-01-01T02:00:00Z",
-          "player_count": 49,
-          "event_url": "https://topdeck.gg/event/quantun-nexus-highlander-10k",
-          "top_standings": [
-            {
-              "player": "8",
-              "wins": 2,
-              "losses": 1,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "42",
-              "wins": 2,
-              "losses": 1,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "38",
-              "wins": 2,
-              "losses": 1,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "7",
-              "wins": 2,
-              "losses": 1,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "3",
-              "wins": 2,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "10",
-              "wins": 2,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "19",
-              "wins": 2,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "1",
-              "wins": 1,
-              "losses": 1,
-              "draws": 1,
-              "commanders": null
-            }
-          ],
-          "commanders_extractable": false
-        },
-        {
-          "sources": [
-            "Tournament results via topdeck.gg"
-          ],
-          "sample_size": 8,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "high",
-          "name": "Test Tournament Setup",
-          "tid": "test-tournament-setup",
-          "date": "2026-12-04T18:00:00Z",
-          "player_count": 8,
-          "event_url": "https://topdeck.gg/event/test-tournament-setup",
-          "top_standings": [
-            {
-              "player": "Don Perrion",
-              "wins": 3,
-              "losses": 0,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "John James",
-              "wins": 1,
-              "losses": 2,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "Late Playa",
-              "wins": 1,
-              "losses": 2,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "Jason Doe",
-              "wins": 1,
-              "losses": 3,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Squeaks",
-              "wins": 0,
-              "losses": 2,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "John Doe",
-              "wins": 0,
-              "losses": 3,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Late Player",
-              "wins": 0,
-              "losses": 3,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Franky Keen",
-              "wins": 0,
-              "losses": 3,
-              "draws": 0,
-              "commanders": null
-            }
-          ],
-          "commanders_extractable": false
-        },
-        {
-          "sources": [
-            "Tournament results via topdeck.gg"
-          ],
-          "sample_size": 8,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "high",
-          "name": "testing with mike",
-          "tid": "testing-with-mike",
-          "date": "2026-11-30T17:00:00Z",
-          "player_count": 8,
-          "event_url": "https://topdeck.gg/event/testing-with-mike",
-          "top_standings": [
-            {
-              "player": "B",
-              "wins": 1,
-              "losses": 0,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "C",
-              "wins": 1,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "F",
-              "wins": 0,
-              "losses": 0,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "A",
-              "wins": 0,
-              "losses": 1,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "D",
-              "wins": 0,
-              "losses": 1,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "E",
-              "wins": 0,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "G",
-              "wins": 0,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "H",
-              "wins": 0,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            }
-          ],
-          "commanders_extractable": false
-        },
-        {
-          "sources": [
-            "Tournament results via topdeck.gg"
-          ],
-          "sample_size": 12,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "high",
-          "name": "Commander Showdown",
-          "tid": "commander-showdown-4",
-          "date": "2026-11-14T18:00:00Z",
-          "player_count": 12,
-          "event_url": "https://topdeck.gg/event/commander-showdown-4",
-          "top_standings": [
-            {
-              "player": "jeff",
-              "wins": 1,
-              "losses": 4,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "alexa",
-              "wins": 1,
-              "losses": 4,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "mark",
-              "wins": 0,
-              "losses": 5,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "matt",
-              "wins": 0,
-              "losses": 5,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "will",
-              "wins": 0,
-              "losses": 5,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "eli",
-              "wins": 0,
-              "losses": 5,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "kristy",
-              "wins": 0,
-              "losses": 5,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "allan",
-              "wins": 0,
-              "losses": 5,
-              "draws": 0,
-              "commanders": null
-            }
-          ],
-          "commanders_extractable": false
-        },
-        {
-          "sources": [
-            "Tournament results via topdeck.gg"
-          ],
-          "sample_size": 11,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "high",
-          "name": "INTI LINCE B5 (1/11/26)",
-          "tid": "inti-lince-b5-11126",
-          "date": "2026-11-12T00:30:00Z",
-          "player_count": 11,
-          "event_url": "https://topdeck.gg/event/inti-lince-b5-11126",
-          "top_standings": [
-            {
-              "player": "Z",
-              "wins": 2,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Giancarlo",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Antonio",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Sancho",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Jose Fernandez",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Julio",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Cafelo",
-              "wins": 0,
-              "losses": 3,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Stefano",
-              "wins": 0,
-              "losses": 3,
-              "draws": 0,
-              "commanders": null
-            }
-          ],
-          "commanders_extractable": false
-        },
-        {
-          "sources": [
-            "Tournament results via topdeck.gg"
-          ],
-          "sample_size": 5,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "high",
-          "name": "Saturday Commander Busselton",
-          "tid": "saturday-commander-busselton-5",
-          "date": "2026-11-07T15:30:00Z",
-          "player_count": 5,
-          "event_url": "https://topdeck.gg/event/saturday-commander-busselton-5",
-          "top_standings": [
-            {
-              "player": "Chris Cassidy-Schroeder",
-              "wins": 3,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Josh Down",
-              "wins": 2,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Manga Guy",
-              "wins": 1,
-              "losses": 3,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Sarah Cassidy-Schroeder",
-              "wins": 0,
-              "losses": 3,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "Pepper Van Hees",
-              "wins": 0,
-              "losses": 3,
-              "draws": 1,
-              "commanders": null
-            }
-          ],
-          "commanders_extractable": false
-        },
-        {
-          "sources": [
-            "Tournament results via topdeck.gg"
-          ],
-          "sample_size": 23,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "high",
-          "name": "Commander BUDGET 100\u20ac",
-          "tid": "commander-budget-100-5",
-          "date": "2026-11-07T09:00:00Z",
-          "player_count": 23,
-          "event_url": "https://topdeck.gg/event/commander-budget-100-5",
-          "top_standings": [
-            {
-              "player": "Bruno Fernandes",
-              "wins": 0,
-              "losses": 1,
-              "draws": 0,
-              "commanders": [
-                "Vivi Ornitier"
-              ]
-            },
-            {
-              "player": "Naur",
-              "wins": 0,
-              "losses": 3,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Cristian",
-              "wins": 0,
-              "losses": 3,
-              "draws": 0,
-              "commanders": [
-                "Terra, Herald of Hope"
-              ]
-            },
-            {
-              "player": "Gordon ",
-              "wins": 0,
-              "losses": 3,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Alan P\u00e9rez",
-              "wins": 0,
-              "losses": 3,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Bo",
-              "wins": 0,
-              "losses": 3,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "\u00c1lvaro Cabrera ",
-              "wins": 0,
-              "losses": 3,
-              "draws": 0,
-              "commanders": [
-                "Quandrix, the Proof"
-              ]
-            },
-            {
-              "player": "Ricardo Fajardo Lopez",
-              "wins": 0,
-              "losses": 3,
-              "draws": 0,
-              "commanders": [
-                "Helga, Skittish Seer"
-              ]
-            }
-          ],
-          "commanders_extractable": true
-        },
-        {
-          "sources": [
-            "Tournament results via topdeck.gg"
-          ],
-          "sample_size": 10,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "high",
-          "name": "TOP COMMANDER 10 OTONO",
-          "tid": "top-commander-10-otono-3",
-          "date": "2026-11-07T03:30:00Z",
-          "player_count": 10,
-          "event_url": "https://topdeck.gg/event/top-commander-10-otono-3",
-          "top_standings": [
-            {
-              "player": "Diego Rojas",
-              "wins": 2,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Brandom S",
-              "wins": 2,
-              "losses": 1,
-              "draws": 0,
-              "commanders": [
-                "Magda, Brazen Outlaw"
-              ]
-            },
-            {
-              "player": "Andres alejandro solarte",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Aar\u00f3n Ren\u00e9 Barbosa Ibarra",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": [
-                "Kraum, Ludevic's Opus",
-                "Tymna the Weaver"
-              ]
-            },
-            {
-              "player": "Fernando Charur",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Fernando Mu\u00f1oz",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Luis Virues",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "JONATHAN GONZALEZ",
-              "wins": 0,
-              "losses": 3,
-              "draws": 0,
-              "commanders": null
-            }
-          ],
-          "commanders_extractable": true
-        },
-        {
-          "sources": [
-            "Tournament results via topdeck.gg"
-          ],
-          "sample_size": 8,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "high",
-          "name": "FNM imperium",
-          "tid": "fnm-imperium",
-          "date": "2026-11-07T02:30:00Z",
-          "player_count": 8,
-          "event_url": "https://topdeck.gg/event/fnm-imperium",
-          "top_standings": [
-            {
-              "player": "landon stark",
-              "wins": 2,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Jeremiah",
-              "wins": 1,
-              "losses": 1,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "danny woolfolk",
-              "wins": 1,
-              "losses": 1,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "griffon",
-              "wins": 0,
-              "losses": 1,
-              "draws": 2,
-              "commanders": null
-            },
-            {
-              "player": "connor stuart",
-              "wins": 0,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "austin stuart",
-              "wins": 0,
-              "losses": 2,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "phil",
-              "wins": 0,
-              "losses": 2,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "ricky sage",
-              "wins": 0,
-              "losses": 2,
-              "draws": 1,
-              "commanders": null
-            }
-          ],
-          "commanders_extractable": false
-        },
-        {
-          "sources": [
-            "Tournament results via topdeck.gg"
-          ],
-          "sample_size": 8,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "high",
-          "name": "Laughing Dragon Weekly Bronze Tournament 11/6",
-          "tid": "laughing-dragon-weekly-bronze-tournament-116",
-          "date": "2026-11-07T02:30:00Z",
-          "player_count": 8,
-          "event_url": "https://topdeck.gg/event/laughing-dragon-weekly-bronze-tournament-116",
-          "top_standings": [
-            {
-              "player": "Sean Fite // SeaEDH",
-              "wins": 1,
-              "losses": 1,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "Kayle Price",
-              "wins": 1,
-              "losses": 1,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "Carlos Casiano // SeaEDH",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Erik Dudgeon",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Zachary Adelson",
-              "wins": 0,
-              "losses": 1,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "Rye // SeaEDH",
-              "wins": 0,
-              "losses": 1,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "Chris Orsi",
-              "wins": 0,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Josh Monroe ",
-              "wins": 0,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            }
-          ],
-          "commanders_extractable": false
-        },
-        {
-          "sources": [
-            "Tournament results via topdeck.gg"
-          ],
-          "sample_size": 10,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "high",
-          "name": "Noche de Commander 06/11",
-          "tid": "noche-de-commander-0611",
-          "date": "2026-11-07T02:15:00Z",
-          "player_count": 10,
-          "event_url": "https://topdeck.gg/event/noche-de-commander-0611",
-          "top_standings": [
-            {
-              "player": "Alexis Silva",
-              "wins": 0,
-              "losses": 3,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Luciano Yevenes",
-              "wins": 0,
-              "losses": 3,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Nicolas Carrasco",
-              "wins": 0,
-              "losses": 3,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Eric Martinez",
-              "wins": 0,
-              "losses": 3,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Juan Daniel Cucurella",
-              "wins": 0,
-              "losses": 3,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Gaspar Montenegro",
-              "wins": 0,
-              "losses": 3,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Matias Erices",
-              "wins": 0,
-              "losses": 3,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Mario Jofr\u00e9",
-              "wins": 0,
-              "losses": 3,
-              "draws": 0,
-              "commanders": null
-            }
-          ],
-          "commanders_extractable": false
-        },
-        {
-          "sources": [
-            "Tournament results via topdeck.gg"
-          ],
-          "sample_size": 12,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "high",
-          "name": "CEDH 11/6",
-          "tid": "cedh-116-2",
-          "date": "2026-11-07T02:00:00Z",
-          "player_count": 12,
-          "event_url": "https://topdeck.gg/event/cedh-116-2",
-          "top_standings": [
-            {
-              "player": "Mathius",
-              "wins": 2,
-              "losses": 0,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Elton Chen",
-              "wins": 1,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Bryton [The CEDH Kitchen]",
-              "wins": 1,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Cody Crane",
-              "wins": 1,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Vincent Basso",
-              "wins": 1,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Chris K.",
-              "wins": 0,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Eleanora Kernodle",
-              "wins": 0,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Tiegan",
-              "wins": 0,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            }
-          ],
-          "commanders_extractable": false
-        },
-        {
-          "sources": [
-            "Tournament results via topdeck.gg"
-          ],
-          "sample_size": 17,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "high",
-          "name": "cedh 6 nov",
-          "tid": "cedh-6-nov",
-          "date": "2026-11-07T01:30:00Z",
-          "player_count": 17,
-          "event_url": "https://topdeck.gg/event/cedh-6-nov",
-          "top_standings": [
-            {
-              "player": "Juan Valencia",
-              "wins": 3,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Alejandro perez [cEDH sabana] ",
-              "wins": 3,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Paul [cEDH Sabana]",
-              "wins": 3,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Nicolas Angarita Moreno",
-              "wins": 2,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Camilo Andres Alcala Ramos ",
-              "wins": 2,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Santiago cortes",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Pedro Salazar",
-              "wins": 1,
-              "losses": 3,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Julian piraban [cEDH Sabana]",
-              "wins": 1,
-              "losses": 3,
-              "draws": 0,
-              "commanders": null
-            }
-          ],
-          "commanders_extractable": false
-        },
-        {
-          "sources": [
-            "Tournament results via topdeck.gg"
-          ],
-          "sample_size": 8,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "high",
-          "name": "FNM 06-11-2026",
-          "tid": "fnm-06-11-2026-2",
-          "date": "2026-11-07T01:30:00Z",
-          "player_count": 8,
-          "event_url": "https://topdeck.gg/event/fnm-06-11-2026-2",
-          "top_standings": [
-            {
-              "player": "Felipe Guerrero",
-              "wins": 1,
-              "losses": 0,
-              "draws": 2,
-              "commanders": null
-            },
-            {
-              "player": "Williams Castillo",
-              "wins": 1,
-              "losses": 0,
-              "draws": 2,
-              "commanders": null
-            },
-            {
-              "player": "Rodrigo miranda",
-              "wins": 0,
-              "losses": 0,
-              "draws": 3,
-              "commanders": null
-            },
-            {
-              "player": "Bastian",
-              "wins": 0,
-              "losses": 0,
-              "draws": 3,
-              "commanders": null
-            },
-            {
-              "player": "Harry",
-              "wins": 0,
-              "losses": 1,
-              "draws": 2,
-              "commanders": null
-            },
-            {
-              "player": "Criss",
-              "wins": 0,
-              "losses": 1,
-              "draws": 2,
-              "commanders": null
-            },
-            {
-              "player": "Alfredo Larrain",
-              "wins": 0,
-              "losses": 2,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "Pietro Cordano",
-              "wins": 0,
-              "losses": 2,
-              "draws": 1,
-              "commanders": null
-            }
-          ],
-          "commanders_extractable": false
-        },
-        {
-          "sources": [
-            "Tournament results via topdeck.gg"
-          ],
-          "sample_size": 12,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "high",
-          "name": "Van Isle cEDH Weekly",
-          "tid": "van-isle-cedh-weekly-5",
-          "date": "2026-11-07T01:30:00Z",
-          "player_count": 12,
-          "event_url": "https://topdeck.gg/event/van-isle-cedh-weekly-5",
-          "top_standings": [
-            {
-              "player": "Michael B",
-              "wins": 3,
-              "losses": 0,
-              "draws": 1,
-              "commanders": [
-                "Hashaton, Scarab's Fist"
-              ]
-            },
-            {
-              "player": "slop_maxxer",
-              "wins": 1,
-              "losses": 2,
-              "draws": 1,
-              "commanders": [
-                "Hashaton, Scarab's Fist"
-              ]
-            },
-            {
-              "player": "Jeskai Josh",
-              "wins": 1,
-              "losses": 2,
-              "draws": 1,
-              "commanders": [
-                "King T'Challa // Black Panther, Hope Enduring"
-              ]
-            },
-            {
-              "player": "Chris Foreman",
-              "wins": 1,
-              "losses": 2,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "Philbojack",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": [
-                "Kinnan, Bonder Prodigy"
-              ]
-            },
-            {
-              "player": "Connor Hayward",
-              "wins": 0,
-              "losses": 1,
-              "draws": 2,
-              "commanders": [
-                "Sisay, Weatherlight Captain"
-              ]
-            },
-            {
-              "player": "Nevin sexy pants",
-              "wins": 0,
-              "losses": 1,
-              "draws": 2,
-              "commanders": null
-            },
-            {
-              "player": "Tyler",
-              "wins": 0,
-              "losses": 1,
-              "draws": 2,
-              "commanders": null
-            }
-          ],
-          "commanders_extractable": true
-        },
-        {
-          "sources": [
-            "Tournament results via topdeck.gg"
-          ],
-          "sample_size": 6,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "high",
-          "name": "Budget Viernes",
-          "tid": "budget-viernes-613",
-          "date": "2026-11-07T01:00:00Z",
-          "player_count": 6,
-          "event_url": "https://topdeck.gg/event/budget-viernes-613",
-          "top_standings": [
-            {
-              "player": "Bizmuto",
-              "wins": 2,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Diomedes Noches",
-              "wins": 2,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Ricardo Moreno",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Andres Brausin ",
-              "wins": 0,
-              "losses": 3,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Ricardo Cortes Suarez ",
-              "wins": 0,
-              "losses": 3,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Juan Felipe Camacho Delgado",
-              "wins": 0,
-              "losses": 3,
-              "draws": 0,
-              "commanders": null
-            }
-          ],
-          "commanders_extractable": false
-        },
-        {
-          "sources": [
-            "Tournament results via topdeck.gg"
-          ],
-          "sample_size": 12,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "high",
-          "name": "CEDH GODs",
-          "tid": "cedh-gods-450",
-          "date": "2026-11-07T01:00:00Z",
-          "player_count": 12,
-          "event_url": "https://topdeck.gg/event/cedh-gods-450",
-          "top_standings": [
-            {
-              "player": "Antonio Huamani",
-              "wins": 2,
-              "losses": 1,
-              "draws": 1,
-              "commanders": [
-                "Kinnan, Bonder Prodigy"
-              ]
-            },
-            {
-              "player": "Juan Manuel Aragon",
-              "wins": 2,
-              "losses": 2,
-              "draws": 0,
-              "commanders": [
-                "Helga, Skittish Seer"
-              ]
-            },
-            {
-              "player": "Eduardo Barrenechea",
-              "wins": 2,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Neos",
-              "wins": 2,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Alvaro Cajo",
-              "wins": 1,
-              "losses": 2,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "Sebasti\u00e1n Santos",
-              "wins": 1,
-              "losses": 3,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Jose Kevin Fernandez Chapo\u00f1an",
-              "wins": 1,
-              "losses": 3,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Leonardo Le\u00f3n Salaverry",
-              "wins": 0,
-              "losses": 3,
-              "draws": 1,
-              "commanders": null
-            }
-          ],
-          "commanders_extractable": true
-        },
-        {
-          "sources": [
-            "Tournament results via topdeck.gg"
-          ],
-          "sample_size": 14,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "high",
-          "name": "Commander 500 Semanal na MUITO!",
-          "tid": "commander-500-semanal-na-muito",
-          "date": "2026-11-07T00:00:00Z",
-          "player_count": 14,
-          "event_url": "https://topdeck.gg/event/commander-500-semanal-na-muito",
-          "top_standings": [
-            {
-              "player": "Gabriel",
-              "wins": 3,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Junior Borges",
-              "wins": 2,
-              "losses": 1,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "Vinicius Loureiro",
-              "wins": 2,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Lucas Gerei",
-              "wins": 2,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Hamilton Mendes",
-              "wins": 0,
-              "losses": 0,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Caio Francescato",
-              "wins": 1,
-              "losses": 2,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "Ant\u00f4nio Pedroni i",
-              "wins": 0,
-              "losses": 2,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "Lademir Silva Rodrigues Junior",
-              "wins": 0,
-              "losses": 2,
-              "draws": 2,
-              "commanders": null
-            }
-          ],
-          "commanders_extractable": false
-        },
-        {
-          "sources": [
-            "Tournament results via topdeck.gg"
-          ],
-          "sample_size": 17,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "high",
-          "name": "FNM Commander",
-          "tid": "fnm-commander-402",
-          "date": "2026-11-07T00:00:00Z",
-          "player_count": 17,
-          "event_url": "https://topdeck.gg/event/fnm-commander-402",
-          "top_standings": [
-            {
-              "player": "Brandon Austin",
-              "wins": 2,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Lucas Georgis",
-              "wins": 1,
-              "losses": 0,
-              "draws": 2,
-              "commanders": null
-            },
-            {
-              "player": "Melvin Baez",
-              "wins": 1,
-              "losses": 1,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "Kevin Chen ",
-              "wins": 1,
-              "losses": 1,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "Gregg Allen",
-              "wins": 0,
-              "losses": 0,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Cj Sweeney",
-              "wins": 0,
-              "losses": 0,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Jackson",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Sam B",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            }
-          ],
-          "commanders_extractable": false
-        },
-        {
-          "sources": [
-            "Tournament results via topdeck.gg"
-          ],
-          "sample_size": 6,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "high",
-          "name": "Gift of Games Friday Casual Commander",
-          "tid": "gift-of-games-friday-casual-commander-2026-11-06",
-          "date": "2026-11-07T00:00:00Z",
-          "player_count": 6,
-          "event_url": "https://topdeck.gg/event/gift-of-games-friday-casual-commander-2026-11-06",
-          "top_standings": [
-            {
-              "player": "Nolan Wheeler",
-              "wins": 2,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Major MP",
-              "wins": 1,
-              "losses": 1,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "Jesus Mirabal",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "John Mcmahon",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Chris Curtis",
-              "wins": 0,
-              "losses": 2,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "Louis Kwan",
-              "wins": 0,
-              "losses": 2,
-              "draws": 1,
-              "commanders": null
-            }
-          ],
-          "commanders_extractable": false
-        },
-        {
-          "sources": [
-            "Tournament results via topdeck.gg"
-          ],
-          "sample_size": 12,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "high",
-          "name": "torneo de dia viernes",
-          "tid": "torneo-de-dia-viernes-2026-11-06",
-          "date": "2026-11-07T00:00:00Z",
-          "player_count": 12,
-          "event_url": "https://topdeck.gg/event/torneo-de-dia-viernes-2026-11-06",
-          "top_standings": [
-            {
-              "player": "Christopher A.",
-              "wins": 0,
-              "losses": 4,
-              "draws": 0,
-              "commanders": [
-                "Vivi Ornitier"
-              ]
-            },
-            {
-              "player": "Demian",
-              "wins": 0,
-              "losses": 4,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "carlos vega",
-              "wins": 0,
-              "losses": 4,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Nicol\u00e1s Wong ",
-              "wins": 0,
-              "losses": 4,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Alonso Rojas",
-              "wins": 0,
-              "losses": 4,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Manuel",
-              "wins": 0,
-              "losses": 4,
-              "draws": 0,
-              "commanders": [
-                "Yawgmoth, Thran Physician"
-              ]
-            },
-            {
-              "player": "Rodrigo Labbe ",
-              "wins": 0,
-              "losses": 4,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Gonzalo Medina",
-              "wins": 0,
-              "losses": 4,
-              "draws": 0,
-              "commanders": [
-                "Rograkh, Son of Rohgahh",
-                "Silas Renn, Seeker Adept"
-              ]
-            }
-          ],
-          "commanders_extractable": true
-        },
-        {
-          "sources": [
-            "Tournament results via topdeck.gg"
-          ],
-          "sample_size": 12,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "high",
-          "name": "FRIDAY NIGHT BRONZE CEDH!",
-          "tid": "friday-night-bronze-cedh-5",
-          "date": "2026-11-06T23:30:00Z",
-          "player_count": 12,
-          "event_url": "https://topdeck.gg/event/friday-night-bronze-cedh-5",
-          "top_standings": [
-            {
-              "player": "Pat W [Insomniac]",
-              "wins": 2,
-              "losses": 0,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "DeLos Mars-Tate",
-              "wins": 1,
-              "losses": 1,
-              "draws": 0,
-              "commanders": [
-                "Kinnan, Bonder Prodigy"
-              ]
-            },
-            {
-              "player": "Joe Perry",
-              "wins": 1,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Taylor Moran",
-              "wins": 0,
-              "losses": 1,
-              "draws": 0,
-              "commanders": [
-                "Ob Nixilis, Captive Kingpin"
-              ]
-            },
-            {
-              "player": "Alex Ortiz",
-              "wins": 0,
-              "losses": 1,
-              "draws": 0,
-              "commanders": [
-                "Kefka, Court Mage"
-              ]
-            },
-            {
-              "player": "Luis Lopez",
-              "wins": 0,
-              "losses": 1,
-              "draws": 0,
-              "commanders": [
-                "Malcolm, Keen-Eyed Navigator",
-                "Tana, the Bloodsower"
-              ]
-            },
-            {
-              "player": "Randy Alves",
-              "wins": 0,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Austin",
-              "wins": 0,
-              "losses": 1,
-              "draws": 0,
-              "commanders": [
-                "Baylen, the Haymaker"
-              ]
-            }
-          ],
-          "commanders_extractable": true
-        },
-        {
-          "sources": [
-            "Tournament results via topdeck.gg"
-          ],
-          "sample_size": 20,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "high",
-          "name": "The Countdown - cEDH Kickoff",
-          "tid": "the-countdown-cedh-kickoff",
-          "date": "2026-11-06T23:30:00Z",
-          "player_count": 20,
-          "event_url": "https://topdeck.gg/event/the-countdown-cedh-kickoff",
-          "top_standings": [
-            {
-              "player": "William S Hitt",
-              "wins": 4,
-              "losses": 0,
-              "draws": 0,
-              "commanders": [
-                "Kinnan, Bonder Prodigy"
-              ]
-            },
-            {
-              "player": "Tommy Williams",
-              "wins": 1,
-              "losses": 0,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "Sam Sternfield",
-              "wins": 2,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "[LPW] David Wilson",
-              "wins": 0,
-              "losses": 0,
-              "draws": 2,
-              "commanders": [
-                "Sisay, Weatherlight Captain"
-              ]
-            },
-            {
-              "player": "Laura Beth Bryer",
-              "wins": 0,
-              "losses": 0,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Bamii ",
-              "wins": 0,
-              "losses": 0,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Nate - Judge [BYC]",
-              "wins": 1,
-              "losses": 2,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "[BYC] Riley Elwood ",
-              "wins": 1,
-              "losses": 2,
-              "draws": 1,
-              "commanders": [
-                "Sisay, Weatherlight Captain"
-              ]
-            }
-          ],
-          "commanders_extractable": true
-        },
-        {
-          "sources": [
-            "Tournament results via topdeck.gg"
-          ],
-          "sample_size": 32,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "high",
-          "name": "FNM EDH",
-          "tid": "fnm-edh-206",
-          "date": "2026-11-06T23:00:00Z",
-          "player_count": 32,
-          "event_url": "https://topdeck.gg/event/fnm-edh-206",
-          "top_standings": [
-            {
-              "player": "Logan Wilbur",
-              "wins": 3,
-              "losses": 0,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Jacob Huston",
-              "wins": 2,
-              "losses": 0,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "Casey Brasuell",
-              "wins": 2,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Gabriel Henson",
-              "wins": 2,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Ethan-Michael Swan",
-              "wins": 2,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Tucker Tardif",
-              "wins": 2,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Anthony Ruggiero",
-              "wins": 1,
-              "losses": 1,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "David Moore",
-              "wins": 1,
-              "losses": 1,
-              "draws": 1,
-              "commanders": null
-            }
-          ],
-          "commanders_extractable": false
-        },
-        {
-          "sources": [
-            "Tournament results via topdeck.gg"
-          ],
-          "sample_size": 18,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "high",
-          "name": "Magic: The Gathering - cEDH - Store Championship",
-          "tid": "magic-the-gathering-cedh-store-championship-268",
-          "date": "2026-11-06T23:00:00Z",
-          "player_count": 18,
-          "event_url": "https://topdeck.gg/event/magic-the-gathering-cedh-store-championship-268",
-          "top_standings": [
-            {
-              "player": "Nannel [MSG]",
-              "wins": 3,
-              "losses": 1,
-              "draws": 1,
-              "commanders": [
-                "Erinis, Gloom Stalker",
-                "Street Urchin"
-              ]
-            },
-            {
-              "player": "Jye Terry",
-              "wins": 3,
-              "losses": 2,
-              "draws": 0,
-              "commanders": [
-                "Rograkh, Son of Rohgahh",
-                "Silas Renn, Seeker Adept"
-              ]
-            },
-            {
-              "player": "Stephen Reynolds ",
-              "wins": 2,
-              "losses": 2,
-              "draws": 2,
-              "commanders": [
-                "Tiamat"
-              ]
-            },
-            {
-              "player": "Damon lawless [MSG]",
-              "wins": 2,
-              "losses": 2,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "Tyson Wakefield",
-              "wins": 1,
-              "losses": 2,
-              "draws": 2,
-              "commanders": [
-                "Nick Fury, Agent of S.H.I.E.L.D."
-              ]
-            },
-            {
-              "player": "Ryan Davies",
-              "wins": 0,
-              "losses": 1,
-              "draws": 3,
-              "commanders": [
-                "Thrasios, Triton Hero",
-                "Yoshimaru, Ever Faithful"
-              ]
-            },
-            {
-              "player": "Bradley [MSG]",
-              "wins": 2,
-              "losses": 4,
-              "draws": 0,
-              "commanders": [
-                "Ob Nixilis, Captive Kingpin"
-              ]
-            },
-            {
-              "player": "Big Dog",
-              "wins": 1,
-              "losses": 3,
-              "draws": 1,
-              "commanders": [
-                "Ashling, Flame Dancer"
-              ]
-            }
-          ],
-          "commanders_extractable": true
-        },
-        {
-          "sources": [
-            "Tournament results via topdeck.gg"
-          ],
-          "sample_size": 15,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "high",
-          "name": "Torneo Commander - Bracket 2",
-          "tid": "torneo-commander-bracket-2-3",
-          "date": "2026-11-06T23:00:00Z",
-          "player_count": 15,
-          "event_url": "https://topdeck.gg/event/torneo-commander-bracket-2-3",
-          "top_standings": [
-            {
-              "player": "Facundo Cornejo",
-              "wins": 2,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Federico Dopazo",
-              "wins": 2,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Patricio Rojas",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Joaquin Lindolfo",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Nick Encina",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Lucas Paladino",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Leonardo Daniel Kuba",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Lauti Diaz",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            }
-          ],
-          "commanders_extractable": false
-        },
-        {
-          "sources": [
-            "Tournament results via topdeck.gg"
-          ],
-          "sample_size": 16,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "high",
-          "name": "Yaps Lobby Con Bronze",
-          "tid": "yaps-lobby-con-bronze",
-          "date": "2026-11-06T23:00:00Z",
-          "player_count": 16,
-          "event_url": "https://topdeck.gg/event/yaps-lobby-con-bronze",
-          "top_standings": [
-            {
-              "player": "The cumbacked kid",
-              "wins": 2,
-              "losses": 0,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Matthew White",
-              "wins": 1,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Sam Steinbach",
-              "wins": 1,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Ryan (lxrd.)",
-              "wins": 0,
-              "losses": 0,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "Ben Wong",
-              "wins": 0,
-              "losses": 0,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "Steven McGill [UNCS]",
-              "wins": 0,
-              "losses": 0,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "Mussa",
-              "wins": 0,
-              "losses": 1,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "Sherman [SALT]",
-              "wins": 0,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            }
-          ],
-          "commanders_extractable": false
-        },
-        {
-          "sources": [
-            "Tournament results via topdeck.gg"
-          ],
-          "sample_size": 8,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "high",
-          "name": "EDH Bracket 3 Hammer 06/11",
-          "tid": "edh-bracket-3-hammer-0611",
-          "date": "2026-11-06T21:00:00Z",
-          "player_count": 8,
-          "event_url": "https://topdeck.gg/event/edh-bracket-3-hammer-0611",
-          "top_standings": [
-            {
-              "player": "Ignacio Zambrano",
-              "wins": 1,
-              "losses": 1,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "Patsi Nazario",
-              "wins": 1,
-              "losses": 1,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "Ignacio Saez",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Gerardo Gutierrez",
-              "wins": 0,
-              "losses": 1,
-              "draws": 2,
-              "commanders": null
-            },
-            {
-              "player": "Nicolas Baeza",
-              "wins": 0,
-              "losses": 1,
-              "draws": 2,
-              "commanders": null
-            },
-            {
-              "player": "Cristian Baeza",
-              "wins": 0,
-              "losses": 1,
-              "draws": 2,
-              "commanders": null
-            },
-            {
-              "player": "Alvaro Lavin",
-              "wins": 0,
-              "losses": 1,
-              "draws": 2,
-              "commanders": null
-            },
-            {
-              "player": "Fernando Vasquez",
-              "wins": 0,
-              "losses": 2,
-              "draws": 1,
-              "commanders": null
-            }
-          ],
-          "commanders_extractable": false
-        },
-        {
-          "sources": [
-            "Tournament results via topdeck.gg"
-          ],
-          "sample_size": 16,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "high",
-          "name": "FNM Early Bird 10/6",
-          "tid": "fnm-early-bird-106",
-          "date": "2026-11-06T21:00:00Z",
-          "player_count": 16,
-          "event_url": "https://topdeck.gg/event/fnm-early-bird-106",
-          "top_standings": [
-            {
-              "player": "Sam W",
-              "wins": 0,
-              "losses": 0,
-              "draws": 2,
-              "commanders": null
-            },
-            {
-              "player": "Brett",
-              "wins": 0,
-              "losses": 0,
-              "draws": 2,
-              "commanders": null
-            },
-            {
-              "player": "Ibrahim",
-              "wins": 0,
-              "losses": 0,
-              "draws": 2,
-              "commanders": null
-            },
-            {
-              "player": "Ryan S",
-              "wins": 0,
-              "losses": 0,
-              "draws": 2,
-              "commanders": null
-            },
-            {
-              "player": "Shaun",
-              "wins": 0,
-              "losses": 0,
-              "draws": 2,
-              "commanders": null
-            },
-            {
-              "player": "Kris",
-              "wins": 0,
-              "losses": 0,
-              "draws": 2,
-              "commanders": null
-            },
-            {
-              "player": "Morris",
-              "wins": 0,
-              "losses": 0,
-              "draws": 2,
-              "commanders": null
-            },
-            {
-              "player": "Emma",
-              "wins": 0,
-              "losses": 0,
-              "draws": 2,
-              "commanders": null
-            }
-          ],
-          "commanders_extractable": false
-        },
-        {
-          "sources": [
-            "Tournament results via topdeck.gg"
-          ],
-          "sample_size": 20,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "high",
-          "name": "CEDH ccc 11/6/26",
-          "tid": "cedh-ccc-11626",
-          "date": "2026-11-06T20:00:00Z",
-          "player_count": 20,
-          "event_url": "https://topdeck.gg/event/cedh-ccc-11626",
-          "top_standings": [
-            {
-              "player": "Luis H [CenCal]",
-              "wins": 2,
-              "losses": 1,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "Rupan",
-              "wins": 2,
-              "losses": 1,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "Ryan Higa [CenCal] ",
-              "wins": 2,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Tomas [CenCal]",
-              "wins": 1,
-              "losses": 1,
-              "draws": 1,
-              "commanders": [
-                "Thrasios, Triton Hero",
-                "Yoshimaru, Ever Faithful"
-              ]
-            },
-            {
-              "player": "[JITM] chnadle",
-              "wins": 1,
-              "losses": 1,
-              "draws": 1,
-              "commanders": [
-                "Magda, Brazen Outlaw"
-              ]
-            },
-            {
-              "player": "Carlos Sanchez [CenCal]",
-              "wins": 0,
-              "losses": 0,
-              "draws": 3,
-              "commanders": [
-                "Winota, Joiner of Forces"
-              ]
-            },
-            {
-              "player": "Hi it me Ed [CenCal]",
-              "wins": 0,
-              "losses": 0,
-              "draws": 3,
-              "commanders": [
-                "Kraum, Ludevic's Opus",
-                "Tymna the Weaver"
-              ]
-            },
-            {
-              "player": "Esteban Yanez [CenCal]",
-              "wins": 1,
-              "losses": 2,
-              "draws": 1,
-              "commanders": [
-                "Rakdos, the Muscle"
-              ]
-            }
-          ],
-          "commanders_extractable": true
-        },
-        {
-          "sources": [
-            "Tournament results via topdeck.gg"
-          ],
-          "sample_size": 12,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "high",
-          "name": "COMMANDER MULTIPLAYER 100GAMES",
-          "tid": "commander-multiplayer-100games-2",
-          "date": "2026-11-06T20:00:00Z",
-          "player_count": 12,
-          "event_url": "https://topdeck.gg/event/commander-multiplayer-100games-2",
-          "top_standings": [
-            {
-              "player": "Diego Barbieri",
-              "wins": 2,
-              "losses": 1,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "Nicol\u00f3 Dalferro",
-              "wins": 2,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Walt",
-              "wins": 1,
-              "losses": 2,
-              "draws": 1,
-              "commanders": [
-                "Sisay, Weatherlight Captain"
-              ]
-            },
-            {
-              "player": "Nicholas Brina",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Francesco Marchetti",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "alex candini",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Matteo Pedroni ",
-              "wins": 1,
-              "losses": 3,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Davide Marchetti",
-              "wins": 0,
-              "losses": 2,
-              "draws": 1,
-              "commanders": null
-            }
-          ],
-          "commanders_extractable": true
-        },
-        {
-          "sources": [
-            "Tournament results via topdeck.gg"
-          ],
-          "sample_size": 11,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "high",
-          "name": "cEDH Winter League N\u00b05",
-          "tid": "cedh-winter-league-n5",
-          "date": "2026-11-06T19:30:00Z",
-          "player_count": 11,
-          "event_url": "https://topdeck.gg/event/cedh-winter-league-n5",
-          "top_standings": [
-            {
-              "player": "Edie",
-              "wins": 2,
-              "losses": 0,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "Filippo detto il merda",
-              "wins": 1,
-              "losses": 1,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "Matteo Rattotti",
-              "wins": 1,
-              "losses": 1,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "Davide Agostini",
-              "wins": 1,
-              "losses": 1,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "Andrea Franchini",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Fabio Fiori",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Giancarlo Tinelli",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Riccardo Bicchieri",
-              "wins": 0,
-              "losses": 3,
-              "draws": 0,
-              "commanders": null
-            }
-          ],
-          "commanders_extractable": false
-        },
-        {
-          "sources": [
-            "Tournament results via topdeck.gg"
-          ],
-          "sample_size": 8,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "high",
-          "name": "Hoss House cEDH",
-          "tid": "hoss-house-cedh",
-          "date": "2026-11-06T19:00:00Z",
-          "player_count": 8,
-          "event_url": "https://topdeck.gg/event/hoss-house-cedh",
-          "top_standings": [
-            {
-              "player": "Payten Climer",
-              "wins": 2,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Adam",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Soren Rakes",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Eithan Shayne Tipton",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Ricky Morris",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "David hoss",
-              "wins": 0,
-              "losses": 3,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Chandler Brown",
-              "wins": 0,
-              "losses": 3,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Ronnie Lance Wells",
-              "wins": 0,
-              "losses": 3,
-              "draws": 0,
-              "commanders": null
-            }
-          ],
-          "commanders_extractable": false
-        },
-        {
-          "sources": [
-            "Tournament results via topdeck.gg"
-          ],
-          "sample_size": 20,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "high",
-          "name": "GRH Magic none league week",
-          "tid": "grh-magic-none-league-week",
-          "date": "2026-11-06T18:00:00Z",
-          "player_count": 20,
-          "event_url": "https://topdeck.gg/event/grh-magic-none-league-week",
-          "top_standings": [
-            {
-              "player": "Kenneth Andrew",
-              "wins": 2,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Lewis Robinson",
-              "wins": 2,
-              "losses": 1,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Sam",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Sam R",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Ellis Swales",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Oliver Barnett",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Alisdair",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Ben",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            }
-          ],
-          "commanders_extractable": false
-        },
-        {
-          "sources": [
-            "Tournament results via topdeck.gg"
-          ],
-          "sample_size": 16,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "high",
-          "name": "La Compet\u00e8ncia | Brain Freeze | cEDH |",
-          "tid": "la-competencia-brain-freeze-cedh-350",
-          "date": "2026-11-06T16:00:00Z",
-          "player_count": 16,
-          "event_url": "https://topdeck.gg/event/la-competencia-brain-freeze-cedh-350",
-          "top_standings": [
-            {
-              "player": "[I\u00d1AKI] Guillem Giralt ",
-              "wins": 1,
-              "losses": 0,
-              "draws": 2,
-              "commanders": [
-                "Dack Fayden, Helping Hand"
-              ]
-            },
-            {
-              "player": "Dani Gonzalez (Drg)",
-              "wins": 1,
-              "losses": 0,
-              "draws": 2,
-              "commanders": [
-                "Urza, Lord High Artificer"
-              ]
-            },
-            {
-              "player": "[BDBRONX] Luc\u00eda Rojas Lagarejo",
-              "wins": 1,
-              "losses": 1,
-              "draws": 1,
-              "commanders": [
-                "Rograkh, Son of Rohgahh",
-                "Thrasios, Triton Hero"
-              ]
-            },
-            {
-              "player": "[BDBRONX] Alex Romero Puigvert ",
-              "wins": 1,
-              "losses": 1,
-              "draws": 1,
-              "commanders": [
-                "Rograkh, Son of Rohgahh",
-                "Silas Renn, Seeker Adept"
-              ]
-            },
-            {
-              "player": "Marc JL",
-              "wins": 1,
-              "losses": 1,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "TCG Toolbox / \u53f8\u4ee4\u5b98\u306e\u30c4\u30fc\u30eb\u30dc\u30c3\u30af\u30b9",
-              "wins": 1,
-              "losses": 1,
-              "draws": 1,
-              "commanders": [
-                "Lumra, Bellow of the Woods"
-              ]
-            },
-            {
-              "player": "[BDBRONX] Kevin Romero",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": [
-                "Kraum, Ludevic's Opus",
-                "Tymna the Weaver"
-              ]
-            },
-            {
-              "player": "Lluc Noguera",
-              "wins": 1,
-              "losses": 2,
-              "draws": 0,
-              "commanders": [
-                "Rowan, Scion of War"
-              ]
-            }
-          ],
-          "commanders_extractable": true
-        },
-        {
-          "sources": [
-            "Tournament results via topdeck.gg"
-          ],
-          "sample_size": 8,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "high",
-          "name": "commander precon",
-          "tid": "commander-precon-421",
-          "date": "2026-11-06T15:25:00Z",
-          "player_count": 8,
-          "event_url": "https://topdeck.gg/event/commander-precon-421",
-          "top_standings": [
-            {
-              "player": "francisco bascu\u00f1ada",
-              "wins": 2,
-              "losses": 0,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "jose manuel",
-              "wins": 1,
-              "losses": 0,
-              "draws": 2,
-              "commanders": null
-            },
-            {
-              "player": "francisco magdaleno",
-              "wins": 0,
-              "losses": 1,
-              "draws": 2,
-              "commanders": null
-            },
-            {
-              "player": "peter",
-              "wins": 0,
-              "losses": 1,
-              "draws": 2,
-              "commanders": null
-            },
-            {
-              "player": "manuel",
-              "wins": 0,
-              "losses": 1,
-              "draws": 2,
-              "commanders": null
-            },
-            {
-              "player": "leandro",
-              "wins": 0,
-              "losses": 2,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "alejandro",
-              "wins": 0,
-              "losses": 2,
-              "draws": 1,
-              "commanders": null
-            },
-            {
-              "player": "buba",
-              "wins": 0,
-              "losses": 2,
-              "draws": 1,
-              "commanders": null
-            }
-          ],
-          "commanders_extractable": false
-        },
-        {
-          "sources": [
-            "Tournament results via topdeck.gg"
-          ],
-          "sample_size": 14,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "high",
-          "name": "Torneo B3 Teleton",
-          "tid": "torneo-b3-teleton",
-          "date": "2026-11-06T13:00:00Z",
-          "player_count": 14,
-          "event_url": "https://topdeck.gg/event/torneo-b3-teleton",
-          "top_standings": [
-            {
-              "player": "Giovanny acu\u00f1a",
-              "wins": 0,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Javier valenzuela",
-              "wins": 0,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Mp jacoboarrowbgd",
-              "wins": 0,
-              "losses": 2,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Simon carrillo",
-              "wins": 0,
-              "losses": 3,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Raul aqueveque",
-              "wins": 0,
-              "losses": 3,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Joaquin rodriguez",
-              "wins": 0,
-              "losses": 3,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Bastian suarez",
-              "wins": 0,
-              "losses": 3,
-              "draws": 0,
-              "commanders": null
-            },
-            {
-              "player": "Miguel gonzalez",
-              "wins": 0,
-              "losses": 3,
-              "draws": 0,
-              "commanders": null
-            }
-          ],
-          "commanders_extractable": false
-        }
-      ]
+      "rows": []
     },
     "constructed_tiers": {
       "status": "published",
-      "computed_at": "2026-11-08T14:45:02Z",
+      "computed_at": "2026-11-09T14:45:02Z",
       "methodology": "Real tournament-backed win rates for Standard/Pioneer/Modern, computed by us from topdeck.gg's public tournament-results API (Tournament results via topdeck.gg -- see the per-row topdeck_url for the source event). archetype_or_deck = the organizer's own archetype tag when topdeck.gg carries one for that standing, else the raw deck/decklist name reported, else the honest 'Unclassified Deck' bucket -- we never infer an archetype from an unparsed decklist link. sample_size = total recorded match games (wins+losses+draws) across every event counted this run; event_count = distinct tournaments the archetype/deck appeared in; best_finish = its best final standing across those events. Tier = match win rate (S>=60%, A>=55%, B>=50%, C>=45%, else D); an archetype with zero recorded games renders 'unrated', never a guessed tier.",
       "attribution": [
         "Tournament results via topdeck.gg"
@@ -3538,8 +605,26 @@
           "sources": [
             "Tournament results via topdeck.gg"
           ],
+          "sample_size": 8,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "sample",
+          "format": "modern",
+          "archetype_or_deck": "Goryo Reanimator",
+          "tier": "S",
+          "win_rate": 0.75,
+          "wins": 6,
+          "losses": 1,
+          "draws": 1,
+          "event_count": 1,
+          "best_finish": null,
+          "topdeck_url": "https://topdeck.gg/event/cameron-thompson-memorial-2000"
+        },
+        {
+          "sources": [
+            "Tournament results via topdeck.gg"
+          ],
           "sample_size": 6,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "sample",
           "format": "modern",
           "archetype_or_deck": "Broodscale",
@@ -3556,26 +641,98 @@
           "sources": [
             "Tournament results via topdeck.gg"
           ],
-          "sample_size": 2,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "sample_size": 5,
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "sample",
           "format": "modern",
-          "archetype_or_deck": "Rakdos Midrange",
-          "tier": "B",
-          "win_rate": 0.5,
-          "wins": 1,
-          "losses": 1,
+          "archetype_or_deck": "Eldrazi Tron",
+          "tier": "S",
+          "win_rate": 0.6,
+          "wins": 3,
+          "losses": 2,
           "draws": 0,
           "event_count": 1,
           "best_finish": null,
-          "topdeck_url": "https://topdeck.gg/event/modern-10k-on-demand-trials-1"
+          "topdeck_url": "https://topdeck.gg/event/cameron-thompson-memorial-2000"
+        },
+        {
+          "sources": [
+            "Tournament results via topdeck.gg"
+          ],
+          "sample_size": 5,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "sample",
+          "format": "modern",
+          "archetype_or_deck": "Jeskai Blink",
+          "tier": "S",
+          "win_rate": 0.6,
+          "wins": 3,
+          "losses": 2,
+          "draws": 0,
+          "event_count": 1,
+          "best_finish": null,
+          "topdeck_url": "https://topdeck.gg/event/cameron-thompson-memorial-2000"
+        },
+        {
+          "sources": [
+            "Tournament results via topdeck.gg"
+          ],
+          "sample_size": 5,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "sample",
+          "format": "modern",
+          "archetype_or_deck": "Elves",
+          "tier": "S",
+          "win_rate": 0.6,
+          "wins": 3,
+          "losses": 2,
+          "draws": 0,
+          "event_count": 1,
+          "best_finish": null,
+          "topdeck_url": "https://topdeck.gg/event/cameron-thompson-memorial-2000"
+        },
+        {
+          "sources": [
+            "Tournament results via topdeck.gg"
+          ],
+          "sample_size": 7,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "sample",
+          "format": "modern",
+          "archetype_or_deck": "WURG Midrange",
+          "tier": "A",
+          "win_rate": 0.5714285714285714,
+          "wins": 4,
+          "losses": 1,
+          "draws": 2,
+          "event_count": 1,
+          "best_finish": null,
+          "topdeck_url": "https://topdeck.gg/event/cameron-thompson-memorial-2000"
+        },
+        {
+          "sources": [
+            "Tournament results via topdeck.gg"
+          ],
+          "sample_size": 6,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "sample",
+          "format": "modern",
+          "archetype_or_deck": "BR BirdVine",
+          "tier": "B",
+          "win_rate": 0.5,
+          "wins": 3,
+          "losses": 2,
+          "draws": 1,
+          "event_count": 1,
+          "best_finish": null,
+          "topdeck_url": "https://topdeck.gg/event/cameron-thompson-memorial-2000"
         },
         {
           "sources": [
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 2,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "sample",
           "format": "modern",
           "archetype_or_deck": "Boros Energy",
@@ -3593,7 +750,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 2,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "sample",
           "format": "modern",
           "archetype_or_deck": "Esper Blink",
@@ -3610,26 +767,80 @@
           "sources": [
             "Tournament results via topdeck.gg"
           ],
-          "sample_size": 743,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "sample_size": 716,
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "high",
           "format": "modern",
           "archetype_or_deck": "Unclassified Deck",
           "tier": "C",
-          "win_rate": 0.477792732166891,
-          "wins": 355,
-          "losses": 356,
-          "draws": 32,
-          "event_count": 34,
+          "win_rate": 0.48044692737430167,
+          "wins": 344,
+          "losses": 347,
+          "draws": 25,
+          "event_count": 32,
           "best_finish": null,
-          "topdeck_url": "https://topdeck.gg/event/modern-challenge-viernes-tarde-26-11-06"
+          "topdeck_url": "https://topdeck.gg/event/cameron-thompson-memorial-2000"
+        },
+        {
+          "sources": [
+            "Tournament results via topdeck.gg"
+          ],
+          "sample_size": 15,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "low",
+          "format": "modern",
+          "archetype_or_deck": "Affinity",
+          "tier": "D",
+          "win_rate": 0.4,
+          "wins": 6,
+          "losses": 8,
+          "draws": 1,
+          "event_count": 1,
+          "best_finish": null,
+          "topdeck_url": "https://topdeck.gg/event/cameron-thompson-memorial-2000"
+        },
+        {
+          "sources": [
+            "Tournament results via topdeck.gg"
+          ],
+          "sample_size": 5,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "sample",
+          "format": "modern",
+          "archetype_or_deck": "Domain Goyf",
+          "tier": "D",
+          "win_rate": 0.4,
+          "wins": 2,
+          "losses": 3,
+          "draws": 0,
+          "event_count": 1,
+          "best_finish": null,
+          "topdeck_url": "https://topdeck.gg/event/cameron-thompson-memorial-2000"
+        },
+        {
+          "sources": [
+            "Tournament results via topdeck.gg"
+          ],
+          "sample_size": 5,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "sample",
+          "format": "modern",
+          "archetype_or_deck": "Naya Energy",
+          "tier": "D",
+          "win_rate": 0.4,
+          "wins": 2,
+          "losses": 3,
+          "draws": 0,
+          "event_count": 1,
+          "best_finish": null,
+          "topdeck_url": "https://topdeck.gg/event/cameron-thompson-memorial-2000"
         },
         {
           "sources": [
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 3,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "sample",
           "format": "modern",
           "archetype_or_deck": "Domain Zoo",
@@ -3647,7 +858,61 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 4,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "sample",
+          "format": "modern",
+          "archetype_or_deck": "Mono Green Tron",
+          "tier": "D",
+          "win_rate": 0.25,
+          "wins": 1,
+          "losses": 3,
+          "draws": 0,
+          "event_count": 1,
+          "best_finish": null,
+          "topdeck_url": "https://topdeck.gg/event/cameron-thompson-memorial-2000"
+        },
+        {
+          "sources": [
+            "Tournament results via topdeck.gg"
+          ],
+          "sample_size": 4,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "sample",
+          "format": "modern",
+          "archetype_or_deck": "Song Of Creation",
+          "tier": "D",
+          "win_rate": 0.25,
+          "wins": 1,
+          "losses": 3,
+          "draws": 0,
+          "event_count": 1,
+          "best_finish": null,
+          "topdeck_url": "https://topdeck.gg/event/cameron-thompson-memorial-2000"
+        },
+        {
+          "sources": [
+            "Tournament results via topdeck.gg"
+          ],
+          "sample_size": 6,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "sample",
+          "format": "modern",
+          "archetype_or_deck": "Rakdos Midrange",
+          "tier": "D",
+          "win_rate": 0.16666666666666666,
+          "wins": 1,
+          "losses": 5,
+          "draws": 0,
+          "event_count": 2,
+          "best_finish": null,
+          "topdeck_url": "https://topdeck.gg/event/cameron-thompson-memorial-2000"
+        },
+        {
+          "sources": [
+            "Tournament results via topdeck.gg"
+          ],
+          "sample_size": 4,
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "sample",
           "format": "pioneer",
           "archetype_or_deck": "Unclassified Deck",
@@ -3665,7 +930,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 4,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "sample",
           "format": "standard",
           "archetype_or_deck": "BW Control",
@@ -3683,7 +948,7 @@
             "Tournament results via topdeck.gg"
           ],
           "sample_size": 4,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "sample",
           "format": "standard",
           "archetype_or_deck": "Machinehead",
@@ -3700,26 +965,26 @@
           "sources": [
             "Tournament results via topdeck.gg"
           ],
-          "sample_size": 822,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "sample_size": 940,
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "high",
           "format": "standard",
           "archetype_or_deck": "Unclassified Deck",
           "tier": "C",
-          "win_rate": 0.4610705596107056,
-          "wins": 379,
-          "losses": 383,
-          "draws": 60,
-          "event_count": 38,
+          "win_rate": 0.46170212765957447,
+          "wins": 434,
+          "losses": 438,
+          "draws": 68,
+          "event_count": 42,
           "best_finish": null,
-          "topdeck_url": "https://topdeck.gg/event/torneo-hololive-6-noviembre"
+          "topdeck_url": "https://topdeck.gg/event/mtg-star-trek-prerelease-sunday-afternoon"
         }
       ]
     },
     "commander_tiers": {
       "status": "published",
-      "computed_at": "2026-11-08T14:45:02Z",
-      "methodology": "Deck-frequency tiers computed by us from the Archidekt public decklist corpus: 'trending' = newest decks (orderBy=-createdAt), 'established' = most-viewed decks (orderBy=-viewCount). Tier is the commander's deck-count rank-percentile within its bucket (S>=90th, A>=70th, B>=40th, C>=15th, else D). This measures popularity + momentum, NOT a constructed win rate \u2014 we don't have proprietary tracker telemetry for that (see METAHUB-SPEC.md's honesty rails). top_inclusions = the non-land cards most often played alongside that commander across the decks we scanned. Tournament-result axis (topdeck.gg): published.",
+      "computed_at": "2026-11-09T14:45:02Z",
+      "methodology": "Deck-frequency tiers computed by us from the Archidekt public decklist corpus: 'trending' = newest decks (orderBy=-createdAt), 'established' = most-viewed decks (orderBy=-viewCount). Tier is the commander's deck-count rank-percentile within its bucket (S>=90th, A>=70th, B>=40th, C>=15th, else D). This measures popularity + momentum, NOT a constructed win rate \u2014 we don't have proprietary tracker telemetry for that (see METAHUB-SPEC.md's honesty rails). top_inclusions = the non-land cards most often played alongside that commander across the decks we scanned. Tournament-result axis (topdeck.gg): pending_key.",
       "attribution": [
         "Decklists via Archidekt (archidekt.com)"
       ],
@@ -3729,7 +994,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "sample",
           "commander": "Xyris, the Writhing Storm",
           "format": "commander",
@@ -3742,14 +1007,14 @@
           ],
           "tier": "S",
           "top_inclusions": [
-            "Blossoming Defense",
-            "Oakhame Adversary",
+            "Decisive Denial",
             "Titanic Growth",
-            "Neheb, Dreadhorde Champion",
-            "Blazing Crescendo",
-            "Mischievous Catgeist // Catlike Curiosity",
-            "Bladegriff Prototype",
-            "Cosmic Hunger"
+            "Invigorate",
+            "Colossal Growth",
+            "Mutagenic Growth",
+            "Eureka Moment",
+            "Soul's Fire",
+            "Goldvein Pick"
           ],
           "deck_url": "https://archidekt.com/decks/7031486",
           "art_crop": "https://cards.scryfall.io/art_crop/front/a/f/af0db1d6-5cb1-4917-8e8f-69d5dc184404.jpg?1783921402",
@@ -3760,7 +1025,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "sample",
           "commander": "Baba Lysaga, Night Witch",
           "format": "commander",
@@ -3772,14 +1037,14 @@
           ],
           "tier": "A",
           "top_inclusions": [
-            "Welcome to Sweettooth",
-            "Azusa, Lost but Seeking",
-            "Fang of Shigeki",
-            "Living Death",
-            "Mazirek, Kraul Death Priest",
-            "Splendid Reclamation",
-            "Glimmerlight",
-            "Icetill Explorer"
+            "Jolrael, Mwonvuli Recluse",
+            "Soul Shatter",
+            "Journey to Eternity // Atzal, Cave of Eternity",
+            "Animate Dead",
+            "Dryad of the Ilysian Grove",
+            "Gift of Compleation",
+            "Marvin, Murderous Mimic",
+            "Fang of Shigeki"
           ],
           "deck_url": "https://archidekt.com/decks/1585124",
           "art_crop": "https://cards.scryfall.io/art_crop/front/2/e/2ef42c3f-f22e-4e99-adb0-9e8f8d442347.jpg?1783922697",
@@ -3790,7 +1055,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "sample",
           "commander": "Heliod, Sun-Crowned",
           "format": "commander",
@@ -3801,14 +1066,14 @@
           ],
           "tier": "A",
           "top_inclusions": [
-            "Rule of Law",
-            "Aven Mindcensor",
-            "Chrome Mox",
-            "Arcane Signet",
-            "Ethersworn Canonist",
-            "Containment Priest",
-            "Liberator, Urza's Battlethopter",
-            "Grim Monolith"
+            "Grand Abolisher",
+            "Mana Vault",
+            "Teferi's Protection",
+            "Solitude",
+            "Skyclave Apparition",
+            "Smothering Tithe",
+            "Voice of Victory",
+            "Rest in Peace"
           ],
           "deck_url": "https://archidekt.com/decks/18520785",
           "art_crop": "https://cards.scryfall.io/art_crop/front/3/2/3245ff74-1f9c-4518-a23f-1579f338f232.jpg?1783915722",
@@ -3819,7 +1084,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "sample",
           "commander": "Mr. House, President and CEO",
           "format": "commander",
@@ -3832,14 +1097,14 @@
           ],
           "tier": "B",
           "top_inclusions": [
-            "Six-Sided Die",
-            "Hoarding Ogre",
+            "Wand of Wonder",
             "Berserker's Frenzy",
-            "Arcane Signet",
-            "Sword of Hours",
-            "Xorn",
-            "Vexing Puzzlebox",
-            "Thunderwave"
+            "Chaos Channeler",
+            "Component Pouch",
+            "Strength-Testing Hammer",
+            "Ingenious Artillerist",
+            "Monoxa, Midway Manager",
+            "Cybermen Squadron"
           ],
           "deck_url": "https://archidekt.com/decks/7097093",
           "art_crop": "https://cards.scryfall.io/art_crop/front/2/3/23eb3cf7-c90d-4bfa-b125-4fbcb5614468.jpg?1783912421",
@@ -3850,7 +1115,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "sample",
           "commander": "Nicol Bolas, the Ravager // Nicol Bolas, the Arisen",
           "format": "commander",
@@ -3863,14 +1128,14 @@
           ],
           "tier": "B",
           "top_inclusions": [
-            "Swan Song",
-            "Reanimate",
-            "Solemn Simulacrum",
-            "Deliver Unto Evil",
-            "The Locust God",
-            "Bolas's Citadel",
-            "Rakdos Signet",
-            "Deflecting Swat"
+            "The Elderspell",
+            "Dark Intimations",
+            "Mana Drain",
+            "Spark Double",
+            "Propaganda",
+            "Experimental Augury",
+            "Bedevil",
+            "Nightscape Familiar"
           ],
           "deck_url": "https://archidekt.com/decks/17597570",
           "art_crop": "https://cards.scryfall.io/art_crop/front/7/b/7b215968-93a6-4278-ac61-4e3e8c3c3943.jpg?1783934524",
@@ -3881,7 +1146,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "sample",
           "commander": "Thrun, Breaker of Silence",
           "format": "commander",
@@ -3892,14 +1157,14 @@
           ],
           "tier": "B",
           "top_inclusions": [
-            "Ordeal of Nylea",
-            "Tanuki Transplanter",
-            "Arcane Signet",
-            "Boar Umbra",
+            "Ranger's Guile",
             "Colossification",
-            "Hydra's Growth",
+            "Gift of Paradise",
+            "Primal Might",
             "Prodigious Growth",
-            "Thran Power Suit"
+            "Silkguard",
+            "In Search of Greatness",
+            "Scavenging Ooze"
           ],
           "deck_url": "https://archidekt.com/decks/4143061",
           "art_crop": "https://cards.scryfall.io/art_crop/front/1/4/143142a4-0e32-45ca-8036-d0aef5cce122.jpg?1783918195",
@@ -3910,7 +1175,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "sample",
           "commander": "Cloud, Ex-SOLDIER",
           "format": "commander",
@@ -3923,14 +1188,14 @@
           ],
           "tier": "C",
           "top_inclusions": [
-            "Summon: Kujata",
-            "Vandalblast",
-            "Cait Sith, Fortune Teller",
-            "Ultimate Magic: Meteor",
+            "Heidegger, Shinra Executive",
+            "SOLDIER Military Program",
+            "Elena, Turk Recruit",
             "Yuffie, Materia Hunter",
-            "Arcane Signet",
-            "Hero's Heirloom",
-            "Tifa, Martial Artist"
+            "Inspiring Statuary",
+            "Vanquish the Horde",
+            "Harmonize",
+            "Skullclamp"
           ],
           "deck_url": "https://archidekt.com/decks/13106990",
           "art_crop": "https://cards.scryfall.io/art_crop/front/1/8/18263a99-378d-45af-8bc1-7188ca2a83a5.jpg?1783906400",
@@ -3941,7 +1206,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "sample",
           "commander": "Szarel, Genesis Shepherd",
           "format": "commander",
@@ -3954,14 +1219,14 @@
           ],
           "tier": "C",
           "top_inclusions": [
-            "Soul of Windgrace",
+            "World Breaker",
+            "Tireless Tracker",
+            "Splendid Reclamation",
+            "Night's Whisper",
+            "Pest Infestation",
+            "Eumidian Wastewaker",
             "Loamcrafter Faun",
-            "Rampaging Baloths",
-            "Skyshroud Claim",
-            "Infernal Grasp",
-            "Arcane Signet",
-            "God-Eternal Bontu",
-            "Beast Within"
+            "Skyshroud Claim"
           ],
           "deck_url": "https://archidekt.com/decks/14397447",
           "art_crop": "https://cards.scryfall.io/art_crop/front/8/9/89b61123-b10f-4bcf-b5f9-1f302f9b22d1.jpg?1783906067",
@@ -3972,7 +1237,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "sample",
           "commander": "Valgavoth, Harrower of Souls",
           "format": "commander",
@@ -3984,14 +1249,14 @@
           ],
           "tier": "D",
           "top_inclusions": [
-            "Decree of Pain",
-            "Blood Pact",
+            "Enchanter's Bane",
+            "Syr Konrad, the Grim",
+            "Rakdos Signet",
+            "Spiked Corridor // Torture Pit",
             "Barbflare Gremlin",
-            "Kardur, Doomscourge",
-            "Theater of Horrors",
-            "Arcane Signet",
-            "Infernal Grasp",
-            "Rakdos Charm"
+            "Stormfist Crusader",
+            "S\u00e9ance Board",
+            "Massacre Wurm"
           ],
           "deck_url": "https://archidekt.com/decks/9189744",
           "art_crop": "https://cards.scryfall.io/art_crop/front/8/d/8d7c1f6c-af45-4449-8cf8-e13830b3df8a.jpg?1783909662",
@@ -4002,29 +1267,32 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "sample",
-          "commander": "Tinybones, Pocket Nuisance",
+          "commander": "Lightning, Army of One",
           "format": "commander",
           "bucket": "trending",
           "deck_count": 1,
           "color_identity": [
-            "Black"
+            "Red",
+            "White"
           ],
           "tier": "S",
-          "top_inclusions": [],
-          "deck_url": "https://archidekt.com/decks/28202475",
-          "art_crop": "https://cards.scryfall.io/art_crop/front/2/f/2f47ddf7-35b6-4205-8045-f057914c5f64.jpg?1788329294",
-          "image_normal": "https://cards.scryfall.io/normal/front/2/f/2f47ddf7-35b6-4205-8045-f057914c5f64.jpg?1788329294"
+          "top_inclusions": [
+            "Birgi, God of Storytelling // Harnfel, Horn of Bounty"
+          ],
+          "deck_url": "https://archidekt.com/decks/28233639",
+          "art_crop": "https://cards.scryfall.io/art_crop/front/1/1/1103da9c-300c-406b-997d-9e5bb7cd02d6.jpg?1783906566",
+          "image_normal": "https://cards.scryfall.io/normal/front/1/1/1103da9c-300c-406b-997d-9e5bb7cd02d6.jpg?1783906566"
         },
         {
           "sources": [
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "sample",
-          "commander": "Nekusar, the Mindrazer",
+          "commander": "Cormela, Glamour Thief",
           "format": "commander",
           "bucket": "trending",
           "deck_count": 1,
@@ -4034,125 +1302,155 @@
             "Red"
           ],
           "tier": "A",
-          "top_inclusions": [
-            "Echo of Eons",
-            "Arcane Signet",
-            "Phyrexian Tyranny",
-            "Scrawling Crawler",
-            "Terminate",
-            "Mind Stone",
-            "Underworld Dreams",
-            "Opt"
-          ],
-          "deck_url": "https://archidekt.com/decks/28202468",
-          "art_crop": "https://cards.scryfall.io/art_crop/front/4/a/4afdc65d-3c97-47af-83fa-df340389802e.jpg?1783915612",
-          "image_normal": "https://cards.scryfall.io/normal/front/4/a/4afdc65d-3c97-47af-83fa-df340389802e.jpg?1783915612"
+          "top_inclusions": [],
+          "deck_url": "https://archidekt.com/decks/28233629",
+          "art_crop": "https://cards.scryfall.io/art_crop/front/2/2/221ac34a-94ed-4c49-afad-b19cac541731.jpg?1783923089",
+          "image_normal": "https://cards.scryfall.io/normal/front/2/2/221ac34a-94ed-4c49-afad-b19cac541731.jpg?1783923089"
         },
         {
           "sources": [
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "sample",
-          "commander": "Yuriko, the Tiger's Shadow",
+          "commander": "Teysa Karlov",
           "format": "commander",
           "bucket": "trending",
           "deck_count": 1,
           "color_identity": [
             "Black",
-            "Blue"
+            "White"
           ],
-          "tier": "B",
-          "top_inclusions": [],
-          "deck_url": "https://archidekt.com/decks/28202467",
-          "art_crop": "https://cards.scryfall.io/art_crop/front/f/e/fe9be3e0-076c-4703-9750-2a6b0a178bc9.jpg?1791803568",
-          "image_normal": "https://cards.scryfall.io/normal/front/f/e/fe9be3e0-076c-4703-9750-2a6b0a178bc9.jpg?1791803568"
+          "tier": "A",
+          "top_inclusions": [
+            "Indebted Spirit",
+            "Voice of Victory",
+            "Wishclaw Talisman",
+            "Grim Haruspex",
+            "Yahenni, Undying Partisan",
+            "Syr Konrad, the Grim",
+            "Rite of Oblivion",
+            "Viscera Seer"
+          ],
+          "deck_url": "https://archidekt.com/decks/28233628",
+          "art_crop": "https://cards.scryfall.io/art_crop/front/c/d/cd14f1ce-7fcd-485c-b7ca-01c5b45fdc01.jpg?1783915608",
+          "image_normal": "https://cards.scryfall.io/normal/front/c/d/cd14f1ce-7fcd-485c-b7ca-01c5b45fdc01.jpg?1783915608"
         },
         {
           "sources": [
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "sample",
-          "commander": "Kilo, Apogee Mind",
+          "commander": "Vorinclex, Monstrous Raider",
           "format": "commander",
           "bucket": "trending",
           "deck_count": 1,
           "color_identity": [
+            "Green"
+          ],
+          "tier": "B",
+          "top_inclusions": [
+            "Up the Beanstalk",
+            "Explore",
+            "Managorger Hydra",
+            "Warden of the Grove",
+            "Nexos",
+            "Jiang Yanggu, Wildcrafter",
+            "Wrenn and Seven",
+            "Eternal Witness"
+          ],
+          "deck_url": "https://archidekt.com/decks/28233621",
+          "art_crop": "https://cards.scryfall.io/art_crop/front/9/2/92613468-205e-488b-930d-11908477e9f8.jpg?1783928202",
+          "image_normal": "https://cards.scryfall.io/normal/front/9/2/92613468-205e-488b-930d-11908477e9f8.jpg?1783928202"
+        },
+        {
+          "sources": [
+            "Decklists via Archidekt (archidekt.com)"
+          ],
+          "sample_size": 1,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "sample",
+          "commander": "Captain Benjamin Sisko",
+          "format": "commander",
+          "bucket": "trending",
+          "deck_count": 1,
+          "color_identity": [
+            "Black",
             "Blue",
+            "Green",
             "Red",
             "White"
           ],
           "tier": "B",
           "top_inclusions": [
-            "Inspirit, Flagship Vessel"
+            "Captain Jean-Luc Picard"
           ],
-          "deck_url": "https://archidekt.com/decks/28202465",
-          "art_crop": "https://cards.scryfall.io/art_crop/front/3/0/307a859e-eb80-4af6-b731-92e4767b5100.jpg?1783906067",
-          "image_normal": "https://cards.scryfall.io/normal/front/3/0/307a859e-eb80-4af6-b731-92e4767b5100.jpg?1783906067"
+          "deck_url": "https://archidekt.com/decks/28233619",
+          "art_crop": "https://cards.scryfall.io/art_crop/front/5/1/51338fb2-13a3-41b8-981f-05fa35e87e2e.jpg?1793538714",
+          "image_normal": "https://cards.scryfall.io/normal/front/5/1/51338fb2-13a3-41b8-981f-05fa35e87e2e.jpg?1793538714"
         },
         {
           "sources": [
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "sample",
-          "commander": "Plagon, Lord of the Beach",
+          "commander": "Captain Kirk, Boldly Going",
           "format": "commander",
           "bucket": "trending",
           "deck_count": 1,
           "color_identity": [
+            "Black",
             "Blue",
+            "Green",
+            "Red",
             "White"
           ],
           "tier": "C",
           "top_inclusions": [
-            "Ghalta the Immovable",
-            "Ephemerate"
+            "Captain Jean-Luc Picard"
           ],
-          "deck_url": "https://archidekt.com/decks/28202464",
-          "art_crop": "https://cards.scryfall.io/art_crop/front/7/f/7f8a6bfe-6033-4f6b-ab45-6b553f8b51a1.jpg?1783908858",
-          "image_normal": "https://cards.scryfall.io/normal/front/7/f/7f8a6bfe-6033-4f6b-ab45-6b553f8b51a1.jpg?1783908858"
+          "deck_url": "https://archidekt.com/decks/28233619",
+          "art_crop": "https://cards.scryfall.io/art_crop/front/6/b/6b5d9bd2-cc78-4c30-b6ee-65b76c60a588.jpg?1793281029",
+          "image_normal": "https://cards.scryfall.io/normal/front/6/b/6b5d9bd2-cc78-4c30-b6ee-65b76c60a588.jpg?1793281029"
         },
         {
           "sources": [
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "sample",
-          "commander": "Kylox, Visionary Inventor",
+          "commander": "Elda, Conjurer of Spectacle",
           "format": "commander",
           "bucket": "trending",
           "deck_count": 1,
           "color_identity": [
-            "Blue",
-            "Red"
+            "Green",
+            "White"
           ],
-          "tier": "C",
+          "tier": "D",
           "top_inclusions": [
-            "Niv-Mizzet, Visionary",
-            "Melek, Reforged Researcher",
-            "Counterflux",
-            "Mana Geyser",
-            "Reverberate",
-            "Unexpected Windfall",
-            "Talrand, Sky Summoner",
-            "Haze of Rage"
+            "Arcane Signet",
+            "Sol Ring",
+            "Thrumming Hivepool",
+            "Brood Sliver",
+            "Bonescythe Sliver"
           ],
-          "deck_url": "https://archidekt.com/decks/28202463",
-          "art_crop": "https://cards.scryfall.io/art_crop/front/0/0/00faa272-91ad-407b-9175-8fa1d02585b8.jpg?1783912845",
-          "image_normal": "https://cards.scryfall.io/normal/front/0/0/00faa272-91ad-407b-9175-8fa1d02585b8.jpg?1783912845"
+          "deck_url": "https://archidekt.com/decks/28233618",
+          "art_crop": "https://cards.scryfall.io/art_crop/front/9/6/96a12028-cf12-4d3d-af5f-a161cb2b7d97.jpg?1792741617",
+          "image_normal": "https://cards.scryfall.io/normal/front/9/6/96a12028-cf12-4d3d-af5f-a161cb2b7d97.jpg?1792741617"
         },
         {
           "sources": [
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "sample",
           "commander": "Teysa of the Ghost Council",
           "format": "competitivebrawl",
@@ -4164,14 +1462,14 @@
           ],
           "tier": "S",
           "top_inclusions": [
-            "The Restoration of Eiganjo // Architect of Restoration",
-            "Remorseful Cleric",
-            "Phyrexian Reclamation",
-            "Chrome Mox",
-            "Arcane Signet",
-            "Invasion of Gobakhan // Lightshield Array",
-            "The Meathook Massacre",
-            "Reanimate"
+            "Voice of Victory",
+            "Skyclave Apparition",
+            "Elspeth, Storm Slayer",
+            "Snuff Out",
+            "Fracture",
+            "Night's Whisper",
+            "Go for the Throat",
+            "Fell the Profane // Fell Mire"
           ],
           "deck_url": "https://archidekt.com/decks/7656890",
           "art_crop": "https://cards.scryfall.io/art_crop/front/a/e/ae7e0a65-c348-4171-a793-9d49da9249d1.jpg?1783911503",
@@ -4182,7 +1480,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "sample",
           "commander": "Baral, Chief of Compliance",
           "format": "competitivebrawl",
@@ -4193,14 +1491,14 @@
           ],
           "tier": "S",
           "top_inclusions": [
-            "Murmuring Mystic",
-            "Refute",
-            "Curious Homunculus // Voracious Reader",
-            "Talrand, Sky Summoner",
-            "Pithing Needle",
-            "Currency Converter",
-            "Chart a Course",
-            "Disallow"
+            "Flow of Knowledge",
+            "Wonder",
+            "Defabricate",
+            "Mana Drain",
+            "Vendilion Clique",
+            "Archmage's Charm",
+            "Unauthorized Exit",
+            "Mockingbird"
           ],
           "deck_url": "https://archidekt.com/decks/24528615",
           "art_crop": "https://cards.scryfall.io/art_crop/front/2/7/2709614c-9b08-4d5b-853a-a4d061d85d70.jpg?1783917308",
@@ -4211,7 +1509,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "sample",
           "commander": "Sheoldred, the Apocalypse",
           "format": "competitivebrawl",
@@ -4222,14 +1520,14 @@
           ],
           "tier": "A",
           "top_inclusions": [
-            "Hymn to Tourach",
-            "Barrowgoyf",
-            "Phyrexian Obliterator",
-            "Infernal Grasp",
-            "Arcane Signet",
+            "Unstoppable Slasher",
+            "Withering Torment",
+            "Swiftfoot Boots",
+            "Extinction Event",
+            "Snuff Out",
+            "Night's Whisper",
             "Cling to Dust",
-            "The Meathook Massacre",
-            "Necrodominance"
+            "Barrowgoyf"
           ],
           "deck_url": "https://archidekt.com/decks/21339688",
           "art_crop": "https://cards.scryfall.io/art_crop/front/d/6/d67be074-cdd4-41d9-ac89-0a0456c4e4b2.jpg?1783921327",
@@ -4240,7 +1538,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "sample",
           "commander": "Rofellos, Llanowar Emissary",
           "format": "competitivebrawl",
@@ -4251,14 +1549,14 @@
           ],
           "tier": "A",
           "top_inclusions": [
-            "Hexhaven Invigorator",
-            "Defend the Rider",
-            "Noxious Revival",
-            "Questing Beast",
+            "Up the Beanstalk",
+            "Ecological Appreciation",
             "Fierce Empath",
-            "Natural Order",
             "Vivien's Arkbow",
-            "Chrome Mox"
+            "World Breaker",
+            "Radagast the Brown",
+            "Defend the Rider",
+            "Sundering Titan"
           ],
           "deck_url": "https://archidekt.com/decks/27423412",
           "art_crop": "https://cards.scryfall.io/art_crop/front/6/d/6d63a085-101c-4749-a3a4-1d335c25b10e.jpg?1783939250",
@@ -4269,7 +1567,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "sample",
           "commander": "Eshki Dragonclaw",
           "format": "competitivebrawl",
@@ -4282,14 +1580,14 @@
           ],
           "tier": "B",
           "top_inclusions": [
-            "Brazen Borrower // Petty Theft",
-            "Noxious Revival",
-            "Berserk",
-            "Royal Treatment",
             "Heroic Intervention",
-            "Chrome Mox",
-            "Arcane Signet",
-            "Badgermole Cub"
+            "Manamorphose",
+            "Brazen Borrower // Petty Theft",
+            "Goblin Anarchomancer",
+            "Pact of Negation",
+            "Trinket Mage",
+            "Mana Drain",
+            "Fierce Guardianship"
           ],
           "deck_url": "https://archidekt.com/decks/17883190",
           "art_crop": "https://cards.scryfall.io/art_crop/front/0/d/0d369c44-78ee-4f3c-bf2b-cddba7fe26d4.jpg?1783907322",
@@ -4300,7 +1598,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "sample",
           "commander": "Ugin, Eye of the Storms",
           "format": "competitivebrawl",
@@ -4309,14 +1607,14 @@
           "color_identity": [],
           "tier": "B",
           "top_inclusions": [
-            "The Walls of Ba Sing Se",
-            "Gilded Lotus",
-            "Pilgrim's Eye",
-            "Scrawling Crawler",
-            "Kozilek's Command",
+            "Tomb Trawler",
+            "Ultron, Artificial Malevolence",
+            "The Echoverse Fulcrum",
             "Zuko's Exile",
-            "Mind Stone",
-            "Solemn Simulacrum"
+            "Scampering Surveyor",
+            "The Black Arrow",
+            "The Vision",
+            "Goldvein Pick"
           ],
           "deck_url": "https://archidekt.com/decks/21852727",
           "art_crop": "https://cards.scryfall.io/art_crop/front/6/4/64a5d494-efa1-446b-bebe-2ad36e154376.jpg?1783907421",
@@ -4327,7 +1625,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "sample",
           "commander": "Krenko, Mob Boss",
           "format": "competitivebrawl",
@@ -4338,14 +1636,14 @@
           ],
           "tier": "B",
           "top_inclusions": [
-            "Legion Warboss",
-            "Goblin Warchief",
-            "Improvised Club",
             "Abrade",
-            "Burst Lightning",
-            "Goblin Matron",
-            "Raid Bombardment",
-            "Foundry Street Denizen"
+            "Ojer Axonil, Deepest Might // Temple of Power",
+            "Ruby Medallion",
+            "Barrage of Boulders",
+            "Lightning Strike",
+            "Improvised Club",
+            "Skirk Prospector",
+            "Dragon Fodder"
           ],
           "deck_url": "https://archidekt.com/decks/6476901",
           "art_crop": "https://cards.scryfall.io/art_crop/front/8/2/824b2d73-2151-4e5e-9f05-8f63e2bdcaa9.jpg?1783909065",
@@ -4356,7 +1654,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "sample",
           "commander": "Zacama, Primal Calamity",
           "format": "competitivebrawl",
@@ -4369,14 +1667,14 @@
           ],
           "tier": "C",
           "top_inclusions": [
-            "Final Showdown",
-            "Zetalpa, Primal Dawn",
-            "Defense of the Heart",
+            "Up the Beanstalk",
+            "The Great Henge",
             "Heroic Intervention",
-            "Commune with Dinosaurs",
-            "Entish Restoration",
-            "Arcane Signet",
-            "Etali, Primal Conqueror // Etali, Primal Sickness"
+            "Pantlaza, Sun-Favored",
+            "Beast Whisperer",
+            "Etali, Primal Conqueror // Etali, Primal Sickness",
+            "Mirari's Wake",
+            "Goblin Anarchomancer"
           ],
           "deck_url": "https://archidekt.com/decks/15891877",
           "art_crop": "https://cards.scryfall.io/art_crop/front/0/5/05c5a9a8-badd-43ab-8408-a13e75407681.jpg?1783913841",
@@ -4387,7 +1685,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "sample",
           "commander": "A-Acererak the Archlich",
           "format": "competitivebrawl",
@@ -4398,14 +1696,14 @@
           ],
           "tier": "C",
           "top_inclusions": [
-            "Blood on the Snow",
-            "Diabolic Intent",
-            "Cruelclaw's Heist",
-            "Agonizing Remorse",
-            "Chrome Mox",
-            "Gilded Lotus",
-            "Infernal Grasp",
-            "Arcane Signet"
+            "Wishclaw Talisman",
+            "Aetherflux Reservoir",
+            "Coldsteel Heart",
+            "Bolas's Citadel",
+            "Jhoira's Familiar",
+            "Damnation",
+            "Massacre Wurm",
+            "Herald's Horn"
           ],
           "deck_url": "https://archidekt.com/decks/12547753"
         },
@@ -4414,7 +1712,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "sample",
           "commander": "Beorn the Fierce",
           "format": "competitivebrawl",
@@ -4425,14 +1723,14 @@
           ],
           "tier": "D",
           "top_inclusions": [
-            "Metallic Mimic",
-            "Grizzly Bears",
-            "Entish Restoration",
+            "Balduvian Bears",
             "Surrak and Goreclaw",
-            "Mutable Explorer",
-            "Vastlands Scavenger // Bind to Life",
-            "Runeclaw Bear",
-            "Unnatural Growth"
+            "Chomping Changeling",
+            "Unnatural Growth",
+            "Kamahl's Summons",
+            "Ayula, Queen Among Bears",
+            "Smuggler's Surprise",
+            "The Earth King"
           ],
           "deck_url": "https://archidekt.com/decks/25270545",
           "art_crop": "https://cards.scryfall.io/art_crop/front/3/6/367d5f8b-77ee-47f7-bc71-972d62c280a9.jpg?1784632151",
@@ -4442,8 +1740,97 @@
           "sources": [
             "Decklists via Archidekt (archidekt.com)"
           ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "low",
+          "commander": "Vivi Ornitier",
+          "format": "competitivebrawl",
+          "bucket": "trending",
+          "deck_count": 2,
+          "color_identity": [
+            "Blue",
+            "Red"
+          ],
+          "tier": "S",
+          "top_inclusions": [
+            "Wild Ride",
+            "Lightning Bolt",
+            "Mishra's Bauble",
+            "Sea Gate Restoration // Sea Gate, Reborn",
+            "Treasure Cruise",
+            "Sleight of Hand",
+            "Magic Damper",
+            "Slip Out the Back"
+          ],
+          "deck_url": "https://archidekt.com/decks/28209303",
+          "art_crop": "https://cards.scryfall.io/art_crop/front/e/c/ecc1027a-8c07-44a0-bdde-fa2844cff694.jpg?1783906561",
+          "image_normal": "https://cards.scryfall.io/normal/front/e/c/ecc1027a-8c07-44a0-bdde-fa2844cff694.jpg?1783906561"
+        },
+        {
+          "sources": [
+            "Decklists via Archidekt (archidekt.com)"
+          ],
           "sample_size": 1,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "sample",
+          "commander": "Neera, Wild Mage",
+          "format": "competitivebrawl",
+          "bucket": "trending",
+          "deck_count": 1,
+          "color_identity": [
+            "Blue",
+            "Red"
+          ],
+          "tier": "A",
+          "top_inclusions": [
+            "Jeska's Will",
+            "Abrade",
+            "Pact of Negation",
+            "Lightning Bolt",
+            "Stinging Lionfish",
+            "Electro, Assaulting Battery",
+            "Displacer Kitten",
+            "Ornithopter of Paradise"
+          ],
+          "deck_url": "https://archidekt.com/decks/28229127",
+          "art_crop": "https://cards.scryfall.io/art_crop/front/8/4/84a051e5-df37-4020-971c-1dd1bb40d023.jpg?1783922832",
+          "image_normal": "https://cards.scryfall.io/normal/front/8/4/84a051e5-df37-4020-971c-1dd1bb40d023.jpg?1783922832"
+        },
+        {
+          "sources": [
+            "Decklists via Archidekt (archidekt.com)"
+          ],
+          "sample_size": 1,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "sample",
+          "commander": "Magda, Brazen Outlaw",
+          "format": "competitivebrawl",
+          "bucket": "trending",
+          "deck_count": 1,
+          "color_identity": [
+            "Red"
+          ],
+          "tier": "A",
+          "top_inclusions": [
+            "Jeska's Will",
+            "Abrade",
+            "Flame Slash",
+            "Vault Robber",
+            "Swiftfoot Boots",
+            "Axgard Cavalry",
+            "Lightning Bolt",
+            "Mobile Garrison"
+          ],
+          "deck_url": "https://archidekt.com/decks/28219726",
+          "art_crop": "https://cards.scryfall.io/art_crop/front/0/7/079e6263-e54c-4899-a336-5315909b9322.jpg?1783928229",
+          "image_normal": "https://cards.scryfall.io/normal/front/0/7/079e6263-e54c-4899-a336-5315909b9322.jpg?1783928229"
+        },
+        {
+          "sources": [
+            "Decklists via Archidekt (archidekt.com)"
+          ],
+          "sample_size": 1,
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "sample",
           "commander": "Marchesa, Dealer of Death",
           "format": "competitivebrawl",
@@ -4454,13 +1841,16 @@
             "Blue",
             "Red"
           ],
-          "tier": "S",
+          "tier": "B",
           "top_inclusions": [
-            "Manifold Key",
+            "Jeska's Will",
+            "Abrade",
+            "Pact of Negation",
+            "Lightning Bolt",
             "Stinging Lionfish",
-            "Scrabbling Claws",
-            "Liquimetal Coating",
-            "Key to the City"
+            "Electro, Assaulting Battery",
+            "Displacer Kitten",
+            "Mishra's Bauble"
           ],
           "deck_url": "https://archidekt.com/decks/28198765",
           "art_crop": "https://cards.scryfall.io/art_crop/front/e/e/ee29b59c-d57c-4a03-bae7-e9dfa57d6bb1.jpg?1783911789",
@@ -4471,7 +1861,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "sample",
           "commander": "Appa, Steadfast Guardian",
           "format": "competitivebrawl",
@@ -4480,16 +1870,16 @@
           "color_identity": [
             "White"
           ],
-          "tier": "S",
+          "tier": "B",
           "top_inclusions": [
-            "The Arkenstone // Seek the Heart",
-            "Final Showdown",
-            "Emrakul, the Aeons Torn",
-            "Arcane Signet",
+            "The Eternal Wanderer",
+            "Tale of Momo",
             "The Legend of Yangchen // Avatar Yangchen",
-            "Palant\u00edr of Orthanc",
-            "Kutzil's Flanker",
-            "Ondu Inversion // Ondu Skyruins"
+            "Scampering Surveyor",
+            "Smothering Tithe",
+            "Aetherflux Reservoir",
+            "Aang, the Last Airbender",
+            "Jhoira's Familiar"
           ],
           "deck_url": "https://archidekt.com/decks/28193532",
           "art_crop": "https://cards.scryfall.io/art_crop/front/8/2/829d91e9-4878-4e55-a262-ac0d55b65d4e.jpg?1783905005",
@@ -4500,7 +1890,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "sample",
           "commander": "Spider-Punk",
           "format": "competitivebrawl",
@@ -4509,16 +1899,16 @@
           "color_identity": [
             "Red"
           ],
-          "tier": "A",
+          "tier": "B",
           "top_inclusions": [
-            "Metallic Mimic",
-            "Adaptive Automaton",
-            "Maskwood Nexus",
-            "Spider-Man, Web-Spinner",
             "Abrade",
-            "Tibalt's Trickery",
-            "Unexpected Windfall",
-            "Maximum Carnage"
+            "Ojer Axonil, Deepest Might // Temple of Power",
+            "Ruby Medallion",
+            "Fiery Confluence",
+            "Chandra, Torch of Defiance",
+            "Spinneret and Spiderling",
+            "Maximum Carnage",
+            "Lightning Bolt"
           ],
           "deck_url": "https://archidekt.com/decks/28191622",
           "art_crop": "https://cards.scryfall.io/art_crop/front/0/b/0bd41879-fcd4-4211-9b98-47e7cdba5399.jpg?1783905333",
@@ -4529,7 +1919,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "sample",
           "commander": "Nicol Bolas, the Ravager // Nicol Bolas, the Arisen",
           "format": "competitivebrawl",
@@ -4540,16 +1930,16 @@
             "Blue",
             "Red"
           ],
-          "tier": "A",
+          "tier": "C",
           "top_inclusions": [
-            "Chrome Mox",
-            "Arcane Signet",
-            "Samut, Tyrant of Naktamun",
-            "Swan Song",
-            "Cyclonic Rift",
-            "Animate Dead",
-            "Force of Negation",
-            "Mana Drain"
+            "Jeska's Will",
+            "Mana Vault",
+            "Baleful Strix",
+            "Rhystic Study",
+            "Fierce Guardianship",
+            "Mana Drain",
+            "Pact of Negation",
+            "Bolas's Citadel"
           ],
           "deck_url": "https://archidekt.com/decks/28190624",
           "art_crop": "https://cards.scryfall.io/art_crop/front/7/b/7b215968-93a6-4278-ac61-4e3e8c3c3943.jpg?1783934524",
@@ -4560,7 +1950,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "sample",
           "commander": "Elspeth, Storm Slayer",
           "format": "competitivebrawl",
@@ -4569,16 +1959,16 @@
           "color_identity": [
             "White"
           ],
-          "tier": "B",
+          "tier": "C",
           "top_inclusions": [
-            "Expel the Interlopers",
-            "Hare Apparent",
-            "Arcane Signet",
+            "Grand Abolisher",
+            "The Eternal Wanderer",
+            "Teferi's Protection",
+            "Smothering Tithe",
             "Essence Reliquary",
-            "Enduring Innocence",
             "Brave the Elements",
-            "Flawless Maneuver",
-            "Claim Jumper"
+            "Exorcise",
+            "Lay Down Arms"
           ],
           "deck_url": "https://archidekt.com/decks/28189463",
           "art_crop": "https://cards.scryfall.io/art_crop/front/1/a/1ad6fc6f-c6f5-4343-949f-b7470bfb5255.jpg?1783906919",
@@ -4589,7 +1979,7 @@
             "Decklists via Archidekt (archidekt.com)"
           ],
           "sample_size": 1,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "sample",
           "commander": "Kefka, Court Mage // Kefka, Ruler of Ruin",
           "format": "competitivebrawl",
@@ -4600,155 +1990,33 @@
             "Blue",
             "Red"
           ],
-          "tier": "B",
+          "tier": "D",
           "top_inclusions": [
-            "Hopeless Nightmare",
+            "Stinging Vitriol",
+            "Binding Negotiation",
             "Abrade",
-            "Chrome Mox",
-            "Agonizing Remorse",
-            "Arcane Signet",
-            "Devour Intellect",
-            "Tinybones, Trinket Thief",
-            "Auntie's Sentence"
+            "Ral Zarek, Guest Lecturer",
+            "Syr Konrad, the Grim",
+            "The Raven Man",
+            "Rhystic Study",
+            "Standstill"
           ],
           "deck_url": "https://archidekt.com/decks/28188599",
           "art_crop": "https://cards.scryfall.io/art_crop/front/8/f/8fcf3fbb-1ddd-437e-81c1-f5a3133f5ee8.jpg?1783906572",
           "image_normal": "https://cards.scryfall.io/normal/front/8/f/8fcf3fbb-1ddd-437e-81c1-f5a3133f5ee8.jpg?1783906572"
-        },
-        {
-          "sources": [
-            "Decklists via Archidekt (archidekt.com)"
-          ],
-          "sample_size": 1,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "sample",
-          "commander": "Go-Shintai of Life's Origin",
-          "format": "competitivebrawl",
-          "bucket": "trending",
-          "deck_count": 1,
-          "color_identity": [
-            "Black",
-            "Blue",
-            "Green",
-            "Red",
-            "White"
-          ],
-          "tier": "B",
-          "top_inclusions": [
-            "Sanctum of Fruitful Harvest",
-            "Go-Shintai of Ancient Wars",
-            "White Lotus Tile",
-            "Guru Pathik",
-            "Virtue of Loyalty // Ardenvale Fealty",
-            "Heroic Intervention",
-            "Honden of Infinite Rage",
-            "Arcane Signet"
-          ],
-          "deck_url": "https://archidekt.com/decks/28181968",
-          "art_crop": "https://cards.scryfall.io/art_crop/front/9/4/9476fe67-d2d3-4835-8ba6-2a17d18cc141.jpg?1783923985",
-          "image_normal": "https://cards.scryfall.io/normal/front/9/4/9476fe67-d2d3-4835-8ba6-2a17d18cc141.jpg?1783923985"
-        },
-        {
-          "sources": [
-            "Decklists via Archidekt (archidekt.com)"
-          ],
-          "sample_size": 1,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "sample",
-          "commander": "Koth, Fire of Resistance",
-          "format": "competitivebrawl",
-          "bucket": "trending",
-          "deck_count": 1,
-          "color_identity": [
-            "Red"
-          ],
-          "tier": "C",
-          "top_inclusions": [
-            "Invasion of Regatha // Disciples of the Inferno",
-            "Tibalt's Trickery",
-            "Blazing Firesinger // Seething Song",
-            "Way of the Pyromancer",
-            "Flare of Duplication",
-            "Solar Transformer",
-            "Professional Face-Breaker",
-            "Moonsilver Key"
-          ],
-          "deck_url": "https://archidekt.com/decks/28180666",
-          "art_crop": "https://cards.scryfall.io/art_crop/front/6/5/6528e012-4091-4722-b706-c51772676167.jpg?1783918027",
-          "image_normal": "https://cards.scryfall.io/normal/front/6/5/6528e012-4091-4722-b706-c51772676167.jpg?1783918027"
-        },
-        {
-          "sources": [
-            "Decklists via Archidekt (archidekt.com)"
-          ],
-          "sample_size": 1,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "sample",
-          "commander": "Uldaros Theorix",
-          "format": "competitivebrawl",
-          "bucket": "trending",
-          "deck_count": 1,
-          "color_identity": [
-            "Black",
-            "Blue"
-          ],
-          "tier": "C",
-          "top_inclusions": [
-            "Hopeless Nightmare",
-            "Countersculpt",
-            "Infinite Coursework",
-            "Frozen in Ice",
-            "Alchemist's Assistant",
-            "Murmuring Volume",
-            "Stormchaser's Talent",
-            "Living Library"
-          ],
-          "deck_url": "https://archidekt.com/decks/28178451",
-          "art_crop": "https://cards.scryfall.io/art_crop/front/a/7/a7ad622a-42ff-48fa-ae95-12e0a5bd9387.jpg?1788878220",
-          "image_normal": "https://cards.scryfall.io/normal/front/a/7/a7ad622a-42ff-48fa-ae95-12e0a5bd9387.jpg?1788878220"
-        },
-        {
-          "sources": [
-            "Decklists via Archidekt (archidekt.com)"
-          ],
-          "sample_size": 1,
-          "computed_at": "2026-11-08T14:45:02Z",
-          "confidence": "sample",
-          "commander": "Ral, Monsoon Mage // Ral, Leyline Prodigy",
-          "format": "competitivebrawl",
-          "bucket": "trending",
-          "deck_count": 1,
-          "color_identity": [
-            "Blue",
-            "Red"
-          ],
-          "tier": "D",
-          "top_inclusions": [
-            "Highway Robbery",
-            "Tibalt's Trickery",
-            "Reiterate",
-            "Chromatic Lantern",
-            "Flare of Duplication",
-            "Snap",
-            "Swan Song",
-            "Ruby Medallion"
-          ],
-          "deck_url": "https://archidekt.com/decks/28173688",
-          "art_crop": "https://cards.scryfall.io/art_crop/front/4/3/438d8a26-ddc9-4829-8aff-22d6af6575cf.jpg?1783911228",
-          "image_normal": "https://cards.scryfall.io/normal/front/4/3/438d8a26-ddc9-4829-8aff-22d6af6575cf.jpg?1783911228"
         }
       ]
     },
     "limited_tiers": {
       "status": "unavailable",
-      "computed_at": "2026-11-08T14:45:02Z",
+      "computed_at": "2026-11-09T14:45:02Z",
       "methodology": "17lands unavailable: published",
       "attribution": [],
       "rows": []
     },
     "formats": {
       "status": "published",
-      "computed_at": "2026-11-08T14:45:02Z",
+      "computed_at": "2026-11-09T14:45:02Z",
       "methodology": "One hub-card row per tracked format: legal-set list + banned/restricted counts from Scryfall legalities (ground truth), our own coverage state for this hub (honest 'pending' where a module isn't live yet), and cite-and-link-only external tracker URLs (untapped.gg, MTGGoldfish) \u2014 we NEVER ingest their numbers, only link to them by name.",
       "attribution": [
         "Card legalities + sets via Scryfall (scryfall.com)"
@@ -4759,7 +2027,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 44,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "high",
           "format": "standard",
           "format_name": "Standard",
@@ -4822,7 +2090,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 255,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "high",
           "format": "competitivebrawl",
           "format_name": "Competitive Brawl",
@@ -5096,7 +2364,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 44,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "high",
           "format": "standardbrawl",
           "format_name": "Brawl",
@@ -5159,7 +2427,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 281,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "high",
           "format": "commander",
           "format_name": "Commander",
@@ -5459,7 +2727,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 147,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "high",
           "format": "pioneer",
           "format_name": "Pioneer",
@@ -5625,7 +2893,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 209,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "high",
           "format": "modern",
           "format_name": "Modern",
@@ -5853,7 +3121,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 254,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "high",
           "format": "historic",
           "format_name": "Historic",
@@ -6126,7 +3394,7 @@
             "Card legalities + sets via Scryfall (scryfall.com)"
           ],
           "sample_size": 255,
-          "computed_at": "2026-11-08T14:45:02Z",
+          "computed_at": "2026-11-09T14:45:02Z",
           "confidence": "high",
           "format": "timeless",
           "format_name": "Timeless",
@@ -6399,12 +3667,613 @@
     },
     "meta_movers": {
       "status": "published",
-      "computed_at": "2026-11-08T14:45:02Z",
+      "computed_at": "2026-11-09T14:45:02Z",
       "methodology": "Day-over-day diff of THIS hub's own two most recently published mtg-meta.json / mtg-draft.json payloads -- not an external source. Computed at publish time by reading the games-hub clone's EXISTING payload before it is overwritten this run. commander_riser / commander_faller = the top 8 commanders (each direction) by deck_count delta within the SAME format+bucket across the two runs; draft_grade_change = cards whose BuildKit Draft Score grade moved between runs for a set tracked in BOTH payloads' overall_rows; banlist_add / banlist_remove = cards that entered/left a format's banned+restricted list; new_set = a set_code appearing in calendar this run that was not in the previous payload. Every row carries this run's own computed_at (the standard honesty field) PLUS previous_computed_at/current_computed_at -- the two payload timestamps actually being compared. A first publish (no previous payload found in games-hub) or any --dry-run (which never touches the games-hub clone) both ship the honest 'pending_history' status with zero rows rather than guessing a diff.",
       "attribution": [
         "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
       ],
-      "rows": []
+      "rows": [
+        {
+          "sources": [
+            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
+          ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "high",
+          "kind": "draft_grade_change",
+          "previous_computed_at": "2026-11-08T14:45:02Z",
+          "current_computed_at": "2026-11-09T14:45:02Z",
+          "set_code": "FRA",
+          "card": "Hexhaven Battalion",
+          "previous_grade": "B",
+          "current_grade": "S"
+        },
+        {
+          "sources": [
+            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
+          ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "high",
+          "kind": "draft_grade_change",
+          "previous_computed_at": "2026-11-08T14:45:02Z",
+          "current_computed_at": "2026-11-09T14:45:02Z",
+          "set_code": "FRA",
+          "card": "Violent Echoes",
+          "previous_grade": "B",
+          "current_grade": "S"
+        },
+        {
+          "sources": [
+            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
+          ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "high",
+          "kind": "draft_grade_change",
+          "previous_computed_at": "2026-11-08T14:45:02Z",
+          "current_computed_at": "2026-11-09T14:45:02Z",
+          "set_code": "FRA",
+          "card": "Twinned Vision",
+          "previous_grade": "A",
+          "current_grade": "S"
+        },
+        {
+          "sources": [
+            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
+          ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "high",
+          "kind": "draft_grade_change",
+          "previous_computed_at": "2026-11-08T14:45:02Z",
+          "current_computed_at": "2026-11-09T14:45:02Z",
+          "set_code": "FRA",
+          "card": "Generous Revival",
+          "previous_grade": "C",
+          "current_grade": "A"
+        },
+        {
+          "sources": [
+            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
+          ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "high",
+          "kind": "draft_grade_change",
+          "previous_computed_at": "2026-11-08T14:45:02Z",
+          "current_computed_at": "2026-11-09T14:45:02Z",
+          "set_code": "FRA",
+          "card": "Fatehold Annex",
+          "previous_grade": "D",
+          "current_grade": "A"
+        },
+        {
+          "sources": [
+            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
+          ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "high",
+          "kind": "draft_grade_change",
+          "previous_computed_at": "2026-11-08T14:45:02Z",
+          "current_computed_at": "2026-11-09T14:45:02Z",
+          "set_code": "FRA",
+          "card": "Campus Crier",
+          "previous_grade": "F",
+          "current_grade": "A"
+        },
+        {
+          "sources": [
+            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
+          ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "high",
+          "kind": "draft_grade_change",
+          "previous_computed_at": "2026-11-08T14:45:02Z",
+          "current_computed_at": "2026-11-09T14:45:02Z",
+          "set_code": "FRA",
+          "card": "Room of Refuge",
+          "previous_grade": "B",
+          "current_grade": "A"
+        },
+        {
+          "sources": [
+            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
+          ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "high",
+          "kind": "draft_grade_change",
+          "previous_computed_at": "2026-11-08T14:45:02Z",
+          "current_computed_at": "2026-11-09T14:45:02Z",
+          "set_code": "FRA",
+          "card": "Protege's Awakening",
+          "previous_grade": "S",
+          "current_grade": "A"
+        },
+        {
+          "sources": [
+            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
+          ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "high",
+          "kind": "draft_grade_change",
+          "previous_computed_at": "2026-11-08T14:45:02Z",
+          "current_computed_at": "2026-11-09T14:45:02Z",
+          "set_code": "FRA",
+          "card": "Blossom-Blessed Angel",
+          "previous_grade": "C",
+          "current_grade": "A"
+        },
+        {
+          "sources": [
+            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
+          ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "high",
+          "kind": "draft_grade_change",
+          "previous_computed_at": "2026-11-08T14:45:02Z",
+          "current_computed_at": "2026-11-09T14:45:02Z",
+          "set_code": "FRA",
+          "card": "Blossom-Blessed Angel // Seed Suture",
+          "previous_grade": "C",
+          "current_grade": "A"
+        },
+        {
+          "sources": [
+            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
+          ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "high",
+          "kind": "draft_grade_change",
+          "previous_computed_at": "2026-11-08T14:45:02Z",
+          "current_computed_at": "2026-11-09T14:45:02Z",
+          "set_code": "FRA",
+          "card": "Sphinx's Approach",
+          "previous_grade": "C",
+          "current_grade": "A"
+        },
+        {
+          "sources": [
+            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
+          ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "high",
+          "kind": "draft_grade_change",
+          "previous_computed_at": "2026-11-08T14:45:02Z",
+          "current_computed_at": "2026-11-09T14:45:02Z",
+          "set_code": "FRA",
+          "card": "Your Fate Ends Here",
+          "previous_grade": "B",
+          "current_grade": "A"
+        },
+        {
+          "sources": [
+            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
+          ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "high",
+          "kind": "draft_grade_change",
+          "previous_computed_at": "2026-11-08T14:45:02Z",
+          "current_computed_at": "2026-11-09T14:45:02Z",
+          "set_code": "FRA",
+          "card": "Fblthp, Impossibly Lost",
+          "previous_grade": "S",
+          "current_grade": "A"
+        },
+        {
+          "sources": [
+            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
+          ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "high",
+          "kind": "draft_grade_change",
+          "previous_computed_at": "2026-11-08T14:45:02Z",
+          "current_computed_at": "2026-11-09T14:45:02Z",
+          "set_code": "FRA",
+          "card": "Surgical Precision",
+          "previous_grade": "C",
+          "current_grade": "A"
+        },
+        {
+          "sources": [
+            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
+          ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "high",
+          "kind": "draft_grade_change",
+          "previous_computed_at": "2026-11-08T14:45:02Z",
+          "current_computed_at": "2026-11-09T14:45:02Z",
+          "set_code": "FRA",
+          "card": "Primal Witchstalker",
+          "previous_grade": "C",
+          "current_grade": "B"
+        },
+        {
+          "sources": [
+            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
+          ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "high",
+          "kind": "draft_grade_change",
+          "previous_computed_at": "2026-11-08T14:45:02Z",
+          "current_computed_at": "2026-11-09T14:45:02Z",
+          "set_code": "FRA",
+          "card": "Heartwood Crafter",
+          "previous_grade": "C",
+          "current_grade": "B"
+        },
+        {
+          "sources": [
+            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
+          ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "high",
+          "kind": "draft_grade_change",
+          "previous_computed_at": "2026-11-08T14:45:02Z",
+          "current_computed_at": "2026-11-09T14:45:02Z",
+          "set_code": "FRA",
+          "card": "Heartwood Crafter // Soul Tether",
+          "previous_grade": "C",
+          "current_grade": "B"
+        },
+        {
+          "sources": [
+            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
+          ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "high",
+          "kind": "draft_grade_change",
+          "previous_computed_at": "2026-11-08T14:45:02Z",
+          "current_computed_at": "2026-11-09T14:45:02Z",
+          "set_code": "FRA",
+          "card": "Way of the Healer",
+          "previous_grade": "D",
+          "current_grade": "B"
+        },
+        {
+          "sources": [
+            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
+          ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "high",
+          "kind": "draft_grade_change",
+          "previous_computed_at": "2026-11-08T14:45:02Z",
+          "current_computed_at": "2026-11-09T14:45:02Z",
+          "set_code": "FRA",
+          "card": "Archive Arbiter",
+          "previous_grade": "A",
+          "current_grade": "B"
+        },
+        {
+          "sources": [
+            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
+          ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "high",
+          "kind": "draft_grade_change",
+          "previous_computed_at": "2026-11-08T14:45:02Z",
+          "current_computed_at": "2026-11-09T14:45:02Z",
+          "set_code": "FRA",
+          "card": "Rewrite Regrets",
+          "previous_grade": "S",
+          "current_grade": "B"
+        },
+        {
+          "sources": [
+            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
+          ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "high",
+          "kind": "draft_grade_change",
+          "previous_computed_at": "2026-11-08T14:45:02Z",
+          "current_computed_at": "2026-11-09T14:45:02Z",
+          "set_code": "FRA",
+          "card": "No Admittance",
+          "previous_grade": "C",
+          "current_grade": "B"
+        },
+        {
+          "sources": [
+            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
+          ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "high",
+          "kind": "draft_grade_change",
+          "previous_computed_at": "2026-11-08T14:45:02Z",
+          "current_computed_at": "2026-11-09T14:45:02Z",
+          "set_code": "FRA",
+          "card": "Compel Brutality",
+          "previous_grade": "C",
+          "current_grade": "B"
+        },
+        {
+          "sources": [
+            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
+          ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "high",
+          "kind": "draft_grade_change",
+          "previous_computed_at": "2026-11-08T14:45:02Z",
+          "current_computed_at": "2026-11-09T14:45:02Z",
+          "set_code": "FRA",
+          "card": "Greenhouse Propagator",
+          "previous_grade": "C",
+          "current_grade": "B"
+        },
+        {
+          "sources": [
+            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
+          ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "high",
+          "kind": "draft_grade_change",
+          "previous_computed_at": "2026-11-08T14:45:02Z",
+          "current_computed_at": "2026-11-09T14:45:02Z",
+          "set_code": "FRA",
+          "card": "Proft, Consulting Detective",
+          "previous_grade": "A",
+          "current_grade": "B"
+        },
+        {
+          "sources": [
+            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
+          ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "high",
+          "kind": "draft_grade_change",
+          "previous_computed_at": "2026-11-08T14:45:02Z",
+          "current_computed_at": "2026-11-09T14:45:02Z",
+          "set_code": "FRA",
+          "card": "Bestial Incursion",
+          "previous_grade": "A",
+          "current_grade": "B"
+        },
+        {
+          "sources": [
+            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
+          ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "high",
+          "kind": "draft_grade_change",
+          "previous_computed_at": "2026-11-08T14:45:02Z",
+          "current_computed_at": "2026-11-09T14:45:02Z",
+          "set_code": "FRA",
+          "card": "Memory Trap",
+          "previous_grade": "C",
+          "current_grade": "B"
+        },
+        {
+          "sources": [
+            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
+          ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "high",
+          "kind": "draft_grade_change",
+          "previous_computed_at": "2026-11-08T14:45:02Z",
+          "current_computed_at": "2026-11-09T14:45:02Z",
+          "set_code": "FRA",
+          "card": "Fulminous Forte",
+          "previous_grade": "A",
+          "current_grade": "B"
+        },
+        {
+          "sources": [
+            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
+          ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "high",
+          "kind": "draft_grade_change",
+          "previous_computed_at": "2026-11-08T14:45:02Z",
+          "current_computed_at": "2026-11-09T14:45:02Z",
+          "set_code": "FRA",
+          "card": "Paradox Shaper",
+          "previous_grade": "A",
+          "current_grade": "B"
+        },
+        {
+          "sources": [
+            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
+          ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "high",
+          "kind": "draft_grade_change",
+          "previous_computed_at": "2026-11-08T14:45:02Z",
+          "current_computed_at": "2026-11-09T14:45:02Z",
+          "set_code": "FRA",
+          "card": "Paradox Shaper // Omit Variables",
+          "previous_grade": "A",
+          "current_grade": "B"
+        },
+        {
+          "sources": [
+            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
+          ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "high",
+          "kind": "draft_grade_change",
+          "previous_computed_at": "2026-11-08T14:45:02Z",
+          "current_computed_at": "2026-11-09T14:45:02Z",
+          "set_code": "FRA",
+          "card": "Something Worth Saving",
+          "previous_grade": "C",
+          "current_grade": "B"
+        },
+        {
+          "sources": [
+            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
+          ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "high",
+          "kind": "draft_grade_change",
+          "previous_computed_at": "2026-11-08T14:45:02Z",
+          "current_computed_at": "2026-11-09T14:45:02Z",
+          "set_code": "FRA",
+          "card": "Plan for All Outcomes",
+          "previous_grade": "A",
+          "current_grade": "B"
+        },
+        {
+          "sources": [
+            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
+          ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "high",
+          "kind": "draft_grade_change",
+          "previous_computed_at": "2026-11-08T14:45:02Z",
+          "current_computed_at": "2026-11-09T14:45:02Z",
+          "set_code": "FRA",
+          "card": "Mind Meanderer",
+          "previous_grade": "A",
+          "current_grade": "B"
+        },
+        {
+          "sources": [
+            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
+          ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "high",
+          "kind": "draft_grade_change",
+          "previous_computed_at": "2026-11-08T14:45:02Z",
+          "current_computed_at": "2026-11-09T14:45:02Z",
+          "set_code": "FRA",
+          "card": "Desperate Futurescribe",
+          "previous_grade": "C",
+          "current_grade": "B"
+        },
+        {
+          "sources": [
+            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
+          ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "high",
+          "kind": "draft_grade_change",
+          "previous_computed_at": "2026-11-08T14:45:02Z",
+          "current_computed_at": "2026-11-09T14:45:02Z",
+          "set_code": "FRA",
+          "card": "Geist of Saint Thalia",
+          "previous_grade": "A",
+          "current_grade": "B"
+        },
+        {
+          "sources": [
+            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
+          ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "high",
+          "kind": "draft_grade_change",
+          "previous_computed_at": "2026-11-08T14:45:02Z",
+          "current_computed_at": "2026-11-09T14:45:02Z",
+          "set_code": "FRA",
+          "card": "Gallia, Tragic Host",
+          "previous_grade": "C",
+          "current_grade": "B"
+        },
+        {
+          "sources": [
+            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
+          ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "high",
+          "kind": "draft_grade_change",
+          "previous_computed_at": "2026-11-08T14:45:02Z",
+          "current_computed_at": "2026-11-09T14:45:02Z",
+          "set_code": "FRA",
+          "card": "Infinite Coursework",
+          "previous_grade": "C",
+          "current_grade": "B"
+        },
+        {
+          "sources": [
+            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
+          ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "high",
+          "kind": "draft_grade_change",
+          "previous_computed_at": "2026-11-08T14:45:02Z",
+          "current_computed_at": "2026-11-09T14:45:02Z",
+          "set_code": "FRA",
+          "card": "Prudent Fateseer",
+          "previous_grade": "C",
+          "current_grade": "B"
+        },
+        {
+          "sources": [
+            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
+          ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "high",
+          "kind": "draft_grade_change",
+          "previous_computed_at": "2026-11-08T14:45:02Z",
+          "current_computed_at": "2026-11-09T14:45:02Z",
+          "set_code": "FRA",
+          "card": "Prudent Fateseer // Peer Review",
+          "previous_grade": "C",
+          "current_grade": "B"
+        },
+        {
+          "sources": [
+            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
+          ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "high",
+          "kind": "draft_grade_change",
+          "previous_computed_at": "2026-11-08T14:45:02Z",
+          "current_computed_at": "2026-11-09T14:45:02Z",
+          "set_code": "FRA",
+          "card": "Way of the Mind Sculptor",
+          "previous_grade": "S",
+          "current_grade": "B"
+        },
+        {
+          "sources": [
+            "BuildKit MTG Meta Hub (diff of our own two most-recently published runs)"
+          ],
+          "sample_size": 2,
+          "computed_at": "2026-11-09T14:45:02Z",
+          "confidence": "high",
+          "kind": "draft_grade_change",
+          "previous_computed_at": "2026-11-08T14:45:02Z",
+          "current_computed_at": "2026-11-09T14:45:02Z",
+          "set_code": "FRA",
+          "card": "Unsummon",
+          "previous_grade": "A",
+          "current_grade": "B"
+        }
+      ]
     }
   }
 }
